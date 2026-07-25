@@ -1,0 +1,746 @@
+id: STR-PROBLEM-006
+title: Jerusalem and Athens
+subtitle: Philosophy and Revelation
+version: 1.0
+status: ACTIVE — FOUNDATIONAL PROBLEM OBJECT
+type: fundamental_problem
+
+documentary_basis:
+  governing_lectures:
+    - title: Jerusalem and Athens
+      dates:
+        - 1950-10-25
+        - 1950-11-08
+      governing_structure:
+        - agreement
+        - disagreement
+        - conflict
+      documentary_note: >
+        The lectures must govern the reconstruction of the relation between the
+        biblical and philosophic ways of life. The inquiry must begin by
+        reconstructing possible agreement before advancing to disagreement and
+        comprehensive conflict.
+
+    - title: Maimonides
+      date: 1960-02
+      governing_subjects:
+        - the perplexed believer
+        - divine law
+        - philosophy within a revealed community
+        - differentiated audiences
+        - literary concealment
+        - prophecy
+        - creation and eternity
+        - human perfection
+      documentary_note: >
+        Maimonides must not be treated as having achieved a simple or final
+        synthesis between philosophy and revelation. His teaching must be
+        examined through the relation among law, perplexity, audience,
+        interpretation, and guarded communication.
+
+    - title: Religion and the Commonweal
+      date: 1963-01
+      governing_subjects:
+        - establishment of religion
+        - freedom of religion
+        - freedom from religion
+        - public authority
+        - the truth of religion
+        - modern constitutional settlement
+      documentary_note: >
+        Political toleration, non-establishment, and constitutional neutrality
+        may govern the public conflict without resolving the truth of philosophy
+        or revelation.
+
+    - title: "Why We Remain Jews: Can Jewish Faith and History Speak to Us?"
+      date: 1962-02
+      governing_subjects:
+        - the Jewish question
+        - assimilation
+        - political Zionism
+        - cultural Zionism
+        - return to faith
+        - unbelief
+        - fidelity
+        - historical inheritance
+        - mystery
+      documentary_note: >
+        Jewish fidelity, peoplehood, memory, and historical loyalty must be
+        distinguished from demonstrable faith in revelation. Continued loyalty
+        neither proves nor disproves the revealed claim.
+
+  documentary_status_rule: >
+    Where the complete lecture text is not available through an official
+    searchable transcript, the minister must distinguish published lecture
+    evidence, recordings, editorial reconstruction, and later interpretive
+    inference. It must not silently substitute Strauss's other writings for
+    the specific lecture record.
+
+origin:
+  two_beginnings_of_wisdom:
+    jerusalem:
+      beginning: fear of the Lord
+      orientation: >
+        Wisdom begins from divine disclosure, commandment, and the human
+        response of obedience.
+    athens:
+      beginning: wonder
+      orientation: >
+        Wisdom begins from perplexity, questioning, and free inquiry into
+        nature and the whole.
+
+  description: >
+    Jerusalem and Athens names the unresolved alternative between the life
+    governed by divine revelation and the life devoted to philosophy.
+
+    Jerusalem presents the right way of life as obedient response to God's
+    authoritative disclosure, embodied in law, covenant, commandment,
+    historical memory, repentance, and hope.
+
+    Athens presents the right way of life as free examination of authoritative
+    opinions, inquiry into nature and the whole, awareness of ignorance, and
+    philosophic contemplation.
+
+governing_question: >
+  Is the right human life grounded in obedient fidelity to divine revelation
+  and law, or in free philosophical inquiry into nature and the whole; and can
+  either alternative understand, refute, or accommodate the other without
+  surrendering its own highest claim?
+
+problem_statement: >
+  The problem of Jerusalem and Athens concerns two comprehensive claims
+  regarding truth, authority, wisdom, and the right way of life.
+
+  Revelation claims that God has disclosed and commanded the right way of
+  life. Philosophy claims the freedom to examine every comprehensive teaching,
+  including the claim of revelation itself.
+
+  Philosophy cannot accept revelation as unquestionable without surrendering
+  free inquiry. Revelation cannot permit philosophy to possess final judgment
+  over divine command without surrendering its highest authority.
+
+  Yet philosophy has not conclusively demonstrated the impossibility of
+  revelation, and revelation does not refute philosophy merely by forbidding,
+  condemning, or subordinating inquiry.
+
+  The minister must therefore preserve the alternative wherever neither side
+  has established final victory.
+
+fundamental_tension:
+  jerusalem:
+    comprehensive_claim: >
+      The right way of life is received through divine revelation and lived
+      through faithful obedience to revealed law.
+    governing_elements:
+      - divine disclosure
+      - creation
+      - commandment
+      - covenant
+      - revealed law
+      - obedience
+      - faith
+      - repentance
+      - fidelity
+      - historical memory
+      - hope
+      - redemption
+    highest_human_orientation: >
+      Faithful response to the God who creates, commands, judges, and redeems.
+    characteristic_danger: >
+      The divine claim may be treated as self-validating, questioning may be
+      condemned before examination, and mystery may be used to immunize
+      determinate claims from rational scrutiny.
+
+  athens:
+    comprehensive_claim: >
+      The right way of life culminates in free philosophical inquiry into
+      nature, the human good, and the whole.
+    governing_elements:
+      - wonder
+      - perplexity
+      - examination
+      - nature
+      - argument
+      - awareness of ignorance
+      - philosophic freedom
+      - contemplation
+      - the examined life
+    highest_human_orientation: >
+      The philosophic life devoted to replacing authoritative opinion with
+      knowledge wherever possible.
+    characteristic_danger: >
+      Philosophy may presume that revelation has already been refuted, identify
+      modern secularism with philosophic victory, or confuse incomplete
+      scientific knowledge with knowledge of the whole.
+
+agreement_disagreement_conflict:
+  governing_rule: >
+    The minister must not begin with conflict alone. It must reconstruct
+    possible agreement, identify the difference in foundations, and show where
+    disagreement becomes a comprehensive conflict concerning the right life.
+
+  possible_agreement:
+    examples:
+      - human beings should not live merely for bodily pleasure
+      - justice and restraint are superior to lawlessness
+      - vulgar opinion is insufficient
+      - law educates human beings
+      - wisdom is higher than ordinary opinion
+      - human beings must confront their ignorance and limitation
+    caution: >
+      Shared conclusions do not establish shared foundations or final harmony.
+
+  difference_in_foundation:
+    jerusalem:
+      - wisdom is received within divine law
+      - justice is grounded in obedience to God
+      - the whole is understood through creation
+      - humility is fundamentally submission before divine authority
+    athens:
+      - wisdom is sought through inquiry
+      - justice is examined in relation to nature and the good
+      - the whole is approached through philosophical questioning
+      - humility is fundamentally awareness of ignorance
+
+  comprehensive_conflict:
+    description: >
+      Conflict becomes comprehensive when philosophy claims the right to judge
+      revelation and revelation claims authority over philosophy's inquiry and
+      way of life.
+
+maimonidean_perplexity:
+  sequence:
+    - the believer is formed under revealed law
+    - philosophical inquiry unsettles inherited or literal understandings
+    - the believer cannot simply abandon the divine law
+    - the philosopher cannot responsibly suspend examination
+    - the Guide addresses the resulting perplexity through interpretation,
+      differentiated teaching, legal discipline, and guarded communication
+
+  governing_rule: >
+    Maimonides must not be used as automatic proof of harmony. The minister
+    must determine whether the apparent reconciliation is theoretical,
+    political, legal, pedagogical, rhetorical, or restricted to a particular
+    audience.
+
+  required_hermeneutic_application: >
+    The repository's active Hermeneutic Object governing literary concealment
+    must be applied to Maimonidean contradiction, omission, deliberate disorder,
+    differentiated address, and apparent doctrinal inconsistency.
+
+constitutive_propositions:
+  - >
+    The fundamental alternative is more precisely philosophy and revelation
+    than generic reason and faith.
+  - >
+    Reason may operate inside theology and revealed law; the conflict becomes
+    fundamental when philosophy claims free inquiry into the whole.
+  - >
+    Revelation is not merely religion, culture, spirituality, or private belief.
+  - >
+    Revelation claims authoritative divine disclosure of the right way of life.
+  - >
+    Philosophy is not merely instrumental calculation or scientific technique.
+  - >
+    Philosophy is a way of life devoted to unrestricted examination.
+  - >
+    Jerusalem and Athens may possess genuine agreements without sharing the
+    same foundations.
+  - >
+    Agreement in moral conclusion does not establish reconciliation of the
+    comprehensive alternatives.
+  - >
+    Philosophy has not refuted revelation merely because modern science,
+    secularization, or liberal government has succeeded historically.
+  - >
+    Revelation is not established merely because a text, tradition, or
+    community claims divine authority.
+  - >
+    A political settlement can contain the conflict without resolving its truth.
+  - >
+    Maimonidean accommodation may preserve law and philosophy without proving
+    their ultimate compatibility.
+  - >
+    Jewish fidelity may persist without complete belief.
+  - >
+    Fidelity does not prove revelation, and unbelief does not automatically
+    erase inherited obligation.
+  - >
+    Historical survival, suffering, or political restoration may invite
+    theological interpretation without compelling it.
+  - >
+    Philosophy may acknowledge the incompleteness of human knowledge without
+    accepting revelation.
+  - >
+    Revelation may acknowledge divine mystery while making determinate claims
+    concerning divine law.
+  - >
+    Neither philosophy nor revelation may monopolize humility, mystery,
+    seriousness, or moral nobility.
+  - >
+    The unresolved alternative may itself be a responsible philosophical
+    finding rather than a temporary failure of analysis.
+
+recognition_signals:
+  - revelation is treated as binding solely because it claims divine origin
+  - revelation is treated as already refuted by science or secularization
+  - philosophy is reduced to instrumental reason
+  - faith is reduced to private opinion or psychological comfort
+  - Judaism is reduced to ethnicity, culture, or historical memory
+  - fidelity is treated as identical with faith
+  - unbelief is treated as eliminating every inherited obligation
+  - moral agreement is treated as proof of theoretical reconciliation
+  - conflict is declared before agreement is reconstructed
+  - Maimonides is presented as having completed a final synthesis
+  - religious liberty is treated as a philosophical resolution
+  - non-establishment is treated as proof of religious falsity
+  - political success is treated as proof of revelation
+  - persecution or suffering is treated as refutation of revelation
+  - historical survival is treated as demonstration of divine election
+  - philosophy is assumed to possess a completed account of the whole
+  - religious mystery is used to prevent examination
+  - philosophical ignorance is treated as equivalent to faith
+  - creation and nature are treated as interchangeable
+  - accommodation is presented as theoretical resolution
+  - shared language is assumed to have one shared meaning
+  - modern secularism is identified automatically with Athens
+
+first_ministerial_movement:
+  sequence:
+    - What comprehensive claim is being made?
+    - Is its source revelation, philosophy, tradition, history, political
+      authority, or personal experience?
+    - What way of life follows from the claim?
+    - What does the claim identify as the highest human perfection?
+    - What authority belongs to law, obedience, and commandment?
+    - What authority belongs to wonder, questioning, and contemplation?
+    - What genuine agreement exists between the alternatives?
+    - Do apparently shared conclusions arise from different foundations?
+    - Can the claim permit examination of its own authority?
+    - What does each side say about the opposing way of life?
+    - Has the opposing claim actually been refuted?
+    - Is the proposed reconciliation theoretical, political, legal,
+      pedagogical, rhetorical, or merely verbal?
+    - What uncertainty must remain?
+
+required_operations:
+  - state the strongest philosophic claim
+  - state the strongest revelatory claim
+  - identify the way of life demanded by each
+  - reconstruct genuine agreement before conflict
+  - identify differences in foundation beneath shared conclusions
+  - determine what each side means by wisdom
+  - determine what each side means by law
+  - distinguish nature from creation
+  - distinguish awareness of ignorance from religious mystery
+  - identify whether revelation permits examination of its highest authority
+  - identify whether philosophy has actually refuted the possibility of revelation
+  - distinguish refutation of a literal interpretation from refutation of revelation
+  - examine reconciliation according to audience and level of teaching
+  - apply active repository hermeneutics to guarded or differentiated texts
+  - distinguish political accommodation from theoretical resolution
+  - distinguish religion from revelation
+  - distinguish tradition from revelation
+  - distinguish faith from fidelity
+  - distinguish Jewish peoplehood from theological proof
+  - distinguish historical endurance from truth
+  - identify the public order under which the alternatives coexist
+  - preserve perplexity where belief and inquiry remain in tension
+  - reject conclusions based merely on secular success, religious survival,
+    political victory, or cultural continuity
+
+required_distinctions:
+  - philosophy and reason
+  - philosophy and instrumental rationality
+  - revelation and religion
+  - revelation and religious experience
+  - revelation and tradition
+  - faith and fidelity
+  - faith and cultural identity
+  - divine law and positive law
+  - creation and nature
+  - obedience and prudence
+  - wonder and fear of the Lord
+  - awareness of ignorance and religious mystery
+  - perplexity and unbelief
+  - accommodation and synthesis
+  - toleration and neutrality
+  - political coexistence and philosophical agreement
+  - shared conclusions and shared foundations
+  - historical endurance and truth
+  - theological interpretation and demonstrated fact
+  - literal interpretation and revelation as such
+  - public teaching and private understanding
+  - cultural Judaism and revealed Judaism
+  - philosophic freedom and secular political authority
+  - the unknown and the unexamined
+
+lecture_specific_tests:
+  jerusalem_and_athens_test:
+    questions:
+      - What is the initial agreement?
+      - What common enemy, defect, or human limitation do both oppose?
+      - Where do their foundations diverge?
+      - Does wisdom begin in fear, obedience, wonder, or inquiry?
+      - What does each alternative identify as the highest life?
+      - What does each mean by law, justice, and wisdom?
+      - At what point does disagreement become comprehensive conflict?
+      - Does the analysis preserve both alternatives at full strength?
+
+  maimonides_test:
+    questions:
+      - Who is perplexed?
+      - What did the reader previously believe?
+      - What has philosophical inquiry unsettled?
+      - Does the interpretation preserve the authority of divine law?
+      - Does it preserve philosophical freedom?
+      - Are different teachings directed to different audiences?
+      - Does apparent contradiction indicate confusion, pedagogy,
+        protection, or concealment?
+      - Is the proposed harmony theoretical, legal, political,
+        pedagogical, or rhetorical?
+      - What account is given of prophecy?
+      - What account is given of creation and eternity?
+      - What account is given of human perfection?
+      - Which claims remain intentionally unresolved?
+
+  religion_and_commonweal_test:
+    questions:
+      - Is religion established, tolerated, privatized, limited, or excluded?
+      - Does freedom of religion include freedom from religion?
+      - What understanding of religion makes the settlement possible?
+      - Does the commonwealth remain genuinely neutral?
+      - Is revealed law permitted public authority?
+      - Does toleration protect faith, inquiry, civil peace, or all three?
+      - Has political accommodation been mistaken for philosophical resolution?
+      - Does the settlement privilege a substantive modern understanding of freedom?
+
+  why_we_remain_jews_test:
+    questions:
+      - Is the argument about faith, survival, loyalty, history,
+        gratitude, or political necessity?
+      - Which proposed solution to the Jewish question is under examination?
+      - Does assimilation solve the problem or dissolve visible difference?
+      - Does political Zionism answer vulnerability while leaving theology open?
+      - Can Jewish culture be detached from revelation without changing its meaning?
+      - What does fidelity require from one who cannot honestly believe?
+      - Is suffering treated as proof, obligation, memory, or mystery?
+      - Is survival being interpreted historically, politically, or theologically?
+      - What remains unresolved between unbelief and inherited loyalty?
+
+accommodation_types:
+  political_accommodation:
+    description: >
+      Both ways of life are permitted to coexist within one political order.
+    limitation: >
+      Coexistence does not determine which way of life is true.
+
+  legal_accommodation:
+    description: >
+      Philosophical inquiry occurs within or alongside the authority of
+      revealed law.
+    limitation: >
+      Legal coexistence does not prove theoretical compatibility.
+
+  pedagogical_accommodation:
+    description: >
+      Different teachings are directed to readers of differing capacities.
+    limitation: >
+      Differentiated instruction may preserve order without resolving the
+      highest question.
+
+  rhetorical_accommodation:
+    description: >
+      Shared terms or formulations conceal different meanings.
+    limitation: >
+      Verbal agreement may preserve peace while leaving foundations opposed.
+
+  theoretical_resolution:
+    description: >
+      The highest claims of philosophy and revelation have been demonstrated
+      to be compatible.
+    governing_caution: >
+      This conclusion requires proof and must not be inferred from political,
+      legal, pedagogical, or rhetorical accommodation.
+
+mixed_and_transitional_positions:
+  maimonides:
+    classification: central inhabitant of the tension
+    description: >
+      Maimonides addresses the philosophically perplexed believer within the
+      authority of revealed law. He must not be classified prematurely as an
+      orthodox literalist, a secret unbeliever, a political deceiver, or the
+      author of a completed synthesis.
+    required_examination:
+      - addressee
+      - perplexity
+      - divine law
+      - prophecy
+      - creation and eternity
+      - human perfection
+      - hierarchy of readers
+      - public law and philosophic inquiry
+      - concealment and differentiated teaching
+
+  spinoza:
+    classification: modern liberation of philosophy from theological authority
+    description: >
+      Spinoza subjects Scripture to historical and political analysis and
+      defends freedom of philosophy. His settlement must be examined as a
+      transformation and subordination of revelation rather than a neutral
+      reconciliation.
+
+  kant:
+    classification: moral reinterpretation of revelation
+    description: >
+      Kant preserves biblical moral themes while subordinating historical
+      revelation to autonomous practical reason. This may preserve morality
+      while dissolving revelation's independent authority.
+
+  modern_liberalism:
+    classification: political accommodation under modern principles
+    description: >
+      Liberal institutions may protect belief and unbelief by limiting the
+      public authority of comprehensive teachings. Liberalism must not be
+      treated as a neutral standpoint outside the quarrel.
+
+  cultural_judaism:
+    classification: historical and communal preservation without full revealed authority
+    description: >
+      Cultural Judaism may preserve memory, language, peoplehood, and loyalty,
+      but it must not be treated as an unchanged continuation of revealed
+      Judaism where divine law no longer governs.
+
+  secular_fidelity:
+    classification: unbelief joined to inherited loyalty
+    description: >
+      Secular fidelity may be morally serious and historically grounded. It
+      neither proves nor disproves revelation.
+
+false_resolutions:
+  secular_triumphalism: >
+    Modern science, secularization, and liberal society have permanently
+    refuted revelation.
+
+  fundamentalist_closure: >
+    Revelation claims divine authority and therefore requires no examination.
+
+  cultural_reduction: >
+    Revelation is merely the symbolic expression of a people's historical
+    experience.
+
+  psychological_reduction: >
+    Revelation is only an individual or collective psychological experience.
+
+  moral_division_of_labor: >
+    Jerusalem supplies values while Athens supplies facts.
+
+  separate_spheres_settlement: >
+    Philosophy and revelation cannot conflict because they answer entirely
+    different questions.
+
+  agreement_as_harmony: >
+    Shared moral conclusions prove compatibility of the comprehensive teachings.
+
+  conflict_without_agreement: >
+    Philosophy and revelation are declared enemies without reconstructing the
+    agreements that make their conflict intelligible.
+
+  maimonidean_synthesis: >
+    The Guide permanently reconciles biblical revelation and Greek philosophy.
+
+  liberal_settlement: >
+    Religious liberty and non-establishment have solved the question of revelation.
+
+  fidelity_as_faith: >
+    Continued Jewish loyalty proves continued belief in revelation.
+
+  unbelief_as_liberation: >
+    Loss of faith frees the individual from every inherited obligation.
+
+  survival_as_proof: >
+    Jewish survival demonstrates divine election.
+
+  persecution_as_refutation: >
+    Religious suffering proves the revealed teaching false.
+
+  mystery_as_immunity: >
+    Because the divine is mysterious, determinate revelatory claims cannot be
+    rationally examined.
+
+  philosophic_system_as_accomplished_fact: >
+    Philosophy has already explained the whole and thereby excluded revelation.
+
+  modern_secularism_as_athens: >
+    Every modern rejection of religion is an expression of classical philosophy.
+
+  accommodation_as_resolution: >
+    Political peace, public toleration, or differentiated teaching proves the
+    deepest claims compatible.
+
+anti_capture_rule: >
+  Revelation must be permitted to make its strongest comprehensive claim
+  without being assumed true. Philosophy must be permitted unrestricted
+  examination without being assumed victorious.
+
+  The minister must not assume revelation because a sacred text, tradition,
+  community, or authority asserts it. It must not treat questioning as
+  rebellion, fidelity as demonstration, survival as proof, or mystery as
+  immunity from examination.
+
+  The minister must equally refuse to assume that revelation has been refuted
+  by modern science, secular success, historical criticism, or liberal
+  government. It must not reduce religion to psychology, culture, identity,
+  or political function, nor treat unbelief as intellectually superior by default.
+
+boundary_rule: >
+  Jerusalem and Athens is present when an inquiry concerns philosophy and
+  revelation as competing comprehensive accounts of truth, wisdom, authority,
+  and the right way of life.
+
+  Religion, theology, Jewish identity, ritual, atheism, secular government,
+  church-state conflict, religious liberty, or biblical interpretation do not
+  activate the problem by themselves unless the comprehensive alternative
+  between revelation and philosophy is at stake.
+
+relations:
+  nomos_and_physis:
+    distinction: >
+      Nomos and Physis asks whether nature supplies a standard beyond law,
+      convention, and authoritative opinion. Jerusalem and Athens introduces
+      the claim that the highest law is revealed by the creator of nature and
+      therefore possesses an authority beyond both convention and autonomous
+      natural inquiry.
+
+  theologico_political:
+    distinction: >
+      The Theologico-Political Problem concerns which authority has the right
+      to rule human beings and political communities. Jerusalem and Athens
+      concerns the truth and rightness of philosophy and revelation as ways
+      of life.
+    governing_boundary: >
+      Political management of the conflict belongs primarily to the
+      Theologico-Political Problem. Examination of the truth of the alternatives
+      belongs primarily to Jerusalem and Athens.
+
+  wise_and_vulgar:
+    distinction: >
+      The Wise and the Vulgar concerns differentiated capacities, audiences,
+      concealment, and the political communication of philosophy. Jerusalem
+      and Athens concerns the truth of the comprehensive alternatives being
+      communicated.
+    overlap: >
+      Maimonidean texts require both problem objects because the conflict between
+      philosophy and revelation is communicated through differentiated address
+      and guarded writing.
+
+  ancients_and_moderns:
+    distinction: >
+      Ancients and Moderns concerns the quarrel within philosophy over nature,
+      rights, freedom, science, and history. Jerusalem and Athens concerns the
+      alternative between philosophy and revelation.
+    caution: >
+      Modern secularism must not automatically be identified with Athens, since
+      modernity may reject or transform both classical philosophy and revelation.
+
+  theory_and_practice:
+    distinction: >
+      Jerusalem and Athens asks which comprehensive way of life is highest.
+      Theory and Practice asks how either way of life guides conduct, law,
+      obedience, judgment, disclosure, and political action.
+
+permissible_outputs:
+  documented_finding: >
+    State the philosophic claim, revelatory claim, way of life demanded by
+    each, and documentary basis for the reconstruction.
+
+  agreement_finding: >
+    Identify genuine shared conclusions while preserving differences in
+    foundation and highest end.
+
+  conflict_finding: >
+    Identify the point at which philosophy's claim to examination and
+    revelation's claim to authority become irreconcilable.
+
+  revelatory_limit_finding: >
+    State that a sacred or authoritative claim has not supplied sufficient
+    grounds for its asserted divine origin.
+
+  philosophic_limit_finding: >
+    State that a philosophic criticism weakens a particular interpretation
+    without demonstrating the impossibility of revelation.
+
+  maimonidean_finding: >
+    Identify whether apparent harmony is theoretical, legal, political,
+    pedagogical, rhetorical, or audience-specific.
+
+  accommodation_finding: >
+    State that a political or communal settlement preserves coexistence without
+    resolving the comprehensive conflict.
+
+  fidelity_finding: >
+    Distinguish faith, perplexity, unbelief, cultural attachment, historical
+    loyalty, gratitude, and pietas.
+
+  commonweal_finding: >
+    Identify the substantive account of religion, freedom, and public authority
+    presupposed by an allegedly neutral political settlement.
+
+  hermeneutic_finding: >
+    Identify how differentiated address, contradiction, omission, disorder,
+    or concealment bears upon the apparent relation between philosophy and law.
+
+  unresolved_uncertainty: >
+    State that neither philosophy nor revelation has established final victory
+    on the available evidence.
+
+  affirmative_non_resolution: >
+    Preserve the alternative as a living fundamental question rather than
+    manufacturing synthesis, neutrality, or defeat.
+
+opacity_floor:
+  - >
+    The argument weakens a literal interpretation without refuting revelation
+    as such.
+  - >
+    The teaching preserves divine law politically while leaving its
+    philosophical foundation uncertain.
+  - >
+    The philosophic criticism exposes an unsupported theological claim but
+    does not establish the impossibility of revelation.
+  - >
+    The proposed harmony is sufficient for communal or political life but does
+    not resolve the theoretical conflict.
+  - >
+    Fidelity explains continued attachment more clearly than it establishes belief.
+  - >
+    The liberal settlement protects both alternatives while remaining unable
+    to judge finally between them.
+  - >
+    Shared moral conclusions are established more clearly than shared
+    foundations.
+  - >
+    The evidence establishes that philosophy and revelation cannot responsibly
+    ignore one another more clearly than it establishes that either has finally
+    defeated the other.
+
+termination_condition: >
+  The problem record is complete when the minister has identified the
+  philosophic and revelatory claims, stated the way of life demanded by each,
+  reconstructed their genuine agreements, identified differences in foundation,
+  determined where disagreement becomes comprehensive conflict, distinguished
+  philosophy from instrumental reason, distinguished revelation from religion,
+  culture, experience, and tradition, distinguished faith from fidelity,
+  distinguished political accommodation from theoretical resolution, examined
+  Maimonidean mediation through audience and concealment, tested claims that
+  revelation has been proved or refuted, and preserved the alternative wherever
+  neither side has established final victory.
+
+core_movement: >
+  Jerusalem and Athens must be approached through agreement, difference,
+  disagreement, and conflict. Revelation must remain a genuine challenge to
+  philosophy without being assumed true; philosophy must retain unrestricted
+  examination without being assumed victorious. Maimonides may discipline and
+  inhabit the tension, the commonweal may politically contain it, and fidelity
+  may preserve historical belonging, but none of these by itself resolves the
+  question of the right human life.
