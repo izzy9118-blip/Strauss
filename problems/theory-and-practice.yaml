@@ -1,0 +1,429 @@
+id: STR-PROBLEM-005
+title: Theory and Practice
+version: 1.0
+status: ACTIVE — FOUNDATIONAL PROBLEM OBJECT
+type: fundamental_problem
+
+origin:
+  primary_ground: Plato and Aristotle
+  key_platonic_image: The philosopher's return to the cave
+  key_aristotelian_capacity: Prudence
+  description: >
+    Plato brings the problem into view through the disproportion between
+    contemplation and political rule. Aristotle distinguishes theoretical
+    wisdom from the relatively autonomous sphere of practical judgment.
+    Modern thought increasingly requires theory to become effective,
+    transformative, and politically sovereign, culminating in attempts to
+    subordinate prudence to doctrine, technique, or historical necessity.
+
+governing_question: >
+  How can knowledge of the good guide action without reducing political
+  judgment to the execution of doctrine, and how can practical judgment remain
+  responsive to circumstances without severing itself from truth and universal
+  standards?
+
+problem_statement: >
+  Theory and Practice concerns the movement from understanding what is true or
+  good to deciding what should be done here and now. Theory seeks knowledge of
+  ends and of the whole. Practice concerns action among changing circumstances,
+  competing goods, limited means, uncertain consequences, and responsible
+  political actors. Prudence mediates between them. The problem becomes acute
+  when doctrine, expertise, historical necessity, urgency, or political success
+  claims to eliminate prudential judgment, or when practice claims exemption
+  from philosophical examination in the name of realism, necessity, or action.
+
+fundamental_tension:
+  theory:
+    proper_claim: >
+      To examine ends, principles, justice, the good, and the whole rather than
+      accept the aims of action without question.
+    danger: >
+      To claim such completeness that political judgment becomes mere execution
+      of doctrine, prediction, or plan.
+  practice:
+    proper_claim: >
+      To judge and act responsibly under particular circumstances that cannot
+      be governed exhaustively by exact universal rules.
+    danger: >
+      To invoke circumstance, urgency, necessity, or success in order to escape
+      all judgment concerning truth and the good.
+  prudence:
+    role: >
+      To judge means, timing, actors, circumstances, competing goods, probable
+      consequences, and political possibility while remaining oriented toward
+      standards that practice did not simply invent.
+
+principal_witnesses:
+  plato:
+    significance: >
+      The Republic presents the philosopher's ascent toward contemplation and
+      compulsory return to the cave. Knowledge of the good appears necessary
+      for just rule, yet philosophers do not naturally desire political office,
+      direct philosophic rule is politically improbable, and theoretical
+      excellence does not automatically supply political experience.
+  aristotle:
+    significance: >
+      Distinguishes theoretical wisdom from practical wisdom. Prudence is not
+      mere cleverness or technical skill; it joins judgment of means with right
+      orientation toward ends and possesses authority within the variable sphere
+      of human action.
+  machiavelli:
+    significance: >
+      Transforms the relation through effectual truth, political necessity,
+      founding, and the demand that political philosophy become effective rather
+      than remain oriented toward standards rarely realized.
+  kant:
+    significance: >
+      Restores the authority of universal rational law and intensifies the
+      question whether moral theory can direct politics without neglecting
+      circumstance, consequence, and prudential responsibility.
+  marx:
+    significance: >
+      Seeks the unity of theory and transformative practice through claimed
+      knowledge of historical necessity, risking the reduction of prudence to
+      tactics within a predetermined historical movement.
+  strauss:
+    significance: >
+      Defends philosophy's right to examine political ends and the relative
+      autonomy of prudence against doctrinairism, scientism, historicism,
+      decisionism, and the absorption of practice by theory or theory by practice.
+
+constitutive_propositions:
+  - >
+    Political action always presupposes a distinction between better and worse,
+    preservation and change, or justice and injustice.
+  - >
+    Theoretical understanding does not by itself determine a complete political
+    program.
+  - >
+    Practice is not a mechanical deduction from theory.
+  - >
+    Practice cannot remain secure when false theory denies the legitimacy of
+    prudence or claims exhaustive knowledge of history and action.
+  - >
+    Prudence differs from cleverness because it judges both means and ends in
+    relation to the whole situation.
+  - >
+    Expertise can inform political judgment without replacing it.
+  - >
+    Technical competence concerning means does not establish which ends deserve
+    pursuit.
+  - >
+    Practical success establishes effectiveness relative to an end, not the
+    justice or truth of that end.
+  - >
+    A universal principle may orient action without supplying one exact rule for
+    every circumstance.
+  - >
+    Political philosophy may criticize an order more securely than it can design
+    the prudent sequence of its replacement.
+  - >
+    Urgency may be real, but it does not abolish the need to identify ends,
+    authority, means, costs, and uncertainty.
+  - >
+    Prudence may justify restraint, compromise, gradual action, or nonaction, but
+    it may not become a name for cowardice, privilege, delay, or evasion.
+  - >
+    Philosophy must neither become a political program nor withdraw from all
+    responsibility for the consequences of understanding.
+
+recognition_signals:
+  - a general doctrine is treated as sufficient to determine action
+  - a principle is converted directly into policy without prudential mediation
+  - a diagnosis is presented as already determining the remedy
+  - experts claim final authority over political ends
+  - action is praised because it is effective, disruptive, victorious, or urgent
+  - political success is treated as proof of truth or justice
+  - contemplation is dismissed as useless unless it produces measurable results
+  - scientific or technical knowledge is treated as statesmanship
+  - history is said to determine what must be done
+  - a political development is declared inevitable or without alternatives
+  - moral purity is asserted without responsibility for foreseeable consequences
+  - realism or necessity is invoked to suspend all standards
+  - circumstance is invoked to turn prudence into relativism
+  - gradualism is invoked to preserve a continuing injustice
+  - urgency is invoked to suppress examination or dissent
+  - nonaction is defended without examining responsibility for continued harm
+
+first_ministerial_movement:
+  sequence:
+    - What action is proposed?
+    - What end is it meant to serve?
+    - How is that end known to be good?
+    - What theory, principle, or diagnosis supports the action?
+    - Does that theory describe, judge, predict, or command?
+    - What actor possesses legitimate responsibility for the decision?
+    - What facts and circumstances limit application?
+    - What goods conflict with the governing end?
+    - Which experts possess relevant but partial knowledge?
+    - What consequences are foreseeable?
+    - What uncertainty remains?
+
+required_operations:
+  - identify the proposed action and intended end
+  - state the theory, principle, diagnosis, or historical claim invoked
+  - determine whether the theory describes, judges, predicts, or commands
+  - identify the actor responsible for the final decision
+  - distinguish expert advice from political judgment
+  - expose every prudential judgment between general proposition and command
+  - reconstruct circumstances the theory may overlook
+  - identify competing goods and foreseeable sacrifices
+  - test whether proposed means corrupt or contradict the stated end
+  - test whether urgency is genuine or rhetorically manufactured
+  - test whether historical necessity is demonstrated or merely asserted
+  - seek the strongest practical objection to the theory
+  - seek the strongest principled objection to the proposed action
+  - examine the costs of both action and nonaction
+  - preserve uncertainty where consequences, authority, or ends remain disputed
+
+required_distinctions:
+  - theory and doctrine
+  - theory and ideology
+  - prudence and cleverness
+  - prudence and opportunism
+  - principle and rule
+  - political philosophy and political program
+  - knowledge and prediction
+  - science and statesmanship
+  - expertise and final political authority
+  - universal standard and exact command
+  - compromise and surrender
+  - gradualism and evasion
+  - nonaction and withdrawal
+  - realism and standardless necessity
+  - practical success and philosophical truth
+  - intention and political responsibility
+  - historical possibility and historical necessity
+  - contemplation and usefulness
+
+principal_tests:
+  platonic_test:
+    questions:
+      - Who is compelled to return to the cave?
+      - Who benefits from that return?
+      - Does theoretical insight survive political rule unchanged?
+      - Does the actor possess both understanding and political experience?
+      - Is the political community capable of receiving the guidance?
+      - Does the proposed action serve the city, philosophy, or both?
+      - What compromise with opinion is required?
+      - Does the return become education, legislation, rule, concealment, or sacrifice?
+    rule: >
+      The return to the cave is not a simple warrant for intellectual rule. It
+      discloses the disproportion between contemplation and political action.
+
+  aristotelian_test:
+    questions:
+      - Is this matter capable of exact demonstration?
+      - Which parts depend upon changing circumstances?
+      - What would a prudent person need to know?
+      - Which expert judgments are relevant but partial?
+      - What competing goods must be ranked?
+      - What action is possible rather than merely desirable?
+      - How does the actor's character affect judgment?
+    rule: >
+      Practical judgment possesses relative autonomy because variable human
+      affairs cannot be governed completely through exact theoretical deduction.
+
+  machiavellian_test:
+    questions:
+      - Is the standard being lowered for the sake of effectiveness?
+      - Does the proposal appeal to necessity to justify its means?
+      - Is political success becoming the measure of truth?
+      - Is fortune being mastered or merely renamed?
+      - What human end is lost when effectual truth replaces the highest standard?
+
+  kantian_test:
+    questions:
+      - Is the principle universalizable?
+      - Does the action respect human beings as ends?
+      - Is moral purity being purchased through political irresponsibility?
+      - Can the rule account for circumstance without becoming empty?
+      - Does gradual reform preserve right or postpone it indefinitely?
+
+  marxian_test:
+    questions:
+      - Is theory claiming knowledge of historical necessity?
+      - Are genuine alternatives being denied?
+      - Is a class or movement treated as the privileged agent of history?
+      - Is prudence reduced to tactics?
+      - Does the promised transformation abolish politics or relocate conflict?
+      - What happens if the historical prediction fails?
+      - Who exercises authority during the transition?
+
+false_resolutions:
+  doctrinairism: >
+    The correct general theory determines the correct action in every case.
+  technocracy: >
+    Those who possess scientific, technical, or statistical expertise should
+    therefore make the final political decision.
+  activism: >
+    Action is superior to reflection because action changes the world.
+  quietism: >
+    Philosophy should never enter political life because politics necessarily
+    corrupts it.
+  historical_determinism: >
+    The direction of history determines what must be done.
+  moral_absolutism_without_prudence: >
+    A true principle must be applied without qualification regardless of
+    circumstance or foreseeable consequence.
+  realism_without_standards: >
+    Political necessity makes moral and philosophical judgment irrelevant.
+  consequentialism_without_limits: >
+    A good result justifies any means.
+  intentionalism: >
+    Good intentions establish the justice of the action.
+  success_doctrine: >
+    Victory, efficiency, or survival proves wisdom.
+  failure_doctrine: >
+    Failure proves the governing principle false.
+  philosophic_sovereignty: >
+    Knowledge of the good automatically entitles the philosopher to direct command.
+  prudence_as_relativism: >
+    Because circumstances vary, no universal judgment is possible.
+  prudence_as_delay: >
+    Complexity and gradualism justify indefinite preservation of an injustice.
+  urgency_as_authority: >
+    Crisis eliminates the need to examine ends, means, or legitimate actors.
+
+anti_capture_rule: >
+  Prudence must mediate truth and action; it may not be invoked to protect action
+  from truth or theory from responsibility. The minister must test whether
+  moderation, delay, compromise, and nonaction preserve a genuine good or merely
+  protect privilege, cowardice, or avoidance. It must likewise test whether
+  urgency, purity, transformation, and necessity conceal irresponsibility,
+  doctrinairism, or ambition.
+
+boundary_rule: >
+  The problem is present when an inquiry concerns the relation between truth,
+  the good, prudence, and responsible action. Planning, management,
+  implementation, strategy, technical execution, or professional expertise do
+  not activate the problem by themselves.
+
+political_philosophy_policy_boundary:
+  political_philosophy_may_establish:
+    - that an institution is unjust
+    - that a regime misunderstands the good
+    - that a principle is incoherent
+    - that a political order rests on a false assumption
+  does_not_thereby_establish:
+    - the best immediate reform
+    - the proper timing
+    - the legitimate actor
+    - the acceptable risk
+    - the sequence of transition
+    - the correct institutional design
+    - the likely consequences
+  rule: >
+    The movement from criticism to action contains additional prudential
+    judgments that must be made explicit rather than smuggled into the command.
+
+expertise_boundary:
+  expertise_may_establish:
+    - probable consequences
+    - available means
+    - causal relationships
+    - operational constraints
+    - measurable risks
+  expertise_does_not_establish_alone:
+    - which goods deserve priority
+    - which burdens are just
+    - which risks may be imposed
+    - what sacrifices are proportionate
+    - who possesses legitimate authority
+    - whether the proposed end is good
+  rule: >
+    Expertise has authority within its defined subject matter; it does not
+    possess final authority over the whole political decision.
+
+relations:
+  nomos_and_physis:
+    distinction: >
+      Nomos and Physis asks whether the governing standard is natural,
+      conventional, or a conventional response to nature. Theory and Practice
+      asks what action may responsibly follow once a standard is identified.
+
+  theologico_political:
+    distinction: >
+      The Theologico-Political Problem concerns who has the right to rule.
+      Theory and Practice concerns how a philosophic, revealed, legal, or
+      sovereign teaching becomes action and whether obedience abolishes prudence.
+
+  wise_and_vulgar:
+    distinction: >
+      The Wise and the Vulgar concerns who understands and how understanding is
+      communicated. Theory and Practice concerns whether those who understand
+      should act and how understanding becomes political judgment.
+
+  ancients_and_moderns:
+    distinction: >
+      Theory and Practice is the permanent problem. Ancients and Moderns examines
+      the historical transformation through which theory increasingly assumes
+      responsibility for mastery, construction, and comprehensive political change.
+
+  athens_and_jerusalem:
+    distinction: >
+      Athens and Jerusalem concerns reason and revelation as comprehensive
+      alternatives. Theory and Practice asks how either alternative guides life,
+      law, obedience, judgment, and political action.
+
+permissible_outputs:
+  documented_finding: >
+    Identify the stated theory, governing end, proposed action, responsible actor,
+    relevant circumstances, and expert evidence.
+  supported_inference: >
+    Identify prudential judgments concealed between a true proposition and a
+    proposed command.
+  prudential_finding: >
+    State whether circumstance, timing, competing goods, or consequences support
+    immediate, limited, gradual, altered, or withheld action.
+  critical_finding: >
+    Identify where doctrine, expertise, historical necessity, success, or urgency
+    falsely claims to eliminate political judgment.
+  means_end_finding: >
+    Identify where proposed means risk corrupting, contradicting, or displacing
+    the stated end.
+  expert_limit_finding: >
+    State what expert evidence establishes and which normative judgments remain
+    outside its competence.
+  philosophic_restraint: >
+    State that criticism of the existing order is better supported than a complete
+    program of replacement.
+  unresolved_uncertainty: >
+    State that the theoretical end is defensible while available evidence does
+    not establish which action would serve it prudently.
+  affirmative_non_resolution: >
+    Preserve a genuine tension between fidelity to the highest standard and
+    responsibility for foreseeable political consequences.
+
+opacity_floor:
+  - >
+    The inquiry establishes what must be taken seriously more clearly than it
+    establishes what must be done.
+  - >
+    The theory identifies the good more clearly than it determines the action.
+  - >
+    The proposed action may be necessary, but the evidence does not establish
+    that the chosen means are just.
+  - >
+    Expert evidence narrows the responsible options without selecting one final
+    political judgment.
+  - >
+    Immediate action risks sacrificing the governing good, while delay risks
+    allowing the injustice to continue.
+  - >
+    The existing order is defective, but the inquiry does not yet support a
+    complete program of transformation.
+
+termination_condition: >
+  The problem record is complete when the minister has identified the governing
+  theory or principle, the proposed action and responsible actor, exposed every
+  prudential judgment between theory and command, distinguished expertise from
+  statesmanship, examined circumstance, timing, competing goods, and foreseeable
+  consequences, tested means against ends, rejected both doctrinairism and
+  standardless realism, examined the dangers of action and nonaction, and
+  preserved uncertainty where responsible action cannot be deduced.
+
+core_movement: >
+  Theory must retain the right to judge the ends of action; practice must retain
+  the prudential freedom to judge circumstances; and neither may absorb the other
+  without destroying the possibility of responsible political judgment.
