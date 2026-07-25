@@ -1,0 +1,37 @@
+record_id: STR-PROBLEM-002-REBUILD-PRESERVATION-001
+problem_id: STR-PROBLEM-002
+title: The Theologico-Political Problem
+record_type: preservation_record
+status: ACTIVE — REBUILD STAGE 1
+
+preserved_object:
+  repository: izzy9118-blip/Strauss
+  path: problems/theologico-political.yaml
+  version: 1.0
+  source_commit: b7f048904be116386d4cb54c1692281aaf059405
+  blob_sha: 15cc1159d5bd808ac938c340055c4ddd2b9c8e17
+  disposition: preserved_unchanged_as_pre_rebuild_object
+  governing_rule: revise_not_replace
+
+rebuild_authorization:
+  basis: >
+    Rebuild Problem Two from the complete project review of the nineteen specified
+    Strauss texts, while preserving the existing object and its Git history.
+  scope:
+    - preserve version 1.0 without retrospective alteration
+    - create a nineteen-source independent reconstruction ledger
+    - do not certify a revised synthesis during Stage 1
+    - do not manufacture agreement between philosophy and revelation
+    - do not infer a concealed teaching from danger or persecution alone
+
+preservation_finding: >
+  The existing problems/theologico-political.yaml remains the complete version 1.0
+  problem object as it stood before the current rebuild. This record does not amend,
+  supersede, reinterpret, or certify that file. It fixes the exact repository path,
+  commit, and blob identity from which the rebuild proceeds.
+
+next_required_artifact:
+  path: problems/rebuild/STR-PROBLEM-002/01-source-reconstruction-ledger.yaml
+  purpose: >
+    Register the nineteen independent source reconstructions required before a new
+    integrated Problem Two synthesis may be drafted.
