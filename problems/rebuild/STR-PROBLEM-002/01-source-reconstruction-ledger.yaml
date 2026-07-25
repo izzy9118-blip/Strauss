@@ -1,0 +1,430 @@
+ledger_id: STR-PROBLEM-002-SOURCE-LEDGER-001
+problem_id: STR-PROBLEM-002
+title: The Theologico-Political Problem — Independent Source Reconstruction Ledger
+version: 1.0
+status: ACTIVE — REBUILD STAGE 1
+record_type: source_reconstruction_ledger
+
+purpose: >
+  Register and govern the nineteen independent source reconstructions required before
+  Problem Two may be resynthesized. The ledger prevents the existing problem object,
+  a later source, a secondary interpretation, or an anticipated synthesis from silently
+  determining what an earlier source is permitted to say.
+
+governing_question: >
+  Can philosophy give a rational account of the whole and of the best human life
+  sufficient to reject the authoritative claim of divine revelation and divine law;
+  or must philosophy remain permanently answerable to a claim that it cannot
+  rationally refute, politically neutralize, or historically supersede?
+
+source_count: 19
+completion_rule: >
+  The ledger is complete only when all nineteen records have fixed witnesses,
+  independent reconstructions, passage-bound evidence, uncertainty records, and
+  source-specific termination findings. Cross-source synthesis is prohibited before
+  those conditions are met.
+
+method:
+  - fix the exact witness, edition, scope, and documentary limitations
+  - reconstruct the source independently before comparison
+  - distinguish explicit statement, textual implication, supported inference, and hypothesis
+  - preserve sequence, audience, occasion, title, preface, beginning, ending, and structural anomalies
+  - examine guarded writing when warranted without treating persecution as proof of concealment
+  - record the strongest alternative reading and the evidence most threatening to the current reading
+  - return to Strauss only after cited authors and rival positions have been reconstructed independently
+  - preserve nonresolution where the evidence does not establish a victor
+
+shared_required_fields:
+  - witness_identity
+  - witness_fixity
+  - textual_scope
+  - occasion_and_audience
+  - announced_subject
+  - actual_argument_sequence
+  - explicit_thesis
+  - key_terms_and_distinctions
+  - cited_author_reconstructions
+  - evidence_passages
+  - structural_and_hermeneutic_observations
+  - strongest_supported_reading
+  - strongest_alternative_reading
+  - threatening_evidence
+  - relation_to_problem_two
+  - uncertainties_and_dissent
+  - epistemic_classification
+  - termination_status
+
+source_records:
+  - source_id: P2-SRC-001
+    sequence: 1
+    title: Progress or Return?
+    date: 1952
+    textual_scope: complete work
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Examine progress and return as rival orientations, the unresolved conflict
+      between biblical and philosophic accounts of the good life, and whether modern
+      criticism has actually established the impossibility of revelation.
+    required_focus:
+      - meaning of progress
+      - meaning of return or teshuvah
+      - biblical and philosophic notions of the good life
+      - status of modern science and historical criticism
+      - meaning of living the conflict
+
+  - source_id: P2-SRC-002
+    sequence: 2
+    title: Preface to Spinoza's Critique of Religion
+    date: 1965
+    textual_scope: complete preface
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Reconstruct Strauss's reconsideration of the early Spinoza project and the
+      question whether reason can exclude miracle or revelation without possessing
+      an exhaustive account of the whole.
+    required_focus:
+      - original Spinoza project
+      - critique of orthodoxy
+      - reason and miracle
+      - limits of rational refutation
+      - autobiographical and doctrinal levels
+
+  - source_id: P2-SRC-003
+    sequence: 3
+    title: How to Study Spinoza's Theologico-Political Treatise
+    date: 1948
+    textual_scope: complete essay
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Recover Strauss's rule that interpretation precedes historical or psychological
+      explanation, and test the relation between Spinoza's announced scriptural method,
+      actual argumentative sequence, differentiated audiences, and political purpose.
+    required_focus:
+      - interpretation before explanation
+      - announced and actual subject
+      - literal interpretation
+      - heterogeneous argumentative movements
+      - audience differentiation
+      - authority to interpret Scripture
+
+  - source_id: P2-SRC-004
+    sequence: 4
+    title: Preface to Isaac Husik, Philosophical Essays
+    date: 1952
+    textual_scope: complete preface
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Determine how Strauss distinguishes the living problem of philosophy and
+      revealed law from a merely historical account of medieval Jewish philosophy.
+    required_focus:
+      - historical scholarship and philosophic inquiry
+      - medieval Jewish philosophy
+      - philosophy and law
+      - modern presuppositions
+      - living versus antiquarian questions
+
+  - source_id: P2-SRC-005
+    sequence: 5
+    title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
+    date: 1972
+    textual_scope: complete introductory essay
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Reconstruct Cohen's attempted reconciliation of Judaism, revelation, law,
+      autonomous reason, morality, and historical progress before judging Strauss's
+      criticism of that reconciliation.
+    required_focus:
+      - revelation and reason
+      - law and moral education
+      - commandment and symbol
+      - autonomy
+      - messianism and historical progress
+      - what remains specifically Jewish
+
+  - source_id: P2-SRC-006
+    sequence: 6
+    title: Freud on Moses and Monotheism
+    date: 1958
+    textual_scope: complete essay
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Examine Freud's psychological and historical explanation of monotheism and
+      Jewish persistence, and determine what that explanation can and cannot establish
+      concerning authority, memory, pride, and revelation.
+    required_focus:
+      - Moses and origins
+      - repression and inherited memory
+      - scientific explanation
+      - Jewish pride and persistence
+      - explanatory reduction and residual authority
+
+  - source_id: P2-SRC-007
+    sequence: 7
+    title: Why We Remain Jews
+    date: 1962
+    textual_scope: complete lecture or essay
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Reconstruct the sequence from emancipation and assimilation through political
+      Zionism, Jewish persistence, Torah, and the limits of every merely political
+      solution of the Jewish problem.
+    required_focus:
+      - emancipation
+      - assimilation
+      - anti-Jewish hostility
+      - Jewish self-understanding
+      - political and cultural Zionism
+      - Torah and divine gift
+      - political solution and theological remainder
+
+  - source_id: P2-SRC-008
+    sequence: 8
+    title: On the Interpretation of Genesis
+    date: 1957
+    textual_scope: complete essay or lecture
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Read Genesis first as a serious account of the whole on its own terms, without
+      silently replacing creation, command, disobedience, and punishment with modern
+      scientific, historical, or psychological categories.
+    required_focus:
+      - creation
+      - divine speech and command
+      - order of the created whole
+      - human freedom and disobedience
+      - punishment
+      - interpretive limits of modern criticism
+
+  - source_id: P2-SRC-009
+    sequence: 9
+    title: Jerusalem and Athens
+    date: 1967
+    textual_scope: Part V — Comments on Jewish History, read within the complete argument
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Reconstruct Jerusalem and Athens independently as comprehensive alternatives,
+      then determine what Part V adds concerning Jewish history without allowing
+      historical experience to prove or disprove either alternative.
+    required_focus:
+      - fear of the Lord and wonder
+      - obedience and inquiry
+      - command, covenant, prophecy, and promise
+      - nature and autonomous examination
+      - Jewish history
+      - incompatibility, agreement, and nonresolution
+
+  - source_id: P2-SRC-010
+    sequence: 10
+    title: What Is Political Philosophy?
+    date: 1954
+    textual_scope: first paragraph
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Examine why political philosophy opens under the prophetic image of Jerusalem,
+      and distinguish the philosophic inquiry into the best political order from the
+      Kingdom of God or a city made righteous by revelation.
+    required_focus:
+      - opening image of Jerusalem
+      - justice and faithfulness
+      - political philosophy and prophecy
+      - best regime and Kingdom of God
+      - distance from and memory of Jerusalem
+
+  - source_id: P2-SRC-011
+    sequence: 11
+    title: Review of J. L. Talmon, The Nature of Jewish History
+    date: 1957
+    textual_scope: complete review
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Test claims that Jewish history possesses a universal historical meaning and
+      determine how Jewish persistence may disclose a human political problem without
+      becoming proof of a philosophy of history.
+    required_focus:
+      - nature of Jewish history
+      - universal significance
+      - survival and chosenness
+      - historical progress
+      - Jewish problem and human problem
+
+  - source_id: P2-SRC-012
+    sequence: 12
+    title: Letter to the Editor — The State of Israel
+    date: 1957
+    textual_scope: complete letter
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Distinguish the political dignity and necessity of the State of Israel from
+      redemption, messianic fulfillment, or a philosophic resolution of the Jewish
+      problem.
+    required_focus:
+      - political achievement
+      - defense against helplessness
+      - blessing and human action
+      - statehood and redemption
+      - theological nonidentification
+
+  - source_id: P2-SRC-013
+    sequence: 13
+    title: Introduction to Persecution and the Art of Writing
+    date: 1952
+    textual_scope: complete introduction
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Reconstruct the relation between philosophy and politics, the conditions of
+      persecution, and the documentary criteria for guarded or esoteric writing.
+    required_focus:
+      - persecution in broad and strict senses
+      - philosophy and political society
+      - exoteric and esoteric communication
+      - differentiated audiences
+      - textual evidence requirements
+      - limits on concealment claims
+
+  - source_id: P2-SRC-014
+    sequence: 14
+    title: Perspectives on the Good Society
+    date: 1963
+    textual_scope: complete essay
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Determine the attainable scope of a good political society and why finite
+      political improvement cannot become a final society, redemption, or the abolition
+      of the distinction between political and philosophic life.
+    required_focus:
+      - good society
+      - political finitude
+      - limits of reform
+      - philosophy and the city
+      - final society and redemption
+
+  - source_id: P2-SRC-015
+    sequence: 15
+    title: An Unspoken Prologue
+    date: 1959
+    textual_scope: complete work
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Preserve the autobiographical path through orthodoxy, atheism, Zionism,
+      Nietzsche, and medieval philosophy while refusing to treat biography as proof
+      of Strauss's final teaching.
+    required_focus:
+      - autobiographical occasion
+      - orthodoxy and atheism
+      - Zionism
+      - Nietzsche
+      - rediscovery of medieval philosophy
+      - biography and doctrinal inference
+
+  - source_id: P2-SRC-016
+    sequence: 16
+    title: Preface to Hobbes Politische Wissenschaft
+    date: 1965
+    textual_scope: complete preface
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Establish what Strauss means by naming the theologico-political problem as the
+      continuing theme of his investigations and reconstruct Hobbes's attempt to
+      secure political peace by transforming the ends and authority of politics.
+    required_focus:
+      - statement of lifelong theme
+      - Hobbes and modern political philosophy
+      - peace and lowered political ends
+      - sovereign authority
+      - neutralization versus refutation of revelation
+
+  - source_id: P2-SRC-017
+    sequence: 17
+    title: A Giving of Accounts
+    date: 1970
+    textual_scope: complete account
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Use Strauss's account of teachers, books, gratitude, and inquiry as
+      autobiographical evidence concerning the philosophic way of life, while keeping
+      autobiographical evidence distinct from a doctrinal conclusion.
+    required_focus:
+      - teachers and books
+      - gratitude
+      - philosophy as a way of life
+      - intellectual development
+      - Jewish question
+      - limits of autobiographical proof
+
+  - source_id: P2-SRC-018
+    sequence: 18
+    title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
+    date: 1946
+    textual_scope: complete plan
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Recover the proposed architecture in which philosophy confronts revealed law,
+      especially in medieval Jewish and Islamic philosophy, and distinguish that
+      project from a generic history of religion and philosophy.
+    required_focus:
+      - philosophy and law
+      - revealed law
+      - medieval Jewish philosophy
+      - medieval Islamic philosophy
+      - historical essays and philosophic purpose
+      - proposed order of investigation
+
+  - source_id: P2-SRC-019
+    sequence: 19
+    title: Restatement on Xenophon's Hiero
+    date: TO_BE_VERIFIED
+    textual_scope: complete restatement, with special attention to the concluding exchange
+    reconstruction_status: NOT_STARTED
+    witness_status: PENDING_FIXITY
+    working_orientation_not_finding: >
+      Reconstruct the dispute with Kojeve concerning tyranny, wisdom, universal and
+      homogeneous state, eternity, history, and whether truth is grounded in an eternal
+      order or created through historical action.
+    required_focus:
+      - tyranny and wisdom
+      - philosopher and city
+      - universal and homogeneous state
+      - eternity and historical completion
+      - being and historical self-creation
+      - political consequences as tests rather than proofs
+
+cross_source_synthesis_gate:
+  status: CLOSED_PENDING_NINETEEN_RECONSTRUCTIONS
+  prohibited_until_open:
+    - revision of problems/theologico-political.yaml
+    - certification of a new Problem Two synthesis
+    - declaration of victory for philosophy or revelation
+    - declaration that Jerusalem and Athens are harmonized
+    - theological interpretation of Jewish survival or the State of Israel
+    - inference of a secret teaching from persecution alone
+  opens_when:
+    - all nineteen witness_status values are FIXED
+    - all nineteen reconstruction_status values are COMPLETE
+    - every substantive claim is passage-bound
+    - uncertainty and strongest-alternative records are complete
+    - source-specific termination findings are recorded
+
+current_termination_status: STAGE_1_LEDGER_CREATED
+next_textual_act:
+  source_id: P2-SRC-001
+  act: >
+    Fix the witness for Progress or Return? and produce the first independent source
+    reconstruction without importing the conclusions of the remaining eighteen texts.
