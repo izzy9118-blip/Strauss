@@ -1,0 +1,195 @@
+id: STR-PROBLEM-001
+title: Nomos and Physis
+version: 1.0
+status: ACTIVE — FOUNDATIONAL PROBLEM OBJECT
+type: fundamental_problem
+
+origin:
+  primary_ground: Plato
+  description: >
+    Plato brings the problem into view through the conflict between the
+    authoritative laws, customs, and opinions of political communities
+    and the possibility of a standard grounded in nature.
+
+governing_question: >
+  Are justice and the right way of life grounded in nature, or do they
+  derive their authority from law, custom, convention, and political opinion?
+
+problem_statement: >
+  The discovery of nature discloses that the authoritative ways of political
+  communities are not simply identical with the order of things. Law, custom,
+  and inherited opinion may answer permanent human necessities, but they may
+  also conceal, distort, or contradict what is naturally right. The problem
+  therefore concerns whether political life can be judged by a standard beyond
+  convention without denying the necessity of convention itself.
+
+fundamental_tension:
+  pole_one:
+    name: Nomos
+    includes:
+      - law
+      - custom
+      - convention
+      - ancestral authority
+      - political opinion
+      - established institutions
+      - authoritative accounts of justice and the good
+  pole_two:
+    name: Physis
+    includes:
+      - nature
+      - human nature
+      - natural necessity
+      - natural good
+      - natural right
+      - standards not created solely by political agreement
+
+constitutive_propositions:
+  - >
+    Nomos is not merely written law; it is the authoritative horizon through
+    which a political community understands justice, the good, and the whole.
+  - >
+    Physis becomes visible when inherited authority is distinguished from what
+    exists or is good independently of human establishment.
+  - >
+    Nomos is politically necessary and may respond to genuine natural needs.
+  - >
+    Political necessity does not prove that a particular nomos is naturally right.
+  - >
+    The conventional character of an institution does not by itself prove that
+    the institution is unjust.
+  - >
+    Variation among political communities opens the question of natural right
+    but does not settle it against natural right.
+  - >
+    The origin of an opinion and the truth of that opinion are different questions.
+  - >
+    Nature and nomos are neither simply identical nor simply opposed.
+
+recognition_signals:
+  - law is identified with justice
+  - custom is treated as natural or universally binding
+  - an institution is presented as inevitable
+  - a natural fact is used as sufficient moral proof
+  - political communities give incompatible answers to the same question
+  - reform appeals to nature against inherited authority
+  - inherited authority is defended against a proposed universal standard
+  - political usefulness is treated as proof of truth
+  - historical origin is treated as proof or disproof of validity
+  - education and habituation shape allegedly natural desires or virtues
+
+required_operations:
+  - identify what the inquiry treats as authoritative
+  - determine whether that authority rests on law, custom, agreement, nature, or necessity
+  - reconstruct the strongest account the nomos gives of itself
+  - identify the human good the nomos claims to serve
+  - distinguish natural fact from natural good
+  - distinguish natural need from one particular institutional response
+  - examine whether differing conventions can be judged by a common standard
+  - separate historical explanation from philosophical judgment
+  - distinguish political necessity from philosophical truth
+  - preserve the problem when the evidence does not establish a final natural standard
+
+required_distinctions:
+  - what occurs naturally
+  - what follows from human nature
+  - what is good for human beings by nature
+  - what political institutions are required by that good
+  - what institutions are merely compatible with that good
+  - what institutions are contingent responses to permanent necessities
+  - legality
+  - legitimacy
+  - justice
+  - political usefulness
+  - truth
+
+false_resolutions:
+  legal_positivism: >
+    Something is just because it is established as law.
+  conventionalism: >
+    Disagreement among communities proves that no natural standard exists.
+  naive_traditionalism: >
+    An ancestral practice is right because it is old or inherited.
+  naive_progressivism: >
+    A later arrangement is superior merely because it is later.
+  biological_reductionism: >
+    What occurs in nature is therefore morally right.
+  abstract_rationalism: >
+    A natural principle can be translated directly into one uniform political rule.
+  historicism: >
+    Historical conditioning makes access to permanent questions impossible.
+  cynicism: >
+    Every nomos is nothing more than an instrument of domination.
+  romantic_naturalism: >
+    Human flourishing requires liberation from law, education, and convention as such.
+
+anti_capture_rule: >
+  The minister must never silently identify its own inherited opinion with nature.
+  Every appeal to nature must disclose the factual claim, the account of human
+  nature, the alleged human good, and the political conclusion drawn from them.
+
+boundary_rule: >
+  The problem is present only when an authoritative human arrangement is measured
+  against, defended from, or confused with a claim concerning nature, natural
+  necessity, natural good, or natural right. Merely technical, procedural,
+  administrative, or strategic disagreements do not activate the problem by themselves.
+
+relations:
+  theologico_political:
+    distinction: >
+      Nomos and Physis examines the relation between convention and nature.
+      The theologico-political problem becomes primary when a law claims divine
+      or revealed authority.
+  wise_and_vulgar:
+    distinction: >
+      Nomos and Physis examines the truth or justice of authoritative opinion.
+      The Wise and the Vulgar examines differentiated capacities to question,
+      understand, or live under that opinion.
+  ancients_and_moderns:
+    distinction: >
+      Nomos and Physis is the permanent problem. Ancients and Moderns examines
+      rival historical-philosophical transformations of nature and convention.
+  theory_and_practice:
+    distinction: >
+      Nomos and Physis asks what is naturally right. Theory and Practice asks
+      what political action can responsibly follow from such understanding.
+  athens_and_jerusalem:
+    distinction: >
+      Nomos and Physis discloses the insufficiency of mere convention.
+      Athens and Jerusalem concerns reason and revelation as rival claims to
+      authority beyond ordinary convention.
+
+permissible_outputs:
+  documented_finding: >
+    State what law, custom, institution, or authoritative opinion governs the inquiry.
+  supported_inference: >
+    Identify whether an arrangement appears conventional, natural, or a conventional
+    response to a natural necessity.
+  working_hypothesis: >
+    Propose a possible relation between the convention and an underlying natural good.
+  critical_finding: >
+    Identify an invalid movement from fact, legality, antiquity, novelty, or variation
+    to a conclusion about justice.
+  unresolved_uncertainty: >
+    State that the inquiry discloses the inadequacy of the present nomos without yet
+    establishing the naturally right alternative.
+  affirmative_non_resolution: >
+    Preserve a genuine conflict between political necessity and a possible natural
+    standard when the available evidence cannot responsibly resolve it.
+
+opacity_floor:
+  - >
+    The inquiry establishes that the existing nomos is not identical with nature,
+    but it does not establish the complete content of natural right.
+  - >
+    The evidence discloses the necessity of a natural standard more clearly than
+    it discloses the final form of that standard.
+  - >
+    The convention may answer a permanent human need, but the evidence does not
+    prove that its present form is naturally right.
+
+termination_condition: >
+  The problem record is complete when the minister has reconstructed the authority
+  of the governing nomos, identified the possible natural standard or natural
+  necessity at issue, tested the strongest claims of both, rejected false resolutions,
+  and preserved any remaining uncertainty without manufacturing a verdict.
