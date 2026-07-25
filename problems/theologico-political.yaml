@@ -1,0 +1,284 @@
+id: STR-PROBLEM-002
+title: The Theologico-Political Problem
+version: 1.0
+status: ACTIVE — FOUNDATIONAL PROBLEM OBJECT
+type: fundamental_problem
+
+origin:
+  primary_ground: Plato
+  description: >
+    Plato brings the problem into view through the conflict between
+    philosophic examination and the authoritative laws, gods, and opinions
+    of the political community. Biblical revelation gives the conflict its
+    most comprehensive form by claiming divine authority over the whole
+    human way of life.
+
+governing_question: >
+  Who or what possesses the highest right to rule human life:
+  divine revelation, philosophic reason, political law, or sovereign authority?
+
+problem_statement: >
+  The Theologico-Political Problem is the contention over rightful rule.
+  Revelation claims authoritative obedience concerning the right way of life.
+  Philosophy claims the necessity and freedom to examine every comprehensive
+  claim. Political law and sovereign authority claim the power to establish
+  public order, determine permissible teaching, and settle conflicts within
+  the community. Because these authorities may each claim final jurisdiction
+  over belief, action, interpretation, and law, their conflict cannot be reduced
+  to a private disagreement between religion and philosophy.
+
+fundamental_tension:
+  contenders:
+    divine_revelation:
+      title_to_rule: >
+        Authority derived from divine command, prophecy, sacred law,
+        or an authoritative revealed text.
+    philosophic_reason:
+      title_to_rule: >
+        Authority derived from unrestricted examination and the claim
+        that no comprehensive teaching should be accepted without inquiry.
+    political_law:
+      title_to_rule: >
+        Authority derived from the need for public order, common judgment,
+        education, and enforceable law.
+    sovereign_authority:
+      title_to_rule: >
+        Authority derived from the need for a final human decision concerning
+        public doctrine, conduct, interpretation, and political peace.
+
+domains_of_rule:
+  - the individual soul
+  - belief
+  - conduct
+  - education
+  - interpretation
+  - legislation
+  - political legitimacy
+  - public worship
+  - membership in the community
+  - the right way of life
+
+constitutive_propositions:
+  - >
+    The problem concerns the right to rule, not merely the coexistence
+    of religion and politics.
+  - >
+    Philosophy and revelation make comprehensive claims concerning
+    the right way of life.
+  - >
+    Revelation demands obedience to an authority philosophy cannot accept
+    without examination.
+  - >
+    Philosophy requires freedom to examine claims that political or religious
+    authority may regard as settled.
+  - >
+    A political settlement may decide who governs without establishing
+    which comprehensive claim is true.
+  - >
+    Interpretation of an authoritative text may itself constitute an act of rule.
+  - >
+    A supposedly neutral settlement may secretly privilege sovereign,
+    philosophic, or theological authority.
+  - >
+    Persecution, censorship, orthodoxy, and differentiated audiences create
+    serious grounds for guarded writing.
+  - >
+    Grounds for guarded writing require scrutiny but do not prove concealment.
+  - >
+    Neither philosophy nor revelation may be declared victorious before
+    its strongest claim has been examined.
+
+principal_witnesses:
+  plato:
+    significance: >
+      Discloses the conflict between the city, its gods and laws, and the
+      philosophic life. Raises the question of whether the city may judge
+      philosophy and whether philosophy may judge the city.
+  maimonides:
+    significance: >
+      Brings revealed law, prophecy, philosophy, jurisprudence, political
+      governance, and differentiated audiences into one comprehensive order.
+  spinoza:
+    significance: >
+      Reorders scriptural authority, philosophic freedom, sovereign power,
+      and the right to interpret revelation.
+  f_h_jacobi:
+    significance: >
+      Challenges philosophy's claim that reason can ground itself and judge
+      revelation from a position of complete independence.
+  machiavelli:
+    significance: >
+      Elevates the human founder and effective ruler while challenging
+      external theological and traditional claims over political rule.
+
+recognition_signals:
+  - a law or teaching claims divine origin
+  - obedience is demanded in place of examination
+  - philosophy is accused of impiety, heresy, or political danger
+  - a sovereign claims authority over religion or sacred interpretation
+  - religious authority claims jurisdiction over political law
+  - competing authorities dispute who may interpret an authoritative text
+  - censorship, persecution, or compulsory orthodoxy limits inquiry
+  - a founder, prophet, philosopher, theologian, or sovereign claims final authority
+  - freedom to philosophize is tolerated only conditionally
+  - a supposedly neutral settlement determines religion's permissible scope
+  - public certainty is defended against philosophic questioning
+  - philosophic freedom is defended against authoritative revelation
+
+highest_scrutiny_condition: >
+  When the problem is credibly present, the minister must activate the most
+  scrupulous hermeneutic examination because the author may face persecution,
+  communal obligation, political danger, religious prohibition, or the need
+  to address different audiences.
+
+required_textual_examination:
+  - compare the announced and actual subject
+  - identify the political and religious circumstances of composition
+  - distinguish intended, excluded, and differentiated audiences
+  - examine explicit professions of orthodoxy
+  - record rare qualifications of repeated conventional claims
+  - compare contradictions across distant passages
+  - examine incidental statements and unstated implications
+  - compare repeated formulations word by word
+  - inspect ambiguous, technical, or secret terminology
+  - recover incomplete or altered quotations
+  - identify significant silence and expected omissions
+  - examine titles, dedications, prefaces, beginnings, and endings
+  - inspect inappropriate expressions and clumsy transitions
+  - distinguish what the author says from what the work accomplishes
+
+scrutiny_rule: >
+  Maximum scrutiny must never become automatic inversion. The possibility
+  of guarded or concealed writing must be examined completely, but no secret
+  teaching may be asserted without sufficient documentary support.
+
+required_operations:
+  - identify every contender for final authority
+  - identify the object and domain of each claim to rule
+  - reconstruct the strongest title asserted by each contender
+  - distinguish theological, philosophic, legal, and sovereign authority
+  - determine who controls authoritative interpretation
+  - distinguish political settlement from philosophical resolution
+  - identify what the author could not safely or publicly say
+  - distinguish author, narrator, speaker, character, and cited authority
+  - determine where the text actually places final practical authority
+  - seek the passage or structural fact most threatening to the current reading
+  - preserve the contention when the evidence does not establish a victor
+
+required_distinctions:
+  - philosophy and revelation
+  - reason and obedience
+  - truth and political settlement
+  - divine law and human law
+  - theological authority and sovereign authority
+  - private belief and public jurisdiction
+  - toleration and subordination
+  - author and speaker
+  - explicit profession and final teaching
+  - grounds for concealment and proof of concealment
+  - political victory and rightful rule
+
+false_resolutions:
+  secularist_dismissal: >
+    Revelation is irrational and therefore need not be examined.
+  theocratic_dismissal: >
+    Divine law has spoken, so philosophical examination is illegitimate.
+  liberal_neutralization: >
+    Religion and philosophy are private choices and no contest over rule remains.
+  harmonization: >
+    Philosophy and revelation teach the same truth in different language.
+  historical_reduction: >
+    The conflict belonged to an earlier age and has been overcome.
+  psychological_reduction: >
+    Faith is explained by fear, need, or projection and is therefore refuted.
+  political_reduction: >
+    Theology is merely an instrument of social control.
+  literalist_closure: >
+    An explicit profession of orthodoxy ends all further inquiry.
+  esoteric_overreach: >
+    Danger to the author proves that every orthodox statement is false.
+  sovereign_neutrality: >
+    The sovereign merely protects peace and does not decide the public limits
+    of theology or philosophy.
+
+anti_capture_rule: >
+  The minister must not silently decide the problem in favor of modern
+  secular sovereignty, revealed authority, philosophic autonomy, or any
+  presumed harmony between them. Every contender must disclose its title,
+  domain, subjects, limits, means of enforcement, and claim to truth.
+
+boundary_rule: >
+  The problem is present only when theology, philosophy, political law,
+  or sovereignty makes a serious claim to final authority over belief,
+  conduct, interpretation, law, or the right way of life. The mere presence
+  of religion, devotional practice, or political administration does not
+  activate the problem by itself.
+
+relations:
+  nomos_and_physis:
+    distinction: >
+      Nomos and Physis asks whether authoritative law is grounded in nature
+      or convention. The Theologico-Political Problem begins when law claims
+      divine authority or when philosophy challenges that authority.
+  wise_and_vulgar:
+    distinction: >
+      The Theologico-Political Problem concerns who has the right to rule.
+      The Wise and the Vulgar concerns differentiated capacities to understand
+      and the communication of teaching to different audiences.
+  ancients_and_moderns:
+    distinction: >
+      The present problem is permanent. Ancients and Moderns examines major
+      historical-philosophical transformations of its proposed settlements.
+  theory_and_practice:
+    distinction: >
+      The present problem concerns rightful authority. Theory and Practice
+      concerns what responsible political action may follow from philosophic
+      examination of that authority.
+  athens_and_jerusalem:
+    distinction: >
+      Athens and Jerusalem names philosophy and revelation as the highest
+      comprehensive alternatives. The Theologico-Political Problem concerns
+      their contention within law, interpretation, society, and political rule.
+
+permissible_outputs:
+  documented_finding: >
+    State which authority explicitly governs belief, law, interpretation,
+    or public conduct.
+  supported_inference: >
+    Identify how a political or theological settlement privileges one
+    contender without claiming that its comprehensive teaching is true.
+  working_hypothesis: >
+    Propose that an orthodox profession, apparent harmony, or public doctrine
+    may protect a different level of inquiry or a differentiated audience.
+  critical_finding: >
+    Identify where a neutral settlement secretly assigns final authority.
+  hermeneutic_finding: >
+    Identify a contradiction, omission, qualification, or structural feature
+    that requires deeper examination of the author's final position.
+  unresolved_uncertainty: >
+    State that the evidence establishes differentiated teaching or conflicting
+    authorities without establishing the author's final allegiance.
+  affirmative_non_resolution: >
+    Preserve the contention between obedient faith, philosophic examination,
+    and political authority when the available evidence cannot resolve it.
+
+opacity_floor:
+  - >
+    The political settlement establishes who rules publicly, but it does not
+    establish who possesses the highest rightful authority.
+  - >
+    The evidence establishes grounds for guarded writing, but it does not yet
+    disclose a complete secret teaching.
+  - >
+    The text distinguishes political necessity from philosophic inquiry more
+    clearly than it resolves the truth of revelation.
+  - >
+    The inquiry reveals a contention over final authority that cannot be
+    responsibly settled from the available evidence.
+
+termination_condition: >
+  The problem record is complete when the minister has identified the contenders
+  for rule, reconstructed their strongest titles, determined the domains and
+  subjects of their authority, applied the highest level of textual scrutiny,
+  rejected premature resolutions, and preserved any remaining contention
+  without manufacturing a victor.
