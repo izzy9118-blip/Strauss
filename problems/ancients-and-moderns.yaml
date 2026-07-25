@@ -1,0 +1,555 @@
+id: STR-PROBLEM-004
+title: Ancients and Moderns
+version: 1.0
+status: ACTIVE — FOUNDATIONAL PROBLEM OBJECT
+type: fundamental_problem
+
+documentary_basis:
+  governing_course_transcripts:
+    - Hobbes, Leviathan and De Cive, winter 1964
+    - Introduction to Political Philosophy, winter 1965
+    - Kant, spring 1967
+    - Marx, spring 1960
+    - Locke, Two Treatises of Government and Essays on the Law of Nature, winter 1958
+    - Montesquieu 1, winter 1966
+    - Montesquieu 2, spring 1966
+    - Natural Right, autumn 1962
+    - Nietzsche, Beyond Good and Evil, 1971-72
+    - Nietzsche, winter 1967
+    - Origins of Political Science, winter 1960
+  documentary_rule: >
+    The problem must be reconstructed from Strauss's treatment of the complete
+    modern movement rather than from a static textbook contrast between ancient
+    and modern doctrines.
+
+origin:
+  ancient_ground:
+    principal_figures:
+      - Socrates
+      - Plato
+      - Aristotle
+    description: >
+      Classical political philosophy takes its bearings from nature, natural
+      ends, human perfection, virtue, the best regime, prudence, and the
+      contemplative life.
+  modern_break:
+    principal_founder: Machiavelli
+    systematic_founder: Hobbes
+    description: >
+      Modern political philosophy begins by challenging the political
+      ineffectiveness and improbability of the classical standard. It seeks a
+      more dependable foundation from which political order can be constructed,
+      realized, and progressively transformed.
+
+governing_question: >
+  Did modern political philosophy successfully correct the impracticality,
+  political danger, and dependence upon rare virtue characteristic of classical
+  political philosophy, or did it gain realizability and power by abandoning
+  the natural ends that permit reason to distinguish higher from lower ways of life?
+
+problem_statement: >
+  The quarrel between the Ancients and the Moderns concerns whether philosophy
+  and politics should take their bearings from a natural order of human ends,
+  virtue, prudence, and contemplation, or from the modern attempt to construct
+  a secure and progressively improvable human order through rights, power,
+  commerce, autonomy, science, and historical transformation.
+
+  Modernity begins by lowering or reconstructing the classical standard so that
+  political philosophy may become effective. It then repeatedly attempts to
+  recover morality, freedom, dignity, nobility, and human wholeness without
+  returning to classical nature. The culmination of this movement produces a
+  crisis in which reason possesses unprecedented power over means while losing
+  confidence in its authority to judge ends.
+
+fundamental_tension:
+  ancient_orientation:
+    standard: >
+      A natural order of ends culminating in human excellence, virtue, wisdom,
+      and contemplation.
+    political_question: >
+      What regime and way of life best cultivate the natural perfection of
+      human beings?
+    governing_features:
+      - nature as an intelligible standard
+      - human perfection as the completion of natural capacities
+      - virtue as constitutive of the good life
+      - duties and ends prior to derivative rights
+      - the best regime as a standard even when not fully realizable
+      - prudence under changing political circumstances
+      - philosophy and contemplation as goods in themselves
+      - recognition of permanent political limitations
+
+  modern_orientation:
+    standard: >
+      A constructed, realizable, and progressively improvable order grounded
+      in preservation, rights, freedom, power, useful knowledge, autonomy, or
+      historical transformation.
+    political_question: >
+      How can political philosophy produce a dependable order without relying
+      upon rare wisdom or virtue?
+    governing_features:
+      - lowering or transforming the political goal
+      - beginning from common passions and vulnerabilities
+      - rights becoming primary and duties derivative
+      - freedom replacing virtue as the fundamental moral phenomenon
+      - philosophy becoming publicly useful
+      - science directed toward mastery and relief
+      - institutions and incentives substituting for exceptional character
+      - history or human will displacing natural ends
+
+complete_movement:
+  classical_political_philosophy:
+    sequence:
+      - nature
+      - natural ends
+      - human perfection
+      - virtue
+      - best regime
+      - prudence
+      - contemplation
+
+  machiavelli:
+    transformation: >
+      Lowers or redirects the classical political goal so that political
+      philosophy may become effectual. Reinterprets ancient founders, republics,
+      virtue, glory, necessity, and fortune within a new orientation toward
+      founding, preservation, power, and political success.
+
+  hobbes:
+    transformation: >
+      Gives systematic form to the modern break through power, fear, equality
+      of vulnerability, self-preservation, natural rights, covenant, and
+      sovereignty. Preserves inherited terms such as nature, natural law,
+      justice, obligation, and virtue while transforming their foundations.
+
+  locke:
+    transformation: >
+      Develops natural rights, property, consent, limited government, industry,
+      accumulation, and comfortable self-preservation within the modern
+      foundation.
+
+  montesquieu:
+    transformation: >
+      Corrects modern doctrinairism through moderation, circumstance, regime
+      diversity, climate, manners, religion, commerce, and institutional
+      mechanisms while remaining within the modern project.
+
+  rousseau:
+    transformation: >
+      Criticizes commercial civilization, dependency, inequality, and the loss
+      of human wholeness while attempting to recover freedom and virtue without
+      simply returning to the ancient natural standard.
+
+  kant:
+    transformation: >
+      Restores unconditional morality, duty, dignity, and universality by
+      grounding them in autonomy and rational self-legislation rather than in
+      natural human ends.
+
+  marx:
+    transformation: >
+      Radicalizes the modern union of theory and practice by treating history
+      as a knowable movement toward revolutionary transformation, overcoming
+      alienation, class division, and the inherited political order.
+
+  nietzsche:
+    transformation: >
+      Confronts the nihilistic culmination of modernity after the collapse of
+      natural and revealed standards. Attempts to restore rank, nobility, and
+      higher human possibilities through creation and will rather than a secure
+      return to classical natural teleology.
+
+  modern_crisis:
+    description: >
+      Modern reason achieves extraordinary power to transform nature and society
+      while becoming uncertain of its ability to establish why one end, value,
+      or way of life is better than another.
+
+constitutive_propositions:
+  - >
+    The quarrel concerns rival understandings of nature, reason, freedom,
+    science, happiness, politics, and philosophy itself.
+  - >
+    Historical succession does not establish philosophical superiority.
+  - >
+    Classical political philosophy preserves the highest standard while
+    recognizing severe limits upon its realization.
+  - >
+    Modern political philosophy transforms or lowers the standard in order to
+    make rational political order more dependable and effective.
+  - >
+    The modern break responds to genuine political and human difficulties,
+    including dependence upon rare virtue, insecurity, arbitrary rule,
+    religious conflict, poverty, and material suffering.
+  - >
+    Practical effectiveness does not by itself establish the truth of the end
+    being pursued.
+  - >
+    Rights, freedom, property, autonomy, and progress depend upon accounts of
+    nature and the good even when those accounts remain unstated.
+  - >
+    Technical knowledge can determine effective means without determining which
+    ends deserve pursuit.
+  - >
+    The ancient best regime may guide judgment without being directly realizable.
+  - >
+    A realizable order may be prudent under particular circumstances without
+    becoming the highest standard.
+  - >
+    Later modern thinkers often criticize earlier modernity while remaining
+    within the modern movement.
+  - >
+    Modernity culminates in crisis when objective standards are rejected but
+    moral claims concerning dignity, equality, liberation, or nobility persist.
+  - >
+    Strauss's return to classical political philosophy reopens the quarrel; it
+    does not authorize mechanical restoration of ancient institutions.
+
+recognition_signals:
+  - progress is treated as self-evident
+  - a later doctrine is assumed superior because it is later
+  - political realizability is used to reject the highest standard
+  - virtue is replaced by security, prosperity, or comfort
+  - rights are treated as prior to duties and human ends
+  - freedom or autonomy is presented as requiring no natural purpose
+  - knowledge is valued primarily for mastery, prediction, and production
+  - political conflict is reframed as a technical or administrative problem
+  - one institutional model is presented as universally rational
+  - commerce and private interest are expected to replace civic virtue
+  - history is treated as the source or judge of moral standards
+  - a development is presented as inevitable or without alternatives
+  - objective values are denied while substantive moral judgments continue
+  - higher and lower ways of life are grounded only in creativity or will
+  - an ancient standard is invoked without examining its political practicability
+  - modern material success is invoked as proof of philosophical superiority
+
+required_operations:
+  - identify the human problem being addressed
+  - identify the highest end assumed by the inquiry
+  - reconstruct the operative account of nature
+  - determine whether the standard arises from nature, desire, right, autonomy, history, usefulness, or creative will
+  - identify the account of reason and science
+  - identify the human qualities required by the proposed order
+  - distinguish the highest standard from the most realizable standard
+  - reconstruct the genuine necessity motivating the modern break
+  - trace the claim through the appropriate modern transformation
+  - distinguish ancient terminology from ancient meaning
+  - identify inherited concepts that have been deliberately transformed
+  - separate practical success from philosophical justification
+  - test technical means against the undefended ends they serve
+  - identify mixed, transitional, or internally divided positions
+  - test ancient alternatives against political circumstances
+  - test modern alternatives against the question of human perfection
+  - preserve gains and losses that cannot be cleanly reconciled
+
+required_distinctions:
+  - ancient nature and the modern state of nature
+  - natural ends and prepolitical desires
+  - virtue and freedom
+  - duties and rights
+  - prudence and technique
+  - contemplation and usefulness
+  - highest standard and realizable standard
+  - reform and historical progress
+  - political success and philosophical truth
+  - equality and sameness
+  - liberty and human excellence
+  - historical explanation and philosophical refutation
+  - objective rank and created value
+  - inherited terminology and transformed meaning
+  - modern correction and return to antiquity
+  - permanent problem and historical manifestation
+
+historical_tracing:
+  machiavellian_movement:
+    signals:
+      - lowering the political goal for the sake of effectiveness
+      - founding and maintaining orders
+      - judging political action through results and necessity
+      - mastery or redirection of fortune
+      - transformation of classical virtue into political virtù
+
+  hobbesian_movement:
+    signals:
+      - fear and violent insecurity
+      - power and vulnerability
+      - self-preservation
+      - natural equality as equal capacity to threaten
+      - natural rights
+      - covenant and sovereign settlement
+      - construction from a prepolitical condition
+
+  lockean_movement:
+    signals:
+      - life, liberty, health, and possessions
+      - property and accumulation
+      - consent and limited government
+      - comfortable preservation
+      - industry and economic improvement
+
+  montesquieuan_movement:
+    signals:
+      - moderation
+      - diversity of political circumstances
+      - climate, manners, religion, and commerce
+      - institutional checks and mechanisms
+      - rejection of one universal constitutional form
+
+  rousseauian_movement:
+    signals:
+      - criticism of commercial dependency
+      - inequality and loss of wholeness
+      - freedom and authenticity
+      - recovery of virtue within a transformed modern framework
+
+  kantian_movement:
+    signals:
+      - autonomy
+      - rational self-legislation
+      - unconditional duty
+      - formal universality
+      - freedom independent of natural inclination
+
+  marxian_movement:
+    signals:
+      - historical necessity
+      - unity of theory and transformative practice
+      - alienation and class conflict
+      - revolutionary transformation
+      - abolition of inherited alternatives
+      - claim that history has determined the future
+
+  nietzschean_movement:
+    signals:
+      - nihilism
+      - collapse of inherited standards
+      - creation of values
+      - restoration of rank and nobility
+      - higher human types
+      - sovereignty of creative will
+
+mixed_and_transitional_thinkers:
+  governing_rule: >
+    A thinker is not transitional merely because elements from different periods
+    appear in the same work. The minister must determine whether inherited
+    concepts retain their former meaning, are deliberately transformed, or are
+    used as instruments in founding a new orientation.
+
+  machiavelli:
+    classification: decisive transitional founder
+    description: >
+      Machiavelli is the decisive founder of modern political philosophy, but
+      his founding occurs through intense engagement with Roman history,
+      republican orders, ancient founders, political virtue, glory, and civic
+      conflict. He uses ancient materials to establish a project directed
+      against the ancient understanding of nature, virtue, and the highest end.
+    required_caution: >
+      He must not be treated either as merely an ancient republican or as a
+      thinker who simply discarded antiquity.
+
+  hobbes:
+    classification: systematic transitional founder
+    description: >
+      Hobbes preserves inherited terms such as nature, natural law, justice,
+      obligation, virtue, and political community while reconstructing them
+      around motion, appetite, fear, self-preservation, natural rights, covenant,
+      and sovereign power.
+    required_questions:
+      - Has an ancient term retained its ancient meaning?
+      - Has the term been transformed while preserving its name?
+      - Does natural law remain prior to natural right?
+      - Is peace a condition for the good life or the highest attainable good?
+      - Does sovereignty solve the political problem or only violent insecurity?
+
+  montesquieu:
+    classification: modern correction of modern doctrinairism
+    description: >
+      Restores attention to circumstance, diversity, moderation, and prudence
+      without returning to classical political philosophy.
+
+  rousseau:
+    classification: internal critic of the first modern movement
+    description: >
+      Criticizes commercial modernity and attempts to recover freedom, virtue,
+      and wholeness through a transformed modern foundation.
+
+  kant:
+    classification: moral reconstruction within modernity
+    description: >
+      Restores duty and dignity while deepening the modern primacy of freedom
+      through autonomy rather than classical nature.
+
+  marx:
+    classification: revolutionary radicalization of modernity
+    description: >
+      Criticizes bourgeois modernity while intensifying the modern demand that
+      philosophy transform the world.
+
+  nietzsche:
+    classification: culmination and radical critic of modernity
+    description: >
+      Attacks equality, comfort, and nihilism while attempting to recover rank
+      without returning securely to natural teleology.
+
+  strauss:
+    classification: reopener of the quarrel
+    description: >
+      Returns to classical political philosophy after modern science,
+      revelation, historicism, nihilism, and modern political experience.
+      His return must not be treated as mechanical adoption of ancient conclusions.
+
+false_resolutions:
+  chronological_progressivism: >
+    The modern position is superior because it came later.
+  antiquarian_traditionalism: >
+    The ancient position is superior because it is older or closer to the origin.
+  simple_restoration: >
+    Ancient political institutions can be copied directly into modern circumstances.
+  material_success_proof: >
+    Greater health, wealth, power, longevity, or comfort proves the truth of
+    the modern account of the good.
+  anti_modern_romanticism: >
+    Every development associated with modern science, rights, equality,
+    commerce, or reform is a decline.
+  rights_absolutism: >
+    Rights require no account of human nature, duties, limits, or goods.
+  virtue_absolutism: >
+    Political authority may impose a supposedly virtuous life without regard
+    to freedom, prudence, or political circumstance.
+  technocratic_closure: >
+    Expertise concerning means supplies knowledge of justice and ends.
+  historical_inevitability: >
+    History has abolished the need to deliberate among genuine alternatives.
+  nietzschean_voluntarism: >
+    Creation or strength of will establishes the superiority of a value.
+  historicist_neutrality: >
+    Every standard belongs wholly to its historical horizon, making rational
+    judgment between ancients and moderns impossible.
+  modernity_as_catch_all: >
+    Every contemporary defect is attributed to the modern philosophical project.
+  terminology_equivalence: >
+    An ancient and modern thinker use the same word and therefore mean the same thing.
+
+anti_capture_rule: >
+  The minister must never use "modern" as a synonym for shallow, corrupt, false,
+  or inferior. Every modern doctrine must be examined as a response to a genuine
+  political or human defect and as a possible transformation that abandons or
+  obscures a higher standard.
+
+  The minister must likewise never use "ancient" as a synonym for wise, noble,
+  or true. Every ancient doctrine must be examined as a possible recovery of
+  the fundamental questions and as a teaching whose political limitations,
+  exclusions, and demands require full examination.
+
+boundary_rule: >
+  The problem is present only when an inquiry turns upon a transformation in
+  the standard by which human life, knowledge, morality, or political order is
+  judged. Mere chronological comparison, technological change, scientific
+  discovery, democratic practice, market exchange, secularization, or social
+  reform does not activate the problem without a question concerning its
+  philosophical foundation or human end.
+
+relations:
+  nomos_and_physis:
+    distinction: >
+      Nomos and Physis asks whether nature supplies a standard beyond convention.
+      Ancients and Moderns asks how the meaning and authority of nature were
+      historically and philosophically transformed.
+
+  theologico_political:
+    distinction: >
+      The Theologico-Political Problem concerns competing claims to rightful rule.
+      Ancients and Moderns concerns the transformation of philosophy and politics
+      through modern attempts to settle, subordinate, or escape that conflict.
+
+  wise_and_vulgar:
+    distinction: >
+      The Wise and the Vulgar concerns differentiated capacities and philosophy's
+      political communication. Ancients and Moderns examines the modern effort
+      to make the fruits of reason publicly useful and broadly accessible.
+
+  theory_and_practice:
+    distinction: >
+      Theory and Practice concerns the permanent relationship between understanding
+      and action. Ancients and Moderns examines the modern transformation through
+      which theory increasingly assumes responsibility for mastery and political
+      change.
+
+  athens_and_jerusalem:
+    distinction: >
+      Athens and Jerusalem concerns philosophy and revelation as comprehensive
+      alternatives. Ancients and Moderns concerns a quarrel within philosophy,
+      though the modern break is deeply shaped by the attempt to answer or overcome
+      the biblical challenge.
+
+permissible_outputs:
+  documented_finding: >
+    Identify the explicit standard, end, account of nature, and understanding
+    of reason governing the inquiry.
+
+  supported_inference: >
+    Identify the ancient, modern, mixed, or transitional structure of the claim
+    without reducing it to chronology.
+
+  historical_philosophical_classification: >
+    Trace a claim through the Machiavellian, Hobbesian, Lockean, Montesquieuan,
+    Rousseauian, Kantian, Marxian, or Nietzschean transformation it most closely resembles.
+
+  terminological_finding: >
+    Identify where inherited ancient language has received a transformed modern meaning.
+
+  critical_finding: >
+    Identify where practical effectiveness, historical victory, or technical
+    mastery substitutes for justification of the governing end.
+
+  ancient_challenge: >
+    State how the ancient account exposes an undefended modern assumption
+    concerning nature, virtue, happiness, or the limits of politics.
+
+  modern_challenge: >
+    State how the modern account exposes impracticality, dependency upon rare
+    excellence, insecurity, exclusion, or political danger in the ancient alternative.
+
+  crisis_finding: >
+    Identify where objective standards are denied while substantive judgments
+    concerning dignity, equality, progress, liberation, or rank continue.
+
+  unresolved_uncertainty: >
+    Preserve genuine goods recovered by both orientations when the evidence
+    does not establish their compatibility or final ranking.
+
+  affirmative_non_resolution: >
+    Preserve the conflict between the highest standard and the most realizable
+    political order when neither side can responsibly abolish the other.
+
+opacity_floor:
+  - >
+    The modern settlement more reliably addresses a political evil, but its
+    success does not establish that its governing end is the highest human good.
+  - >
+    The ancient account preserves a higher standard of excellence, but the
+    evidence does not establish how it could govern present circumstances
+    without severe political costs.
+  - >
+    The modern critique exposes a genuine defect in classical politics while
+    continuing to rely upon moral standards its own foundation may not fully defend.
+  - >
+    The inquiry combines ancient and modern premises whose compatibility has
+    not been demonstrated.
+  - >
+    The moderns may understand more clearly how to produce a workable order,
+    while the ancients may understand more clearly what makes an order worth having.
+  - >
+    The evidence establishes the necessity of reopening the quarrel more clearly
+    than it establishes the final victory of either side.
+
+termination_condition: >
+  The problem record is complete when the minister has identified the governing
+  standard, reconstructed the relevant ancient and modern alternatives, explained
+  the necessity motivating the modern break, traced the claim through the proper
+  transformations, distinguished inherited terms from transformed meanings,
+  separated philosophical foundations from practical successes, identified mixed
+  and transitional elements, tested the ancient alternative against political
+  reality, tested the modern alternative against the question of human ends, and
+  preserved unresolved gains, losses, and contradictions without manufacturing
+  a victor.
