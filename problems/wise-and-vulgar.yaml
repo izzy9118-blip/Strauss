@@ -1,0 +1,349 @@
+id: STR-PROBLEM-003
+title: The Wise and the Vulgar — The Few and the Many
+version: 0.1-discussion
+status: ACTIVE — FOUNDATIONAL PROBLEM OBJECT
+type: fundamental_problem
+
+origin:
+  primary_ground: Plato
+  key_dialogue: Republic
+  governing_strauss_text: The City and Man
+  description: >
+    Plato brings the problem into view through the city's need for wisdom,
+    its inability to recognize genuine philosophers reliably, and its dependence
+    upon authoritative opinions that philosophy necessarily questions.
+    The Republic presents the apparent necessity and severe improbability of
+    philosophic rule. Plato's portrayal of Socrates, his political involvement,
+    his trial, and his death disclose the danger of philosophy's political existence.
+
+governing_question: >
+  How can philosophy guide political life when the city cannot reliably
+  recognize the philosopher, the philosopher does not naturally seek political
+  rule, and philosophic examination threatens the authoritative opinions upon
+  which political society depends?
+
+problem_statement: >
+  Political society lives principally through laws, habits, inherited opinions,
+  praise, blame, persuasion, and practical necessities. Philosophy seeks knowledge
+  by turning those authoritative opinions into questions. The city therefore needs
+  the guidance of wisdom while remaining resistant to the activity through which
+  wisdom is sought. Only a few may be capable of sustained philosophic inquiry,
+  yet neither social position, education, technical expertise, political authority,
+  nor possession of an esoteric interpretation establishes wisdom. The problem
+  concerns the political existence of philosophy, the education of potential
+  philosophers and responsible statesmen, and the forms of speech through which
+  philosophy may address differentiated audiences without becoming either reckless
+  disclosure or manipulative domination.
+
+fundamental_tension:
+  philosophy:
+    relation_to_truth: >
+      Seeks knowledge by examining opinions concerning justice, the good,
+      the gods, law, and the whole.
+    political_difficulty: >
+      Its examination may weaken or expose the authoritative opinions upon
+      which political society depends.
+  political_society:
+    relation_to_opinion: >
+      Requires shared authoritative opinions, laws, habits, and judgments
+      in order to act and endure.
+    philosophic_difficulty: >
+      Cannot reliably distinguish the philosopher from the sophist, corrupter,
+      impious teacher, ambitious intellectual, or dangerous innovator.
+  unresolved_relation: >
+    The city needs wisdom but may persecute philosophy; philosophy may benefit
+    the city but cannot simply rule it openly or speak identically to every audience.
+
+central_human_fact:
+  socrates:
+    significance: >
+      Socrates embodies philosophy's politically ambiguous existence.
+      He participates politically without becoming an ordinary political actor,
+      questions citizens and authoritative opinions, attracts the young,
+      becomes associated with impiety and corruption, and is condemned by Athens.
+    governing_warning: >
+      His fate must not be reduced either to innocent wisdom destroyed by wholly
+      irrational opinion or to proof that the city's suspicion was justified.
+      Both the city's misunderstanding and philosophy's genuinely disturbing
+      political effect must be examined.
+
+principal_witnesses:
+  plato_republic:
+    significance: >
+      Presents the city's need for knowledge of justice and the good, the apparent
+      necessity of philosopher-kings, the philosopher's reluctance to rule, the
+      return to the cave, and the political improbability of direct philosophic rule.
+  plato_apology:
+    significance: >
+      Presents a politically conditioned and deliberately difficult public
+      self-presentation of Socrates before the Athenian citizen body.
+      It must not be treated as a transparent or complete account of philosophy's
+      relation to the city.
+    required_caution: >
+      Socrates' defense is provocative, shaped by its audience and occasion,
+      and must be read with the dramatic action, the charges, and the wider
+      Socratic problem.
+  plato_crito:
+    significance: >
+      Intensifies the difficulty concerning obedience to law, unjust commands,
+      resistance, and philosophy's relation to the city's overwhelming power.
+  aristophanes:
+    significance: >
+      Presents how philosophy appears to the city: detached, subversive,
+      impious, destructive of inherited authority, and capable of educating
+      clever but politically dangerous young men.
+    required_operation: >
+      The Aristophanic accusation must be reconstructed in its strongest form
+      rather than dismissed as simple misunderstanding.
+  farabi:
+    significance: >
+      Mediates Platonic political philosophy under conditions shaped by revealed
+      religion. Examines philosophic rule, prophecy, legislation, religion,
+      persuasive representation, and differentiated instruction for citizens
+      of unequal capacities.
+  strauss_city_and_man:
+    significance: >
+      Provides a governing reconstruction of the Republic and of the relation
+      between the city, justice, philosophy, and the limits of political life.
+  strauss_socrates_and_aristophanes:
+    significance: >
+      Governs examination of the conflict between philosophy and poetry and
+      of the political image through which the city encounters Socrates.
+
+constitutive_propositions:
+  - >
+    Political society ordinarily lives through authoritative opinion rather
+    than philosophic knowledge.
+  - >
+    Philosophy begins by transforming authoritative opinions into questions.
+  - >
+    The city needs wisdom but cannot reliably recognize genuine wisdom.
+  - >
+    The philosopher and the sophist may appear similar to a nonphilosophic audience.
+  - >
+    Genuine philosophers do not necessarily desire ordinary political rule.
+  - >
+    Direct philosophic rule may appear necessary in speech while remaining
+    exceedingly improbable in political actuality.
+  - >
+    Socrates' political activity cannot be reduced either to ordinary participation
+    or to complete withdrawal from political life.
+  - >
+    The Apology is a public and politically conditioned presentation, not a
+    transparent statement of the whole truth about Socrates or philosophy.
+  - >
+    Aristophanes reveals a politically serious appearance of philosophy that
+    Plato's presentation requires the reader to confront.
+  - >
+    Differentiated human capacities create a need for differentiated education
+    and communication.
+  - >
+    Differentiated speech does not by itself justify deception or domination.
+  - >
+    Wisdom must never be inferred from social rank, credentials, technical
+    expertise, political power, or claims to hidden knowledge.
+  - >
+    The minister seeks wisdom and may not certify itself as wise.
+
+recognition_signals:
+  - a conflict between philosophic inquiry and authoritative public opinion
+  - a claim that only a few possess knowledge of justice or the good
+  - public inability to distinguish wisdom from sophistry
+  - accusations that teachers or philosophers corrupt the young
+  - accusations of impiety, subversion, or political irresponsibility
+  - demands that inquiry confirm established opinion
+  - conflict between philosophers and rulers
+  - reluctance of the knowledgeable to exercise political rule
+  - attempts to educate rulers, gentlemen, or potential philosophers
+  - differentiated speech or instruction for different audiences
+  - a public defense that may differ from a fuller teaching
+  - secrecy, irony, reserve, or indirection justified by audience
+  - claims that technical experts should possess final political authority
+  - claims that elite status proves superior wisdom
+  - popular hostility toward intellectual or philosophic activity
+  - elite contempt for the political community or ordinary citizens
+
+required_operations:
+  - identify who claims superior understanding
+  - determine what the claimant actually knows
+  - distinguish demonstrated knowledge from asserted superiority
+  - identify the audience and its political circumstances
+  - determine what the audience can understand, accept, or safely hear
+  - distinguish philosopher, sophist, expert, gentleman, statesman, and ruler
+  - reconstruct the strongest public accusation against philosophy
+  - examine philosophy's genuinely disruptive political effects
+  - distinguish direct political rule from indirect philosophic guidance
+  - examine education, legislation, persuasion, and guarded speech as mediations
+  - compare public defense with dramatic action and fuller textual evidence
+  - examine Socrates' political involvement without reducing it to ordinary politics
+  - test every claim to wisdom against ignorance, contradiction, and self-interest
+  - preserve the difficulty where the city and philosophy cannot be reconciled fully
+
+required_distinctions:
+  - wisdom and the claim to wisdom
+  - philosopher and sophist
+  - philosophic knowledge and technical expertise
+  - social rank and philosophic capacity
+  - political equality and equality of intellectual capacity
+  - persuasion and demonstration
+  - education and manipulation
+  - reserve and deception
+  - indirect guidance and domination
+  - public defense and complete teaching
+  - political usefulness and philosophic truth
+  - direct rule and philosophic influence
+  - questioning opinion and destroying political order
+  - political suspicion and philosophic persecution
+
+socratic_test:
+  questions:
+    - Why does the city perceive philosophy as dangerous?
+    - Is the city simply mistaken?
+    - What real disturbance does philosophic examination produce?
+    - How does Plato portray Socrates rather than merely report his words?
+    - How does Aristophanes' Socrates shape the city's judgment?
+    - What does Socrates' limited political participation disclose?
+    - Why does Socrates avoid ordinary political life?
+    - Is the public defense complete, protective, provocative, or pedagogical?
+    - What could Socrates say to this audience?
+    - What does Socrates' death disclose about the city's relation to philosophy?
+  rule: >
+    No account of philosophy's political position is adequate unless it can
+    confront both the injustice of Socrates' condemnation and the genuine
+    political danger perceived in philosophic questioning.
+
+audience_scrutiny_condition: >
+  When the inquiry concerns philosophy's relation to the city, education of
+  differentiated audiences, public accusation, or political danger, the minister
+  must examine the work's dramatic form, audience, speaker, occasion, silences,
+  qualifications, and distinction between public and fuller teaching.
+
+required_textual_examination:
+  - identify the speaker and immediate audience
+  - identify the wider political audience
+  - distinguish Plato from Socrates and Socrates from other speakers
+  - examine dramatic setting and action
+  - examine who is present, absent, silent, interrupted, or dismissed
+  - compare speech with deed
+  - compare public defense with other portrayals
+  - examine Aristophanic and Platonic presentations together
+  - distinguish ironic, provisional, and serious formulations
+  - inspect changes in speech according to interlocutor
+  - examine the effect of the speech on the audience
+  - test whether apparent teaching educates, provokes, protects, or conceals
+
+false_resolutions:
+  democratic_simplification: >
+    Political equality proves equal capacity for philosophic judgment.
+  oligarchic_simplification: >
+    Wealth, rank, birth, education, or office proves natural wisdom.
+  technocracy: >
+    Specialized expertise supplies knowledge of justice and the common good.
+  philosopher_king_literalism: >
+    A self-identified philosopher is therefore entitled to direct political rule.
+  anti_intellectual_populism: >
+    Public suspicion proves that philosophy or intellectual inquiry is corrupt.
+  elite_self_certification: >
+    Possession of an esoteric interpretation establishes membership among the wise.
+  universal_enlightenment: >
+    Proper instruction can transform every citizen into a philosopher.
+  cynical_manipulation: >
+    The many live by opinion, therefore the few may deceive them without restraint.
+  martyr_simplification: >
+    Socrates' death proves that the city was wholly irrational and Socrates'
+    public presentation completely transparent.
+  harmless_philosophy: >
+    Philosophy has no genuinely disruptive effect upon political opinion.
+  politically_sovereign_philosophy: >
+    Philosophic understanding can be translated directly into uncontested rule.
+
+anti_capture_rule: >
+  The minister must never identify itself, an author, an interpreter, an expert,
+  or a social group as wise merely because that party claims superior knowledge,
+  rejects ordinary opinion, or possesses access to concealed material. Every
+  claim to superior understanding must be tested by evidence, argument, awareness
+  of ignorance, relation to the good, and political responsibility.
+
+boundary_rule: >
+  The problem is present when an inquiry concerns the relation between knowledge
+  of justice, the good, or the whole and the authoritative opinions required by
+  political society. Mere differences in technical expertise, education, wealth,
+  administrative competence, or social status do not activate the problem by themselves.
+
+relations:
+  nomos_and_physis:
+    distinction: >
+      Nomos and Physis asks whether authoritative opinion and law conform to nature.
+      The Wise and the Vulgar asks who can examine that authority and how the result
+      may be communicated politically.
+  theologico_political:
+    distinction: >
+      The Theologico-Political Problem concerns the highest right to rule.
+      The Wise and the Vulgar concerns whether wisdom can be recognized and mediated
+      within a community governed by opinion and authority.
+  ancients_and_moderns:
+    distinction: >
+      The present problem is permanent. Ancients and Moderns examines transformations
+      of education, equality, enlightenment, expertise, and philosophic authority.
+  theory_and_practice:
+    distinction: >
+      The present problem concerns who can understand and how that understanding
+      reaches political society. Theory and Practice concerns what action may
+      responsibly follow from understanding.
+  athens_and_jerusalem:
+    distinction: >
+      Athens and Jerusalem concerns philosophy and revelation as comprehensive
+      alternatives. The present problem examines the differentiated teachers,
+      interpreters, rulers, and audiences through which those alternatives appear.
+
+permissible_outputs:
+  documented_finding: >
+    Identify the authoritative public opinion, the claimant to superior
+    understanding, the audience, and the political circumstances of speech.
+  supported_inference: >
+    Determine whether the text differentiates its teaching according to audience
+    or political danger.
+  working_hypothesis: >
+    Propose that a public defense, apparent doctrine, or dramatic presentation
+    may not exhaust the author's fuller understanding.
+  critical_finding: >
+    Identify where expertise, rank, rhetoric, or access to hidden material is
+    falsely presented as wisdom.
+  hermeneutic_finding: >
+    Identify a conflict between speaker, action, audience, public presentation,
+    and the structure of the work that requires deeper examination.
+  socratic_finding: >
+    State how the inquiry repeats or transforms the political difficulty disclosed
+    by Socrates' examination, public defense, political involvement, and fate.
+  unresolved_uncertainty: >
+    State that the evidence establishes differentiated capacities or speech without
+    establishing who, if anyone, possesses wisdom.
+  affirmative_non_resolution: >
+    Preserve the conflict between the city's need for authoritative opinion and
+    philosophy's need to question that opinion when no complete reconciliation
+    is supported.
+
+opacity_floor:
+  - >
+    The evidence establishes a claim to superior understanding but does not
+    establish wisdom.
+  - >
+    The public speech is shaped by its audience, but the evidence does not yet
+    disclose a complete private or concealed teaching.
+  - >
+    The city misunderstands philosophy, but its perception that philosophy
+    disturbs authoritative opinion is not wholly mistaken.
+  - >
+    The inquiry supports indirect philosophic guidance more strongly than
+    direct rule, but it does not establish a complete political settlement.
+  - >
+    The distinction between the few and the many is visible, but its exact
+    human boundaries remain uncertain.
+
+termination_condition: >
+  The problem record is complete when the minister has identified the authoritative
+  opinions at issue, examined the claimant to superior understanding, distinguished
+  philosophy from sophistry and expertise, reconstructed the strongest political
+  accusation, applied the Socratic test, examined differentiated audiences and
+  speech, rejected elite self-certification, and preserved the unresolved tension
+  between philosophy and political society without manufacturing a philosopher-king.
