@@ -1,195 +1,664 @@
 id: STR-PROBLEM-001
 title: Nomos and Physis
-version: 1.0
+version: 1.1
 status: ACTIVE — FOUNDATIONAL PROBLEM OBJECT
 type: fundamental_problem
 
+revision_basis:
+  previous_version: 1.0
+  disposition: revise_not_replace
+  rationale: >
+    Version 1.0 correctly identified the permanent tension between authoritative
+    political arrangements and a standard grounded in nature. Version 1.1 deepens
+    that structure through Strauss's treatments of Plato, Aristotle, Xenophon,
+    Thucydides, Cicero, and classical political philosophy. It makes the regime
+    prior to ordinary law, gives a positive account of physis, reconstructs the
+    strongest conventionalist and necessitarian alternatives, and places natural
+    right within education, rhetoric, law, equity, prudence, and imperfect political
+    embodiment.
+
 origin:
-  primary_ground: Plato
+  prephilosophic_horizon: >
+    Political communities initially experience ancestral law, custom, divine
+    sanction, inherited opinion, and established authority as inseparable from
+    what is good and just.
+  philosophical_discovery: >
+    The discovery of nature distinguishes what is established by human decision,
+    usage, inheritance, or political authority from what possesses its own origin,
+    form, characteristic activity, development, and completion.
+  primary_classical_witnesses:
+    - Plato
+    - Aristotle
+    - Xenophon
+    - Thucydides
+    - Cicero
   description: >
-    Plato brings the problem into view through the conflict between the
-    authoritative laws, customs, and opinions of political communities
-    and the possibility of a standard grounded in nature.
+    Classical political philosophy begins from political action and authoritative
+    opinion, not from detached concepts. It asks whether the laws, customs, regimes,
+    roles, hierarchies, and public teachings by which communities live are grounded
+    in the nature and good of human beings or possess only conventional authority.
 
 governing_question: >
-  Are justice and the right way of life grounded in nature, or do they
-  derive their authority from law, custom, convention, and political opinion?
+  Once philosophy distinguishes nature from the authoritative laws, customs,
+  opinions, and regimes of political communities, is justice wholly conventional,
+  or is there something right by nature; and how can the naturally right judge and
+  guide political life when it becomes politically visible only through education,
+  law, regime, rhetoric, coercion, circumstance, and prudential embodiment?
+
+governing_proposition: >
+  Nomos is neither the simple enemy nor the complete expression of physis. It is
+  the necessary political medium through which natural human capacities are formed,
+  directed, restrained, and governed, but every nomos also risks mistaking its
+  contingent regime, hierarchy, language, institutions, and interests for nature
+  itself. Natural right therefore judges nomos without abolishing law, authority,
+  education, convention, rhetoric, coercion, or prudence, and without promising a
+  political order free from necessary imperfection.
 
 problem_statement: >
-  The discovery of nature discloses that the authoritative ways of political
-  communities are not simply identical with the order of things. Law, custom,
-  and inherited opinion may answer permanent human necessities, but they may
-  also conceal, distort, or contradict what is naturally right. The problem
-  therefore concerns whether political life can be judged by a standard beyond
-  convention without denying the necessity of convention itself.
+  Human beings possess natural needs, passions, capacities, inequalities, reason,
+  speech, sociability, and possibilities of completion. These make households,
+  education, law, property, authority, political association, rhetoric, and regimes
+  necessary. Political communities answer these necessities through particular
+  nomoi that form character and make common action possible. Yet no political
+  establishment proves its own justice merely by existing, enduring, commanding,
+  persuading, winning consent, claiming divine origin, or serving survival. The
+  problem therefore concerns how philosophy can distinguish the naturally right
+  from the legally valid, politically useful, ancestrally authoritative, technically
+  effective, or historically successful while recognizing that natural right can
+  enter political life only through general laws, fallible institutions, formed
+  opinion, unequal capacities, circumstance, compromise, and prudential judgment.
+
+governing_sequence:
+  - stage: prephilosophic_political_life
+    description: >
+      The city possesses authoritative opinions concerning justice, piety, virtue,
+      happiness, rule, and the common good. The ancestral and divinely sanctioned
+      are ordinarily presumed good.
+  - stage: discovery_of_nature
+    description: >
+      Conflicting nomoi and philosophical questioning distinguish establishment
+      from truth and disclose the possibility of a standard not created solely by
+      political agreement.
+  - stage: fundamental_alternative
+    description: >
+      Inquiry confronts the serious alternatives that justice is conventional,
+      that power and necessity govern by nature, or that human nature supplies a
+      standard of natural right.
+  - stage: political_formation
+    description: >
+      Nomos forms pleasures, pains, habits, opinions, virtues, vices, emotional
+      objects, social roles, and expectations through education, law, rhetoric,
+      praise, shame, punishment, religion, and institutions.
+  - stage: natural_judgment
+    description: >
+      Philosophy examines whether the governing nomos completes or deforms natural
+      capacities and whether its regime serves the common good and human excellence.
+  - stage: prudential_embodiment
+    description: >
+      Natural standards must be translated into general law, determinate procedure,
+      political persuasion, institutional authority, and circumstance-sensitive
+      action.
+  - stage: permanent_remainder
+    description: >
+      No actual regime embodies natural right without convention, coercion,
+      uncertainty, exclusion, sacrifice, compromise, or possible injustice.
 
 fundamental_tension:
   pole_one:
     name: Nomos
+    definition: >
+      An authoritative human arrangement established and sustained through law,
+      custom, usage, agreement, regime, education, religion, rhetoric, institutional
+      practice, praise, blame, punishment, and political opinion.
     includes:
-      - law
-      - custom
-      - convention
-      - ancestral authority
-      - political opinion
-      - established institutions
-      - authoritative accounts of justice and the good
+      - written and unwritten law
+      - custom and inherited practice
+      - ancestral and sacred authority
+      - regime and ruling human type
+      - citizenship and political membership
+      - property and household arrangements
+      - social roles and factual hierarchies
+      - civic religion and public theology
+      - education, habituation, poetry, and public memory
+      - standards of honor, shame, praise, and blame
+      - political rhetoric and authoritative language
+      - institutions, offices, procedures, and sanctions
+      - public accounts of justice, happiness, and the common good
   pole_two:
     name: Physis
+    definition: >
+      That which possesses its own originating principle, characteristic capacities,
+      intelligible form, development, activity, and completion, and which can supply
+      a standard for judging human and political arrangements.
     includes:
-      - nature
-      - human nature
-      - natural necessity
-      - natural good
-      - natural right
+      - natural needs and necessities
+      - human capacities, passions, and sociability
+      - natural differences and inequalities
+      - characteristic human activity
+      - mature form and proper completion
+      - order and hierarchy within the soul
+      - natural good and human flourishing
+      - natural justice and natural right
       - standards not created solely by political agreement
+
+concept_definitions:
+  regime: >
+    The comprehensive political and social order that identifies the ruling part,
+    authoritative human type, public conception of justice, characteristic way of
+    life, distribution of offices and honors, spirit of the laws, and governing end
+    of the community. The regime is prior to ordinary law because rulers make,
+    interpret, and administer laws.
+  natural_right: >
+    What is intrinsically right according to the nature, order, capacities, and
+    proper completion of human beings and political association. Natural right is
+    not necessarily a promulgated universal command and does not mechanically yield
+    one identical institutional arrangement everywhere.
+  natural_necessity: >
+    A permanent need, constraint, capacity, danger, or causal pressure arising from
+    human nature or political life. Necessity may explain an institution or action
+    without proving it naturally just.
+  political_necessity: >
+    A circumstance in which political survival, order, or action imposes serious
+    constraints upon available choices. A claimed necessity must be distinguished
+    from a genuine necessity and from a necessity manufactured by prior injustice,
+    ambition, or imprudence.
+  prudence: >
+    Reasoned judgment concerning variable human action and particular circumstances,
+    inseparable from character, perception of relevant particulars, and an account
+    of the human good. Prudence is neither technical expertise nor mechanical rule
+    application.
+  equity: >
+    Correction of a general law where unforeseen particulars would make literal
+    application defeat the lawgiver's reasonable purpose. Equity is neither private
+    judicial sovereignty nor a license to disregard law whenever a decision-maker
+    invokes a higher preference.
+
+serious_alternatives:
+  ancestral_authority:
+    claim: >
+      The ancestral, inherited, or divinely sanctioned way is good because its
+      authority precedes individual judgment and constitutes the community.
+    required_test: >
+      Distinguish age, origin, sacredness, continuity, and political necessity from
+      intrinsic truth and justice.
+  conventionalism:
+    claim: >
+      Natural needs, pleasures, pains, and powers exist, but justice arises only from
+      agreement, mutual restraint, law, or the advantage of political association.
+    required_test: >
+      Reconstruct the strongest version of the argument, including the claim that
+      justice may be intelligible yet incompatible with individual or civic
+      self-preservation.
+  necessitarian_realism:
+    claim: >
+      Fear, honor, advantage, inequality, and the tendency of the stronger to rule
+      disclose the true natural basis of politics, while justice governs only where
+      power or interest permits it.
+    required_test: >
+      Distinguish recurrent conduct and causal necessity from natural right, and test
+      whether the stronger party exaggerates, creates, or misdescribes the alleged
+      absence of alternatives.
+  classical_natural_right:
+    claim: >
+      Human beings possess a characteristic good and completion by which laws,
+      regimes, roles, distributions, and ways of life can be ranked as better or
+      worse by nature.
+    required_test: >
+      Identify the account of human nature, the human good, the relevant hierarchy,
+      and the prudential path from natural standard to political embodiment.
 
 constitutive_propositions:
   - >
-    Nomos is not merely written law; it is the authoritative horizon through
-    which a political community understands justice, the good, and the whole.
+    Political action always presupposes some judgment of better and worse and
+    therefore some opinion concerning the good.
   - >
-    Physis becomes visible when inherited authority is distinguished from what
-    exists or is good independently of human establishment.
+    The prephilosophic political horizon ordinarily identifies the ancestral,
+    sacred, authoritative, and good before philosophy distinguishes them.
   - >
-    Nomos is politically necessary and may respond to genuine natural needs.
+    Nomos is not merely written law; it is the comprehensive authoritative horizon
+    through which a regime forms and governs citizens.
   - >
-    Political necessity does not prove that a particular nomos is naturally right.
+    The regime is prior to ordinary law because a ruling body makes, interprets,
+    applies, and revises law according to a characteristic conception of justice.
   - >
-    The conventional character of an institution does not by itself prove that
-    the institution is unjust.
+    Physis becomes visible when what is established is distinguished from what
+    possesses its own origin, form, activity, development, and completion.
   - >
-    Variation among political communities opens the question of natural right
-    but does not settle it against natural right.
+    Nature is not whatever happens spontaneously, frequently, primitively, or under
+    crisis; natural judgment concerns the proper activity and completion of a being.
   - >
-    The origin of an opinion and the truth of that opinion are different questions.
+    A natural desire, passion, capacity, or inequality does not by itself establish
+    a natural entitlement, office, rank, or rule.
   - >
-    Nature and nomos are neither simply identical nor simply opposed.
+    Political association may be natural while every particular regime, boundary,
+    status, hierarchy, and institutional form remains partly conventional.
+  - >
+    Nomos is politically necessary because human beings require education,
+    habituation, authoritative settlement, coordination, judgment, and restraint.
+  - >
+    Nomos can cultivate natural capacities toward virtue, but it can also deform
+    them into servility, fanaticism, acquisitiveness, cruelty, or partisan loyalty.
+  - >
+    Political education forms pleasures, pains, shame, honor, emotional objects,
+    and standards of admiration before most citizens can examine them rationally.
+  - >
+    Natural capacity, education, practice, choice, and favorable circumstances are
+    distinct conditions of actualized excellence; none is sufficient alone.
+  - >
+    The good citizen is relative to the regime, while the good human being supplies
+    a standard by which regimes and civic virtues may be judged.
+  - >
+    Natural hierarchy and factual social hierarchy must never be identified without
+    independent evidence concerning capacity, virtue, knowledge, and reciprocal good.
+  - >
+    Variation among political communities opens the question of natural right but
+    does not settle it against natural right.
+  - >
+    The origin, prevalence, antiquity, legality, and political usefulness of an
+    opinion are distinct from its truth.
+  - >
+    Technical correctness, expertise, productivity, effectiveness, and political
+    success do not establish justice or knowledge of the common good.
+  - >
+    Political rhetoric begins from authoritative opinion and is indispensable where
+    free citizens must judge contingent action without demonstrative certainty.
+  - >
+    Persuasion, consent, majority approval, and public reputation do not transform
+    opinion into knowledge or coercion into natural justice.
+  - >
+    Law is indispensable because it provides public, general, prospective,
+    determinate, and enforceable rules, but those same qualities make it unable to
+    anticipate every relevant particular.
+  - >
+    Equity and prudence correct the application and embodiment of law without
+    abolishing the presumption of lawful authority.
+  - >
+    Natural right is changeable in political embodiment because circumstances,
+    capacities, regimes, and available alternatives differ; this changeability does
+    not make the human good arbitrary.
+  - >
+    Natural right supplies a natural floor of minimum civilized conditions, a
+    natural ceiling represented by the best regime and best life, and a broad
+    prudential middle of more and less just arrangements.
+  - >
+    Political necessity may justify a limited deviation from an ordinary standard,
+    but the deviation must remain identified as a deviation and governed by limits,
+    duration, purpose, and return conditions.
+  - >
+    Some natural goods, including friendship, gratitude, nobility, and philosophy,
+    cannot retain their full character when produced entirely through legal
+    compulsion.
+  - >
+    The best regime is a necessary standard of judgment but is not an immediately
+    transferable blueprint and may depend for its embodiment upon improbable chance,
+    coercion, political falsehood, exclusion, or injustice.
+  - >
+    Nature and nomos are neither simply identical nor simply opposed: political
+    justice is a mixture judged by its relation to nature.
 
 recognition_signals:
-  - law is identified with justice
-  - custom is treated as natural or universally binding
-  - an institution is presented as inevitable
-  - a natural fact is used as sufficient moral proof
+  - law, custom, or ancestral authority is identified with justice
+  - a regime presents its ruling type or partisan interest as the common good
+  - an institution or hierarchy is presented as natural, sacred, inevitable, or meritocratic
+  - natural difference is used to justify an established social rank
+  - legal ownership or office is treated as proof of natural fitness to govern
+  - political association is naturalized into one particular regime or membership rule
+  - a recurring behavior under war, fear, or crisis is treated as the whole of human nature
+  - survival, power, victory, or necessity is treated as sufficient moral proof
   - political communities give incompatible answers to the same question
   - reform appeals to nature against inherited authority
   - inherited authority is defended against a proposed universal standard
-  - political usefulness is treated as proof of truth
-  - historical origin is treated as proof or disproof of validity
-  - education and habituation shape allegedly natural desires or virtues
+  - political usefulness, stability, or historical success is treated as proof of truth
+  - majority agreement, consent, or persuasive victory is treated as knowledge
+  - expertise concerning means is treated as authority over political ends
+  - education and habituation shape allegedly natural desires, emotions, or virtues
+  - praise, shame, public memory, or civic religion forms an authoritative human type
+  - a political speech relies upon an unstated regime premise
+  - a general law produces apparent injustice in an exceptional case
+  - an emergency is invoked to suspend an ordinary standard
+  - civic virtue conflicts with human virtue or philosophical inquiry
+  - the best regime or ideal institution is presented as directly implementable
+  - a public claim about nature, piety, obedience, or justice changes with speaker or audience
 
 required_operations:
-  - identify what the inquiry treats as authoritative
-  - determine whether that authority rests on law, custom, agreement, nature, or necessity
-  - reconstruct the strongest account the nomos gives of itself
-  - identify the human good the nomos claims to serve
-  - distinguish natural fact from natural good
-  - distinguish natural need from one particular institutional response
-  - examine whether differing conventions can be judged by a common standard
-  - separate historical explanation from philosophical judgment
-  - distinguish political necessity from philosophical truth
-  - preserve the problem when the evidence does not establish a final natural standard
+  - identify the political action, preservation, or change that activates the inquiry
+  - identify the governing regime, ruling part, and authoritative human type
+  - identify the law, custom, institution, role, hierarchy, or opinion treated as authoritative
+  - reconstruct the strongest account the governing nomos gives of itself
+  - identify the human good, common good, virtue, necessity, or danger the nomos claims to serve
+  - distinguish the citizen's immediate legal horizon from the regime that produces it
+  - identify the factual claim about human nature, conduct, capacity, difference, or necessity
+  - identify the account of natural human activity, order, development, and completion
+  - distinguish natural fact, natural necessity, natural capacity, natural good, and natural right
+  - distinguish natural political association from one particular institutional response
+  - determine how education, habituation, rhetoric, religion, praise, shame, and punishment form the relevant conduct or desire
+  - distinguish natural capacity from completed virtue and social recognition
+  - distinguish the good citizen, good ruler, good human being, and philosopher
+  - separate natural hierarchy from factual office, wealth, birth, sex, class, citizenship, or conquest
+  - reconstruct the strongest conventionalist or necessitarian alternative before criticizing it
+  - identify whether technical knowledge concerns means while the disputed question concerns ends
+  - identify the explicit argument, unstated premise, audience, and regime-specific opinion in political speech
+  - test speeches, laws, and founding narratives against deeds, consequences, omissions, and institutional practice
+  - distinguish legal validity, ordinary binding force, political salutariness, justice, and truth
+  - identify whether the law's generality creates an unforeseen defect requiring equity
+  - determine whether a claimed emergency is genuine, proportionate, limited, and terminable
+  - distinguish the naturally superior standard from the best politically available embodiment
+  - identify the coercion, concealment, exclusion, sacrifice, and chance required by a proposed natural order
+  - classify source statements by speaker, audience, dramatic setting, and political function before treating them as doctrine
+  - preserve the problem when the evidence establishes inadequacy more clearly than the naturally right alternative
 
 required_distinctions:
-  - what occurs naturally
-  - what follows from human nature
-  - what is good for human beings by nature
-  - what political institutions are required by that good
-  - what institutions are merely compatible with that good
-  - what institutions are contingent responses to permanent necessities
-  - legality
-  - legitimacy
-  - justice
-  - political usefulness
-  - truth
+  - ancestral authority and intrinsic truth
+  - divine or revealed authority and political attribution of divine origin
+  - what occurs naturally and what fulfills a being's nature
+  - primitive condition and mature natural form
+  - natural desire and proper order of desire
+  - natural capacity and actualized excellence
+  - natural inequality and established hierarchy
+  - natural sociability and political membership
+  - natural political association and a particular regime
+  - regime and written constitution
+  - ruling part and rule of law
+  - good citizen and good human being
+  - legal ownership and knowledgeable use
+  - household rule and political rule
+  - technical expertise and political prudence
+  - political skill and political philosophy
+  - right opinion and knowledge
+  - civic virtue, moral virtue, philosophic virtue, and mere conformity
+  - natural necessity, political necessity, claimed necessity, and manufactured necessity
+  - legality, ordinary binding force, legitimacy, justice, usefulness, and truth
+  - universal or natural principle and determinate positive law
+  - natural right and natural law
+  - written law, unwritten law, equity, and prudence
+  - persuasion, education, manipulation, flattery, and coercion
+  - majority agreement and knowledge
+  - publicly praised virtue and actual virtue
+  - normal circumstance and extreme circumstance
+  - strict natural standard and politically enforceable approximation
+  - natural floor, natural ceiling, and prudential middle
+  - best regime as standard and constitutional blueprint
+  - political stability and complete human excellence
+  - country, regime, law, fellow citizens, and natural justice as objects of loyalty
+  - clear cases, exceptional cases, tragic necessities, and ideological exploitation of ambiguity
+
+prudential_embodiment:
+  natural_floor: >
+    Minimum conditions without which civilized political association, lawful order,
+    reciprocal security, education, deliberation, and human development cannot be
+    sustained.
+  natural_ceiling: >
+    The best regime and way of life judged solely by the complete human good and the
+    proper hierarchy of human capacities and activities.
+  prudential_middle: >
+    The broad range of changeable laws, mixed regimes, compromises, distributions,
+    and institutional arrangements that must be judged according to circumstance,
+    available human material, political peace, feasibility, and proximity to the
+    natural standard.
+  governing_rule: >
+    A politically inferior arrangement may be naturally right under circumstances
+    where an otherwise superior arrangement cannot function or would produce greater
+    injustice. This judgment must not convert circumstance into a denial of the
+    superior standard.
+
+rhetorical_mediation:
+  principle: >
+    Political communities must decide before every citizen possesses philosophic
+    knowledge. Rhetoric therefore mediates between authoritative opinion, practical
+    judgment, and public action among free but nonphilosophic human beings.
+  required_analysis:
+    - identify the explicit claim and unstated premise
+    - identify the audience and institutional setting
+    - identify the governing standard of the speech: advantageous, just, or noble
+    - identify appeals to character, emotion, shame, fear, honor, piety, or necessity
+    - distinguish education from manipulation and prudential adaptation from flattery
+    - test persuasive victory separately from truth and justice
+  hermeneutic_restraint: >
+    A public defense of law, piety, obedience, natural hierarchy, civic virtue, or
+    political falsehood must not be extracted from its speaker, audience, dramatic
+    action, and pedagogical purpose and treated automatically as the author's final
+    doctrine.
 
 false_resolutions:
   legal_positivism: >
-    Something is just because it is established as law.
-  conventionalism: >
-    Disagreement among communities proves that no natural standard exists.
+    Something is just because it is validly established as law.
   naive_traditionalism: >
-    An ancestral practice is right because it is old or inherited.
-  naive_progressivism: >
-    A later arrangement is superior merely because it is later.
+    An ancestral or sacred practice is right because it is old, inherited, or
+    attributed to divine origin.
+  conventionalist_shortcut: >
+    Disagreement and variation among communities prove that no natural standard exists.
   biological_reductionism: >
-    What occurs in nature is therefore morally right.
+    What occurs in nature, appears spontaneously, or recurs under pressure is
+    therefore morally right.
+  natural_entitlement: >
+    Birth, talent, confidence, beauty, strength, wealth, ownership, sex, status, or
+    office constitutes completed natural virtue or a natural title to rule.
+  existing_hierarchy_naturalism: >
+    Present rulers and social ranks reliably reflect the natural hierarchy.
+  household_state_identity: >
+    Political society is simply an enlarged household and citizens may therefore be
+    ruled as children, servants, patients, or dependents.
   abstract_rationalism: >
-    A natural principle can be translated directly into one uniform political rule.
-  historicism: >
-    Historical conditioning makes access to permanent questions impossible.
-  cynicism: >
-    Every nomos is nothing more than an instrument of domination.
+    A natural principle can be translated directly into one uniform political rule
+    or institutional arrangement everywhere.
+  circumstantial_relativism: >
+    Because natural right changes in embodiment with circumstances, no stable natural
+    standard exists.
+  necessitarian_naturalization: >
+    Whatever a city must do for survival, power, or regime preservation becomes
+    naturally right.
+  power_as_justice: >
+    Superior force, victory, or capacity establishes a superior title to rule.
+  technocratic_closure: >
+    Scientific, economic, military, administrative, or technical expertise determines
+    the political ends the community should pursue.
+  rhetorical_validation: >
+    A claim is true or just because it persuades the audience or wins democratic approval.
+  coercive_virtue_equation: >
+    Conduct produced by fear, punishment, or external conformity is complete virtue.
+  civic_virtue_identity: >
+    The good citizen of any regime is thereby a good human being.
+  opinion_equivalence: >
+    Correct opinion is fully equal to knowledge because both can produce the same
+    immediate practical result.
+  rule_of_law_abstraction: >
+    Saying that law rules eliminates the problem of who makes, interprets, applies,
+    and revises the law.
+  positive_law_completeness: >
+    Because written law is determinate and stable, no appeal beyond it is legitimate.
+  judicial_naturalism: >
+    Equity authorizes a judge or ruler to disregard enacted law whenever a higher
+    personal conception of justice is invoked.
+  emergency_normalization: >
+    A justified deviation under extreme conditions may become a permanent rule
+    without renewed examination.
+  total_legislation: >
+    Everything naturally good should be legally compelled.
   romantic_naturalism: >
-    Human flourishing requires liberation from law, education, and convention as such.
+    Human flourishing requires liberation from law, education, authority, and
+    convention as such.
+  blueprint_platonism: >
+    The best city in speech or naturally best regime is a political program awaiting
+    implementation whenever sufficient power becomes available.
+  political_perfectionism: >
+    A regime can embody natural right completely without distortion, coercion,
+    exclusion, sacrifice, chance, or injustice.
+  historicism: >
+    Historical conditioning makes access to permanent political questions and
+    transhistorical judgment impossible.
+  positivist_neutrality: >
+    Political inquiry can avoid every judgment of good and bad while remaining
+    neutral toward the governing nomos.
+  cynicism: >
+    Every nomos, civic myth, piety, law, and public virtue is nothing more than an
+    instrument of domination.
+  philosophic_civic_nihilism: >
+    Because ordinary civic virtue rests partly on opinion and habituation, it has no
+    genuine political or human worth.
 
 anti_capture_rule: >
-  The minister must never silently identify its own inherited opinion with nature.
-  Every appeal to nature must disclose the factual claim, the account of human
-  nature, the alleged human good, and the political conclusion drawn from them.
+  The minister must never silently identify its own inherited opinion, preferred
+  regime, contemporary moral vocabulary, political interest, or institutional role
+  with nature. Every appeal to nature must disclose the factual claim, account of
+  human nature, alleged human good, hierarchy of capacities or activities, political
+  conclusion, required institutional embodiment, and remaining uncertainty. Every
+  claim that a present hierarchy is natural must be supported independently of law,
+  custom, office, ownership, wealth, birth, sex, citizenship, conquest, public
+  reputation, or political success.
 
 boundary_rule: >
-  The problem is present only when an authoritative human arrangement is measured
-  against, defended from, or confused with a claim concerning nature, natural
-  necessity, natural good, or natural right. Merely technical, procedural,
-  administrative, or strategic disagreements do not activate the problem by themselves.
+  The problem is present when an authoritative human arrangement is measured against,
+  defended from, confused with, or justified by a claim concerning nature, human
+  nature, natural necessity, natural good, natural hierarchy, or natural right. It
+  also activates when a regime forms natural capacities through education, rhetoric,
+  law, religion, property, household structure, praise, shame, punishment, or civic
+  language. Merely technical, procedural, administrative, or strategic disagreements
+  do not activate the problem by themselves unless they depend upon a disputed human
+  end, hierarchy of goods, or claim of natural necessity.
 
 relations:
   theologico_political:
     distinction: >
-      Nomos and Physis examines the relation between convention and nature.
-      The theologico-political problem becomes primary when a law claims divine
-      or revealed authority.
+      Nomos and Physis examines political attribution of sacred or divine authority
+      as a form of nomic authority and asks whether establishment is intrinsically
+      right. The Theologico-Political Problem becomes primary when the truth, source,
+      or binding authority of revelation itself is at issue.
   wise_and_vulgar:
     distinction: >
-      Nomos and Physis examines the truth or justice of authoritative opinion.
-      The Wise and the Vulgar examines differentiated capacities to question,
-      understand, or live under that opinion.
+      Nomos and Physis examines the truth and justice of authoritative opinion and
+      the natural capacities that nomos forms. The Wise and the Vulgar examines the
+      unequal capacities to question, understand, communicate, or live under the
+      authoritative opinion.
   ancients_and_moderns:
     distinction: >
-      Nomos and Physis is the permanent problem. Ancients and Moderns examines
-      rival historical-philosophical transformations of nature and convention.
+      Nomos and Physis is the permanent problem. Ancients and Moderns examines rival
+      transformations of nature, natural right, self-preservation, freedom, equality,
+      art, history, and political construction.
   theory_and_practice:
     distinction: >
-      Nomos and Physis asks what is naturally right. Theory and Practice asks
-      what political action can responsibly follow from such understanding.
-  athens_and_jerusalem:
+      Nomos and Physis identifies the natural standard and the prudential structure
+      already required for political embodiment. Theory and Practice becomes primary
+      when deciding what concrete action may responsibly follow from understanding.
+  jerusalem_and_athens:
     distinction: >
-      Nomos and Physis discloses the insufficiency of mere convention.
-      Athens and Jerusalem concerns reason and revelation as rival claims to
-      authority beyond ordinary convention.
+      Nomos and Physis distinguishes ordinary establishment from nature and can
+      analyze the political function of divine-law claims. Jerusalem and Athens
+      governs the comprehensive confrontation between revelation and reason as rival
+      claims to transpolitical authority.
 
 permissible_outputs:
   documented_finding: >
-    State what law, custom, institution, or authoritative opinion governs the inquiry.
+    State the regime, law, custom, institution, hierarchy, public teaching, or
+    authoritative opinion governing the inquiry and identify its documentary basis.
+  regime_finding: >
+    Identify the ruling part, authoritative human type, public end, characteristic
+    virtue, and laws or institutions through which the regime operates.
+  natural_claim_analysis: >
+    State the factual claim concerning nature, the account of human nature or
+    completion, the alleged natural good, and the political conclusion drawn.
+  formation_finding: >
+    Identify how education, habituation, rhetoric, religion, praise, shame,
+    punishment, property, or household structure forms the relevant desire, passion,
+    opinion, or virtue.
   supported_inference: >
-    Identify whether an arrangement appears conventional, natural, or a conventional
-    response to a natural necessity.
-  working_hypothesis: >
-    Propose a possible relation between the convention and an underlying natural good.
+    Identify whether an arrangement appears conventional, naturally necessary,
+    naturally right, or a conventional response to a natural necessity.
+  conventionalist_reconstruction: >
+    State the strongest case that justice is produced by agreement, restraint,
+    necessity, or ruling advantage before evaluating it.
+  prudential_finding: >
+    Distinguish the naturally superior standard from the best politically available
+    embodiment under the circumstances.
+  rhetorical_finding: >
+    Identify the explicit claim, unstated premise, audience, emotional or ethical
+    appeal, and relation between persuasive success and truth.
+  legal_equity_finding: >
+    Identify whether a conflict arises from an unjust law, an unforeseen case within
+    a generally sound law, a claimed emergency, or private evasion of lawful authority.
   critical_finding: >
-    Identify an invalid movement from fact, legality, antiquity, novelty, or variation
-    to a conclusion about justice.
+    Identify an invalid movement from fact, legality, antiquity, novelty, variation,
+    ownership, office, expertise, consent, power, success, or necessity to a conclusion
+    about justice.
+  working_hypothesis: >
+    Propose a possible relation between the convention, the natural need it answers,
+    and the human good it may complete or deform.
   unresolved_uncertainty: >
-    State that the inquiry discloses the inadequacy of the present nomos without yet
-    establishing the naturally right alternative.
+    State that the inquiry discloses the inadequacy of the present nomos, regime, or
+    embodiment without yet establishing the complete natural alternative.
   affirmative_non_resolution: >
-    Preserve a genuine conflict between political necessity and a possible natural
-    standard when the available evidence cannot responsibly resolve it.
+    Preserve a genuine conflict among natural standard, political necessity, lawful
+    authority, civic peace, and available alternatives when the evidence cannot
+    responsibly resolve it.
 
 opacity_floor:
   - >
     The inquiry establishes that the existing nomos is not identical with nature,
     but it does not establish the complete content of natural right.
   - >
-    The evidence discloses the necessity of a natural standard more clearly than
-    it discloses the final form of that standard.
+    The evidence discloses the necessity of a natural standard more clearly than it
+    discloses the final political form of that standard.
   - >
-    The convention may answer a permanent human need, but the evidence does not
-    prove that its present form is naturally right.
+    A convention may answer a permanent human need while its present form remains
+    neither naturally necessary nor naturally right.
+  - >
+    A natural hierarchy may exist while the available evidence does not establish
+    that any current institution identifies it correctly.
+  - >
+    The naturally superior regime or rule may be clearer than the best arrangement
+    presently possible under the circumstances.
+  - >
+    A law may be generally sound while its application to the present case remains
+    unjust without equitable correction.
+  - >
+    Political necessity may explain a deviation without establishing whether the
+    deviation was unavoidable, proportionate, temporary, or naturally right.
+  - >
+    Civic education may produce genuine virtue in part while remaining dependent
+    upon unexamined opinion, politically necessary images, or incomplete knowledge.
+  - >
+    A public statement may be politically salutary or pedagogically necessary without
+    constituting the author's complete theoretical judgment.
+  - >
+    The best regime may remain indispensable as a standard even when its complete
+    embodiment is improbable, impossible, or dependent upon injustice.
+
+documentary_basis:
+  governing_status: >
+    This object is grounded in the surviving Strauss course records and published
+    treatments reviewed for the problem. Transcript loss, damaged audio, editorial
+    reconstruction, and incomplete ancient works remain evidentiary limitations and
+    must be preserved in inquiry-specific source reports.
+  core_sources:
+    - The Socratic Question, February 1968
+    - What Is Political Philosophy?, December 1954 and January 1955
+    - Aristotle, Nicomachean Ethics, Claremont, winter and spring 1968
+    - Aristotle, Politics, autumn 1967
+    - Aristotle, Rhetoric, spring 1964
+    - Basic Principles of Classical Political Philosophy, autumn 1961
+    - Cicero, spring 1959
+    - Plato, Apology and Crito, autumn 1966
+    - Plato, Gorgias, surviving 1973 seminar record
+    - Plato, Laws, St. John's College, 1970–71
+    - Plato, Meno, spring 1966
+    - Plato, Protagoras, spring 1965
+    - Plato, Republic, autumn 1961
+    - Thucydides, St. John's College, 1972–73
+    - Xenophon, Oeconomicus and Memorabilia, St. John's College, 1969–70
+  source_rule: >
+    No proposition may be attributed to an incomplete or missing session as though
+    the session survived. Neighboring courses, published writings, and other ancient
+    texts may corroborate or contextualize a finding only when their distinct source
+    status is disclosed.
 
 termination_condition: >
-  The problem record is complete when the minister has reconstructed the authority
-  of the governing nomos, identified the possible natural standard or natural
-  necessity at issue, tested the strongest claims of both, rejected false resolutions,
-  and preserved any remaining uncertainty without manufacturing a verdict.
+  The problem record is complete when the minister has identified the governing
+  regime and nomos; reconstructed their strongest account of justice, virtue,
+  necessity, and common good; identified the relevant claims concerning human nature,
+  natural capacity, natural hierarchy, natural good, and natural right; examined how
+  education, rhetoric, law, religion, property, household structure, praise, shame,
+  and coercion form the political phenomenon; reconstructed the strongest
+  conventionalist or necessitarian alternative; distinguished legal validity,
+  political usefulness, prudent embodiment, and intrinsic justice; tested the claims
+  against deeds, consequences, circumstance, and source setting; rejected false
+  resolutions; and preserved every remaining uncertainty without manufacturing a
+  natural code, a political blueprint, or a final verdict unsupported by the evidence.
