@@ -8,20 +8,37 @@ identity:
 
 status:
   lifecycle: FOUNDING_DRAFT
-  version: 0.1.0
+  version: 0.2.0
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: 10244447e38c2a3c58a4327b6f75f769e8902106
+  transformation: REVISED_WITHOUT_PREDECESSOR_EFFECT
+  reason: >
+    Register the completed founding subordinate structure consisting of the inquiry
+    profile, witness registry, relations record, and first source-specific synthesis.
+    No doctrine, source, or predecessor history is deleted or activated.
 
 authority:
   registry_reference: problems/registry.yaml
   architecture_reference: governance/foundational-problem-architecture.yaml
   migration_reference: migrations/foundational-problems-v2/migration.yaml
+  inquiry_profile_reference: problems/nomos-vs-physis/inquiry-profile.yaml
+  witnesses_reference: problems/nomos-vs-physis/witnesses.yaml
+  relations_reference: problems/nomos-vs-physis/relations.yaml
 
 source_basis:
   study_id: SPPP-STUDY-001
   study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
   source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  problem_synthesis: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
   constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+  source_limit: >
+    The completed collection study is a provisional founding basis and does not
+    replace independent reconstruction of classical, biblical, medieval, or modern
+    witnesses.
 
 governing_question: >
   Is there a standard of right independent of enacted law, inherited custom,
@@ -36,40 +53,69 @@ jurisdiction:
     - nature and convention
     - natural right and natural law
     - the difference between the lawful and the just
-    - universal standards and prudential application
+    - descriptive natural fact and normative natural standard
+    - distinctions among natural, human positive, and divine positive law
+    - universal standards and prudential application as a boundary question
   does_not_own:
-    - philosophy-vs-poetry
-    - theory-vs-practice
-    - theologico-political
-    - athens-vs-jerusalem
-    - wise-vs-vulgar
-    - ancients-vs-moderns
+    - canonical_key: philosophy-vs-poetry
+      reason: >
+        Philosophy vs. Poetry owns rival human forms of wisdom, representation,
+        education, and knowledge of souls.
+    - canonical_key: theory-vs-practice
+      reason: >
+        Theory vs. Practice owns implementation, execution, institutions, equity,
+        exception, and responsible action under imperfect conditions.
+    - canonical_key: theologico-political
+      reason: >
+        The Theologico-Political Problem owns ultimate authority among autonomous
+        reason, genuine revelation, prophecy, divine command, sacred law, and sovereignty.
+    - canonical_key: athens-vs-jerusalem
+      reason: >
+        Athens vs. Jerusalem owns autonomous understanding and obedient love as
+        comprehensive rival orientations toward the highest human life.
+    - canonical_key: wise-vs-vulgar
+      reason: >
+        The Wise vs. The Vulgar owns rank, recognition, differentiated education,
+        mediation, and capture by counterfeit claimants.
+    - canonical_key: ancients-vs-moderns
+      reason: >
+        Ancients vs. Moderns owns the historical and philosophical transformation of
+        nature, natural right, rights, progress, mastery, history, and value creation.
 
 permanent_tension: >
   Political society requires law before the justice of law is demonstrated, yet
-  enacted law, inherited custom, power, recurrence, or historical success cannot
-  establish their own justice.
+  enacted law, inherited custom, power, recurrence, historical success, or asserted
+  divine title cannot establish their own justice. A natural standard must be
+  distinguished from the facts, authorities, and interpretations through which it is
+  claimed, while its application requires prudence that cannot certify itself.
 
 boundary:
   activates_when:
     - law or custom is treated as self-justifying
     - natural right is invoked against enacted law
-    - power or history is treated as a title to justice
-    - natural, human, and divine law are conflated
+    - power, necessity, recurrence, or history is treated as a title to justice
+    - natural, human positive, and divine law are conflated
+    - equality, hierarchy, preservation, excellence, or freedom is claimed to be natural
+    - universal standards and prudential application appear in tension
+    - modern rights, historicism, value creation, or mastery transforms the meaning of nature
   does_not_activate_by_itself:
     - every legal dispute
     - every historical change
     - every theological claim
+    - every practical disagreement
+    - every use of natural vocabulary
 
 relations:
   - related_problem: philosophy-vs-poetry
     relation_type: SUPPLIES_FINDING_TO
   - related_problem: theory-vs-practice
-    relation_type: INTERSECTS
+    relation_type: SUPPLIES_FINDING_TO
   - related_problem: theologico-political
     relation_type: INTERSECTS
   - related_problem: athens-vs-jerusalem
     relation_type: INTERSECTS
+  - related_problem: wise-vs-vulgar
+    relation_type: SUPPLIES_FINDING_TO
   - related_problem: ancients-vs-moderns
     relation_type: INTERSECTS
 
@@ -80,21 +126,34 @@ shared_protocols:
     - inference-discipline
     - uncertainty-preservation
     - speech-and-deed
+  conditional:
+    - claimant-to-wisdom
+    - audience-and-rhetoric
+    - irony
 
 anti_capture_principle: >
-  No law, tradition, historical outcome, or asserted natural standard may certify
-  itself through title, age, success, or necessity.
+  No law, tradition, historical outcome, asserted natural standard, philosophical
+  school, divine title, scientific explanation, or political authority may certify
+  itself through title, age, success, force, recurrence, necessity, or institutional position.
 
 non_absorption_clause: >
-  This problem owns the nature-convention distinction and must not absorb the full
-  doctrines of revelation, poetry, prudence, rank, or modernity.
+  This problem owns the nature-convention distinction and the inquiry into natural
+  standards. It must not absorb the full doctrines of revelation, poetry, prudence,
+  rank, comprehensive ways of life, or modernity. Shared sources and findings are
+  referenced through subordinate records rather than duplicated as governing doctrine.
 
 termination:
-  state: FOUNDING_SUCCESSOR_DRAFT_CREATED
+  state: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
   certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+  completed_records:
+    - problems/nomos-vs-physis/problem.yaml
+    - problems/nomos-vs-physis/inquiry-profile.yaml
+    - problems/nomos-vs-physis/witnesses.yaml
+    - problems/nomos-vs-physis/relations.yaml
+    - problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
   remaining_requirements:
-    - inquiry-profile.yaml
-    - witnesses.yaml
-    - relations.yaml
     - independent source reconstruction
-    - migration validation
+    - automated YAML and path validation
+    - review of unresolved cross-problem jurisdiction
+    - migration certification before activation
