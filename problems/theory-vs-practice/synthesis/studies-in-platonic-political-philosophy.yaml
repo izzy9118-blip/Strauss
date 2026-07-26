@@ -1,0 +1,89 @@
+schema_version: 1.0
+document_type: provisional_problem_synthesis
+
+identity:
+  synthesis_id: TVP-SYN-001
+  problem: theory-vs-practice
+  title: Studies in Platonic Political Philosophy — Theory vs. Practice Synthesis
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SYNTHESIS_RECORD_FOR_INACTIVE_SUCCESSOR
+
+source_record:
+  study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  primary_source:
+    author: Leo Strauss
+    title: Studies in Platonic Political Philosophy
+    publication_year: 1983
+
+jurisdictional_result: >
+  Knowledge of ends does not automatically provide persuasion, lawful authority,
+  command, administration, execution, institutional continuity, or control of chance.
+  Practical success does not prove truth, and practical failure does not automatically
+  refute an ex ante judgment.
+
+permanent_findings:
+  - finding_id: TVP-SPPP-F001
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: The Euthydemus seeks but does not identify the kingly art uniting wisdom, right use, happiness, and rule.
+  - finding_id: TVP-SPPP-F002
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Production or possession of goods differs from knowledge of their right use.
+  - finding_id: TVP-SPPP-F003
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Socratic understanding and public political authority remain distinct.
+  - finding_id: TVP-SPPP-F004
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Xenophontic practical superiority appears through correction, distributed knowledge, exemplary deed, consent, and restraint rather than omniscience.
+  - finding_id: TVP-SPPP-F005
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Indirect guidance can preserve consent while requiring scrutiny for manipulation.
+  - finding_id: TVP-SPPP-F006
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Legal and political practice may require warranted belief short of philosophical certainty.
+  - finding_id: TVP-SPPP-F007
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Machiavelli reduces dependence on fortune by lowering standards toward predictable passions and effective outcomes.
+  - finding_id: TVP-SPPP-F008
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Founding and preservation require different agents, capacities, and institutional forms.
+  - finding_id: TVP-SPPP-F009
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Outcome is evidence but not a complete verdict on intention, judgment, means, execution, or justice.
+
+false_resolutions:
+  - Right theory guarantees right action.
+  - Political success proves justice or truth.
+  - Failure proves the original judgment irrational without examining available knowledge and chance.
+  - Noble intention absolves foreseeable consequence.
+  - Necessity permits anything effective.
+  - Expertise concerning means supplies knowledge of political ends.
+  - Extraordinary founding authority may continue indefinitely because it was once useful.
+
+uncertainties:
+  - The collection does not identify a completed art that unites philosophy and political rule.
+  - Indirect guidance may be prudent or manipulative depending upon evidence, audience, and institutional accountability.
+  - The correct weight of outcome, intention, available knowledge, and chance remains case-dependent.
+
+cross_problem_references:
+  - problem: nomos-vs-physis
+    relevance: Practice requires standards of right not reducible to outcome.
+  - problem: wise-vs-vulgar
+    relevance: Practical competence, theoretical understanding, and legitimate authority must remain distinct.
+  - problem: ancients-vs-moderns
+    relevance: Modernity seeks reliable realization through common passions, institutions, and control.
+  - problem: theologico-political
+    relevance: Unresolved comprehensive claims generate practical questions of law, toleration, and sovereignty.
+
+termination:
+  state: PROVISIONAL_SOURCE_SYNTHESIS_COMPLETE
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - create inquiry-profile.yaml
+    - create witnesses.yaml
+    - create relations.yaml
+    - test findings against independent Plato, Xenophon, Maimonides, Machiavelli, and Hobbes studies
