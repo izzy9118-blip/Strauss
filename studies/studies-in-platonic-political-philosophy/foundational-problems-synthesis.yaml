@@ -1,0 +1,213 @@
+schema_version: 1.0
+document_type: cross_problem_synthesis
+
+identity:
+  synthesis_id: SPPP-SYNTHESIS-001
+  title: Studies in Platonic Political Philosophy — Foundational Problems Synthesis
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_STUDY_RECORD
+  problem_migration_effect: NONE_UNTIL_SEPARATE_TRANSACTION
+
+source_study:
+  study_id: SPPP-STUDY-001
+  path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+
+jurisdiction_rule: >
+  The seven foundational problems remain distinct but connected. This synthesis
+  records the contribution of one qualified primary Strauss collection. It does not
+  replace source-specific problem objects, independent witnesses, or future migration transactions.
+
+foundational_problems:
+  - canonical_key: nomos-vs-physis
+    canonical_order: 1
+    strict_problem: >
+      Is there a standard of right independent of enacted law, inherited custom,
+      political power, historical circumstance, or revealed command; and how can such
+      a standard be known and applied without turning prudence into relativism?
+    principal_findings:
+      - Political society requires law before the justice of law is demonstrated.
+      - The lawful is not identical with the just, but the imperfection of law does not make law dispensable.
+      - Natural law must be distinguished from human positive law and divine positive law.
+      - Recurrent natural power does not establish a natural right of the stronger.
+      - Universal standards require prudential application to changing particulars.
+      - Modern natural right lowers the beginning from human excellence to preservation, security, and individual claim.
+      - Nietzsche radicalizes convention by turning values into human creation; Machiavelli preserves stable nature chiefly as predictable political material.
+      - Cohen preserves Law by subjecting its particulars to autonomous morality and symbolic interpretation.
+    unresolved_question: >
+      Whether anything is right by nature, how it is known, and how it relates to
+      revealed divine law remain open.
+
+  - canonical_key: philosophy-vs-poetry
+    canonical_order: 2
+    strict_problem: >
+      Which form of speech understands and guides human souls most adequately, and can
+      philosophic argument govern political life without poetic, dramatic, historical,
+      rhetorical, and symbolic forms?
+    principal_findings:
+      - Poetry is a rival claimant to wisdom, not mere entertainment.
+      - Platonic dialogue makes speaker, audience, occasion, action, and silence part of philosophy.
+      - Rhetoric can serve truth but becomes eristic when detached from the student's good.
+      - Comedy exposes false solemnity and disproportion without supplying a complete final ranking.
+      - Thucydidean and Xenophontic narrative disclose motives, character, and consequences not reducible to abstract doctrine.
+      - Biblical image and narrative may disclose religious experience without becoming philosophical demonstration.
+      - Poetry is not revelation, and revelation is not poetic construction.
+      - Poetry may know souls concretely without necessarily knowing the highest end.
+    unresolved_question: >
+      Philosophy can claim superiority only if it integrates the truths disclosed by
+      poetry while preserving inquiry into the whole; whether it fully succeeds remains a living question.
+
+  - canonical_key: theory-vs-practice
+    canonical_order: 3
+    strict_problem: >
+      How can knowledge of ends become a politically effective deed when deliberation,
+      persuasion, authority, execution, institutions, character, and chance remain distinct?
+    principal_findings:
+      - Political action cannot wait for complete theoretical knowledge.
+      - Urgency does not convert opinion into knowledge.
+      - The Euthydemus does not successfully identify a kingly art uniting wisdom, rule, production, and right use.
+      - Practical superiority appears through correction, distributed knowledge, institutional judgment, and restraint rather than infallibility.
+      - Success and failure do not interpret themselves as proof or refutation of prior judgment.
+      - Effective authority and legitimate authority remain distinct.
+      - Founding and preservation require different capacities and institutions.
+      - Modern institutions reduce dependence on rare virtue but do not settle the highest human end.
+    unresolved_question: >
+      No demonstrated sovereign art unites philosophical knowledge, political
+      legitimacy, prudent execution, and control over chance.
+
+  - canonical_key: theologico-political
+    canonical_order: 4
+    strict_problem: >
+      Must human beings live ultimately by autonomous inquiry or by obedient response
+      to a free God who creates, reveals, commands, and judges, while political society
+      must establish law before the conflict is resolved?
+    principal_findings:
+      - Civic theology, poetic gods, ritual, and political use of religion are not identical with genuine revelation.
+      - Political usefulness neither proves nor disproves revelation.
+      - Traditional revelation includes divine deed, historical communication, command, Law, and obedience.
+      - Philosophy cannot accept revelation merely because authority commands acceptance.
+      - Philosophy's inability to refute revelation does not prove any particular revelation.
+      - Maimonides preserves knowledge, belief, legal presumption, prophecy, Mosaic uniqueness, and practical dogma as distinct jurisdictions.
+      - Machiavelli places religion under political judgment as civil theology.
+      - Cohen harmonizes reason and revelation by transforming revelation into rational moral constitution.
+    unresolved_question: >
+      Neither philosophy nor revelation is demonstrated victorious, while political
+      communities cannot avoid acting under laws and authoritative opinions.
+
+  - canonical_key: athens-vs-jerusalem
+    canonical_order: 5
+    strict_problem: >
+      Can the comprehensive orientations beginning from wonder, nature, and autonomous
+      understanding and from fear of the Lord, creation, command, and obedient love be reconciled without transforming one into the other?
+    principal_findings:
+      - Both Athens and Jerusalem claim wisdom in the highest sense.
+      - Jerusalem begins through hearing; Athens begins through seeing and questioning.
+      - Biblical creation and Greek nature are different accounts of the whole.
+      - Divine Law and natural excellence are not identical standards.
+      - Prophet and philosopher possess different forms of authority and different recognition problems.
+      - Biblical universalism is borne by a particular people; philosophic inquiry can appear through individuals.
+      - The Messianic age and the best regime are not interchangeable.
+      - Maimonides preserves the alternatives under Law; Machiavelli attempts escape; Nietzsche attempts creation; Cohen rationalizes Jerusalem.
+    unresolved_question: >
+      The volume preserves the conflict as historically intertwined, philosophically
+      incompatible in its highest claims, mutually illuminating, and undefeated.
+
+  - canonical_key: wise-vs-vulgar
+    canonical_order: 6
+    strict_problem: >
+      How can superior understanding guide political society when wisdom cannot
+      certify itself and the city cannot reliably distinguish philosopher, sophist,
+      prophet, ruler, scholar, poet, ideologue, or impostor?
+    principal_findings:
+      - The ordinary political condition is dependence on authoritative opinion, not moral worthlessness.
+      - Political decency can be genuine without philosophical knowledge.
+      - The city possesses authority without knowledge sufficient to identify philosophy.
+      - Eristic, prestige, technical expertise, secrecy, and professional status can counterfeit wisdom.
+      - Human beings differ in capacity, motive, character, and response to education.
+      - Equal civic dignity does not imply identical educational capacity or vocation.
+      - Theory does not automatically confer political legitimacy or competence.
+      - Persecution, success, election, scholarship, office, obscurity, and hidden teaching do not certify wisdom.
+      - Superior judgment may guide through counsel, education, institutional service, criticism, and restraint rather than unrestricted sovereignty.
+    unresolved_question: >
+      Recognition must remain provisional and evidence-bound; no class, office,
+      profession, or doctrine may certify itself as the wise.
+
+  - canonical_key: ancients-vs-moderns
+    canonical_order: 7
+    strict_problem: >
+      Did modern political thought discover a truer standard, or did it gain
+      reliability, institutional power, and control by lowering or narrowing the
+      fuller ancient and biblical questions?
+    principal_findings:
+      - Chronology alone establishes no rank.
+      - Ancient political philosophy begins from the good life, virtue, justice, nature, and the best regime.
+      - The ancients preserve the height of the standard while accepting political improbability.
+      - Machiavelli and Hobbes begin from ordinary passions, preservation, fear, and institutional reliability.
+      - Modernity replaces dependence on fortune, providence, rare virtue, and wisdom with project, method, sovereignty, and control.
+      - Historicism attacks both ancient nature and modern universal reason but risks self-contradiction.
+      - Nietzsche radicalizes modern creation while leaving the authority of the creator unresolved.
+      - Cohen's modern purification elevates morality while transforming revelation, Law, and immortality.
+      - Many modern discoveries appear new because the Socratic or comprehensive horizon has been narrowed.
+    unresolved_question: >
+      Modern political power may exceed ancient political power without exceeding
+      ancient understanding of the human good.
+
+governing_interpretive_discipline:
+  name: speech-and-deed
+  status: SHARED_PROTOCOL_NOT_EIGHTH_FOUNDATIONAL_PROBLEM
+  strict_rule: >
+    Every claim must be examined beside what the speaker, author, character, work,
+    law, or institution actually does.
+  required_dimensions:
+    - speaker
+    - audience
+    - occasion
+    - wording
+    - action
+    - outcome
+    - title
+    - arrangement
+    - omission
+    - silence
+    - source use
+    - evidentiary status
+    - documentary layer
+  safeguards:
+    - A statement may be qualified by deed without being mechanically reversed.
+    - An omission is evidence only where presence is reasonably expected.
+    - Structural order can support interpretation without proving deliberate hidden intention.
+    - A report must remain distinct from certification.
+    - Preserving a word does not necessarily preserve the doctrine formerly named by it.
+    - Audience conditioning does not automatically prove a second opposite doctrine.
+    - Composite and incomplete works require intention to be assigned to the correct level.
+    - The method prevents both credulity and interpretive paranoia.
+
+cumulative_propositions:
+  - Political society necessarily lives partly through authoritative opinion.
+  - Political necessity does not establish the truth of the opinion required.
+  - Philosophy necessarily questions opinions sustaining political society.
+  - The city's concern about philosophy is not wholly irrational.
+  - The city cannot reliably distinguish philosophy from sophistry.
+  - Law is indispensable but not identical with wisdom.
+  - Natural right must be distinguished from human law and revealed divine law.
+  - Civic theology must be distinguished from genuine revelation.
+  - Criticism of civic religion does not refute revelation.
+  - Philosophy's inability to refute revelation does not prove revelation.
+  - Practical judgment acts under uncertainty without converting uncertainty into certainty.
+  - Structural evidence and authorial intention remain distinct.
+  - Modernity gains practical control partly through lowering or narrowing the horizon.
+  - Historical explanation cannot replace examination of philosophical truth.
+  - Universal claims frequently require particular historical bearers.
+  - Neither Athens nor Jerusalem is defeated in the collection.
+
+termination:
+  synthesis_state: COMPLETE_FOR_REGISTERED_COLLECTION
+  certification: NOT_CERTIFIED
+  constitutional_effect: NONE_WITHOUT_PROBLEM_SPECIFIC_MIGRATION
+  remaining_requirements:
+    - create or revise problem-specific successor objects through separate transactions
+    - preserve independent witness reconstruction requirements
+    - validate cross-references and identifiers
