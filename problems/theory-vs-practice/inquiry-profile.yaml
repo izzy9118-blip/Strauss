@@ -1,0 +1,151 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: theory-vs-practice
+  title: Theory vs. Practice — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/theory-vs-practice/problem.yaml
+  relations_reference: problems/theory-vs-practice/relations.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+
+source_orientation:
+  founding_study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  founding_synthesis: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
+  source_limit: >
+    The Strauss collection establishes a provisional architecture but does not
+    complete independent reconstruction of Plato, Xenophon, Maimonides, Machiavelli, Hobbes, or Cohen.
+
+shared_protocol_references:
+  required:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+    - audience-and-rhetoric
+  conditional:
+    - claimant-to-wisdom
+    - irony
+
+problem_specific_operations:
+  - operation_id: TVP-OP-001
+    name: IDENTIFY_END_AND_KNOWLEDGE
+    instruction: >
+      State the end being pursued and distinguish knowledge of the end, causes, means,
+      persons, institutions, and circumstances.
+  - operation_id: TVP-OP-002
+    name: MAP_MEDIATION_CHAIN
+    instruction: >
+      Reconstruct deliberation, decision, persuasion, authority, command, execution,
+      administration, feedback, and correction as distinct stages.
+  - operation_id: TVP-OP-003
+    name: TEST_AUTHORITY
+    instruction: >
+      Distinguish theoretical superiority, practical competence, lawful jurisdiction,
+      consent, and de facto dependence.
+  - operation_id: TVP-OP-004
+    name: EVALUATE_EX_ANTE_JUDGMENT
+    instruction: >
+      Assess what could reasonably have been known, available alternatives, foreseeable
+      risks, and the quality of deliberation before using outcome as evidence.
+  - operation_id: TVP-OP-005
+    name: EXAMINE_CHANCE_AND_EXECUTION
+    instruction: >
+      Separate the plan from implementation, other agents, accident, resources, and unforeseen events.
+  - operation_id: TVP-OP-006
+    name: DISTINGUISH_FOUNDING_AND_PRESERVATION
+    instruction: >
+      Identify the capacities and institutions required to introduce, stabilize,
+      maintain, correct, and transmit an order.
+  - operation_id: TVP-OP-007
+    name: TEST_INDIRECT_GUIDANCE
+    instruction: >
+      Examine counsel, framing, education, writing, and exemplary deed for truthfulness,
+      accountability, consent, and manipulation risk.
+
+activation_signals:
+  direct:
+    - knowledge is assumed to create rule automatically
+    - expertise is treated as knowledge of ends
+    - success or failure is treated as a complete verdict
+    - necessity is invoked to suspend moral judgment
+    - indirect guidance shapes collective choice
+    - exceptional founding power is extended into ordinary government
+    - institutions or administration determine whether a policy can exist in deed
+  non_activation_signals:
+    - every policy disagreement
+    - every question of justice or natural right
+    - every historical outcome
+    - every use of persuasion
+
+governing_distinctions:
+  - distinction_id: TVP-DIST-001
+    terms: [knowledge_of_ends, knowledge_of_means]
+    rule: Neither form of knowledge entails the other automatically.
+  - distinction_id: TVP-DIST-002
+    terms: [theoretical_superiority, practical_competence, legitimate_authority]
+    rule: These may coincide but must be demonstrated separately.
+  - distinction_id: TVP-DIST-003
+    terms: [deliberation, execution, outcome]
+    rule: Failure at one stage must not be assigned silently to another.
+  - distinction_id: TVP-DIST-004
+    terms: [ex_ante_judgment, retrospective_result]
+    rule: Actuality does not prove prior inevitability or irrationality.
+  - distinction_id: TVP-DIST-005
+    terms: [founding, preservation]
+    rule: Extraordinary introduction and durable maintenance require different capacities and constraints.
+  - distinction_id: TVP-DIST-006
+    terms: [guidance, manipulation]
+    rule: Indirect influence is judged through truthfulness, alternatives, consent, and accountability.
+
+investigative_questions:
+  - What is the governing end, and who knows it?
+  - What information and alternatives were available before action?
+  - Who possessed lawful authority and who possessed practical competence?
+  - How was consent or obedience produced?
+  - What resources, institutions, and administrators were required?
+  - Which consequences were foreseeable?
+  - What role did chance, opposition, and execution play?
+  - Did founding power create an order capable of surviving the founder?
+
+false_resolutions:
+  - right theory guarantees right action
+  - success proves truth
+  - failure proves irrationality
+  - noble intention absolves consequence
+  - necessity abolishes morality
+  - competence equals justice
+  - institutions eliminate judgment
+  - founder's exception may continue indefinitely
+
+output_constraints:
+  required:
+    - reconstruct end, knowledge, authority, means, execution, and outcome
+    - classify ex ante and retrospective evidence separately
+    - identify uncertainty and chance
+    - record neighboring jurisdiction by reference
+  prohibited:
+    - certify success as justice
+    - infer failure solely from outcome
+    - collapse expertise into sovereignty
+    - treat necessity as unrestricted permission
+
+termination:
+  state_options:
+    - THEORY_RECONSTRUCTED
+    - MEDIATION_CHAIN_RECONSTRUCTED
+    - AUTHORITY_DISTINGUISHED
+    - EX_ANTE_JUDGMENT_EVALUATED
+    - OUTCOME_WITH_UNCERTAINTY_EVALUATED
+    - THEORY_PRACTICE_RELATION_UNRESOLVED
