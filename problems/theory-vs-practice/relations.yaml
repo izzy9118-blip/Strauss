@@ -1,0 +1,84 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: theory-vs-practice
+  title: Theory vs. Practice — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/theory-vs-practice/problem.yaml
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  governing_rule: >
+    Relations preserve local relevance without reproducing neighboring doctrine.
+
+relations:
+  - relation_id: TVP-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+    local_proposition: >
+      Practice requires standards of right not reducible to outcome or necessity.
+    boundary: >
+      The content and source of natural right remain governed by Nomos vs. Physis.
+  - relation_id: TVP-REL-002
+    related_problem: philosophy-vs-poetry
+    relation_type: RECEIVES_FINDING_FROM
+    local_proposition: >
+      Knowledge of souls, rhetoric, drama, and audience complicates the movement from truth to action.
+    boundary: >
+      Rival poetic and philosophic wisdom remains governed by Philosophy vs. Poetry.
+  - relation_id: TVP-REL-003
+    related_problem: theologico-political
+    relation_type: RECEIVES_FINDING_FROM
+    local_proposition: >
+      Unresolved reason-revelation conflict generates practical questions of law, toleration, and sovereignty.
+    boundary: >
+      Ultimate comprehensive truth remains governed by the Theologico-Political Problem.
+  - relation_id: TVP-REL-004
+    related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    local_proposition: >
+      Philosophic inquiry and prophetic command mobilize and guide political life through different forms.
+    boundary: >
+      The highest way of life remains governed by Athens vs. Jerusalem.
+  - relation_id: TVP-REL-005
+    related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    local_proposition: >
+      Superior understanding, practical competence, and legitimate authority must be distinguished.
+    boundary: >
+      Recognition and human heterogeneity remain governed by The Wise vs. The Vulgar.
+  - relation_id: TVP-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    local_proposition: >
+      Modernity seeks reliable realization through predictable passions, institutions, and mastery of contingency.
+    boundary: >
+      Historical transformation and rank remain governed by Ancients vs. Moderns.
+
+unresolved_overlaps:
+  - overlap_id: TVP-OV-001
+    problems: [theory-vs-practice, wise-vs-vulgar]
+    issue: >
+      The relation among theoretical superiority, practical competence, and legitimate authority remains unresolved.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: TVP-OV-002
+    problems: [theory-vs-practice, nomos-vs-physis]
+    issue: >
+      Prudential variation must be distinguished from alteration or abandonment of the governing standard.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: TVP-OV-003
+    problems: [theory-vs-practice, ancients-vs-moderns]
+    issue: >
+      Reliable institutional realization may represent genuine improvement while lowering the human end.
+    status: PRESERVE_UNRESOLVED
+
+non_absorption_rule: >
+  Cross-reference standards, revelation, recognition, poetic guidance, and historical
+  transformation without creating parallel governing copies of neighboring doctrine.
