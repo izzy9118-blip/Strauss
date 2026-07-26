@@ -1,0 +1,66 @@
+schema_version: 1.0
+document_type: shared_interpretive_protocol
+
+identity:
+  canonical_key: speech-and-deed
+  title: Speech and Deed Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+
+depends_on:
+  - evidence-classification
+  - inference-discipline
+
+purpose: >
+  Govern comparison of explicit formulation and textual or dramatic action.
+
+governing_rule: >
+  Speech must be interpreted through deed, and deed through speech. Neither
+  explicit formulation nor action is automatically transparent.
+
+required_dimensions:
+  - speaker
+  - immediate_audience
+  - wider_audience
+  - occasion
+  - explicit_statement
+  - action_performed
+  - structural_placement
+  - omission
+  - consequence
+  - comparison_with_other_presentations
+
+permitted_findings:
+  - SPEECH_CONFIRMS_DEED
+  - DEED_CONFIRMS_SPEECH
+  - DEED_NARROWS_SPEECH
+  - DEED_QUALIFIES_SPEECH
+  - DEED_CONTRADICTS_SPEECH
+  - SPEECH_DISGUISES_DEED
+  - RELATION_UNRESOLVED
+
+primary_applications:
+  - Socrates' public defense and depicted conduct
+  - Plato's criticism of poetry and Plato's dramatic practice
+  - claims of reluctance and actual pursuit of influence
+  - scholarly modesty and the intellectual deed performed
+  - public doctrine and audience-specific presentation
+
+prohibited:
+  - treating speech as complete merely because explicit
+  - treating deed as self-interpreting
+  - treating disparity as proof of dishonesty
+  - treating consistency as proof of truth
+  - treating title or self-description as demonstrated activity
+
+invoked_by:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
