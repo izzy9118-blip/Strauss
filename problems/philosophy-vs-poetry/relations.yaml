@@ -1,0 +1,128 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: philosophy-vs-poetry
+  title: Philosophy vs. Poetry — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/philosophy-vs-poetry/problem.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  rule: >
+    This record states explicit relations without transferring or duplicating
+    the governing jurisdiction of another foundational problem.
+
+relation_vocabulary:
+  controlled_types_used:
+    - DEPENDS_ON
+    - INTERSECTS
+    - SUPPLIES_FINDING_TO
+  designation_rule: >
+    BROTHER_PROBLEM is a constitutional designation and relation strength, not
+    an uncontrolled replacement for the controlled relation type INTERSECTS.
+
+relations:
+  - relation_id: PVP-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+    summary: >
+      The discovery of nature supplies the standard by which philosophy
+      questions inherited poetic, ancestral, civic, and theological authority.
+    boundary: >
+      Nomos vs. Physis owns the nature-convention distinction. Philosophy vs.
+      Poetry owns the rival wisdom claims that arise when poetry is challenged.
+
+  - relation_id: PVP-REL-002
+    related_problem: theory-vs-practice
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      The poetic accusation requires philosophy to account for prudence,
+      education, embodiment, communication, action, and political consequence.
+    boundary: >
+      Theory vs. Practice owns the general relation between understanding and
+      action. Philosophy vs. Poetry owns poetry's specific challenge to
+      philosophy's human and political responsibility.
+
+  - relation_id: PVP-REL-003
+    related_problem: theologico-political
+    relation_type: INTERSECTS
+    constitutional_designation: BROTHER_PROBLEM
+    relation_strength: CO_FOUNDATIONAL
+    shared_origin: >
+      Both problems arise when philosophy challenges the authoritative
+      poetic-theological horizon through which political society understands
+      gods, divine law, justice, piety, education, and the highest life.
+    shared_question: >
+      Who can speak with wisdom and authority concerning the gods, justice,
+      education, and the highest human life?
+    philosophy_vs_poetry_jurisdiction: >
+      Rival human forms of wisdom, imitation, dramatic representation,
+      education, knowledge of souls, eros, music, audience, and poetic guidance.
+    theologico_political_jurisdiction: >
+      Ultimate authority among autonomous reason, divine revelation, command,
+      prophecy, sacred law, theology, and political sovereignty.
+    coactivation_rule: >
+      Activate both problems when poetic and philosophic rivalry concerns gods,
+      piety, divine command, prophecy, sacred law, the human recognition of
+      divine authority, or the political consequences of theological teaching.
+    non_absorption_rule: >
+      Poetry is not revelation. Revelation is not poetic construction. Civic
+      theology is not identical with divine truth. Neither problem may absorb
+      or reproduce the other's full doctrine.
+    founding_source:
+      title: Socrates and Aristophanes
+      study_record: >
+        studies/socrates-and-aristophanes/
+        philosophy-poetry-theologico-political-reconstruction.yaml
+      finding: >
+        Strauss's reconstruction of the quarrel between Aristophanes and
+        Socrates necessarily becomes an inquiry into Socrates' teaching
+        concerning the gods and into what makes gods gods for human beings.
+
+  - relation_id: PVP-REL-004
+    related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    summary: >
+      Greek poetic inspiration and Biblical prophecy both raise authoritative
+      claims, but revelation and obedient love must not be reduced to Greek
+      poetry or civic theology.
+    boundary: >
+      Athens vs. Jerusalem owns the comprehensive alternatives of autonomous
+      understanding and obedient love.
+
+  - relation_id: PVP-REL-005
+    related_problem: wise-vs-vulgar
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      Poet, comic poet, philosopher, rhetorician, legislator, and interpreter
+      appear as rival claimants to wisdom whose titles must be tested through
+      speech, deed, audience, consequence, self-knowledge, and rank.
+    boundary: >
+      The Wise vs. The Vulgar owns the recognition and rank problem.
+      Philosophy vs. Poetry owns the substantive poetic-philosophic rivalry.
+
+  - relation_id: PVP-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Modernity may transform poetry into aesthetics, culture, ideology,
+      self-expression, or deliberate horizon creation and thereby alter the
+      ancient quarrel's terms.
+    boundary: >
+      Ancients vs. Moderns owns the historical and philosophical transformation
+      of the quarrel under modernity.
+
+unresolved_relations:
+  - question: >
+      Did mature Socratic philosophy arise partly through a historical
+      correction received from Aristophanic poetry?
+    status: OPEN
+    rule: >
+      Preserve the distinction between a supported structural response and an
+      unproven claim of historical causation.
