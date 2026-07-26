@@ -1,0 +1,101 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: nomos-vs-physis
+  title: Nomos vs. Physis — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/nomos-vs-physis/problem.yaml
+  inquiry_profile_reference: problems/nomos-vs-physis/inquiry-profile.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry records witness roles and limits without replacing source-specific reconstruction.
+
+witnesses:
+  - witness_id: NVP-WIT-001
+    name: Leo Strauss
+    witness_class: MODERN_INTERPRETIVE_PRIMARY_WITNESS
+    local_role: >
+      Primary witness for reconstructing the natural-law history, the distinction
+      among human, divine, and natural law, and the ancient-modern transformation.
+    registered_sources:
+      - title: Studies in Platonic Political Philosophy
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+        synthesis_record: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_status: SEQUENTIAL_AND_SYNTHETIC_RECONSTRUCTION_COMPLETE_NOT_CERTIFIED
+    limit: >
+      Strauss governs claims about his interpretation, not the final independent meaning of the witnesses he interprets.
+  - witness_id: NVP-WIT-002
+    name: Plato
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Witness to nature, law, justice, the best regime, and the dramatic limits of legal and political rule.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: NVP-WIT-003
+    name: Aristotle
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Principal witness to natural right, changeable application, prudence, equity, and political nature.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: NVP-WIT-004
+    name: Thucydides
+    witness_class: INDEPENDENT_HISTORICAL_WITNESS
+    local_role: >
+      Witness to appeals to nature, necessity, power, law, sacred restraint, and the danger of converting recurrence into right.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: NVP-WIT-005
+    name: Biblical Law
+    witness_class: INDEPENDENT_REVELATORY_CLAIM
+    local_role: >
+      Witness to divine positive law whose authority and relation to rational natural law must remain distinct.
+    study_status: SOURCE_COMPOSITION_AND_TEXTUAL_RECONSTRUCTION_PENDING
+  - witness_id: NVP-WIT-006
+    name: Thomas Aquinas
+    witness_class: MEDIEVAL_NATURAL_LAW_WITNESS
+    local_role: >
+      Witness to eternal law, natural law, divine positive law, and human law as differentiated orders.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: NVP-WIT-007
+    name: Hobbes and Locke
+    witness_class: MODERN_NATURAL_RIGHT_WITNESS_GROUP
+    local_role: >
+      Witnesses to the modern beginning from preservation, individual right, property, and sovereignty.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: NVP-WIT-008
+    name: Nietzsche
+    witness_class: MODERN_CRITIC_OF_NATURE_AND_MORALITY
+    local_role: >
+      Witness to denial of stable natural ends and transfer of authority to value creation.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+
+witness_relation_rules:
+  - Greek, Biblical, medieval, and modern witnesses must be reconstructed independently before comparison.
+  - Strauss's history of natural law does not replace direct study of the relevant texts.
+  - Divine-law claims require coactivation of theologico-political where ultimate authority is at issue.
+  - Modern transformations require coactivation of ancients-vs-moderns.
+  - No majority of witnesses establishes natural right mechanically.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-FP-001
+      path: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+      witness: Leo Strauss
+      completion: SEQUENTIAL_AND_CROSS_PROBLEM_RECONSTRUCTION_COMPLETE
+      certification: NOT_CERTIFIED
+  pending:
+    - Plato
+    - Aristotle
+    - Thucydides
+    - Biblical Law
+    - Thomas Aquinas
+    - Hobbes
+    - Locke
+    - Nietzsche
