@@ -20,7 +20,7 @@ revision_history:
     collection study and the completed registered-translation reconstruction of
     Plato's Apology while preserving all independent-witness and source-status limits.
 
- authority:
+authority:
   problem_reference: problems/philosophy-vs-poetry/problem.yaml
   inquiry_profile_reference: problems/philosophy-vs-poetry/inquiry-profile.yaml
   architecture_reference: governance/foundational-problem-architecture.yaml
