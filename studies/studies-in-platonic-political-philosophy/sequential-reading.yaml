@@ -1,0 +1,316 @@
+schema_version: 1.0
+document_type: source_specific_study
+
+identity:
+  study_id: SPPP-STUDY-001
+  title: Studies in Platonic Political Philosophy — Complete Sequential Reading
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_STUDY_RECORD
+  sequential_reading: COMPLETE
+  cross_volume_synthesis: COMPLETE
+
+source:
+  source_status_record: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  author: Leo Strauss
+  title: Studies in Platonic Political Philosophy
+  publication_year: 1983
+  source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+
+method:
+  sequence_rule: >
+    Read the collection in published order while preserving the original occasion,
+    audience, genre, and date of every Strauss piece.
+  evidence_rule: >
+    Distinguish explicit statement, textually supported inference, structural
+    inference, contradiction or tension, and unresolved question.
+  speech_and_deed_rule: >
+    Examine speaker, audience, occasion, argument, action, outcome, title, omission,
+    source use, and literary arrangement. Do not identify a character, quoted author,
+    reviewed author, or editorial introduction automatically with Strauss's judgment.
+  collection_rule: >
+    The published order may illuminate relations among the essays, but the study does
+    not certify every transition as part of a fully completed authorial plan.
+
+reading_units:
+  - unit_id: SPPP-01
+    title: Philosophy as Rigorous Science and Political Philosophy
+    book_pages: 29-37
+    central_reconstruction: >
+      The modern crisis of political philosophy arises through positivism,
+      historicism, and existentialism. Husserl preserves rigorous science but fails
+      to recover political philosophy; Heidegger's radical historicity exposes the
+      insufficiency of inherited rationalism while his political deed prevents
+      intellectual greatness from certifying political wisdom.
+    strongest_findings:
+      - Political practice becomes global while rational inquiry into the best order loses authority.
+      - A worldview or authentic commitment is not identical with knowledge.
+      - Religious life may be reconstructed phenomenologically without proving revelation.
+    primary_problems: [ancients-vs-moderns, theory-vs-practice, wise-vs-vulgar]
+
+  - unit_id: SPPP-02
+    title: On Plato's Apology of Socrates and Crito
+    book_pages: 38-66
+    central_reconstruction: >
+      Socrates gives an account of philosophy before the authoritative multitude.
+      Oracle, divine mission, daimonion, law, persuasion, obedience, injustice, and
+      civic education show that philosophy is politically vulnerable and politically
+      responsible without becoming subordinate to the city.
+    strongest_findings:
+      - The city cannot reliably distinguish philosopher, sophist, corrupter, and impious innovator.
+      - Persecution does not certify wisdom.
+      - The Laws' authority is real but not equivalent to perfect wisdom.
+      - Socratic obedience does not establish unconditional legal obedience.
+    primary_problems: [wise-vs-vulgar, theologico-political, nomos-vs-physis, theory-vs-practice]
+
+  - unit_id: SPPP-03
+    title: On the Euthydemus
+    book_pages: 67-88
+    central_reconstruction: >
+      Eristic imitates philosophy while abolishing ignorance, learning, and care for
+      the student's good. Socrates and Cleinias fail to identify the kingly art that
+      would unite knowledge, production, right use, rule, and happiness.
+    strongest_findings:
+      - Argumentative technique does not certify philosophy.
+      - The political multitude is the greatest maker of authoritative opinion and therefore the greatest sophist.
+      - Philosophy, rhetoric, and political rule remain distinct arts.
+      - The theory-practice bridge is not demonstrated by naming a kingly science.
+    primary_problems: [philosophy-vs-poetry, wise-vs-vulgar, theory-vs-practice]
+
+  - unit_id: SPPP-04
+    title: Preliminary Observations on the Gods in Thucydides' Work
+    book_pages: 89-104
+    central_reconstruction: >
+      Sacred law, oath, sacrifice, oracle, divination, piety, hope, and impiety are
+      indispensable to Thucydidean political life, but the history does not become a
+      transparent account of providence. Religious interpretations remain politically
+      powerful and epistemically contested.
+    strongest_findings:
+      - Civic theology and genuine revelation must remain distinct.
+      - Victory and defeat do not interpret themselves as divine judgment.
+      - Proximate natural and political causes do not settle ultimate causation.
+      - The concentration of full speeches around Melos and Sicily, followed by their absence in Book VIII, is major structural evidence whose intention remains unproved because incompletion is possible.
+    primary_problems: [theologico-political, speech-and-deed, theory-vs-practice, nomos-vs-physis]
+
+  - unit_id: SPPP-05
+    title: Xenophon's Anabasis
+    book_pages: 105-136
+    central_reconstruction: >
+      Xenophon displays practical superiority through initiative, speech, military
+      competence, institutional consent, coercion, deception, correction, sacrifice,
+      economic judgment, and repeated restraint of ambition. His deeds establish
+      limited practical rank without certifying complete wisdom or justice.
+    strongest_findings:
+      - Practical intelligence includes error recognition and correction.
+      - Effective authority and legitimate authority remain distinct.
+      - Refusal of concrete opportunities for tyranny is stronger evidence than verbal modesty.
+      - Success, office, divine signs, and political usefulness do not certify wisdom.
+      - Xenophon's loyalty to Greece is clearer than his relation to Athens.
+    primary_problems: [theory-vs-practice, wise-vs-vulgar, nomos-vs-physis]
+
+  - unit_id: SPPP-06
+    title: On Natural Law
+    book_pages: 137-150
+    central_reconstruction: >
+      Natural law is distinguished from human positive law and divine positive law.
+      Greek natural right, Platonic hierarchy, Aristotelian variable natural right,
+      Stoic cosmic law, Thomistic participation, modern individual rights, Kantian
+      universality, and Burkean historical concreteness form a history of transformations rather than a single unchanged doctrine.
+    strongest_findings:
+      - A higher law is not necessarily natural law.
+      - Recurrent natural power does not establish natural right.
+      - General natural standards require prudential application.
+      - Kant preserves universality while weakening nature; Burke preserves concreteness while weakening universality.
+      - The question whether anything is right by nature remains open.
+    primary_problems: [nomos-vs-physis, ancients-vs-moderns]
+
+  - unit_id: SPPP-07
+    title: Jerusalem and Athens
+    book_pages: 151-173
+    central_reconstruction: >
+      Western humanity is formed through biblical faith and Greek thought. Jerusalem
+      begins from hearing, fear, creation, command, covenant, and obedient love;
+      Athens begins from seeing, wonder, nature, inquiry, and autonomous understanding.
+      Their highest claims remain incompatible and undefeated.
+    strongest_findings:
+      - Biblical creation demotes the heavens and elevates living humanity under a free Creator.
+      - Greek philosophy discovers ungenerated being and nature.
+      - Plato is nearer to the Bible than pre-Socratic cosmology but does not become biblical revelation.
+      - Prophetic universalism and the philosophic best regime are not identical.
+      - Common criticism of unjust rulers does not constitute synthesis.
+    primary_problems: [athens-vs-jerusalem, theologico-political, ancients-vs-moderns]
+
+  - unit_id: SPPP-08
+    title: Nietzsche
+    book_pages: 174-191
+    central_reconstruction: >
+      Nietzsche rejects fixed natural human ends and inherited divine authority,
+      interprets morality genealogically, and demands future philosopher-commanders
+      capable of creating values and assuming responsibility for humanity's future.
+    strongest_findings:
+      - Created values do not certify their creator's rightful authority.
+      - The philosopher-legislator and tyrant become difficult to distinguish.
+      - Historical sense, probity, suffering, rank, and the herd remain active without a demonstrated natural standard.
+      - Will to power and eternal return remain in tension with wholly new creation.
+      - Noble nature replaces divine nature without resolving revelation.
+    primary_problems: [ancients-vs-moderns, wise-vs-vulgar, nomos-vs-physis, theologico-political]
+
+  - unit_id: SPPP-09
+    title: Notes on Maimonides' Book of Knowledge
+    book_pages: 192-200
+    central_reconstruction: >
+      Maimonides introduces divine and natural science into Torah while preserving
+      sacred law, prophecy, Mosaic uniqueness, legal presumption, character formation,
+      Torah study, anti-idolatry, repentance, freedom, world to come, and love of God.
+    strongest_findings:
+      - Knowledge and legally binding belief remain terminologically distinct.
+      - Ordinary prophecy can be accredited by presumption without philosophical certainty.
+      - Sinai and Moses occupy a unique founding status.
+      - Theoretical truths and practically necessary opinions coexist without becoming identical.
+      - Philosophy enters the Holy of Holies without abolishing Law's heterogeneity.
+    primary_problems: [theologico-political, theory-vs-practice, athens-vs-jerusalem]
+
+  - unit_id: SPPP-10
+    title: Note on Maimonides' Letter on Astrology
+    book_pages: 201-205
+    central_reconstruction: >
+      Maimonides distinguishes reason, sense, and trustworthy prophetic tradition from
+      endoxa; rejects astrology as nonsense rather than imperfect astronomy; preserves
+      proximate causes under general divine government; and connects political loss
+      to idolatry, astrology, and neglect of war and conquest.
+    strongest_findings:
+      - Titles, antiquity, and reputation do not certify knowledge.
+      - Natural causal explanation does not by itself eliminate remote divine causation.
+      - The Torah view of particular providence is accepted rather than demonstrated against philosophy.
+      - Messianic restoration includes human action and political causes rather than miracle alone.
+    primary_problems: [theologico-political, theory-vs-practice, wise-vs-vulgar]
+
+  - unit_id: SPPP-11
+    title: Note on Maimonides' Treatise on the Art of Logic
+    book_pages: 206-209
+    central_reconstruction: >
+      Logic is not a Jewish book and supplies distinctions required for valid inquiry.
+      Rhetorical creation arguments are separated from demonstration, future
+      possibility from retrospective necessity, and proximate causes from remote cause.
+      The final classification of sciences culminates in political science concerning
+      self, household, city, great nation, and nations.
+    strongest_findings:
+      - Actuality does not prove prior inevitability.
+      - Conventional and natural, universal and particular, essential and accidental must remain distinct.
+      - Rhetorical proof must not be relabeled demonstration.
+      - Political science does not necessarily imply a universal world-state.
+    primary_problems: [theory-vs-practice, nomos-vs-physis, theologico-political]
+
+  - unit_id: SPPP-12
+    title: Niccolo Machiavelli
+    book_pages: 210-228
+    central_reconstruction: >
+      Modern political philosophy arises from the unresolved Athens-Jerusalem conflict
+      by lowering the standard to effective truth, ordinary passions, founding force,
+      political use of virtue and vice, and mastery of fortune. Machiavelli's novelty
+      is public authorization and systematic narrowing more than discovery of unknown phenomena.
+    strongest_findings:
+      - Justice may be founded through injustice and freedom through founding tyranny, but causal efficacy does not establish legitimacy.
+      - Religion becomes civil theology judged by political utility.
+      - Republics require religion while a powerful monarch may dispense with it, creating unequal belief between rulers and citizens.
+      - Concealed blasphemy makes the reader perform a forbidden implication but does not authorize unrestricted hidden-reading invention.
+      - Xenophon, Plato, and Aristotle knew the political phenomena Machiavelli makes appear new by suppressing the Socratic horizon.
+    primary_problems: [ancients-vs-moderns, theologico-political, theory-vs-practice, wise-vs-vulgar]
+
+  - unit_id: SPPP-13
+    title: Review of C. B. Macpherson, The Political Theory of Possessive Individualism
+    book_pages: 229-231
+    central_reconstruction: >
+      Macpherson interprets Hobbesian competition through possessive market society.
+      Strauss accepts the affinity between Hobbes and acquisitive society but denies
+      that competition has been shown to arise only from capitalism or that historical
+      contradiction can replace philosophical examination of human nature and the rational society.
+    strongest_findings:
+      - Competition appears in commercial and noncommercial societies.
+      - Social genealogy and argument must remain distinct but reciprocal.
+      - Hobbes's derivation of right and obligation from human facts cannot be dismissed by a formal fact-value slogan.
+      - Macpherson's internal critique may depend upon an unproved universal socialist standard.
+    primary_problems: [nomos-vs-physis, ancients-vs-moderns, theory-vs-practice]
+
+  - unit_id: SPPP-14
+    title: Review of J. L. Talmon, The Nature of Jewish History—Its Universal Significance
+    book_pages: 232
+    central_reconstruction: >
+      The historian cannot establish divine election but cannot understand Jewish
+      history while excluding the constitutive belief in election. Economic and
+      psychological reductions fail to capture a holy nation and people of priests
+      oriented toward right acting.
+    strongest_findings:
+      - Historical constitution and theological truth remain distinct.
+      - The State of Israel does not exhaust the people constituted through election.
+      - Election signifies obligation and vocation before privilege.
+      - The unresolved question is why universal right acting requires a peculiar nation as primary bearer.
+    primary_problems: [athens-vs-jerusalem, theologico-political, theory-vs-practice]
+
+  - unit_id: SPPP-15
+    title: Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
+    book_pages: 233-247
+    central_reconstruction: >
+      Cohen attempts the strongest modern reconciliation of Judaism and autonomous
+      reason by redefining revelation as God's creation of reason and reconstructing
+      creation, Law, holiness, grace, election, Messianism, immortality, resurrection,
+      prayer, fidelity, and Jewish survival through ethical idealism and historical progress.
+    strongest_findings:
+      - The synthesis preserves Jewish language while transforming free divine acts and absolute obedience.
+      - Creation becomes necessary and continuous; revelation becomes nonhistorical rational constitution.
+      - Law becomes moral education and symbol; holiness becomes morality.
+      - Election becomes stateless universal witness; immortality becomes historical continuity; resurrection becomes moral renewal.
+      - Cohen's dignity, fidelity, and service remain worthy of gratitude without certifying the synthesis as true.
+    primary_problems: [theologico-political, athens-vs-jerusalem, ancients-vs-moderns, nomos-vs-physis]
+
+collection_level_findings:
+  - finding_id: SPPP-CF-001
+    classification: STRONGLY_SUPPORTED
+    proposition: >
+      Political philosophy is philosophy made aware of its political conditions,
+      effects, audiences, dependencies, and counterfeit forms.
+  - finding_id: SPPP-CF-002
+    classification: STRONGLY_SUPPORTED
+    proposition: >
+      Political society necessarily lives partly through authoritative opinion, but
+      political necessity does not establish the opinion's truth.
+  - finding_id: SPPP-CF-003
+    classification: STRONGLY_SUPPORTED
+    proposition: >
+      Natural law, human positive law, and revealed divine law must remain distinct.
+  - finding_id: SPPP-CF-004
+    classification: STRONGLY_SUPPORTED
+    proposition: >
+      Philosophy's inability to refute revelation does not prove revelation, while
+      criticism of civic religion does not refute genuine revelation.
+  - finding_id: SPPP-CF-005
+    classification: STRONGLY_SUPPORTED
+    proposition: >
+      Modernity gains practical reliability and power partly by lowering or narrowing
+      the ancient and biblical horizon.
+  - finding_id: SPPP-CF-006
+    classification: STRONGLY_SUPPORTED
+    proposition: >
+      No office, title, success, persecution, scholarship, secrecy, election claim,
+      or self-description certifies wisdom.
+  - finding_id: SPPP-CF-007
+    classification: STRONGLY_SUPPORTED
+    proposition: >
+      Speech must be examined through deed and deed through speech without mechanical inversion.
+  - finding_id: SPPP-CF-008
+    classification: UNRESOLVED
+    proposition: >
+      Neither Athens nor Jerusalem is defeated, and the complete natural standard of
+      justice and its political realization remain open.
+
+termination:
+  reading_state: COMPLETE
+  collection_synthesis: COMPLETE
+  certification: NOT_CERTIFIED
+  remaining_work:
+    - independent reconstruction of all non-Strauss primary witnesses
+    - edition comparison where exact quotation or locator certification is required
+    - problem-specific migration and registry updates
