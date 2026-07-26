@@ -1,0 +1,332 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: philosophy-vs-poetry
+  title: Philosophy vs. Poetry — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/philosophy-vs-poetry/problem.yaml
+  inquiry_profile_reference: problems/philosophy-vs-poetry/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry identifies witnesses and their problem-specific documentary
+    roles. It does not contain complete witness interpretations, replace
+    source-specific studies, merge independent witnesses, or certify the rank or
+    truth of any claimant.
+
+registry_purpose: >
+  Preserve the independent standing, source condition, jurisdictional role,
+  current study status, and interpretive limits of the principal witnesses through
+  whom the ancient quarrel between philosophy and poetry is reconstructed.
+
+source_status_rules:
+  - rule_id: PVP-WSR-001
+    rule: >
+      Leo Strauss's Socrates and Aristophanes is an author-published primary
+      Strauss source and the completed founding documentary basis for the present
+      problem reconstruction.
+  - rule_id: PVP-WSR-002
+    rule: >
+      Studies in Platonic Political Philosophy is a posthumous collection whose
+      order and title were chosen by Strauss, but Strauss did not complete its
+      projected introduction or projected essay on Plato's Gorgias.
+  - rule_id: PVP-WSR-003
+    rule: >
+      Thomas L. Pangle's introduction to Studies in Platonic Political Philosophy
+      is secondary editorial and interpretive context. It may guide questions and
+      bibliography but may not govern Strauss's meaning or substitute for his
+      primary texts.
+  - rule_id: PVP-WSR-004
+    rule: >
+      Aristophanes, Plato, and Xenophon are independent witnesses. Strauss's
+      interpretation of any one of them does not eliminate the requirement to
+      reconstruct that witness from its own surviving works and documentary
+      conditions.
+  - rule_id: PVP-WSR-005
+    rule: >
+      Plato and Xenophon must be reconstructed independently before comparison or
+      synthesis. Apparent agreement may not be assumed, and disagreement may not
+      be silently harmonized.
+  - rule_id: PVP-WSR-006
+    rule: >
+      Aristophanes must not be reduced to a spokesman for conventional Athens,
+      civic piety, vulgar opinion, or anti-philosophic prejudice. His poetic claim
+      and criticism of city, gods, law, and philosophy require independent
+      reconstruction.
+  - rule_id: PVP-WSR-007
+    rule: >
+      Socrates is a disputed historical and philosophic subject represented through
+      conflicting poetic, Platonic, Xenophontic, and later witnesses. No single
+      representation may be treated automatically as an unmediated historical record.
+  - rule_id: PVP-WSR-008
+    rule: >
+      A character, chorus, narrator, dramatic victor, reported speech, or action is
+      evidence within a work but is not automatically the doctrine of the author.
+
+witnesses:
+  - witness_id: PVP-WIT-001
+    name: Leo Strauss
+    witness_class: MODERN_INTERPRETIVE_PRIMARY_WITNESS
+    local_role: >
+      Primary governing modern witness for reconstructing Philosophy vs. Poetry as
+      a foundational problem and for locating the quarrel within mature Socratic
+      political philosophy.
+    documentary_standing:
+      authority: PRIMARY_FOR_STRAUSS_INTERPRETATION
+      limit: >
+        Strauss governs claims about his own argument and reading, not the final
+        independent meaning of Aristophanes, Plato, Xenophon, or the historical Socrates.
+    registered_sources:
+      - title: Socrates and Aristophanes
+        publication_condition: AUTHOR_PUBLISHED
+        source_class: AUTHOR_PUBLISHED_PRIMARY_SOURCE
+        local_function: >
+          Founding sequential reconstruction of philosophy, comedy, the young
+          Socrates, the Socratic response, and the gods within the quarrel.
+        completed_study_record: >
+          studies/socrates-and-aristophanes/
+          philosophy-poetry-theologico-political-reconstruction.yaml
+        synthesis_record: problems/philosophy-vs-poetry/synthesis/socrates-and-aristophanes.yaml
+      - title: Studies in Platonic Political Philosophy
+        publication_condition: POSTHUMOUS_COLLECTION_ARRANGED_AND_TITLED_BY_STRAUSS
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        local_function: >
+          Later corpus witness to the problem of Socrates, the quarrel between
+          philosophy and poetry, rhetoric, the gods, and Platonic political philosophy.
+        editorial_limit: >
+          Strauss's projected introduction and projected Gorgias essay were not
+          completed; Pangle's introduction remains secondary context.
+        study_status: INDEPENDENT_STRAUSS_SOURCE_STUDY_PENDING
+      - title: The Rebirth of Classical Political Rationalism
+        publication_condition: COLLECTION_REQUIRING_ITEM_LEVEL_SOURCE_STATUS
+        source_class: QUALIFIED_STRAUSS_CORPUS_WITNESS
+        local_function: >
+          Supplies relevant statements concerning poetry, rhetoric, comedy, eros,
+          knowledge of souls, and the political correction of philosophy.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_PENDING
+    claimant_status: INTERPRETER_AND_PHILOSOPHIC_CLAIMANT_REQUIRING_TEST
+    anti_capture_rule: >
+      Strauss's authority as interpreter does not permit the repository to treat a
+      secondary summary of Strauss, including this registry, as self-certifying.
+
+  - witness_id: PVP-WIT-002
+    name: Aristophanes
+    witness_class: INDEPENDENT_POETIC_CLAIMANT
+    local_role: >
+      Independent comic poet, rival claimant to wisdom and education, and principal
+      surviving poetic witness to the young Socrates and the poetic accusation
+      against philosophy.
+    documentary_standing:
+      authority: PRIMARY_POETIC_WITNESS_THROUGH_SURVIVING_COMEDIES
+      historical_relevance: >
+        Contemporary or near-contemporary poetic representation of Socrates with
+        documentary significance that must be distinguished from literal biography.
+      limit: >
+        Comic distortion, dramatic construction, character speech, chorus judgment,
+        and dramatic victory do not automatically state Aristophanes' final doctrine.
+    registered_source_groups:
+      - source_group: Aristophanic comedies examined by Strauss
+        status: PRIMARY_CLASSICAL_TEXTS_REQUIRING_EDITION_AND_TRANSLATION_RECORDS
+        current_study_relation: >
+          Strauss's sequential treatment is preserved in PVP-STUDY-001; direct
+          independent comedy-by-comedy reconstruction remains required.
+    problem_specific_questions:
+      - What knowledge of souls, eros, music, suffering, audience, gods, and political consequence does comedy display?
+      - Does Aristophanes correct philosophy, rival it, prepare it, subordinate it, or preserve an unresolved claim?
+      - How does the comic poet differ from the city whose beliefs he represents and ridicules?
+    prohibited_reductions:
+      - spokesman for conventional Athens
+      - merely vulgar opponent of philosophy
+      - entertainer without substantive knowledge
+      - direct biographer of Socrates
+      - final theologian whose comic gods settle divine truth
+    study_status: INDEPENDENT_ARISTOPHANIC_RECONSTRUCTION_PENDING
+
+  - witness_id: PVP-WIT-003
+    name: Plato
+    witness_class: INDEPENDENT_PHILOSOPHIC_AND_DRAMATIC_WITNESS
+    local_role: >
+      Independent philosophic witness whose dialogues present Socrates through
+      dramatic action and whose explicit criticisms of poetry must be compared with
+      his own poetic, mimetic, rhetorical, and dramatic deed.
+    documentary_standing:
+      authority: PRIMARY_CLASSICAL_PHILOSOPHIC_WITNESS
+      limit: >
+        Socratic speech within a dialogue is not automatically identical with
+        Plato's final teaching, and Plato may not be forced to confirm Strauss's
+        Socrates and Aristophanes synthesis.
+    required_independence:
+      - reconstruct each relevant dialogue in its own dramatic and argumentative order
+      - distinguish Socrates, interlocutors, narrators, and Plato's compositional deed
+      - compare explicit criticism of poetry with dramatic practice
+      - preserve divergence from Aristophanes, Xenophon, and Strauss
+    priority_questions:
+      - How does Plato present the old quarrel between philosophy and poetry?
+      - What does Platonic drama retain from poetic knowledge of souls and audiences?
+      - Does Plato integrate poetry, subordinate it, imitate it, or transform it?
+      - How do gods, piety, inspiration, prophecy, and divine authority enter the dialogues?
+    planned_study_scope:
+      - Apology of Socrates
+      - Republic
+      - Gorgias
+      - Phaedrus
+      - Symposium
+      - Laws
+      - other dialogues as documentary relevance is established
+    study_status: INDEPENDENT_PLATONIC_RECONSTRUCTION_PENDING
+
+  - witness_id: PVP-WIT-004
+    name: Xenophon
+    witness_class: INDEPENDENT_SOCRATIC_WITNESS
+    local_role: >
+      Independent Socratic witness whose writings possess prima facie historical
+      standing and whose dramatic, practical, and political presentation of Socrates
+      must be reconstructed apart from Plato and Strauss.
+    documentary_standing:
+      authority: PRIMARY_CLASSICAL_SOCRATIC_WITNESS
+      historical_standing: PRIMA_FACIE_HISTORICAL_WITH_LITERARY_MEDIATION
+      limit: >
+        Prima facie historical standing does not eliminate selection, rhetoric,
+        dramatic construction, authorial purpose, or differences among Xenophon's works.
+    required_independence:
+      - reconstruct Xenophon's Socrates from Xenophon's texts before Platonic comparison
+      - distinguish direct report, narrated conversation, dramatic construction, and authorial deed
+      - preserve differences from Plato and Aristophanes
+      - avoid treating Strauss's interpretation as a replacement for Xenophon's text
+    priority_questions:
+      - How does Xenophon present Socrates' prudence, lawfulness, eros, friendship, household, and political responsibility?
+      - What evidence does Xenophon provide concerning the center and limits of Socratic inquiry?
+      - How does Xenophon's Socrates answer or evade the Aristophanic accusation?
+      - What is the relation between Xenophon's historical standing and his literary mediation?
+    planned_study_scope:
+      - Memorabilia
+      - Oeconomicus
+      - Symposium
+      - Apology
+      - other relevant Xenophontic works
+    study_status: INDEPENDENT_XENOPHONTIC_RECONSTRUCTION_PENDING
+
+  - witness_id: PVP-WIT-005
+    name: Socrates
+    witness_class: DISPUTED_SUBJECT_AND_REPRESENTED_CLAIMANT
+    local_role: >
+      Central disputed subject represented as natural philosopher, rhetorician,
+      citizen, teacher, erotic guide, law-abiding defendant, political philosopher,
+      and examiner through conflicting witnesses.
+    documentary_standing:
+      authority: NO_DIRECT_SURVIVING_AUTHORIAL_CORPUS
+      representation_channels:
+        - Aristophanes
+        - Plato
+        - Xenophon
+        - later ancient witnesses
+        - Leo Strauss's reconstructions
+      limit: >
+        The historical Socrates, the young Aristophanic Socrates, and the mature
+        Platonic-Xenophontic Socrates may not be silently identified or separated.
+    governing_uncertainties:
+      - whether Aristophanes preserves historically reliable features of the young Socrates
+      - whether a historical Socratic turn occurred in the form reconstructed by Strauss
+      - whether Aristophanes contributed causally to that turn
+      - how Platonic and Xenophontic representations relate to the historical person
+      - whether mature Socratic philosophy integrates or merely politically manages poetic truth
+    prohibited_shortcuts:
+      - treat one witness as transparent historical access
+      - infer historical causation from structural correspondence
+      - use the mature Socrates to erase the poetic accusation
+      - use the young Socrates to define philosophy as such
+    study_status: DISPUTED_RECONSTRUCTION_REQUIRING_COMPARATIVE_WITNESS_WORK
+
+contextual_and_editorial_witnesses:
+  - witness_id: PVP-CXT-001
+    name: Thomas L. Pangle
+    witness_class: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+    source_relation: Introduction to Studies in Platonic Political Philosophy
+    permitted_role: >
+      Bibliographic guidance, provisional orientation, identification of problems,
+      and secondary reconstruction to be tested against Strauss's primary texts.
+    prohibited_role: >
+      Governing Strauss's meaning, supplying a missing authorial introduction, or
+      deciding the rank of Plato, Xenophon, Aristophanes, poetry, revelation, or philosophy.
+
+witness_relation_rules:
+  independent_reconstruction_rule: >
+    Aristophanes, Plato, and Xenophon must each be reconstructed on their own terms
+    before comparison. Strauss must be reconstructed source by source before a
+    corpus-level claim is made.
+  non_confirmation_rule: >
+    No later witness may be forced to confirm the founding Socrates and Aristophanes
+    synthesis. Contradiction, qualification, correction, and dissent must be preserved.
+  no_majority_rule: >
+    Agreement among several witnesses does not mechanically establish historical or
+    philosophic truth; documentary authority, argument, dramatic action, occasion,
+    and source condition remain controlling.
+  no_absorption_rule: >
+    Witness evidence concerning poetic gods, civic theology, or human recognition
+    of divine authority must cross-reference the Theologico-Political Problem where
+    revelation, divine command, prophecy, sacred law, or ultimate authority is at issue.
+  comparison_precondition: >
+    Comparative synthesis may begin only after source-specific records identify each
+    witness's source status, internal sequence, claims, deeds, uncertainties, and limits.
+
+source_specific_study_index:
+  completed:
+    - study_id: PVP-STUDY-001
+      path: >
+        studies/socrates-and-aristophanes/
+        philosophy-poetry-theologico-political-reconstruction.yaml
+      witness: Leo Strauss
+      source: Socrates and Aristophanes
+      completion: SEQUENTIAL_READING_COMPLETE
+      certification: NOT_CERTIFIED
+  pending:
+    - witness: Aristophanes
+      required_record: independent Aristophanic source reconstruction
+    - witness: Plato
+      required_record: independent Platonic source reconstruction
+    - witness: Xenophon
+      required_record: independent Xenophontic source reconstruction
+    - witness: Leo Strauss
+      required_record: source-specific studies beyond Socrates and Aristophanes
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This registry is a new subordinate successor record. It does not rewrite,
+    replace, certify, deactivate, or remove any predecessor problem object or
+    accepted historical source.
+  prohibitions:
+    - no silent deletion of a witness or accepted source
+    - no retrospective rewriting of predecessor history
+    - no conversion of planned studies into completed evidence
+    - no merger of independent witnesses before reconstruction
+    - no certification from registry structure alone
+    - no absorption of the Theologico-Political Problem through witness overlap
+
+termination:
+  registry_state: FOUNDING_WITNESS_REGISTRY_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - all principal witnesses have explicit source status and local role
+    - independent reconstruction requirements are preserved
+    - completed and pending studies are distinguished
+    - Socrates remains identified as a disputed represented subject
+    - editorial framing is prevented from governing primary meaning
+    - brother-problem jurisdiction remains distinct
+  current_limit: >
+    The registry is structurally complete for founding production but substantive
+    witness reconstruction remains pending and may revise local roles or priorities
+    through documented successor versions.
