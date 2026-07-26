@@ -1,0 +1,84 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: athens-vs-jerusalem
+  title: Athens vs. Jerusalem — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/athens-vs-jerusalem/problem.yaml
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  governing_rule: >
+    Relations preserve local relevance without reproducing neighboring doctrine.
+
+relations:
+  - relation_id: AVJ-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: RECEIVES_FINDING_FROM
+    local_proposition: >
+      Nature and divine positive law supply different comprehensive beginnings.
+    boundary: >
+      The general status of nature, convention, and natural law remains governed by Nomos vs. Physis.
+  - relation_id: AVJ-REL-002
+    related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+    local_proposition: >
+      Greek poetic theology and Biblical revelation shape authoritative horizons but are not identical.
+    boundary: >
+      Rival poetic and philosophic wisdom remains governed by Philosophy vs. Poetry.
+  - relation_id: AVJ-REL-003
+    related_problem: theory-vs-practice
+    relation_type: SUPPLIES_FINDING_TO
+    local_proposition: >
+      Philosophic inquiry and prophetic command act through different practical forms.
+    boundary: >
+      The general movement from understanding or command to action remains governed by Theory vs. Practice.
+  - relation_id: AVJ-REL-004
+    related_problem: theologico-political
+    relation_type: SUPPLIES_FINDING_TO
+    local_proposition: >
+      Athens and Jerusalem supply the comprehensive poles whose public conflict requires political mediation.
+    boundary: >
+      Law, sovereignty, toleration, and public jurisdiction remain governed by the Theologico-Political Problem.
+  - relation_id: AVJ-REL-005
+    related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    local_proposition: >
+      Philosopher and prophet are rival exemplary claimants whose authority cannot certify itself.
+    boundary: >
+      Recognition and differentiated education remain governed by The Wise vs. The Vulgar.
+  - relation_id: AVJ-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    local_proposition: >
+      Modernity attempts to escape, synthesize, historicize, moralize, or supersede the alternatives.
+    boundary: >
+      Historical transformation remains governed by Ancients vs. Moderns.
+
+unresolved_overlaps:
+  - overlap_id: AVJ-OV-001
+    problems: [athens-vs-jerusalem, theologico-political]
+    issue: >
+      The comprehensive alternative supplies the poles, while political mediation governs their public conflict; neither may absorb the other.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: AVJ-OV-002
+    problems: [athens-vs-jerusalem, philosophy-vs-poetry]
+    issue: >
+      Biblical revelation uses narrative and poetic forms without becoming identical with Greek poetry.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: AVJ-OV-003
+    problems: [athens-vs-jerusalem, ancients-vs-moderns]
+    issue: >
+      Modern syntheses may represent genuine insight while transforming one or both comprehensive alternatives.
+    status: PRESERVE_UNRESOLVED
+
+non_absorption_rule: >
+  Cross-reference natural law, poetry, political mediation, recognition, and modern
+  transformation without reproducing another problem's complete doctrine.
