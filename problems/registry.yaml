@@ -4,7 +4,7 @@ registry_type: foundational_problem_registry
 identity:
   canonical_key: foundational-problem-registry
   title: Foundational Problem Registry
-  version: 1.5.0
+  version: 1.6.0
 
 status:
   lifecycle: FOUNDING_DRAFT
@@ -12,12 +12,12 @@ status:
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
 revision_history:
-  predecessor_version: 1.4.0
-  predecessor_blob_sha: 728b1b5542f3fd6413508db880c6f7521205e155
+  predecessor_version: 1.5.0
+  predecessor_blob_sha: 1b16996749e64bf3bec0812885f84b828d52a0be
   reason: >
-    Register completed founding subordinate structures for Theory vs. Practice,
-    Athens vs. Jerusalem, The Wise vs. The Vulgar, and Ancients vs. Moderns. Wise vs.
-    Vulgar proposition-level redistribution and migration-wide validation remain pending.
+    Register the normalized proposition-level classification and substantial
+    implementation of accepted Wise vs. Vulgar material while preserving automated
+    validation, duplicate-doctrine review, and migration certification as blockers.
 
 authority:
   purpose: >
@@ -152,7 +152,7 @@ canonical_problems:
         path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
         version: 0.2-reconstruction-draft
         blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
-        status: ACCEPTED_MIGRATION_SOURCE
+        status: ACCEPTED_MIGRATION_SOURCE_CLASSIFIED_NOT_SUPERSEDED
     successor_path: problems/wise-vs-vulgar/problem.yaml
     subordinate_records:
       inquiry_profile: problems/wise-vs-vulgar/inquiry-profile.yaml
@@ -160,13 +160,18 @@ canonical_problems:
       relations: problems/wise-vs-vulgar/relations.yaml
       synthesis_directory: problems/wise-vs-vulgar/synthesis/
       founding_source_bridge: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
-      remaining_required:
-        - proposition-level redistribution
+      migration_transactions: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
+    classification_coverage:
+      accepted_top_level_units: 18
+      accepted_top_level_units_classified: 18
+      constitutive_propositions: 49
+      constitutive_propositions_classified: 49
+      rejected_with_reason: 0
     jurisdiction: >
       The recognition of wisdom, the distinction among genuine and counterfeit
       claimants to superior understanding, human heterogeneity, differentiated
       education, audience, mediation, and the political responsibility of philosophy.
-    migration_status: FOUNDING_SUBORDINATE_STRUCTURE_COMPLETE_REDISTRIBUTION_PENDING_NOT_CERTIFIED
+    migration_status: PROPOSITION_CLASSIFICATION_COMPLETE_IMPLEMENTATION_SUBSTANTIAL_VALIDATION_PENDING_NOT_CERTIFIED
 
   - canonical_key: ancients-vs-moderns
     canonical_order: 7
@@ -196,4 +201,4 @@ reference_rule: >
 activation_rule: >
   A successor problem becomes active only after its predecessor is preserved,
   displaced material is classified, references validate, and the migration is
-  certified. Founding-structure completion does not authorize activation.
+  certified. Classification and founding-structure completion do not authorize activation.
