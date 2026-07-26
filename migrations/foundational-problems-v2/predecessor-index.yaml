@@ -4,12 +4,12 @@ document_type: foundational_problem_predecessor_index
 identity:
   migration_id: foundational-problems-v2
   title: Foundational Problems v2 Predecessor Index
-  version: 1.1.0
+  version: 1.2.0
 
 status:
   lifecycle: ACTIVE_MIGRATION_RECORD
   certification: NOT_CERTIFIED
-  activation: PHASE_2_SOURCE_PRESERVATION
+  activation: PHASE_4_SUCCESSOR_CONSTRUCTION
 
 governed_by:
   migration_constitution: migrations/foundational-problems-v2/migration.yaml
@@ -57,8 +57,21 @@ records:
     successor:
       canonical_key: theologico-political
       path: problems/theologico-political/problem.yaml
-      status: NOT_YET_CREATED
-    migration_status: EXPLICIT_HISTORICAL_COPY_CREATED
+      version: 0.1.0
+      status: FOUNDING_DRAFT_NOT_CERTIFIED
+      subordinate_records:
+        inquiry_profile: problems/theologico-political/inquiry-profile.yaml
+        witnesses: problems/theologico-political/witnesses.yaml
+        relations: problems/theologico-political/relations.yaml
+        synthesis: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+        transactions: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+      construction_commits:
+        problem: 31a4e432a45c7939017861c65a35eee2790f400c
+        inquiry_profile: 654eb435e5a9964c8255b0a5662a2e1ea2149ce9
+        witnesses: 5eb63e4038b7a0cc0a8eda01f54c6e6888660411
+        relations: 695ac4a517bb55a5cdfef76849caccc9eca4ef13
+        synthesis: 38e3e35a346b010ddce794c2b932d1b3acaacf1a
+    migration_status: SUCCESSOR_STRUCTURE_CREATED_ACTIVE_PREDECESSOR_RETAINED
 
   - predecessor_record_id: FPV2-PRED-002
     canonical_key: wise-vs-vulgar
@@ -117,8 +130,7 @@ records:
       status: NOT_YET_CREATED
     migration_status: MATERIALIZED_AND_INDEXED
 
-phase_2_assessment:
-  phase: PRESERVE_SOURCES
+phase_assessment:
   completed_actions:
     - verified active predecessor identities and blob hashes
     - recorded governing commits for active predecessors
@@ -127,13 +139,20 @@ phase_2_assessment:
     - recorded a SHA-256 digest, byte count, and line count for the accepted Wise vs. Vulgar source
     - created an exact explicit historical copy of the active Theologico-Political predecessor
     - verified the Theologico-Political historical copy by identical Git blob SHA
-    - established explicit successor relations
+    - classified Theologico-Political v1.1 material through an explicit transaction ledger
+    - created the inactive Theologico-Political successor constitution and subordinate records
+    - retained the active Theologico-Political predecessor without modification
   remaining_before_source_preservation_certification:
     - create an explicit historical copy of the active Wise vs. Vulgar predecessor before removal
     - validate this index and all recorded paths in integration testing
+  remaining_before_theologico_successor_certification:
+    - validate YAML and all cross-references
+    - update transaction implementation provenance
+    - complete independent source-specific witness reconstruction as required
+    - certify the complete foundational migration before activation
   destructive_actions_authorized: false
 
 non_certification_notice: >
   This index certifies neither the truth of any substantive proposition nor the
   completion of the foundational migration. It records documentary identity,
-  preservation, and recoverability only.
+  preservation, successor construction, and recoverability only.
