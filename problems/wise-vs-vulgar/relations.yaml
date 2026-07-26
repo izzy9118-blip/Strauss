@@ -1,0 +1,216 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: wise-vs-vulgar
+  title: The Wise vs. The Vulgar — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/wise-vs-vulgar/problem.yaml
+  inquiry_profile_reference: problems/wise-vs-vulgar/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  rule: >
+    This record states controlled relations without transferring or duplicating the
+    substantive doctrines of neighboring problems and without permitting rank or
+    recognition claims to certify themselves.
+
+relation_vocabulary:
+  controlled_types_used:
+    - DEPENDS_ON
+    - INTERSECTS
+    - SUPPLIES_FINDING_TO
+  rule: >
+    Relations identify structural dependence, overlap, or supplied findings. They do
+    not establish final rank, authority, historical causation, or permission to absorb doctrine.
+
+relations:
+  - relation_id: WVG-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: INTERSECTS
+    summary: >
+      Claims to know what is right by nature create a recognition problem concerning
+      philosopher, jurist, legislator, prophet, scientist, historian, and ruler.
+    boundary: >
+      Nomos vs. Physis owns the standard and its epistemic burden. The Wise vs. The
+      Vulgar owns recognition, rank, education, mediation, and capture of claimants.
+    non_absorption_rule: >
+      Uncertainty about the claimant does not prove that no natural standard exists,
+      while assertion of nature does not certify the claimant.
+
+  - relation_id: WVG-REL-002
+    related_problem: philosophy-vs-poetry
+    relation_type: DEPENDS_ON
+    summary: >
+      Poet, comic poet, philosopher, rhetorician, and dramatic interpreter appear as
+      rival claimants to wisdom and education whose substantive claims must be reconstructed.
+    boundary: >
+      Philosophy vs. Poetry owns the poetic-philosophic rivalry. The Wise vs. The
+      Vulgar owns recognition, rank, claimant testing, differentiated education, and mediation.
+    non_absorption_rule: >
+      Poetic efficacy and philosophic title do not certify final rank, and claimant
+      testing must not replace reconstruction of the rival forms of wisdom.
+
+  - relation_id: WVG-REL-003
+    related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+    summary: >
+      Superior understanding can guide political society only through counsel,
+      education, office, institutions, persuasion, law, correction, or direct rule,
+      each of which raises recognition and legitimacy problems.
+    boundary: >
+      Theory vs. Practice owns the movement from knowledge to action. The Wise vs. The
+      Vulgar owns who is recognized as superior, how rank is tested, and how capture is prevented.
+    non_absorption_rule: >
+      Practical success does not certify wisdom, and recognition of superiority does
+      not grant unrestricted sovereignty or competence.
+
+  - relation_id: WVG-REL-004
+    related_problem: theologico-political
+    relation_type: INTERSECTS
+    summary: >
+      Philosopher, prophet, theologian, jurist, sovereign, believer, and false claimant
+      make rival authority claims that political society cannot identify by title alone.
+    boundary: >
+      The Theologico-Political Problem owns genuine revelation, prophecy, divine
+      command, sacred law, interpretation, and ultimate authority. The Wise vs. The
+      Vulgar owns recognition and rank of the claimants.
+    non_absorption_rule: >
+      Prophetic title, election, miracle report, persecution, or institutional office
+      does not certify divine authority, while recognition analysis does not settle revelation.
+
+  - relation_id: WVG-REL-005
+    related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    summary: >
+      Philosopher and prophet represent rival highest human types borne by individuals,
+      peoples, texts, laws, and traditions that require differentiated recognition.
+    boundary: >
+      Athens vs. Jerusalem owns the comprehensive ways of life. The Wise vs. The
+      Vulgar owns rank, recognition, mediation, education, and capture of their bearers.
+    non_absorption_rule: >
+      Philosopher and prophet must not be reduced to social elite types, and election
+      or philosophic individuality does not certify the comprehensive claim.
+
+  - relation_id: WVG-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Modernity transforms elite claims through professional philosophy, science,
+      expertise, bureaucracy, ideology, historicism, value creation, technology, and
+      institutional credentialing.
+    boundary: >
+      Ancients vs. Moderns owns the historical transformation. The Wise vs. The Vulgar
+      owns the permanent recognition, rank, education, mediation, and capture problem.
+    non_absorption_rule: >
+      Modern credentials, methods, scale, or power do not certify wisdom, while ancient
+      rank language does not establish inherited or permanent elites.
+
+coactivation_rules:
+  - activate nomos-vs-physis when the claimant asserts knowledge of a natural standard
+  - activate philosophy-vs-poetry when poet and philosopher are substantive rival forms of wisdom
+  - activate theory-vs-practice when superior judgment seeks counsel, rule, implementation, or institutional action
+  - activate theologico-political when prophet, revelation, divine law, theology, or sacred interpretation is substantively at issue
+  - activate athens-vs-jerusalem when philosopher and prophet represent comprehensive rival ways of life
+  - activate ancients-vs-moderns when modern expertise, ideology, science, bureaucracy, historicism, or technology transforms elite claims
+
+relation_matrix:
+  wise_vs_vulgar_owns:
+    - rank and recognition
+    - genuine and counterfeit claimants
+    - human heterogeneity
+    - ordinary and political virtue
+    - differentiated education and partial enlightenment
+    - audience and mediation where recognition is central
+    - elite self-certification and capture
+    - provisional and domain-limited judgments of rank
+    - political responsibility of superior claimants
+    - repository and AI non-certification
+  references_without_absorbing:
+    nomos_vs_physis:
+      - content and knowledge of natural standards
+    philosophy_vs_poetry:
+      - substantive poetic and philosophic claims
+    theory_vs_practice:
+      - counsel, rule, execution, institutions, and practical responsibility
+    theologico_political:
+      - revelation, prophecy, sacred law, interpretation, and ultimate authority
+    athens_vs_jerusalem:
+      - comprehensive philosophic and Biblical ways of life
+    ancients_vs_moderns:
+      - historical transformation of elites, expertise, ideology, science, and technology
+
+cross_problem_safeguards:
+  - No title, office, success, suffering, secrecy, election, scholarship, or expertise certifies wisdom.
+  - Local expertise does not establish comprehensive rank.
+  - Political authority and philosophic wisdom remain distinct.
+  - Ordinary opinion is not identical with moral worthlessness.
+  - Equal civic dignity is not identical with equal capacity or vocation.
+  - Human heterogeneity does not justify inherited elites, contempt, or unrestricted rule.
+  - Differentiated education requires evidence of purpose, effect, and correction.
+  - No repository, protocol, or AI system may certify itself as wise.
+
+unresolved_relations:
+  - question_id: WVG-UNREL-001
+    question: >
+      What evidence can support provisional recognition of wisdom without becoming a
+      formal certificate that counterfeit claimants can imitate or capture?
+    status: OPEN
+    routing: wise-vs-vulgar with shared claimant-to-wisdom protocol
+  - question_id: WVG-UNREL-002
+    question: >
+      How can differentiated education serve truth and the learner's good without
+      creating unaccountable elites or permanent exclusion?
+    status: OPEN
+    routing: wise-vs-vulgar with philosophy-vs-poetry and audience-and-rhetoric
+  - question_id: WVG-UNREL-003
+    question: >
+      How may superior understanding guide political society through counsel,
+      education, criticism, institutions, or restraint without claiming unrestricted rule?
+    status: OPEN
+    routing: wise-vs-vulgar and theory-vs-practice
+  - question_id: WVG-UNREL-004
+    question: >
+      How can the city protect itself against sophistry, false prophecy, ideology, and
+      expertise capture without persecuting philosophy or genuine revelation?
+    status: OPEN
+    routing: wise-vs-vulgar and theologico-political
+  - question_id: WVG-UNREL-005
+    question: >
+      Can modern credentialing, peer review, scientific method, institutions, and AI
+      improve recognition without replacing wisdom with measurable proxies?
+    status: OPEN
+    routing: wise-vs-vulgar and ancients-vs-moderns
+
+migration_safeguards:
+  migration_status:
+    lifecycle: CLASSIFICATION_AND_REDISTRIBUTION_PENDING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This relations record is a subordinate successor draft. It creates no activation,
+    certification, predecessor classification, historical deletion, elite
+    self-certification, jurisdictional merger, or automatic transfer of findings.
+
+termination:
+  relations_state: FOUNDING_RELATIONS_RECORD_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - all six neighboring problems possess explicit controlled relations
+    - every relation preserves a jurisdictional boundary
+    - coactivation does not authorize absorption
+    - unresolved overlaps remain visible
+    - predecessor redistribution remains explicit
+  remaining_requirements:
+    - proposition-level redistribution of accepted predecessor material
+    - independent witness reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
