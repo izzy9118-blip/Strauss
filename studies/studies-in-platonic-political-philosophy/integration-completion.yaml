@@ -1,0 +1,100 @@
+schema_version: 1.0
+document_type: repository_integration_completion_record
+
+identity:
+  completion_id: SPPP-INTEGRATION-COMPLETE-001
+  source_integration: SPPP-INTEGRATION-001
+  study_id: SPPP-STUDY-001
+  version: 1.0.0
+
+status:
+  lifecycle: IMPLEMENTED_PENDING_VALIDATION
+  certification: NOT_CERTIFIED
+  activation_effect: NONE
+  predecessor_effect: NONE
+
+source_records:
+  integration_plan: studies/studies-in-platonic-political-philosophy/repository-integration.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  sequential_reading: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+  foundational_synthesis: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+  theologico_political_reconstruction: studies/studies-in-platonic-political-philosophy/theologico-political-reconstruction.yaml
+
+implemented_transactions:
+  - sequence: 1
+    action: Register SPPP-STUDY-001 in Philosophy vs. Poetry witness registry.
+    status: COMPLETE
+    path: problems/philosophy-vs-poetry/witnesses.yaml
+    version: 0.2.0
+    commit: 3f5397f43485d580c16b52cacb00dfa8420c62fb
+  - sequence: 2
+    action: Register SPPP-STUDY-001 in The Theologico-Political Problem witness registry.
+    status: COMPLETE
+    path: problems/theologico-political/witnesses.yaml
+    version: 0.2.0
+    commit: 602816fbc5a62290830b853912dd662a13772b8d
+  - sequence: 3
+    action: Reconcile the strict SPPP reconstruction with the active nineteen-source predecessor.
+    status: COMPLETE_PROVISIONAL
+    path: migrations/foundational-problems-v2/transactions/theologico-political-sppp-study-001.yaml
+    commit: e0261c0ddd789f1af73fb58d5fa433d38ec861d9
+  - sequence: 4
+    action: Use SPPP-STUDY-001 as the first common documentary basis for the five pending successors.
+    status: COMPLETE_FOR_FOUNDING_DRAFT_AND_SOURCE_BRIDGE
+    records:
+      - problem: nomos-vs-physis
+        problem_path: problems/nomos-vs-physis/problem.yaml
+        problem_commit: 8106d323be700a881402df359836220fce9aa8d6
+        synthesis_path: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
+        synthesis_commit: ed70d4727beaa6b58f02b729c72233106a954ccb
+      - problem: theory-vs-practice
+        problem_path: problems/theory-vs-practice/problem.yaml
+        problem_commit: 0b005f08b04d9ad01ea2ce80cf26707a84f91d5e
+        synthesis_path: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
+        synthesis_commit: ca581b327c6548f1f7fc7c31d43db1c10341c8f8
+      - problem: athens-vs-jerusalem
+        problem_path: problems/athens-vs-jerusalem/problem.yaml
+        problem_commit: 6b7224bef4d05fdaec3aeb9b54003441a2a866ff
+        synthesis_path: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
+        synthesis_commit: 4d0079aa42e6212fe5df51f3280f1c9058ffdeb1
+      - problem: wise-vs-vulgar
+        problem_path: problems/wise-vs-vulgar/problem.yaml
+        problem_commit: f680dfca73277abc1465674c3a9876a3c035f53d
+        synthesis_path: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+        synthesis_commit: 4e2c1e5c17924f008c03fabd12ba83ae6ef13b59
+      - problem: ancients-vs-moderns
+        problem_path: problems/ancients-vs-moderns/problem.yaml
+        problem_commit: 794c7d3c0525e075feeff2ebcdf55827d4843587
+        synthesis_path: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+        synthesis_commit: ecf08e248f9eb63fc6f0711c90ea8c973b70a8a5
+  - sequence: 5
+    action: Revise the shared speech-and-deed protocol.
+    status: COMPLETE_FOUNDING_DRAFT
+    path: protocols/speech-and-deed.yaml
+    version: 1.1.0
+    commit: 1ae264ea4175d89bb072f5caa601a7da6e904ee9
+  - sequence: 6
+    action: Update the foundational problem registry.
+    status: COMPLETE_FOUNDING_DRAFT
+    path: problems/registry.yaml
+    version: 1.3.0
+    commit: 2f7a2b2a393d5fd604b31b60eccb42b8da03340b
+
+preserved_limits:
+  - No successor is certified or activated.
+  - The active Theologico-Political predecessor remains unchanged.
+  - The accepted Wise vs. Vulgar migration source remains preserved and requires proposition-level redistribution.
+  - SPPP-STUDY-001 remains provisional and cannot replace independent witnesses.
+  - The five new successors still require inquiry profiles, witness registries, and relations records.
+  - The posthumous collection condition and missing intended materials remain explicit.
+  - Poetry is not revelation and civic theology is not revelation.
+  - Political usefulness, success, and historical endurance do not establish truth.
+
+termination:
+  integration_state: IMPLEMENTED_PENDING_VALIDATION
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - create validation record for paths, identifiers, YAML, and cross-references
+    - complete subordinate records for the five new successor drafts
+    - complete Wise vs. Vulgar redistribution transactions
+    - preserve independent witness reconstruction requirements
