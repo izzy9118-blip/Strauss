@@ -1,0 +1,239 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: nomos-vs-physis
+  title: Nomos vs. Physis — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/nomos-vs-physis/problem.yaml
+  inquiry_profile_reference: problems/nomos-vs-physis/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  rule: >
+    This record states controlled cross-problem relations without transferring,
+    duplicating, or absorbing the complete jurisdiction of another foundational
+    problem. Local relevance is preserved by reference.
+
+relation_vocabulary:
+  controlled_types_used:
+    - DEPENDS_ON
+    - INTERSECTS
+    - SUPPLIES_FINDING_TO
+  rule: >
+    Relation type records structural dependence or overlap, not superiority,
+    certification, historical causation, or permission to duplicate doctrine.
+
+relations:
+  - relation_id: NVP-REL-001
+    related_problem: philosophy-vs-poetry
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      The discovery or claim of nature supplies the standard by which philosophy
+      questions inherited poetic, ancestral, civic, and theological opinion. The
+      poetic response may reveal human and political dimensions neglected by a
+      truncated natural inquiry.
+    coactivation_rule: >
+      Coactivate when poetic and philosophic claimants dispute whether nature,
+      convention, divine order, or dramatic knowledge supplies the authoritative
+      standard for justice or the human good.
+    boundary: >
+      Nomos vs. Physis owns the distinction between nature and convention and the
+      question of natural right. Philosophy vs. Poetry owns the rival human forms of
+      wisdom, representation, education, and knowledge of souls.
+    non_absorption_rule: >
+      The discovery of nature does not settle poetry's rank, and poetic correction of
+      natural philosophy does not establish that justice is conventional.
+
+  - relation_id: NVP-REL-002
+    related_problem: theory-vs-practice
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      A natural or universal standard supplies the end or measure whose application
+      must be mediated by prudence, equity, legislation, institutions, judgment, and
+      attention to changing particulars.
+    coactivation_rule: >
+      Coactivate when the primary question is how a general standard becomes a law,
+      judgment, exception, reform, or responsible political action.
+    boundary: >
+      Nomos vs. Physis owns the standard and the distinction between the lawful and
+      the just. Theory vs. Practice owns application, execution, institutional action,
+      prudence, and finite political responsibility.
+    non_absorption_rule: >
+      Practical difficulty does not dissolve the standard, while invocation of a
+      standard does not supply a complete practical decision.
+
+  - relation_id: NVP-REL-003
+    related_problem: theologico-political
+    relation_type: INTERSECTS
+    summary: >
+      Natural right, natural law, human positive law, divine positive law, and eternal
+      law become entangled when philosophy and revelation make rival claims concerning
+      the source and authority of justice.
+    coactivation_rule: >
+      Coactivate when a divine command is compared with a rational natural standard,
+      when revelation is translated into natural morality, or when philosophy claims
+      authority to reject sacred law.
+    boundary: >
+      Nomos vs. Physis owns the natural-standard and nature-convention distinctions.
+      The Theologico-Political Problem owns ultimate authority among autonomous reason,
+      genuine revelation, prophecy, divine command, sacred law, and sovereignty.
+    non_absorption_rule: >
+      Natural law is not automatically revelation, shared moral content does not prove
+      shared authority, and the reason-revelation conflict must not be reduced to a
+      dispute about positive law.
+
+  - relation_id: NVP-REL-004
+    related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    summary: >
+      Athens and Jerusalem present comprehensive alternatives in which nature and
+      creation, autonomous understanding and obedient love, natural excellence and
+      divine Law, and philosopher and prophet receive different ranks.
+    coactivation_rule: >
+      Coactivate when the nature-law distinction becomes part of the confrontation
+      between the philosophic and biblical ways of life rather than a local legal or
+      jurisprudential issue.
+    boundary: >
+      Nomos vs. Physis owns the general distinction between natural and conventional
+      standards. Athens vs. Jerusalem owns the complete rival orientations toward the
+      whole and the highest human life.
+    non_absorption_rule: >
+      The Greek discovery of nature must not be treated as Athens in its entirety, and
+      divine Law must not be treated as Jerusalem's only dimension.
+
+  - relation_id: NVP-REL-005
+    related_problem: wise-vs-vulgar
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      Claims to know what is right by nature create a recognition problem concerning
+      philosopher, jurist, legislator, prophet, scientist, historian, ruler, and
+      counterfeit claimant.
+    coactivation_rule: >
+      Coactivate when the central issue is who can know, interpret, teach, or apply the
+      natural standard and how the city can distinguish genuine knowledge from title,
+      office, expertise, ideology, or self-certification.
+    boundary: >
+      Nomos vs. Physis owns the content and epistemic burden of the natural standard.
+      The Wise vs. The Vulgar owns rank, recognition, differentiated education,
+      mediation, and capture by counterfeit elites.
+    non_absorption_rule: >
+      Possession of office or expertise does not establish knowledge of nature, while
+      uncertainty about the knower does not prove that no natural standard exists.
+
+  - relation_id: NVP-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      The ancient-modern dispute transforms nature, natural right, law, preservation,
+      rights, equality, science, mastery, history, and value creation.
+    coactivation_rule: >
+      Coactivate when a doctrine is ranked or transformed through the shift from
+      ancient natural excellence to modern preservation, rights, control, historicism,
+      or creation of values.
+    boundary: >
+      Nomos vs. Physis owns the permanent nature-convention and natural-standard
+      questions. Ancients vs. Moderns owns the historical and philosophical
+      transformation of those questions under modernity.
+    non_absorption_rule: >
+      Chronological priority does not establish natural authority, and modern efficacy
+      does not establish a truer standard. The permanent problem must not be reduced
+      to one historical stage of its development.
+
+relation_matrix:
+  nomos_vs_physis_owns:
+    - nature and convention
+    - natural right and natural law
+    - lawful and just
+    - descriptive natural fact and normative natural standard
+    - relation among natural, human positive, and divine positive law as distinctions
+    - universal standards and prudent specification as a local boundary question
+  references_without_absorbing:
+    philosophy_vs_poetry:
+      - poetic and philosophic rivalry over nature and authority
+      - dramatic correction of truncated natural inquiry
+    theory_vs_practice:
+      - prudential application
+      - equity, exception, legislation, and institutional action
+    theologico_political:
+      - ultimate authority of reason and revelation
+      - prophecy, divine command, sacred law, and sovereignty
+    athens_vs_jerusalem:
+      - comprehensive ways of life grounded in nature or creation and Law
+    wise_vs_vulgar:
+      - recognition and rank of the claimant who knows or applies the standard
+    ancients_vs_moderns:
+      - historical transformation of nature, rights, mastery, history, and value
+
+cross_problem_safeguards:
+  - No relation authorizes doctrinal duplication in multiple problem constitutions.
+  - A shared source may supply distinct findings to several problems without merging jurisdictions.
+  - Natural fact does not become natural right through cross-problem repetition.
+  - Political necessity does not become justice through Theory vs. Practice.
+  - Revelation does not become natural law through Theologico-Political overlap.
+  - Poetic efficacy does not settle nature through Philosophy vs. Poetry.
+  - A claimant's superior rank does not certify the standard through The Wise vs. The Vulgar.
+  - Modern success does not settle the permanent problem through Ancients vs. Moderns.
+
+unresolved_relations:
+  - question_id: NVP-UNREL-001
+    question: >
+      Is classical natural right best understood as a standard directly knowable from
+      human nature, as a dialectical ascent from authoritative opinion, or as a
+      heterogeneous family of positions later unified under one title?
+    status: OPEN
+    routing: nomos-vs-physis with independent classical witness reconstruction
+  - question_id: NVP-UNREL-002
+    question: >
+      Can rational natural law and revealed divine Law be reconciled without
+      transforming the authority or content of one of them?
+    status: OPEN
+    routing: nomos-vs-physis and theologico-political
+  - question_id: NVP-UNREL-003
+    question: >
+      How can prudence alter application without becoming an authorization for the
+      ruler to replace the universal standard?
+    status: OPEN
+    routing: nomos-vs-physis and theory-vs-practice
+  - question_id: NVP-UNREL-004
+    question: >
+      Did modernity discover more secure natural rights or lower the standard to
+      achieve greater political reliability and control?
+    status: OPEN
+    routing: nomos-vs-physis and ancients-vs-moderns
+  - question_id: NVP-UNREL-005
+    question: >
+      Can political society reliably recognize a claimant to knowledge of natural
+      right without allowing philosophy, law, science, or ideology to certify itself?
+    status: OPEN
+    routing: nomos-vs-physis and wise-vs-vulgar
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This relations record is a subordinate successor draft. It creates no activation,
+    certification, historical deletion, jurisdictional merger, or automatic transfer
+    of findings into another problem.
+
+termination:
+  relations_state: FOUNDING_RELATIONS_RECORD_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - all six neighboring problems possess explicit controlled relations
+    - every relation contains a jurisdictional boundary
+    - coactivation does not authorize absorption
+    - unresolved overlaps remain visible
+  remaining_requirements:
+    - independent witness reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
