@@ -1,0 +1,98 @@
+schema_version: 1.0
+document_type: source_status_record
+
+identity:
+  study_key: studies-in-platonic-political-philosophy
+  author: Leo Strauss
+  title: Studies in Platonic Political Philosophy
+  edition: University of Chicago Press, 1983
+  version: 1.0.0
+
+status:
+  lifecycle: SOURCE_REGISTERED
+  sequential_reading: COMPLETE
+  certification: NOT_CERTIFIED
+
+source_condition:
+  collection_status: POSTHUMOUS_COLLECTION_OF_STRAUSS_ESSAYS
+  title_and_arrangement: CHOSEN_BY_STRAUSS
+  projected_authorial_introduction: NOT_COMPLETED
+  projected_gorgias_ESSAY: NOT_COMPLETED
+  primary_text_status: >
+    Strauss's essays are primary evidence for Strauss's arguments. The collection
+    remains qualified by its posthumous publication and by the absence of the
+    projected introduction and projected essay on Plato's Gorgias.
+  editorial_material:
+    - contributor: Joseph Cropsey
+      item: Foreword
+      status: EDITORIAL_PROVENANCE_AND_CONTEXT
+      authority_limit: >
+        May establish publication history and editorial circumstances but may not
+        govern the meaning of Strauss's essays.
+    - contributor: Thomas L. Pangle
+      item: Introduction
+      status: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+      authority_limit: >
+        May orient questions and bibliography but may not substitute for Strauss's
+        primary texts or supply the missing authorial introduction.
+
+registered_scope:
+  sequential_reading:
+    - Philosophy as Rigorous Science and Political Philosophy
+    - On Plato's Apology of Socrates and Crito
+    - On the Euthydemus
+    - Preliminary Observations on the Gods in Thucydides' Work
+    - Xenophon's Anabasis
+    - On Natural Law
+    - Jerusalem and Athens
+    - Nietzsche
+    - Notes on Maimonides' Book of Knowledge
+    - Note on Maimonides' Letter on Astrology
+    - Note on Maimonides' Treatise on the Art of Logic
+    - Niccolo Machiavelli
+    - Review of C. B. Macpherson, The Political Theory of Possessive Individualism
+    - Review of J. L. Talmon, The Nature of Jewish History—Its Universal Significance
+    - Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  editorial_context_reviewed:
+    - Foreword by Joseph Cropsey
+    - Introduction by Thomas L. Pangle
+
+source_handling_rules:
+  - Strauss's essays govern claims about Strauss's argument.
+  - Pangle's introduction is secondary and provisional.
+  - Cropsey's foreword governs editorial provenance only.
+  - Collection order may be examined as structural evidence but must not be treated
+    as demonstrated complete authorial design.
+  - Item-level original publication history remains separately verifiable and must
+    not be inferred from inclusion in the collection.
+  - The source must not be treated as a completed Platonic corpus.
+  - Plato, Xenophon, Thucydides, the Bible, Maimonides, Machiavelli, Nietzsche,
+    Hobbes, Locke, Talmon, Macpherson, and Cohen remain independent witnesses or
+    subjects requiring source-specific reconstruction.
+  - Structural correspondence, omission, chapter count, and sequence must remain
+    distinct from demonstrated authorial intention.
+
+activated_problems:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
+
+activated_protocols:
+  - source-status
+  - evidence-classification
+  - inference-discipline
+  - uncertainty-preservation
+  - speech-and-deed
+  - irony
+  - comedy
+  - claimant-to-wisdom
+  - audience-and-rhetoric
+
+provenance_note: >
+  No source text is copied into the repository by this record. The study preserves
+  bibliographic identity, source condition, reconstruction, findings, uncertainties,
+  and cross-problem jurisdiction.
