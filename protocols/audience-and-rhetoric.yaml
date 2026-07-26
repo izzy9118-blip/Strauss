@@ -4,11 +4,23 @@ document_type: shared_interpretive_protocol
 identity:
   canonical_key: audience-and-rhetoric
   title: Audience and Rhetoric Protocol
-  protocol_version: 1.0.0
+  protocol_version: 1.1.0
 
 status:
   lifecycle: FOUNDING_DRAFT
   certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 8f9a21979a59c0c5b8b102439c4a68721f1384c2
+  reason: >
+    Reconcile accepted Wise vs. Vulgar material concerning human heterogeneity,
+    partial enlightenment, exoteric communication, neutral exposure, openness,
+    concealment, deception, responsibility, and elite capture.
+  migration_source:
+    path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
+    transaction_reference: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
 
 depends_on:
   - speech-and-deed
@@ -18,11 +30,13 @@ depends_on:
 
 purpose: >
   Govern examination of audience, motive, capacity, differentiated speech,
-  rhetoric, pedagogy, concealment, and consequence.
+  rhetoric, pedagogy, reserve, exotericism, concealment, responsibility, and consequence.
 
 governing_rule: >
-  Communication must be examined in relation to the audience's capacity,
-  motive, character, political circumstances, and likely use of the teaching.
+  Communication must be examined in relation to the audience's capacity, motive,
+  character, political circumstances, likely use of the teaching, and vulnerability
+  to corruption. Differentiation may be prudent and responsible, but neither openness
+  nor concealment certifies honesty, philosophy, or wisdom.
 
 audience_dimensions:
   - intellectual_capacity
@@ -35,14 +49,19 @@ audience_dimensions:
   - political_office
   - religious_commitment
   - scholarly_preparation
+  - prior_opinion_and_attachment
   - vulnerability_to_corruption
   - capacity_for_transformation
+  - capacity_to_misuse_the_teaching
+  - social_and_institutional_position
 
 communication_forms:
   - demonstration
   - dialectic
   - persuasion
   - protreptic
+  - provisional_teaching
+  - selection_and_sequence
   - myth
   - narrative
   - poetry
@@ -50,37 +69,107 @@ communication_forms:
   - irony
   - omission
   - silence
+  - reserve
   - concealment
   - public_defense
   - private_conversation
+  - legal_presumption
+  - practical_dogma
+
+exoteric_and_differentiated_communication:
+  possible_grounds:
+    - unequal intellectual preparation
+    - unequal motive or character
+    - danger of corrupting liberation
+    - persecution or censorship
+    - protection of inquiry or community
+    - need for gradual education
+    - limits of public demonstration
+    - political responsibility for foreseeable effects
+  required_evidence:
+    - identifiable audience difference
+    - textual or historical evidence of differentiated address
+    - a supported educational, protective, political, or prudential function
+    - comparison of public and restricted presentations
+    - evidence concerning consequence and likely misuse
+  anti_capture_rule: >
+    Audience differentiation must not become a self-issued license for deception,
+    permanent exclusion, caste rule, obscurity, or immunity from correction. The
+    speaker's claimed superiority and audience classification remain subject to evidence.
 
 required_questions:
   - What can this audience understand?
   - What does this audience desire?
+  - What opinions and attachments organize this audience?
   - What will the teaching do to this audience?
   - Is liberation accompanied by transformation of desire?
-  - >
-    Does the speaker seek education, protection, persuasion, provocation, or
-    manipulation?
-  - Is differentiated speech justified by evidence?
+  - Does the speaker seek education, protection, persuasion, provocation, rule, or manipulation?
+  - Is differentiated speech justified by positive evidence?
+  - What alternatives to concealment or indiscriminate disclosure existed?
   - What foreseeable consequences follow?
+  - Who controls the audience classification, and how can it be corrected?
+  - Does the communication serve the learner's good, truth, political necessity, or elite interest?
+  - Is apparently neutral exposure shaped by selection, sequence, framing, prestige, or unequal rhetorical force?
+
+responsibility_tests:
+  - identify who selected the material and alternatives
+  - identify who framed the question and sequence
+  - distinguish exposure from education
+  - determine whether the teacher knows the student's governing desire
+  - examine whether the teaching redirects, intensifies, or merely rationalizes desire
+  - record effects on different audience types
+  - examine the speaker's motive and interest
+  - preserve responsibility for foreseeable misuse without attributing every consequence to the teacher
+  - test whether secrecy or openness protects the speaker while shifting risk to the audience
+
+partial_enlightenment_rule: >
+  Release from one authoritative opinion is not identical with ascent toward wisdom.
+  Partial enlightenment may preserve appetite, resentment, ambition, vanity, or
+  domination and must be judged through the transformed or untransformed soul.
 
 governing_limits:
   - differentiated speech is not unrestricted deception
-  - openness is not automatically responsible
-  - concealment is not automatically prudent
+  - openness is not automatically responsible or honest
+  - concealment is not automatically prudent or wise
   - neutral exposure is not necessarily neutral education
   - capacity to understand is not identical with moral fitness
+  - inability to understand is not moral worthlessness
   - political usefulness does not establish truth
+  - audience heterogeneity cannot be mapped automatically onto class, wealth, office, profession, or credential
+  - persecution does not prove a concealed doctrine
+  - obscurity does not prove audience differentiation
+  - a public statement conditioned by audience does not prove a complete opposite private doctrine
 
 valid_outputs:
   - AUDIENCE_APPROPRIATE_INSTRUCTION
   - AUDIENCE_MISMATCH
   - PEDAGOGICAL_RESTRAINT
   - RESPONSIBLE_DIFFERENTIATION
+  - SUPPORTED_EXOTERIC_FUNCTION
+  - EXOTERIC_CLAIM_NOT_ESTABLISHED
   - MANIPULATIVE_RHETORIC
+  - ELITE_CAPTURE_RISK
   - CORRUPTING_LIBERATION
+  - PARTIAL_ENLIGHTENMENT
+  - NEUTRALITY_CLAIM_QUALIFIED
   - AUDIENCE_EFFECT_UNRESOLVED
+
+prohibited:
+  - universal enlightenment assumed from equal civic dignity
+  - audience incapacity inferred from class, wealth, profession, or disagreement alone
+  - claimed wisdom used to authorize deception
+  - secrecy or obscurity used as proof of membership among the few
+  - openness used as proof of honesty or philosophy
+  - manipulation relabeled education without examining the learner's good
+  - neutral exposure used to deny responsibility for framing and consequence
+  - audience differentiation used to immunize the speaker or institution from correction
+  - exotericism inferred without positive textual or historical evidence
+
+termination_rule: >
+  An audience or rhetorical finding is complete only when the audience, relevant
+  capacities and motives, communication form, speaker's end, evidence for
+  differentiation, likely and actual effects, alternatives, responsibility, capture
+  risks, and remaining uncertainty are explicit.
 
 invoked_by:
   - nomos-vs-physis
