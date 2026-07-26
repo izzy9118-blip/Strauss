@@ -1,0 +1,111 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: athens-vs-jerusalem
+  title: Athens vs. Jerusalem — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/athens-vs-jerusalem/problem.yaml
+  inquiry_profile_reference: problems/athens-vs-jerusalem/inquiry-profile.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry preserves independent witnesses, source conditions, and local roles
+    without replacing direct reconstruction or declaring one comprehensive alternative victorious.
+
+witnesses:
+  - witness_id: AVJ-WIT-001
+    name: Leo Strauss
+    witness_class: MODERN_INTERPRETIVE_PRIMARY_WITNESS
+    local_role: >
+      Primary witness for reconstructing Jerusalem and Athens as the two comprehensive
+      roots of Western civilization and for testing modern syntheses.
+    registered_sources:
+      - title: Studies in Platonic Political Philosophy
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+        synthesis_record: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_status: SEQUENTIAL_AND_SYNTHETIC_RECONSTRUCTION_COMPLETE_NOT_CERTIFIED
+    limit: Strauss's reconstruction does not replace independent Biblical or Greek texts.
+  - witness_id: AVJ-WIT-002
+    name: Hebrew Bible
+    witness_class: INDEPENDENT_REVELATORY_TEXTUAL_CORPUS
+    local_role: >
+      Primary witness to creation, command, covenant, election, prophecy, Law, fear of the Lord, repentance, and Messianic hope.
+    documentary_limit: >
+      Source composition, compilation, editorial arrangement, and traditional reading
+      must be distinguished; contradiction does not automatically prove unified intention.
+    study_status: SOURCE_SPECIFIC_RECONSTRUCTION_PENDING
+  - witness_id: AVJ-WIT-003
+    name: Plato
+    witness_class: INDEPENDENT_GREEK_PHILOSOPHIC_WITNESS
+    local_role: >
+      Witness to wonder, autonomous inquiry, nature, virtue, best regime, philosophy, and dramatic political self-knowledge.
+    study_status: PARTIAL_APOLOGY_RECONSTRUCTION_COMPLETE_WIDER_CORPUS_PENDING
+  - witness_id: AVJ-WIT-004
+    name: Aristotle
+    witness_class: INDEPENDENT_GREEK_PHILOSOPHIC_WITNESS
+    local_role: >
+      Witness to nature, magnanimity, human ends, natural right, and the classical hierarchy of lives.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: AVJ-WIT-005
+    name: Socrates
+    witness_class: DISPUTED_PHILOSOPHIC_SUBJECT
+    local_role: >
+      Boundary witness whose examined relation to Delphi and the divine does not simply become Biblical prophecy.
+    study_status: COMPARATIVE_RECONSTRUCTION_PENDING
+  - witness_id: AVJ-WIT-006
+    name: Maimonides
+    witness_class: MEDIEVAL_JEWISH_PHILOSOPHIC_WITNESS
+    local_role: >
+      Principal witness to articulated coexistence of philosophy, Mosaic Torah, prophecy, legal belief, and knowledge.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: AVJ-WIT-007
+    name: Machiavelli
+    witness_class: MODERN_ATTEMPTED_ESCAPE_WITNESS
+    local_role: >
+      Witness to the modern attempt to escape the unresolved alternative through effective truth, human founding, and fortune.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: AVJ-WIT-008
+    name: Nietzsche
+    witness_class: MODERN_ATTEMPTED_SUPERSESSION_WITNESS
+    local_role: >
+      Witness to value creation and a future type claiming to surpass inherited comprehensive horizons.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: AVJ-WIT-009
+    name: Hermann Cohen
+    witness_class: MODERN_RATIONAL_SYNTHESIS_WITNESS
+    local_role: >
+      Witness to reconciliation through autonomous reason, universal morality, and idealization of Jewish sources.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+
+witness_relation_rules:
+  - Biblical and Greek witnesses must be reconstructed independently before comparison.
+  - The Bible must not be treated as a strict single-author book without source analysis.
+  - Plato, Aristotle, and Socrates must not be reduced to a single undifferentiated Athens.
+  - Maimonides must not be forced to anticipate Cohen's rational religion.
+  - Modern syntheses must be tested for transformation rather than accepted by shared vocabulary.
+  - Strauss governs claims about Strauss, not the final truth of Athens or Jerusalem.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-FP-001
+      path: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+      witness: Leo Strauss
+      completion: SEQUENTIAL_AND_CROSS_PROBLEM_RECONSTRUCTION_COMPLETE
+      certification: NOT_CERTIFIED
+  pending:
+    - Hebrew Bible
+    - Plato wider corpus
+    - Aristotle
+    - Socrates comparative witnesses
+    - Maimonides
+    - Machiavelli
+    - Nietzsche
+    - Hermann Cohen
