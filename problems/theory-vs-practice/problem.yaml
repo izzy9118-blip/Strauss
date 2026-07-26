@@ -1,0 +1,101 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: theory-vs-practice
+  canonical_order: 3
+  title: Theory vs. Practice
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+
+source_basis:
+  study_id: SPPP-STUDY-001
+  study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+governing_question: >
+  How can knowledge of ends become a politically effective deed when deliberation,
+  persuasion, authority, execution, institutions, character, and chance remain distinct?
+
+compressed_question: >
+  How does understanding become responsible action?
+
+jurisdiction:
+  owns:
+    - the relation between understanding and action
+    - contemplation and political responsibility
+    - theoretical standards and practical judgment
+    - prudence, execution, correction, and chance
+    - founding, preservation, and indirect guidance
+  does_not_own:
+    - nomos-vs-physis
+    - philosophy-vs-poetry
+    - theologico-political
+    - athens-vs-jerusalem
+    - wise-vs-vulgar
+    - ancients-vs-moderns
+
+permanent_tension: >
+  Political action cannot wait for complete knowledge, but urgency and successful
+  outcomes do not transform opinion into knowledge or effective authority into rightful authority.
+
+boundary:
+  activates_when:
+    - a theoretical judgment must guide action
+    - success is treated as proof of wisdom
+    - authority, legitimacy, and execution are conflated
+    - founding and preservation are treated as the same capacity
+    - chance is ignored in judging prior decisions
+  does_not_activate_by_itself:
+    - every practical task
+    - every policy disagreement
+    - every legal question
+
+relations:
+  - related_problem: nomos-vs-physis
+    relation_type: INTERSECTS
+  - related_problem: philosophy-vs-poetry
+    relation_type: DEPENDS_ON
+  - related_problem: theologico-political
+    relation_type: INTERSECTS
+  - related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+  - related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+
+shared_protocols:
+  required:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+    - audience-and-rhetoric
+
+anti_capture_principle: >
+  Neither theoretical brilliance nor practical success may certify wisdom, legitimacy,
+  or responsible rule without examining ends, means, institutions, correction, and chance.
+
+non_absorption_clause: >
+  This problem owns the general movement from understanding to action and must not
+  absorb the full doctrines of nature, poetry, revelation, rank, or modernity.
+
+termination:
+  state: FOUNDING_SUCCESSOR_DRAFT_CREATED
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - inquiry-profile.yaml
+    - witnesses.yaml
+    - relations.yaml
+    - independent source reconstruction
+    - migration validation
