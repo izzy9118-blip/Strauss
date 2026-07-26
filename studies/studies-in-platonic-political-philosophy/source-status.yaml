@@ -1,0 +1,130 @@
+schema_version: 1.0
+document_type: source_status_record
+
+identity:
+  source_id: SPPP-SOURCE-001
+  canonical_title: Studies in Platonic Political Philosophy
+  author: Leo Strauss
+  publication_year: 1983
+  publisher: University of Chicago Press
+  version: 1.0.0
+
+status:
+  lifecycle: REGISTERED_SOURCE
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  study_relation: studies/studies-in-platonic-political-philosophy/
+
+publication_condition:
+  class: POSTHUMOUS_COLLECTION_ARRANGED_AND_TITLED_BY_STRAUSS
+  literary_executor: Joseph Cropsey
+  foreword_author: Joseph Cropsey
+  introduction_author: Thomas L. Pangle
+  authorial_limits:
+    - Strauss did not complete the intended introduction.
+    - Strauss did not complete the projected essay on Plato's Gorgias.
+    - The essays, notes, and reviews were written on separate occasions before collection.
+  arrangement_rule: >
+    The title and order may be examined as evidence concerning the collection as a
+    whole. The repository may not attribute every transition, silence, numerical
+    pattern, or implication to a single completed authorial design without additional evidence.
+
+source_classes:
+  strauss_essays:
+    class: QUALIFIED_PRIMARY_STRAUSS_SOURCES
+    rule: >
+      Each Strauss essay, note, review, preface, or introductory essay remains a
+      primary witness for Strauss's argument subject to its original date, occasion,
+      audience, publication condition, and independent sequence.
+  cropsey_foreword:
+    class: EDITORIAL_CONTEXT
+    permitted_use:
+      - publication provenance
+      - collection history
+      - bibliographic orientation
+    prohibited_use:
+      - supplying Strauss's missing doctrine
+      - governing the meaning of Strauss's essays
+  pangle_introduction:
+    class: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+    permitted_use:
+      - provisional orientation
+      - bibliographic guidance
+      - questions for testing against primary essays
+    prohibited_use:
+      - substituting for Strauss's intended introduction
+      - deciding Strauss's final doctrine
+      - deciding the truth of Plato, revelation, or the foundational problems
+
+reviewed_witness:
+  local_filename: studies-in-platonic-political-philosophy_compress(1).pdf
+  format: PDF
+  page_count: 263
+  file_size_bytes: 12551057
+  sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+  metadata_title: Studies in Platonic political philosophy
+  metadata_author: Strauss, Leo
+  metadata_creator: Internet Archive
+  metadata_producer: Recoded by LuraDocument PDF v2.68
+  source_condition: SEARCHABLE_TEXT_WITH_LAYOUT_AND_PAGE_IMAGES
+  repository_copy_rule: >
+    This record identifies the reviewed witness but does not reproduce or distribute
+    the source PDF. The study preserves locators, findings, classifications, limits,
+    and unresolved questions.
+
+registered_scope:
+  included:
+    - Joseph Cropsey, Foreword, as editorial provenance only
+    - Thomas L. Pangle, Introduction, as secondary context only
+    - Philosophy as Rigorous Science and Political Philosophy
+    - On Plato's Apology of Socrates and Crito
+    - On the Euthydemus
+    - Preliminary Observations on the Gods in Thucydides' Work
+    - Xenophon's Anabasis
+    - On Natural Law
+    - Jerusalem and Athens
+    - Nietzsche
+    - Notes on Maimonides' Book of Knowledge
+    - Note on Maimonides' Letter on Astrology
+    - Note on Maimonides' Treatise on the Art of Logic
+    - Niccolo Machiavelli
+    - review of C. B. Macpherson, The Political Theory of Possessive Individualism
+    - review of J. L. Talmon, The Nature of Jewish History—Its Universal Significance
+    - Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  excluded_or_deferred:
+    - the missing intended Strauss introduction
+    - the missing projected essay on Plato's Gorgias
+    - independent reconstruction of every non-Strauss primary author
+
+independent_witness_rule: >
+  Strauss's interpretation does not replace the independent surviving works,
+  historical records, source traditions, editions, or documentary conditions of the
+  authors and subjects he interprets. Collection-level synthesis may orient but may
+  not force later primary-text studies to confirm it.
+
+evidence_rules:
+  - rule_id: SPPP-SR-001
+    rule: Distinguish Strauss's explicit statement from supported inference and unresolved question.
+  - rule_id: SPPP-SR-002
+    rule: Distinguish an essay's original occasion from its later placement in the collection.
+  - rule_id: SPPP-SR-003
+    rule: Distinguish a speaker, character, narrator, quoted source, or reviewed author from Strauss.
+  - rule_id: SPPP-SR-004
+    rule: Distinguish political efficacy, legal authority, historical causation, and philosophical or theological truth.
+  - rule_id: SPPP-SR-005
+    rule: Distinguish civic gods and poetic theology from genuine revelation and divine law.
+  - rule_id: SPPP-SR-006
+    rule: Distinguish legal or practical presumption from demonstration.
+  - rule_id: SPPP-SR-007
+    rule: Distinguish structural evidence from demonstrated deliberate authorial intention.
+  - rule_id: SPPP-SR-008
+    rule: Preserve source-composition uncertainty and assign intention to the correct documentary layer.
+
+termination:
+  source_state: REGISTERED_FOR_COMPLETED_PROVISIONAL_STUDY
+  study_completion: COMPLETE
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - edition and page-locator verification where later precision is required
+    - independent primary-text reconstruction of non-Strauss witnesses
+    - problem-specific migration transactions before constitutional activation
