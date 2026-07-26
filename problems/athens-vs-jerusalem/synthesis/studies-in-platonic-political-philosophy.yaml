@@ -1,0 +1,54 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVJ-SPPP-001
+  problem: athens-vs-jerusalem
+  source_study: SPPP-STUDY-001
+  title: Athens vs. Jerusalem — Studies in Platonic Political Philosophy
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+  cross_problem_synthesis: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+
+strict_problem: >
+  Can the orientations beginning from wonder, nature, and autonomous understanding
+  and from fear of the Lord, creation, command, and obedient love be reconciled
+  without transforming one into the other?
+
+principal_findings:
+  - Both Athens and Jerusalem claim wisdom in the highest sense.
+  - Jerusalem begins through hearing; Athens begins through seeing and questioning.
+  - Biblical creation and Greek nature are different accounts of the whole.
+  - Divine Law and natural excellence are not identical standards.
+  - Prophet and philosopher possess different forms of authority and recognition problems.
+  - Biblical universalism is borne by a particular people; philosophic inquiry may appear through individuals.
+  - The Messianic age and the best regime are not interchangeable.
+  - Maimonides preserves the alternatives under Law; Machiavelli seeks escape; Nietzsche seeks creation; Cohen rationalizes Jerusalem.
+
+unresolved_questions:
+  - whether the two highest orientations can be reconciled without transformation
+  - whether historical intertwining supplies philosophical mediation
+  - whether reason can refute revelation or revelation can bind philosophy without proof
+
+jurisdiction_limits:
+  - The strict authority conflict remains under The Theologico-Political Problem.
+  - Poetry and dramatic form remain under Philosophy vs. Poetry.
+  - The collection does not replace independent Greek or Biblical reconstruction.
+
+termination:
+  synthesis_state: COMPLETE_FOR_REGISTERED_COLLECTION
+  certification: NOT_CERTIFIED
+  remaining_work:
+    - independent Greek witness reconstruction
+    - independent Biblical witness reconstruction
+    - complete successor subordinate records
+    - migration validation
