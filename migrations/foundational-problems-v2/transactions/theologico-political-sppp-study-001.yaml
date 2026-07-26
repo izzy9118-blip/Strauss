@@ -1,0 +1,274 @@
+schema_version: 1.0
+document_type: successor_reconciliation_transaction
+
+identity:
+  transaction_id: TP-SPPP-RECON-001
+  title: >
+    The Theologico-Political Problem — Reconciliation of SPPP-STUDY-001
+    with the Active Nineteen-Source Predecessor
+  version: 1.0.0
+
+status:
+  lifecycle: IMPLEMENTED_PROVISIONAL_RECONCILIATION
+  certification: NOT_CERTIFIED
+  activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  successor_activation_effect: NONE
+
+ authority:
+  migration_constitution: migrations/foundational-problems-v2/migration.yaml
+  architecture_constitution: governance/foundational-problem-architecture.yaml
+  predecessor_transaction_set: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+  successor_problem: problems/theologico-political/problem.yaml
+  active_predecessor: problems/theologico-political.yaml
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+
+source_identity:
+  active_predecessor:
+    identifier: STR-PROBLEM-002
+    version: 1.1
+    source_count: 19
+    path: problems/theologico-political.yaml
+    blob_sha: 4a35e71916212082598097985deb23699c0018e7
+    governing_commit: 7a25b1fa3a7660a93318892342df57f661247b0d
+  preserved_reconstruction:
+    synthesis_id: TP-SYN-001
+    path: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+    blob_sha: bd99ed9604e0139331fefb5868d37dfd271bc66b
+  new_collection_study:
+    study_id: SPPP-STUDY-001
+    reconstruction_id: SPPP-TP-001
+    source_id: SPPP-SOURCE-001
+    strict_reconstruction: studies/studies-in-platonic-political-philosophy/theologico-political-reconstruction.yaml
+    reconstruction_blob_sha: e2cbe376ba76478e2568f9d0a9a42956cc280fe3
+    source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+    integration_commit: ba0b53e6103cba6492655a26c7a9ec88ce801527
+    publication_condition: POSTHUMOUS_COLLECTION_ARRANGED_AND_TITLED_BY_STRAUSS
+    certification: NOT_CERTIFIED
+
+reconciliation_rule: >
+  SPPP-STUDY-001 extends, tests, sharpens, and qualifies the active predecessor.
+  It does not replace the nineteen-source reconstruction, convert collection-level
+  synthesis into independent primary-text evidence, or authorize successor
+  certification or activation. Confirmed propositions remain accepted migration
+  material; new formulations become provisional successor evidence; disagreements
+  and uncompleted source-specific burdens remain explicit.
+
+controlled_outcomes:
+  - CONFIRMS
+  - SHARPENS
+  - EXTENDS
+  - QUALIFIES
+  - PRESERVES_UNRESOLVED
+  - DEFERS_TO_INDEPENDENT_RECONSTRUCTION
+
+reconciliation_items:
+  - item_id: TP-SPPP-R001
+    predecessor_reference: governing_reconstruction and primary_alternatives
+    collection_reference: strict_definition and primary_alternatives
+    outcome: SHARPENS
+    disposition: RETAIN
+    transformation_mode: REVISED
+    destination: problems/theologico-political/problem.yaml governing question and permanent tension
+    finding: >
+      Both records define the problem as the unresolved confrontation between
+      philosophic inquiry and revealed divine law. SPPP sharpens revelation as
+      obedient response to a free God who creates, commands, and judges, and sharpens
+      the political dimension as jurisdiction that must operate before final truth is decided.
+    unresolved_overlap: Athens vs. Jerusalem retains the complete rival ways of life.
+    implementation_status: ALREADY_SUBSTANTIALLY_PRESENT_IN_SUCCESSOR
+
+  - item_id: TP-SPPP-R002
+    predecessor_reference: primary_alternatives.revealed_divine_law
+    collection_reference: what_counts_as_revelation
+    outcome: EXTENDS
+    disposition: RETAIN
+    transformation_mode: REVISED
+    destination: problems/theologico-political/inquiry-profile.yaml revelation claimant tests
+    finding: >
+      Genuine revelation in strict form includes free divine action, creation,
+      historical communication, command, prophecy, covenant, sacred law, obedience,
+      judgment, repentance, promise, and redemption. Civic gods, poetic theology,
+      ritual efficacy, political usefulness, identity, and moral symbolism do not
+      establish revelation by themselves.
+    unresolved_overlap: Philosophy vs. Poetry owns poetic theology as a human form of representation.
+    implementation_status: SUCCESSOR_OPERATIONAL_UPDATE_PENDING
+
+  - item_id: TP-SPPP-R003
+    predecessor_reference: original confrontation and political mediation
+    collection_reference: civic_theology_distinction
+    outcome: SHARPENS
+    disposition: RETAIN
+    transformation_mode: DIVIDED
+    destination: problems/theologico-political/problem.yaml boundary and problems/theologico-political/relations.yaml
+    finding: >
+      Civic theology may restrain crime, strengthen oaths, legitimate office, and
+      support solidarity without proving divine origin. Political manipulation of
+      religion does not prove that every revelation is fraudulent.
+    unresolved_overlap: Brother-problem coactivation remains mandatory where poetic gods and divine authority meet.
+    implementation_status: SUBSTANTIALLY_PRESENT
+
+  - item_id: TP-SPPP-R004
+    predecessor_reference: political_mediation
+    collection_reference: why_the_problem_is_political and permanent_triad
+    outcome: SHARPENS
+    disposition: RETAIN
+    transformation_mode: REVISED
+    destination: problems/theologico-political/inquiry-profile.yaml political necessity tests
+    finding: >
+      Truth, authority, and political necessity are distinct. Political society must
+      legislate, educate, regulate worship, punish, defend, and govern speech, but its
+      need to decide cannot transform public judgment into philosophic or theological knowledge.
+    unresolved_overlap: Theory vs. Practice owns the general relation between knowledge and action.
+    implementation_status: SUCCESSOR_OPERATIONAL_UPDATE_PENDING
+
+  - item_id: TP-SPPP-R005
+    predecessor_reference: central_epistemic_result
+    collection_reference: why_philosophy_cannot_simply_disprove_revelation and why_nonrefutation_does_not_prove_revelation
+    outcome: CONFIRMS
+    disposition: RETAIN
+    transformation_mode: CONSOLIDATED
+    destination: problems/theologico-political/problem.yaml unresolved relation and anti-resolution floor
+    finding: >
+      Philosophy's failure to demonstrate revelation impossible does not prove a
+      particular revelation true. Revelation's authority claim does not constitute
+      philosophic proof. Rival revelations and rival philosophical accounts remain
+      independently examinable.
+    unresolved_overlap: none
+    implementation_status: PRESENT_IN_SUCCESSOR
+
+  - item_id: TP-SPPP-R006
+    predecessor_reference: political and legal mediations
+    collection_reference: natural_and_divine_law
+    outcome: EXTENDS
+    disposition: RETAIN
+    transformation_mode: REVISED
+    destination: problems/theologico-political/inquiry-profile.yaml law distinctions
+    finding: >
+      Human positive law, natural law or natural right, divine positive law, and
+      eternal law must remain distinct where their frameworks are active. The problem
+      is not exhausted by a binary choice between state command and private conscience.
+    unresolved_overlap: Nomos vs. Physis owns the general distinction between nature and law.
+    implementation_status: SUCCESSOR_OPERATIONAL_UPDATE_PENDING
+
+  - item_id: TP-SPPP-R007
+    predecessor_reference: modern_attempts_at_resolution and guarded interpretation
+    collection_reference: maimonidean_mediation
+    outcome: EXTENDS
+    disposition: TRANSFER
+    transformation_mode: REVISED
+    destination: problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml
+    finding: >
+      The collection presents Maimonides as preserving articulated differences among
+      demonstrated knowledge, legally binding belief, ordinary prophecy, Mosaic Law,
+      legal presumption, and practice rather than erasing their heterogeneity.
+    unresolved_overlap: Independent Maimonides reconstruction remains mandatory.
+    implementation_status: IMPLEMENTED_AS_PROVISIONAL_SOURCE_SYNTHESIS
+
+  - item_id: TP-SPPP-R008
+    predecessor_reference: modern critique and political mediation
+    collection_reference: machiavellian_politicization
+    outcome: SHARPENS
+    disposition: TRANSFER
+    transformation_mode: REVISED
+    destination: problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml
+    finding: >
+      Machiavelli subordinates religion to civil theology and political usefulness,
+      producing unequal public and elite relations to belief. Political genealogy
+      and use do not demonstrate authentic revelation impossible.
+    unresolved_overlap: Independent Machiavelli reconstruction and Ancients vs. Moderns remain active requirements.
+    implementation_status: IMPLEMENTED_AS_PROVISIONAL_SOURCE_SYNTHESIS
+
+  - item_id: TP-SPPP-R009
+    predecessor_reference: Cohenian rationalization
+    collection_reference: cohenian_rationalization
+    outcome: SHARPENS
+    disposition: TRANSFER
+    transformation_mode: REVISED
+    destination: problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml
+    finding: >
+      Cohen's reconciliation preserves moral seriousness by transforming historical
+      revelation into rational moral constitution, symbolism, and endless progress.
+      The harmony is not treated as preserving revelation unchanged.
+    unresolved_overlap: Independent Cohen reconstruction remains mandatory.
+    implementation_status: IMPLEMENTED_AS_PROVISIONAL_SOURCE_SYNTHESIS
+
+  - item_id: TP-SPPP-R010
+    predecessor_reference: hermeneutic_findings
+    collection_reference: permanent_triad, collection method, and source-status record
+    outcome: CONFIRMS
+    disposition: ELEVATE
+    transformation_mode: REFERENCE_ONLY
+    destination: protocols/source-status.yaml; protocols/inference-discipline.yaml; protocols/speech-and-deed.yaml
+    finding: >
+      Speaker, audience, occasion, documentary layer, source use, omission, action,
+      outcome, and evidentiary status must be distinguished. Structural evidence does
+      not automatically prove deliberate hidden intention.
+    unresolved_overlap: Shared protocol revision must remain general and not reproduce problem doctrine.
+    implementation_status: SHARED_PROTOCOL_REVIEW_PENDING
+
+  - item_id: TP-SPPP-R011
+    predecessor_reference: permanent remainder
+    collection_reference: strict_nonresolution
+    outcome: CONFIRMS
+    disposition: RETAIN
+    transformation_mode: REVISED
+    destination: problems/theologico-political/problem.yaml termination and nonresolution
+    finding: >
+      Philosophy cannot surrender autonomous inquiry to an unexamined authority;
+      revelation cannot surrender divine sovereignty to autonomous reason without
+      ceasing to be revelation; political society cannot wait for final resolution.
+    unresolved_overlap: none
+    implementation_status: PRESENT_IN_SUCCESSOR
+
+  - item_id: TP-SPPP-R012
+    predecessor_reference: nineteen-source source basis
+    collection_reference: collection publication condition and remaining requirements
+    outcome: PRESERVES_UNRESOLVED
+    disposition: PRESERVE_HISTORICALLY
+    transformation_mode: REFERENCE_ONLY
+    destination: active predecessor, historical copy, witness registry, and this transaction
+    finding: >
+      The collection does not complete source-specific reconstruction of the nineteen
+      predecessor sources or independent Biblical, Platonic, Maimonidean, Machiavellian,
+      Cohenian, Spinozist, Hobbesian, Freudian, or historicist witnesses.
+    unresolved_overlap: All named independent reconstruction requirements remain open.
+    implementation_status: PRESERVED
+
+implemented_registry_actions:
+  - problem: philosophy-vs-poetry
+    path: problems/philosophy-vs-poetry/witnesses.yaml
+    version: 0.2.0
+    commit: 3f5397f43485d580c16b52cacb00dfa8420c62fb
+    effect: Registered SPPP-STUDY-001 and PLATO-APOLOGY-PVP-TP-001 without certification.
+  - problem: theologico-political
+    path: problems/theologico-political/witnesses.yaml
+    version: 0.2.0
+    commit: 602816fbc5a62290830b853912dd662a13772b8d
+    effect: Registered the collection and Apology studies while preserving all predecessor and independent-witness burdens.
+
+preserved_limits:
+  - The active predecessor remains untouched and authoritative pending certified migration.
+  - The exact historical predecessor copy remains unchanged.
+  - SPPP-STUDY-001 is provisional and not certified.
+  - The collection's missing intended introduction and Gorgias essay remain missing.
+  - Pangle's Introduction remains secondary; Cropsey's Foreword remains editorial provenance.
+  - Poetry is not revelation and civic theology is not revelation.
+  - Critique of civic religion is not proof against revelation.
+  - Philosophy's inability to refute revelation is not proof of a particular revelation.
+  - Independent primary-text studies may correct or contradict the collection reconstruction.
+  - No successor activation or certification is authorized.
+
+termination:
+  reconciliation_state: PROVISIONAL_DOCUMENTED_RECONCILIATION_COMPLETE
+  certification: NOT_CERTIFIED
+  activation: NOT_AUTHORIZED
+  completed_actions:
+    - SPPP-STUDY-001 registered in both brother-problem witness registries
+    - collection findings compared with the nineteen-source predecessor reconstruction
+    - confirmations, sharpenings, extensions, qualifications, and unresolved burdens classified
+  next_required_actions:
+    - implement pending operational refinements only through explicit successor updates
+    - carry common evidence into the five pending foundational problem successors
+    - review and revise the shared speech-and-deed protocol without creating an eighth problem
+    - validate paths, identifiers, controlled values, YAML, provenance, and non-duplication
