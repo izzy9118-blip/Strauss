@@ -1,0 +1,391 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: wise-vs-vulgar
+  title: The Wise vs. The Vulgar — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/wise-vs-vulgar/problem.yaml
+  inquiry_profile_reference: problems/wise-vs-vulgar/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  predecessor_index_reference: migrations/foundational-problems-v2/predecessor-index.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry records witnesses, claimant classes, source conditions, and local
+    limits without certifying wisdom or replacing proposition-level redistribution of
+    accepted predecessor material.
+
+predecessor_source_basis:
+  active_predecessor:
+    path: problems/wise-and-vulgar.yaml
+    version: 0.1-discussion
+    blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+  accepted_migration_source:
+    identifier: WVG-RECONSTRUCTION-0.2
+    path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
+    status: ACCEPTED_FOR_REDISTRIBUTION_NOT_YET_CANONICAL
+  rule: >
+    The accepted source orients witness registration but remains immutable and requires
+    proposition-level dispositions before successor activation.
+
+source_status_rules:
+  - rule_id: WVG-WSR-001
+    rule: >
+      Self-description, title, office, credential, reputation, persecution narrative,
+      election claim, institutional recognition, and later influence are evidence of a
+      claim to rank, not automatic evidence of wisdom.
+  - rule_id: WVG-WSR-002
+    rule: >
+      Philosophical dialogue, comedy, historical narrative, memoir, legal record,
+      prophecy, scholarship, institutional output, and editorial framing are distinct
+      source types and must not be treated as interchangeable.
+  - rule_id: WVG-WSR-003
+    rule: >
+      Studies in Platonic Political Philosophy is a posthumous collection of qualified
+      primary Strauss sources; Pangle's introduction remains secondary context.
+  - rule_id: WVG-WSR-004
+    rule: >
+      Plato, Xenophon, Aristophanes, Biblical and prophetic texts, Maimonides,
+      Machiavelli, Nietzsche, and other claimants must be reconstructed independently
+      before comparative ranking.
+  - rule_id: WVG-WSR-005
+    rule: >
+      Agreement with the repository, obscurity, complexity, hidden teaching, or
+      possession of privileged evidence does not certify the claimant.
+  - rule_id: WVG-WSR-006
+    rule: >
+      Ordinary citizens, believers, soldiers, workers, parents, and political actors
+      must not be reduced to stupidity or moral worthlessness merely because their
+      orientation rests partly on opinion.
+
+principal_witnesses:
+  - witness_id: WVG-WIT-001
+    name: Leo Strauss
+    witness_class: PRIMARY_MODERN_INTERPRETIVE_AND_PHILOSOPHIC_WITNESS
+    local_role: >
+      Governing modern witness for reconstructing the recognition problem, human
+      heterogeneity, differentiated education, philosophy's political dependence,
+      counterfeit elites, and disciplined non-certification of wisdom.
+    documentary_standing:
+      authority: PRIMARY_FOR_STRAUSS_INTERPRETATION
+      limit: >
+        Strauss governs claims about his own argument and reading, not the final rank
+        of Plato, Xenophon, Aristophanes, Socrates, prophets, scholars, rulers, or wisdom itself.
+    registered_sources:
+      - source_id: WVG-STR-SRC-001
+        title: Studies in Platonic Political Philosophy
+        publication_condition: POSTHUMOUS_COLLECTION_ARRANGED_AND_TITLED_BY_STRAUSS
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+        completed_study_record: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+        synthesis_record: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_id: SPPP-STUDY-001
+        study_status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
+      - source_id: WVG-STR-SRC-002
+        title: The Rebirth of Classical Political Rationalism
+        source_class: QUALIFIED_STRAUSS_COLLECTION_REQUIRING_ITEM_LEVEL_STATUS
+        local_function: >
+          Major source basis for the accepted predecessor reconstruction concerning
+          philosophy, scholarship, rhetoric, revelation, political society, and modern rationalism.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+      - source_id: WVG-STR-SRC-003
+        title: The City and Man
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Major witness concerning Socrates, city, philosophy, political opinion,
+          classical authors, and the limits of political recognition.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+      - source_id: WVG-STR-SRC-004
+        title: Socrates and Aristophanes
+        source_class: AUTHOR_PUBLISHED_PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Founding witness concerning the young Socrates, poetic accusation,
+          self-knowledge, prudence, knowledge of souls, and mature Socratic correction.
+        completed_study_record: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
+        study_status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
+    claimant_status: INTERPRETER_AND_PHILOSOPHIC_CLAIMANT_REQUIRING_TEST
+    anti_capture_rule: >
+      Strauss's authority as interpreter does not permit modesty, obscurity, influence,
+      or repository centrality to become concealed certification as wise.
+
+  - witness_id: WVG-WIT-002
+    name: Plato
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_AND_DRAMATIC_WITNESS
+    local_role: >
+      Principal witness concerning Socrates, philosopher and city, sophistry,
+      rhetoric, education, philosopher-rule, law, eros, audience, and the dramatic
+      recognition or misrecognition of wisdom.
+    required_source_domains:
+      - Apology
+      - Republic
+      - Gorgias
+      - Euthydemus
+      - Phaedrus
+      - Symposium
+      - Laws
+      - other relevant dialogues
+    documentary_limit: >
+      Socratic speech is not automatically Plato's final doctrine. Dramatic action,
+      interlocutors, audience, silence, and compositional deed must be reconstructed.
+    independence_rule: >
+      Reconstruct Plato before allowing Strauss, Xenophon, Aristophanes, or later
+      philosophical institutions to govern the result.
+    study_status: INDEPENDENT_PLATONIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-003
+    name: Xenophon
+    witness_class: INDEPENDENT_SOCRATIC_HISTORICAL_AND_PRACTICAL_WITNESS
+    local_role: >
+      Principal witness concerning Socratic prudence, lawfulness, differentiated
+      conversation, leadership, household, command, friendship, education, and practical character.
+    required_source_domains:
+      - Memorabilia
+      - Oeconomicus
+      - Symposium
+      - Apology
+      - Anabasis
+      - Hiero
+      - other relevant works
+    documentary_limit: >
+      Prima facie historical standing does not eliminate literary mediation,
+      selection, structural silence, or differences among Xenophon's works.
+    independence_rule: >
+      Reconstruct Xenophon independently before Platonic, Aristophanic, or Straussian comparison.
+    study_status: INDEPENDENT_XENOPHONTIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-004
+    name: Aristophanes
+    witness_class: INDEPENDENT_POETIC_CLAIMANT_AND_CRITIC
+    local_role: >
+      Principal poetic witness to the young Socrates and to philosophy's possible
+      ignorance of souls, eros, music, audience, family, political dependence, and consequence.
+    required_source_domains:
+      - surviving comedies in their own dramatic order
+    documentary_limit: >
+      Character speech, chorus judgment, ridicule, and dramatic victory are not
+      transparent authorial doctrine. Laughter does not certify rank.
+    independence_rule: >
+      Reconstruct Aristophanes independently rather than as spokesman for vulgar Athens.
+    study_status: INDEPENDENT_ARISTOPHANIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-005
+    name: Socrates
+    witness_class: DISPUTED_SUBJECT_AND_PHILOSOPHIC_CLAIMANT
+    local_role: >
+      Central disputed subject represented as natural philosopher, sophist, citizen,
+      examiner, teacher, erotic guide, law-abiding defendant, and political philosopher.
+    documentary_standing:
+      authority: NO_DIRECT_SURVIVING_AUTHORIAL_CORPUS
+      representation_channels:
+        - Aristophanes
+        - Plato
+        - Xenophon
+        - later ancient witnesses
+        - Leo Strauss
+    documentary_limit: >
+      Historical Socrates, young Aristophanic Socrates, and mature Platonic-Xenophontic
+      Socrates may not be silently identified or separated.
+    study_status: COMPARATIVE_WITNESS_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-006
+    name: Biblical and prophetic claimants
+    witness_class: INDEPENDENT_REVELATORY_CLAIMANT_LINE
+    local_role: >
+      Presents divine election, prophecy, command, Law, obedience, and sacred authority
+      as grounds of rank distinct from autonomous philosophic examination.
+    principal_textual_domains:
+      - Torah
+      - Biblical prophecy
+      - relevant narrative and legal texts
+    documentary_limit: >
+      The registry does not certify divine origin. Genuine prophecy must be
+      distinguished from fraud, poetry, political office, private certainty, and interpretation.
+    independence_rule: >
+      Reconstruct primary revelatory texts before philosophical or Straussian synthesis.
+    study_status: INDEPENDENT_BIBLICAL_AND_PROPHETIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-007
+    name: Maimonides
+    witness_class: INDEPENDENT_MEDIEVAL_PHILOSOPHIC_JURISPRUDENTIAL_CLAIMANT
+    local_role: >
+      Major witness concerning philosopher, prophet, jurist, scholar, believer,
+      knowledge, legally binding belief, guarded writing, differentiated education,
+      Mosaic authority, and ordinary prophecy.
+    required_source_domains:
+      - Guide of the Perplexed
+      - Mishneh Torah and Book of Knowledge
+      - Treatise on the Art of Logic
+      - relevant letters and legal writings
+    documentary_limit: >
+      Legal presumption, practical dogma, philosophical knowledge, and prophetic rank
+      must remain distinct. Strauss's notes do not replace Maimonides.
+    study_status: INDEPENDENT_MAIMONIDEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-008
+    name: Niccolo Machiavelli
+    witness_class: INDEPENDENT_MODERN_POLITICAL_PHILOSOPHIC_CLAIMANT
+    local_role: >
+      Major witness concerning founder, prince, legislator, captain, people, elite,
+      religion, reputation, effectual truth, and the political use or manufacture of authority.
+    required_source_domains:
+      - The Prince
+      - Discourses on Livy
+      - other relevant works
+    documentary_limit: >
+      Political success, founding power, secrecy, and effective rule do not certify wisdom or justice.
+    study_status: INDEPENDENT_MACHIAVELLIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-009
+    name: Friedrich Nietzsche
+    witness_class: INDEPENDENT_GENEALOGICAL_AND_RANK_CLAIMANT
+    local_role: >
+      Major witness concerning rank, herd, philosopher of the future, genealogy,
+      value creation, great thinker, decadence, and the authority of exceptional creators.
+    documentary_limit: >
+      Extraordinary originality, diagnosis, suffering, or value creation does not
+      certify justice, political responsibility, self-knowledge, or rightful rule.
+    independence_rule: >
+      Reconstruct Nietzsche's strongest rank argument rather than reducing it to elitism or relativism.
+    study_status: INDEPENDENT_NIETZSCHEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-010
+    name: Political society and ordinary citizens
+    witness_class: POLITICAL_RECOGNITION_BODY_NOT_SELF_INTERPRETING
+    local_role: >
+      Supplies authoritative opinion, law, civic virtue, education, offices, juries,
+      assemblies, institutions, and public judgments through which claimants are
+      recognized, tolerated, employed, honored, rejected, or punished.
+    documentary_limit: >
+      Political authority is not wisdom, but ordinary judgment is not mere stupidity.
+      The city may possess rational grounds for concern while remaining unable to identify philosophy reliably.
+    study_status: CASE_SPECIFIC_POLITICAL_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-011
+    name: Scholars, experts, professions, and institutions
+    witness_class: COMPOSITE_INTELLECTUAL_AND_TECHNICAL_CLAIMANT_LINE
+    local_role: >
+      Preserves texts, languages, methods, evidence, techniques, education, and public
+      functions while creating titles, credentials, specialties, incentives, and possible capture.
+    documentary_limit: >
+      Exact scholarship and expertise are indispensable within domains but do not
+      establish comprehensive wisdom, justice, the human good, or political legitimacy.
+    study_status: CASE_AND_INSTITUTION_SPECIFIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-WIT-012
+    name: Artificial intelligence systems and documentary repositories
+    witness_class: EMERGENT_MEDIATING_AND_CLAIMANT_INFRASTRUCTURE
+    local_role: >
+      Stores, retrieves, classifies, synthesizes, and presents evidence and may mediate
+      inquiry, education, interpretation, and institutional decision.
+    documentary_limit: >
+      Scale, memory, speed, consistency, validation, or access to sources does not
+      establish understanding of the whole, practical wisdom, truthfulness, or responsibility.
+    governing_rule: >
+      The system and repository must remain auditable, source-grounded, uncertainty-preserving,
+      corrigible, and prohibited from self-certification as wise.
+    study_status: CONTINUING_GOVERNANCE_AND_EMPIRICAL_EVALUATION_REQUIRED
+
+contextual_and_editorial_witnesses:
+  - witness_id: WVG-CXT-001
+    name: Thomas L. Pangle
+    witness_class: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+    source_relation: Introduction to Studies in Platonic Political Philosophy
+    permitted_role: >
+      Bibliographic orientation and provisional questions to test against Strauss's primary texts.
+    prohibited_role: >
+      Supplying Strauss's missing introduction or certifying the rank of philosophy,
+      poetry, revelation, scholars, rulers, or Socrates.
+
+witness_relation_rules:
+  independent_reconstruction_rule: >
+    Every claimant line must be reconstructed on its own terms before comparative ranking.
+  non_confirmation_rule: >
+    No witness may be forced to confirm the accepted predecessor, SPPP-STUDY-001, or a
+    predetermined hierarchy. Contradiction and dissent remain visible.
+  no_majority_rule: >
+    Agreement among witnesses or popularity among audiences does not mechanically establish wisdom.
+  no_title_rule: >
+    Philosopher, prophet, scholar, expert, ruler, officeholder, institution, and AI are
+    claimant titles whose demonstrated activities and limits must be tested.
+  no_persecution_rule: >
+    Persecution, exclusion, suffering, ridicule, martyrdom, or marginality does not certify truth.
+  no_capture_rule: >
+    Control of evidence, credentials, interpretation, admission, secrecy, or repository
+    access must not immunize a claimant from correction.
+  jurisdiction_rule: >
+    Substantive poetic rivalry remains Philosophy vs. Poetry; practical rule remains
+    Theory vs. Practice; revelation remains Theologico-Political; comprehensive ways
+    remain Athens vs. Jerusalem; modern elite transformations remain Ancients vs. Moderns.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-STUDY-001
+      witness: Leo Strauss
+      source: Studies in Platonic Political Philosophy
+      path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+      local_synthesis: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+      completion: COMPLETE_FOR_REGISTERED_COLLECTION
+      certification: NOT_CERTIFIED
+    - study_id: PVP-STUDY-001
+      witness: Leo Strauss
+      source: Socrates and Aristophanes
+      path: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
+      local_status: COFOUNDATIONAL_RELEVANCE_COMPLETE_NOT_CERTIFIED
+  accepted_predecessor:
+    - identifier: WVG-RECONSTRUCTION-0.2
+      path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+      status: ACCEPTED_FOR_REDISTRIBUTION_NOT_YET_CANONICAL
+  pending:
+    - proposition-level redistribution of accepted predecessor material
+    - complete Strauss source-specific reconstruction
+    - independent Plato reconstruction
+    - independent Xenophon reconstruction
+    - independent Aristophanes reconstruction
+    - comparative Socrates reconstruction
+    - independent Biblical and prophetic reconstruction
+    - independent Maimonides reconstruction
+    - independent Machiavelli reconstruction
+    - independent Nietzsche reconstruction
+    - political, scholarly, expert, institutional, and AI case studies
+
+migration_safeguards:
+  migration_status:
+    lifecycle: CLASSIFICATION_AND_REDISTRIBUTION_PENDING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This registry is a subordinate successor record. It does not replace or classify
+    predecessor material, certify any claimant, convert pending studies into evidence,
+    or authorize deletion, retrospective revision, or activation.
+  prohibitions:
+    - no silent deletion of a witness or claimant class
+    - no title, office, success, suffering, secrecy, or expertise treated as certification
+    - no ordinary citizen reduced to moral worthlessness
+    - no differentiated education presumed innocent or manipulative without evidence
+    - no AI or repository self-certification
+    - no predecessor redistribution bypassed
+    - no certification from registry validity alone
+
+termination:
+  registry_state: FOUNDING_WITNESS_REGISTRY_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - principal philosophical, poetic, revelatory, political, scholarly, and emergent claimants are distinct
+    - completed, accepted, and pending study states are distinguished
+    - title, office, persecution, success, and secrecy cannot certify wisdom
+    - ordinary decency and human heterogeneity remain jointly visible
+    - predecessor redistribution remains explicit
+  current_limit: >
+    Structural witness registration is complete for founding production. Proposition-level
+    redistribution and independent witness reconstruction remain pending.
