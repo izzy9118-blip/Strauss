@@ -1,0 +1,126 @@
+schema_version: 1.0
+document_type: foundational_problem_predecessor_index
+
+identity:
+  migration_id: foundational-problems-v2
+  title: Foundational Problems v2 Predecessor Index
+  version: 1.0.0
+
+status:
+  lifecycle: ACTIVE_MIGRATION_RECORD
+  certification: NOT_CERTIFIED
+  activation: PHASE_2_SOURCE_PRESERVATION
+
+governed_by:
+  migration_constitution: migrations/foundational-problems-v2/migration.yaml
+  architecture_constitution: governance/foundational-problem-architecture.yaml
+
+purpose: >
+  Identify and preserve the predecessor problem objects and accepted migration
+  sources from which the seven-problem architecture is being constructed.
+  This index records identity, version, path, content hash, governing commit,
+  status, and successor relation without modifying the indexed sources.
+
+preservation_rule: >
+  Predecessor objects remain recoverable and must not be retrospectively
+  rewritten. An accepted migration source remains immutable after indexing.
+  Successor objects are derived through explicit migration transactions rather
+  than silent replacement.
+
+records:
+  - predecessor_record_id: FPV2-PRED-001
+    canonical_key: theologico-political
+    identifier: STR-PROBLEM-002
+    title: The Theologico-Political Problem
+    version: 1.1
+    source_class: ACTIVE_PREDECESSOR
+    repository_path: problems/theologico-political.yaml
+    blob_sha: 4a35e71916212082598097985deb23699c0018e7
+    governing_commit: 7a25b1fa3a7660a93318892342df57f661247b0d
+    governing_commit_message: Activate Theologico-Political Problem v1.1
+    recoverability:
+      active_path_present: true
+      content_addressed: true
+      repository_history_present: true
+      explicit_historical_copy_required_before_removal: true
+    successor:
+      canonical_key: theologico-political
+      path: problems/theologico-political/problem.yaml
+      status: NOT_YET_CREATED
+    migration_status: PRESERVED_AND_INDEXED
+
+  - predecessor_record_id: FPV2-PRED-002
+    canonical_key: wise-vs-vulgar
+    identifier: STR-PROBLEM-003
+    title: The Wise and the Vulgar — The Few and the Many
+    version: 0.1-discussion
+    source_class: ACTIVE_PREDECESSOR
+    repository_path: problems/wise-and-vulgar.yaml
+    blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+    governing_commit: 87566602c95d7a2b2f81a35f4bcf0de764eec140
+    governing_commit_message: Add foundational problem: Wise and Vulgar
+    recoverability:
+      active_path_present: true
+      content_addressed: true
+      repository_history_present: true
+      explicit_historical_copy_required_before_removal: true
+    successor:
+      canonical_key: wise-vs-vulgar
+      path: problems/wise-vs-vulgar/problem.yaml
+      status: NOT_YET_CREATED
+    migration_status: PRESERVED_AND_INDEXED
+
+  - predecessor_record_id: FPV2-SOURCE-001
+    canonical_key: wise-vs-vulgar
+    identifier: WVG-RECONSTRUCTION-0.2
+    title: The Wise and the Vulgar — The Few and the Many
+    version: 0.2-reconstruction-draft
+    source_class: ACCEPTED_IMMUTABLE_MIGRATION_SOURCE
+    original_source_name: wise-and-vulgar-v0.2-reconstruction-draft.yaml
+    preserved_path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
+    sha256: 167d9b974a519f14019bb59331f3373020d38b327fabf0607bebe421edd38453
+    byte_count: 42612
+    line_count: 682
+    preservation_commit: d273d1367315dcb763bc8e218547788bbca0d482
+    preservation_commit_message: Preserve accepted Wise vs Vulgar reconstruction
+    acceptance_status: >
+      Accepted as the complete migration source for redistribution. It is not
+      an active successor problem object and is not certified as a final
+      constitutional formulation.
+    immutability_rule: >
+      This preserved file must not be edited in place. Corrections or later
+      reconstructions require a new version and a new preservation record.
+    derivation_rule: >
+      Every retained, transferred, elevated, historically preserved, or
+      rejected item derived from this source must be represented by a migration
+      transaction that points back to this record.
+    recoverability:
+      preserved_path_present: true
+      content_addressed: true
+      cryptographic_hash_recorded: true
+      preservation_commit_recorded: true
+    successor:
+      canonical_key: wise-vs-vulgar
+      path: problems/wise-vs-vulgar/problem.yaml
+      status: NOT_YET_CREATED
+    migration_status: MATERIALIZED_AND_INDEXED
+
+phase_2_assessment:
+  phase: PRESERVE_SOURCES
+  completed_actions:
+    - verified active predecessor identities and blob hashes
+    - recorded governing commits for active predecessors
+    - materialized the accepted Wise vs. Vulgar reconstruction
+    - verified the preserved source against its Git blob hash
+    - recorded a SHA-256 digest, byte count, and line count
+    - established explicit successor relations
+  remaining_before_source_preservation_certification:
+    - create explicit historical copies before any active predecessor is removed
+    - validate this index and all recorded paths in integration testing
+  destructive_actions_authorized: false
+
+non_certification_notice: >
+  This index certifies neither the truth of any substantive proposition nor the
+  completion of the foundational migration. It records documentary identity,
+  preservation, and recoverability only.
