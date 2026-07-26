@@ -1,0 +1,316 @@
+schema_version: 1.0
+document_type: foundational_problem_migration_constitution
+
+identity:
+  migration_id: foundational-problems-v2
+  title: Foundational Problems v2 Migration Constitution
+  version: 1.0.0
+
+status:
+  lifecycle: PLANNING
+  certification: NOT_CERTIFIED
+  activation: NOT_ACTIVE
+
+purpose: >
+  Govern the migration from large, mixed-function foundational problem files to
+  the seven-problem architecture; establish Philosophy vs. Poetry as a new
+  foundational problem; redistribute accepted material by jurisdiction; elevate
+  shared methods into protocols; and preserve every predecessor and migration
+  decision without silent revision.
+
+authority:
+  architecture:
+    path: governance/foundational-problem-architecture.yaml
+    canonical_key: foundational-problem-architecture
+  registry:
+    path: problems/registry.yaml
+    canonical_key: foundational-problem-registry
+  shared_protocol_constitution:
+    path: governance/shared-protocol-constitution.yaml
+    canonical_key: shared-protocol-constitution
+  rule: >
+    This migration may create successor drafts and preservation records, but it
+    may not certify, activate, delete, or retrospectively revise predecessor
+    problem objects until all constitutional preconditions are satisfied.
+
+source_state:
+  description: >
+    Existing foundational problems are principally represented as large YAML
+    files that combine constitutional definition, witnesses, methods,
+    interpretive findings, safeguards, and termination rules.
+  verified_predecessors:
+    - canonical_key: theologico-political
+      identifier: STR-PROBLEM-002
+      path: problems/theologico-political.yaml
+      version: 1.1
+      blob_sha: 4a35e71916212082598097985deb23699c0018e7
+      status: ACTIVE_FOUNDATIONAL_PROBLEM_OBJECT
+    - canonical_key: wise-vs-vulgar
+      identifier: STR-PROBLEM-003
+      path: problems/wise-and-vulgar.yaml
+      version: 0.1-discussion
+      blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+      status: ACTIVE_FOUNDATIONAL_PROBLEM_OBJECT
+  accepted_planning_source:
+    identifier: WVG-RECONSTRUCTION-0.2
+    canonical_key: wise-vs-vulgar
+    version: 0.2-reconstruction-draft
+    status: ACCEPTED_FOR_REDISTRIBUTION_NOT_YET_CANONICAL
+    requirement: >
+      The complete accepted reconstruction must be materialized as an immutable
+      migration source before any proposition derived from it is activated.
+
+target_state:
+  registry: problems/registry.yaml
+  architecture: governance/foundational-problem-architecture.yaml
+  shared_protocol_registry: protocols/registry.yaml
+  problem_roots:
+    - problems/nomos-vs-physis/
+    - problems/philosophy-vs-poetry/
+    - problems/theory-vs-practice/
+    - problems/theologico-political/
+    - problems/athens-vs-jerusalem/
+    - problems/wise-vs-vulgar/
+    - problems/ancients-vs-moderns/
+  study_records_root: studies/
+  migration_root: migrations/foundational-problems-v2/
+  historical_records_root: history/foundational-problems/
+
+canonical_order:
+  - canonical_order: 1
+    canonical_key: nomos-vs-physis
+    title: Nomos vs. Physis
+  - canonical_order: 2
+    canonical_key: philosophy-vs-poetry
+    title: Philosophy vs. Poetry
+  - canonical_order: 3
+    canonical_key: theory-vs-practice
+    title: Theory vs. Practice
+  - canonical_order: 4
+    canonical_key: theologico-political
+    title: The Theologico-Political Problem
+  - canonical_order: 5
+    canonical_key: athens-vs-jerusalem
+    title: Athens vs. Jerusalem
+  - canonical_order: 6
+    canonical_key: wise-vs-vulgar
+    title: The Wise vs. The Vulgar
+  - canonical_order: 7
+    canonical_key: ancients-vs-moderns
+    title: Ancients vs. Moderns
+
+governing_migration_rule: >
+  The seven problems remain distinct but connected. Accepted material is
+  retained where it belongs, transferred where another problem has primary
+  jurisdiction, elevated where it is shared method, preserved where it records
+  history, or rejected only with an explicit reason. Cross-problem relevance is
+  represented by reference rather than doctrinal duplication.
+
+controlled_dispositions:
+  RETAIN:
+    meaning: >
+      Material remains valid and belongs primarily within the problem being
+      revised.
+  TRANSFER:
+    meaning: >
+      Material remains valid but belongs primarily within another foundational
+      problem.
+  ELEVATE:
+    meaning: >
+      Material applies across multiple problems and becomes a shared protocol.
+  PRESERVE_HISTORICALLY:
+    meaning: >
+      Material records an earlier formulation or organizational stage and must
+      remain recoverable without governing current inquiry.
+  REJECT_WITH_REASON:
+    meaning: >
+      Material is unsupported, contradictory, duplicative, or superseded and
+      may be excluded only with a documented reason.
+
+controlled_transformation_modes:
+  - VERBATIM
+  - REVISED
+  - DIVIDED
+  - CONSOLIDATED
+  - REFERENCE_ONLY
+
+migration_transaction_contract:
+  required_fields:
+    - transaction_id
+    - source canonical key
+    - source version
+    - source item or section
+    - original text or exact source reference
+    - disposition
+    - destination canonical key or protocol
+    - destination item
+    - transformation mode
+    - reason
+    - continuing relevance
+    - unresolved overlap
+    - review status
+    - implementing commit
+  source_protection: >
+    Transactions operate from preserved source records. They do not overwrite
+    the source from which material is derived.
+  no_loss_rule: >
+    Every accepted source item must receive a disposition before the migration
+    can be certified.
+
+problem_6_redistribution:
+  source:
+    canonical_key: wise-vs-vulgar
+    accepted_version: 0.2-reconstruction-draft
+  retain_in_wise_vs_vulgar:
+    - rank and recognition
+    - philosopher, sophist, scholar, expert, and impostor
+    - human heterogeneity
+    - ordinary and political virtue
+    - differentiated education
+    - partial enlightenment
+    - audience and mediation where recognition is central
+    - elite self-certification and capture
+    - limits of identifying wisdom
+  transfer_to_philosophy_vs_poetry:
+    - Aristophanic accusation
+    - philosophy's poetic correction
+    - poet and comic poet as independent rivals
+    - knowledge of souls, eros, music, myth, and poetic education
+    - Plato's dramatic practice
+  transfer_to_theory_vs_practice:
+    - philosopher and statesman
+    - law, equity, consent, and political implementation
+    - return and political responsibility
+    - direct and indirect guidance
+  transfer_to_theologico_political:
+    - reason and revelation as rival authorities
+    - prophecy and divine law
+    - false prophecy
+    - limits of rational refutation
+  transfer_to_athens_vs_jerusalem:
+    - philosophic and Biblical ways of life
+    - autonomous understanding
+    - obedient love
+    - unresolved highest human end
+  transfer_to_ancients_vs_moderns:
+    - historicism
+    - progress
+    - technical mastery
+    - secular confidence
+    - ideological vanguardism
+  elevate_to_shared_protocols:
+    - source status
+    - evidence classification
+    - inference discipline
+    - uncertainty preservation
+    - speech and deed
+    - irony
+    - comedy
+    - claimant to wisdom examination
+    - audience and rhetoric examination
+  preserve_historically:
+    - complete version 0.1-discussion
+    - complete accepted version 0.2-reconstruction-draft
+    - all migration transactions and revision decisions
+
+migration_phases:
+  - phase: 1
+    name: ESTABLISH_GOVERNANCE
+    actions:
+      - establish the architecture constitution
+      - establish the official registry
+      - establish this migration constitution
+      - establish shared protocol governance
+    destructive_actions_permitted: false
+
+  - phase: 2
+    name: PRESERVE_SOURCES
+    actions:
+      - record predecessor identifiers, paths, versions, blob hashes, and commits
+      - materialize the accepted Wise vs. Vulgar reconstruction
+      - create predecessor index records
+      - confirm complete recoverability
+    destructive_actions_permitted: false
+
+  - phase: 3
+    name: CLASSIFY_AND_REDISTRIBUTE
+    actions:
+      - classify every accepted item
+      - create proposition-level migration transactions
+      - retain, transfer, elevate, preserve, or reject with reason
+      - record continuing cross-problem relevance
+      - preserve unresolved jurisdictional questions
+    destructive_actions_permitted: false
+
+  - phase: 4
+    name: BUILD_SUCCESSORS
+    actions:
+      - complete Philosophy vs. Poetry subordinate records
+      - build the Wise vs. Vulgar successor
+      - build successor objects for the remaining five problems
+      - invoke shared protocols by reference
+      - create problem relations and witness registries
+    destructive_actions_permitted: false
+
+  - phase: 5
+    name: INTEGRATION_VALIDATION
+    actions:
+      - validate YAML structure
+      - validate canonical keys and official order
+      - validate paths and cross-references
+      - detect uncontrolled duplicate doctrine
+      - confirm protocol non-duplication
+      - confirm predecessor recoverability
+      - confirm complete transaction coverage
+      - review unresolved jurisdictional conflicts
+    destructive_actions_permitted: false
+
+  - phase: 6
+    name: CERTIFICATION
+    actions:
+      - certify the migration record
+      - record validation evidence and commit provenance
+      - authorize successor activation only after all checks pass
+    destructive_actions_permitted: false
+
+  - phase: 7
+    name: ACTIVATION
+    actions:
+      - mark certified successor problem objects active
+      - convert predecessor active paths to historical status
+      - remove only obsolete active-path duplicates
+      - remove temporary staging artifacts
+    destructive_actions_permitted: true
+    precondition: MIGRATION_CERTIFIED
+
+preservation_requirements:
+  predecessor_index_path: migrations/foundational-problems-v2/predecessor-index.yaml
+  transaction_directory: migrations/foundational-problems-v2/transactions/
+  unresolved_jurisdiction_path: migrations/foundational-problems-v2/unresolved-jurisdiction.yaml
+  certification_path: migrations/foundational-problems-v2/certification.yaml
+  rule: >
+    Repository history alone is necessary but not sufficient. The migration
+    must also provide explicit predecessor and transaction records that permit
+    a reader or validator to reconstruct what moved, where it moved, and why.
+
+activation_preconditions:
+  - the seven-problem registry is valid
+  - the architecture and protocol constitutions are present
+  - all predecessor sources are recoverable
+  - every accepted item has a controlled disposition
+  - every transfer has provenance and a resolvable destination
+  - no shared protocol is duplicated inside a problem object
+  - no problem silently absorbs another problem's jurisdiction
+  - all cross-problem references resolve
+  - all successor problem objects validate
+  - unresolved conflicts are explicitly preserved
+  - certification evidence is recorded
+
+prohibitions:
+  - no silent deletion of accepted material
+  - no retrospective rewriting of predecessor files
+  - no activation based only on YAML parsing
+  - no renumbering of historical identifiers to match the new order
+  - no doctrinal duplication used in place of cross-reference
+  - no certification of truth merely because provenance and structure validate
+  - no deletion or replacement of active predecessors before certification
