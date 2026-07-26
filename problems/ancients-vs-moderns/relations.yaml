@@ -1,0 +1,217 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: ancients-vs-moderns
+  title: Ancients vs. Moderns — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/ancients-vs-moderns/problem.yaml
+  inquiry_profile_reference: problems/ancients-vs-moderns/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  rule: >
+    This record states controlled relations while preserving the ancient-modern
+    transformation as a distinct historical and philosophical jurisdiction.
+
+relation_vocabulary:
+  controlled_types_used:
+    - DEPENDS_ON
+    - INTERSECTS
+    - SUPPLIES_FINDING_TO
+  rule: >
+    Relations identify dependence, overlap, or supplied findings and do not establish
+    rank through chronology, novelty, antiquity, power, success, or weakness.
+
+relations:
+  - relation_id: AVM-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+    summary: >
+      The modern transformation of nature, natural right, natural law, convention,
+      rights, history, and value creation depends upon the prior nature-convention problem.
+    boundary: >
+      Nomos vs. Physis owns the permanent distinction and normative standard.
+      Ancients vs. Moderns owns the historical transformation of those concepts.
+    non_absorption_rule: >
+      Modern transformation does not settle whether natural right exists, and the
+      permanent problem must not be reduced to one historical stage.
+
+  - relation_id: AVM-REL-002
+    related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+    summary: >
+      Modernity transforms poetry, rhetoric, comedy, tragedy, myth, aesthetics,
+      culture, ideology, self-expression, and philosophical writing.
+    boundary: >
+      Philosophy vs. Poetry owns the rival human forms of wisdom and representation.
+      Ancients vs. Moderns owns the transformation of the quarrel under modern conditions.
+    non_absorption_rule: >
+      Modern aesthetic or ideological categories must not be projected backward as the
+      original meaning of poetry or philosophy.
+
+  - relation_id: AVM-REL-003
+    related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+    summary: >
+      Modern thought seeks reliable action through method, sovereignty, institutions,
+      prediction, science, administration, expertise, and technical control.
+    boundary: >
+      Theory vs. Practice owns the permanent relation among understanding, judgment,
+      authority, execution, institutions, correction, and chance. Ancients vs. Moderns
+      owns their historical transformation.
+    non_absorption_rule: >
+      Practical reliability does not certify the modern end, while ancient height does
+      not supply reliable implementation or control.
+
+  - relation_id: AVM-REL-004
+    related_problem: theologico-political
+    relation_type: INTERSECTS
+    summary: >
+      Modernity critiques, neutralizes, privatizes, rationalizes, politicizes,
+      psychologizes, historicizes, or attempts to supersede revelation and sacred law.
+    boundary: >
+      The Theologico-Political Problem owns ultimate authority between reason and
+      genuine revelation. Ancients vs. Moderns owns the modern transformations and
+      attempted settlements of that conflict.
+    non_absorption_rule: >
+      Modern political or historical transformation does not prove revelation false,
+      and the strict authority conflict must not be reduced to secularization history.
+
+  - relation_id: AVM-REL-005
+    related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    summary: >
+      Modernity seeks to escape, reconcile, secularize, historicize, rationalize, or
+      create beyond the ancient philosophic and Biblical orientations.
+    boundary: >
+      Athens vs. Jerusalem owns the comprehensive ways of life. Ancients vs. Moderns
+      owns their transformation and attempted supersession under modernity.
+    non_absorption_rule: >
+      Athens and Jerusalem must not be treated as obsolete stages merely because modern
+      power or institutions arose later.
+
+  - relation_id: AVM-REL-006
+    related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    summary: >
+      Modernity creates and transforms claimants to superior judgment through science,
+      professional philosophy, expertise, bureaucracy, ideology, historicism,
+      technology, credentialing, and administrative institutions.
+    boundary: >
+      The Wise vs. The Vulgar owns recognition, rank, differentiated education,
+      mediation, and capture. Ancients vs. Moderns owns the historical transformation
+      of claimant types and institutions.
+    non_absorption_rule: >
+      Modern credentials, scale, method, or power do not certify wisdom, while ancient
+      rank language does not establish inherited elites.
+
+coactivation_rules:
+  - activate nomos-vs-physis when nature, natural right, convention, modern rights, or value creation is the primary standard question
+  - activate philosophy-vs-poetry when modernity transforms poetic, rhetorical, aesthetic, ideological, or philosophic form
+  - activate theory-vs-practice when method, institutions, sovereignty, expertise, administration, or technology mediates action
+  - activate theologico-political when modern critique or settlement concerns genuine revelation, sacred law, or ultimate authority
+  - activate athens-vs-jerusalem when modernity transforms or claims to supersede the comprehensive philosophic and Biblical ways of life
+  - activate wise-vs-vulgar when science, expertise, bureaucracy, ideology, credentials, or technology creates new claimant and capture problems
+
+relation_matrix:
+  ancients_vs_moderns_owns:
+    - chronology and innovation as insufficient standards of rank
+    - ancient, Biblical, and modern beginnings and highest ends as a comparative sequence
+    - modern lowering, narrowing, transformation, and claimed discovery
+    - progress, historicism, value creation, secularization, and rationalization
+    - method, sovereignty, science, technology, institutions, and control as modern forms
+    - practical gains and human costs of modern reliability
+    - modern transformations of natural right, revelation, equality, education, and wisdom
+    - return, recovery, and the impossibility of an unchanged restoration
+  references_without_absorbing:
+    nomos_vs_physis:
+      - nature, convention, natural right, natural law, and modern rights
+    philosophy_vs_poetry:
+      - poetic and philosophic forms and their modern transformation
+    theory_vs_practice:
+      - judgment, implementation, institutions, expertise, and chance
+    theologico_political:
+      - genuine revelation, sacred law, and ultimate authority
+    athens_vs_jerusalem:
+      - comprehensive ancient philosophic and Biblical ways of life
+    wise_vs_vulgar:
+      - recognition, rank, expertise, credentialing, ideology, and elite capture
+
+cross_problem_safeguards:
+  - Chronology, novelty, antiquity, power, weakness, success, and endurance do not certify rank.
+  - Modernity is not one homogeneous doctrine.
+  - The ancients are not one homogeneous doctrine.
+  - The Biblical horizon is not merely an ancient cultural stage.
+  - Practical reliability and technical power are not comprehensive wisdom.
+  - Historical genealogy is not normative or theological refutation by itself.
+  - Preserved vocabulary does not establish preserved doctrine.
+  - Return does not reproduce an earlier horizon unchanged.
+
+unresolved_relations:
+  - question_id: AVM-UNREL-001
+    question: >
+      Does modern political reliability rest on truer knowledge of human beings or on
+      a lowered beginning that selects more predictable motives and ends?
+    status: OPEN
+    routing: ancients-vs-moderns and theory-vs-practice
+  - question_id: AVM-UNREL-002
+    question: >
+      Can historicism account for its own claim without converting a historical insight
+      into a transhistorical denial of truth?
+    status: OPEN
+    routing: ancients-vs-moderns with independent historicist reconstruction
+  - question_id: AVM-UNREL-003
+    question: >
+      Does value creation overcome natural and revealed standards or reproduce an
+      unverified authority of the creator and political vanguard?
+    status: OPEN
+    routing: ancients-vs-moderns with nomos-vs-physis and wise-vs-vulgar
+  - question_id: AVM-UNREL-004
+    question: >
+      Can rationalized, privatized, symbolic, or civil religion preserve revelation
+      without transforming divine action, command, Law, and obedience?
+    status: OPEN
+    routing: ancients-vs-moderns and theologico-political
+  - question_id: AVM-UNREL-005
+    question: >
+      Can a return to ancient or Biblical sources recover their standards without
+      becoming a distinct modern project shaped by later crises and institutions?
+    status: OPEN
+    routing: ancients-vs-moderns and athens-vs-jerusalem
+  - question_id: AVM-UNREL-006
+    question: >
+      Can modern institutions improve recognition and correction without replacing
+      wisdom with measurable expertise, credentials, scale, or procedural compliance?
+    status: OPEN
+    routing: ancients-vs-moderns and wise-vs-vulgar
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This relations record is a subordinate successor draft. It creates no activation,
+    certification, historical deletion, chronological ranking, jurisdictional merger,
+    or automatic transfer of findings.
+
+termination:
+  relations_state: FOUNDING_RELATIONS_RECORD_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - all six neighboring problems possess explicit controlled relations
+    - every relation preserves a jurisdictional boundary
+    - coactivation does not authorize absorption
+    - unresolved overlaps remain visible
+  remaining_requirements:
+    - independent ancient, Biblical, and modern witness reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
