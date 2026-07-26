@@ -1,0 +1,233 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: theory-vs-practice
+  title: Theory vs. Practice — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/theory-vs-practice/problem.yaml
+  inquiry_profile_reference: problems/theory-vs-practice/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  rule: >
+    This record states controlled cross-problem relations without transferring,
+    duplicating, or absorbing another problem's complete doctrine. Practical relevance
+    is preserved through explicit reference and jurisdictional boundaries.
+
+relation_vocabulary:
+  controlled_types_used:
+    - DEPENDS_ON
+    - INTERSECTS
+    - SUPPLIES_FINDING_TO
+  rule: >
+    Relations identify dependence, overlap, or supplied findings. They do not certify
+    rank, truth, authority, historical causation, or a right to duplicate doctrine.
+
+relations:
+  - relation_id: TVP-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+    summary: >
+      Responsible action requires an end or standard that distinguishes the merely
+      effective, lawful, or necessary from the just or good.
+    coactivation_rule: >
+      Coactivate when a natural, legal, or moral standard must be specified through
+      prudence, equity, legislation, exception, or institutional judgment.
+    boundary: >
+      Nomos vs. Physis owns the standard and the lawful-just distinction. Theory vs.
+      Practice owns deliberation, application, execution, correction, and action under
+      imperfect conditions.
+    non_absorption_rule: >
+      A standard does not supply a complete decision, and practical difficulty does not
+      prove that the standard is conventional or unreal.
+
+  - relation_id: TVP-REL-002
+    related_problem: philosophy-vs-poetry
+    relation_type: DEPENDS_ON
+    summary: >
+      The poetic accusation supplies evidence that philosophy must understand souls,
+      rhetoric, embodiment, education, audience, and political consequence if its
+      knowledge is to become responsible guidance.
+    coactivation_rule: >
+      Coactivate when poetry specifically challenges philosophy's prudence, political
+      responsibility, communicative form, or educative effects.
+    boundary: >
+      Philosophy vs. Poetry owns the rival forms of wisdom and poetic accusation.
+      Theory vs. Practice owns the general movement from understanding to action.
+    non_absorption_rule: >
+      Poetic efficacy does not establish practical wisdom simply, and practical
+      philosophy must not reduce poetry to a communication technique.
+
+  - relation_id: TVP-REL-003
+    related_problem: theologico-political
+    relation_type: INTERSECTS
+    summary: >
+      Political communities must act concerning worship, education, sacred law,
+      toleration, interpretation, persecution, and sovereignty before the conflict
+      between reason and revelation is finally resolved.
+    coactivation_rule: >
+      Coactivate when a finite political settlement regulates a comprehensive
+      theological-philosophic conflict or when obedience and autonomous judgment
+      generate rival practical claims.
+    boundary: >
+      The Theologico-Political Problem owns ultimate authority and truth among reason,
+      revelation, prophecy, divine command, sacred law, and sovereignty. Theory vs.
+      Practice owns mediation, judgment, action, and finite settlement under uncertainty.
+    non_absorption_rule: >
+      Political necessity does not decide comprehensive truth, while theoretical
+      nonresolution does not release political actors from responsibility to act.
+
+  - relation_id: TVP-REL-004
+    related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    summary: >
+      The philosophic and biblical ways of life imply different orientations toward
+      deliberation, obedience, law, teaching, political responsibility, and the
+      relation between the highest life and the city.
+    coactivation_rule: >
+      Coactivate when the principal question is how autonomous understanding or
+      obedient love becomes political judgment and deed.
+    boundary: >
+      Athens vs. Jerusalem owns the comprehensive ways of life. Theory vs. Practice
+      owns how either orientation becomes action, institution, counsel, or restraint.
+    non_absorption_rule: >
+      Practical consequences do not by themselves rank Athens and Jerusalem, and the
+      comprehensive alternatives must not be reduced to administrative programs.
+
+  - relation_id: TVP-REL-005
+    related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    summary: >
+      Superior judgment can guide action only through a recognition problem involving
+      philosopher, statesman, expert, adviser, prophet, institution, and counterfeit
+      claimant.
+    coactivation_rule: >
+      Coactivate when the central issue is who should advise, rule, interpret, educate,
+      or correct and how the city can recognize superior practical judgment.
+    boundary: >
+      The Wise vs. The Vulgar owns rank, recognition, differentiated education,
+      mediation, and elite capture. Theory vs. Practice owns the chain from claimed
+      understanding to responsible action.
+    non_absorption_rule: >
+      Recognition of superiority does not grant unrestricted sovereignty, while
+      uncertainty about recognition does not make every practical judgment equal.
+
+  - relation_id: TVP-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Modernity seeks greater reliability through method, sovereignty, institutions,
+      prediction, control, and lowered beginnings, while ancient thought emphasizes
+      prudence, virtue, the best regime, and the limits of political mastery.
+    coactivation_rule: >
+      Coactivate when method, institutional design, science, sovereignty, progress,
+      history, or technical control is claimed to solve the permanent relation between
+      knowledge and action.
+    boundary: >
+      Ancients vs. Moderns owns the historical and philosophical transformation.
+      Theory vs. Practice owns the permanent problem of deliberation, authority,
+      execution, correction, responsibility, and chance.
+    non_absorption_rule: >
+      Modern reliability does not certify the governing end, and ancient height does
+      not supply reliable implementation or control of contingency.
+
+relation_matrix:
+  theory_vs_practice_owns:
+    - movement from understanding to action
+    - deliberation, persuasion, authorization, command, and execution
+    - practical judgment and attention to particulars
+    - effective and legitimate authority as a distinction
+    - production and right use as a distinction
+    - institutions, distributed knowledge, correction, and accountability
+    - founding and preservation as distinct capacities
+    - chance, outcome, and counterfactual uncertainty
+    - indirect guidance and finite political responsibility
+  references_without_absorbing:
+    nomos_vs_physis:
+      - standards and ends of action
+      - lawful, necessary, and just
+    philosophy_vs_poetry:
+      - poetic accusation of imprudence and ignorance of souls
+      - rhetorical and educative form
+    theologico_political:
+      - ultimate authority and comprehensive truth
+      - revelation, sacred law, prophecy, and sovereignty
+    athens_vs_jerusalem:
+      - comprehensive philosophic and biblical orientations
+    wise_vs_vulgar:
+      - recognition and rank of adviser, ruler, expert, prophet, or philosopher
+    ancients_vs_moderns:
+      - historical transformation through method, institutions, mastery, and progress
+
+cross_problem_safeguards:
+  - No relation authorizes direct philosophic sovereignty.
+  - Political urgency does not convert opinion into knowledge.
+  - Success, failure, victory, or endurance does not certify wisdom.
+  - Effective authority and legitimate authority remain distinct.
+  - Standards must not be reduced to implementation problems.
+  - Comprehensive ways of life must not be reduced to policy consequences.
+  - Recognition of the wise must not be collapsed into practical success.
+  - Modern institutional reliability must not be converted into final human completion.
+
+unresolved_relations:
+  - question_id: TVP-UNREL-001
+    question: >
+      Can any kingly or political art unite knowledge of the good, production, right
+      use, legitimate authority, execution, and correction without claiming control of chance?
+    status: OPEN
+    routing: theory-vs-practice with Plato and Aristotle reconstruction
+  - question_id: TVP-UNREL-002
+    question: >
+      How may superior understanding guide political society without unrestricted
+      sovereignty, concealed domination, or irresponsible withdrawal?
+    status: OPEN
+    routing: theory-vs-practice and wise-vs-vulgar
+  - question_id: TVP-UNREL-003
+    question: >
+      Can institutions preserve correction and responsibility while reducing
+      dependence on rare virtue and individual prudence?
+    status: OPEN
+    routing: theory-vs-practice and ancients-vs-moderns
+  - question_id: TVP-UNREL-004
+    question: >
+      What must political society do when the reason-revelation conflict remains
+      unresolved but law, worship, education, and toleration require decisions?
+    status: OPEN
+    routing: theory-vs-practice and theologico-political
+  - question_id: TVP-UNREL-005
+    question: >
+      How can outcomes be used as evidence without allowing hindsight and chance to
+      rewrite the knowledge and alternatives available at the time of action?
+    status: OPEN
+    routing: theory-vs-practice with shared speech-and-deed protocol
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This relations record is a subordinate successor draft. It creates no activation,
+    certification, historical deletion, jurisdictional merger, or automatic transfer
+    of findings into another problem.
+
+termination:
+  relations_state: FOUNDING_RELATIONS_RECORD_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - all six neighboring problems possess explicit controlled relations
+    - every relation contains a jurisdictional boundary
+    - coactivation does not authorize absorption
+    - unresolved overlaps remain visible
+  remaining_requirements:
+    - independent witness reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
