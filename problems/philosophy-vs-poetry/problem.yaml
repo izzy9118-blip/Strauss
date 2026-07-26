@@ -10,7 +10,7 @@ identity:
 
 status:
   lifecycle: FOUNDING_DRAFT
-  version: 0.1.0
+  version: 0.2.0
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
@@ -26,9 +26,13 @@ documentary_basis:
   primary_strauss_sources:
     - title: Socrates and Aristophanes
       role: >
-        Governs the confrontation between philosophy and comedy and the
+        Primary founding witness for the confrontation between philosophy and
+        comedy, the question of the gods within that confrontation, and the
         transformation from the early Aristophanic Socrates to mature Socratic
         political philosophy.
+      completed_study_record: >
+        studies/socrates-and-aristophanes/
+        philosophy-poetry-theologico-political-reconstruction.yaml
     - title: Studies in Platonic Political Philosophy
       role: >
         Supports the placement of the quarrel between philosophy and poetry
@@ -69,6 +73,37 @@ compressed_question: >
   What does philosophy know that poetry does not, and what does poetry know
   that philosophy may fail to understand?
 
+brother_problem_designation:
+  related_problem: theologico-political
+  designation: BROTHER_PROBLEM
+  relation_strength: CO_FOUNDATIONAL
+  governing_rule: >
+    Philosophy vs. Poetry and The Theologico-Political Problem arise together
+    when philosophy challenges the poetic-theological horizon through which
+    gods, justice, sacred law, and the highest life become authoritative for
+    political society. The problems must be investigated together where the
+    rivalry of poetic and philosophic wisdom concerns the gods, piety, divine
+    command, prophecy, sacred law, or the human recognition of divine authority.
+  shared_question: >
+    Who can speak with wisdom and authority about the gods, justice, education,
+    and the highest human life?
+  distinction: >
+    Philosophy vs. Poetry governs rival human forms of wisdom, imitation,
+    education, and knowledge of souls. The Theologico-Political Problem governs
+    the ultimate conflict among autonomous reason, divine revelation, command,
+    prophecy, sacred law, and political sovereignty.
+  non_absorption_rule: >
+    Poetry must not be reduced to revelation, civic religion, or propaganda.
+    Revelation must not be reduced to poetic construction, political myth, or
+    psychological education. Neither problem may reproduce or absorb the full
+    doctrine governed by the other.
+  primary_source_basis:
+    - title: Socrates and Aristophanes
+      finding: >
+        Strauss's inquiry into the quarrel between poetry and philosophy
+        necessarily becomes an inquiry into Socrates' teaching concerning the
+        gods and into the question of what makes gods gods for human beings.
+
 jurisdiction:
   owns:
     - the ancient quarrel between philosophy and poetry
@@ -83,6 +118,7 @@ jurisdiction:
     - autonomous poetry and poetry ordered toward philosophy
     - the poetic contribution to the Socratic turn
     - the difference between knowledge of souls and knowledge of the human end
+    - the human recognition and poetic representation of the godness of gods
   does_not_own:
     - canonical_key: nomos-vs-physis
       reason: >
@@ -96,6 +132,7 @@ jurisdiction:
       reason: >
         The Theologico-Political Problem governs the conflict among reason,
         revelation, divine law, prophecy, theology, and political sovereignty.
+        Its brother-problem status does not transfer this jurisdiction.
     - canonical_key: athens-vs-jerusalem
       reason: >
         Athens vs. Jerusalem governs autonomous understanding and obedient love
@@ -129,13 +166,18 @@ permanent_tension:
   socratic_correction: >
     Mature political philosophy arises when philosophy accepts the need to
     understand human and political things, differentiated audiences, rhetoric,
-    and poetic knowledge without surrendering the question of truth and the
-    good to poetic authority.
+    poetic knowledge, eros, music, and the human recognition of divine authority
+    without surrendering the question of truth and the good to poetic authority.
   unresolved_relation: >
     Philosophy may claim knowledge of the highest end while depending upon
     poetic capacities to disclose and move the soul. Poetry may know the soul
     deeply while lacking knowledge of the highest end. Neither claim may be
     dismissed in advance.
+  integrative_superiority_rule: >
+    Philosophy may be judged superior to poetry only where it has incorporated
+    the truths by which poetry exposed truncated philosophy: self-knowledge,
+    prudence, knowledge of souls, eros, music, audience, political responsibility,
+    and the question of the godness of gods.
 
 boundary:
   activates_when:
@@ -148,6 +190,7 @@ boundary:
     - Plato's dramatic deed qualifies an explicit statement about poetry
     - poetry is treated as autonomous from inquiry into the good
     - poetry is reduced to propaganda or decorative communication
+    - inquiry into gods or divine authority depends upon poetic representation
   does_not_activate_by_itself:
     - any use of figurative language
     - ordinary rhetorical effectiveness
@@ -163,27 +206,31 @@ relations:
       Philosophy's challenge to poetry begins through the discovery of nature
       as a standard distinct from inherited poetic authority.
   - related_problem: theory-vs-practice
-    relation_type: SUPPLIES_PROBLEM_TO
+    relation_type: SUPPLIES_FINDING_TO
     summary: >
       Poetry challenges philosophy to account for prudence, communication,
       education, embodiment, and political consequence.
   - related_problem: theologico-political
-    relation_type: HISTORICALLY_PRECEDES
+    relation_type: INTERSECTS
+    constitutional_designation: BROTHER_PROBLEM
+    relation_strength: CO_FOUNDATIONAL
     summary: >
-      The conflict between philosophy and divinely inspired poetry anticipates
-      but does not exhaust the conflict between reason and revelation.
+      The rivalry between philosophy and poetry necessarily concerns who can
+      speak with wisdom and authority about gods, divine law, piety, prophecy,
+      justice, and the highest human life. The problems are distinct but must
+      not be reconstructed in isolation where these questions are active.
   - related_problem: athens-vs-jerusalem
     relation_type: INTERSECTS
     summary: >
       Poetic and prophetic authority intersect, while Biblical revelation must
       not be reduced to Greek poetry.
   - related_problem: wise-vs-vulgar
-    relation_type: SUPPLIES_CLAIMANT_TO
+    relation_type: SUPPLIES_FINDING_TO
     summary: >
-      Poet, comic poet, and rhetorician enter the recognition problem as rival
-      claimants to wisdom and guidance.
+      Poet, comic poet, philosopher, rhetorician, legislator, and interpreter
+      enter the recognition problem as rival claimants to wisdom and guidance.
   - related_problem: ancients-vs-moderns
-    relation_type: TRANSFORMED_BY
+    relation_type: INTERSECTS
     summary: >
       Modernity may transform poetry into aesthetics, culture, ideology,
       self-expression, or deliberate horizon creation.
@@ -213,9 +260,11 @@ anti_capture_principle: >
 
 non_absorption_clause: >
   Philosophy vs. Poetry must not become a general container for every question
-  involving rhetoric, myth, drama, irony, comedy, or audience. It owns poetry
-  as a rival form of wisdom, education, and guidance. General interpretive
-  methods remain governed by shared protocols.
+  involving rhetoric, myth, drama, irony, comedy, audience, religion, or the
+  gods. It owns poetry as a rival form of wisdom, education, and guidance.
+  The Theologico-Political Problem retains jurisdiction over ultimate divine
+  authority, revelation, command, sacred law, and political sovereignty.
+  General interpretive methods remain governed by shared protocols.
 
 anti_reduction_rules:
   - poetry must not be reduced to propaganda for rulers or philosophers
@@ -227,20 +276,23 @@ anti_reduction_rules:
   - rhetoric must not be identified automatically with manipulation
   - the Socratic turn must not be reduced to public-relations strategy
   - Biblical revelation must not be collapsed into Greek poetic inspiration
+  - the political efficacy of poetic theology must not be treated as proof of divine truth
+  - philosophic criticism of poetic gods must not be treated as proof against revelation
 
 termination:
   completion_standard: >
     Examination is complete when the inquiry has reconstructed the strongest
     philosophic and poetic claims, identified what each discloses and neglects,
     examined speaker, audience, dramatic action, image, myth, irony, comedy,
-    and consequence, distinguished knowledge of souls from knowledge of the
-    human end, and preserved any unresolved superiority claim not settled by
-    the evidence.
+    gods, piety, and consequence, distinguished knowledge of souls from
+    knowledge of the human end, and preserved any unresolved superiority or
+    divine-authority claim not settled by the evidence.
   valid_states:
     - documented_philosophic_claim
     - documented_poetic_claim
     - supported_poetic_correction
     - supported_philosophic_critique
+    - brother_problem_coactivation
     - responsible_mediation
     - rivalry_unresolved
     - opacity_preserved
