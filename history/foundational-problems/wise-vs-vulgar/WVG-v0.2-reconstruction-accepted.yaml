@@ -1,0 +1,682 @@
+id: STR-PROBLEM-003
+title: The Wise and the Vulgar — The Few and the Many
+version: 0.2-reconstruction-draft
+status: RECONSTRUCTION IN PROGRESS
+type: fundamental_problem
+source_basis:
+  primary_ground:
+  - Plato
+  - Xenophon
+  - Aristophanes
+  governing_strauss_texts:
+  - The Rebirth of Classical Political Rationalism
+  - The City and Man
+  - Socrates and Aristophanes
+  supporting_horizons:
+  - classical political philosophy
+  - philosophy and poetry
+  - philosophy and political society
+  - reason and revelation
+  - exoteric and esoteric teaching
+  - ancient and modern rationalism
+  reconstruction_note: This version incorporates the sequential reading of Strauss's essays in The Rebirth
+    of Classical Political Rationalism. It does not assume that professional philosophers, scholars, intellectuals,
+    rulers, religious authorities, or interpreters of hidden teachings can be identified in advance with
+    the wise.
+origin:
+  primary_problem: Political society requires authoritative opinions, laws, habits, praise, blame, education,
+    and shared judgments in order to act and endure. Philosophy begins within those opinions but transforms
+    them into questions concerning justice, virtue, law, the gods, nature, and the whole.
+  socratic_ground: Socrates brings the problem into view because his life cannot be understood either
+    as already complete wisdom confronting a wholly ignorant city or as harmless inquiry persecuted without
+    cause. The Aristophanic accusation, Platonic response, Xenophontic defense, public self-presentation,
+    and political fate must be examined together.
+  expanded_ground: Philosophy becomes political philosophy only when it recognizes human heterogeneity,
+    the political consequences of speech, dependence upon law and civic order, the need for rhetoric and
+    poetry, and the limits of its ability to justify its own supremacy.
+  ultimate_horizon: The highest human life remains disputed between autonomous inquiry and obedient response
+    to revelation. Philosophy can defend itself against rational refutations but cannot demonstrate that
+    revelation is impossible.
+governing_question: How can wisdom responsibly guide political society when wisdom cannot certify itself,
+  the city cannot reliably distinguish the philosopher from the sophist, scholar, ideologue, poet, prophet,
+  or impostor, philosophy depends upon and questions the authoritative opinions that sustain political
+  life, and the highest human life remains disputed between autonomous reason and revelation?
+compressed_question: How can wisdom responsibly guide the city when wisdom cannot certify itself, the
+  city cannot reliably recognize it, and the highest human life remains disputed?
+problem_statement: 'Political society ordinarily lives through authoritative opinion rather than philosophic
+  knowledge. Its laws, moral distinctions, religious teachings, histories, myths, praise, blame, and educational
+  practices orient citizens toward justice and the common good without requiring universal knowledge.
+  Philosophy arises from within this horizon by examining its claims and contradictions. The city may
+  need superior understanding yet cannot identify it reliably: title, scholarship, expertise, success,
+  rank, persecution, ridicule, originality, concealed texts, private religious experience, and claims
+  of conversion are all insufficient signs of wisdom. Philosophy''s difficulty is not caused only by the
+  city''s ignorance. Philosophy may lack self-knowledge when it fails to understand human heterogeneity,
+  student motives, the unequal effects of liberation, political dependence, or the poetic, rhetorical,
+  erotic, and spirited dimensions of education. Differentiated capacities require differentiated communication,
+  yet reserve, myth, rhetoric, and exoteric teaching create a permanent danger of capture by elites claiming
+  exclusive truth. Direct rule by wisdom remains theoretically intelligible but politically improbable.
+  Philosophy may guide chiefly through education, law, equity, indirect influence, criticism, and preservation
+  of the conditions of inquiry. The problem must preserve the unresolved tension among philosophic truth,
+  political necessity, poetry, religion, authoritative opinion, and revelation.'
+governing_interpretive_keys:
+  irony_key:
+    rule: An explicit statement, title, profession, or self-description does not necessarily exhaust the
+      meaning of the activity. Compare speech with deed, audience, occasion, consequence, structure, omission,
+      and qualification.
+    warning: Irony is not mechanical inversion. A supported ironic reading must be grounded in textual
+      action rather than the assumption that the opposite of the explicit statement is secretly true.
+    straussian_application: Strauss's self-descriptions as only a scholar or a poor linguist must be read
+      beside the deed of the work without turning them into concealed self-certification as wise.
+  comedy_key:
+    rule: Jokes, colloquial expressions, embarrassment, exaggeration, self-deprecation, and anticlimax
+      may perform philosophic work by exposing disproportion between solemn claim and actual rank.
+    warning: Comedy must not be reduced to entertainment or dismissal. A ridiculous figure may embody
+      a serious and politically dangerous possibility.
+    governing_function: Comedy corrects solemn scholarship by exposing professional pretension, spiritual
+      conceit, intellectual blindness, wounded pride, or ignorance of ends.
+  speech_deed_key:
+    rule: Speech must be interpreted through deed, and deed through speech. Examine what is claimed, performed,
+      omitted, addressed, and produced within the whole work.
+    applications:
+    - Compare the Apology with Plato's selective portrayal of Socratic conduct.
+    - Compare philosopher-rule with the dramatic and political impossibility of the best city.
+    - Compare arguments about poetry with Plato's poetic practice.
+    - Compare Xenophon's explicit defense with structural silences and absent conversations.
+    - Compare Strauss's modest self-description with the inquiry actually performed.
+fundamental_tension:
+  political_society:
+    necessity: Requires authoritative opinions, law, moral habituation, civic loyalty, rhetoric, symbols,
+      and judgments of justice.
+    limitation: These opinions are not knowledge and may contain contradictions, partial truths, salutary
+      myths, prejudice, or necessary simplification.
+    recognition_problem: Cannot reliably distinguish philosophy from sophistry, expertise, ideology, prophecy,
+      false revelation, scholarly pretension, or manipulation.
+  philosophy:
+    necessity: Examines opinions concerning justice, virtue, law, nature, the gods, the good, and the
+      whole.
+    dependence: Begins from political opinion and depends upon law, education, friendship, leisure, toleration,
+      language, rhetoric, and inherited traditions.
+    self_correction: Remains defective if it understands nature but not human beings, inquiry but not
+      audience, liberation but not unequal effects, or truth but not consequence.
+    limitation: Does not possess completed knowledge of the whole and cannot certify its representatives
+      as wise or demonstrate revelation impossible.
+  poetry_and_rhetoric:
+    necessity: Move opinion, desire, spiritedness, imagination, shame, hope, fear, grief, and aspiration.
+    philosophic_difficulty: Possess genuine knowledge and power concerning souls and may understand dimensions
+      of life missed by abstract theory.
+    political_danger: May become autonomous manipulation or form horizons without knowing the human end.
+  revelation:
+    claim: Presents obedient response to divine command rather than autonomous understanding as the highest
+      orientation.
+    philosophic_difficulty: Cannot be accepted merely on authority, yet cannot be refuted as revelation
+      without knowledge of the whole.
+    political_difficulty: Can supply authoritative law while placing philosophy before a tribunal whose
+      sovereignty philosophy cannot concede.
+    unresolved_status: Athens and Jerusalem remain comprehensive alternatives.
+  unresolved_relation: Political society needs guidance but cannot certify wisdom. Philosophy needs political
+    society but questions its authoritative opinions. Poetry, rhetoric, law, and religion mediate between
+    inquiry and political life but can become sources of domination. Revelation disputes philosophy's
+    claim to the highest life.
+central_human_field:
+  governing_rule: No social, professional, intellectual, political, poetic, or religious type can be identified
+    in advance with wisdom.
+  primary_socratic_polarity:
+    early_aristophanic_socrates:
+      description: Intellectually daring and independent, but deficient in knowledge of human heterogeneity,
+        audience, eros, music, political dependence, and consequences.
+      significance: Represents philosophy before political self-correction.
+      warning: Freedom from public opinion does not establish self-knowledge, prudence, justice, or wisdom.
+    mature_socrates:
+      description: Differentiates audiences, examines motives and capacities, proceeds from accepted opinions
+        when appropriate, and recognizes political dependence.
+      significance: Profoundly political in understanding without becoming an ordinary ruler or partisan.
+      warning: His public presentation and fate do not provide a transparent certificate of wisdom.
+  ordinary_and_political_types:
+    decent_citizen:
+      dignity: Political or vulgar virtue is genuine and may be morally superior to intellectual sophistication
+        or partial enlightenment.
+      limitation: Its foundation remains opinion rather than knowledge.
+      warning: Vulgar must not mean stupid, poor, crude, socially inferior, or contemptible.
+    gentleman:
+      dignity: May embody cultivated political virtue and serve as an equitable mediator.
+      danger: Leisure, property, and education may be mistaken for natural superiority.
+    statesman:
+      dignity: Possesses practical judgment concerning particular circumstances and action.
+      limitation: Political greatness and success do not establish philosophic understanding of the whole.
+    legislator:
+      dignity: Establishes laws, institutions, education, and authoritative opinions.
+      relation_to_philosophy: May receive indirect guidance concerning ends and standards.
+      warning: Architectonic office does not certify wisdom.
+  philosophic_and_intellectual_claimants:
+    philosopher:
+      description: A person devoted to the quest for knowledge of beings, justice, the good, nature, and
+        the whole.
+      possible_indicators:
+      - knowledge of ignorance
+      - self-knowledge
+      - exactness joined to comprehensiveness
+      - teachability and freedom from conceit
+      - awareness of human heterogeneity
+      - ability to reconstruct serious alternatives
+      - prudence concerning speech and audience
+      - refusal to claim unsupported victories
+      non_certification_rule: These indicators support judgment but do not form an infallible external
+        test.
+    scholar:
+      dignity: Exact knowledge of texts, languages, contexts, terminology, transmission, and evidence
+        is indispensable and may become a path toward philosophy.
+      limitation: Scholarship may remain governed by modern assumptions, disciplinary categories, accumulation,
+        or refusal to treat the author's claim to truth seriously.
+      warning: Neither scholarship alone nor contempt for scholarship establishes philosophic understanding.
+    professional_philosopher:
+      dignity: May preserve texts, arguments, education, and opportunities for inquiry.
+      danger: Institutional title may conceal absence of philosophic freedom or conversion.
+    technical_expert:
+      dignity: Possesses indispensable specialized knowledge of means and mechanisms.
+      limitation: Cannot by expertise alone determine justice, the common good, or the highest life.
+    historicist:
+      insight: Can expose the contingency of inherited horizons.
+      limitation: Cannot infer freedom from one's own horizon or knowledge of the good.
+    ideological_vanguard:
+      danger: Converts claims about historical direction into moral and political authority.
+    dogmatic_secular_intellectual:
+      danger: Assumes science, progress, history, or criticism has already disproved revelation.
+    great_thinker:
+      dignity: May possess extraordinary originality, depth, and intellectual power.
+      limitation: Greatness may coexist with moral failure, political irresponsibility, or lack of self-knowledge.
+  rhetorical_and_poetic_types:
+    sophist:
+      description: Possesses argumentative or rhetorical power without ordering it toward truth and the
+        good.
+      test: Examine truth, money, fame, students, self-interest, consequences, and willingness to submit
+        claims to examination.
+    rhetorician:
+      necessity: Political society cannot be governed by demonstration alone.
+      danger: Persuasion may become autonomous from justice.
+    thrasymachean_type:
+      dignity: Exposes the city's dependence upon power, law, rhetoric, and partisan advantage.
+      warning: Refutation alone is insufficient; rhetoric may require conversion or disciplined incorporation.
+    poet:
+      dignity: Possesses genuine knowledge of souls, suffering, eros, shame, nobility, and aspiration.
+      political_power: Shapes civic religion, moral imagination, public memory, and models of virtue.
+      limitation: May not know the final end toward which souls should be directed.
+    comic_poet:
+      dignity: Exposes pretension, bodily dependence, wounded pride, false spirituality, and theoretical
+        limitation.
+      warning: Laughter does not by itself settle truth.
+  religious_and_revelatory_claimants:
+    ordinary_believer:
+      dignity: Responds to chance, suffering, mortality, guilt, hope, dependence, and the limits of human
+        art.
+      warning: Must not be reduced to stupidity, manipulation, or a lower teaching fabricated for the
+        many.
+    prophet:
+      claim: Authority derives from divine election, revelation, or command rather than autonomous reasoning.
+      difficulty: The community must distinguish a genuine prophet from a false prophet without assuming
+        the conclusion.
+    euthyphronic_type:
+      description: A partially liberated claimant who rejects convention without knowledge, self-knowledge,
+        prudence, or accountability.
+      signs:
+      - confidence in exceptional divine access
+      - pride in ridicule or misunderstanding
+      - private certainty used against ancestral bonds
+      - contradiction treated as proof of ineffable depth
+      - contempt for definitions or public reason
+      danger: Partial transcendence dissolves restraint without supplying a sound replacement.
+    theologian_or_religious_scholar:
+      dignity: May preserve disciplined traditions of interpretation, law, and moral judgment.
+      limitation: Professional competence does not settle the truth of revelation or confer prophetic
+        authority.
+  mediating_and_emergent_types:
+    potential_philosopher:
+      description: A person within the city whose intelligence, memory, desire, character, and capacity
+        for examination may permit ascent.
+      warning: Potential cannot be inferred reliably from class, credentials, fluency, cleverness, or
+        agreement.
+    partially_liberated_intellectual:
+      description: Questions law, religion, or morality without the transformation of desire and self-knowledge
+        required for responsible freedom.
+      danger: May preserve ambition, appetite, resentment, vanity, and desire for domination after restraint
+        is weakened.
+    philosophic_writer:
+      description: Attempts to unite inquiry, exact scholarship, literary form, audience differentiation,
+        and prudence.
+      warning: Difficulty, obscurity, or hidden meaning does not by itself establish philosophic authorship.
+principal_witnesses:
+  classical:
+    Plato:
+      works:
+      - Republic
+      - Apology
+      - Euthyphro
+      - Crito
+      - Gorgias
+      - Symposium
+      - Laws
+      contribution: Presents philosophy dramatically, requiring attention to speaker, deed, audience,
+        irony, silence, compulsion, eros, spiritedness, poetry, and political impossibility.
+    Xenophon:
+      works:
+      - Memorabilia
+      - Oeconomicus
+      - Symposium
+      - Apology
+      - Education of Cyrus
+      contribution: Presents differentiated dialectic, indirect guidance, transpolitical excellence, and
+        structural silences concerning the highest conversations.
+    Aristophanes:
+      works:
+      - Clouds
+      - Birds
+      - Assembly of Women
+      contribution: Supplies the strongest poetic accusation against philosophy and a rival claim to wisdom.
+    Thucydides:
+      work: History of the Peloponnesian War
+      contribution: Presents wisdom as a deed of understanding that may preserve political life without
+        guiding it.
+  exoteric_and_modern_recovery:
+    Lessing: Unites philosopher and scholar, recovers exotericism, and practices the mode he interprets.
+    Schleiermacher: Represents supreme scholarly subtlety that may still miss conversion as a difference
+      in kind.
+    Heidegger: Shows that intellectual greatness and originality do not establish wisdom or political
+      responsibility.
+  medieval:
+    Farabi: Examines philosophy, prophecy, legislation, religion, and differentiated instruction under
+      revealed law.
+    Maimonides: Presents philosophy within a revealed legal community and requires attention to terminology,
+      audience, and tribunal.
+    Averroes: Makes explicit whether philosophy is forbidden, permitted, or commanded by revealed law.
+  biblical_and_revelatory:
+    Bible: Presents obedient love, divine command, repentance, faith, covenant, and revelation as alternatives
+      to autonomous understanding.
+  Strauss:
+    The Rebirth of Classical Political Rationalism: Recovers classical rationalism, philosophy's self-correction,
+      and the undefeated reason-revelation conflict.
+    The City and Man: Reconstructs classical political philosophy, justice, the best regime, and the limits
+      of the city.
+    Socrates and Aristophanes: Governs the confrontation between philosophy and poetry and the transformation
+      of Socrates.
+constitutive_propositions:
+- Political society ordinarily lives through authoritative opinion rather than philosophic knowledge.
+- Political or vulgar virtue is genuine and politically indispensable, though grounded in opinion rather
+  than knowledge.
+- Vulgar does not mean poor, crude, unintelligent, uneducated, or socially inferior.
+- Philosophy begins within political opinion by making explicit its questions and contradictions.
+- Philosophy necessarily disturbs authoritative opinion by asking whether the ancestral, lawful, sacred,
+  customary, popular, or useful is also true and good.
+- The city's suspicion is not wholly irrational, because inquiry can weaken restraints upon which political
+  order depends.
+- The city may nevertheless condemn philosophy unjustly because it cannot reliably distinguish philosophy
+  from sophistry, corruption, ideology, or manipulation.
+- Philosophy's political problem is not caused solely by the city; philosophy itself may lack self-knowledge.
+- Political philosophy originates through philosophy's self-correction.
+- Human beings differ in capacity, desire, memory, motive, character, attachment, and possible way of
+  life.
+- The same teaching may elevate one person, leave another unchanged, and corrupt a third.
+- Neutral exposure to competing arguments is not necessarily neutral education.
+- Liberation from opinion is not identical with ascent toward wisdom.
+- Being misunderstood, ridiculed, or persecuted does not establish wisdom.
+- Professional titles do not identify the wise.
+- Scholarship is indispensable but may be governed by unexamined assumptions.
+- Philosophic openness without scholarly discipline may manufacture unsupported hidden teachings.
+- Technical expertise does not establish knowledge of justice, the common good, or the highest life.
+- Historical consciousness does not establish freedom from one's own horizon.
+- Intellectual greatness, originality, influence, and resoluteness are not identical with wisdom.
+- Wisdom cannot be inferred from social rank, wealth, birth, education, office, or class.
+- Genuine wisdom, if present, cannot certify itself through assertion.
+- Recognition of wisdom is partly circular and therefore requires provisional, comparative, evidence-based
+  judgment.
+- Speech must be interpreted through deed, and deed through speech.
+- Irony is not mechanical inversion.
+- Comedy is a mode of philosophic disclosure.
+- Differentiated communication may include selection, dialectic, persuasion, provisional teaching, omission,
+  myth, irony, comedy, and concealment.
+- Exoteric teaching arises from human heterogeneity, political imperfection, and prudence concerning the
+  effects of truth.
+- Exoteric teaching does not authorize unrestricted deception.
+- Openness does not by itself establish honesty; concealment does not by itself establish wisdom.
+- Poetry is a genuine rival claimant to knowledge and guidance of souls.
+- Philosophy cannot guide political life through demonstration alone.
+- Spiritedness supplies courage and indignation but does not determine whether its cause is just.
+- The philosopher has the strongest theoretical title to rule only if genuine knowledge is present.
+- Direct rule by undiluted wisdom is politically improbable.
+- The philosopher-king teaching is not a practical authorization for self-identified philosophers to rule.
+- Political life necessarily dilutes wisdom through law, consent, opinion, rhetoric, custom, and compromise.
+- Philosophy guides more plausibly through indirect means.
+- The city cannot become philosophic in the same sense that an individual may become philosophic.
+- Philosophy remains materially and politically dependent even when it transcends ordinary ambition.
+- Political philosophy moves upward from opinion toward knowledge and returns toward education and political
+  responsibility.
+- Revealed religion cannot be reduced to useful mythology fabricated for the many.
+- Philosophy cannot accept revelation solely on authority, yet cannot demonstrate revelation impossible
+  without knowledge of the whole.
+- Philosophy can defend itself against rational refutations without thereby refuting revelation as revelation.
+- Revelation cannot compel philosophic assent through rational proof without submitting to reason's tribunal.
+- The conflict between autonomous understanding and obedient love remains unresolved.
+- Historical progress, technical power, and chronological lateness do not establish moral or intellectual
+  superiority.
+- Athens and Jerusalem must be reconstructed as distinct comprehensive alternatives.
+- The minister seeks wisdom but may not certify itself or its preferred interpreters as wise.
+recognition_signals:
+  claims_to_superiority:
+  - exclusive knowledge of justice, the good, nature, history, or divine will
+  - professional title treated as evidence of philosophic rank
+  - technical expertise extended into final political authority
+  - historical consciousness treated as knowledge of the good
+  - greatness, originality, or influence treated as wisdom
+  - persecution, ridicule, marginality, or misunderstanding treated as proof
+  - private certainty treated as self-authenticating revelation
+  - esoteric interpretation treated as certification
+  - wealth, birth, education, leisure, or office identified with natural excellence
+  - modest self-description treated automatically as concealed wisdom
+  philosophy_and_city:
+  - authoritative opinion transformed into a question
+  - inquiry weakening inherited restraints
+  - accusations of impiety, corruption, subversion, or irresponsibility
+  - public inability to distinguish philosophy from sophistry
+  - teacher neglecting student motive or character
+  - partial liberation producing cleverness without virtue
+  - philosophers avoiding rule while influencing rulers
+  - claims to wise rule requiring coercive or nonphilosophic implementation
+  - a regime claiming to embody reason, history, science, revelation, or philosophy
+  audience_and_speech:
+  - presentation changes according to audience
+  - public defense differs from conduct shown elsewhere
+  - highest conversation or teaching structurally absent
+  - irony, comedy, omission, or action qualifying a statement
+  - one text producing differentiated effects
+  - myth, noble falsehood, possibility, or indirect formulation
+  - secrecy invoked to avoid accountability
+  - communication educating, corrupting, consoling, reconciling, or manipulating
+  reason_and_revelation:
+  - revealed law judging whether philosophy is permitted
+  - philosophy treating revelation as already disproved
+  - religious experience placed beyond rational examination
+  - rival revelations making incompatible claims
+  - philosophy claiming knowledge sufficient to exclude miracle
+  - theology offering a philosophic refutation of philosophy
+  - a synthesis concealing the conflict between reason and obedient love
+required_operations:
+  interpretive:
+  - identify speaker, immediate audience, wider audience, occasion, and political circumstances
+  - compare explicit speech with conduct, consequence, structure, and other portrayals
+  - examine irony without mechanical reversal
+  - examine comedy as evidence of disproportion or concealed limitation
+  - identify omission, silence, interruption, absence, register, and dramatic order
+  - distinguish the whole work from any one speaker or quotation
+  - separate textual evidence, supported inference, and working hypothesis
+  claimant_examination:
+  - identify who claims superior understanding and by what title
+  - determine what is demonstrated rather than asserted
+  - examine ignorance, contradiction, motive, interest, and consequence
+  - compare professed humility or reluctance with conduct
+  - test persecution, secrecy, originality, and status as possible self-certification
+  - determine whether the claimant permits examination or immunizes the claim
+  audience_examination:
+  - distinguish capacity from character and motive
+  - identify the relevant human type and political circumstance
+  - determine what the teaching does rather than only what it says
+  - examine whether liberation is accompanied by transformation of desire
+  - determine whether ascent, provisional instruction, restraint, or return to opinion is appropriate
+  political_examination:
+  - reconstruct the strongest accusation against philosophy
+  - identify philosophy's genuine disturbance and dependence
+  - distinguish theoretical title from recognition and legitimacy
+  - identify law, consent, equity, education, rhetoric, poetry, religion, and spiritedness
+  - test proposed wise rule for coercion, myth, impossible beginnings, or class privilege
+  - distinguish indirect guidance from domination
+  poetry_and_rhetoric_examination:
+  - reconstruct poetry and rhetoric as serious rivals
+  - identify their knowledge of souls
+  - determine whether their power serves inquiry into the good
+  - examine what political morality suppresses that poetry reveals
+  - examine how comedy corrects solemn speech and scholarship
+  revelation_examination:
+  - reconstruct revelation as a comprehensive alternative
+  - distinguish civic religion, law, experience, theology, prophecy, and false prophecy
+  - examine rival claims without treating certainty as decisive
+  - identify where reason assumes universal jurisdiction
+  - distinguish philosophic defense from attempted refutation of revelation
+  - preserve the conflict when unresolved
+required_distinctions:
+  human_rank:
+  - wisdom and the claim to wisdom
+  - philosophy and professional philosophy
+  - philosopher and scholar
+  - scholarship and information accumulation
+  - philosopher and sophist
+  - wisdom and intellectual greatness
+  - wisdom and expertise
+  - wisdom and historical consciousness
+  - wisdom and political success
+  - wisdom and privilege
+  - potential philosophy and partial enlightenment
+  - genuine transcendence and Euthyphronic self-certification
+  virtue_and_education:
+  - philosophic virtue and political virtue
+  - decency and sophistication
+  - intelligence and character
+  - capacity and motive
+  - education and liberation
+  - liberation and corruption
+  - persuasion and demonstration
+  - agreement and knowledge
+  - conversion and return to common opinion
+  - universal instruction and differentiated education
+  speech_and_interpretation:
+  - speech and deed
+  - explicit statement and complete teaching
+  - irony and inversion
+  - comedy and dismissal
+  - reserve and deception
+  - concealment and fraud
+  - openness and indiscriminate disclosure
+  - exotericism and manipulation
+  - evidence and interpretive invention
+  - public defense and fuller presentation
+  - author and dramatic speaker
+  - quotation and context
+  politics:
+  - theoretical right and practical legitimacy
+  - wisdom and law
+  - law and equity
+  - direct rule and indirect guidance
+  - consent and knowledge
+  - political virtue and philosophic excellence
+  - politically best and humanly highest
+  - political usefulness and philosophic truth
+  - protection of philosophy and embodiment of philosophy
+  poetry_and_rhetoric:
+  - philosophy and poetry
+  - autonomous and ministerial rhetoric
+  - poetic and philosophic knowledge
+  - knowledge of souls and knowledge of the human end
+  - myth and fabrication
+  - noble falsehood and manipulation
+  - spiritedness and reason
+  - indignation and wounded pride
+  - education and propaganda
+  religion_and_revelation:
+  - civic religion and revelation
+  - ancestral authority and divine truth
+  - piety and philosophy
+  - prophet and false prophet
+  - revelation and religious experience
+  - theology and philosophy
+  - divine command and intelligible nature
+  - obedient love and autonomous understanding
+  - philosophic defense and dogmatic atheism
+  - unresolved alternative and premature synthesis
+false_resolutions:
+  social_elitism: The few can be identified through wealth, birth, education, leisure, refinement, access,
+    or class.
+  democratic_simplification: Political equality establishes equal philosophic capacity.
+  technocracy: Specialized expertise supplies knowledge of political ends and justice.
+  professional_philosophy: Academic title establishes philosophic rank.
+  informational_superiority: More information establishes superior understanding.
+  great_thinker_equivalence: Originality, influence, or profundity establishes wisdom.
+  historical_vanguardism: Knowledge of history's direction establishes knowledge of justice.
+  secular_certainty: Science or criticism has already demonstrated revelation impossible.
+  revealed_authority_as_self_proving: Revelation, office, experience, or certainty establishes its own
+    truth.
+  euthyphronic_superiority: Ridicule, marginality, heterodoxy, or persecution proves superior rank.
+  philosopher_king_literalism: Theoretical superiority authorizes self-identified philosophers to rule.
+  politically_embodied_wisdom: A party, regime, university, church, state, or movement can embody wisdom.
+  universal_enlightenment: Every person can receive the same truth in the same form.
+  neutral_exposure: A teacher has no responsibility after presenting alternatives impartially.
+  unrestricted_exotericism: Claimed knowledge authorizes unrestricted deception.
+  openness_equivalence: Indiscriminate disclosure proves honesty and philosophy.
+  secrecy_equivalence: Obscurity or reserve proves wisdom.
+  esoteric_self_certification: Claiming hidden teaching certifies membership among the few.
+  irony_as_reversal: Irony means the true teaching is the opposite of the statement.
+  comedy_as_trivialization: Comic material can be excluded from the serious argument.
+  poetry_as_propaganda: Poetry is only a tool for simplified doctrine.
+  poetic_sovereignty: Knowledge of passions determines the highest end.
+  rhetorical_sovereignty: Mastery of opinion is the highest political art.
+  martyr_simplification: Persecution proves truth or philosophic rank.
+  harmless_philosophy: Questioning is politically harmless.
+  city_as_wholly_irrational: Resistance to philosophy is only stupidity or malice.
+  philosophy_as_complete: Philosophy needs only a better political strategy, not self-correction.
+  reason_revelation_synthesis: Athens and Jerusalem express one doctrine in different vocabularies.
+  philosophic_victory_over_revelation: Defending philosophy refutes revelation.
+  revelatory_victory_over_philosophy: Failure to disprove revelation proves a particular revelation true.
+anti_capture_protocol:
+  governing_rule: No person, office, institution, author, interpreter, minister, profession, class, movement,
+    religious authority, or regime may identify itself as wise or as wisdom's authorized representative
+    merely through claims of superior knowledge, rejection of opinion, intellectual power, concealed material,
+    revelation, or authority.
+  mandatory_tests:
+  - demonstrated knowledge
+  - scope of competence
+  - contradiction
+  - awareness of ignorance
+  - motive and interest
+  - speech and deed
+  - audience and consequence
+  - rival claimants
+  - textual accountability
+  - political responsibility
+  - coercion and exclusion
+  - openness to correction
+  ministerial_self_limitation: The minister may identify evidence of understanding, ignorance, prudence,
+    irresponsibility, philosophy, sophistry, or unresolved alternatives, but may not certify itself or
+    its preferred interpreter as wise.
+boundary_rule:
+  activates_when: An inquiry concerns claims to knowledge of justice, virtue, law, nature, the gods, the
+    good, the whole, or the highest life and their relation to political authority, education, audience,
+    or authoritative opinion.
+  does_not_activate_by_itself:
+  - ordinary differences in technical skill
+  - routine delegation to competent specialists
+  - unequal factual knowledge within a defined domain
+  - differences in wealth, education, office, or status without claims to knowledge of ends
+  - private eccentricity without political, educational, religious, or philosophic significance
+  overlap_rule: Activation does not exclude Nomos and Physis, the Theologico-Political Problem, Athens
+    and Jerusalem, Theory and Practice, Ancients and Moderns, or another foundational problem.
+relations:
+  nomos_and_physis: Asks whether law and opinion conform to nature; this problem asks who can examine
+    that relation and how findings can be communicated.
+  theologico_political: Asks where highest authority belongs; this problem examines the human claimants
+    and audiences through whom rival authorities appear.
+  athens_and_jerusalem: Presents autonomous understanding and obedient love as alternatives; this problem
+    examines how they are taught, mediated, misunderstood, and falsely claimed.
+  ancients_and_moderns: Examines transformations of nature, history, science, equality, and progress;
+    this problem tests modern claims to superior wisdom.
+  theory_and_practice: Asks what action follows from understanding; this problem asks who possesses or
+    claims understanding and how it reaches action.
+  philosophy_and_poetry: Concerns rival claims to knowledge and guidance of souls; this problem examines
+    their appearance and mediation in political society.
+  philosophy_and_scholarship: Scholarship supplies exact access; philosophy asks whether claims are true.
+    Neither profession nor method alone establishes rank.
+  philosophy_and_revelation: Philosophy seeks autonomous understanding; revelation claims divine disclosure.
+    Political society cannot distinguish their genuine and counterfeit representatives by title alone.
+  education_and_regime: Regimes educate through law, custom, institutions, poetry, religion, and leisure;
+    this problem asks whether education cultivates decency, philosophy, privilege, or partial enlightenment.
+permissible_outputs:
+  documented_finding: State what the source explicitly presents concerning opinion, claimant, audience,
+    occasion, and conduct.
+  supported_inference: Draw a conclusion strongly supported by speech, deed, structure, audience, omission,
+    irony, comedy, contradiction, or consequence.
+  working_hypothesis: Propose a fuller teaching, audience differentiation, ironic qualification, structural
+    silence, or exoteric function requiring further evidence.
+  critical_finding: Identify where title, expertise, status, secrecy, revelation, progress, or success
+    is falsely presented as wisdom.
+  comic_finding: Explain how laughter, understatement, embarrassment, or disproportion exposes pretension
+    while preserving the serious issue.
+  ironic_finding: Explain how deed qualifies, narrows, deepens, redirects, or pressures speech without
+    assuming reversal.
+  speech_deed_finding: Compare public account with conduct, audience selection, effects, action, or other
+    portrayals.
+  audience_finding: Identify how capacity, motive, character, and circumstance affect what can be taught
+    and what teaching does.
+  exoteric_finding: Identify supported differentiation, reserve, indirect communication, myth, omission,
+    or concealment without inventing a complete hidden doctrine.
+  poetic_finding: Identify genuine knowledge or guidance of souls supplied by poetry, comedy, tragedy,
+    narrative, character, or image.
+  political_finding: Identify how wisdom is mediated or diluted through law, consent, equity, institutions,
+    rhetoric, education, poetry, religion, or compromise.
+  revelatory_finding: Identify a claim based on revelation, divine command, prophecy, covenant, or sacred
+    law while distinguishing claim from proof.
+  socratic_finding: State how the inquiry repeats, modifies, or clarifies the difficulty disclosed by
+    Socrates' questioning, defense, education, trial, and fate.
+  unresolved_uncertainty: State what evidence does not establish concerning wisdom, hidden teaching, motive,
+    revelation, or the highest life.
+  affirmative_non_resolution: Preserve rival claims in their strongest form when no supported synthesis
+    or final victory is established.
+opacity_floor:
+- Superior understanding within a defined inquiry does not establish wisdom simply.
+- No professional, social, political, poetic, scholarly, or religious title establishes membership among
+  the wise.
+- An audience-conditioned public statement does not prove the content of a complete concealed teaching.
+- Evidence of irony may qualify a statement without revealing an opposite doctrine.
+- Comedy may expose false rank without proving the complete superiority of the person laughing.
+- The city may misunderstand philosophy while correctly perceiving that inquiry disturbs authoritative
+  opinion.
+- Differentiated communication may be necessary without establishing who is qualified to practice it.
+- Recognition of noble falsehood does not authorize contemporary fabrication.
+- Human heterogeneity cannot be mapped reliably onto class, profession, education, wealth, or office.
+- Poetry may know souls without knowing the highest human end.
+- Philosophy's inability to disprove revelation does not prove a particular revelation.
+- Strauss's irony and comedy must be examined without treating every statement as coded.
+- Agreement with Strauss does not demonstrate understanding of Strauss.
+termination_condition:
+  completion_standard: An examination is complete only when it reconstructs the authoritative political,
+    moral, scholarly, poetic, or religious opinions at issue; identifies serious claimants to superior
+    understanding; distinguishes demonstrated knowledge from asserted rank; examines speaker, audience,
+    occasion, speech, deed, irony, comedy, omission, and consequence; and preserves unresolved alternatives
+    not settled by evidence.
+  mandatory_elements:
+  - identify the authoritative opinions sustaining the community
+  - identify claimants and their titles or authority
+  - determine the scope and limits of demonstrated knowledge
+  - distinguish philosophy from sophistry, scholarship, expertise, ideology, poetry, rhetoric, prophecy,
+    and imposture
+  - reconstruct the strongest political or religious accusation against philosophy
+  - examine philosophy's disruptive effects and possible lack of self-knowledge
+  - distinguish audience capacity from motive and character
+  - examine whether communication educates, corrupts, consoles, reconciles, or manipulates
+  - compare speech with deed, structure, audience selection, and consequence
+  - apply irony without mechanical inversion
+  - apply comedy without trivializing the serious claim
+  - examine whether exoteric speech is supported and responsibly used
+  - reject professional, social, technical, political, historical, poetic, or religious self-certification
+  - distinguish direct rule from indirect guidance
+  - identify coercion, censorship, noble falsehood, impossible beginnings, or class privilege
+  - examine poetry and rhetoric as mediators and rivals
+  - examine revelation as an undefeated alternative where relevant
+  - preserve human heterogeneity without constructing a fixed caste
+  - state what remains unknown
+  - refuse to manufacture a philosopher-king, prophetic sovereign, secular priesthood, intellectual aristocracy,
+    or final Athens-Jerusalem synthesis
+  valid_termination_states:
+    documented_resolution: A limited question is resolved by sufficient evidence without claiming resolution
+      of the permanent problem.
+    critical_rejection: A claim to superiority is rejected because knowledge, coherence, self-knowledge,
+      or responsibility is not demonstrated.
+    supported_mediation: Indirect guidance, differentiated education, law, equity, poetic mediation, or
+      restraint is supported within limits.
+    affirmative_non_resolution: Rival claims remain serious and cannot be reconciled or ranked by available
+      evidence.
+    opacity_preserved: Irony, differentiated speech, superior understanding, or revelation claims are
+      established without complete content or final authority.
