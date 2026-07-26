@@ -1,0 +1,87 @@
+schema_version: 1.0
+document_type: provisional_problem_synthesis
+
+identity:
+  synthesis_id: AVJ-SYN-001
+  problem: athens-vs-jerusalem
+  title: Studies in Platonic Political Philosophy — Athens vs. Jerusalem Synthesis
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SYNTHESIS_RECORD_FOR_INACTIVE_SUCCESSOR
+
+source_record:
+  study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  primary_source:
+    author: Leo Strauss
+    title: Studies in Platonic Political Philosophy
+    publication_year: 1983
+
+jurisdictional_result: >
+  Athens and Jerusalem are comprehensive rival beginnings: wonder, nature, and
+  autonomous understanding versus fear of the Lord, creation, command, and obedient
+  love. Their historical interpenetration does not establish doctrinal harmony.
+
+permanent_findings:
+  - finding_id: AVJ-SPPP-F001
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Biblical wisdom begins from fear of the Lord and Greek philosophy from wonder.
+  - finding_id: AVJ-SPPP-F002
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Creation by a free God and nature or ungenerated being are distinct comprehensive beginnings.
+  - finding_id: AVJ-SPPP-F003
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Prophet and philosopher claim authority through different acts: divine calling and autonomous inquiry.
+  - finding_id: AVJ-SPPP-F004
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: The Messianic age and the classical best regime must not be identified.
+  - finding_id: AVJ-SPPP-F005
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Biblical universalism is historically borne by a particular elected people.
+  - finding_id: AVJ-SPPP-F006
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Maimonides preserves both claims through articulated mediation rather than declaring simple identity.
+  - finding_id: AVJ-SPPP-F007
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Machiavelli attempts to escape the alternative through effective truth, human founding, and mastery of fortune.
+  - finding_id: AVJ-SPPP-F008
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Cohen reconciles the alternatives by rationalizing Jerusalem under autonomous moral reason.
+
+false_resolutions:
+  - Athens and Jerusalem are merely two historical cultures.
+  - Shared language about God, wisdom, law, or justice proves doctrinal harmony.
+  - The Messianic age is the classical best regime under another name.
+  - Election is only ethnic pride or can be dissolved into universal ethics without remainder.
+  - Philosophy's inability to refute revelation proves Jerusalem.
+  - Rational religion preserves revelation without transforming its deeds and commands.
+
+uncertainties:
+  - The volume leaves the highest human life unresolved between autonomous inquiry and obedient love.
+  - The necessity of a particular national bearer for a universal moral vocation remains open.
+  - Maimonidean mediation requires further independent reconstruction.
+  - Modern attempts to escape or synthesize the alternatives do not conclusively defeat either.
+
+cross_problem_references:
+  - problem: theologico-political
+    relevance: Governs political law, sovereignty, and public mediation of the comprehensive conflict.
+  - problem: nomos-vs-physis
+    relevance: Nature and divine positive law possess distinct jurisdictions.
+  - problem: philosophy-vs-poetry
+    relevance: Greek poetic theology must not be identified with Biblical revelation.
+  - problem: ancients-vs-moderns
+    relevance: Modernity attempts to supersede, synthesize, or transform both alternatives.
+  - problem: wise-vs-vulgar
+    relevance: Philosopher and prophet are rival claimants whose authority requires recognition.
+
+termination:
+  state: PROVISIONAL_SOURCE_SYNTHESIS_COMPLETE
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - create inquiry-profile.yaml
+    - create witnesses.yaml
+    - create relations.yaml
+    - test findings against independent Biblical, Platonic, and Maimonidean studies
