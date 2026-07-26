@@ -1,0 +1,385 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: ancients-vs-moderns
+  title: Ancients vs. Moderns — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/ancients-vs-moderns/problem.yaml
+  inquiry_profile_reference: problems/ancients-vs-moderns/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry records ancient, Biblical, modern, historicist, scientific,
+    institutional, and interpretive witnesses without treating chronology, novelty,
+    antiquity, power, practical success, or historical endurance as a certificate of rank.
+
+registry_purpose: >
+  Preserve the source-specific independence of the principal witnesses through whom
+  ancient and Biblical standards and modern transformations of nature, right,
+  history, science, equality, revelation, education, and political power must be reconstructed.
+
+source_status_rules:
+  - rule_id: AVM-WSR-001
+    rule: >
+      Ancient, Biblical, medieval, early modern, modern, historicist, scientific, and
+      institutional witnesses must be reconstructed in their own terminology,
+      sequence, audience, and documentary condition before comparison.
+  - rule_id: AVM-WSR-002
+    rule: >
+      Studies in Platonic Political Philosophy is a posthumous collection of qualified
+      primary Strauss sources. Pangle's introduction remains secondary context and may
+      not supply Strauss's missing authorial design.
+  - rule_id: AVM-WSR-003
+    rule: >
+      Later labels such as ancient, modern, Enlightenment, historicist, liberal,
+      secular, scientific, or postmodern are classificatory aids and may not replace
+      reconstruction of the author's own claim.
+  - rule_id: AVM-WSR-004
+    rule: >
+      Claims of novelty, progress, discovery, realism, revolution, restoration, or
+      supersession must be tested against sources and not accepted through self-description.
+  - rule_id: AVM-WSR-005
+    rule: >
+      Technical power, institutional durability, military success, economic growth,
+      scientific prediction, or historical victory is evidence of capacity and effect,
+      not automatic evidence of philosophical or moral superiority.
+  - rule_id: AVM-WSR-006
+    rule: >
+      Historical or psychological genealogy does not by itself refute natural right,
+      revelation, or any norm, while invocation of transcendence does not exempt a
+      doctrine from historical and textual examination.
+  - rule_id: AVM-WSR-007
+    rule: >
+      Retention of words such as nature, right, creation, revelation, Law, morality,
+      reason, equality, or progress does not establish continuity of doctrine.
+
+principal_witnesses:
+  - witness_id: AVM-WIT-001
+    name: Leo Strauss
+    witness_class: PRIMARY_MODERN_INTERPRETIVE_AND_PHILOSOPHIC_WITNESS
+    local_role: >
+      Governing modern witness for reconstructing the ancient-modern quarrel, the
+      lowering thesis, the crisis of natural right, historicism, modern rationalism,
+      revelation, and the relation between practical power and philosophical rank.
+    documentary_standing:
+      authority: PRIMARY_FOR_STRAUSS_INTERPRETATION
+      limit: >
+        Strauss governs claims about his own arguments and readings, not the final
+        independent meaning or rank of ancient, Biblical, medieval, or modern witnesses.
+    registered_sources:
+      - source_id: AVM-STR-SRC-001
+        title: Studies in Platonic Political Philosophy
+        publication_condition: POSTHUMOUS_COLLECTION_ARRANGED_AND_TITLED_BY_STRAUSS
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+        completed_study_record: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+        synthesis_record: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_id: SPPP-STUDY-001
+        study_status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
+      - source_id: AVM-STR-SRC-002
+        title: Natural Right and History
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Central witness concerning classical natural right, modern natural rights,
+          conventionalism, historicism, and the crisis of rational standards.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+      - source_id: AVM-STR-SRC-003
+        title: Thoughts on Machiavelli
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Central witness concerning the modern break, lowered beginnings, effectual
+          truth, religion, founding, and the relation between ancients and moderns.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+      - source_id: AVM-STR-SRC-004
+        title: The Political Philosophy of Hobbes
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Major witness concerning Hobbes's modern beginning, fear, preservation,
+          sovereignty, science, and relation to classical political philosophy.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+    claimant_status: INTERPRETER_AND_PHILOSOPHIC_CLAIMANT_REQUIRING_TEST
+
+  - witness_id: AVM-WIT-002
+    name: Plato
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_AND_DRAMATIC_WITNESS
+    local_role: >
+      Principal ancient witness concerning nature, justice, soul, virtue, education,
+      philosophy, law, regime, the good, contemplation, and the relation between the
+      best order and political possibility.
+    required_source_domains:
+      - Republic
+      - Laws
+      - Statesman
+      - Gorgias
+      - Apology
+      - other relevant dialogues
+    documentary_limit: >
+      Dialogue speech is not automatically Platonic doctrine; dramatic and
+      compositional evidence must be reconstructed.
+    study_status: INDEPENDENT_PLATONIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-003
+    name: Aristotle
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Principal ancient witness concerning nature, ends, virtue, contemplation,
+      practical wisdom, political association, regime, law, equity, and human flourishing.
+    required_source_domains:
+      - Nicomachean Ethics
+      - Politics
+      - Metaphysics where relevant
+    documentary_limit: >
+      Later scholastic, liberal, republican, or Straussian classifications may not
+      substitute for Aristotle's own argument.
+    study_status: INDEPENDENT_ARISTOTELIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-004
+    name: Biblical revelation
+    witness_class: INDEPENDENT_PREMODERN_REVELATORY_CLAIMANT
+    local_role: >
+      Principal Biblical horizon concerning creation, command, covenant, Law,
+      prophecy, obedience, judgment, promise, and redemption against which modern
+      secularization, rationalization, and historicization must be tested.
+    principal_textual_domains:
+      - Genesis
+      - Torah
+      - Biblical prophecy
+      - other relevant Biblical writings
+    documentary_limit: >
+      The registry does not certify divine origin. Biblical revelation is not merely
+      an ancient historical stage or cultural predecessor to modern morality.
+    study_status: INDEPENDENT_BIBLICAL_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-005
+    name: Niccolo Machiavelli
+    witness_class: INDEPENDENT_FOUNDING_MODERN_POLITICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Major witness concerning effectual truth, ordinary passions, necessity, fortune,
+      founding, acquisition, civil religion, political innovation, and reliable action.
+    required_source_domains:
+      - The Prince
+      - Discourses on Livy
+      - other relevant political and literary works
+    documentary_limit: >
+      Machiavelli's claim of novelty and practical success must be reconstructed rather
+      than presumed; Strauss's interpretation does not replace Machiavelli's texts.
+    study_status: INDEPENDENT_MACHIAVELLIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-006
+    name: Thomas Hobbes
+    witness_class: INDEPENDENT_MODERN_POLITICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Major witness concerning fear, preservation, natural right, natural law,
+      covenant, authorization, sovereignty, method, peace, science, and institutional reliability.
+    required_source_domains:
+      - Leviathan
+      - De Cive
+      - Elements of Law
+    documentary_limit: >
+      Sovereign peace and systematic clarity do not automatically establish a higher
+      human end or continuity with classical natural right.
+    study_status: INDEPENDENT_HOBBESIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-007
+    name: John Locke
+    witness_class: INDEPENDENT_MODERN_NATURAL_RIGHTS_WITNESS
+    local_role: >
+      Major witness concerning natural rights, property, consent, government,
+      toleration, reason, preservation, and the political institutionalization of modern rights.
+    required_source_domains:
+      - Two Treatises of Government
+      - Letter Concerning Toleration
+      - Essay Concerning Human Understanding where relevant
+    documentary_limit: >
+      Later liberal institutions and summaries may not substitute for Locke's own
+      theological, natural-law, epistemic, and political arguments.
+    study_status: INDEPENDENT_LOCKEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-008
+    name: Jean-Jacques Rousseau
+    witness_class: INDEPENDENT_MODERN_CRITICAL_AND_FOUNDING_WITNESS
+    local_role: >
+      Major witness concerning nature, inequality, freedom, society, amour-propre,
+      general will, civil religion, education, authenticity, and critique of modern civilization.
+    required_source_domains:
+      - Discourse on Inequality
+      - Social Contract
+      - Emile
+      - other relevant works
+    documentary_limit: >
+      Rousseau's critique and reconstruction of nature must not be reduced to a simple
+      return to the ancients or a continuation of Hobbes and Locke.
+    study_status: INDEPENDENT_ROUSSEAUIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-009
+    name: G. W. F. Hegel and the historicist tradition
+    witness_class: INDEPENDENT_HISTORICIST_AND_COMPLETION_CLAIMANT_LINE
+    local_role: >
+      Major witness line concerning historical reason, recognition, freedom, state,
+      action, dialectic, and possible reconciliation or completion through history.
+    required_source_domains:
+      - Hegelian primary works relevant to politics and history
+      - later historicist developments reconstructed separately
+    documentary_limit: >
+      Later summaries and political outcomes do not substitute for Hegel's argument;
+      historicist self-reference and the status of historical completion remain open.
+    study_status: INDEPENDENT_HEGELIAN_AND_HISTORICIST_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-010
+    name: Friedrich Nietzsche
+    witness_class: INDEPENDENT_MODERN_GENEALOGICAL_AND_VALUE_CREATION_CLAIMANT
+    local_role: >
+      Major witness concerning genealogy, nihilism, rank, value creation, future
+      philosophers, nature, history, morality, and attempted overcoming of both ancient
+      and Biblical standards.
+    documentary_limit: >
+      Genealogical power and creative authority do not certify the creator's justice,
+      political responsibility, or freedom from modernity.
+    study_status: INDEPENDENT_NIETZSCHEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-011
+    name: Martin Heidegger
+    witness_class: INDEPENDENT_MODERN_PHILOSOPHIC_AND_HISTORICAL_CLAIMANT
+    local_role: >
+      Major witness concerning the history of Being, critique of modern technology,
+      historicity, phenomenology, authenticity, and the relation between philosophy
+      and political judgment.
+    documentary_limit: >
+      Philosophical greatness, historical diagnosis, or radical questioning does not
+      certify political wisdom or resolve ancient, Biblical, and modern standards.
+    study_status: INDEPENDENT_HEIDEGGERIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-012
+    name: Alexandre Kojeve
+    witness_class: INDEPENDENT_HISTORICIST_POLITICAL_COMPLETION_CLAIMANT
+    local_role: >
+      Major witness concerning tyranny, recognition, universal homogeneous state,
+      historical completion, administrative rule, and the relation between philosopher and statesman.
+    documentary_limit: >
+      Historical success or administrative universality does not establish final truth
+      or completion without independent argument.
+    study_status: INDEPENDENT_KOJEVIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-013
+    name: Hermann Cohen
+    witness_class: INDEPENDENT_MODERN_RATIONAL_RELIGIOUS_WITNESS
+    local_role: >
+      Major witness to modern moral purification and transformation of creation,
+      revelation, Law, holiness, election, messianism, immortality, and historical progress.
+    documentary_limit: >
+      Preservation of religious vocabulary may accompany transformation of historical
+      divine deed, command, covenant, obedience, and redemption.
+    independence_rule: >
+      Reconstruct Cohen independently before allowing Strauss's introductory essay to govern.
+    study_status: INDEPENDENT_COHEN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVM-WIT-014
+    name: Modern science, technology, and institutions
+    witness_class: COMPOSITE_EPISTEMIC_AND_POLITICAL_WITNESS_LINE
+    local_role: >
+      Supplies evidence concerning method, prediction, experiment, technical mastery,
+      bureaucracy, administration, rights, markets, public health, war, communication,
+      education, and institutional scale.
+    documentary_limit: >
+      The composite line contains heterogeneous practices and institutions. Domain
+      success does not establish comprehensive wisdom, moral progress, or the highest human end.
+    study_status: DOMAIN_AND_CASE_SPECIFIC_RECONSTRUCTION_REQUIRED
+
+contextual_and_editorial_witnesses:
+  - witness_id: AVM-CXT-001
+    name: Thomas L. Pangle
+    witness_class: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+    source_relation: Introduction to Studies in Platonic Political Philosophy
+    permitted_role: >
+      Bibliographic orientation and provisional questions to test against Strauss's primary essays.
+    prohibited_role: >
+      Supplying Strauss's missing introduction or deciding the rank of ancients,
+      Biblical revelation, moderns, historicism, science, or political power.
+
+witness_relation_rules:
+  independent_reconstruction_rule: >
+    Every ancient, Biblical, medieval, modern, historicist, scientific, and
+    institutional witness must be reconstructed on its own terms before comparative synthesis.
+  non_confirmation_rule: >
+    No witness may be forced to confirm SPPP-STUDY-001, Strauss's lowering thesis, a
+    progress narrative, or a decline narrative.
+  no_chronology_rule: >
+    Earlier and later establish sequence, not rank.
+  no_power_rule: >
+    Technical, institutional, economic, military, or political power does not certify comprehensive truth.
+  no_genealogy_rule: >
+    Historical explanation does not by itself refute natural, moral, or revelatory claims.
+  transformation_rule: >
+    Every claimed continuity or reconciliation must identify altered terms, authorities,
+    practices, ends, and political consequences.
+  jurisdiction_rule: >
+    Natural-right content remains Nomos vs. Physis; practical implementation remains
+    Theory vs. Practice; ultimate reason-revelation authority remains Theologico-Political;
+    complete Athens-Jerusalem orientations remain distinct; rank remains Wise vs. Vulgar.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-STUDY-001
+      witness: Leo Strauss
+      source: Studies in Platonic Political Philosophy
+      path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+      local_synthesis: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+      completion: COMPLETE_FOR_REGISTERED_COLLECTION
+      certification: NOT_CERTIFIED
+  pending:
+    - complete Strauss source-specific reconstruction beyond SPPP-STUDY-001
+    - independent Plato reconstruction
+    - independent Aristotle reconstruction
+    - independent Biblical reconstruction
+    - independent Machiavelli reconstruction
+    - independent Hobbes reconstruction
+    - independent Locke reconstruction
+    - independent Rousseau reconstruction
+    - independent Hegel and historicism reconstruction
+    - independent Nietzsche reconstruction
+    - independent Heidegger reconstruction
+    - independent Kojeve reconstruction
+    - independent Cohen reconstruction
+    - modern science, technology, and institutional case studies
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This registry is a subordinate successor record. It does not certify or activate
+    Ancients vs. Moderns, convert pending studies into evidence, or authorize deletion,
+    chronological ranking, retrospective harmonization, or jurisdictional merger.
+  prohibitions:
+    - no silent deletion of a witness or source
+    - no chronology, novelty, antiquity, power, or weakness treated as certification
+    - no ancient, Biblical, or modern horizon treated as homogeneous
+    - no genealogy treated as refutation by itself
+    - no institutional success treated as comprehensive wisdom
+    - no secondary framing governing primary meaning
+    - no certification from registry validity alone
+
+termination:
+  registry_state: FOUNDING_WITNESS_REGISTRY_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - ancient, Biblical, modern, historicist, and institutional witness lines remain distinct
+    - completed and pending studies are distinguished
+    - chronology and power cannot certify rank
+    - transformations remain explicit rather than hidden by shared vocabulary
+    - independent reconstruction requirements remain enforceable
+  current_limit: >
+    Structural witness registration is complete for founding production. Independent
+    ancient, Biblical, modern, scientific, and institutional reconstruction remains pending.
