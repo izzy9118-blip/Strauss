@@ -1,0 +1,136 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: nomos-vs-physis
+  title: Nomos vs. Physis — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/nomos-vs-physis/problem.yaml
+  relations_reference: problems/nomos-vs-physis/relations.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+
+source_orientation:
+  founding_study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  founding_synthesis: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
+  source_limit: >
+    The Strauss collection establishes a provisional problem structure but does not
+    complete independent reconstruction of classical, Biblical, medieval, or modern witnesses.
+
+shared_protocol_references:
+  required:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+  conditional:
+    - claimant-to-wisdom
+    - audience-and-rhetoric
+
+problem_specific_operations:
+  - operation_id: NVP-OP-001
+    name: CLASSIFY_STANDARD
+    instruction: >
+      Identify whether the operative standard is human enactment, custom, inherited
+      opinion, divine positive law, natural law, natural fact, utility, or power.
+  - operation_id: NVP-OP-002
+    name: DISTINGUISH_LAWFUL_AND_JUST
+    instruction: >
+      Do not infer justice from validity, antiquity, consensus, sacred reputation, or enforcement.
+  - operation_id: NVP-OP-003
+    name: TEST_NATURAL_RIGHT_CLAIM
+    instruction: >
+      Determine whether nature is functioning as a rational standard of ends or only
+      as recurrence, biology, force, necessity, or rhetorical legitimation.
+  - operation_id: NVP-OP-004
+    name: DISTINGUISH_DIVINE_AND_NATURAL_LAW
+    instruction: >
+      Preserve the different sources, epistemic burdens, and jurisdictions of divine positive and natural law.
+  - operation_id: NVP-OP-005
+    name: EXAMINE_APPLICATION
+    instruction: >
+      Identify the general standard, particular circumstances, equitable correction,
+      prudential judgment, and risk of relativistic or rigid application.
+  - operation_id: NVP-OP-006
+    name: RECORD_MODERN_TRANSFORMATION
+    instruction: >
+      Determine whether modern thought preserves, lowers, historicizes, denies, or
+      transfers the natural standard to right, will, history, or value creation.
+
+activation_signals:
+  direct:
+    - law or custom is treated as just because it is enacted or inherited
+    - nature is invoked to justify a political hierarchy or practice
+    - recurring fact is treated as moral right
+    - divine and natural law are identified
+    - equity or prudence qualifies general law
+    - modern value creation denies stable natural ends
+  non_activation_signals:
+    - ordinary legal interpretation without a nature-convention issue
+    - every scientific claim about nature
+    - every theological command
+    - every policy disagreement
+
+governing_distinctions:
+  - distinction_id: NVP-DIST-001
+    terms: [lawful, just]
+    rule: Legal validity does not establish justice.
+  - distinction_id: NVP-DIST-002
+    terms: [natural_fact, natural_right]
+    rule: Recurrence or necessity does not establish moral authority.
+  - distinction_id: NVP-DIST-003
+    terms: [human_positive_law, divine_positive_law, natural_law]
+    rule: Enacted, revealed, and rationally natural standards must remain distinct.
+  - distinction_id: NVP-DIST-004
+    terms: [universal_standard, prudential_application]
+    rule: Circumstantial judgment does not by itself dissolve the standard.
+  - distinction_id: NVP-DIST-005
+    terms: [nature, modern_value_creation]
+    rule: Denial of natural ends transfers rather than abolishes legislative authority.
+
+investigative_questions:
+  - What is the asserted source of authority?
+  - Is the claim descriptive, causal, legal, moral, natural, or revelatory?
+  - What human end or hierarchy is said to be natural?
+  - Could the same evidence support only recurrence or power rather than right?
+  - What circumstance requires equity or prudence?
+  - Does variation preserve or destroy the standard?
+  - Has a neighboring problem's doctrine been imported without reference?
+
+false_resolutions:
+  - validity equals justice
+  - recurrence equals right
+  - revelation equals natural law
+  - prudence equals relativism
+  - success equals natural superiority
+  - denial of nature equals emancipation from all authority
+
+output_constraints:
+  required:
+    - identify the standard and its source
+    - distinguish descriptive and normative claims
+    - classify evidence and uncertainty
+    - record cross-problem transfers by reference
+  prohibited:
+    - certify law through enactment alone
+    - infer natural right from force or repetition
+    - collapse divine and natural law
+    - treat every legal question as foundational
+
+termination:
+  state_options:
+    - STANDARD_IDENTIFIED
+    - LAW_JUSTICE_DISTINCTION_PRESERVED
+    - NATURAL_RIGHT_CLAIM_SUPPORTED
+    - PRUDENTIAL_APPLICATION_SUPPORTED
+    - NATURAL_RIGHT_UNRESOLVED
