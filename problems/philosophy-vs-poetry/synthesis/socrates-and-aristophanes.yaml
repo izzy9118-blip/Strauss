@@ -1,0 +1,142 @@
+schema_version: 1.0
+document_type: provisional_problem_synthesis
+
+identity:
+  synthesis_id: PVP-SYN-001
+  problem: philosophy-vs-poetry
+  title: Socrates and Aristophanes — Foundational Synthesis
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SYNTHESIS_RECORD
+
+source_record:
+  study: >
+    studies/socrates-and-aristophanes/
+    philosophy-poetry-theologico-political-reconstruction.yaml
+  primary_source:
+    author: Leo Strauss
+    title: Socrates and Aristophanes
+    publication_year: 1966
+  scope: >
+    Sequential reconstruction of the Introduction, The Clouds, the ten other
+    comedies in Strauss's order, and the Conclusion.
+
+governing_result: >
+  Poetry is superior to truncated natural philosophy where philosophy lacks
+  self-knowledge, prudence, knowledge of souls, eros, music, audience, and
+  political consequence. Mature Socratic philosophy is superior to poetry only
+  by integrating the truths poetry discloses into inquiry into the
+  all-comprehensive whole.
+
+permanent_findings:
+  - finding_id: PVP-SA-F001
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: >
+      Poetry and philosophy appear as rival forms of wisdom.
+  - finding_id: PVP-SA-F002
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: >
+      Aristophanes' accusation concerns the young Socrates' deficient
+      self-knowledge, prudence, knowledge of souls, eros, music, audience, and
+      political responsibility.
+  - finding_id: PVP-SA-F003
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: >
+      Comedy possesses substantive knowledge of human types, desire, suffering,
+      justice, piety, ridicule, imitation, and differentiated audiences.
+  - finding_id: PVP-SA-F004
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: >
+      Comedy is total within its form but remains a partial mirror of human
+      life.
+  - finding_id: PVP-SA-F005
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: >
+      Philosophy's superiority is integrative rather than presumptive.
+  - finding_id: PVP-SA-F006
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: >
+      Knowledge of souls and the soul belongs within knowledge of the whole.
+  - finding_id: PVP-SA-F007
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: >
+      Education commonly redirects governing desires through form, authority,
+      reward, fear, hope, and altered circumstance rather than eradicating them.
+  - finding_id: PVP-SA-F008
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: >
+      Poetic theology must be distinguished from revelation even where it
+      governs public understanding of gods and sacred authority.
+
+brother_problem_finding:
+  related_problem: theologico-political
+  designation: BROTHER_PROBLEM
+  strength: CO_FOUNDATIONAL
+  proposition: >
+    The entire source belongs to both problems because the quarrel over poetic
+    and philosophic wisdom repeatedly concerns Socrates' teaching regarding the
+    gods and the question of what makes gods gods for human beings.
+  coactivation_rule: >
+    Activate both problems where poetic or philosophic education concerns gods,
+    piety, prophecy, oath, sacred law, worship, divine mediation, or resistance
+    to divine authority.
+  jurisdiction_boundary: >
+    Philosophy vs. Poetry owns rival human wisdom and education. The
+    Theologico-Political Problem owns ultimate divine authority, revelation,
+    command, sacred law, and sovereignty.
+  non_absorption_rule: >
+    Poetry is not revelation. Revelation is not poetic construction. Civic
+    theology and political efficacy are not proof of divine truth.
+
+supported_inferences:
+  - >
+    The mature Socratic turn may be read structurally as philosophy's answer to
+    the strongest Aristophanic accusation.
+  - >
+    Plato's dramatic practice may preserve poetic knowledge inside philosophic
+    inquiry rather than simply excluding poetry.
+  - >
+    Philosophy cannot responsibly judge divine authority where it has not
+    adequately examined the soul's erotic, political, poetic, and sacred
+    orientation.
+  - >
+    Poetic power can preserve or replace public theology more effectively than
+    natural inquiry can abolish the human need for authoritative orientation.
+
+uncertainties:
+  - >
+    Historical causation between Aristophanes' criticism and the transformation
+    of Socrates remains unproven.
+  - >
+    Knowledge of the human recognition of gods does not settle divine truth.
+  - >
+    The source does not establish whether Plato finally integrates or
+    subordinates poetry.
+  - >
+    The ultimate superiority claim remains dependent upon further Platonic,
+    Xenophontic, Aristophanic, and Strauss corpus study.
+
+constitutional_actions_implemented:
+  - >
+    Updated problems/philosophy-vs-poetry/problem.yaml to version 0.2.0.
+  - >
+    Designated The Theologico-Political Problem as a co-foundational brother
+    problem without transferring jurisdiction.
+  - >
+    Created problems/philosophy-vs-poetry/relations.yaml using controlled
+    relation types and a separate BROTHER_PROBLEM constitutional designation.
+  - >
+    Preserved the full source reconstruction in a source-specific study record.
+
+termination:
+  state: PROVISIONAL_FOUNDATIONAL_SYNTHESIS_COMPLETE
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - create inquiry-profile.yaml
+    - create witnesses.yaml
+    - examine Plato and Xenophon as independent witnesses
+    - reconstruct the Theologico-Political successor constitution
+    - validate cross-problem references during foundational migration
