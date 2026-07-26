@@ -1,0 +1,194 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: ancients-vs-moderns
+  canonical_order: 7
+  title: Ancients vs. Moderns
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  source_status: >
+    This is an inactive successor draft created under the seven-problem migration.
+    It defines the permanent quarrel and does not certify either antiquity or modernity by chronology.
+
+documentary_basis:
+  founding_strauss_source:
+    title: Studies in Platonic Political Philosophy
+    study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+    local_contribution: >
+      Supplies the movement from classical nature and the highest life to Machiavellian
+      effective truth, Hobbesian preservation, modern rights, historicism, Nietzschean
+      value creation, social reduction, and Cohenian rational religion.
+
+origin: >
+  Ancient political philosophy begins from nature, virtue, the best regime, and the
+  highest human life while accepting political improbability and the limits of control.
+  Modern political philosophy seeks reliable realization through predictable passions,
+  rights, institutions, science, history, and mastery of chance, often by lowering,
+  transforming, or denying the ancient standard.
+
+governing_question: >
+  Does modern political thought surpass ancient political philosophy by discovering
+  truer principles and more reliable institutions, or does it gain power and
+  predictability by narrowing the horizon and abandoning questions concerning nature,
+  virtue, wisdom, and the highest human life?
+
+compressed_question: >
+  Is modern power a gain in wisdom or partly the result of lowered and narrowed ends?
+
+jurisdiction:
+  owns:
+    - the ancient-modern quarrel in political philosophy
+    - classical nature, virtue, best regime, and political improbability
+    - modern rights, preservation, property, sovereignty, comfort, and institutional reliability
+    - progress, historicism, scientific mastery, and historical consciousness
+    - Machiavellian lowering and public authorization of effective means
+    - Hobbesian regularization through common passions and institutions
+    - Nietzschean value creation and future philosopher-commanders
+    - modern rationalization, secularization, and transformation of revelation
+    - narrowing as a source of genuine modern discovery and power
+  does_not_own:
+    - canonical_key: nomos-vs-physis
+      reason: The status of nature, convention, and natural right belongs there.
+    - canonical_key: philosophy-vs-poetry
+      reason: Rival poetic and philosophic forms of wisdom belong there.
+    - canonical_key: theory-vs-practice
+      reason: The general mediation from standards to action and institutions belongs there.
+    - canonical_key: theologico-political
+      reason: Ultimate authority among reason, revelation, and sovereignty belongs there.
+    - canonical_key: athens-vs-jerusalem
+      reason: The comprehensive alternatives themselves belong there.
+    - canonical_key: wise-vs-vulgar
+      reason: Recognition of scholars, experts, philosophers, and vanguards belongs there.
+
+permanent_tension:
+  ancients:
+    strongest_claim: >
+      Political life must be judged by nature, virtue, the hierarchy of human ends,
+      the best regime, and the philosophic life.
+    limitation: >
+      Realization may depend upon rare virtue, exceptional circumstances, and an
+      improbable coincidence of philosophy and political power.
+  moderns:
+    strongest_claim: >
+      Stable order and improvement require beginnings in common passions, rights,
+      institutions, method, science, and deliberate control rather than rare excellence.
+    limitation: >
+      Reliability may be purchased through lowered ends, denial of nature, historical
+      self-certification, or reduction of human beings to manageable material.
+  continuity_and_novelty:
+    proposition: >
+      Modern thinkers often know phenomena already known to the ancients but isolate,
+      authorize, systematize, or institutionalize them under a narrower horizon.
+    danger: >
+      Antiquity may be romanticized and modern gains dismissed, or modern power may be
+      mistaken for comprehensive understanding.
+  unresolved_relation: >
+    Modern political power may exceed ancient political power without exceeding
+    ancient understanding of the human good. The final judgment requires comparison
+    of gains, losses, standards, and human consequences.
+
+boundary:
+  activates_when:
+    - chronology, progress, or historical lateness is treated as proof of rank
+    - ancient virtue and best regime are compared with modern rights and institutions
+    - Machiavelli, Hobbes, Locke, Nietzsche, historicism, socialism, or rational religion transform older standards
+    - technical, scientific, or economic mastery is treated as wisdom concerning ends
+    - a modern discovery may result from narrowing or suppression of an older horizon
+    - ancient restoration or modern progress is proposed as a complete solution
+  does_not_activate_by_itself:
+    - every comparison between an old and recent author
+    - every historical change
+    - every technological innovation
+    - every disagreement concerning progress
+    - every use of the terms ancient or modern
+
+relations:
+  - related_problem: nomos-vs-physis
+    relation_type: INTERSECTS
+    summary: >
+      Modernity transforms, historicizes, lowers, or denies classical nature and natural right.
+  - related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+    summary: >
+      Modernity may transform poetry into aesthetics, ideology, culture, self-expression, or horizon creation.
+  - related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+    summary: >
+      Modern institutions seek reliable realization and mastery of contingency.
+  - related_problem: theologico-political
+    relation_type: INTERSECTS
+    summary: >
+      Modernity seeks to defeat, privatize, politicize, rationalize, historicize, or supersede revelation.
+  - related_problem: athens-vs-jerusalem
+    relation_type: RECEIVES_FINDING_FROM
+    summary: >
+      Modernity arises partly as an attempted escape from the unresolved conflict between Athens and Jerusalem.
+  - related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    summary: >
+      Professional philosophy, technical expertise, historicist scholarship, and ideological vanguards create modern recognition claims.
+
+shared_protocols:
+  required:
+    - canonical_key: source-status
+    - canonical_key: evidence-classification
+    - canonical_key: inference-discipline
+    - canonical_key: uncertainty-preservation
+    - canonical_key: speech-and-deed
+  conditional:
+    - canonical_key: claimant-to-wisdom
+      activation: Activate when modern science, history, ideology, scholarship, or value creation claims comprehensive authority.
+    - canonical_key: audience-and-rhetoric
+      activation: Activate when modern projects educate, mobilize, or govern populations through new horizons.
+    - canonical_key: irony
+      activation: Activate where claims of novelty, restoration, or progress are qualified by the work's deed.
+
+anti_capture_principle: >
+  Neither antiquity nor modernity may certify itself through age, novelty, progress,
+  scientific power, political success, moral elevation, institutional scale, historical
+  victory, or the failure of the rival to realize its highest standard.
+
+non_absorption_clause: >
+  Ancients vs. Moderns must not become a container for every historical comparison or
+  modern issue. It owns the transformation of standards, projects, ends, history,
+  knowledge, and power. The substantive doctrines of nature, poetry, revelation,
+  practice, and recognition remain governed by neighboring problems.
+
+anti_reduction_rules:
+  - chronology must not establish rank
+  - ancient political improbability must not be treated as proof of falsity
+  - modern effectiveness must not be treated as proof of wisdom
+  - modern discovery must be tested for narrowing as well as enlargement
+  - technical and historical consciousness must not be identified with philosophy
+  - restoration of antiquity must not ignore changed institutions and circumstances
+  - progress must not become an unfalsifiable future justification of present harm
+
+termination:
+  completion_standard: >
+    Examination is complete when ancient and modern standards, beginnings, ends,
+    institutions, gains, losses, and practical claims are reconstructed independently;
+    novelty is distinguished from narrowing and authorization; and chronology,
+    success, or power is refused as a self-certifying verdict.
+  valid_states:
+    - ancient_standard_reconstructed
+    - modern_project_reconstructed
+    - continuity_and_novelty_distinguished
+    - narrowing_test_completed
+    - gain_and_loss_preserved
+    - final_rank_unresolved
+  prohibited_states:
+    - chronology certified as superiority
+    - modern power certified as wisdom
+    - ancient height certified without practical examination
+    - technical progress treated as complete human progress
+    - historicist position exempted from historical self-application
