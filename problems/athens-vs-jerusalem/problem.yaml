@@ -8,20 +8,36 @@ identity:
 
 status:
   lifecycle: FOUNDING_DRAFT
-  version: 0.1.0
+  version: 0.2.0
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: 01fcf73247bea057cb2a7729a8b2aebf1ea6e80f
+  transformation: REVISED_WITHOUT_PREDECESSOR_EFFECT
+  reason: >
+    Register the completed founding subordinate structure consisting of the inquiry
+    profile, witness registry, relations record, and first source-specific synthesis.
+    No witness, doctrine, predecessor, certification, or activation state is displaced.
 
 authority:
   registry_reference: problems/registry.yaml
   architecture_reference: governance/foundational-problem-architecture.yaml
   migration_reference: migrations/foundational-problems-v2/migration.yaml
+  inquiry_profile_reference: problems/athens-vs-jerusalem/inquiry-profile.yaml
+  witnesses_reference: problems/athens-vs-jerusalem/witnesses.yaml
+  relations_reference: problems/athens-vs-jerusalem/relations.yaml
 
 source_basis:
   study_id: SPPP-STUDY-001
   study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
   source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  problem_synthesis: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
   constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+  source_limit: >
+    The completed collection study is a provisional founding basis and does not
+    replace independent Greek, Biblical, medieval, modern, or historical witnesses.
 
 governing_question: >
   Can the comprehensive orientations beginning from wonder, nature, and autonomous
@@ -35,40 +51,72 @@ jurisdiction:
   owns:
     - autonomous understanding and obedient love as comprehensive ways of life
     - wonder and fear of the Lord as rival beginnings
+    - seeing, questioning, hearing, and obedient reception
     - nature and creation as rival accounts of the whole
     - philosopher and prophet as rival highest human types
+    - natural excellence and divine Law as standards within comprehensive orientations
     - the best regime and the Messianic age
-    - the historical intertwining and highest incompatibility of Athens and Jerusalem
+    - particular bearers of universal claims
+    - historical intertwining and highest incompatibility
+    - testing attempted reconciliations for transformation
   does_not_own:
-    - nomos-vs-physis
-    - philosophy-vs-poetry
-    - theory-vs-practice
-    - theologico-political
-    - wise-vs-vulgar
-    - ancients-vs-moderns
+    - canonical_key: nomos-vs-physis
+      reason: >
+        Nomos vs. Physis owns the general nature-convention and natural-law distinctions.
+    - canonical_key: philosophy-vs-poetry
+      reason: >
+        Philosophy vs. Poetry owns rival human forms of wisdom, representation,
+        dramatic and poetic form, and knowledge of souls.
+    - canonical_key: theory-vs-practice
+      reason: >
+        Theory vs. Practice owns political judgment, implementation, institutions,
+        toleration, statehood, and finite action under imperfect conditions.
+    - canonical_key: theologico-political
+      reason: >
+        The Theologico-Political Problem owns ultimate authority among autonomous
+        reason, genuine revelation, prophecy, divine command, sacred law, and sovereignty.
+    - canonical_key: wise-vs-vulgar
+      reason: >
+        The Wise vs. The Vulgar owns rank, recognition, differentiated education,
+        mediation, and capture by counterfeit claimants.
+    - canonical_key: ancients-vs-moderns
+      reason: >
+        Ancients vs. Moderns owns the historical transformation through secularization,
+        rationalization, progress, historicism, mastery, and value creation.
 
 permanent_tension: >
   Both orientations claim wisdom in the highest sense. Athens cannot surrender
   autonomous examination without ceasing to be philosophic, while Jerusalem cannot
-  surrender creation, command, and obedient love without ceasing to be revelatory.
+  surrender creation, command, covenant, Law, and obedient love without ceasing to be
+  revelatory. Historical intertwining and mutual illumination do not by themselves
+  establish a standpoint that preserves both final authorities.
 
 boundary:
   activates_when:
     - wonder and fear are treated as comprehensive beginnings
     - nature and creation are compared as accounts of the whole
-    - philosopher and prophet make rival claims to authority
+    - seeing and hearing are ranked as modes of access to truth
+    - philosopher and prophet make rival highest claims
+    - autonomous understanding and obedient love are compared as ways of life
     - divine Law and natural excellence are treated as interchangeable
     - the best regime is identified with redemption or the Messianic age
+    - historical intertwining is treated as proof of reconciliation
+    - modern mediation claims to preserve both orientations
+    - political restoration, survival, or statehood is assigned theological finality
   does_not_activate_by_itself:
     - every contrast between Greek and Jewish sources
-    - every dispute about religion
+    - every dispute about religion and philosophy
     - every use of Athens or Jerusalem as a metaphor
+    - every historical encounter between the traditions
+    - every political issue involving a religious community
 
 relations:
   - related_problem: nomos-vs-physis
     relation_type: DEPENDS_ON
   - related_problem: philosophy-vs-poetry
     relation_type: INTERSECTS
+  - related_problem: theory-vs-practice
+    relation_type: SUPPLIES_FINDING_TO
   - related_problem: theologico-political
     relation_type: DEPENDS_ON
   - related_problem: wise-vs-vulgar
@@ -84,21 +132,36 @@ shared_protocols:
     - uncertainty-preservation
     - speech-and-deed
     - audience-and-rhetoric
+  conditional:
+    - claimant-to-wisdom
+    - irony
+    - comedy
 
 anti_capture_principle: >
-  Neither Athens nor Jerusalem may be reduced to a cultural style, geographical
-  identity, political program, or already reconciled synthesis.
+  Neither Athens nor Jerusalem may be reduced to a culture, ethnicity, geography,
+  political program, institution, historical population, or already reconciled
+  synthesis. No philosopher, prophet, people, state, interpreter, survivor, victor,
+  or martyr may certify the highest orientation through title or historical fate.
 
 non_absorption_clause: >
   This problem owns the two comprehensive ways of life and must not absorb the full
-  jurisdiction of revelation, poetic form, natural right, political practice, rank, or modernity.
+  jurisdiction of revelation, poetic form, natural right, practical implementation,
+  rank, or modernity. Shared sources and findings are referenced through subordinate
+  records rather than duplicated as governing doctrine.
 
 termination:
-  state: FOUNDING_SUCCESSOR_DRAFT_CREATED
+  state: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
   certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+  completed_records:
+    - problems/athens-vs-jerusalem/problem.yaml
+    - problems/athens-vs-jerusalem/inquiry-profile.yaml
+    - problems/athens-vs-jerusalem/witnesses.yaml
+    - problems/athens-vs-jerusalem/relations.yaml
+    - problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
   remaining_requirements:
-    - inquiry-profile.yaml
-    - witnesses.yaml
-    - relations.yaml
     - independent Greek and Biblical witness reconstruction
-    - migration validation
+    - independent mediator and historical reconstruction
+    - automated YAML and path validation
+    - review of unresolved cross-problem jurisdiction
+    - migration certification before activation
