@@ -1,0 +1,379 @@
+schema_version: 1.0
+document_type: source_specific_study
+
+identity:
+  study_id: PVP-STUDY-001
+  title: >
+    Socrates and Aristophanes — Philosophy, Poetry, and the
+    Theologico-Political Brother Problems
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_STUDY_RECORD
+  completion: SEQUENTIAL_READING_COMPLETE
+
+source:
+  author: Leo Strauss
+  title: Socrates and Aristophanes
+  original_publication_year: 1966
+  source_class: AUTHOR_PUBLISHED_PRIMARY_SOURCE
+  total_book_pages: 314
+  repository_copy_rule: >
+    This record does not reproduce the source text. It preserves page locators,
+    documentary findings, supported inferences, and unresolved questions.
+  secondary_context:
+    - title: Studies in Platonic Political Philosophy
+      role: >
+        Contextual and posthumous witness only. It may guide questions but does
+        not replace Strauss's argument in Socrates and Aristophanes.
+
+governing_problems:
+  primary:
+    - philosophy-vs-poetry
+    - theologico-political
+  relation:
+    designation: BROTHER_PROBLEM
+    strength: CO_FOUNDATIONAL
+    rule: >
+      The entire book is read under both problems because Strauss's inquiry into
+      poetry and philosophy repeatedly turns upon Socrates' teaching concerning
+      the gods and the human recognition of divine authority.
+  secondary_intersections:
+    - nomos-vs-physis
+    - theory-vs-practice
+    - wise-vs-vulgar
+    - athens-vs-jerusalem
+    - ancients-vs-moderns
+
+method:
+  sequence_rule: >
+    Read the Introduction, The Clouds, the ten other comedies in Strauss's
+    order, and the Conclusion before constitutional synthesis.
+  evidence_rule: >
+    Distinguish Strauss's explicit statements, dramatic findings attributed to
+    Aristophanes, supported structural inferences, and unresolved historical or
+    theological claims.
+  dramatic_rule: >
+    Examine speaker, audience, occasion, action, outcome, omission, comedy,
+    irony, title, and demonstrated rank. Do not identify a character's speech,
+    chorus, or dramatic victory automatically with Aristophanes' or Strauss's
+    final judgment.
+  brother_problem_rule: >
+    Record both the poetic-philosophic claim and its theologico-political
+    implication wherever gods, piety, oath, prophecy, sacred law, worship,
+    divine mediation, or resistance to divine authority are active.
+  anti_reduction_rule: >
+    Poetic theology is not revelation. Comic defeat of a god is not proof
+    against divine truth. Philosophy's criticism of civic gods is not a
+    completed refutation of revelation.
+
+reading_units:
+  - unit: SA-01
+    section: Introduction
+    pages: 3-8
+    central_finding: >
+      Aristophanes is an indispensable witness to the young, pre-political
+      Socrates. Comedy is a rival form of serious teaching addressed to both
+      laughers and the wise.
+    brother_problem_finding: >
+      The problem of Socrates includes the poetic accusation concerning
+      justice, piety, and the gods.
+
+  - unit: SA-02
+    section: The Clouds
+    pages: 11-54
+    central_finding: >
+      The young Socrates possesses daring natural inquiry and rhetoric but lacks
+      adequate knowledge of souls, audience, political dependence, and the
+      motives of pupils.
+    brother_problem_finding: >
+      Socrates' denial or replacement of Zeus cannot be judged apart from the
+      poetic and political functions of gods and from the sufficiency of his
+      knowledge of nature.
+
+  - unit: SA-03
+    section: The Acharnians
+    pages: 57-79
+    central_finding: >
+      Comic poetry succeeds politically through disguise, tragedy, audience
+      differentiation, bodily pleasure, and correction of civic boasting.
+    brother_problem_finding: >
+      Divine assistance and comic justice operate without reducing the poet to
+      a conventional defender of ancestral theology.
+
+  - unit: SA-04
+    section: The Knights
+    pages: 80-111
+    central_finding: >
+      Comedy reveals natural political rank beneath conventional status while
+      showing that the natural ruler is politically improbable and cannot safely
+      certify himself.
+    brother_problem_finding: >
+      Oracles govern Demos through interpretation; comedy weakens false
+      prophetic authority by multiplying and exposing rival interpretations.
+
+  - unit: SA-05
+    section: The Wasps
+    pages: 112-135
+    central_finding: >
+      Argument can remove a political illusion without transforming the
+      governing desire. Comedy can redirect a resistant nature more readily than
+      a reformer can remake it.
+    brother_problem_finding: >
+      Philokleon's desire to condemn is authorized by an oracle. Reform requires
+      reinterpretation of sacred authority, while removal of the justification
+      does not eliminate the underlying appetite.
+
+  - unit: SA-06
+    section: The Peace
+    pages: 136-159
+    central_finding: >
+      Comedy joins the highest and lowest and reveals public peace through an
+      impossible deed rather than a reproducible political program.
+    brother_problem_finding: >
+      Trygaios acknowledges gods yet violates Zeus's prohibition, distinguishes
+      divine existence, justice, power, and enforceability, and opposes prophetic
+      authority through poetry and deed.
+
+  - unit: SA-07
+    section: The Birds
+    pages: 160-194
+    central_finding: >
+      An erotic and musical poetic cosmology can found a political people and
+      replace an unerotic, amusic account of nature.
+    brother_problem_finding: >
+      Control of mediation, sacrifice, worship, and founding narrative permits
+      replacement of one divine order by another and culminates in the
+      divinization of the human founder.
+
+  - unit: SA-08
+    section: The Lysistrate
+    pages: 195-213
+    central_finding: >
+      Human intelligence identifies the governing desire and redirects it
+      through deferred pleasure, oath, institutional control, and Dionysian
+      reconciliation.
+    brother_problem_finding: >
+      Sacred forms sustain a humanly conceived design without originating or
+      proving it; multiple gods embody the conflicting powers required for
+      continence, struggle, desire, and peace.
+
+  - unit: SA-09
+    section: The Thesmophoriazusai
+    pages: 214-235
+    central_finding: >
+      The dramatic poet survives persecution through disguise, imitation,
+      kinship, oath, audience knowledge, and compromise, but practical success
+      does not certify the justice or truth of his representations.
+    brother_problem_finding: >
+      Sacred assembly, impiety law, piety, sacrilege, and civic enforcement
+      coexist without resolving whether the gods exist or command the law.
+
+  - unit: SA-10
+    section: The Frogs
+    pages: 236-262
+    central_finding: >
+      The contest between edifying and corrective tragedy cannot be settled by
+      technique, popularity, pleasure, or political advice alone.
+    brother_problem_finding: >
+      Rival poetries invoke rival gods and culminate in the sacredness of oaths.
+      Dionysus' choice is practically necessary but neither poetically nor
+      theologically demonstrative.
+
+  - unit: SA-11
+    section: The Assembly of Women
+    pages: 263-282
+    central_finding: >
+      Political art can found a comprehensive egalitarian order through disguise
+      and institutional imagination, but cannot abolish natural inequality,
+      particular Eros, family knowledge, or private desire.
+    brother_problem_finding: >
+      Sacred prohibitions can lose political effect without explicit denial when
+      legislation abolishes the human relations through which they are known and
+      obeyed.
+
+  - unit: SA-12
+    section: The Plutos
+    pages: 283-308
+    central_finding: >
+      Comedy imagines a moral world in which justice and prosperity coincide,
+      while Penia's stronger rational argument is defeated by the poetic premise
+      rather than refuted.
+    brother_problem_finding: >
+      Literal obedience to Apollo initiates the replacement of Zeus by Plutos.
+      Divine rule, priesthood, temple, and worship survive under a changed
+      hierarchy rather than disappearing.
+
+  - unit: SA-13
+    section: Conclusion
+    pages: 309-314
+    central_finding: >
+      Aristophanes claims superiority to the young Socrates through
+      self-knowledge and prudence. Mature Socratic philosophy becomes superior
+      to poetry only by integrating poetic knowledge of souls, eros, music,
+      audience, politics, and the gods into inquiry into the whole.
+    brother_problem_finding: >
+      The question of poetic and philosophic wisdom necessarily includes the
+      question of Socrates' teaching regarding the gods and what makes gods gods
+      for human beings.
+
+foundational_findings:
+  documented_or_strongly_supported:
+    - >
+      Socrates and Aristophanes presents poetry and philosophy as rival forms
+      of wisdom rather than truth opposed to mere entertainment.
+    - >
+      Aristophanes' strongest accusation against the young Socrates concerns
+      inadequate self-knowledge, prudence, knowledge of souls, eros, music,
+      audience, and political consequence.
+    - >
+      Poetry possesses substantive knowledge of human types, desire, suffering,
+      justice, piety, ridicule, imitation, and differentiated audiences.
+    - >
+      Comedy's distortions can disclose the political truth of a type without
+      functioning as literal biography.
+    - >
+      Poetry and philosophy both employ imitation, rhetoric, selection,
+      concealment, and audience differentiation; the question is whether these
+      powers are used with knowledge of souls and ends.
+    - >
+      Education frequently redirects governing desire through images, oaths,
+      rewards, law, fear, hope, and altered circumstances rather than abolishing
+      the desire.
+    - >
+      The city may accept poetry more readily than natural philosophy because
+      poetry can support, transform, or replace public theology, while open
+      natural inquiry questions its grounds.
+    - >
+      Poetic theology can create, preserve, ridicule, overthrow, or replace
+      gods without thereby settling the truth of divine revelation.
+    - >
+      The authority of gods for human beings cannot be understood solely by
+      looking upward; it must be examined through souls that recognize, fear,
+      love, worship, obey, interpret, or resist them.
+    - >
+      Comedy is total within its form but remains a partial mirror of human
+      life and therefore cannot certify itself as complete wisdom.
+    - >
+      Mature Socratic philosophy may be judged superior to poetry only through
+      incorporation of the truths by which poetry exposed truncated philosophy.
+    - >
+      True knowledge of souls and of the soul belongs at the core of knowledge
+      of the whole rather than as an external political supplement.
+
+brother_problem_synthesis:
+  designation: BROTHER_PROBLEM
+  strength: CO_FOUNDATIONAL
+  shared_origin: >
+    Philosophy challenges the poetic-theological horizon of political society.
+    Poetry replies that philosophy's knowledge of nature may not justify its
+    judgment of gods, justice, and law where philosophy lacks knowledge of
+    souls, eros, audience, political dependence, and the human need for
+    authoritative orientation.
+  shared_human_difficulty: >
+    Human beings require authoritative orientation toward justice and the
+    highest life, yet cannot readily determine whether that orientation rests
+    upon philosophic knowledge, poetic formation, ancestral opinion, political
+    necessity, or genuine divine disclosure.
+  philosophy_vs_poetry_question: >
+    Which form of human wisdom knows and guides souls most responsibly?
+  theologico_political_question: >
+    Does the soul's highest authoritative orientation arise from autonomous
+    reason or divine disclosure and command?
+  shared_question: >
+    Who can speak with wisdom and authority concerning gods, justice,
+    education, and the highest human life?
+  jurisdictional_distinction: >
+    The first problem governs rival human forms of wisdom and education. The
+    second governs ultimate divine authority, revelation, command, sacred law,
+    and sovereignty. Their shared source does not authorize merger.
+  non_absorption_rule: >
+    Poetry is not revelation. Revelation is not poetic construction. Political
+    efficacy is not divine truth. Philosophic criticism of poetic gods is not
+    proof against revelation.
+
+socratic_resolution:
+  young_socrates:
+    characterization: >
+      Natural inquiry and rhetorical daring without sufficient knowledge of
+      souls, eros, music, audience, law, family, politics, or the human
+      recognition of gods.
+  mature_socrates:
+    characterization: >
+      Practical wisdom or longing for it, political responsibility, lawfulness,
+      knowledge and guidance of souls, eros, music, patience, urbanity, and
+      inquiry into the whole.
+  integrative_rule: >
+    Philosophy surpasses poetry only where the poetic truth is integrated into
+    the all-comprehensive inquiry rather than dismissed.
+  historical_uncertainty: >
+    The source does not establish whether Aristophanes caused a transformation
+    in the historical Socrates, whether Plato and Xenophon deliberately
+    constructed their Socrates against Aristophanes, or how these possibilities
+    should be apportioned.
+
+constitutional_implications:
+  for_philosophy_vs_poetry:
+    - >
+      Add The Theologico-Political Problem as a co-foundational brother problem.
+    - >
+      Include the human recognition and poetic representation of the godness of
+      gods within this problem's jurisdiction while preserving ultimate divine
+      authority for the brother problem.
+    - >
+      Define philosophic superiority as integrative rather than presumptive.
+    - >
+      Require chapter and witness studies to distinguish poetic truth,
+      political efficacy, and final wisdom.
+  for_theologico_political:
+    - >
+      Require inquiry into the poetic, psychological, political, and ritual
+      mediation through which gods and sacred commands become authoritative.
+    - >
+      Distinguish divine existence, justice, power, recognition, worship,
+      mediation, enforceability, and revelation.
+    - >
+      Preserve the difference between poetic theology, civic religion,
+      prophecy, and genuine revelation.
+  for_shared_inquiry:
+    - >
+      Coactivate both problems when rivalry between philosophy and poetry
+      concerns gods, piety, oath, prophecy, sacred law, or divine authority.
+    - >
+      Apply speech-and-deed, comedy, irony, claimant-to-wisdom,
+      audience-and-rhetoric, inference-discipline, and uncertainty-preservation.
+
+unresolved_questions:
+  - >
+    Did the historical Socrates undergo the transformation suggested by the
+    contrast between Aristophanes and Plato-Xenophon?
+  - >
+    Did Aristophanes contribute causally to the Socratic turn?
+  - >
+    Does Plato integrate poetry or subordinate it after appropriating its
+    knowledge?
+  - >
+    Can philosophy know souls fully without employing poetic or dramatic form?
+  - >
+    Does knowledge of how gods function for human beings amount to knowledge
+    of divine truth?
+  - >
+    Can philosophy disprove divine authority without complete knowledge of the
+    whole?
+  - >
+    Can poetic formation guide souls responsibly without knowledge of the
+    highest human end?
+  - >
+    Can mature philosophy preserve eros, music, piety, and political
+    responsibility without ceasing to be philosophy?
+
+termination:
+  reading_status: COMPLETE
+  synthesis_status: PROVISIONAL
+  certification_status: NOT_CERTIFIED
+  reason_not_certified: >
+    This study reconstructs one primary Strauss source. It does not complete
+    the full corpus, settle the historical causation of the Socratic turn, or
+    resolve the ultimate truth of divine revelation.
