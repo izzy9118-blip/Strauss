@@ -1,0 +1,78 @@
+schema_version: 1.0
+document_type: provisional_problem_synthesis
+
+identity:
+  synthesis_id: NVP-SYN-001
+  problem: nomos-vs-physis
+  title: Studies in Platonic Political Philosophy — Nomos vs. Physis Synthesis
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SYNTHESIS_RECORD_FOR_INACTIVE_SUCCESSOR
+
+source_record:
+  study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  primary_source:
+    author: Leo Strauss
+    title: Studies in Platonic Political Philosophy
+    publication_year: 1983
+
+jurisdictional_result: >
+  Law is indispensable to political life but is not self-justifying. Natural right
+  must be distinguished from human enactment, inherited custom, recurring natural
+  fact, power, and divine positive law. Universal standards require prudential
+  application without becoming relativism.
+
+permanent_findings:
+  - finding_id: NVP-SPPP-F001
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: The lawful and the just remain distinct.
+  - finding_id: NVP-SPPP-F002
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Human positive law, divine positive law, and natural law possess different grounds and jurisdictions.
+  - finding_id: NVP-SPPP-F003
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: A recurring fact of nature, including domination by the stronger, is not thereby a natural moral right.
+  - finding_id: NVP-SPPP-F004
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Natural standards require prudence and equity in application to particulars.
+  - finding_id: NVP-SPPP-F005
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Modern natural right increasingly begins from self-preservation, individual right, property, and sovereignty rather than the highest human end.
+  - finding_id: NVP-SPPP-F006
+    classification: SUPPORTED_INFERENCE
+    proposition: Denial of stable natural ends does not abolish legislation; it transfers authority to will, history, institutions, or value creators.
+
+false_resolutions:
+  - Enacted law is just because it is valid or accepted.
+  - Natural recurrence establishes natural right.
+  - Divine positive law and natural law are identical without further argument.
+  - Circumstantial variation proves that nothing is right by nature.
+  - Political effectiveness establishes natural justice.
+
+uncertainties:
+  - The complete content of natural right is not established by this collection.
+  - The relation between natural right and revealed divine Law remains unresolved.
+  - Prudential variation can be distinguished from relativism in principle, but its correct application remains case-dependent.
+
+cross_problem_references:
+  - problem: theologico-political
+    relevance: Divine positive law and natural law must remain distinct.
+  - problem: athens-vs-jerusalem
+    relevance: Greek nature and Biblical creation are comprehensive rival beginnings.
+  - problem: ancients-vs-moderns
+    relevance: Modernity transforms, lowers, historicizes, or denies classical nature.
+  - problem: theory-vs-practice
+    relevance: Natural standards require prudential and institutional mediation.
+
+termination:
+  state: PROVISIONAL_SOURCE_SYNTHESIS_COMPLETE
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - create inquiry-profile.yaml
+    - create witnesses.yaml
+    - create relations.yaml
+    - test findings against independent classical and modern witnesses
