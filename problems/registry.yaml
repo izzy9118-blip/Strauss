@@ -4,7 +4,7 @@ registry_type: foundational_problem_registry
 identity:
   canonical_key: foundational-problem-registry
   title: Foundational Problem Registry
-  version: 1.0.0
+  version: 1.1.0
 
 status:
   lifecycle: FOUNDING_DRAFT
@@ -54,11 +54,16 @@ canonical_problems:
     alternate_titles:
       - The Ancient Quarrel Between Philosophy and Poetry
     successor_path: problems/philosophy-vs-poetry/problem.yaml
+    subordinate_records:
+      inquiry_profile: problems/philosophy-vs-poetry/inquiry-profile.yaml
+      witnesses: problems/philosophy-vs-poetry/witnesses.yaml
+      relations: problems/philosophy-vs-poetry/relations.yaml
+      synthesis_directory: problems/philosophy-vs-poetry/synthesis/
     jurisdiction: >
       The ancient quarrel between philosophy and poetry as rival claimants to
       wisdom, education, knowledge of souls, knowledge of the gods, political
       authority, and guidance concerning the human good.
-    migration_status: FOUNDING_DRAFT_CREATED
+    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
 
   - canonical_key: theory-vs-practice
     canonical_order: 3
