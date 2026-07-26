@@ -1,0 +1,121 @@
+schema_version: 1.0
+registry_type: shared_protocol_registry
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+governed_by:
+  path: governance/shared-protocol-constitution.yaml
+  canonical_key: shared-protocol-constitution
+
+protocols:
+  - canonical_key: source-status
+    title: Source Status Protocol
+    path: protocols/source-status.yaml
+    protocol_version: 1.0.0
+    category: DOCUMENTARY
+    function: >
+      Classify the documentary authority, provenance, editorial condition, and
+      limitations of each source.
+
+  - canonical_key: evidence-classification
+    title: Evidence Classification Protocol
+    path: protocols/evidence-classification.yaml
+    protocol_version: 1.0.0
+    category: DOCUMENTARY
+    function: >
+      Distinguish explicit evidence, supported inference, hypothesis,
+      contradiction, and unresolved uncertainty.
+
+  - canonical_key: inference-discipline
+    title: Inference Discipline Protocol
+    path: protocols/inference-discipline.yaml
+    protocol_version: 1.0.0
+    category: DOCUMENTARY
+    depends_on:
+      - evidence-classification
+      - source-status
+    function: >
+      Govern the movement from textual evidence to interpretive conclusion and
+      prohibit unsupported claims of rank, intention, or doctrine.
+
+  - canonical_key: uncertainty-preservation
+    title: Uncertainty Preservation Protocol
+    path: protocols/uncertainty-preservation.yaml
+    protocol_version: 1.0.0
+    category: DOCUMENTARY
+    depends_on:
+      - evidence-classification
+      - inference-discipline
+    function: >
+      Preserve opacity, alternatives, unresolved contradictions, and
+      affirmative non-resolution.
+
+  - canonical_key: speech-and-deed
+    title: Speech and Deed Protocol
+    path: protocols/speech-and-deed.yaml
+    protocol_version: 1.0.0
+    category: INTERPRETIVE
+    depends_on:
+      - evidence-classification
+      - inference-discipline
+    function: >
+      Compare explicit speech, action, audience, occasion, structure, omission,
+      and consequence.
+
+  - canonical_key: irony
+    title: Irony Protocol
+    path: protocols/irony.yaml
+    protocol_version: 1.0.0
+    category: INTERPRETIVE
+    depends_on:
+      - speech-and-deed
+      - inference-discipline
+      - uncertainty-preservation
+    function: >
+      Govern supported interpretation of differences between explicit
+      formulation and textual deed without mechanical inversion.
+
+  - canonical_key: comedy
+    title: Comedy Protocol
+    path: protocols/comedy.yaml
+    protocol_version: 1.0.0
+    category: INTERPRETIVE
+    depends_on:
+      - speech-and-deed
+      - inference-discipline
+      - uncertainty-preservation
+    function: >
+      Govern interpretation of jokes, ridicule, embarrassment, understatement,
+      disproportion, and comic action as possible philosophic evidence.
+
+  - canonical_key: claimant-to-wisdom
+    title: Claimant to Wisdom Protocol
+    path: protocols/claimant-to-wisdom.yaml
+    protocol_version: 1.0.0
+    category: INQUIRY
+    depends_on:
+      - source-status
+      - evidence-classification
+      - inference-discipline
+      - speech-and-deed
+      - uncertainty-preservation
+    function: >
+      Test claims to superior understanding without permitting professional,
+      social, political, religious, poetic, or esoteric self-certification.
+
+  - canonical_key: audience-and-rhetoric
+    title: Audience and Rhetoric Protocol
+    path: protocols/audience-and-rhetoric.yaml
+    protocol_version: 1.0.0
+    category: INQUIRY
+    depends_on:
+      - speech-and-deed
+      - evidence-classification
+      - inference-discipline
+      - uncertainty-preservation
+    function: >
+      Examine audience, motive, capacity, character, differentiated speech,
+      rhetoric, pedagogy, concealment, and consequence.
