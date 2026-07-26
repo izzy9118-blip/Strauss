@@ -4,7 +4,7 @@ document_type: foundational_problem_predecessor_index
 identity:
   migration_id: foundational-problems-v2
   title: Foundational Problems v2 Predecessor Index
-  version: 1.0.0
+  version: 1.1.0
 
 status:
   lifecycle: ACTIVE_MIGRATION_RECORD
@@ -42,12 +42,23 @@ records:
       active_path_present: true
       content_addressed: true
       repository_history_present: true
-      explicit_historical_copy_required_before_removal: true
+      explicit_historical_copy_required_before_removal: false
+      explicit_historical_copy_present: true
+    explicit_historical_copy:
+      path: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+      blob_sha: 4a35e71916212082598097985deb23699c0018e7
+      preservation_commit: 259cf8b4c13cf5a96c7d665181154e4f4259e753
+      preservation_commit_message: Preserve active Theologico-Political predecessor
+      preservation_method: REUSED_VERIFIED_GIT_BLOB
+      exact_copy_verified: true
+      immutability_rule: >
+        This historical copy must not be edited in place. Corrections or later
+        preservation records require a new file and explicit provenance.
     successor:
       canonical_key: theologico-political
       path: problems/theologico-political/problem.yaml
       status: NOT_YET_CREATED
-    migration_status: PRESERVED_AND_INDEXED
+    migration_status: EXPLICIT_HISTORICAL_COPY_CREATED
 
   - predecessor_record_id: FPV2-PRED-002
     canonical_key: wise-vs-vulgar
@@ -112,11 +123,13 @@ phase_2_assessment:
     - verified active predecessor identities and blob hashes
     - recorded governing commits for active predecessors
     - materialized the accepted Wise vs. Vulgar reconstruction
-    - verified the preserved source against its Git blob hash
-    - recorded a SHA-256 digest, byte count, and line count
+    - verified the preserved Wise vs. Vulgar source against its Git blob hash
+    - recorded a SHA-256 digest, byte count, and line count for the accepted Wise vs. Vulgar source
+    - created an exact explicit historical copy of the active Theologico-Political predecessor
+    - verified the Theologico-Political historical copy by identical Git blob SHA
     - established explicit successor relations
   remaining_before_source_preservation_certification:
-    - create explicit historical copies before any active predecessor is removed
+    - create an explicit historical copy of the active Wise vs. Vulgar predecessor before removal
     - validate this index and all recorded paths in integration testing
   destructive_actions_authorized: false
 
