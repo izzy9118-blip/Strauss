@@ -1,0 +1,503 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: ancients-vs-moderns
+  title: Ancients vs. Moderns — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/ancients-vs-moderns/problem.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+  governing_rule: >
+    This profile governs the historical and philosophical comparison of ancient,
+    Biblical, and modern horizons. It requires independent witness reconstruction,
+    separates chronology and power from rank, and prevents novelty, antiquity,
+    success, weakness, progress, or decline from certifying truth.
+
+purpose: >
+  Determine whether modern political thought discovered a truer account of nature,
+  right, history, science, equality, knowledge, and political order or achieved
+  greater reliability, institutional power, and control by lowering, narrowing, or
+  transforming the ancient and Biblical questions concerning virtue, justice,
+  revelation, nature, the best regime, and the highest human life.
+
+source_orientation:
+  founding_collection_study:
+    study_id: SPPP-STUDY-001
+    source: Leo Strauss, Studies in Platonic Political Philosophy
+    source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+    source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+    study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+    synthesis_path: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+    role: >
+      Supplies the first registered problem-specific reconstruction concerning
+      ancient standards, modern lowering, Machiavellian and Hobbesian reliability,
+      method, sovereignty, historicism, value creation, rationalized religion, and
+      the distinction between practical power and philosophical superiority.
+  source_limit: >
+    The collection study does not replace independent reconstruction of Plato,
+    Aristotle, Biblical revelation, Machiavelli, Hobbes, Locke, Rousseau, Hegel,
+    Nietzsche, Cohen, Heidegger, Kojeve, modern science, or political institutions.
+
+shared_protocol_references:
+  required:
+    - canonical_key: source-status
+      path: protocols/source-status.yaml
+      local_application: >
+        Distinguish authorial works, posthumous collections, historical reports,
+        scientific claims, institutional records, translations, editorial framing,
+        and later retrospective classifications of ancient or modern.
+    - canonical_key: evidence-classification
+      path: protocols/evidence-classification.yaml
+      local_application: >
+        Separate explicit innovation claims, historical sequences, conceptual
+        transformations, practical outcomes, supported inference, genealogy, and unresolved rank.
+    - canonical_key: inference-discipline
+      path: protocols/inference-discipline.yaml
+      local_application: >
+        Prevent movement from chronology, novelty, technical power, institutional
+        endurance, historical victory, or political weakness to unsupported superiority.
+    - canonical_key: uncertainty-preservation
+      path: protocols/uncertainty-preservation.yaml
+      local_application: >
+        Preserve uncertainty concerning influence, intention, historical causation,
+        self-reference, conceptual continuity, transformed vocabulary, and final rank.
+    - canonical_key: speech-and-deed
+      path: protocols/speech-and-deed.yaml
+      local_application: >
+        Compare claims of innovation, liberation, realism, progress, neutrality,
+        science, historicity, morality, and return with political and intellectual deeds,
+        institutions, omissions, and consequences.
+    - canonical_key: claimant-to-wisdom
+      path: protocols/claimant-to-wisdom.yaml
+      local_application: >
+        Test ancient and modern claimants without allowing age, novelty, greatness,
+        science, historical consciousness, or practical success to certify rank.
+  conditional:
+    - canonical_key: audience-and-rhetoric
+      path: protocols/audience-and-rhetoric.yaml
+      activation: >
+        Invoke when ancient or modern teaching differentiates rulers, citizens,
+        philosophers, believers, scientists, scholars, masses, or future readers.
+    - canonical_key: irony
+      path: protocols/irony.yaml
+      activation: >
+        Invoke where claims of novelty, continuity, modesty, realism, neutrality,
+        piety, liberation, or progress are qualified by textual deed and transformed terms.
+    - canonical_key: comedy
+      path: protocols/comedy.yaml
+      activation: >
+        Invoke where comedy exposes modern or ancient pretension, false solemnity,
+        lowering, abstraction, or ignorance of ordinary human motives and ends.
+
+problem_specific_operations:
+  - operation_id: AVM-OP-001
+    name: RECONSTRUCT_THE_ANCIENT_HORIZON
+    instruction: >
+      Reconstruct ancient witnesses through their own terms concerning nature, virtue,
+      justice, the good life, contemplation, law, prudence, regime, and the best political order.
+  - operation_id: AVM-OP-002
+    name: RECONSTRUCT_THE_BIBLICAL_HORIZON
+    instruction: >
+      Where modernity responds to revelation, reconstruct creation, command, Law,
+      covenant, prophecy, obedience, judgment, promise, and redemption independently.
+  - operation_id: AVM-OP-003
+    name: RECONSTRUCT_THE_MODERN_CLAIM
+    instruction: >
+      State the modern beginning, end, method, anthropology, account of nature and
+      history, institutional form, and claimed gain before ranking it against earlier horizons.
+  - operation_id: AVM-OP-004
+    name: IDENTIFY_THE_TRANSFORMATION
+    instruction: >
+      Determine whether modernity rejects, lowers, narrows, translates, rationalizes,
+      privatizes, historicizes, secularizes, democratizes, institutionalizes, or claims
+      to complete an ancient or Biblical teaching.
+  - operation_id: AVM-OP-005
+    name: COMPARE_BEGINNINGS_AND_ENDS
+    instruction: >
+      Compare virtue, excellence, contemplation, holiness, obedience, preservation,
+      security, freedom, equality, recognition, prosperity, mastery, and historical
+      completion as beginnings or ends.
+  - operation_id: AVM-OP-006
+    name: DISTINGUISH_TRUTH_FROM_RELIABILITY
+    instruction: >
+      Separate philosophical truth and height of the standard from predictability,
+      implementation, method, sovereignty, scale, control, and institutional durability.
+  - operation_id: AVM-OP-007
+    name: TEST_THE_LOWERING_THESIS
+    instruction: >
+      Identify the evidence that a modern doctrine lowers the end or beginning and the
+      practical gain achieved through that lowering. Do not assume every change is decline.
+  - operation_id: AVM-OP-008
+    name: TEST_THE_PROGRESS_CLAIM
+    instruction: >
+      State the criterion, baseline, temporal scope, costs, excluded goods, and
+      reversibility of progress. Distinguish technical, institutional, moral,
+      political, intellectual, and theological progress.
+  - operation_id: AVM-OP-009
+    name: TEST_HISTORICISM
+    instruction: >
+      Examine claims that all standards are historically constituted, whether the
+      claim exempts itself, and whether historical consciousness supplies knowledge of
+      the good or only genealogy and contingency.
+  - operation_id: AVM-OP-010
+    name: TEST_VALUE_CREATION
+    instruction: >
+      Examine who creates values, by what authority, for which human type, with what
+      political consequence, and whether creation escapes arbitrariness or domination.
+  - operation_id: AVM-OP-011
+    name: TEST_MODERN_INSTITUTIONS
+    instruction: >
+      Determine what institutions make reliable, which virtues or judgments they
+      replace or presuppose, how they distribute power and correction, and whether
+      reliability narrows the governing end.
+  - operation_id: AVM-OP-012
+    name: TEST_RELIGIOUS_TRANSFORMATION
+    instruction: >
+      Examine whether revelation becomes morality, symbol, culture, private belief,
+      civil theology, history, psychology, or progress while traditional vocabulary is retained.
+  - operation_id: AVM-OP-013
+    name: CONTROL_CHRONOLOGY_AND_RETROSPECTION
+    instruction: >
+      Do not infer rank from being first, later, current, victorious, superseded, or
+      rediscovered. Avoid projecting later categories into earlier witnesses.
+  - operation_id: AVM-OP-014
+    name: RECORD_JURISDICTION_AND_TRANSFER
+    instruction: >
+      Retain historical-philosophical transformation here while routing natural right,
+      poetry, practical implementation, reason-revelation authority, comprehensive
+      ways of life, and recognition of wisdom to their governing problems.
+
+activation_signals:
+  direct:
+    - modernity claims superiority through novelty, progress, science, method, power, or historical consciousness
+    - ancient standards are dismissed as impossible, utopian, aristocratic, theological, or obsolete
+    - preservation, fear, security, freedom, equality, or individual rights replace virtue or the best life as the beginning
+    - method, sovereignty, institutions, administration, or technology replaces dependence on rare virtue and prudence
+    - history or value creation replaces nature, revelation, or universal reason
+    - religious doctrine is rationalized, privatized, politicized, psychologized, or historicized
+    - practical reliability is treated as proof of deeper understanding
+    - ancient or Biblical vocabulary is preserved with transformed referents
+    - modern crises generate a proposed return to ancient or Biblical sources
+    - chronology is used as a standard of rank
+  non_activation_signals:
+    - every chronological comparison
+    - every technological innovation
+    - every difference between old and new institutions
+    - every case of political progress or decline
+    - every recovery of an older text
+    - every disagreement between generations
+
+governing_distinctions:
+  - distinction_id: AVM-DIST-001
+    terms:
+      - chronology
+      - philosophical rank
+    rule: >
+      Earlier and later identify sequence, not truth, wisdom, justice, or superiority.
+  - distinction_id: AVM-DIST-002
+    terms:
+      - novelty
+      - discovery
+    rule: >
+      A new formulation may be a discovery, transformation, lowering, recovery,
+      exaggeration, or renamed older possibility and requires source-specific proof.
+  - distinction_id: AVM-DIST-003
+    terms:
+      - practical power and reliability
+      - philosophical truth and highest end
+    rule: >
+      Control, scale, prediction, implementation, and endurance do not establish a
+      truer account of nature, justice, or the human good.
+  - distinction_id: AVM-DIST-004
+    terms:
+      - ancient height
+      - political feasibility
+    rule: >
+      A higher standard may be politically improbable, while impracticability does not
+      prove falsity and height does not supply reliable institutions.
+  - distinction_id: AVM-DIST-005
+    terms:
+      - modern lowering
+      - simple decline
+    rule: >
+      Lowering a beginning may produce genuine peace, security, rights, equality,
+      predictability, or prosperity and must be judged through both gain and loss.
+  - distinction_id: AVM-DIST-006
+    terms:
+      - progress
+      - historical change
+    rule: >
+      Improvement requires a stated criterion and cannot be inferred from movement,
+      accumulation, novelty, victory, or technical capacity alone.
+  - distinction_id: AVM-DIST-007
+    terms:
+      - genealogy
+      - refutation
+    rule: >
+      Historical or psychological origin does not by itself establish a doctrine false.
+  - distinction_id: AVM-DIST-008
+    terms:
+      - historicity
+      - historicism
+    rule: >
+      Recognition that thought occurs historically does not by itself prove that no
+      transhistorical truth or natural standard exists.
+  - distinction_id: AVM-DIST-009
+    terms:
+      - value creation
+      - rightful authority
+    rule: >
+      Capacity to create or impose values does not certify the creator's wisdom,
+      justice, rank, or political legitimacy.
+  - distinction_id: AVM-DIST-010
+    terms:
+      - institutional regularization
+      - elimination of virtue and judgment
+    rule: >
+      Institutions may reduce dependence on rare virtue while continuing to require
+      interpretation, maintenance, responsibility, and correction.
+  - distinction_id: AVM-DIST-011
+    terms:
+      - religious preservation
+      - transformed religion
+    rule: >
+      Retention of creation, revelation, Law, holiness, providence, messianism, or
+      immortality does not prove preservation of earlier authority and deeds.
+  - distinction_id: AVM-DIST-012
+    terms:
+      - return
+      - restoration of an unchanged horizon
+    rule: >
+      Recovery occurs through later questions, institutions, translations, and crises
+      and may renew without reproducing the original horizon unchanged.
+  - distinction_id: AVM-DIST-013
+    terms:
+      - modern science
+      - comprehensive wisdom
+    rule: >
+      Reliable knowledge of mechanisms and causes within domains does not by itself
+      determine justice, ends, the good life, or divine truth.
+  - distinction_id: AVM-DIST-014
+    terms:
+      - equality
+      - sameness of capacity, vocation, or outcome
+    rule: >
+      Equal dignity, rights, or standing do not settle natural heterogeneity,
+      educational difference, excellence, or distributive consequence.
+
+investigative_questions:
+  horizons_and_sources:
+    - Which ancient, Biblical, and modern witnesses are being compared?
+    - Have their terms, genres, audiences, and internal sequences been reconstructed independently?
+    - Is a later classification being projected into an earlier text?
+    - What source establishes continuity, influence, rejection, or rediscovery?
+  beginnings_and_ends:
+    - What human problem supplies the beginning of each doctrine?
+    - What is the highest end: virtue, contemplation, holiness, preservation, freedom, equality, prosperity, mastery, recognition, or completion?
+    - Which passions and capacities are treated as reliable political material?
+    - What goods disappear when the beginning is lowered or narrowed?
+  truth_power_and_reliability:
+    - What does the modern doctrine know more reliably than its predecessors?
+    - Does reliable implementation rest on a truer anthropology or on selecting more predictable motives?
+    - Which institutions replace rare virtue, wisdom, fortune, or providence?
+    - Does practical power permit the highest questions to be ignored rather than answered?
+  progress_and_history:
+    - What criterion of progress is used?
+    - Is the criterion itself historically constituted or defended as true?
+    - Which costs, exclusions, losses, or reversals are omitted?
+    - Does history culminate, remain open, recur, or lack a knowable direction?
+  science_and_creation:
+    - Does modern science alter the meaning of nature or only increase knowledge of parts?
+    - Does technical mastery change the end of knowledge from contemplation to control?
+    - Who authorizes value creation or transformative projects?
+    - Can the creator or historical vanguard be tested without presupposing its rank?
+  revelation_and_religion:
+    - Is revelation refuted, politically subordinated, privatized, rationalized, symbolized, or historicized?
+    - Which divine deeds, commands, laws, and forms of obedience remain?
+    - Does civil or rational religion preserve truth or only public function and moral content?
+    - Does inability to refute revelation block modern closure?
+  institutions_and_equality:
+    - What dependence on rare virtue is reduced by institutions?
+    - Which new elites, experts, bureaucracies, or technologies arise?
+    - Does equality concern rights, dignity, power, education, capacity, or outcomes?
+    - Can institutions preserve correction without narrowing the highest end?
+  documentary_and_comparative:
+    - Is an author claiming novelty, or is novelty attributed retrospectively?
+    - Does speech about liberation or neutrality match institutional deed?
+    - Are practical achievements being converted into philosophical rank?
+    - Are preserved words concealing transformed doctrines?
+
+false_resolutions:
+  - resolution_id: AVM-FALSE-001
+    claim: The moderns are superior because they came later and know more facts.
+    reason: >
+      Chronology and accumulated information do not decide the highest standard or comprehensive wisdom.
+  - resolution_id: AVM-FALSE-002
+    claim: The ancients are superior because they came first or were closer to origins.
+    reason: >
+      Priority and antiquity do not certify truth, completeness, or political adequacy.
+  - resolution_id: AVM-FALSE-003
+    claim: Modern political power proves a deeper understanding of human nature.
+    reason: >
+      Power may result from lowered ends, predictable passions, institutions, science,
+      technology, scale, and control without answering the highest questions.
+  - resolution_id: AVM-FALSE-004
+    claim: Ancient political improbability proves ancient standards false.
+    reason: >
+      Feasibility and truth are distinct, although a political teaching must account for practicability.
+  - resolution_id: AVM-FALSE-005
+    claim: Modern lowering is simply corruption or decline.
+    reason: >
+      Lowered beginnings may produce genuine gains in security, peace, rights,
+      equality, reliability, and prosperity that must be preserved in the comparison.
+  - resolution_id: AVM-FALSE-006
+    claim: Technical and scientific progress proves moral and political progress.
+    reason: >
+      Different domains require distinct criteria, and increased capacity can enlarge both good and harm.
+  - resolution_id: AVM-FALSE-007
+    claim: Historical genealogy refutes natural right or revelation.
+    reason: >
+      Origin and causation do not by themselves decide normative or divine truth.
+  - resolution_id: AVM-FALSE-008
+    claim: Historicism is true because every prior teaching is historically situated.
+    reason: >
+      The historicist claim must account for its own status and cannot infer universal
+      relativism from historical situatedness alone.
+  - resolution_id: AVM-FALSE-009
+    claim: Value creation frees humanity from every inherited authority.
+    reason: >
+      The authority, justice, responsibility, and political effects of the creator remain unresolved.
+  - resolution_id: AVM-FALSE-010
+    claim: Institutions eliminate the need for virtue, prudence, and wisdom.
+    reason: >
+      Institutions require founding, interpretation, maintenance, judgment, correction,
+      and officeholders and may generate new forms of capture.
+  - resolution_id: AVM-FALSE-011
+    claim: Rational or symbolic religion preserves revelation without loss.
+    reason: >
+      Divine action, historical communication, command, covenant, obedience, judgment,
+      and redemption may be transformed while vocabulary remains.
+  - resolution_id: AVM-FALSE-012
+    claim: Secularization resolves the reason-revelation conflict.
+    reason: >
+      Political and cultural transformation may regulate or marginalize revelation
+      without demonstrating it false.
+  - resolution_id: AVM-FALSE-013
+    claim: Return to the ancients restores their horizon unchanged.
+    reason: >
+      Every return occurs through modern problems, evidence, languages, institutions,
+      and self-consciousness and may produce a new synthesis.
+  - resolution_id: AVM-FALSE-014
+    claim: Modern equality proves the irrelevance of human heterogeneity and rank.
+    reason: >
+      Equal civic dignity and rights do not settle capacities, vocations, education,
+      excellence, or the recognition of wisdom.
+
+claimant_tests:
+  required_dimensions:
+    - witness identity, date, source status, and self-described relation to predecessors
+    - ancient, Biblical, or modern beginning and highest end
+    - account of nature, right, law, history, science, and human motivation
+    - claimed discovery, continuity, rejection, lowering, or completion
+    - practical gains and human costs
+    - institutional and political deed
+    - treatment of revelation and natural right
+    - relation between truth, power, reliability, and progress
+    - self-reference and acknowledged limits
+    - unresolved alternatives and counterevidence
+  anti_certification_rule: >
+    No ancient, modern, philosopher, scientist, historian, prophet, institution,
+    civilization, state, technology, or victorious movement is certified as superior
+    through chronology, novelty, antiquity, power, weakness, endurance, influence, or self-description.
+
+cross_problem_routing:
+  - target_problem: nomos-vs-physis
+    route_when: the primary issue is nature, convention, natural right, natural law, or modern rights
+    retain_here: the historical transformation of those concepts
+  - target_problem: philosophy-vs-poetry
+    route_when: the primary issue is transformation of poetry, rhetoric, aesthetics, culture, ideology, or philosophical form
+    retain_here: the ancient-modern alteration of the quarrel
+  - target_problem: theory-vs-practice
+    route_when: the primary issue is method, implementation, institutions, sovereignty, expertise, control, or practical responsibility
+    retain_here: the modern transformation of knowledge and action
+  - target_problem: theologico-political
+    route_when: the primary issue is ultimate authority between reason and genuine revelation
+    retain_here: modern critique, neutralization, privatization, rationalization, or historicization
+  - target_problem: athens-vs-jerusalem
+    route_when: the primary issue is the complete philosophic and Biblical ways of life
+    retain_here: their transformation or attempted supersession under modernity
+  - target_problem: wise-vs-vulgar
+    route_when: the primary issue is recognition, rank, expertise, bureaucracy, ideology, scientific authority, or elite capture
+    retain_here: modern transformation of claimant types and institutions
+
+output_constraints:
+  required:
+    - reconstruct ancient, Biblical, and modern witnesses independently
+    - state beginnings, ends, methods, anthropology, and political forms
+    - identify the exact transformation rather than asserting progress or decline
+    - preserve both practical gains and human costs
+    - distinguish truth, reliability, power, chronology, and rank
+    - test historicism and value creation for self-reference and authority
+    - identify transformed religious and natural-right vocabulary
+    - record cross-problem routing without duplication
+    - preserve unresolved rank and historical causation
+  prohibited:
+    - chronology, novelty, antiquity, power, or weakness used as certification
+    - modernity treated as one homogeneous doctrine
+    - the ancients treated as one homogeneous doctrine
+    - practical success converted into philosophical superiority
+    - ancient impracticability converted into refutation
+    - genealogy converted into normative refutation
+    - preserved vocabulary treated as preserved doctrine without testing
+    - using Strauss to replace independent ancient or modern reconstruction
+    - activating or certifying the successor from profile completion
+
+termination_tests:
+  minimum_completion:
+    - compared witnesses are independently reconstructed
+    - beginnings, ends, methods, and political forms are explicit
+    - claimed novelty and transformation are documented
+    - practical gains and human costs are jointly recorded
+    - truth, reliability, power, chronology, and rank are separated
+    - historicism and value creation are tested
+    - transformed revelation and natural-right claims are identified
+    - neighboring jurisdictions and unresolved questions are recorded
+  mandatory_nontermination:
+    - chronology or outcome substitutes for rank analysis
+    - ancient or modern is treated as homogeneous
+    - practical power is treated as truth
+    - lowering is treated only as decline or only as progress
+    - historicism is exempted from self-examination
+    - independent witness reconstruction is replaced by collection-level synthesis
+  completion_label: PROVISIONAL_INQUIRY_PROFILE_COMPLETE
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This profile is a subordinate successor record. It does not certify or activate
+    Ancients vs. Moderns, complete independent witness reconstruction, or authorize
+    deletion, retrospective harmonization, chronological ranking, or jurisdictional absorption.
+
+termination:
+  profile_state: FOUNDING_INQUIRY_PROFILE_CREATED
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - witnesses.yaml
+    - relations.yaml
+    - independent ancient, Biblical, and modern witness reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
