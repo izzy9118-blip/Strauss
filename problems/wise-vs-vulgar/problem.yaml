@@ -1,0 +1,222 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: wise-vs-vulgar
+  canonical_order: 6
+  title: The Wise vs. The Vulgar
+  alternate_titles:
+    - The Wise and the Vulgar
+    - The Few and the Many
+  legacy_identifiers:
+    - STR-PROBLEM-003
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  predecessor_index_reference: migrations/foundational-problems-v2/predecessor-index.yaml
+  source_status: >
+    This is an inactive successor draft. It does not replace, revise, deactivate, or
+    retrospectively rewrite the active predecessor or the accepted reconstruction source.
+
+predecessor_provenance:
+  active_predecessor:
+    path: problems/wise-and-vulgar.yaml
+    identifier: STR-PROBLEM-003
+    version: 0.1-discussion
+    blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+    status: ACTIVE_FOUNDATIONAL_PROBLEM_OBJECT
+  accepted_reconstruction_source:
+    path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    identifier: WVG-RECONSTRUCTION-0.2
+    version: 0.2-reconstruction-draft
+    blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
+    status: ACCEPTED_MIGRATION_SOURCE_NOT_CANONICAL
+  governing_rule: >
+    The active predecessor remains authoritative until the complete migration is
+    validated, certified, and activated. Accepted material must receive controlled
+    dispositions before activation.
+
+documentary_basis:
+  primary_migration_source: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+  additional_strauss_source:
+    title: Studies in Platonic Political Philosophy
+    study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+    local_contribution: >
+      Supplies the authoritative multitude, counterfeit philosophy, rarity without
+      caste, Xenophontic practical superiority, Maimonidean legal presumption,
+      Nietzschean philosopher-commanders, Machiavellian unequal belief, and Cohen's
+      absolute individual beyond state and society.
+
+origin: >
+  Political society requires authoritative opinions, laws, habits, education, and
+  trusted judgment. Philosophy arises within and questions this horizon, yet the city
+  cannot reliably distinguish philosopher from sophist, scholar, expert, poet,
+  prophet, ideologue, ruler, or impostor. Philosophy itself remains defective where
+  it lacks self-knowledge concerning audiences, motives, effects, and political dependence.
+
+governing_question: >
+  How can superior understanding responsibly guide political society when wisdom
+  cannot certify itself, the city cannot reliably recognize it, human beings differ
+  in capacity and motive, and differentiated education can become elite manipulation or capture?
+
+compressed_question: >
+  How can wisdom guide the city when neither the city nor the claimant can certify who is wise?
+
+jurisdiction:
+  owns:
+    - recognition of genuine and counterfeit claimants to wisdom
+    - the few and the many as a problem of capacity, opinion, education, and authority
+    - human heterogeneity and differentiated education
+    - political or vulgar virtue and its dignity and limits
+    - philosopher, sophist, scholar, expert, poet, prophet, ruler, and impostor as claimants
+    - title, office, success, persecution, secrecy, inspiration, and reputation as noncertifying signs
+    - direct and indirect guidance where recognition is central
+    - elite self-certification, esoteric capture, ideological vanguardism, and technocracy
+    - provisional, domain-limited judgments of superior understanding
+  does_not_own:
+    - canonical_key: nomos-vs-physis
+      reason: The natural or conventional status of law and right belongs there.
+    - canonical_key: philosophy-vs-poetry
+      reason: The poetic accusation and rival human forms of wisdom belong there.
+    - canonical_key: theory-vs-practice
+      reason: General mediation from understanding to action and institutions belongs there.
+    - canonical_key: theologico-political
+      reason: Ultimate authority among reason, revelation, divine law, and sovereignty belongs there.
+    - canonical_key: athens-vs-jerusalem
+      reason: Comprehensive rival ways of life belong there.
+    - canonical_key: ancients-vs-moderns
+      reason: Historical transformation, progress, and modern projects belong there.
+
+permanent_tension:
+  political_society:
+    strongest_claim: >
+      The city cannot act through universal philosophical inquiry and therefore needs
+      authoritative opinion, law, education, and trusted judgment.
+    danger: >
+      Majority authority, convention, office, and public reputation may misrecognize
+      philosophy or empower sophistry and ideology.
+  philosophy_and_superior_understanding:
+    strongest_claim: >
+      Inquiry into justice, nature, the good, and the whole may produce superior understanding.
+    danger: >
+      Philosophy may lack self-knowledge, overestimate its completeness, ignore
+      human heterogeneity, or convert difficulty and reserve into self-certification.
+  differentiated_guidance:
+    strongest_claim: >
+      Different capacities, motives, and circumstances may require different forms,
+      sequences, and levels of instruction.
+    danger: >
+      Differentiation may become deception, caste, exclusion, manipulation, or an
+      unfalsifiable claim that only the initiated understand.
+  unresolved_relation: >
+    Political society needs guidance but cannot certify wisdom. Philosophy needs
+    political society but questions its opinions. Recognition must remain provisional,
+    evidentiary, domain-limited, and open to correction.
+
+boundary:
+  activates_when:
+    - a person or class claims superior wisdom, insight, expertise, revelation, or historical knowledge
+    - political society must distinguish philosopher from sophist, prophet from false prophet, or expert from ruler
+    - human heterogeneity and differentiated education are invoked
+    - secrecy, initiation, obscurity, or persecution is treated as evidence of rank
+    - ordinary political virtue is dismissed as stupidity or contemptible vulgarity
+    - expertise concerning means is treated as architectonic wisdom
+    - elite disbelief or private exemption from public teaching creates asymmetric authority
+  does_not_activate_by_itself:
+    - every difference in intelligence or education
+    - every disagreement between majority and minority
+    - every use of specialized expertise
+    - every question of audience or rhetoric
+    - every private or difficult teaching
+
+relations:
+  - related_problem: nomos-vs-physis
+    relation_type: INTERSECTS
+    summary: >
+      Claimants to knowledge of nature and right remain subject to recognition and noncertification.
+  - related_problem: philosophy-vs-poetry
+    relation_type: RECEIVES_FINDING_FROM
+    summary: >
+      Poet, philosopher, rhetorician, and comic poet are rival claimants to wisdom and education.
+  - related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+    summary: >
+      Superior understanding, practical competence, and legitimate authority remain distinct.
+  - related_problem: theologico-political
+    relation_type: INTERSECTS
+    summary: >
+      Prophets, philosophers, theologians, sovereigns, and interpreters are rival claimants to ultimate authority.
+  - related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    summary: >
+      Philosopher and prophet represent rival exemplary human types and ways of life.
+  - related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Professional philosophy, technical expertise, historical vanguardism, and future philosopher-commanders transform the recognition problem.
+
+shared_protocols:
+  required:
+    - canonical_key: source-status
+    - canonical_key: evidence-classification
+    - canonical_key: inference-discipline
+    - canonical_key: uncertainty-preservation
+    - canonical_key: speech-and-deed
+    - canonical_key: claimant-to-wisdom
+    - canonical_key: audience-and-rhetoric
+  conditional:
+    - canonical_key: irony
+      activation: Activate where reserve, self-description, or hidden teaching is textually supported.
+    - canonical_key: comedy
+      activation: Activate where ridicule exposes pretension without being treated as final refutation.
+
+anti_capture_principle: >
+  No philosopher, scholar, expert, ruler, prophet, priest, poet, professor, initiated
+  reader, persecuted dissenter, historical vanguard, elected people, or secret doctrine
+  may certify its own superiority through title, office, credentials, antiquity,
+  influence, obscurity, success, suffering, ridicule, inspiration, or exclusion.
+
+non_absorption_clause: >
+  The Wise vs. The Vulgar must not become a general container for all questions of
+  philosophy, education, politics, or religion. It owns recognition, heterogeneity,
+  differentiated guidance, and anti-capture. The complete doctrines of poetry,
+  revelation, natural right, theory and practice, and ancient-modern transformation
+  remain governed by neighboring problems.
+
+anti_reduction_rules:
+  - vulgar must not mean poor, stupid, crude, socially inferior, or contemptible
+  - political virtue grounded in opinion must not be dismissed as unreal
+  - rarity must not be converted into hereditary or professional caste
+  - credentials, expertise, office, success, persecution, or secrecy must not certify wisdom
+  - differentiated communication must not authorize unrestricted deception
+  - hidden teaching must not be validated by its hiddenness
+  - majority error must not certify every dissenter
+  - philosophical superiority must not authorize self-appointed sovereignty
+
+termination:
+  completion_standard: >
+    Examination is complete when claimants, domains, evidence, capacities, audiences,
+    deeds, limits, and political effects are reconstructed; ordinary virtue is treated
+    with dignity; differentiated communication is tested for capture; and any judgment
+    of superior understanding remains provisional and non-self-certifying.
+  valid_states:
+    - claimant_reconstructed
+    - domain_of_competence_identified
+    - ordinary_virtue_preserved
+    - differentiated_guidance_examined
+    - capture_risk_documented
+    - recognition_provisional
+  prohibited_states:
+    - social or professional caste certified as wise
+    - persecution or secrecy certified as truth
+    - expertise certified as knowledge of ends
+    - majority opposition certified as philosophical rank
+    - differentiated education converted into unrestricted deception
