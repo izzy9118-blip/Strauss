@@ -1,0 +1,92 @@
+schema_version: 1.0
+document_type: provisional_problem_synthesis
+
+identity:
+  synthesis_id: AVM-SYN-001
+  problem: ancients-vs-moderns
+  title: Studies in Platonic Political Philosophy — Ancients vs. Moderns Synthesis
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SYNTHESIS_RECORD_FOR_INACTIVE_SUCCESSOR
+
+source_record:
+  study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  primary_source:
+    author: Leo Strauss
+    title: Studies in Platonic Political Philosophy
+    publication_year: 1983
+
+jurisdictional_result: >
+  Modernity gains reliable institutions, causal control, rights, security, and
+  political power partly by lowering, transforming, or denying ancient standards of
+  nature, virtue, the best regime, and the highest life. These gains are real; their
+  human and philosophic cost remains open.
+
+permanent_findings:
+  - finding_id: AVM-SPPP-F001
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Chronology, antiquity, novelty, and historical victory establish no rank by themselves.
+  - finding_id: AVM-SPPP-F002
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Ancient political philosophy begins from nature, virtue, the best regime, and the highest human life while accepting political improbability.
+  - finding_id: AVM-SPPP-F003
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Machiavelli seeks reliable realization by beginning from ordinary passions, effective truth, force, and human founding.
+  - finding_id: AVM-SPPP-F004
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Hobbes regularizes the modern project through fear of violent death, rights, sovereignty, and institutions.
+  - finding_id: AVM-SPPP-F005
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Historicism challenges both ancient nature and modern universal reason while risking self-application failure.
+  - finding_id: AVM-SPPP-F006
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Nietzsche radicalizes modernity through value creation and future philosopher-commanders without certifying their authority.
+  - finding_id: AVM-SPPP-F007
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Cohen modernizes Judaism through autonomy, progress, socialism, democracy, and rational religion while transforming traditional revelation.
+  - finding_id: AVM-SPPP-F008
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Many modern discoveries result from isolating phenomena already known to the ancients within a narrowed horizon.
+  - finding_id: AVM-SPPP-F009
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Technical, historical, and institutional superiority does not establish wisdom concerning the human good.
+
+false_resolutions:
+  - Ancientness proves wisdom.
+  - Modernity or historical lateness proves progress.
+  - Practical improbability proves the ancient standard false.
+  - Modern effectiveness proves comprehensive understanding.
+  - Technical or scientific mastery supplies knowledge of human ends.
+  - Historical consciousness exempts the historian from historical limitation.
+  - Restoration of ancient forms can ignore changed institutions and circumstances.
+
+uncertainties:
+  - The final balance between modern gains and the loss caused by narrowing remains unresolved.
+  - The ancient best regime's practical improbability does not settle its truth or desirability.
+  - Modern institutional reliability may secure lower goods without answering the highest human question.
+  - The collection does not authorize simple restoration or progress narratives.
+
+cross_problem_references:
+  - problem: nomos-vs-physis
+    relevance: Modernity transforms or denies classical nature and natural right.
+  - problem: theory-vs-practice
+    relevance: Modernity seeks reliable realization through institutions and predictable passions.
+  - problem: theologico-political
+    relevance: Modernity politicizes, privatizes, rationalizes, or historicizes revelation.
+  - problem: athens-vs-jerusalem
+    relevance: Modern political philosophy arises partly as an attempted escape from the unresolved comprehensive conflict.
+  - problem: wise-vs-vulgar
+    relevance: Professional philosophy, experts, scholars, and vanguards make modern claims to authority.
+
+termination:
+  state: PROVISIONAL_SOURCE_SYNTHESIS_COMPLETE
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - create inquiry-profile.yaml
+    - create witnesses.yaml
+    - create relations.yaml
+    - test findings against independent ancient and modern witness reconstructions
