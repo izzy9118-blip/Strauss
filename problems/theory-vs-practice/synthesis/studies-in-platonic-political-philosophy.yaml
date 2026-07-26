@@ -1,0 +1,52 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: TVP-SPPP-001
+  problem: theory-vs-practice
+  source_study: SPPP-STUDY-001
+  title: Theory vs. Practice — Studies in Platonic Political Philosophy
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+  cross_problem_synthesis: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+
+strict_problem: >
+  How can knowledge of ends become a politically effective deed when deliberation,
+  persuasion, authority, execution, institutions, character, and chance remain distinct?
+
+principal_findings:
+  - Political action cannot wait for complete theoretical knowledge.
+  - Urgency does not convert opinion into knowledge.
+  - The Euthydemus does not identify a demonstrated kingly art uniting wisdom, rule, production, and right use.
+  - Practical superiority appears through correction, distributed knowledge, institutional judgment, and restraint rather than infallibility.
+  - Success and failure do not interpret themselves as proof or refutation of prior judgment.
+  - Effective authority and legitimate authority remain distinct.
+  - Founding and preservation require different capacities and institutions.
+  - Modern institutions reduce dependence on rare virtue without settling the highest human end.
+
+unresolved_questions:
+  - whether any art unites philosophical knowledge, legitimacy, prudent execution, and control over chance
+  - how superior understanding may guide without claiming unrestricted sovereignty
+  - how institutions preserve correction without eliminating responsibility
+
+jurisdiction_limits:
+  - The standard of right remains under Nomos vs. Physis.
+  - Recognition of the wise remains under The Wise vs. The Vulgar.
+  - The complete reason-revelation conflict remains theologico-political.
+
+termination:
+  synthesis_state: COMPLETE_FOR_REGISTERED_COLLECTION
+  certification: NOT_CERTIFIED
+  remaining_work:
+    - independent witness reconstruction
+    - complete successor subordinate records
+    - migration validation
