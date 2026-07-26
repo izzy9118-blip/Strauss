@@ -4,7 +4,7 @@ registry_type: foundational_problem_registry
 identity:
   canonical_key: foundational-problem-registry
   title: Foundational Problem Registry
-  version: 1.4.0
+  version: 1.5.0
 
 status:
   lifecycle: FOUNDING_DRAFT
@@ -12,11 +12,12 @@ status:
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
 revision_history:
-  predecessor_version: 1.3.0
-  predecessor_blob_sha: bc809df66b15ef4eac4f7f765c4234abd3cb0cc5
+  predecessor_version: 1.4.0
+  predecessor_blob_sha: 728b1b5542f3fd6413508db880c6f7521205e155
   reason: >
-    Register completion of the Nomos vs. Physis founding subordinate structure while
-    preserving all non-certification, migration, and predecessor safeguards.
+    Register completed founding subordinate structures for Theory vs. Practice,
+    Athens vs. Jerusalem, The Wise vs. The Vulgar, and Ancients vs. Moderns. Wise vs.
+    Vulgar proposition-level redistribution and migration-wide validation remain pending.
 
 authority:
   purpose: >
@@ -81,17 +82,16 @@ canonical_problems:
     title: Theory vs. Practice
     successor_path: problems/theory-vs-practice/problem.yaml
     subordinate_records:
+      inquiry_profile: problems/theory-vs-practice/inquiry-profile.yaml
+      witnesses: problems/theory-vs-practice/witnesses.yaml
+      relations: problems/theory-vs-practice/relations.yaml
       synthesis_directory: problems/theory-vs-practice/synthesis/
       founding_source_bridge: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
-      remaining_required:
-        - inquiry-profile.yaml
-        - witnesses.yaml
-        - relations.yaml
     jurisdiction: >
       The relation between understanding and action, contemplation and political
       responsibility, theoretical standards and practical judgment, and philosophic
       knowledge and statesmanship.
-    migration_status: FOUNDING_DRAFT_CREATED_NOT_CERTIFIED
+    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
 
   - canonical_key: theologico-political
     canonical_order: 4
@@ -125,16 +125,15 @@ canonical_problems:
     title: Athens vs. Jerusalem
     successor_path: problems/athens-vs-jerusalem/problem.yaml
     subordinate_records:
+      inquiry_profile: problems/athens-vs-jerusalem/inquiry-profile.yaml
+      witnesses: problems/athens-vs-jerusalem/witnesses.yaml
+      relations: problems/athens-vs-jerusalem/relations.yaml
       synthesis_directory: problems/athens-vs-jerusalem/synthesis/
       founding_source_bridge: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
-      remaining_required:
-        - inquiry-profile.yaml
-        - witnesses.yaml
-        - relations.yaml
     jurisdiction: >
       The confrontation between autonomous understanding and obedient love as
       comprehensive orientations toward the highest human life.
-    migration_status: FOUNDING_DRAFT_CREATED_NOT_CERTIFIED
+    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
 
   - canonical_key: wise-vs-vulgar
     canonical_order: 6
@@ -147,40 +146,42 @@ canonical_problems:
     predecessor_records:
       - path: problems/wise-and-vulgar.yaml
         version: 0.1-discussion
+        blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
         status: ACTIVE_PREDECESSOR
       - identifier: WVG-RECONSTRUCTION-0.2
+        path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
         version: 0.2-reconstruction-draft
+        blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
         status: ACCEPTED_MIGRATION_SOURCE
     successor_path: problems/wise-vs-vulgar/problem.yaml
     subordinate_records:
+      inquiry_profile: problems/wise-vs-vulgar/inquiry-profile.yaml
+      witnesses: problems/wise-vs-vulgar/witnesses.yaml
+      relations: problems/wise-vs-vulgar/relations.yaml
       synthesis_directory: problems/wise-vs-vulgar/synthesis/
       founding_source_bridge: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
       remaining_required:
-        - inquiry-profile.yaml
-        - witnesses.yaml
-        - relations.yaml
         - proposition-level redistribution
     jurisdiction: >
       The recognition of wisdom, the distinction among genuine and counterfeit
       claimants to superior understanding, human heterogeneity, differentiated
       education, audience, mediation, and the political responsibility of philosophy.
-    migration_status: FOUNDING_DRAFT_CREATED_REDISTRIBUTION_PENDING_NOT_CERTIFIED
+    migration_status: FOUNDING_SUBORDINATE_STRUCTURE_COMPLETE_REDISTRIBUTION_PENDING_NOT_CERTIFIED
 
   - canonical_key: ancients-vs-moderns
     canonical_order: 7
     title: Ancients vs. Moderns
     successor_path: problems/ancients-vs-moderns/problem.yaml
     subordinate_records:
+      inquiry_profile: problems/ancients-vs-moderns/inquiry-profile.yaml
+      witnesses: problems/ancients-vs-moderns/witnesses.yaml
+      relations: problems/ancients-vs-moderns/relations.yaml
       synthesis_directory: problems/ancients-vs-moderns/synthesis/
       founding_source_bridge: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
-      remaining_required:
-        - inquiry-profile.yaml
-        - witnesses.yaml
-        - relations.yaml
     jurisdiction: >
       The modern transformation of nature, history, progress, science, equality,
       political philosophy, revelation, education, and the relation between knowledge and power.
-    migration_status: FOUNDING_DRAFT_CREATED_NOT_CERTIFIED
+    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
 
 official_order_rule: >
   The order recorded here is authoritative for presentation, inquiry orientation,
@@ -195,4 +196,4 @@ reference_rule: >
 activation_rule: >
   A successor problem becomes active only after its predecessor is preserved,
   displaced material is classified, references validate, and the migration is
-  certified. Creation or structural completion of founding drafts does not authorize activation.
+  certified. Founding-structure completion does not authorize activation.
