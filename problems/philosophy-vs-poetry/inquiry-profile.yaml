@@ -1,0 +1,508 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: philosophy-vs-poetry
+  title: Philosophy vs. Poetry — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+ authority:
+  problem_reference: problems/philosophy-vs-poetry/problem.yaml
+  relations_reference: problems/philosophy-vs-poetry/relations.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+  governing_rule: >
+    This profile records problem-specific operations and tests. It invokes shared
+    protocols by canonical reference and does not reproduce, redefine, weaken,
+    or silently modify their general rules.
+
+purpose: >
+  Govern inquiry into philosophy and poetry as rival human claimants to wisdom,
+  education, knowledge of souls, knowledge concerning gods, and guidance of
+  human and political life while preserving the jurisdiction of neighboring
+  foundational problems and the co-foundational relation to the
+  Theologico-Political Problem.
+
+source_orientation:
+  founding_study:
+    path: >
+      studies/socrates-and-aristophanes/
+      philosophy-poetry-theologico-political-reconstruction.yaml
+    source: Leo Strauss, Socrates and Aristophanes
+    source_class: AUTHOR_PUBLISHED_PRIMARY_SOURCE
+    role: >
+      Supplies the completed founding reconstruction of the poetic accusation,
+      the young Socrates, the mature Socratic response, and the brother-problem
+      intersection concerning gods and divine authority.
+  founding_synthesis:
+    path: problems/philosophy-vs-poetry/synthesis/socrates-and-aristophanes.yaml
+    status: PROVISIONAL_NOT_CERTIFIED
+  source_limit: >
+    The founding study governs the present profile but does not complete the
+    Platonic, Xenophontic, Aristophanic, or wider Strauss corpus. Later witnesses
+    may confirm, qualify, divide, or correct its provisional findings.
+
+shared_protocol_references:
+  required:
+    - canonical_key: source-status
+      path: protocols/source-status.yaml
+      local_application: >
+        Classify authorial, editorial, dramatic, reported, and posthumous source
+        conditions before assigning authority to a statement or representation.
+    - canonical_key: evidence-classification
+      path: protocols/evidence-classification.yaml
+      local_application: >
+        Separate explicit teaching, dramatic evidence, supported inference,
+        hypothesis, contradiction, and unresolved uncertainty.
+    - canonical_key: inference-discipline
+      path: protocols/inference-discipline.yaml
+      local_application: >
+        Prevent movement from representation, ridicule, influence, or structural
+        correspondence to unsupported claims of doctrine, rank, or causation.
+    - canonical_key: uncertainty-preservation
+      path: protocols/uncertainty-preservation.yaml
+      local_application: >
+        Preserve unresolved superiority, authorial intention, historical
+        causation, and divine-authority questions as affirmative findings.
+    - canonical_key: speech-and-deed
+      path: protocols/speech-and-deed.yaml
+      local_application: >
+        Compare explicit doctrine with dramatic action, outcome, omission,
+        arrangement, and consequence.
+    - canonical_key: irony
+      path: protocols/irony.yaml
+      local_application: >
+        Examine qualified or indirect teaching without mechanically inverting
+        explicit statements.
+    - canonical_key: comedy
+      path: protocols/comedy.yaml
+      local_application: >
+        Treat comic action and ridicule as possible evidence while refusing to
+        identify laughter, defeat, or embarrassment with refutation.
+    - canonical_key: audience-and-rhetoric
+      path: protocols/audience-and-rhetoric.yaml
+      local_application: >
+        Examine differentiated audiences, psychagogy, pedagogy, concealment,
+        civic consequence, and the capacities and needs of souls.
+  conditional:
+    - canonical_key: claimant-to-wisdom
+      path: protocols/claimant-to-wisdom.yaml
+      activation: >
+        Invoke whenever poet, comic poet, philosopher, rhetorician, legislator,
+        interpreter, chorus, character, or scholar claims superior wisdom,
+        authority, education, or access to hidden truth.
+
+problem_specific_operations:
+  - operation_id: PVP-OP-001
+    name: RECONSTRUCT_RIVAL_CLAIMS
+    instruction: >
+      Reconstruct the strongest philosophic and poetic claims independently
+      before ranking, reconciling, or synthesizing them.
+  - operation_id: PVP-OP-002
+    name: DISTINGUISH_AUTHOR_CHARACTER_AND_ACTION
+    instruction: >
+      Distinguish the author, narrator, character, chorus, reported speaker,
+      dramatic victor, and action of the work. Do not attribute a represented
+      statement directly to the poet, Plato, Strauss, or philosophy without
+      positive evidence.
+  - operation_id: PVP-OP-003
+    name: COMPARE_DOCTRINE_WITH_DRAMATIC_DEED
+    instruction: >
+      Compare explicit statements about poetry or philosophy with the work's
+      dramatic practice, selection, arrangement, omissions, outcomes, and
+      demonstrated ranks.
+  - operation_id: PVP-OP-004
+    name: RECONSTRUCT_THE_POETIC_ACCUSATION
+    instruction: >
+      Identify the strongest charge poetry makes against philosophy concerning
+      self-knowledge, prudence, souls, eros, music, audience, family, law,
+      political dependence, gods, and consequences.
+  - operation_id: PVP-OP-005
+    name: TEST_PHILOSOPHIC_INTEGRATION
+    instruction: >
+      Determine whether the philosophic response merely dismisses poetry or
+      incorporates the truths through which poetry exposed truncated
+      philosophy while preserving inquiry into truth, the good, and the whole.
+  - operation_id: PVP-OP-006
+    name: DISTINGUISH_SOUL_KNOWLEDGE_FROM_FINAL_END
+    instruction: >
+      Determine whether knowledge of human types, motives, suffering, eros, and
+      audience is accompanied by knowledge of the highest human end rather than
+      assuming that either kind of knowledge entails the other.
+  - operation_id: PVP-OP-007
+    name: EXAMINE_EDUCATIVE_ACTION
+    instruction: >
+      Examine how images, imitation, authority, fear, hope, reward, oath, music,
+      ritual, pleasure, shame, law, and altered circumstances form or redirect
+      governing desires.
+  - operation_id: PVP-OP-008
+    name: DISTINGUISH_POETIC_THEOLOGY_FROM_REVELATION
+    instruction: >
+      Distinguish poetic representation, civic theology, ritual efficacy, and
+      human recognition of gods from prophecy, genuine divine disclosure,
+      divine command, sacred law, and the truth of revelation.
+  - operation_id: PVP-OP-009
+    name: PRESERVE_STRUCTURAL_AND_HISTORICAL_DIFFERENCE
+    instruction: >
+      Preserve the difference between a supported structural response to the
+      poetic accusation and an unproven historical claim that Aristophanes or
+      poetry caused the transformation of Socrates or philosophy.
+  - operation_id: PVP-OP-010
+    name: RECORD_JURISDICTION_AND_TRANSFER
+    instruction: >
+      Record when a finding belongs primarily to another foundational problem,
+      preserve local relevance by reference, and avoid parallel governing copies.
+
+activation_signals:
+  direct:
+    - philosophy and poetry make rival claims to wisdom or authority
+    - poetry claims to educate rulers, citizens, children, or souls
+    - philosophy challenges poetic, ancestral, or civic accounts of gods or justice
+    - comedy or tragedy discloses a limitation neglected by explicit doctrine
+    - imitation, dramatic action, character, myth, image, music, or ridicule bears substantive argument
+    - a philosopher is accused of ignorance of souls, eros, audience, prudence, or political consequence
+    - Plato's dramatic practice appears to qualify an explicit criticism of poetry
+    - poetry is reduced to entertainment, ornament, propaganda, ideology, or mere communication
+    - poetic knowledge of souls is treated as knowledge of the highest end
+    - philosophic superiority is claimed before the poetic accusation is reconstructed
+  non_activation_signals:
+    - figurative language without a substantive claim to wisdom or guidance
+    - literary style considered only as style
+    - ordinary persuasion without a poetry-philosophy rivalry
+    - every question of religion, rhetoric, audience, irony, or education
+    - every disagreement between theory and political action
+    - every use of myth or narrative
+
+governing_distinctions:
+  - distinction_id: PVP-DIST-001
+    terms:
+      - poetic representation
+      - authorial doctrine
+    rule: >
+      What a poem represents is not automatically what the poet finally affirms.
+  - distinction_id: PVP-DIST-002
+    terms:
+      - explicit speech
+      - dramatic deed
+    rule: >
+      Explicit doctrine must be compared with action, arrangement, outcome,
+      omission, and consequence.
+  - distinction_id: PVP-DIST-003
+    terms:
+      - knowledge of souls
+      - knowledge of the highest human end
+    rule: >
+      Neither form of knowledge may be inferred from the other without argument.
+  - distinction_id: PVP-DIST-004
+    terms:
+      - poetic efficacy
+      - philosophic or theological truth
+    rule: >
+      The power to form, preserve, ridicule, overthrow, or replace an authority
+      does not establish the truth or falsity of that authority.
+  - distinction_id: PVP-DIST-005
+    terms:
+      - poetic theology
+      - revelation
+    rule: >
+      Poetic gods, civic theology, inspiration, ritual, and founding myth are not
+      identical with genuine divine disclosure, prophecy, command, or sacred law.
+  - distinction_id: PVP-DIST-006
+    terms:
+      - truncated philosophy
+      - mature Socratic philosophy
+    rule: >
+      A defective young or partial philosopher does not by itself establish the
+      inferiority of philosophy as such.
+  - distinction_id: PVP-DIST-007
+    terms:
+      - poetic correction
+      - philosophic integration
+    rule: >
+      A supported poetic correction establishes a defect to be answered; it does
+      not automatically establish poetry's final superiority.
+  - distinction_id: PVP-DIST-008
+    terms:
+      - structural response
+      - historical causation
+    rule: >
+      A later philosophic form may answer a poetic accusation even where the
+      evidence does not establish a causal historical transmission.
+  - distinction_id: PVP-DIST-009
+    terms:
+      - comedy as evidence
+      - ridicule as refutation
+    rule: >
+      Comic exposure may reveal contradiction, disproportion, or ignorance;
+      laughter and humiliation alone do not refute a claim.
+  - distinction_id: PVP-DIST-010
+    terms:
+      - philosophy vs. poetry jurisdiction
+      - theologico-political jurisdiction
+    rule: >
+      Rival human forms of wisdom and education belong here; ultimate authority
+      among reason, revelation, divine command, prophecy, sacred law, theology,
+      and political sovereignty belongs to the brother problem.
+
+investigative_questions:
+  rival_claims:
+    - What does philosophy claim to know, and by what evidence or argument?
+    - What does poetry claim to know, and through what form of disclosure?
+    - What does each claimant know that the other neglects or cannot express?
+    - Does either claimant confuse influence, beauty, antiquity, inspiration, or ridicule with truth?
+  soul_and_education:
+    - What human types, desires, fears, hopes, forms of suffering, and ranks are disclosed?
+    - How are souls distinguished, selected, moved, redirected, protected, or endangered?
+    - Does education transform the governing desire or only redirect it?
+    - What role do eros, music, pleasure, shame, family, law, and ritual play?
+  dramatic_examination:
+    - Who speaks, acts, listens, laughs, wins, loses, suffers, or remains silent?
+    - What does the represented action accomplish that the explicit speech does not?
+    - Does the outcome confirm, qualify, complicate, or contradict the announced teaching?
+    - What omissions, asymmetries, titles, sequences, or framing decisions are significant?
+  superiority:
+    - Has poetry's strongest accusation been reconstructed before philosophy is ranked?
+    - Has philosophy integrated the truths disclosed by poetry or merely appropriated its techniques?
+    - Does poetry know the human end or only the soul's movements and political conditions?
+    - Is the superiority claim source-supported, provisional, conditional, or unresolved?
+  gods_and_authority:
+    - How are gods represented, mediated, worshipped, obeyed, resisted, replaced, or ridiculed?
+    - What makes a god or sacred authority authoritative for the represented souls?
+    - Does the evidence concern poetic theology, civic efficacy, claimed prophecy, or genuine revelation?
+    - Has a claim about human recognition of gods been improperly converted into a claim about divine truth?
+  historical_and_documentary:
+    - Is the claim explicit, dramatic, inferential, hypothetical, or unresolved?
+    - Is a structural relation being confused with historical causation?
+    - Have Plato, Xenophon, Aristophanes, and Strauss been reconstructed independently?
+    - Does editorial or posthumous framing exceed its documentary authority?
+
+false_resolutions:
+  - resolution_id: PVP-FALSE-001
+    claim: Philosophy is superior because it calls itself rational or seeks truth.
+    reason: >
+      A title or announced end does not prove self-knowledge, prudence, knowledge
+      of souls, or successful integration of the poetic accusation.
+  - resolution_id: PVP-FALSE-002
+    claim: Poetry is superior because the young Socrates is ridiculous or defective.
+    reason: >
+      The target may be truncated philosophy rather than mature philosophy as such.
+  - resolution_id: PVP-FALSE-003
+    claim: Ridicule, laughter, dramatic defeat, or popularity constitutes refutation.
+    reason: >
+      Comic efficacy and audience response require evidentiary interpretation.
+  - resolution_id: PVP-FALSE-004
+    claim: Poetic knowledge of souls proves knowledge of the highest human end.
+    reason: >
+      Deep representation of human life may remain partial regarding the good or whole.
+  - resolution_id: PVP-FALSE-005
+    claim: Philosophic criticism of civic or poetic gods refutes revelation.
+    reason: >
+      Poetic theology and genuine divine disclosure are constitutionally distinct.
+  - resolution_id: PVP-FALSE-006
+    claim: Religious performance, initiation, oath, or pious emotion proves divine truth.
+    reason: >
+      Human recognition and political efficacy do not establish the divine object.
+  - resolution_id: PVP-FALSE-007
+    claim: Plato's explicit criticism of poetry exhausts Plato's relation to poetry.
+    reason: >
+      Plato's dramatic and poetic deed must be compared with explicit speech.
+  - resolution_id: PVP-FALSE-008
+    claim: Aristophanes is merely a spokesman for conventional Athens.
+    reason: >
+      The poetic claimant must be reconstructed independently, including its own
+      criticism of city, gods, law, and authoritative opinion.
+  - resolution_id: PVP-FALSE-009
+    claim: Structural correspondence proves that Aristophanes caused the Socratic turn.
+    reason: >
+      Historical causation remains open unless independently documented.
+  - resolution_id: PVP-FALSE-010
+    claim: The brother-problem relation permits merger or duplicate doctrine.
+    reason: >
+      Coactivation preserves distinct jurisdiction and requires cross-reference.
+
+claimant_tests:
+  required_for_each_claimant:
+    - identify the claimed title to wisdom or authority
+    - reconstruct the claimant's strongest substantive teaching
+    - identify the evidence, art, experience, inspiration, or argument claimed as its basis
+    - compare speech with deed, outcome, omission, audience, and consequence
+    - examine knowledge of ignorance and self-implication
+    - examine knowledge of differentiated souls and political dependence
+    - distinguish genuine rank from title, influence, beauty, antiquity, or institutional authority
+    - identify what the claimant can disclose but cannot justify
+    - preserve counterevidence and unresolved rank
+  claimant_specific:
+    poet_or_comic_poet:
+      - Does the work disclose souls and political consequences beyond explicit doctrine?
+      - Does poetic power guide toward a known end or toward an authoritative image whose truth remains unproved?
+      - Does the poet criticize rather than merely repeat civic opinion?
+    philosopher:
+      - Has philosophy answered the charge of self-forgetting and political imprudence?
+      - Does inquiry into the whole include the soul, eros, music, and audience?
+      - Is superiority integrative, demonstrated, conditional, or merely asserted?
+    interpreter_or_scholar:
+      - Has the interpreter distinguished represented speech from authorial teaching?
+      - Has comedy been treated as evidence without mechanical inversion?
+      - Has secondary framing been prevented from governing primary meaning?
+
+audience_tests:
+  - identify every materially distinct audience within and outside the work
+  - distinguish the audience addressed from the audience represented
+  - examine differences in capacity, desire, age, education, rank, and political responsibility
+  - determine what is said publicly, privately, indirectly, dramatically, or through omission
+  - examine whether laughter protects, humiliates, educates, excludes, or redirects
+  - determine whether rhetoric serves inquiry, education, political prudence, concealment, manipulation, or several purposes
+  - compare intended effect with demonstrated consequence
+  - record where an audience cannot safely or responsibly receive the same formulation
+
+brother_problem_coactivation:
+  related_problem: theologico-political
+  relation_type: INTERSECTS
+  constitutional_designation: BROTHER_PROBLEM
+  relation_strength: CO_FOUNDATIONAL
+  coactivate_when:
+    - gods or divine authority are substantive objects of poetic-philosophic rivalry
+    - piety, prophecy, oath, sacred law, worship, or divine mediation governs action
+    - a claimed divine command is obeyed, interpreted, resisted, replaced, or politically enforced
+    - poetic theology is treated as evidence for or against revelation
+    - philosophy's right to examine divine authority is challenged
+    - theological teaching produces political consequences or jurisdictional conflict
+  philosophy_vs_poetry_output:
+    owns: >
+      Rival human wisdom, imitation, dramatic representation, education,
+      knowledge of souls, eros, music, rhetoric, audience, and poetic guidance.
+  theologico_political_output:
+    reference_only: >
+      Ultimate authority among autonomous reason, genuine revelation, divine
+      command, prophecy, sacred law, theology, and political sovereignty.
+  required_non_absorption_statements:
+    - Poetry is not revelation.
+    - Revelation is not poetic construction.
+    - Civic theology is not identical with divine truth.
+    - Comic overthrow of a god is not proof against revelation.
+    - Philosophic criticism of civic gods is not a completed refutation of divine authority.
+    - Neither brother problem may reproduce the other's full doctrine.
+  unresolved_overlap_rule: >
+    Where the evidence cannot determine whether a finding concerns poetic
+    mediation, civic theology, claimed revelation, or genuine divine authority,
+    record the overlap as unresolved and reference both problems without creating
+    duplicate governing doctrine.
+
+output_constraints:
+  required_sections:
+    - source and source-status statement
+    - activated operations and shared protocols
+    - strongest philosophic claim
+    - strongest poetic claim
+    - poetic accusation against philosophy
+    - philosophic critique or integration of poetry
+    - speech-and-deed comparison
+    - soul and audience analysis
+    - gods and authority classification where applicable
+    - evidence classifications
+    - jurisdiction and brother-problem references
+    - uncertainties and dissent
+    - termination state
+  required_labels:
+    - DOCUMENTED_OR_EXPLICIT
+    - DRAMATICALLY_SUPPORTED
+    - SUPPORTED_INFERENCE
+    - HYPOTHESIS
+    - CONTRADICTION_OR_TENSION
+    - UNRESOLVED
+  prohibitions:
+    - no certification of philosophy's superiority before reconstructing the poetic accusation
+    - no attribution of a character, chorus, narrator, or victor's statement directly to the author without evidence
+    - no identification of poetic efficacy with truth
+    - no identification of poetic theology with revelation
+    - no identification of philosophic criticism of poetic gods with refutation of revelation
+    - no unsupported historical causation claim
+    - no silent resolution of uncertainty
+    - no duplicate doctrine belonging to another foundational problem
+    - no full witness interpretation inside this profile or the constitutional problem object
+  superiority_output_rule: >
+    Any superiority judgment must identify the comparator, evidence, scope,
+    conditions, neglected truths, remaining uncertainties, and whether the judgment
+    concerns truncated philosophy, mature philosophy, a particular poem, poetry as
+    such, or a provisional structural relation.
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_rule: >
+    This subordinate record neither replaces nor modifies an active predecessor.
+  permitted_dispositions:
+    - RETAIN
+    - TRANSFER
+    - ELEVATE
+    - PRESERVE_HISTORICALLY
+    - REJECT_WITH_REASON
+  permitted_transformation_modes:
+    - VERBATIM
+    - REVISED
+    - DIVIDED
+    - CONSOLIDATED
+    - REFERENCE_ONLY
+  permanent_prohibitions:
+    - no silent deletion of accepted material
+    - no retrospective rewriting of predecessor files
+    - no successor activation before migration certification
+    - no doctrinal duplication in place of cross-reference
+    - no certification based only on valid YAML or provenance
+    - no uncontrolled relation vocabulary
+    - no silent absorption of another foundational problem
+  preservation_sequence:
+    - preserve
+    - classify
+    - redistribute
+    - build successors
+    - validate
+    - certify
+    - activate
+
+termination_tests:
+  inquiry_may_terminate_when:
+    - the strongest philosophic and poetic claims have been reconstructed independently
+    - the poetic accusation has been stated in its strongest supported form
+    - explicit doctrine has been compared with dramatic deed, outcome, omission, and consequence
+    - knowledge of souls has been distinguished from knowledge of the highest end
+    - claimant and audience tests have been completed where activated
+    - poetic theology has been distinguished from revelation
+    - brother-problem findings have been referenced without jurisdictional absorption
+    - superiority claims have been supported, conditioned, or preserved as unresolved
+    - historical causation has been distinguished from structural response
+    - uncertainties, contradictions, and dissent have been recorded
+  valid_termination_states:
+    - DOCUMENTED_RIVALRY
+    - SUPPORTED_POETIC_CORRECTION
+    - SUPPORTED_PHILOSOPHIC_CRITIQUE
+    - CONDITIONAL_INTEGRATIVE_SUPERIORITY
+    - BROTHER_PROBLEM_COACTIVATION_COMPLETE
+    - RIVALRY_UNRESOLVED
+    - OPACITY_PRESERVED
+    - FURTHER_WITNESS_RECONSTRUCTION_REQUIRED
+  prohibited_termination_states:
+    - PHILOSOPHY_SELF_CERTIFIED
+    - POETRY_SELF_CERTIFIED
+    - RIDICULE_TREATED_AS_REFUTATION
+    - DRAMATIC_VICTORY_TREATED_AS_AUTHORIAL_DOCTRINE
+    - POETIC_THEOLOGY_TREATED_AS_REVELATION
+    - REVELATION_REDUCED_TO_POETRY
+    - HISTORICAL_CAUSATION_INFERRED_FROM_STRUCTURE_ALONE
+    - BROTHER_PROBLEM_MERGED_OR_ABSORBED
+    - UNCERTAINTY_SILENTLY_CLOSED
+
+non_certification_notice: >
+  This profile governs founding-draft inquiry operations only. It does not certify
+  the Philosophy vs. Poetry successor, the Foundational Problems v2 migration,
+  the superiority of philosophy or poetry, the historical causation of the
+  Socratic turn, or the truth or falsity of divine revelation.
