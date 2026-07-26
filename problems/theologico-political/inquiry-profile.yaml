@@ -1,0 +1,564 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: theologico-political
+  title: The Theologico-Political Problem — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/theologico-political/problem.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  transaction_reference: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+  protocol_registry_reference: protocols/registry.yaml
+  predecessor_reference: problems/theologico-political.yaml
+  governing_rule: >
+    This profile records problem-specific recognition signals, operations,
+    distinctions, claimant tests, false resolutions, output constraints, and
+    termination tests. General interpretive methods are invoked through shared
+    protocols rather than copied or redefined here.
+
+purpose: >
+  Govern disciplined inquiry into the conflict among revealed divine law,
+  philosophic examination, interpretation, political law, and sovereignty without
+  presuming either rationalist closure, theological victory, political neutrality,
+  historical supersession, or harmony among the contenders.
+
+shared_protocol_references:
+  required:
+    - canonical_key: source-status
+      path: protocols/source-status.yaml
+      local_application: >
+        Distinguish revelation claims, sacred texts, prophecy reports, author-published
+        arguments, posthumous collections, autobiography, editorial framing, and
+        historical or psychological explanations.
+    - canonical_key: evidence-classification
+      path: protocols/evidence-classification.yaml
+      local_application: >
+        Separate explicit claim, textual implication, supported inference, hypothesis,
+        contradiction, political settlement, and unresolved comprehensive conflict.
+    - canonical_key: inference-discipline
+      path: protocols/inference-discipline.yaml
+      local_application: >
+        Prohibit movement from causal explanation, political success, persecution,
+        identity, survival, suffering, or historical sequence to unsupported claims
+        of theological or philosophic truth.
+    - canonical_key: uncertainty-preservation
+      path: protocols/uncertainty-preservation.yaml
+      local_application: >
+        Preserve rational non-refutation, theological non-demonstration, competing
+        interpretations, and affirmative nonresolution.
+    - canonical_key: speech-and-deed
+      path: protocols/speech-and-deed.yaml
+      local_application: >
+        Compare announced subject, argument, interpretive action, institutional effect,
+        public profession, omission, and political consequence.
+    - canonical_key: audience-and-rhetoric
+      path: protocols/audience-and-rhetoric.yaml
+      local_application: >
+        Examine differentiated audiences, public and private teaching, scriptural
+        interpretation, communal obligation, persecution, civic peace, and the
+        protection or restriction of inquiry.
+  conditional:
+    - canonical_key: irony
+      path: protocols/irony.yaml
+      activation: >
+        Activate only where positive textual or structural evidence supports a
+        qualified or indirect teaching; danger alone never authorizes inversion.
+    - canonical_key: claimant-to-wisdom
+      path: protocols/claimant-to-wisdom.yaml
+      activation: >
+        Activate when prophet, philosopher, theologian, sovereign, jurist,
+        interpreter, historian, scientist, psychologist, or ideologist claims final
+        knowledge or authority.
+    - canonical_key: comedy
+      path: protocols/comedy.yaml
+      activation: >
+        Activate where comic representation bears substantively on gods, piety,
+        philosophy, or authority while preserving the distinction between poetic
+        theology and revelation.
+
+problem_specific_operations:
+  - operation_id: TP-OP-001
+    name: RECONSTRUCT_PRIMARY_ALTERNATIVES
+    instruction: >
+      Reconstruct revealed divine law and the philosophic life in their strongest
+      forms before examining political settlements or proposed reconciliations.
+  - operation_id: TP-OP-002
+    name: IDENTIFY_TITLE_DOMAIN_AND_SUBJECTS
+    instruction: >
+      For every authority claim identify its title, domain, subjects, evidence,
+      interpretive agent, means of enforcement, limits, and claimed relation to truth.
+  - operation_id: TP-OP-003
+    name: TEST_RATIONALIST_BURDEN
+    instruction: >
+      Determine whether philosophy, science, historical criticism, or psychology
+      demonstrates the impossibility or falsity of revelation rather than assuming
+      the closure of nature or sufficiency of unaided reason.
+  - operation_id: TP-OP-004
+    name: TEST_REVELATORY_BURDEN
+    instruction: >
+      Determine whether a claimed revelation is distinguishable from unsupported
+      assertion, inherited opinion, poetry, political imposition, psychological need,
+      fraudulent prophecy, or interpretive usurpation.
+  - operation_id: TP-OP-005
+    name: DISTINGUISH_COMMAND_FROM_PROOF
+    instruction: >
+      Preserve the difference between an authority that commands obedience and a
+      philosophic demonstration of that authority's divine origin or truth.
+  - operation_id: TP-OP-006
+    name: DISTINGUISH_SETTLEMENT_FROM_RESOLUTION
+    instruction: >
+      Identify what law, sovereignty, toleration, emancipation, statehood, or public
+      jurisdiction achieves and what comprehensive truth it leaves undecided.
+  - operation_id: TP-OP-007
+    name: EXAMINE_INTERPRETIVE_RULE
+    instruction: >
+      Determine who may interpret an authoritative text, how interpretation changes
+      practical authority, and whether prophet, community, theologian, philosopher,
+      jurist, or sovereign is displaced.
+  - operation_id: TP-OP-008
+    name: INTERPRET_BEFORE_EXPLAINING
+    instruction: >
+      Reconstruct a source's explicit teaching, sequence, distinctions, audience,
+      and textual deed before applying historical, sociological, psychological,
+      biographical, or political explanation.
+  - operation_id: TP-OP-009
+    name: TEST_CAUSAL_EXPLANATION
+    instruction: >
+      Determine whether an account of how belief, identity, law, or text arose is
+      being misused as a refutation of its truth claim.
+  - operation_id: TP-OP-010
+    name: TEST_RECONCILIATION
+    instruction: >
+      Determine whether a proposed harmony preserves divine command and philosophic
+      autonomy or absorbs one contender into morality, symbolism, culture, history,
+      or sovereign jurisdiction.
+  - operation_id: TP-OP-011
+    name: EXAMINE_JEWISH_HISTORICAL_MANIFESTATION
+    instruction: >
+      Distinguish emancipation, assimilation, cultural reconstruction, political
+      Zionism, statehood, survival, suffering, and historical return from covenant,
+      election, providence, messianism, and redemption.
+  - operation_id: TP-OP-012
+    name: TEST_HISTORICIST_SUPERSESSION
+    instruction: >
+      Examine whether history genuinely overcomes revelation and classical
+      philosophy or merely names both as superseded while presupposing a contested
+      account of truth and completion.
+  - operation_id: TP-OP-013
+    name: APPLY_HIGHEST_TEXTUAL_SCRUTINY
+    instruction: >
+      Where divine law, persecution, heresy, communal obligation, or political danger
+      is present, inspect qualifications, sequence, omissions, altered quotations,
+      audience differentiation, beginnings, centers, endings, and speech-deed relations
+      without automatic inversion.
+  - operation_id: TP-OP-014
+    name: PRESERVE_CONTENTION
+    instruction: >
+      When neither alternative satisfies its burden, record the precise unresolved
+      confrontation as a substantive result rather than manufacture victory or lapse
+      into indifference.
+  - operation_id: TP-OP-015
+    name: RECORD_JURISDICTION
+    instruction: >
+      Transfer or reference findings governed primarily by Philosophy vs. Poetry,
+      Athens vs. Jerusalem, Theory vs. Practice, Wise vs. Vulgar, Nomos vs. Physis,
+      or Ancients vs. Moderns instead of duplicating their doctrine.
+
+activation_signals:
+  direct:
+    - a law, text, prophet, institution, or teaching claims divine origin or command
+    - obedience is demanded in place of unrestricted examination
+    - philosophy is accused of impiety, heresy, atheism, or political danger
+    - miracle, prophecy, revelation, or divine action is affirmed or denied
+    - a sacred text claims comprehensive authority over individual and collective life
+    - a sovereign or religious authority controls sacred interpretation
+    - freedom to philosophize is protected, licensed, restricted, or persecuted
+    - toleration or neutrality assigns a public boundary to religion or philosophy
+    - causal explanation or textual history is presented as refutation
+    - revelation is translated into autonomous morality, symbolism, culture, or progress
+    - political restoration, Zionism, or statehood is identified with redemption
+    - Jewish survival, suffering, return, or sovereignty is treated as theological proof or disproof
+    - a final state or completed history is said to supersede revelation and philosophy
+    - poetic theology or civic gods are treated as exhaustive evidence about genuine revelation
+  does_not_activate_by_itself:
+    - ordinary religious practice without a comprehensive authority claim
+    - every conflict between religious and civil administration
+    - cultural identity considered apart from revelation or divine law
+    - the mere appearance of theological vocabulary
+    - every poetic representation of gods
+    - every historical event involving a religious community
+    - every exercise of sovereign power
+
+highest_scrutiny_condition: >
+  Apply the highest level of textual scrutiny when the source confronts divine law,
+  revelation, communal obligation, persecution, censorship, heresy, political danger,
+  historical catastrophe, or the need to protect inquiry and public order. Highest
+  scrutiny increases evidentiary burden; it does not authorize mechanical esotericism.
+
+governing_distinctions:
+  - distinction_id: TP-DIST-001
+    terms: [revelation, private religious experience]
+    rule: Revelation claims authoritative divine disclosure and law, not merely inward feeling.
+  - distinction_id: TP-DIST-002
+    terms: [divine law, autonomous inquiry]
+    rule: Divine command and unrestricted examination assert incompatible titles unless a reconciliation is demonstrated.
+  - distinction_id: TP-DIST-003
+    terms: [obedience, examination]
+    rule: A commanded response and a reasoned assessment are different acts and standards.
+  - distinction_id: TP-DIST-004
+    terms: [creation, nature]
+    rule: A created whole and a naturally intelligible whole may not be silently identified.
+  - distinction_id: TP-DIST-005
+    terms: [miracle, ordinary natural regularity]
+    rule: Knowledge of regularity does not by itself prove exhaustive natural closure.
+  - distinction_id: TP-DIST-006
+    terms: [inability to refute, proof of truth]
+    rule: Failure to disprove a revelation is not proof that it is genuine.
+  - distinction_id: TP-DIST-007
+    terms: [command, philosophic proof]
+    rule: A claim to divine authority is not self-validating for philosophy.
+  - distinction_id: TP-DIST-008
+    terms: [political law, comprehensive truth]
+    rule: Legal validity and enforceability do not decide ultimate truth.
+  - distinction_id: TP-DIST-009
+    terms: [sovereignty, rightful ultimate authority]
+    rule: Final public decision does not establish final rightful or truthful rule.
+  - distinction_id: TP-DIST-010
+    terms: [political settlement, philosophic resolution]
+    rule: Peaceful coexistence or jurisdictional settlement may leave comprehensive conflict intact.
+  - distinction_id: TP-DIST-011
+    terms: [toleration, neutrality]
+    rule: Toleration must be examined for the authority that fixes its permissible scope.
+  - distinction_id: TP-DIST-012
+    terms: [causal explanation, refutation]
+    rule: An origin account does not determine the truth of its object.
+  - distinction_id: TP-DIST-013
+    terms: [historical criticism, philosophic criticism]
+    rule: Human transmission or composition does not by itself establish that revelation did not occur.
+  - distinction_id: TP-DIST-014
+    terms: [rational religion, revealed command]
+    rule: Moral translation may alter the irreducible authority claimed by revelation.
+  - distinction_id: TP-DIST-015
+    terms: [emancipation, assimilation]
+    rule: Equal citizenship and disappearance into a surrounding society are different outcomes.
+  - distinction_id: TP-DIST-016
+    terms: [political Zionism, cultural Zionism]
+    rule: Sovereign action and cultural preservation answer different aspects of Jewish existence.
+  - distinction_id: TP-DIST-017
+    terms: [statehood, redemption]
+    rule: Political restoration is neither negligible nor automatically messianic fulfillment.
+  - distinction_id: TP-DIST-018
+    terms: [historical causation, providential interpretation]
+    rule: Human causes and divine meaning are distinct explanatory levels.
+  - distinction_id: TP-DIST-019
+    terms: [good society, final society]
+    rule: Finite political goods do not abolish the permanent human problem.
+  - distinction_id: TP-DIST-020
+    terms: [grounds for guarded writing, proof of concealment]
+    rule: Danger warrants scrutiny but does not prove inversion or a secret teaching.
+  - distinction_id: TP-DIST-021
+    terms: [autobiography, doctrine]
+    rule: Intellectual sequence and personal identity do not independently decide final allegiance.
+  - distinction_id: TP-DIST-022
+    terms: [eternal order, historical self-creation]
+    rule: The historicist alternative must be reconstructed rather than assumed or dismissed.
+  - distinction_id: TP-DIST-023
+    terms: [poetic theology, revelation]
+    rule: Human representation and recognition of gods do not settle genuine divine disclosure.
+  - distinction_id: TP-DIST-024
+    terms: [nonresolution, indifference]
+    rule: Preserving an unresolved conflict requires full reconstruction of both alternatives.
+
+investigative_questions:
+  comprehensive_alternatives:
+    - What is revelation's strongest title to command the whole human way of life?
+    - What is philosophy's strongest title to examine every comprehensive claim?
+    - Does either contender assume the conclusion it claims to establish?
+    - What would count as a responsible demonstration for or against revelation?
+  authority_and_interpretation:
+    - Who claims authority to interpret the sacred or authoritative text?
+    - What practical jurisdiction follows from that interpretation?
+    - Does interpretation preserve, translate, privatize, subordinate, or replace the original authority?
+    - Which audience is permitted to hear, question, teach, or enforce the interpretation?
+  political_mediation:
+    - What public good does the settlement achieve?
+    - Which contender or institution fixes the settlement's limits?
+    - Does the settlement openly or silently privilege a comprehensive teaching?
+    - What remains unresolved after peace, toleration, sovereignty, emancipation, or statehood?
+  epistemic_tests:
+    - Does knowledge of natural regularities amount to knowledge of the whole?
+    - Does textual or causal history establish impossibility, falsity, or only human mediation?
+    - Is inability to refute being converted into proof?
+    - Is command being converted into demonstration?
+  historical_manifestation:
+    - What does emancipation achieve and leave unresolved?
+    - Does assimilation solve a political difficulty by abolishing the subject of the difficulty?
+    - What political goods do Zionism and statehood secure?
+    - What theological claims do survival, suffering, return, or sovereignty fail to establish by themselves?
+  hermeneutic_scrutiny:
+    - What does the work announce, and what does it accomplish?
+    - Which qualifications, omissions, quotations, sequences, or audience distinctions resist the ordinary reading?
+    - Is there positive evidence for guarded teaching beyond the mere existence of danger?
+    - Has the strongest ordinary explanation been tested before an esoteric hypothesis?
+  brother_problem:
+    - Is the evidence about poetic theology, civic gods, or human recognition of divine authority?
+    - Does the inquiry concern genuine revelation, prophecy, command, or sacred law?
+    - Have Philosophy vs. Poetry and The Theologico-Political Problem been coactivated without merger?
+
+claimant_tests:
+  required_for_each_claimant:
+    - identify title to authority
+    - identify claimed domain and subjects
+    - reconstruct strongest evidence or argument
+    - identify interpreter and enforcement mechanism
+    - compare speech with deed and political consequence
+    - identify acknowledged ignorance and unproved premises
+    - test strongest rival objection
+    - distinguish practical success from truth
+    - preserve unresolved burden
+  claimant_specific:
+    revelation_or_prophet:
+      - How is divine origin distinguished from human assertion, poetry, fraud, or political imposition?
+      - What content is commanded, and through what authoritative chain?
+      - Does the claim address philosophy's demand for examination or forbid it?
+    philosopher_or_rationalist:
+      - Has revelation's impossibility been demonstrated or assumed?
+      - Is the account of the whole exhaustive enough to exclude miracle or divine action?
+      - Does awareness of ignorance limit the claim of victory?
+    sovereign_or_jurist:
+      - What public jurisdiction is established?
+      - Does legal finality become an unacknowledged claim of comprehensive authority?
+      - Is peace purchased by subordinating one contender?
+    theologian_or_reconciler:
+      - Does the reconciliation preserve divine command and autonomous inquiry?
+      - Has one side been translated into terms governed by the other?
+    historian_scientist_or_psychologist:
+      - Does the causal account illuminate mediation or claim to refute the object?
+      - What premise links explanation to falsity?
+    historicist:
+      - What account of history establishes supersession or completion?
+      - Does political success become the criterion of truth?
+      - Can the account confront tyranny and the possible permanence of the alternatives?
+
+false_resolutions:
+  - resolution_id: TP-FALSE-001
+    claim: Revelation is irrational or obsolete and need not be reconstructed.
+    reason: Dismissal does not demonstrate impossibility or falsity.
+  - resolution_id: TP-FALSE-002
+    claim: Divine law has spoken, so philosophic examination is illegitimate.
+    reason: Command does not constitute philosophic proof.
+  - resolution_id: TP-FALSE-003
+    claim: Science and ordinary natural regularities prove miracle impossible.
+    reason: Regularity is not an exhaustive account of the whole.
+  - resolution_id: TP-FALSE-004
+    claim: Human textual composition proves revelation did not occur.
+    reason: Transmission history and divine-origin claims are not identical questions.
+  - resolution_id: TP-FALSE-005
+    claim: Psychological, political, or social explanation refutes faith.
+    reason: Causal explanation does not establish the object's unreality.
+  - resolution_id: TP-FALSE-006
+    claim: Religion and philosophy are private, so no public authority conflict remains.
+    reason: The state still fixes public scope, law, education, and interpretation.
+  - resolution_id: TP-FALSE-007
+    claim: Sovereign jurisdiction is neutral and settles only peace.
+    reason: Jurisdiction determines permissible teaching and authority in practice.
+  - resolution_id: TP-FALSE-008
+    claim: Philosophy and revelation teach the same truth in different language.
+    reason: Harmony must preserve their incompatible titles rather than assume them away.
+  - resolution_id: TP-FALSE-009
+    claim: Revelation is completely preserved when translated into morality or progress.
+    reason: Translation may subordinate command to autonomous reason.
+  - resolution_id: TP-FALSE-010
+    claim: Theology is merely poetry, psychology, culture, or social control.
+    reason: Reduction does not reconstruct or refute the claim of genuine disclosure.
+  - resolution_id: TP-FALSE-011
+    claim: Modernity or history has superseded the conflict.
+    reason: Historical naming does not establish philosophic overcoming.
+  - resolution_id: TP-FALSE-012
+    claim: Assimilation solves Jewish existence without remainder.
+    reason: It may solve by dissolving the distinct subject.
+  - resolution_id: TP-FALSE-013
+    claim: Zionism or statehood resolves the full Jewish problem.
+    reason: Political restoration does not settle Torah, covenant, providence, or redemption.
+  - resolution_id: TP-FALSE-014
+    claim: Because statehood is not redemption, it lacks political dignity.
+    reason: Finite political achievement must not be dismissed for failing to be final.
+  - resolution_id: TP-FALSE-015
+    claim: Survival proves election or suffering disproves providence.
+    reason: Historical events do not interpret themselves.
+  - resolution_id: TP-FALSE-016
+    claim: Political success proves truth or political failure proves falsity.
+    reason: Consequences test adequacy but do not mechanically prove metaphysics.
+  - resolution_id: TP-FALSE-017
+    claim: Persecution proves every public statement is a concealment.
+    reason: Guarded-writing claims require positive textual evidence.
+  - resolution_id: TP-FALSE-018
+    claim: Autobiography establishes Strauss's orthodoxy, atheism, or conversion.
+    reason: Personal sequence is not final doctrine.
+  - resolution_id: TP-FALSE-019
+    claim: A final state or completed history validates truth.
+    reason: The philosophy of history and its criterion remain contested.
+  - resolution_id: TP-FALSE-020
+    claim: Unresolved conflict permits indifference.
+    reason: Affirmative nonresolution follows only after strongest-form reconstruction.
+  - resolution_id: TP-FALSE-021
+    claim: Poetic gods exhaust the evidence for or against revelation.
+    reason: Poetic theology and genuine divine disclosure are distinct.
+
+brother_problem_coactivation:
+  related_problem: philosophy-vs-poetry
+  relation_type: INTERSECTS
+  constitutional_designation: BROTHER_PROBLEM
+  relation_strength: CO_FOUNDATIONAL
+  coactivate_when:
+    - poetic or philosophic education concerns gods, piety, oath, worship, or sacred authority
+    - poetic theology is treated as evidence for or against revelation
+    - the human recognition of divine authority is examined through soul, eros, music, image, or dramatic action
+    - philosophy's criticism of civic gods is extended to genuine revelation
+    - prophecy or divine command is represented through poetic or dramatic form
+  theologico_political_output:
+    owns: >
+      Ultimate authority among autonomous reason, revelation, divine command,
+      prophecy, sacred law, theology, interpretation, and political sovereignty.
+  philosophy_vs_poetry_output:
+    reference_only: >
+      Rival human wisdom, imitation, dramatic representation, education, knowledge
+      of souls, eros, music, audience, and poetic guidance.
+  required_non_absorption_statements:
+    - Poetry is not revelation.
+    - Revelation is not poetic construction.
+    - Civic theology is not identical with divine truth.
+    - Knowledge of how gods function for human beings does not settle divine truth.
+    - Comic overthrow of a god is not proof against revelation.
+    - Neither brother problem may reproduce the other's full doctrine.
+  unresolved_overlap_rule: >
+    Where poetic mediation, civic theology, claimed prophecy, and genuine revelation
+    cannot yet be responsibly distinguished, record the overlap under both problems
+    without duplicate governing doctrine.
+
+output_constraints:
+  required_sections:
+    - source and source-status statement
+    - activated operations and shared protocols
+    - strongest revelatory claim
+    - strongest philosophic claim
+    - reciprocal burdens
+    - authority and interpretation map
+    - political settlement and limit
+    - causal-explanation test
+    - historical manifestation where applicable
+    - brother-problem classification where applicable
+    - evidence classifications
+    - uncertainties, dissent, and opacity floor
+    - jurisdictional references
+    - termination state
+  required_labels:
+    - DOCUMENTED_OR_EXPLICIT
+    - TEXTUALLY_SUPPORTED
+    - SUPPORTED_INFERENCE
+    - WORKING_HYPOTHESIS
+    - CRITICAL_FINDING
+    - POLITICAL_SETTLEMENT
+    - UNRESOLVED_COMPREHENSIVE_CONFLICT
+    - OPACITY_PRESERVED
+  prohibitions:
+    - no rationalist closure by assumed natural completeness
+    - no theological victory from philosophy's inability to refute
+    - no self-validating command
+    - no causal explanation treated as refutation
+    - no political settlement treated as comprehensive truth
+    - no political success treated as theological or philosophic proof
+    - no historical event treated as self-interpreting
+    - no automatic esoteric inversion
+    - no autobiography treated as final doctrine
+    - no poetic theology treated as revelation
+    - no duplicate doctrine belonging to a neighboring problem
+    - no silent closure of uncertainty
+  nonresolution_output_rule: >
+    A nonresolution must state the strongest claims, burdens tested, evidence
+    obtained, unproved premises, remaining alternatives, practical settlement if
+    any, and the exact reason a victor cannot responsibly be named.
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  active_predecessor:
+    path: problems/theologico-political.yaml
+    status: UNTOUCHED_AND_AUTHORITATIVE_UNTIL_CERTIFIED_ACTIVATION
+  exact_historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  transaction_ledger: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+  permitted_dispositions:
+    - RETAIN
+    - TRANSFER
+    - ELEVATE
+    - PRESERVE_HISTORICALLY
+    - REJECT_WITH_REASON
+  permitted_transformation_modes:
+    - VERBATIM
+    - REVISED
+    - DIVIDED
+    - CONSOLIDATED
+    - REFERENCE_ONLY
+  prohibitions:
+    - no silent deletion or unclassified accepted material
+    - no retrospective rewriting of predecessor files
+    - no successor activation before migration certification
+    - no doctrinal duplication in place of cross-reference
+    - no certification based only on valid YAML or provenance
+    - no uncontrolled relation vocabulary
+    - no absorption of Philosophy vs. Poetry or another foundational problem
+
+termination_tests:
+  inquiry_may_terminate_when:
+    - revelation and philosophy have been reconstructed in their strongest forms
+    - rationalist and revelatory burdens have been tested without circular premises
+    - command has been distinguished from proof
+    - causal and historical explanation has been distinguished from refutation
+    - political settlement has been distinguished from comprehensive resolution
+    - interpretive authority and audience have been mapped
+    - relevant Jewish historical events have been separated from automatic theological interpretation
+    - historicist supersession has been tested where activated
+    - poetic theology has been distinguished from revelation
+    - brother-problem and neighboring jurisdictions have been preserved
+    - positive evidence requirements have been met for guarded-teaching claims
+    - uncertainties and the opacity floor have been recorded
+  valid_termination_states:
+    - DOCUMENTED_REVELATORY_CLAIM
+    - DOCUMENTED_PHILOSOPHIC_CLAIM
+    - SUPPORTED_RATIONAL_CRITIQUE
+    - SUPPORTED_THEOLOGICAL_CHALLENGE
+    - POLITICAL_SETTLEMENT_WITH_LIMITS
+    - BROTHER_PROBLEM_COACTIVATION_COMPLETE
+    - UNRESOLVED_COMPREHENSIVE_CONFLICT
+    - OPACITY_PRESERVED
+    - FURTHER_SOURCE_RECONSTRUCTION_REQUIRED
+  prohibited_termination_states:
+    - REVELATION_DISMISSED_WITHOUT_RECONSTRUCTION
+    - PHILOSOPHY_FORBIDDEN_BY_COMMAND_ALONE
+    - INABILITY_TO_REFUTE_TREATED_AS_PROOF
+    - COMMAND_TREATED_AS_SELF_VALIDATING
+    - CAUSAL_EXPLANATION_TREATED_AS_REFUTATION
+    - POLITICAL_SETTLEMENT_TREATED_AS_TRUTH
+    - HISTORY_TREATED_AS_SELF_INTERPRETING
+    - POETIC_THEOLOGY_TREATED_AS_REVELATION
+    - REVELATION_REDUCED_TO_POETRY
+    - PERSECUTION_TREATED_AS_PROOF_OF_CONCEALMENT
+    - NONRESOLUTION_USED_AS_INDIFFERENCE
+    - PREDECESSOR_SILENTLY_REPLACED
+
+non_certification_notice: >
+  This profile governs an inactive successor draft. It does not certify the
+  migration, activate the successor, establish revelation's truth or falsity,
+  decide Strauss's final allegiance, or authorize replacement of the active
+  predecessor.
