@@ -1,0 +1,196 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: theory-vs-practice
+  canonical_order: 3
+  title: Theory vs. Practice
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  source_status: >
+    This is an inactive successor draft created under the seven-problem migration.
+    It defines the permanent problem and does not replace source-specific studies or
+    certify any claimant to rule.
+
+documentary_basis:
+  founding_strauss_source:
+    title: Studies in Platonic Political Philosophy
+    study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+    local_contribution: >
+      Supplies the failed search for the kingly art, Socratic political limits,
+      Xenophontic practical judgment, Maimonidean practical dogma, Machiavellian
+      lowering, and the distinction among founding, preservation, and institutional execution.
+
+origin: >
+  Political philosophy seeks knowledge of justice, the good, nature, and the best
+  regime, but political life requires timely decisions, persuasion, lawful authority,
+  administration, coercion, resources, institutional continuity, and action under
+  uncertainty. The problem arises because knowledge of ends and capacity to realize
+  them are distinct without being independent.
+
+governing_question: >
+  How can understanding of what is true and good become responsible political action
+  when deliberation, decision, persuasion, authority, execution, institutionalization,
+  correction, and outcome are distinct activities mediated by character, law,
+  circumstance, and chance?
+
+compressed_question: >
+  How can understanding guide action without treating success as truth or knowledge as automatic rule?
+
+jurisdiction:
+  owns:
+    - the relation between contemplation, understanding, and political action
+    - knowledge of ends and knowledge of means
+    - deliberation, decision, persuasion, command, execution, and administration
+    - prudence, timing, circumstance, risk, and correction
+    - legitimate authority and institutional capacity
+    - direct and indirect guidance
+    - founding, preservation, succession, and institutionalization
+    - intention, foreseeable consequence, chance, success, and failure
+    - theoretical truth and practically necessary belief where action cannot wait for demonstration
+  does_not_own:
+    - canonical_key: nomos-vs-physis
+      reason: The natural or conventional status of standards and law belongs there.
+    - canonical_key: philosophy-vs-poetry
+      reason: Rival human forms of wisdom and poetic knowledge of souls belong there.
+    - canonical_key: theologico-political
+      reason: Ultimate authority among reason, revelation, and sovereignty belongs there.
+    - canonical_key: athens-vs-jerusalem
+      reason: Comprehensive rival ways of life and highest ends belong there.
+    - canonical_key: wise-vs-vulgar
+      reason: Recognition of the wise, expert, ruler, and impostor belongs there.
+    - canonical_key: ancients-vs-moderns
+      reason: The historical transformation from high standards to reliable realization belongs there.
+
+permanent_tension:
+  theory:
+    strongest_claim: >
+      Action requires orientation by truth, justice, causes, and a hierarchy of goods.
+    danger: >
+      Theory may ignore character, circumstance, authority, institutions, audience,
+      execution, and chance while presuming that correct doctrine guarantees right action.
+  practice:
+    strongest_claim: >
+      Political judgment must decide and act under finite time, incomplete knowledge,
+      competing goods, and uncertain consequences.
+    danger: >
+      Urgency, necessity, effectiveness, or success may be treated as proof of justice
+      or truth.
+  mediation:
+    strongest_claim: >
+      Prudence, rhetoric, lawful authority, administration, correction, and durable
+      institutions translate orientation into action.
+    danger: >
+      Mediation may become manipulation, technocracy, bureaucratic closure, or
+      permanent exceptional rule.
+  unresolved_relation: >
+    Theory without practice cannot govern; practice without theory cannot know whether
+    its success is good. Neither may absorb the other.
+
+boundary:
+  activates_when:
+    - a true or noble teaching is assumed to produce action automatically
+    - expertise concerning means is treated as knowledge of political ends
+    - political success or failure is treated as simple proof or refutation
+    - urgency or necessity is used to suspend moral judgment
+    - a leader guides indirectly through framing, counsel, education, or institutions
+    - exceptional founding authority is extended into permanent rule
+    - legal or political action proceeds on warranted belief short of demonstration
+  does_not_activate_by_itself:
+    - every disagreement about policy
+    - every question of law's justice
+    - every difference between philosophers and rulers
+    - every historical success or failure
+    - every use of rhetoric or administration
+
+relations:
+  - related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+    summary: >
+      Practical judgment requires standards of right not reducible to outcome.
+  - related_problem: philosophy-vs-poetry
+    relation_type: RECEIVES_FINDING_FROM
+    summary: >
+      Poetic knowledge of souls, rhetoric, and audience complicates the movement from truth to political action.
+  - related_problem: theologico-political
+    relation_type: RECEIVES_FINDING_FROM
+    summary: >
+      Unresolved comprehensive claims generate practical questions of toleration, law, sovereignty, and public settlement.
+  - related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    summary: >
+      Philosophic inquiry and prophetic command act upon political life through different practical forms.
+  - related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    summary: >
+      Superior understanding, practical competence, and legitimate authority must remain distinct.
+  - related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Modernity seeks reliable realization through predictable passions, institutions, and mastery of chance.
+
+shared_protocols:
+  required:
+    - canonical_key: source-status
+    - canonical_key: evidence-classification
+    - canonical_key: inference-discipline
+    - canonical_key: uncertainty-preservation
+    - canonical_key: speech-and-deed
+    - canonical_key: audience-and-rhetoric
+  conditional:
+    - canonical_key: claimant-to-wisdom
+      activation: Activate when philosopher, expert, ruler, founder, administrator, or prophet claims superior practical authority.
+    - canonical_key: irony
+      activation: Activate where indirect counsel or guarded political teaching is textually supported.
+
+anti_capture_principle: >
+  No philosopher, expert, founder, ruler, administrator, institution, victorious party,
+  revolutionary movement, or successful policy may certify its own justice or wisdom
+  through correctness of theory, moral intention, necessity, office, effectiveness,
+  survival, or outcome.
+
+non_absorption_clause: >
+  Theory vs. Practice must not become a container for every political action, policy,
+  or institutional question. It owns the mediation from understanding and standards
+  to action, authority, execution, and consequence. The content of natural right,
+  ultimate divine authority, recognition of wisdom, and historical transformation
+  remain governed by neighboring problems.
+
+anti_reduction_rules:
+  - right theory must not be treated as a guarantee of right action
+  - practical success must not be treated as proof of truth or justice
+  - practical failure must not automatically refute an ex ante judgment
+  - noble intention must not absolve foreseeable consequence or unjust means
+  - necessity must not be treated as permission for anything effective
+  - goodness must not be treated as competence and competence must not be treated as justice
+  - institutions must not be treated as eliminating judgment
+  - temporary founding exception must not certify permanent extraordinary rule
+
+termination:
+  completion_standard: >
+    Examination is complete when the inquiry identifies the end, relevant knowledge,
+    decision authority, audience, means, institutional capacity, risks, foreseeable
+    consequences, role of chance, correction mechanisms, and distinction between
+    founding and preservation while preserving unresolved judgments not settled by outcome.
+  valid_states:
+    - theory_reconstructed
+    - practical_constraints_reconstructed
+    - mediation_identified
+    - authority_and_execution_distinguished
+    - outcome_evaluated_with_uncertainty
+    - theory_practice_relation_unresolved
+  prohibited_states:
+    - success certified as justice
+    - failure certified as irrationality without ex ante analysis
+    - expertise certified as architectonic wisdom
+    - necessity used to abolish moral jurisdiction
+    - exceptional authority made permanent without justification
