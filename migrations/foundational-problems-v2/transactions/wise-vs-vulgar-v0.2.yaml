@@ -4,13 +4,25 @@ document_type: foundational_problem_migration_transactions
 identity:
   transaction_set_id: FPV2-WISE-VS-VULGAR-V0.2
   title: The Wise vs. The Vulgar v0.2 — Proposition-Level Redistribution
-  version: 0.1.0
+  version: 0.2.0
 
 status:
-  lifecycle: CLASSIFICATION_COMPLETE_IMPLEMENTATION_PARTIAL
+  lifecycle: CLASSIFICATION_COMPLETE_IMPLEMENTATION_SUBSTANTIAL
   certification: NOT_CERTIFIED
   activation: NOT_ACTIVE
-  implementation: PARTIAL
+  implementation: SUBSTANTIAL_VALIDATION_PENDING
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: 9e1f7a48ac68a279025b16fada0fdc82b7e2c69c
+  transformation: NORMALIZED_WITHOUT_SOURCE_EFFECT
+  reason: >
+    Replace invalid use of DIVIDED as a disposition, establish one controlled primary
+    destination for every transaction, preserve additional destinations as references,
+    recalculate disposition totals, and record completed protocol reconciliations.
+  preservation_rule: >
+    The prior transaction version remains recoverable through Git history. The accepted
+    migration source and active predecessor remain byte-for-byte untouched.
 
 source_identity:
   source_canonical_key: wise-vs-vulgar
@@ -33,12 +45,10 @@ authority:
   relations: problems/wise-vs-vulgar/relations.yaml
 
 classification_rule: >
-  Every accepted proposition and major source section receives a controlled
-  disposition. Material is retained where recognition, rank, heterogeneity,
-  differentiated education, mediation, and capture are primary; transferred where
-  another foundational problem has primary jurisdiction; elevated where the material
-  is a shared interpretive method; and preserved historically where it records the
-  predecessor's institutional language. The source is never overwritten.
+  Every accepted top-level source section and every constitutive proposition receives
+  one controlled disposition and one primary destination. A DIVIDED transformation may
+  preserve additional destination references, but it is never itself a disposition.
+  The accepted source is not overwritten, abridged, or retrospectively harmonized.
 
 controlled_values:
   dispositions:
@@ -55,7 +65,7 @@ controlled_values:
     - REFERENCE_ONLY
 
 section_transactions:
-  - transaction_id: WVG02-TXN-001
+  - transaction_id: WVG02-SEC-001
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: complete accepted source blob
@@ -64,268 +74,118 @@ section_transactions:
     destination_canonical_key_or_protocol: wise-vs-vulgar
     destination_item: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     transformation_mode: VERBATIM
-    reason: Preserve the exact accepted migration source before and throughout redistribution.
-    continuing_relevance: Governs provenance and permits verification of every later transaction.
+    reason: Preserve the exact accepted source throughout migration.
+    continuing_relevance: Governs provenance and no-loss verification.
     unresolved_overlap: none
     review_status: IMPLEMENTED_VERIFIED
     implementing_commit: d273d1367315dcb763bc8e218547788bbca0d482
 
-  - transaction_id: WVG02-TXN-002
+  - transaction_id: WVG02-SEC-002
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
-    source_item_or_section: identity, status, type, and reconstruction_note
-    original_text_or_exact_source_reference: top-level identity and source_basis.reconstruction_note
+    source_item_or_section: identity, status, type, and source_basis.reconstruction_note
+    original_text_or_exact_source_reference: identity; status; type; source_basis.reconstruction_note
     disposition: PRESERVE_HISTORICALLY
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: predecessor provenance and migration history
+    destination_item: predecessor provenance and transaction history
     transformation_mode: REFERENCE_ONLY
-    reason: Version, reconstruction-stage status, and ministry-era wording record historical formation rather than current constitutional doctrine.
-    continuing_relevance: Successor must acknowledge the accepted source without inheriting obsolete lifecycle or institutional language.
+    reason: Reconstruction-stage and ministry-era language records historical formation.
+    continuing_relevance: Successor acknowledges the source without inheriting obsolete lifecycle language.
     unresolved_overlap: none
-    review_status: CLASSIFIED_IMPLEMENTATION_PRESENT
+    review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
 
-  - transaction_id: WVG02-TXN-003
+  - transaction_id: WVG02-SEC-003
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
-    source_item_or_section: source_basis primary_ground and governing_strauss_texts
-    original_text_or_exact_source_reference: source_basis.primary_ground; source_basis.governing_strauss_texts
+    source_item_or_section: source_basis excluding reconstruction_note
+    original_text_or_exact_source_reference: source_basis.primary_ground; governing_strauss_texts; supporting_horizons
     disposition: TRANSFER
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/witnesses.yaml source registry and study index
-    transformation_mode: REVISED
-    reason: Witness identity and source status belong in the witness registry rather than the lean constitution.
-    continuing_relevance: Plato, Xenophon, Aristophanes, and Strauss remain independent reconstruction requirements.
-    unresolved_overlap: Philosophy vs. Poetry owns the substantive poet-philosopher rivalry.
-    review_status: IMPLEMENTED_PROVISIONAL
+    destination_item: problems/wise-vs-vulgar/witnesses.yaml
+    transformation_mode: DIVIDED
+    additional_destination_references:
+      - problems/wise-vs-vulgar/relations.yaml
+      - problems/philosophy-vs-poetry/witnesses.yaml
+      - problems/theologico-political/witnesses.yaml
+    reason: Source identity belongs in the witness registry; cross-problem horizons belong in relations.
+    continuing_relevance: Every witness remains independently reconstructible.
+    unresolved_overlap: Supporting witnesses require later source-specific expansion.
+    review_status: IMPLEMENTED_SUBSTANTIAL
     implementing_commit: ffc831f9352245a7bd9d2324ed39612d397bb0fe
 
-  - transaction_id: WVG02-TXN-004
+  - transaction_id: WVG02-SEC-004
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
-    source_item_or_section: source_basis supporting_horizons
-    original_text_or_exact_source_reference: source_basis.supporting_horizons
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/relations.yaml cross-problem relations
-    transformation_mode: DIVIDED
-    reason: Supporting horizons map to distinct foundational jurisdictions and must be represented by controlled relations rather than duplicated doctrine.
-    continuing_relevance: Every horizon remains available through coactivation and local references.
-    unresolved_overlap: none
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 3c5bb7303d4e50a79d0c79d8098e166205356b3f
-
-  - transaction_id: WVG02-TXN-005
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: origin and governing questions
+    source_item_or_section: origin, governing_question, and compressed_question
     original_text_or_exact_source_reference: origin; governing_question; compressed_question
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/problem.yaml governing question and permanent tension
+    destination_item: problems/wise-vs-vulgar/problem.yaml
     transformation_mode: CONSOLIDATED
-    reason: Political dependence on opinion and the inability to certify wisdom are constitutional to this problem.
-    continuing_relevance: The successor preserves the strongest recognition problem without duplicating adjacent doctrines.
-    unresolved_overlap: Reason-revelation and philosophy-poetry material is transferred by later transactions.
+    reason: The recognition problem and political dependence on opinion are constitutional.
+    continuing_relevance: Governs every claimant inquiry.
+    unresolved_overlap: Substantive poetry and revelation claims route elsewhere.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
 
-  - transaction_id: WVG02-TXN-006
+  - transaction_id: WVG02-SEC-005
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
-    source_item_or_section: governing_interpretive_keys.irony_key
-    original_text_or_exact_source_reference: governing_interpretive_keys.irony_key
+    source_item_or_section: governing_interpretive_keys
+    original_text_or_exact_source_reference: governing_interpretive_keys
     disposition: ELEVATE
-    destination_canonical_key_or_protocol: irony
-    destination_item: protocols/irony.yaml
-    transformation_mode: REFERENCE_ONLY
-    reason: Irony is a general interpretive method shared by all foundational problems.
-    continuing_relevance: Wise vs. Vulgar invokes the protocol when self-description and demonstrated rank diverge.
+    destination_canonical_key_or_protocol: shared-protocols
+    destination_item: protocols/irony.yaml; protocols/comedy.yaml; protocols/speech-and-deed.yaml
+    transformation_mode: DIVIDED
+    reason: Irony, comedy, and speech-deed comparison apply across all problems.
+    continuing_relevance: Wise vs. Vulgar invokes them for rank and self-certification tests.
     unresolved_overlap: none
-    review_status: CLASSIFIED_PROTOCOL_RECONCILIATION_PENDING
-    implementing_commit: PENDING
+    review_status: IMPLEMENTED_VERIFIED_PENDING_AUTOMATED_VALIDATION
+    implementing_commit: ea19ae567128e3bf1b5459944f0dd655ae00ec88
+    additional_implementing_commits:
+      - 2e357aae53a92d3b85a3c92a2d13f706e11600f8
+      - 1ae264ea4175d89bb072f5caa601a7da6e904ee9
 
-  - transaction_id: WVG02-TXN-007
+  - transaction_id: WVG02-SEC-006
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
-    source_item_or_section: governing_interpretive_keys.comedy_key
-    original_text_or_exact_source_reference: governing_interpretive_keys.comedy_key
-    disposition: ELEVATE
-    destination_canonical_key_or_protocol: comedy
-    destination_item: protocols/comedy.yaml
-    transformation_mode: REFERENCE_ONLY
-    reason: Comedy is a shared interpretive method and must not be duplicated as local doctrine.
-    continuing_relevance: The successor invokes comedy to test pretension and false rank.
-    unresolved_overlap: Philosophy vs. Poetry owns the substantive poet-philosopher rivalry.
-    review_status: CLASSIFIED_PROTOCOL_RECONCILIATION_PENDING
-    implementing_commit: PENDING
-
-  - transaction_id: WVG02-TXN-008
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: governing_interpretive_keys.speech_deed_key
-    original_text_or_exact_source_reference: governing_interpretive_keys.speech_deed_key
-    disposition: ELEVATE
-    destination_canonical_key_or_protocol: speech-and-deed
-    destination_item: protocols/speech-and-deed.yaml
-    transformation_mode: REVISED
-    reason: Speech-and-deed comparison is a shared protocol rather than a local problem doctrine.
-    continuing_relevance: Wise vs. Vulgar applies it to claims of wisdom, modesty, reluctance, service, and authority.
-    unresolved_overlap: none
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 1ae264ea4175d89bb072f5caa601a7da6e904ee9
-
-  - transaction_id: WVG02-TXN-009
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: fundamental_tension.political_society
-    original_text_or_exact_source_reference: fundamental_tension.political_society
+    source_item_or_section: fundamental_tension
+    original_text_or_exact_source_reference: fundamental_tension
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/problem.yaml permanent tension; inquiry-profile.yaml ordinary decency and recognition operations
+    destination_item: problems/wise-vs-vulgar/problem.yaml and inquiry-profile.yaml
     transformation_mode: DIVIDED
-    reason: Political dependence on opinion, genuine civic virtue, and the recognition problem are central to this problem.
-    continuing_relevance: Authoritative opinion remains necessary but non-self-certifying.
-    unresolved_overlap: Nomos vs. Physis owns the truth of law and nature.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
-  - transaction_id: WVG02-TXN-010
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: fundamental_tension.philosophy
-    original_text_or_exact_source_reference: fundamental_tension.philosophy
-    disposition: DIVIDED
-    destination_canonical_key_or_protocol: multiple-controlled-destinations
-    destination_item: wise-vs-vulgar recognition and dependence; philosophy-vs-poetry self-correction; theory-vs-practice political responsibility
-    transformation_mode: DIVIDED
-    reason: The section combines claimant recognition with substantive poetic correction and practical responsibility.
-    continuing_relevance: Local recognition findings remain here; substantive doctrine is referenced in neighboring problems.
-    unresolved_overlap: Final historical relation among poetic accusation, Socratic turn, and mature philosophy remains open.
-    review_status: CLASSIFIED_IMPLEMENTATION_PARTIAL
+    additional_destination_references:
+      - problems/philosophy-vs-poetry/problem.yaml
+      - problems/theory-vs-practice/problem.yaml
+      - problems/theologico-political/problem.yaml
+    reason: Political opinion and claimant recognition remain local; substantive neighboring doctrines transfer by reference.
+    continuing_relevance: Preserves philosophy-city tension without jurisdictional absorption.
+    unresolved_overlap: Historical relation between poetic accusation and Socratic correction remains open.
+    review_status: IMPLEMENTED_SUBSTANTIAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
 
-  - transaction_id: WVG02-TXN-011
+  - transaction_id: WVG02-SEC-007
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
-    source_item_or_section: fundamental_tension.poetry_and_rhetoric
-    original_text_or_exact_source_reference: fundamental_tension.poetry_and_rhetoric
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: problems/philosophy-vs-poetry problem, inquiry profile, and synthesis records
-    transformation_mode: REVISED
-    reason: Poetry and rhetoric as substantive rivals with knowledge of souls belong primarily to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains claimant recognition and audience mediation by reference.
-    unresolved_overlap: Knowledge of souls does not settle the highest human end.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 993a34f3e40a73f3fad809ae031285177207fc74
-
-  - transaction_id: WVG02-TXN-012
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: fundamental_tension.revelation
-    original_text_or_exact_source_reference: fundamental_tension.revelation
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: theologico-political
-    destination_item: problems/theologico-political problem, inquiry profile, witnesses, and synthesis records
-    transformation_mode: REVISED
-    reason: Revelation, divine authority, and the undefeated reason-revelation conflict belong primarily to The Theologico-Political Problem.
-    continuing_relevance: Wise vs. Vulgar retains recognition of prophet, theologian, believer, and false claimant.
-    unresolved_overlap: Athens vs. Jerusalem owns the complete rival ways of life.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: be62bb9629ee78e09c551475ced79df56c208e22
-
-  - transaction_id: WVG02-TXN-013
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: central_human_field.primary_socratic_polarity
-    original_text_or_exact_source_reference: central_human_field.primary_socratic_polarity
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: problems/philosophy-vs-poetry/synthesis/socrates-and-aristophanes.yaml
-    transformation_mode: REVISED
-    reason: Young and mature Socrates as poetic accusation and philosophic correction belong primarily to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains Socrates as a disputed claimant whose rank is not transparent.
-    unresolved_overlap: Historical causation of a Socratic turn remains unproven.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 993a34f3e40a73f3fad809ae031285177207fc74
-
-  - transaction_id: WVG02-TXN-014
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: central_human_field.ordinary_and_political_types
-    original_text_or_exact_source_reference: central_human_field.ordinary_and_political_types
+    source_item_or_section: central_human_field
+    original_text_or_exact_source_reference: central_human_field
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar inquiry-profile.yaml and witnesses.yaml
-    transformation_mode: REVISED
-    reason: Decent citizen, gentleman, statesman, and legislator are claimant and rank types central to this problem.
-    continuing_relevance: Ordinary decency remains genuine while office and cultivation remain non-certifying.
-    unresolved_overlap: Theory vs. Practice owns the complete practical-judgment analysis.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: ffc831f9352245a7bd9d2324ed39612d397bb0fe
-
-  - transaction_id: WVG02-TXN-015
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: central_human_field.philosophic_and_intellectual_claimants
-    original_text_or_exact_source_reference: central_human_field.philosophic_and_intellectual_claimants
-    disposition: RETAIN
-    destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar inquiry-profile.yaml and witnesses.yaml
-    transformation_mode: CONSOLIDATED
-    reason: Philosopher, scholar, professional philosopher, expert, historicist, ideologue, secular intellectual, and great thinker are core claimant types.
-    continuing_relevance: Local expertise, greatness, and professional status remain distinct from wisdom.
-    unresolved_overlap: Ancients vs. Moderns owns the full historical transformation of modern claimant types.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: ffc831f9352245a7bd9d2324ed39612d397bb0fe
-
-  - transaction_id: WVG02-TXN-016
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: central_human_field.rhetorical_and_poetic_types
-    original_text_or_exact_source_reference: central_human_field.rhetorical_and_poetic_types
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: problems/philosophy-vs-poetry witness and inquiry records
+    destination_item: problems/wise-vs-vulgar/witnesses.yaml and inquiry-profile.yaml
     transformation_mode: DIVIDED
-    reason: Substantive knowledge and limits of sophist, rhetorician, poet, and comic poet belong primarily to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains each as a claimant type requiring recognition tests.
-    unresolved_overlap: The rank of poetry and philosophy remains unresolved.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 3f5397f43485d580c16b52cacb00dfa8420c62fb
-
-  - transaction_id: WVG02-TXN-017
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: central_human_field.religious_and_revelatory_claimants
-    original_text_or_exact_source_reference: central_human_field.religious_and_revelatory_claimants
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: theologico-political
-    destination_item: problems/theologico-political witnesses.yaml and inquiry-profile.yaml
-    transformation_mode: DIVIDED
-    reason: Believer, prophet, false prophet, theologian, and revelatory authority belong substantively to The Theologico-Political Problem.
-    continuing_relevance: Wise vs. Vulgar retains recognition and anti-self-certification tests.
-    unresolved_overlap: Genuine revelation remains independently unresolved.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 602816fbc5a62290830b853912dd662a13772b8d
-
-  - transaction_id: WVG02-TXN-018
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: central_human_field.mediating_and_emergent_types
-    original_text_or_exact_source_reference: central_human_field.mediating_and_emergent_types
-    disposition: RETAIN
-    destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar inquiry-profile.yaml and witnesses.yaml
-    transformation_mode: REVISED
-    reason: Potential philosopher, partially liberated intellectual, and philosophic writer are recognition and education types central to this problem.
-    continuing_relevance: Potential, cleverness, partial liberation, obscurity, and literary difficulty remain non-certifying.
-    unresolved_overlap: Philosophy vs. Poetry owns the full literary-form problem.
-    review_status: IMPLEMENTED_PROVISIONAL
+    additional_destination_references:
+      - problems/philosophy-vs-poetry/witnesses.yaml
+      - problems/theologico-political/witnesses.yaml
+      - problems/ancients-vs-moderns/witnesses.yaml
+    reason: Human and institutional claimant types are local; their complete doctrines remain in governing problems.
+    continuing_relevance: Supports comparative recognition without flattening claimant differences.
+    unresolved_overlap: Some supporting types require later witness expansion.
+    review_status: IMPLEMENTED_SUBSTANTIAL
     implementing_commit: ffc831f9352245a7bd9d2324ed39612d397bb0fe
 
-  - transaction_id: WVG02-TXN-019
+  - transaction_id: WVG02-SEC-008
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: principal_witnesses
@@ -334,298 +194,126 @@ section_transactions:
     destination_canonical_key_or_protocol: wise-vs-vulgar
     destination_item: problems/wise-vs-vulgar/witnesses.yaml
     transformation_mode: REVISED
-    reason: Witness identity, works, source status, and independence requirements belong in the witness registry.
-    continuing_relevance: Plato, Xenophon, Aristophanes, Thucydides, Lessing, Schleiermacher, Heidegger, Farabi, Maimonides, Averroes, the Bible, and Strauss remain recoverable.
-    unresolved_overlap: Some supporting witnesses require later registry expansion or source-specific study before use.
-    review_status: IMPLEMENTED_PARTIAL_WITNESS_EXPANSION_PENDING
+    reason: Witness identity, source status, and independence requirements belong in the registry.
+    continuing_relevance: Principal and supporting witnesses remain recoverable.
+    unresolved_overlap: Lessing, Schleiermacher, Farabi, Averroes, and some supporting witnesses await explicit registry expansion.
+    review_status: IMPLEMENTED_PARTIAL
     implementing_commit: ffc831f9352245a7bd9d2324ed39612d397bb0fe
 
-  - transaction_id: WVG02-TXN-020
+  - transaction_id: WVG02-SEC-009
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: recognition_signals
     original_text_or_exact_source_reference: recognition_signals
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml activation signals and investigative questions
+    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml activation_signals and investigative_questions
     transformation_mode: CONSOLIDATED
-    reason: Recognition signals operationalize when the problem activates and how claimants are tested.
-    continuing_relevance: Claims to superiority, philosophy-city conflict, audience differentiation, and revelatory claimants remain explicit.
-    unresolved_overlap: Substantive doctrines route to neighboring problems.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
-  - transaction_id: WVG02-TXN-021
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_operations.interpretive
-    original_text_or_exact_source_reference: required_operations.interpretive
-    disposition: ELEVATE
-    destination_canonical_key_or_protocol: shared-protocols
-    destination_item: speech-and-deed; irony; comedy; source-status; evidence-classification; inference-discipline
-    transformation_mode: DIVIDED
-    reason: General interpretive operations apply across all foundational problems.
-    continuing_relevance: Wise vs. Vulgar invokes them by reference.
-    unresolved_overlap: Protocol-by-protocol reconciliation remains pending for irony and comedy.
-    review_status: CLASSIFIED_IMPLEMENTATION_PARTIAL
-    implementing_commit: 1ae264ea4175d89bb072f5caa601a7da6e904ee9
-
-  - transaction_id: WVG02-TXN-022
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_operations.claimant_examination and audience_examination
-    original_text_or_exact_source_reference: required_operations.claimant_examination; required_operations.audience_examination
-    disposition: ELEVATE
-    destination_canonical_key_or_protocol: shared-protocols
-    destination_item: claimant-to-wisdom; audience-and-rhetoric
-    transformation_mode: REVISED
-    reason: Claimant and audience tests are shared methods, while their problem-specific application remains local.
-    continuing_relevance: The successor inquiry profile invokes both protocols and adds local anti-capture tests.
+    reason: Recognition signals govern activation and claimant examination.
+    continuing_relevance: Distinguishes serious rank claims from ordinary differences in skill.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
 
-  - transaction_id: WVG02-TXN-023
+  - transaction_id: WVG02-SEC-010
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_operations.political_examination
-    original_text_or_exact_source_reference: required_operations.political_examination
-    disposition: DIVIDED
-    destination_canonical_key_or_protocol: multiple-controlled-destinations
-    destination_item: wise-vs-vulgar recognition and legitimacy; theory-vs-practice rule and implementation; philosophy-vs-poetry accusation
-    transformation_mode: DIVIDED
-    reason: The section combines claimant recognition with substantive poetic accusation and practical rule.
-    continuing_relevance: Each destination retains only its governing jurisdiction.
-    unresolved_overlap: Philosopher-rule remains theoretically intelligible and practically unresolved.
-    review_status: CLASSIFIED_IMPLEMENTATION_PARTIAL
-    implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
-
-  - transaction_id: WVG02-TXN-024
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_operations.poetry_and_rhetoric_examination
-    original_text_or_exact_source_reference: required_operations.poetry_and_rhetoric_examination
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: problems/philosophy-vs-poetry/inquiry-profile.yaml
-    transformation_mode: REVISED
-    reason: Poetry and rhetoric as serious rivals and knowledge of souls belong to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains recognition and mediation of poetic and rhetorical claimants.
-    unresolved_overlap: Knowledge of souls and knowledge of the human end remain distinct.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 46c35e70465a030bfea5099ea30dd57a2353c421
-
-  - transaction_id: WVG02-TXN-025
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_operations.revelation_examination
-    original_text_or_exact_source_reference: required_operations.revelation_examination
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: theologico-political
-    destination_item: problems/theologico-political/inquiry-profile.yaml
-    transformation_mode: REVISED
-    reason: Revelation, prophecy, divine command, sacred law, and reason's jurisdiction belong to The Theologico-Political Problem.
-    continuing_relevance: Wise vs. Vulgar retains recognition of genuine and counterfeit representatives.
-    unresolved_overlap: The reason-revelation conflict remains undefeated.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 654eb435e5a9964c8255b0a5662a2e1ea2149ce9
-
-  - transaction_id: WVG02-TXN-026
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_distinctions.human_rank and virtue_and_education
-    original_text_or_exact_source_reference: required_distinctions.human_rank; required_distinctions.virtue_and_education
+    source_item_or_section: required_operations
+    original_text_or_exact_source_reference: required_operations
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml governing distinctions
-    transformation_mode: CONSOLIDATED
-    reason: Rank, expertise, greatness, privilege, virtue, capacity, motive, education, liberation, and corruption are central distinctions.
-    continuing_relevance: They govern claimant tests and differentiated education.
+    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml
+    transformation_mode: DIVIDED
+    additional_destination_references:
+      - protocols/claimant-to-wisdom.yaml
+      - protocols/audience-and-rhetoric.yaml
+      - protocols/irony.yaml
+      - protocols/comedy.yaml
+      - protocols/speech-and-deed.yaml
+      - problems/philosophy-vs-poetry/inquiry-profile.yaml
+      - problems/theory-vs-practice/inquiry-profile.yaml
+      - problems/theologico-political/inquiry-profile.yaml
+    reason: Problem-specific recognition operations remain local; general methods and substantive doctrines route by reference.
+    continuing_relevance: Preserves full examination without duplicating protocols.
     unresolved_overlap: none
-    review_status: IMPLEMENTED_PROVISIONAL
+    review_status: IMPLEMENTED_SUBSTANTIAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
 
-  - transaction_id: WVG02-TXN-027
+  - transaction_id: WVG02-SEC-011
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_distinctions.speech_and_interpretation
-    original_text_or_exact_source_reference: required_distinctions.speech_and_interpretation
-    disposition: ELEVATE
-    destination_canonical_key_or_protocol: shared-protocols
-    destination_item: speech-and-deed; irony; comedy; audience-and-rhetoric; inference-discipline
-    transformation_mode: DIVIDED
-    reason: Speech, deed, irony, comedy, reserve, concealment, exotericism, evidence, and context are shared methods.
-    continuing_relevance: Wise vs. Vulgar applies them to recognition and anti-capture.
-    unresolved_overlap: Protocol reconciliation remains incomplete for all terms.
-    review_status: CLASSIFIED_IMPLEMENTATION_PARTIAL
-    implementing_commit: 1ae264ea4175d89bb072f5caa601a7da6e904ee9
-
-  - transaction_id: WVG02-TXN-028
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_distinctions.politics
-    original_text_or_exact_source_reference: required_distinctions.politics
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: theory-vs-practice
-    destination_item: problems/theory-vs-practice inquiry profile, relations, and witness registry
-    transformation_mode: DIVIDED
-    reason: Theoretical title, legitimacy, law, consent, direct rule, indirect guidance, and practical mediation belong primarily to Theory vs. Practice.
-    continuing_relevance: Wise vs. Vulgar retains recognition and rank of the claimant seeking authority.
-    unresolved_overlap: none
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: f7443d81e0a7634736f38a75dbe676bab18e6f4e
-
-  - transaction_id: WVG02-TXN-029
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_distinctions.poetry_and_rhetoric
-    original_text_or_exact_source_reference: required_distinctions.poetry_and_rhetoric
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: problems/philosophy-vs-poetry inquiry profile and synthesis records
-    transformation_mode: REVISED
-    reason: Poetry, rhetoric, knowledge of souls, myth, spiritedness, and propaganda belong substantively to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains claimant recognition.
-    unresolved_overlap: none
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 993a34f3e40a73f3fad809ae031285177207fc74
-
-  - transaction_id: WVG02-TXN-030
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: required_distinctions.religion_and_revelation
-    original_text_or_exact_source_reference: required_distinctions.religion_and_revelation
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: theologico-political
-    destination_item: problems/theologico-political inquiry profile, witnesses, and synthesis records
-    transformation_mode: REVISED
-    reason: Civic religion, revelation, prophecy, divine command, and reason's authority belong to The Theologico-Political Problem.
-    continuing_relevance: Wise vs. Vulgar retains recognition of claimant types.
-    unresolved_overlap: Athens vs. Jerusalem owns obedient love and autonomous understanding as complete ways of life.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: be62bb9629ee78e09c551475ced79df56c208e22
-
-  - transaction_id: WVG02-TXN-031
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: false_resolutions social, professional, informational, expert, greatness, and elite claims
-    original_text_or_exact_source_reference: false_resolutions.social_elitism through false_resolutions.great_thinker_equivalence; false_resolutions.universal_enlightenment
+    source_item_or_section: required_distinctions
+    original_text_or_exact_source_reference: required_distinctions
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml false resolutions
-    transformation_mode: CONSOLIDATED
-    reason: These are direct recognition and anti-capture errors.
-    continuing_relevance: They prevent social, professional, expert, informational, and educational self-certification.
+    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml governing_distinctions
+    transformation_mode: DIVIDED
+    additional_destination_references:
+      - protocols/audience-and-rhetoric.yaml
+      - protocols/irony.yaml
+      - protocols/comedy.yaml
+      - problems/theory-vs-practice/inquiry-profile.yaml
+      - problems/theologico-political/inquiry-profile.yaml
+    reason: Rank, expertise, privilege, virtue, heterogeneity, and education are local; shared communication rules and neighboring doctrines are referenced.
+    continuing_relevance: Prevents social, professional, poetic, religious, and political self-certification.
     unresolved_overlap: none
-    review_status: IMPLEMENTED_PROVISIONAL
+    review_status: IMPLEMENTED_SUBSTANTIAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
 
-  - transaction_id: WVG02-TXN-032
+  - transaction_id: WVG02-SEC-012
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
-    source_item_or_section: false_resolutions interpretive and exoteric claims
-    original_text_or_exact_source_reference: false_resolutions.unrestricted_exotericism through false_resolutions.comedy_as_trivialization
-    disposition: ELEVATE
-    destination_canonical_key_or_protocol: shared-protocols
-    destination_item: audience-and-rhetoric; inference-discipline; irony; comedy; speech-and-deed
+    source_item_or_section: false_resolutions
+    original_text_or_exact_source_reference: false_resolutions
+    disposition: RETAIN
+    destination_canonical_key_or_protocol: wise-vs-vulgar
+    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml false_resolutions
     transformation_mode: DIVIDED
-    reason: Exotericism, openness, secrecy, irony, and comedy are shared methodological errors.
-    continuing_relevance: Wise vs. Vulgar invokes them in claimant testing.
+    additional_destination_references:
+      - protocols/audience-and-rhetoric.yaml
+      - protocols/irony.yaml
+      - protocols/comedy.yaml
+      - problems/philosophy-vs-poetry/inquiry-profile.yaml
+      - problems/theory-vs-practice/inquiry-profile.yaml
+      - problems/theologico-political/inquiry-profile.yaml
+      - problems/ancients-vs-moderns/inquiry-profile.yaml
+    reason: Direct recognition errors remain local; methodological and substantive errors route to their governing destinations.
+    continuing_relevance: No false resolution is deleted.
     unresolved_overlap: none
-    review_status: CLASSIFIED_IMPLEMENTATION_PARTIAL
-    implementing_commit: PENDING
+    review_status: IMPLEMENTED_SUBSTANTIAL
+    implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
 
-  - transaction_id: WVG02-TXN-033
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: false_resolutions poetic and rhetorical sovereignty claims
-    original_text_or_exact_source_reference: false_resolutions.poetry_as_propaganda through false_resolutions.rhetorical_sovereignty
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: problems/philosophy-vs-poetry/inquiry-profile.yaml false resolutions
-    transformation_mode: REVISED
-    reason: Reduction or sovereignty of poetry and rhetoric belongs to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains poet and rhetorician as claimant types.
-    unresolved_overlap: none
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 46c35e70465a030bfea5099ea30dd57a2353c421
-
-  - transaction_id: WVG02-TXN-034
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: false_resolutions political rule and harmless philosophy claims
-    original_text_or_exact_source_reference: false_resolutions.philosopher_king_literalism; false_resolutions.politically_embodied_wisdom; false_resolutions.harmless_philosophy; false_resolutions.city_as_wholly_irrational; false_resolutions.philosophy_as_complete
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: theory-vs-practice
-    destination_item: problems/theory-vs-practice/inquiry-profile.yaml false resolutions and claimant tests
-    transformation_mode: DIVIDED
-    reason: Direct rule, embodied wisdom, political effect, city concern, and philosophy's practical self-correction belong primarily to Theory vs. Practice.
-    continuing_relevance: Wise vs. Vulgar retains recognition and non-certification of claimants.
-    unresolved_overlap: Philosophy vs. Poetry owns poetic correction of incomplete philosophy.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 6e88c7cc11e35ebb183df94d1c8a1a728d306055
-
-  - transaction_id: WVG02-TXN-035
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: false_resolutions reason-revelation victory and synthesis claims
-    original_text_or_exact_source_reference: false_resolutions.secular_certainty; false_resolutions.revealed_authority_as_self_proving; false_resolutions.reason_revelation_synthesis; false_resolutions.philosophic_victory_over_revelation; false_resolutions.revelatory_victory_over_philosophy
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: theologico-political
-    destination_item: problems/theologico-political/inquiry-profile.yaml false resolutions
-    transformation_mode: REVISED
-    reason: Premature victory, self-proving revelation, and reason-revelation synthesis belong to The Theologico-Political Problem.
-    continuing_relevance: Wise vs. Vulgar retains recognition of genuine and counterfeit claimants.
-    unresolved_overlap: Athens vs. Jerusalem owns the complete ways of life.
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 654eb435e5a9964c8255b0a5662a2e1ea2149ce9
-
-  - transaction_id: WVG02-TXN-036
-    source_canonical_key: wise-vs-vulgar
-    source_version: 0.2-reconstruction-draft
-    source_item_or_section: false_resolutions historical_vanguardism
-    original_text_or_exact_source_reference: false_resolutions.historical_vanguardism
-    disposition: TRANSFER
-    destination_canonical_key_or_protocol: ancients-vs-moderns
-    destination_item: problems/ancients-vs-moderns/inquiry-profile.yaml false resolutions and claimant tests
-    transformation_mode: REVISED
-    reason: Historical direction and vanguard authority belong primarily to Ancients vs. Moderns.
-    continuing_relevance: Wise vs. Vulgar retains vanguard as a claimant type.
-    unresolved_overlap: none
-    review_status: IMPLEMENTED_PROVISIONAL
-    implementing_commit: 35f93cb64fa9ae4c7f4be9acbffa625f32354e9a
-
-  - transaction_id: WVG02-TXN-037
+  - transaction_id: WVG02-SEC-013
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: anti_capture_protocol
     original_text_or_exact_source_reference: anti_capture_protocol
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/problem.yaml anti-capture principle; inquiry-profile.yaml claimant tests
+    destination_item: problems/wise-vs-vulgar/problem.yaml anti_capture_principle and inquiry-profile.yaml claimant_tests
     transformation_mode: REVISED
-    reason: Anti-self-certification is constitutional to this problem.
-    continuing_relevance: It now expressly includes repositories and artificial intelligence systems.
-    unresolved_overlap: Shared claimant protocol retains general method.
+    reason: Anti-self-certification is constitutional to the problem.
+    continuing_relevance: Extends explicitly to repositories and artificial intelligence systems.
+    unresolved_overlap: General claimant method remains in the shared protocol.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
 
-  - transaction_id: WVG02-TXN-038
+  - transaction_id: WVG02-SEC-014
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: boundary_rule
     original_text_or_exact_source_reference: boundary_rule
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/problem.yaml boundary; inquiry-profile.yaml activation signals
+    destination_item: problems/wise-vs-vulgar/problem.yaml boundary and inquiry-profile.yaml activation_signals
     transformation_mode: REVISED
-    reason: Activation and nonactivation boundaries are operationally central.
-    continuing_relevance: The successor narrows activation to claims of superior ends, rank, education, or authority.
+    reason: Activation and nonactivation boundaries remain problem-specific.
+    continuing_relevance: Prevents ordinary technical differences from activating the full foundational problem.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
 
-  - transaction_id: WVG02-TXN-039
+  - transaction_id: WVG02-SEC-015
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: relations
@@ -635,52 +323,54 @@ section_transactions:
     destination_item: problems/wise-vs-vulgar/relations.yaml
     transformation_mode: REVISED
     reason: Cross-problem overlap belongs in a controlled relations record.
-    continuing_relevance: All six foundational relations remain explicit with jurisdiction boundaries.
+    continuing_relevance: All six neighboring jurisdictions remain explicit.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 3c5bb7303d4e50a79d0c79d8098e166205356b3f
 
-  - transaction_id: WVG02-TXN-040
+  - transaction_id: WVG02-SEC-016
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: permissible_outputs
     original_text_or_exact_source_reference: permissible_outputs
-    disposition: DIVIDED
-    destination_canonical_key_or_protocol: multiple-controlled-destinations
-    destination_item: evidence-classification; uncertainty-preservation; speech-and-deed; irony; comedy; audience-and-rhetoric; problem-specific output constraints
+    disposition: ELEVATE
+    destination_canonical_key_or_protocol: shared-protocols
+    destination_item: evidence-classification; uncertainty-preservation; speech-and-deed; irony; comedy; audience-and-rhetoric
     transformation_mode: DIVIDED
-    reason: General output classes belong in shared protocols while problem-specific findings remain in the inquiry profile.
-    continuing_relevance: Documentary, supported, critical, comic, ironic, audience, political, revelatory, and unresolved outputs remain available.
-    unresolved_overlap: Protocol reconciliation remains partial.
-    review_status: CLASSIFIED_IMPLEMENTATION_PARTIAL
-    implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
+    additional_destination_references:
+      - problems/wise-vs-vulgar/inquiry-profile.yaml
+    reason: General output classes are shared; problem-specific output constraints remain local.
+    continuing_relevance: Documentary, supported, critical, comic, ironic, audience, and unresolved outputs remain available.
+    unresolved_overlap: none
+    review_status: IMPLEMENTED_SUBSTANTIAL
+    implementing_commit: 0b3966ea2a7fb2673394b98c83444e502c246424
 
-  - transaction_id: WVG02-TXN-041
+  - transaction_id: WVG02-SEC-017
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: opacity_floor
     original_text_or_exact_source_reference: opacity_floor
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml governing distinctions, output constraints, and termination tests
+    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml governing_distinctions, output_constraints, and termination_tests
     transformation_mode: CONSOLIDATED
-    reason: The opacity floor prevents unsupported certainty concerning wisdom, audiences, irony, comedy, heterogeneity, poetry, revelation, and Strauss.
-    continuing_relevance: It governs every successor inquiry.
-    unresolved_overlap: Shared uncertainty and inference protocols also apply.
+    reason: The opacity floor prevents unsupported certainty about wisdom, audiences, irony, comedy, heterogeneity, poetry, revelation, and Strauss.
+    continuing_relevance: Governs every successor inquiry.
+    unresolved_overlap: Shared inference and uncertainty protocols also apply.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
 
-  - transaction_id: WVG02-TXN-042
+  - transaction_id: WVG02-SEC-018
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: termination_condition
     original_text_or_exact_source_reference: termination_condition
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml termination tests
+    destination_item: problems/wise-vs-vulgar/inquiry-profile.yaml termination_tests
     transformation_mode: CONSOLIDATED
-    reason: Completion standards and valid nonresolution states are operationally central.
-    continuing_relevance: The successor requires claimant, audience, speech-deed, political, poetic, and revelatory examination before termination.
+    reason: Completion standards and valid nonresolution states remain operationally central.
+    continuing_relevance: Prevents termination before claimant, audience, speech-deed, political, poetic, and revelatory examination.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
@@ -690,782 +380,735 @@ proposition_transactions:
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[1]
-    original_text_or_exact_source_reference: Political society ordinarily lives through authoritative opinion rather than philosophic knowledge.
+    original_text_or_exact_source_reference: constitutive_propositions[1]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problem permanent tension and inquiry profile
+    destination_item: problem permanent_tension
     transformation_mode: REVISED
-    reason: Political dependence on opinion is a core premise of the recognition problem.
-    continuing_relevance: Ordinary political life must not be equated with knowledge or worthlessness.
+    reason: Political dependence on authoritative opinion is a core premise.
+    continuing_relevance: Ordinary political life is neither knowledge nor worthlessness.
     unresolved_overlap: Nomos vs. Physis owns the truth of authoritative opinions.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
-
   - transaction_id: WVG02-PROP-002
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[2]
-    original_text_or_exact_source_reference: Political or vulgar virtue is genuine and politically indispensable, though grounded in opinion rather than knowledge.
+    original_text_or_exact_source_reference: constitutive_propositions[2]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile operation PRESERVE_ORDINARY_DECENCY
+    destination_item: inquiry-profile operation PRESERVE_ORDINARY_DECENCY
     transformation_mode: REVISED
-    reason: Genuine ordinary virtue is central to preventing contemptuous elite capture.
-    continuing_relevance: Decency and philosophy remain distinct without making decency unreal.
+    reason: Vulgar or political virtue is genuine though nonphilosophic.
+    continuing_relevance: Prevents contemptuous elite capture.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-003
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[3]
-    original_text_or_exact_source_reference: Vulgar does not mean poor, crude, unintelligent, uneducated, or socially inferior.
+    original_text_or_exact_source_reference: constitutive_propositions[3]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile governing distinctions and output constraints
+    destination_item: inquiry-profile governing_distinctions
     transformation_mode: REVISED
-    reason: The term must remain detached from class contempt and social insult.
-    continuing_relevance: Governs title, language, and claimant classification.
+    reason: Vulgar must remain detached from class or intelligence insult.
+    continuing_relevance: Governs terminology and classification.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-004
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[4]
-    original_text_or_exact_source_reference: Philosophy begins within political opinion by making explicit its questions and contradictions.
+    original_text_or_exact_source_reference: constitutive_propositions[4]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problem permanent tension and claimant context
+    destination_item: problem permanent_tension
     transformation_mode: REVISED
-    reason: Philosophy's dependence on opinion shapes recognition and political relation.
-    continuing_relevance: Philosophy cannot present itself as wholly external to the city.
-    unresolved_overlap: Philosophy vs. Poetry and Nomos vs. Physis own substantive inquiry into poetic and natural standards.
+    reason: Philosophy begins within political opinion and remains dependent on it.
+    continuing_relevance: Shapes recognition and political relation.
+    unresolved_overlap: Philosophy vs. Poetry and Nomos vs. Physis own substantive inquiry.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
-
   - transaction_id: WVG02-PROP-005
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[5]
-    original_text_or_exact_source_reference: Philosophy necessarily disturbs authoritative opinion by asking whether the ancestral, lawful, sacred, customary, popular, or useful is also true and good.
+    original_text_or_exact_source_reference: constitutive_propositions[5]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile vulgar-misrecognition and political-relation tests
+    destination_item: inquiry-profile political_relation tests
     transformation_mode: REVISED
-    reason: Philosophy's disturbance explains both recognition difficulty and rational grounds for public concern.
-    continuing_relevance: The city-philosophy tension remains central.
-    unresolved_overlap: Nomos vs. Physis and Theologico-Political own the standards questioned.
+    reason: Philosophy necessarily disturbs authoritative opinion.
+    continuing_relevance: Explains recognition difficulty and public concern.
+    unresolved_overlap: Neighboring problems own the standards questioned.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-006
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[6]
-    original_text_or_exact_source_reference: The city's suspicion is not wholly irrational, because inquiry can weaken restraints upon which political order depends.
+    original_text_or_exact_source_reference: constitutive_propositions[6]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile vulgar-misrecognition operation and false resolutions
+    destination_item: inquiry-profile vulgar_misrecognition tests
     transformation_mode: REVISED
-    reason: Recognition must preserve rational public concern rather than depicting the city as wholly irrational.
-    continuing_relevance: Philosophy's effects on unequal audiences require examination.
-    unresolved_overlap: Philosophy vs. Poetry owns the detailed poetic accusation.
+    reason: The city's suspicion may possess rational grounds.
+    continuing_relevance: Unequal audience effects require examination.
+    unresolved_overlap: Philosophy vs. Poetry owns the full poetic accusation.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-007
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[7]
-    original_text_or_exact_source_reference: The city may nevertheless condemn philosophy unjustly because it cannot reliably distinguish philosophy from sophistry, corruption, ideology, or manipulation.
+    original_text_or_exact_source_reference: constitutive_propositions[7]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problem governing question and inquiry profile claimant tests
+    destination_item: governing_question and claimant_tests
     transformation_mode: REVISED
-    reason: The city's inability to identify philosophy is the core recognition problem.
-    continuing_relevance: Protects both political concern and philosophic independence.
+    reason: The city cannot reliably identify philosophy among counterfeits.
+    continuing_relevance: Core recognition problem.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
-
   - transaction_id: WVG02-PROP-008
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[8]
-    original_text_or_exact_source_reference: Philosophy's political problem is not caused solely by the city; philosophy itself may lack self-knowledge.
+    original_text_or_exact_source_reference: constitutive_propositions[8]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: philosophy-vs-poetry founding problem and Socrates-Aristophanes synthesis
+    destination_item: philosophy's poetic correction and self-knowledge
     transformation_mode: REVISED
-    reason: Philosophy's poetic correction and self-knowledge belong primarily to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains self-knowledge as a claimant test.
-    unresolved_overlap: Historical transformation of Socrates remains open.
+    reason: Philosophy's possible lack of self-knowledge belongs primarily to Philosophy vs. Poetry.
+    continuing_relevance: Wise vs. Vulgar retains self-knowledge as claimant evidence.
+    unresolved_overlap: Historical Socratic transformation remains open.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 993a34f3e40a73f3fad809ae031285177207fc74
-
   - transaction_id: WVG02-PROP-009
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[9]
-    original_text_or_exact_source_reference: Political philosophy originates through philosophy's self-correction.
+    original_text_or_exact_source_reference: constitutive_propositions[9]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: philosophy-vs-poetry synthesis concerning the mature Socratic response
+    destination_item: mature Socratic response synthesis
     transformation_mode: REVISED
-    reason: The origin of political philosophy through poetic and human correction belongs primarily to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains political self-knowledge as evidence concerning claimants.
+    reason: Political philosophy's origin through self-correction belongs primarily there.
+    continuing_relevance: Wise vs. Vulgar retains political self-knowledge as claimant evidence.
     unresolved_overlap: Historical causation remains unproven.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 993a34f3e40a73f3fad809ae031285177207fc74
-
   - transaction_id: WVG02-PROP-010
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[10]
-    original_text_or_exact_source_reference: Human beings differ in capacity, desire, memory, motive, character, attachment, and possible way of life.
+    original_text_or_exact_source_reference: constitutive_propositions[10]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problem jurisdiction and inquiry profile human-heterogeneity operation
+    destination_item: jurisdiction human_heterogeneity
     transformation_mode: REVISED
     reason: Human heterogeneity is a permanent owned jurisdiction.
     continuing_relevance: Supports differentiated education without caste certification.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
-
   - transaction_id: WVG02-PROP-011
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[11]
-    original_text_or_exact_source_reference: The same teaching may elevate one person, leave another unchanged, and corrupt a third.
+    original_text_or_exact_source_reference: constitutive_propositions[11]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile differentiated-education and audience tests
+    destination_item: differentiated_education tests
     transformation_mode: REVISED
-    reason: Unequal effects are central to audience, education, and responsibility.
-    continuing_relevance: Teaching must be judged by what it does to different souls.
-    unresolved_overlap: Philosophy vs. Poetry owns substantive modes of psychagogy.
+    reason: The same teaching may affect souls differently.
+    continuing_relevance: Teaching must be judged through differentiated effects.
+    unresolved_overlap: Philosophy vs. Poetry owns psychagogic forms.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-012
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[12]
-    original_text_or_exact_source_reference: Neutral exposure to competing arguments is not necessarily neutral education.
+    original_text_or_exact_source_reference: constitutive_propositions[12]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile false resolutions and differentiated-education tests
+    destination_item: false_resolution neutral exposure
     transformation_mode: REVISED
-    reason: Teachers remain responsible for selection, framing, sequence, audience, and effects.
-    continuing_relevance: Neutrality claims require speech-and-deed examination.
-    unresolved_overlap: Philosophy vs. Poetry owns the detailed educative forms.
+    reason: Neutral presentation is not necessarily neutral education.
+    continuing_relevance: Teachers remain responsible for framing and effects.
+    unresolved_overlap: Shared audience protocol also governs.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-013
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[13]
-    original_text_or_exact_source_reference: Liberation from opinion is not identical with ascent toward wisdom.
+    original_text_or_exact_source_reference: constitutive_propositions[13]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile education and claimant distinctions
+    destination_item: education and claimant distinctions
     transformation_mode: REVISED
-    reason: Partial liberation may preserve appetite, vanity, resentment, or domination.
-    continuing_relevance: Prevents heterodoxy and cleverness from certifying rank.
+    reason: Liberation from opinion is not ascent to wisdom.
+    continuing_relevance: Heterodoxy and cleverness remain non-certifying.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-014
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[14]
-    original_text_or_exact_source_reference: Being misunderstood, ridiculed, or persecuted does not establish wisdom.
+    original_text_or_exact_source_reference: constitutive_propositions[14]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problem anti-capture principle and inquiry profile false resolutions
+    destination_item: anti_capture_principle
     transformation_mode: REVISED
-    reason: Marginality and suffering are unreliable rank signals.
-    continuing_relevance: Protects against martyr and persecution self-certification.
+    reason: Misunderstanding, ridicule, and persecution do not establish wisdom.
+    continuing_relevance: Prevents martyr self-certification.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
-
   - transaction_id: WVG02-PROP-015
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[15]
-    original_text_or_exact_source_reference: Professional titles do not identify the wise.
+    original_text_or_exact_source_reference: constitutive_propositions[15]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problem anti-capture principle; witnesses claimant-title rule
+    destination_item: claimant_title tests
     transformation_mode: REVISED
-    reason: Professional status is a claim and role, not demonstrated wisdom.
-    continuing_relevance: Applies to philosophy, theology, scholarship, science, law, and technology.
+    reason: Professional titles do not identify the wise.
+    continuing_relevance: Applies across philosophy, theology, scholarship, law, science, and technology.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: ffc831f9352245a7bd9d2324ed39612d397bb0fe
-
   - transaction_id: WVG02-PROP-016
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[16]
-    original_text_or_exact_source_reference: Scholarship is indispensable but may be governed by unexamined assumptions.
+    original_text_or_exact_source_reference: constitutive_propositions[16]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: witnesses scholar claimant and inquiry profile local-versus-comprehensive test
+    destination_item: scholar claimant tests
     transformation_mode: REVISED
-    reason: Exact scholarship is indispensable but non-self-certifying.
-    continuing_relevance: Prevents both anti-scholarly intuition and professional capture.
+    reason: Scholarship is indispensable and non-self-certifying.
+    continuing_relevance: Prevents anti-scholarly intuition and professional capture.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: ffc831f9352245a7bd9d2324ed39612d397bb0fe
-
   - transaction_id: WVG02-PROP-017
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[17]
-    original_text_or_exact_source_reference: Philosophic openness without scholarly discipline may manufacture unsupported hidden teachings.
+    original_text_or_exact_source_reference: constitutive_propositions[17]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile capture and documentary tests
+    destination_item: documentary and capture tests
     transformation_mode: REVISED
-    reason: Interpretive freedom requires source discipline and positive evidence.
-    continuing_relevance: Prevents esoteric and ironic self-certification.
+    reason: Interpretive openness without discipline can manufacture hidden teachings.
+    continuing_relevance: Positive evidence remains required.
     unresolved_overlap: Shared inference discipline also governs.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-018
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[18]
-    original_text_or_exact_source_reference: Technical expertise does not establish knowledge of justice, the common good, or the highest life.
+    original_text_or_exact_source_reference: constitutive_propositions[18]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile local-versus-comprehensive distinction
+    destination_item: local_vs_comprehensive distinction
     transformation_mode: REVISED
-    reason: Domain competence must not expand into comprehensive political authority.
-    continuing_relevance: Applies to experts, institutions, and artificial intelligence systems.
-    unresolved_overlap: Theory vs. Practice owns the use of expertise in action.
+    reason: Technical expertise does not establish knowledge of justice or the highest life.
+    continuing_relevance: Applies to experts, institutions, and AI systems.
+    unresolved_overlap: Theory vs. Practice owns use of expertise in action.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-019
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[19]
-    original_text_or_exact_source_reference: Historical consciousness does not establish freedom from one's own horizon.
+    original_text_or_exact_source_reference: constitutive_propositions[19]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile claimant and capture tests
+    destination_item: historical claimant tests
     transformation_mode: REVISED
-    reason: Historical awareness is a claimant attribute, not comprehensive wisdom.
-    continuing_relevance: Prevents historicist scholars and vanguards from self-certification.
-    unresolved_overlap: Ancients vs. Moderns owns the full historicism problem.
+    reason: Historical consciousness does not establish freedom from one's horizon.
+    continuing_relevance: Historicist claimants remain subject to recognition tests.
+    unresolved_overlap: Ancients vs. Moderns owns historicism as doctrine.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-020
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[20]
-    original_text_or_exact_source_reference: Intellectual greatness, originality, influence, and resoluteness are not identical with wisdom.
+    original_text_or_exact_source_reference: constitutive_propositions[20]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problem permanent tension and inquiry profile false resolutions
+    destination_item: false_resolution greatness equivalence
     transformation_mode: REVISED
-    reason: Greatness and wisdom must remain distinct.
-    continuing_relevance: Applies to philosophers, artists, political founders, scholars, and theorists.
+    reason: Greatness, originality, influence, and resoluteness are not wisdom.
+    continuing_relevance: Applies across intellectual and political claimant types.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
-
   - transaction_id: WVG02-PROP-021
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[21]
-    original_text_or_exact_source_reference: Wisdom cannot be inferred from social rank, wealth, birth, education, office, or class.
+    original_text_or_exact_source_reference: constitutive_propositions[21]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: problem anti-capture principle and inquiry profile distinctions
+    destination_item: anti_capture_principle
     transformation_mode: REVISED
-    reason: Social and institutional position cannot certify natural or philosophic rank.
-    continuing_relevance: Prevents caste, gentlemanly, professional, and officeholder capture.
+    reason: Social rank, wealth, birth, education, office, and class do not certify wisdom.
+    continuing_relevance: Prevents caste and institutional capture.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
-
   - transaction_id: WVG02-PROP-022
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[22]
-    original_text_or_exact_source_reference: Genuine wisdom, if present, cannot certify itself through assertion.
+    original_text_or_exact_source_reference: constitutive_propositions[22]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: governing question and anti-certification rule
+    destination_item: governing_question and anti_certification_rule
     transformation_mode: REVISED
-    reason: Non-self-certification is constitutional to the problem.
-    continuing_relevance: Governs every claimant, institution, repository, and AI system.
+    reason: Wisdom cannot certify itself through assertion.
+    continuing_relevance: Governs every claimant, repository, and AI system.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
-
   - transaction_id: WVG02-PROP-023
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[23]
-    original_text_or_exact_source_reference: Recognition of wisdom is partly circular and therefore requires provisional, comparative, evidence-based judgment.
+    original_text_or_exact_source_reference: constitutive_propositions[23]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile provisional rank labels and claimant tests
+    destination_item: provisional_rank labels
     transformation_mode: REVISED
-    reason: The successor permits evidence-bound provisional judgment without final certification.
-    continuing_relevance: Governs termination and output classification.
+    reason: Recognition requires provisional comparative evidence-based judgment.
+    continuing_relevance: Allows limited rank judgments without final certification.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-024
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[24]
-    original_text_or_exact_source_reference: Speech must be interpreted through deed, and deed through speech.
+    original_text_or_exact_source_reference: constitutive_propositions[24]
     disposition: ELEVATE
     destination_canonical_key_or_protocol: speech-and-deed
     destination_item: protocols/speech-and-deed.yaml
     transformation_mode: REVISED
-    reason: Shared interpretive discipline applies across all foundational problems.
+    reason: Speech-deed comparison is shared across all problems.
     continuing_relevance: Wise vs. Vulgar invokes it for claimant testing.
     unresolved_overlap: none
-    review_status: IMPLEMENTED_PROVISIONAL
+    review_status: IMPLEMENTED_VERIFIED_PENDING_AUTOMATED_VALIDATION
     implementing_commit: 1ae264ea4175d89bb072f5caa601a7da6e904ee9
-
   - transaction_id: WVG02-PROP-025
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[25]
-    original_text_or_exact_source_reference: Irony is not mechanical inversion.
+    original_text_or_exact_source_reference: constitutive_propositions[25]
     disposition: ELEVATE
     destination_canonical_key_or_protocol: irony
     destination_item: protocols/irony.yaml
-    transformation_mode: REFERENCE_ONLY
-    reason: Shared irony safeguard must govern all problems.
-    continuing_relevance: Prevents modesty or contradiction from becoming concealed certification.
-    unresolved_overlap: Protocol reconciliation pending.
-    review_status: CLASSIFIED_PROTOCOL_RECONCILIATION_PENDING
-    implementing_commit: PENDING
-
+    transformation_mode: REVISED
+    reason: Irony is a shared method and not mechanical inversion.
+    continuing_relevance: Prevents concealed-rank self-certification.
+    unresolved_overlap: none
+    review_status: IMPLEMENTED_VERIFIED_PENDING_AUTOMATED_VALIDATION
+    implementing_commit: ea19ae567128e3bf1b5459944f0dd655ae00ec88
   - transaction_id: WVG02-PROP-026
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[26]
-    original_text_or_exact_source_reference: Comedy is a mode of philosophic disclosure.
+    original_text_or_exact_source_reference: constitutive_propositions[26]
     disposition: ELEVATE
     destination_canonical_key_or_protocol: comedy
     destination_item: protocols/comedy.yaml
-    transformation_mode: REFERENCE_ONLY
-    reason: Comedy is a shared interpretive method.
-    continuing_relevance: Wise vs. Vulgar uses comedy to expose pretension and false rank.
-    unresolved_overlap: Philosophy vs. Poetry owns comedy's substantive rival wisdom claim.
-    review_status: CLASSIFIED_PROTOCOL_RECONCILIATION_PENDING
-    implementing_commit: PENDING
-
+    transformation_mode: REVISED
+    reason: Comedy is a shared mode of substantive disclosure.
+    continuing_relevance: Wise vs. Vulgar invokes it to test false rank.
+    unresolved_overlap: Philosophy vs. Poetry owns comedy's rival wisdom claim.
+    review_status: IMPLEMENTED_VERIFIED_PENDING_AUTOMATED_VALIDATION
+    implementing_commit: 2e357aae53a92d3b85a3c92a2d13f706e11600f8
   - transaction_id: WVG02-PROP-027
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[27]
-    original_text_or_exact_source_reference: Differentiated communication may include selection, dialectic, persuasion, provisional teaching, omission, myth, irony, comedy, and concealment.
+    original_text_or_exact_source_reference: constitutive_propositions[27]
     disposition: ELEVATE
     destination_canonical_key_or_protocol: audience-and-rhetoric
-    destination_item: protocols/audience-and-rhetoric.yaml
+    destination_item: protocols/audience-and-rhetoric.yaml communication_forms
     transformation_mode: REVISED
-    reason: General forms of differentiated communication belong in the shared protocol.
-    continuing_relevance: Wise vs. Vulgar owns why capacity, motive, recognition, and capture make differentiation politically dangerous.
+    reason: Differentiated communication forms are shared methods.
+    continuing_relevance: Wise vs. Vulgar retains heterogeneity and capture tests.
     unresolved_overlap: none
-    review_status: CLASSIFIED_PROTOCOL_RECONCILIATION_PENDING
-    implementing_commit: PENDING
-
+    review_status: IMPLEMENTED_VERIFIED_PENDING_AUTOMATED_VALIDATION
+    implementing_commit: 0b3966ea2a7fb2673394b98c83444e502c246424
   - transaction_id: WVG02-PROP-028
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[28]
-    original_text_or_exact_source_reference: Exoteric teaching arises from human heterogeneity, political imperfection, and prudence concerning the effects of truth.
+    original_text_or_exact_source_reference: constitutive_propositions[28]
     disposition: ELEVATE
     destination_canonical_key_or_protocol: audience-and-rhetoric
-    destination_item: protocols/audience-and-rhetoric.yaml
+    destination_item: protocols/audience-and-rhetoric.yaml exoteric_and_differentiated_communication
     transformation_mode: REVISED
-    reason: General grounds of audience differentiation belong in a shared protocol.
-    continuing_relevance: Wise vs. Vulgar retains heterogeneity, recognition, and capture.
-    unresolved_overlap: Positive evidence for specific exotericism remains source-dependent.
-    review_status: CLASSIFIED_PROTOCOL_RECONCILIATION_PENDING
-    implementing_commit: PENDING
-
+    reason: General grounds of exoteric teaching belong in the shared protocol.
+    continuing_relevance: Wise vs. Vulgar retains recognition and elite-capture questions.
+    unresolved_overlap: Specific exotericism remains source-dependent.
+    review_status: IMPLEMENTED_VERIFIED_PENDING_AUTOMATED_VALIDATION
+    implementing_commit: 0b3966ea2a7fb2673394b98c83444e502c246424
   - transaction_id: WVG02-PROP-029
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[29]
-    original_text_or_exact_source_reference: Exoteric teaching does not authorize unrestricted deception.
+    original_text_or_exact_source_reference: constitutive_propositions[29]
     disposition: ELEVATE
     destination_canonical_key_or_protocol: audience-and-rhetoric
-    destination_item: protocols/audience-and-rhetoric.yaml anti-manipulation rule
+    destination_item: anti_capture_rule
     transformation_mode: REVISED
-    reason: Shared exoteric restraint applies across problems.
-    continuing_relevance: Wise vs. Vulgar tests elite use of reserve and concealment.
+    reason: Exotericism does not authorize unrestricted deception.
+    continuing_relevance: Governs every differentiated speaker.
     unresolved_overlap: none
-    review_status: CLASSIFIED_PROTOCOL_RECONCILIATION_PENDING
-    implementing_commit: PENDING
-
+    review_status: IMPLEMENTED_VERIFIED_PENDING_AUTOMATED_VALIDATION
+    implementing_commit: 0b3966ea2a7fb2673394b98c83444e502c246424
   - transaction_id: WVG02-PROP-030
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[30]
-    original_text_or_exact_source_reference: Openness does not by itself establish honesty; concealment does not by itself establish wisdom.
+    original_text_or_exact_source_reference: constitutive_propositions[30]
     disposition: ELEVATE
     destination_canonical_key_or_protocol: audience-and-rhetoric
-    destination_item: protocols/audience-and-rhetoric.yaml openness and concealment safeguards
+    destination_item: governing_limits
     transformation_mode: REVISED
-    reason: Shared communication safeguard must govern all problem inquiries.
-    continuing_relevance: Prevents both openness and secrecy from self-certifying.
+    reason: Openness and concealment are non-self-certifying communication forms.
+    continuing_relevance: Prevents both publicity and secrecy from proving philosophy.
     unresolved_overlap: none
-    review_status: CLASSIFIED_PROTOCOL_RECONCILIATION_PENDING
-    implementing_commit: PENDING
-
+    review_status: IMPLEMENTED_VERIFIED_PENDING_AUTOMATED_VALIDATION
+    implementing_commit: 0b3966ea2a7fb2673394b98c83444e502c246424
   - transaction_id: WVG02-PROP-031
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[31]
-    original_text_or_exact_source_reference: Poetry is a genuine rival claimant to knowledge and guidance of souls.
+    original_text_or_exact_source_reference: constitutive_propositions[31]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: philosophy-vs-poetry constitution and inquiry profile
+    destination_item: poetry as rival claimant to wisdom
     transformation_mode: REVISED
     reason: Poetry's substantive claim belongs primarily to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains poet as a claimant requiring recognition.
+    continuing_relevance: Wise vs. Vulgar retains poet as claimant type.
     unresolved_overlap: Poetry's final rank remains open.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: d90583f71ddc367e66948e1b4c5bcf96948f8c01
-
   - transaction_id: WVG02-PROP-032
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[32]
-    original_text_or_exact_source_reference: Philosophy cannot guide political life through demonstration alone.
+    original_text_or_exact_source_reference: constitutive_propositions[32]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: philosophy-vs-poetry inquiry profile educative action and philosophic integration
+    destination_item: philosophic integration and educative form
     transformation_mode: REVISED
-    reason: Poetry's accusation concerning human guidance belongs primarily to Philosophy vs. Poetry.
-    continuing_relevance: Theory vs. Practice owns general implementation; Wise vs. Vulgar owns audience and claimant recognition.
+    reason: Demonstration alone cannot guide political souls.
+    continuing_relevance: Theory vs. Practice owns general implementation; Wise vs. Vulgar owns audience recognition.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 46c35e70465a030bfea5099ea30dd57a2353c421
-
   - transaction_id: WVG02-PROP-033
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[33]
-    original_text_or_exact_source_reference: Spiritedness supplies courage and indignation but does not determine whether its cause is just.
+    original_text_or_exact_source_reference: constitutive_propositions[33]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: philosophy-vs-poetry
-    destination_item: philosophy-vs-poetry synthesis and inquiry profile soul-and-education tests
+    destination_item: spiritedness and education of souls
     transformation_mode: REVISED
-    reason: Spiritedness as a poetic and educational dimension belongs primarily to Philosophy vs. Poetry.
-    continuing_relevance: Wise vs. Vulgar retains spirited claimants and motives as recognition evidence.
+    reason: Spiritedness as poetic and educational power belongs primarily there.
+    continuing_relevance: Wise vs. Vulgar retains motive and claimant evidence.
     unresolved_overlap: Nomos vs. Physis owns the standard of justice.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 993a34f3e40a73f3fad809ae031285177207fc74
-
   - transaction_id: WVG02-PROP-034
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[34]
-    original_text_or_exact_source_reference: The philosopher has the strongest theoretical title to rule only if genuine knowledge is present.
+    original_text_or_exact_source_reference: constitutive_propositions[34]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile claimant tests and political relation
+    destination_item: claimant_tests and political_relation
     transformation_mode: REVISED
-    reason: The condition and recognition of genuine knowledge are central rank problems.
-    continuing_relevance: A theoretical title remains distinct from recognition, legitimacy, and execution.
-    unresolved_overlap: Theory vs. Practice owns the full rule and implementation problem.
+    reason: The conditional theoretical title depends on genuine knowledge and recognition.
+    continuing_relevance: Theory, legitimacy, and execution remain distinct.
+    unresolved_overlap: Theory vs. Practice owns the full rule problem.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-035
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[35]
-    original_text_or_exact_source_reference: Direct rule by undiluted wisdom is politically improbable.
+    original_text_or_exact_source_reference: constitutive_propositions[35]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theory-vs-practice
-    destination_item: theory-vs-practice direct and indirect guidance analysis
+    destination_item: direct and indirect guidance
     transformation_mode: REVISED
-    reason: Political possibility and implementation of wise rule belong primarily to Theory vs. Practice.
-    continuing_relevance: Wise vs. Vulgar retains recognition and anti-self-certification.
+    reason: Political improbability of undiluted wise rule belongs primarily to Theory vs. Practice.
+    continuing_relevance: Wise vs. Vulgar retains recognition and self-certification limits.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: f7443d81e0a7634736f38a75dbe676bab18e6f4e
-
   - transaction_id: WVG02-PROP-036
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[36]
-    original_text_or_exact_source_reference: The philosopher-king teaching is not a practical authorization for self-identified philosophers to rule.
+    original_text_or_exact_source_reference: constitutive_propositions[36]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theory-vs-practice
-    destination_item: theory-vs-practice false resolutions and kingly-art test
+    destination_item: philosopher_king false resolution and kingly_art test
     transformation_mode: REVISED
-    reason: Practical authorization and philosopher-rule belong primarily to Theory vs. Practice.
-    continuing_relevance: Wise vs. Vulgar retains the anti-self-certification rule.
+    reason: The philosopher-king teaching is not practical self-authorization.
+    continuing_relevance: Wise vs. Vulgar retains anti-self-certification.
     unresolved_overlap: Plato requires independent reconstruction.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 6e88c7cc11e35ebb183df94d1c8a1a728d306055
-
   - transaction_id: WVG02-PROP-037
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[37]
-    original_text_or_exact_source_reference: Political life necessarily dilutes wisdom through law, consent, opinion, rhetoric, custom, and compromise.
+    original_text_or_exact_source_reference: constitutive_propositions[37]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theory-vs-practice
-    destination_item: theory-vs-practice institutions, authority, and practical mediation
+    destination_item: political mediation through law, consent, rhetoric, custom, and compromise
     transformation_mode: REVISED
-    reason: Mediation of knowledge through political forms belongs primarily to Theory vs. Practice.
-    continuing_relevance: Wise vs. Vulgar retains recognition and audience mediation.
-    unresolved_overlap: Whether dilution is necessary in every regime remains source-dependent.
+    reason: Mediation of knowledge through political forms belongs primarily there.
+    continuing_relevance: Wise vs. Vulgar retains claimant and audience mediation.
+    unresolved_overlap: Necessity of every listed form remains source-dependent.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: f7443d81e0a7634736f38a75dbe676bab18e6f4e
-
   - transaction_id: WVG02-PROP-038
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[38]
-    original_text_or_exact_source_reference: Philosophy guides more plausibly through indirect means.
+    original_text_or_exact_source_reference: constitutive_propositions[38]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theory-vs-practice
-    destination_item: theory-vs-practice indirect-guidance operation
+    destination_item: indirect_guidance operation
     transformation_mode: REVISED
     reason: Modes of practical guidance belong primarily to Theory vs. Practice.
-    continuing_relevance: Wise vs. Vulgar retains claimant responsibility and capture risks.
-    unresolved_overlap: Indirect guidance may conceal domination and requires testing.
+    continuing_relevance: Wise vs. Vulgar retains responsibility and capture risks.
+    unresolved_overlap: Indirect guidance may conceal domination.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 6e88c7cc11e35ebb183df94d1c8a1a728d306055
-
   - transaction_id: WVG02-PROP-039
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[39]
-    original_text_or_exact_source_reference: The city cannot become philosophic in the same sense that an individual may become philosophic.
+    original_text_or_exact_source_reference: constitutive_propositions[39]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: inquiry profile ordinary-and-superior-types and political-relation tests
+    destination_item: ordinary_and_superior_types tests
     transformation_mode: REVISED
-    reason: Distinction between individual vocation and political society is central to differentiated education and recognition.
+    reason: A city cannot become philosophic in the same way as an individual.
     continuing_relevance: Prevents universal enlightenment and embodied-wisdom regimes.
     unresolved_overlap: Theory vs. Practice owns institutional consequences.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 697d4153f3a93cdebe74874da419c2645410586a
-
   - transaction_id: WVG02-PROP-040
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[40]
-    original_text_or_exact_source_reference: Philosophy remains materially and politically dependent even when it transcends ordinary ambition.
+    original_text_or_exact_source_reference: constitutive_propositions[40]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theory-vs-practice
-    destination_item: theory-vs-practice political responsibility and institutional dependence
+    destination_item: political responsibility and institutional dependence
     transformation_mode: REVISED
-    reason: Material and political conditions of philosophic action belong primarily to Theory vs. Practice.
-    continuing_relevance: Wise vs. Vulgar retains dependence as a claimant self-knowledge test.
-    unresolved_overlap: Philosophy vs. Poetry owns the poetic accusation concerning dependence.
+    reason: Material and political conditions of philosophic action belong primarily there.
+    continuing_relevance: Wise vs. Vulgar retains dependence as a self-knowledge test.
+    unresolved_overlap: Philosophy vs. Poetry owns the poetic accusation.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: f7443d81e0a7634736f38a75dbe676bab18e6f4e
-
   - transaction_id: WVG02-PROP-041
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[41]
-    original_text_or_exact_source_reference: Political philosophy moves upward from opinion toward knowledge and returns toward education and political responsibility.
+    original_text_or_exact_source_reference: constitutive_propositions[41]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theory-vs-practice
-    destination_item: theory-vs-practice relation between contemplation, judgment, education, and action
+    destination_item: relation between contemplation, education, judgment, and action
     transformation_mode: REVISED
-    reason: Return from understanding to political responsibility belongs primarily to Theory vs. Practice.
+    reason: The return from understanding to political responsibility belongs primarily there.
     continuing_relevance: Wise vs. Vulgar retains differentiated audiences and claimants.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: f7443d81e0a7634736f38a75dbe676bab18e6f4e
-
   - transaction_id: WVG02-PROP-042
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[42]
-    original_text_or_exact_source_reference: Revealed religion cannot be reduced to useful mythology fabricated for the many.
+    original_text_or_exact_source_reference: constitutive_propositions[42]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theologico-political
-    destination_item: theologico-political distinction between civic theology and genuine revelation
+    destination_item: distinction between civic theology and genuine revelation
     transformation_mode: REVISED
-    reason: The distinction between revelation and political myth belongs primarily to The Theologico-Political Problem.
-    continuing_relevance: Wise vs. Vulgar retains ordinary believer, prophet, and religious scholar as claimant types.
+    reason: Revealed religion cannot be reduced to useful mythology.
+    continuing_relevance: Wise vs. Vulgar retains religious claimant types.
     unresolved_overlap: Revelation remains independently unproven and undefeated.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: be62bb9629ee78e09c551475ced79df56c208e22
-
   - transaction_id: WVG02-PROP-043
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[43]
-    original_text_or_exact_source_reference: Philosophy cannot accept revelation solely on authority, yet cannot demonstrate revelation impossible without knowledge of the whole.
+    original_text_or_exact_source_reference: constitutive_propositions[43]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theologico-political
-    destination_item: theologico-political permanent tension and epistemic burden
+    destination_item: permanent_tension and epistemic burden
     transformation_mode: REVISED
-    reason: Reciprocal reason-revelation burden belongs primarily to The Theologico-Political Problem.
-    continuing_relevance: Wise vs. Vulgar retains recognition of philosophic and revelatory claimants.
+    reason: Philosophy cannot accept revelation solely on authority or refute it without sufficient knowledge.
+    continuing_relevance: Wise vs. Vulgar retains recognition of rival claimants.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: be62bb9629ee78e09c551475ced79df56c208e22
-
   - transaction_id: WVG02-PROP-044
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[44]
-    original_text_or_exact_source_reference: Philosophy can defend itself against rational refutations without thereby refuting revelation as revelation.
+    original_text_or_exact_source_reference: constitutive_propositions[44]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theologico-political
-    destination_item: theologico-political nonrefutation and nonresolution rules
+    destination_item: nonrefutation and nonresolution rules
     transformation_mode: REVISED
-    reason: Defense of philosophy and refutation of revelation are distinct theologico-political claims.
+    reason: Defending philosophy is not refuting revelation as revelation.
     continuing_relevance: Wise vs. Vulgar retains claimant recognition.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: be62bb9629ee78e09c551475ced79df56c208e22
-
   - transaction_id: WVG02-PROP-045
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[45]
-    original_text_or_exact_source_reference: Revelation cannot compel philosophic assent through rational proof without submitting to reason's tribunal.
+    original_text_or_exact_source_reference: constitutive_propositions[45]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: theologico-political
-    destination_item: theologico-political permanent tension and claimant burdens
+    destination_item: revelatory authority and rational proof burden
     transformation_mode: REVISED
-    reason: The relation between revelatory authority and rational proof belongs primarily to The Theologico-Political Problem.
+    reason: Rational proof would submit revelation to reason's tribunal.
     continuing_relevance: Wise vs. Vulgar retains prophet, theologian, and philosopher as claimants.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: be62bb9629ee78e09c551475ced79df56c208e22
-
   - transaction_id: WVG02-PROP-046
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[46]
-    original_text_or_exact_source_reference: The conflict between autonomous understanding and obedient love remains unresolved.
+    original_text_or_exact_source_reference: constitutive_propositions[46]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: athens-vs-jerusalem
-    destination_item: Athens vs. Jerusalem permanent tension and nonresolution
+    destination_item: permanent_tension and nonresolution
     transformation_mode: REVISED
-    reason: Autonomous understanding and obedient love as complete orientations belong primarily to Athens vs. Jerusalem.
-    continuing_relevance: The Theologico-Political Problem owns ultimate authority; Wise vs. Vulgar owns recognition of bearers.
+    reason: Autonomous understanding and obedient love are comprehensive rival orientations.
+    continuing_relevance: Wise vs. Vulgar retains recognition of their bearers.
     unresolved_overlap: The conflict remains open.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: a1343cbfe6cf2efda1b9c0bb0077a151b1daf22b
-
   - transaction_id: WVG02-PROP-047
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[47]
-    original_text_or_exact_source_reference: Historical progress, technical power, and chronological lateness do not establish moral or intellectual superiority.
+    original_text_or_exact_source_reference: constitutive_propositions[47]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: ancients-vs-moderns
-    destination_item: Ancients vs. Moderns anti-capture principle and governing distinctions
+    destination_item: chronology, progress, and power safeguards
     transformation_mode: REVISED
-    reason: Chronology, progress, and technical power as rank claims belong primarily to Ancients vs. Moderns.
-    continuing_relevance: Wise vs. Vulgar retains modern expert and institutional claimant testing.
+    reason: Historical progress, technical power, and lateness do not establish superiority.
+    continuing_relevance: Wise vs. Vulgar retains modern expert claimant testing.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 8db8e237fb8bcad926612b8b099ab2b29a5aabfc
-
   - transaction_id: WVG02-PROP-048
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[48]
-    original_text_or_exact_source_reference: Athens and Jerusalem must be reconstructed as distinct comprehensive alternatives.
+    original_text_or_exact_source_reference: constitutive_propositions[48]
     disposition: TRANSFER
     destination_canonical_key_or_protocol: athens-vs-jerusalem
-    destination_item: Athens vs. Jerusalem independent-reconstruction and non-absorption rules
+    destination_item: independent_reconstruction and non_absorption rules
     transformation_mode: REVISED
-    reason: The complete alternatives belong primarily to Athens vs. Jerusalem.
-    continuing_relevance: Wise vs. Vulgar retains recognition of philosopher and prophet.
+    reason: Athens and Jerusalem must be reconstructed as distinct comprehensive alternatives.
+    continuing_relevance: Wise vs. Vulgar retains philosopher and prophet as claimants.
     unresolved_overlap: none
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: a1343cbfe6cf2efda1b9c0bb0077a151b1daf22b
-
   - transaction_id: WVG02-PROP-049
     source_canonical_key: wise-vs-vulgar
     source_version: 0.2-reconstruction-draft
     source_item_or_section: constitutive_propositions[49]
-    original_text_or_exact_source_reference: The minister seeks wisdom but may not certify itself or its preferred interpreters as wise.
+    original_text_or_exact_source_reference: constitutive_propositions[49]
     disposition: RETAIN
     destination_canonical_key_or_protocol: wise-vs-vulgar
-    destination_item: successor anti-capture principle extended to repository and artificial intelligence systems
+    destination_item: anti_capture_principle extended to repository and AI
     transformation_mode: REVISED
-    reason: The historical ministry wording is generalized into permanent repository self-limitation.
+    reason: The historical ministerial self-limitation becomes permanent repository self-limitation.
     continuing_relevance: No repository component, interpreter, protocol, or AI may certify itself as wise.
-    unresolved_overlap: Historical wording remains preserved in the accepted source.
+    unresolved_overlap: Original ministry wording remains preserved historically.
     review_status: IMPLEMENTED_PROVISIONAL
     implementing_commit: 314f85a873613c28c52f7fff9c314f4a0ddbc3db
 
 coverage_accounting:
-  accepted_major_sections:
-    total: 42
-    classified: 42
+  accepted_top_level_classification_units:
+    total: 18
+    classified: 18
     unclassified: 0
   constitutive_propositions:
     total: 49
     classified: 49
     unclassified: 0
-  disposition_summary:
-    RETAIN: 25
-    TRANSFER: 40
-    ELEVATE: 17
+  transaction_totals:
+    total: 67
+    RETAIN: 35
+    TRANSFER: 21
+    ELEVATE: 9
     PRESERVE_HISTORICALLY: 2
     REJECT_WITH_REASON: 0
-    note: >
-      Counts include section and proposition transactions. DIVIDED transactions are
-      counted under their recorded primary disposition only and may reference multiple destinations.
+  transformation_rule: >
+    DIVIDED appears only as a transformation mode. Every transaction has one valid
+    controlled disposition and one primary destination.
   no_loss_rule: PASS_FOR_CLASSIFICATION
   implementation_rule: >
-    Classification completion does not equal destination validation or migration
-    certification. Transactions marked pending or partial remain blockers.
+    Classification and substantial implementation do not equal automated validation,
+    migration certification, or successor activation.
 
 implementation_blockers:
-  - reconcile elevated irony material with protocols/irony.yaml
-  - reconcile elevated comedy material with protocols/comedy.yaml
-  - reconcile audience, rhetoric, and exotericism material with protocols/audience-and-rhetoric.yaml
-  - review supporting witnesses not yet fully registered in the successor witness registry
-  - validate every destination path and YAML record automatically
-  - review cross-problem doctrinal duplication after all destinations are complete
+  - review supporting witnesses not yet explicitly registered in the successor witness registry
+  - validate every destination path, transaction value, and YAML record automatically
+  - review uncontrolled doctrinal duplication across all seven successors and shared protocols
+  - resolve any validator findings without altering the accepted source or active predecessor
 
 termination:
-  transaction_state: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_IMPLEMENTATION_PARTIAL
+  transaction_state: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_IMPLEMENTATION_SUBSTANTIAL_VALIDATION_PENDING
   certification: NOT_CERTIFIED
   activation_authorized: false
   predecessor_effect: NONE
   accepted_source_effect: NONE
   completed_conditions:
     - exact accepted source remains preserved
-    - every major source section has a controlled disposition
+    - every top-level classification unit has a controlled disposition
     - every constitutive proposition has a controlled disposition
-    - continuing local relevance and unresolved overlap are recorded
+    - every transaction has one primary destination
+    - DIVIDED is used only as a transformation mode
+    - irony, comedy, audience, rhetoric, exotericism, and speech-deed material has been reconciled with shared protocols
     - no accepted proposition is silently deleted or rejected
   remaining_requirements:
-    - protocol reconciliation for elevated material
-    - destination and duplication validation
-    - automated YAML parsing and path checks
+    - automated YAML, transaction-value, and path validation
+    - supporting witness expansion review
+    - cross-problem duplicate-doctrine review
     - migration-wide certification before successor activation
