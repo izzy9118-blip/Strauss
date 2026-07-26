@@ -4,11 +4,23 @@ document_type: shared_interpretive_protocol
 identity:
   canonical_key: irony
   title: Irony Protocol
-  protocol_version: 1.0.0
+  protocol_version: 1.1.0
 
 status:
   lifecycle: FOUNDING_DRAFT
   certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 2f610320af0c2133d6876bed6aef460bdae9f069
+  reason: >
+    Reconcile accepted Wise vs. Vulgar material concerning self-description, rank,
+    modesty, obscurity, contradiction, and non-self-certification without converting
+    irony into mechanical inversion or a certificate of hidden wisdom.
+  migration_source:
+    path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
+    transaction_reference: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
 
 depends_on:
   - speech-and-deed
@@ -16,12 +28,29 @@ depends_on:
   - uncertainty-preservation
 
 purpose: >
-  Govern supported interpretation of disparities between explicit formulation
-  and the complete textual or dramatic deed.
+  Govern supported interpretation of disparities among explicit formulation,
+  demonstrated activity, title, audience, arrangement, omission, consequence, and
+  the complete textual or dramatic deed.
 
 governing_rule: >
-  Irony is a supported disparity between explicit formulation and textual or
-  dramatic deed. It must not be treated as automatic reversal.
+  Irony is a supported disparity, qualification, or pressure between explicit
+  formulation and textual or dramatic deed. It must not be treated as automatic
+  reversal, proof of concealed greatness, or authorization to invent a complete
+  hidden doctrine.
+
+required_comparison:
+  - explicit_statement
+  - speaker_or_claimant
+  - claimed_title_or_rank
+  - immediate_audience
+  - wider_audience
+  - occasion
+  - dramatic_or_textual_action
+  - structural_position
+  - omission_or_silence
+  - consequence
+  - comparison_with_related_presentations
+  - self_implication_of_author_or_interpreter
 
 possible_functions:
   - qualification
@@ -34,21 +63,33 @@ possible_functions:
   - concealment
   - comic_deflation
   - simultaneous_literal_and_nonliteral_meaning
+  - testing_of_claimed_rank
+  - preservation_of_unresolved_alternatives
 
 required_evidence:
-  - speaker_and_audience
-  - occasion
-  - dramatic_action
-  - contradiction_or_disproportion
-  - omission
-  - structural_position
-  - consequence
-  - comparison_with_related_passages
+  - a specific disparity or disproportion rather than generalized suspicion
+  - correct identification of speaker, audience, occasion, and documentary layer
+  - textual, dramatic, structural, or comparative support
+  - an account of how deed qualifies speech
+  - preservation of plausible literal meaning where the evidence permits it
+  - classification of the inference and remaining uncertainty
+
+claimant_and_rank_safeguards:
+  - modest self-description does not prove concealed wisdom
+  - confident self-description does not prove absence of wisdom
+  - obscurity does not prove esotericism
+  - persecution, ridicule, marginality, or misunderstanding does not establish rank
+  - contradiction may indicate error, development, adaptation, tension, or irony
+  - agreement with an ironic interpretation does not certify the interpreter
+  - the author, laugher, or interpreter remains subject to the same speech-and-deed test
 
 valid_outputs:
   - DOCUMENTED_IRONIC_TENSION
   - SUPPORTED_IRONIC_QUALIFICATION
+  - SUPPORTED_IRONIC_LIMITATION
   - POSSIBLE_IRONIC_DIMENSION
+  - CLAIMED_RANK_IRONICALLY_QUALIFIED
+  - IRONIC_SELF_IMPLICATION
   - IRONY_NOT_ESTABLISHED
 
 prohibited_inferences:
@@ -58,6 +99,15 @@ prohibited_inferences:
   - obscurity therefore esoteric doctrine
   - contradiction therefore irony without further evidence
   - irony therefore unrestricted hidden teaching
+  - irony therefore permission to disregard source status or context
+  - ironic exposure therefore complete superiority of the exposer
+  - audience differentiation therefore a second opposite doctrine
+
+termination_rule: >
+  An ironic finding is complete only when the supported disparity, its function,
+  evidentiary basis, affected claim, audience, consequence, and unresolved alternatives
+  are explicit. Where the evidence does not establish irony, preserve the literal claim
+  and classify the ironic dimension as possible or not established.
 
 invoked_by:
   - nomos-vs-physis
