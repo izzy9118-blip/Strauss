@@ -1,0 +1,150 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: athens-vs-jerusalem
+  title: Athens vs. Jerusalem — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/athens-vs-jerusalem/problem.yaml
+  relations_reference: problems/athens-vs-jerusalem/relations.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+
+source_orientation:
+  founding_study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  founding_synthesis: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
+  source_limit: >
+    The Strauss collection supplies the founding architecture but does not replace
+    independent Biblical, Platonic, Greek-philosophic, or Maimonidean reconstruction.
+
+shared_protocol_references:
+  required:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+  conditional:
+    - claimant-to-wisdom
+    - audience-and-rhetoric
+    - irony
+
+problem_specific_operations:
+  - operation_id: AVJ-OP-001
+    name: RECONSTRUCT_BOTH_BEGINNINGS
+    instruction: >
+      Reconstruct fear of the Lord, hearing, creation, command, and obedience
+      independently from wonder, seeing, nature, inquiry, and autonomous understanding.
+  - operation_id: AVJ-OP-002
+    name: DISTINGUISH_SHARED_VOCABULARY
+    instruction: >
+      Determine whether words such as God, wisdom, law, justice, virtue, and creation
+      possess the same meaning or only superficial overlap.
+  - operation_id: AVJ-OP-003
+    name: COMPARE_HIGHEST_LIVES
+    instruction: >
+      Compare obedient love, holiness, repentance, and covenantal life with inquiry,
+      virtue, self-knowledge, contemplation, and philosophic freedom.
+  - operation_id: AVJ-OP-004
+    name: DISTINGUISH_PROPHET_AND_PHILOSOPHER
+    instruction: >
+      Examine calling, evidence, command, inquiry, audience, authority, and recognition
+      without allowing either title to certify itself.
+  - operation_id: AVJ-OP-005
+    name: DISTINGUISH_MESSIANIC_AND_CLASSICAL_POLITICAL_HORIZONS
+    instruction: >
+      Do not identify the Messianic age with the best regime or divine transformation
+      with ordinary political realization.
+  - operation_id: AVJ-OP-006
+    name: TEST_SYNTHESIS_FOR_TRANSFORMATION
+    instruction: >
+      Determine whether a proposed harmony preserves both alternatives or rationalizes,
+      historicizes, moralizes, poeticizes, or subordinates one to the other.
+  - operation_id: AVJ-OP-007
+    name: PRESERVE_PARTICULAR_UNIVERSAL_TENSION
+    instruction: >
+      Examine why universal Biblical vocation is borne by a particular people without
+      reducing election to privilege or dissolving it into universal ethics.
+
+activation_signals:
+  direct:
+    - fear of the Lord and wonder are compared
+    - creation and nature are treated as rival beginnings
+    - obedient love and autonomous inquiry are compared as highest lives
+    - prophet and philosopher claim comprehensive authority
+    - Messianic age and best regime are compared or identified
+    - election bears a universal vocation through a particular people
+    - a modern synthesis claims harmony or supersession
+  non_activation_signals:
+    - every religion-philosophy contrast
+    - every Jewish-Greek historical contact
+    - every dispute about church and state
+    - every question about gods in poetry
+
+governing_distinctions:
+  - distinction_id: AVJ-DIST-001
+    terms: [fear_of_the_Lord, wonder]
+    rule: The beginnings of wisdom prescribe different initial orientations.
+  - distinction_id: AVJ-DIST-002
+    terms: [creation, nature]
+    rule: Free divine creation and intelligible natural being must not be harmonized by vocabulary alone.
+  - distinction_id: AVJ-DIST-003
+    terms: [obedient_love, autonomous_understanding]
+    rule: The highest ways of life remain distinct unless a synthesis preserves both jurisdictions.
+  - distinction_id: AVJ-DIST-004
+    terms: [prophet, philosopher]
+    rule: Divine calling and autonomous inquiry have different claims and recognition burdens.
+  - distinction_id: AVJ-DIST-005
+    terms: [Messianic_age, best_regime]
+    rule: Divine-historical fulfillment and classical political excellence must not be identified.
+  - distinction_id: AVJ-DIST-006
+    terms: [historical_interpenetration, doctrinal_harmony]
+    rule: Historical influence does not prove philosophical reconciliation.
+
+investigative_questions:
+  - What is the beginning of wisdom in each teaching?
+  - What is the status of the world, God, nature, and command?
+  - What act constitutes the highest human life?
+  - How is the prophet or philosopher recognized?
+  - What role does a people play that an individual cannot play?
+  - Does the proposed synthesis preserve free divine action and autonomous inquiry?
+  - What has been transformed, omitted, or subordinated?
+
+false_resolutions:
+  - Athens and Jerusalem are only cultures
+  - shared vocabulary proves harmony
+  - best regime equals Messianic age
+  - election equals ethnic pride
+  - nonrefutation proves revelation
+  - rationalization preserves revelation unchanged
+  - historical mixture settles philosophic conflict
+
+output_constraints:
+  required:
+    - reconstruct both alternatives independently
+    - distinguish shared words and governing deeds
+    - preserve particular-universal tension
+    - identify transformation in attempted synthesis
+    - cross-reference political mediation rather than duplicate it
+  prohibited:
+    - declare harmony through terminology alone
+    - reduce revelation to poetry or culture
+    - convert political settlement into philosophic victory
+    - use one alternative's premises to declare the other defeated without acknowledgment
+
+termination:
+  state_options:
+    - ATHENS_RECONSTRUCTED
+    - JERUSALEM_RECONSTRUCTED
+    - COMPREHENSIVE_DIFFERENCE_PRESERVED
+    - SYNTHESIS_TRANSFORMATION_IDENTIFIED
+    - HIGHEST_LIFE_UNRESOLVED
