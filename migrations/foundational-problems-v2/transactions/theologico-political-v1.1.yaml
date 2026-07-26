@@ -1,0 +1,961 @@
+schema_version: 1.0
+document_type: foundational_problem_migration_transactions
+
+identity:
+  transaction_set_id: FPV2-THEOLOGICO-POLITICAL-V1.1
+  title: The Theologico-Political Problem v1.1 — Migration Transactions
+  version: 0.1.0
+
+status:
+  lifecycle: CLASSIFICATION_IN_PROGRESS
+  certification: NOT_CERTIFIED
+  activation: NOT_ACTIVE
+  implementation: PARTIAL
+
+authority:
+  migration_constitution: migrations/foundational-problems-v2/migration.yaml
+  architecture_constitution: governance/foundational-problem-architecture.yaml
+  predecessor_index: migrations/foundational-problems-v2/predecessor-index.yaml
+  source_problem: problems/theologico-political.yaml
+  preserved_source: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+
+source_identity:
+  source_canonical_key: theologico-political
+  source_identifier: STR-PROBLEM-002
+  source_version: 1.1
+  source_blob_sha: 4a35e71916212082598097985deb23699c0018e7
+  governing_commit: 7a25b1fa3a7660a93318892342df57f661247b0d
+  preservation_commit: 259cf8b4c13cf5a96c7d665181154e4f4259e753
+  active_predecessor_untouched: true
+
+classification_rule: >
+  Every accepted source item is retained where it belongs, transferred where
+  another problem or subordinate record has primary jurisdiction, elevated where
+  it is a shared method, preserved historically where it records predecessor
+  formation, or rejected only with an explicit reason. This set authorizes no
+  deletion, certification, activation, or retrospective rewriting.
+
+controlled_values:
+  dispositions:
+    - RETAIN
+    - TRANSFER
+    - ELEVATE
+    - PRESERVE_HISTORICALLY
+    - REJECT_WITH_REASON
+  transformation_modes:
+    - VERBATIM
+    - REVISED
+    - DIVIDED
+    - CONSOLIDATED
+    - REFERENCE_ONLY
+
+section_transactions:
+  - transaction_id: TPV11-TXN-001
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: complete predecessor blob
+    original_text_or_exact_source_reference: problems/theologico-political.yaml@4a35e71916212082598097985deb23699c0018e7
+    disposition: PRESERVE_HISTORICALLY
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+    transformation_mode: VERBATIM
+    reason: Preserve the exact active predecessor before successor construction.
+    continuing_relevance: Governs provenance and permits verification of every later transaction.
+    unresolved_overlap: none
+    review_status: IMPLEMENTED_VERIFIED
+    implementing_commit: 259cf8b4c13cf5a96c7d665181154e4f4259e753
+
+  - transaction_id: TPV11-TXN-002
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: revision_basis
+    original_text_or_exact_source_reference: revision_basis
+    disposition: PRESERVE_HISTORICALLY
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: predecessor history and successor provenance reference
+    transformation_mode: REFERENCE_ONLY
+    reason: The revision from v1.0 to v1.1 records predecessor history rather than permanent successor doctrine.
+    continuing_relevance: Successor must acknowledge v1.0 and v1.1 without rewriting either.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-003
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: documentary_source_basis.source_rule and secondary_source_boundary
+    original_text_or_exact_source_reference: documentary_source_basis
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/witnesses.yaml source-status rules
+    transformation_mode: REVISED
+    reason: Source authority and editorial qualification belong in the witness registry, not the lean constitution.
+    continuing_relevance: Every source remains independently reconstructible; Pangle remains secondary context.
+    unresolved_overlap: Some sources also activate Athens vs. Jerusalem or Ancients vs. Moderns.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-004
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: layered_origin
+    original_text_or_exact_source_reference: layered_origin
+    disposition: RETAIN
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/problem.yaml origin and boundary
+    transformation_mode: CONSOLIDATED
+    reason: The layered origin explains the permanent problem but must be compressed in the constitution.
+    continuing_relevance: Classical, biblical, medieval, modern, Jewish-historical, and historicist layers remain distinct.
+    unresolved_overlap: Athens vs. Jerusalem and Ancients vs. Moderns retain primary jurisdiction over their complete alternatives.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-005
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: governing_question
+    original_text_or_exact_source_reference: governing_question
+    disposition: RETAIN
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/problem.yaml governing_question
+    transformation_mode: REVISED
+    reason: This is the permanent governing question and requires only constitutional compression.
+    continuing_relevance: Preserves both the epistemic and political dimensions.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-006
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: governing_proposition and problem_statement
+    original_text_or_exact_source_reference: governing_proposition; problem_statement
+    disposition: RETAIN
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/problem.yaml permanent tension and anti-resolution rule
+    transformation_mode: CONSOLIDATED
+    reason: These sections state the permanent confrontation and the limits of political settlement.
+    continuing_relevance: Neither philosophy nor revelation may claim victory without meeting its burden.
+    unresolved_overlap: Political mediations intersect Theory vs. Practice without transferring the core conflict.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-007
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: primary_alternatives
+    original_text_or_exact_source_reference: primary_alternatives.revealed_divine_law; primary_alternatives.philosophic_life
+    disposition: RETAIN
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/problem.yaml permanent_tension
+    transformation_mode: REVISED
+    reason: Revealed divine law and the philosophic life are the primary comprehensive alternatives.
+    continuing_relevance: Their strongest titles and reciprocal challenges govern the problem.
+    unresolved_overlap: Athens vs. Jerusalem owns the complete rival ways of life and must be referenced rather than duplicated.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-008
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: political_mediators_and_settlements
+    original_text_or_exact_source_reference: political_mediators_and_settlements
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/inquiry-profile.yaml mediators and false-resolution tests
+    transformation_mode: DIVIDED
+    reason: Detailed function-and-limit tests are operational rather than constitutional.
+    continuing_relevance: Political law, sovereignty, toleration, emancipation, rational religion, assimilation, Zionism, and the good society remain necessary mediations.
+    unresolved_overlap: Theory vs. Practice has primary jurisdiction over responsible action under imperfect conditions.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-009
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: governing_sequence
+    original_text_or_exact_source_reference: governing_sequence
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+    transformation_mode: REVISED
+    reason: The historical-argumentative sequence belongs in synthesis rather than the lean constitution.
+    continuing_relevance: Prevents flattening original confrontation, modern critique, neutralization, historical manifestation, and permanent remainder.
+    unresolved_overlap: Ancients vs. Moderns owns the full modern transformation.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-010
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: epistemic_crux
+    original_text_or_exact_source_reference: epistemic_crux
+    disposition: RETAIN
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/problem.yaml epistemic burden and nonresolution
+    transformation_mode: REVISED
+    reason: The reciprocal burdens and non sequiturs are constitutional to the problem.
+    continuing_relevance: Inability to refute is not proof of truth; commanded obedience is not philosophic proof.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-011
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: progress_and_return
+    original_text_or_exact_source_reference: progress_and_return
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+    transformation_mode: REVISED
+    reason: Progress and return are major orientations requiring source-specific synthesis, not full constitutional duplication.
+    continuing_relevance: Both remain live because neither has established final victory.
+    unresolved_overlap: Athens vs. Jerusalem and Ancients vs. Moderns share secondary jurisdiction.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-012
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: modern_attempts_at_resolution
+    original_text_or_exact_source_reference: modern_attempts_at_resolution
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/inquiry-profile.yaml false resolutions and claimant tests
+    transformation_mode: DIVIDED
+    reason: Spinozist, Hobbesian, liberal, Cohenian, Freudian, assimilationist, Zionist, and historicist attempts must be tested operationally.
+    continuing_relevance: Each achievement and limit remains available for inquiry.
+    unresolved_overlap: Ancients vs. Moderns owns their full historical transformation.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-013
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: jewish_historical_manifestation
+    original_text_or_exact_source_reference: jewish_historical_manifestation
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+    transformation_mode: REVISED
+    reason: The Jewish historical sequence is a substantive synthesis with multiple source witnesses, not a lean constitutional section.
+    continuing_relevance: Emancipation, assimilation, Zionism, and statehood remain politically serious without self-interpreting theology.
+    unresolved_overlap: Athens vs. Jerusalem and Theory vs. Practice retain local relevance.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-014
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: political_finitude
+    original_text_or_exact_source_reference: political_finitude
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theory-vs-practice
+    destination_item: future successor reference concerning finite political goods and anti-utopian limits
+    transformation_mode: REFERENCE_ONLY
+    reason: The general relation between finite political achievement and final human completion belongs primarily to Theory vs. Practice.
+    continuing_relevance: The Theologico-Political successor must retain a brief boundary reference.
+    unresolved_overlap: Political finitude remains locally necessary to distinguish settlement from revelation or redemption.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-015
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: hermeneutic_condition
+    original_text_or_exact_source_reference: hermeneutic_condition
+    disposition: ELEVATE
+    destination_canonical_key_or_protocol: shared-protocols
+    destination_item: source-status; inference-discipline; speech-and-deed; audience-and-rhetoric; uncertainty-preservation
+    transformation_mode: REFERENCE_ONLY
+    reason: General rules for persecution, guarded writing, audience, omission, and positive evidence already belong in shared protocols.
+    continuing_relevance: The local profile will invoke them under theologico-political danger and authority conditions.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_PROTOCOL_REFERENCE_PENDING
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-016
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: historicism_and_metaphysical_deepening
+    original_text_or_exact_source_reference: historicism_and_metaphysical_deepening
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: ancients-vs-moderns
+    destination_item: future successor inquiry into eternal order and historical self-creation
+    transformation_mode: REFERENCE_ONLY
+    reason: Historicism's attempt to supersede both permanent alternatives belongs primarily to Ancients vs. Moderns.
+    continuing_relevance: The Theologico-Political successor retains the fact that historicism is a rival proposed resolution.
+    unresolved_overlap: The deepest status of historicism remains open.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-017
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: evidentiary_rules
+    original_text_or_exact_source_reference: evidentiary_rules
+    disposition: ELEVATE
+    destination_canonical_key_or_protocol: shared-protocols
+    destination_item: source-status; evidence-classification; inference-discipline; uncertainty-preservation; speech-and-deed
+    transformation_mode: REFERENCE_ONLY
+    reason: Interpretation-before-explanation and non sequitur safeguards are general repository methods.
+    continuing_relevance: Problem-specific applications belong in the successor inquiry profile.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_PROTOCOL_REFERENCE_PENDING
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-018
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: serious_alternatives
+    original_text_or_exact_source_reference: serious_alternatives
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/inquiry-profile.yaml claimant tests
+    transformation_mode: REVISED
+    reason: Strongest-form alternative reconstruction is an inquiry operation.
+    continuing_relevance: Biblical obedience, philosophic examination, rationalist refutation, sovereign settlement, reconciliation, and historicist completion require separate burdens.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-019
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: recognition_signals
+    original_text_or_exact_source_reference: recognition_signals
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/inquiry-profile.yaml activation signals
+    transformation_mode: REVISED
+    reason: Recognition signals govern activation rather than permanent identity.
+    continuing_relevance: All signals remain candidates subject to boundary tests.
+    unresolved_overlap: Brother-problem coactivation required for poetic theology and human recognition of gods.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-020
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: highest_scrutiny_condition; required_textual_examination
+    original_text_or_exact_source_reference: highest_scrutiny_condition; required_textual_examination
+    disposition: ELEVATE
+    destination_canonical_key_or_protocol: shared-protocols
+    destination_item: source-status; inference-discipline; speech-and-deed; irony; audience-and-rhetoric; uncertainty-preservation
+    transformation_mode: REFERENCE_ONLY
+    reason: General textual scrutiny belongs in shared protocols, with local activation recorded in the profile.
+    continuing_relevance: The successor must invoke maximum scrutiny without automatic inversion.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_PROTOCOL_REFERENCE_PENDING
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-021
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: required_operations; required_distinctions
+    original_text_or_exact_source_reference: required_operations; required_distinctions
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/inquiry-profile.yaml operations and governing distinctions
+    transformation_mode: REVISED
+    reason: These items are problem-specific operational rules and distinctions.
+    continuing_relevance: They must remain available without expanding problem.yaml into a method archive.
+    unresolved_overlap: Some distinctions require explicit cross-problem references.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-022
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: false_resolutions
+    original_text_or_exact_source_reference: false_resolutions
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/inquiry-profile.yaml false resolutions
+    transformation_mode: REVISED
+    reason: Premature closures are operational termination prohibitions.
+    continuing_relevance: Every named false resolution remains preserved for testing.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-023
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: anti_capture_rule; boundary_rule
+    original_text_or_exact_source_reference: anti_capture_rule; boundary_rule
+    disposition: RETAIN
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/problem.yaml anti-capture and boundary
+    transformation_mode: REVISED
+    reason: Anti-capture and activation boundary are required constitutional contents.
+    continuing_relevance: No contender or settlement may silently govern the inquiry.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-024
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: relations
+    original_text_or_exact_source_reference: relations
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/relations.yaml
+    transformation_mode: REVISED
+    reason: Cross-problem distinctions and overlaps belong in the controlled relations record.
+    continuing_relevance: The reciprocal Philosophy vs. Poetry brother relation must be added without absorbing jurisdiction.
+    unresolved_overlap: Relation vocabulary requires controlled types only.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-025
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: permissible_outputs
+    original_text_or_exact_source_reference: permissible_outputs
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/inquiry-profile.yaml output constraints
+    transformation_mode: REVISED
+    reason: Output classes govern inquiry products rather than permanent problem identity.
+    continuing_relevance: Documented finding, inference, hypothesis, critical finding, and nonresolution remain distinct.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-026
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: opacity_floor
+    original_text_or_exact_source_reference: opacity_floor
+    disposition: RETAIN
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/problem.yaml uncertainty floor and problems/theologico-political/inquiry-profile.yaml termination tests
+    transformation_mode: DIVIDED
+    reason: The substantive nonresolution belongs in the constitution; detailed tests belong in the profile.
+    continuing_relevance: Prevents manufactured victory or indifference.
+    unresolved_overlap: Ultimate divine truth remains unresolved.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-027
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: termination_condition
+    original_text_or_exact_source_reference: termination_condition
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/inquiry-profile.yaml termination tests and problems/theologico-political/problem.yaml completion standard
+    transformation_mode: DIVIDED
+    reason: The lean constitution requires a completion standard; detailed operational completion belongs in the profile.
+    continuing_relevance: Inquiry terminates through disciplined reconstruction and preserved contention, not victory manufacture.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+  - transaction_id: TPV11-TXN-028
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    source_item_or_section: publication_record
+    original_text_or_exact_source_reference: publication_record
+    disposition: PRESERVE_HISTORICALLY
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: predecessor history only
+    transformation_mode: REFERENCE_ONLY
+    reason: Activation of predecessor v1.1 is a historical fact and must not be copied into the inactive successor draft.
+    continuing_relevance: Confirms predecessor authority until migration certification and activation.
+    unresolved_overlap: none
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+
+documentary_source_transactions:
+  common_source:
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    disposition: TRANSFER
+    destination_canonical_key_or_protocol: theologico-political
+    destination_item: problems/theologico-political/witnesses.yaml
+    transformation_mode: REVISED
+    reason: Register source identity, contribution, source condition, and independent reconstruction requirement without full interpretation.
+    continuing_relevance: Each source remains independently reconstructible.
+    unresolved_overlap: Source-specific intersections remain to be recorded.
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+  transactions:
+    - transaction_id: TPV11-SRC-001
+      source_item_or_section: documentary_source_basis.sources[1]
+      original_text_or_exact_source_reference: Progress or Return? (1952)
+    - transaction_id: TPV11-SRC-002
+      source_item_or_section: documentary_source_basis.sources[2]
+      original_text_or_exact_source_reference: Preface to Spinoza's Critique of Religion (1965)
+    - transaction_id: TPV11-SRC-003
+      source_item_or_section: documentary_source_basis.sources[3]
+      original_text_or_exact_source_reference: How to Study Spinoza's Theologico-Political Treatise (1948)
+    - transaction_id: TPV11-SRC-004
+      source_item_or_section: documentary_source_basis.sources[4]
+      original_text_or_exact_source_reference: Preface to Isaac Husik, Philosophical Essays (1952)
+    - transaction_id: TPV11-SRC-005
+      source_item_or_section: documentary_source_basis.sources[5]
+      original_text_or_exact_source_reference: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism (1972)
+    - transaction_id: TPV11-SRC-006
+      source_item_or_section: documentary_source_basis.sources[6]
+      original_text_or_exact_source_reference: Freud on Moses and Monotheism (1958)
+    - transaction_id: TPV11-SRC-007
+      source_item_or_section: documentary_source_basis.sources[7]
+      original_text_or_exact_source_reference: Why We Remain Jews (1962)
+    - transaction_id: TPV11-SRC-008
+      source_item_or_section: documentary_source_basis.sources[8]
+      original_text_or_exact_source_reference: On the Interpretation of Genesis (1957)
+    - transaction_id: TPV11-SRC-009
+      source_item_or_section: documentary_source_basis.sources[9]
+      original_text_or_exact_source_reference: Jerusalem and Athens (1967), Part V within complete argument
+    - transaction_id: TPV11-SRC-010
+      source_item_or_section: documentary_source_basis.sources[10]
+      original_text_or_exact_source_reference: What Is Political Philosophy? (1954), first paragraph
+    - transaction_id: TPV11-SRC-011
+      source_item_or_section: documentary_source_basis.sources[11]
+      original_text_or_exact_source_reference: Review of J. L. Talmon, The Nature of Jewish History (1957)
+    - transaction_id: TPV11-SRC-012
+      source_item_or_section: documentary_source_basis.sources[12]
+      original_text_or_exact_source_reference: Letter to the Editor — The State of Israel (1957)
+    - transaction_id: TPV11-SRC-013
+      source_item_or_section: documentary_source_basis.sources[13]
+      original_text_or_exact_source_reference: Introduction to Persecution and the Art of Writing (1952)
+    - transaction_id: TPV11-SRC-014
+      source_item_or_section: documentary_source_basis.sources[14]
+      original_text_or_exact_source_reference: Perspectives on the Good Society (1963)
+    - transaction_id: TPV11-SRC-015
+      source_item_or_section: documentary_source_basis.sources[15]
+      original_text_or_exact_source_reference: An Unspoken Prologue (1959)
+    - transaction_id: TPV11-SRC-016
+      source_item_or_section: documentary_source_basis.sources[16]
+      original_text_or_exact_source_reference: Preface to Hobbes Politische Wissenschaft (1965)
+    - transaction_id: TPV11-SRC-017
+      source_item_or_section: documentary_source_basis.sources[17]
+      original_text_or_exact_source_reference: A Giving of Accounts (1970)
+    - transaction_id: TPV11-SRC-018
+      source_item_or_section: documentary_source_basis.sources[18]
+      original_text_or_exact_source_reference: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays (1946)
+    - transaction_id: TPV11-SRC-019
+      source_item_or_section: documentary_source_basis.sources[19]
+      original_text_or_exact_source_reference: Restatement on Xenophon's Hiero (1950)
+
+constitutive_proposition_transactions:
+  common_source:
+    source_canonical_key: theologico-political
+    source_version: 1.1
+    review_status: CLASSIFIED_NOT_IMPLEMENTED
+    implementing_commit: PENDING
+  transactions:
+    - transaction_id: TPV11-PROP-001
+      source_item_or_section: constitutive_propositions[1]
+      original_text_or_exact_source_reference: comprehensive ways of life, not merely institutional coexistence
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml jurisdiction
+      transformation_mode: REVISED
+      reason: Defines the problem's scope.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-002
+      source_item_or_section: constitutive_propositions[2]
+      original_text_or_exact_source_reference: revelation appears most fully as divine law
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml permanent tension
+      transformation_mode: REVISED
+      reason: Prevents reduction to private experience.
+      continuing_relevance: permanent
+      unresolved_overlap: Athens vs. Jerusalem retains complete biblical orientation.
+    - transaction_id: TPV11-PROP-003
+      source_item_or_section: constitutive_propositions[3]
+      original_text_or_exact_source_reference: philosophic life requires examination of every comprehensive claim
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml permanent tension
+      transformation_mode: REVISED
+      reason: States philosophy's strongest title.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-004
+      source_item_or_section: constitutive_propositions[4]
+      original_text_or_exact_source_reference: revelation demands obedience philosophy cannot accept merely because commanded
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml reciprocal challenge
+      transformation_mode: REVISED
+      reason: Preserves the conflict without caricature.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-005
+      source_item_or_section: constitutive_propositions[5]
+      original_text_or_exact_source_reference: philosophy cannot assume miracle or revelation impossible
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml rationalist burden
+      transformation_mode: REVISED
+      reason: States the epistemic crux.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-006
+      source_item_or_section: constitutive_propositions[6]
+      original_text_or_exact_source_reference: natural regularities are not an exhaustive account of the whole
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml rationalist burden
+      transformation_mode: REVISED
+      reason: Prevents scientific closure without overclaiming revelation.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-007
+      source_item_or_section: constitutive_propositions[7]
+      original_text_or_exact_source_reference: historical criticism does not prove revelation did not occur
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: inquiry-profile.yaml false resolutions
+      transformation_mode: REVISED
+      reason: Operational non sequitur test.
+      continuing_relevance: recurring
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-008
+      source_item_or_section: constitutive_propositions[8]
+      original_text_or_exact_source_reference: psychological explanation does not establish object unreal
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: inquiry-profile.yaml false resolutions
+      transformation_mode: REVISED
+      reason: Operational causal-explanation test.
+      continuing_relevance: recurring
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-009
+      source_item_or_section: constitutive_propositions[9]
+      original_text_or_exact_source_reference: inability to refute does not prove particular revelation true
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml theological nonresolution
+      transformation_mode: REVISED
+      reason: Blocks inverse non sequitur.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-010
+      source_item_or_section: constitutive_propositions[10]
+      original_text_or_exact_source_reference: revelation's authority claim is not philosophic proof
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml theological burden
+      transformation_mode: REVISED
+      reason: Preserves philosophy's demand for examination.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-011
+      source_item_or_section: constitutive_propositions[11]
+      original_text_or_exact_source_reference: political law and sovereignty are mediators, not equal comprehensive alternatives
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml boundary
+      transformation_mode: REVISED
+      reason: Preserves ranks among alternatives and settlements.
+      continuing_relevance: permanent
+      unresolved_overlap: Theory vs. Practice owns general mediation.
+    - transaction_id: TPV11-PROP-012
+      source_item_or_section: constitutive_propositions[12]
+      original_text_or_exact_source_reference: sovereign jurisdiction does not decide truth
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml political settlement limit
+      transformation_mode: REVISED
+      reason: Core political distinction.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-013
+      source_item_or_section: constitutive_propositions[13]
+      original_text_or_exact_source_reference: toleration may assign state final authority over permissible scope
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: inquiry-profile.yaml mediator tests
+      transformation_mode: REVISED
+      reason: Requires operational examination of claimed neutrality.
+      continuing_relevance: recurring
+      unresolved_overlap: Theory vs. Practice intersection.
+    - transaction_id: TPV11-PROP-014
+      source_item_or_section: constitutive_propositions[14]
+      original_text_or_exact_source_reference: emancipation is a political good but does not eliminate Jewish problem
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: synthesis/predecessor-v1.1-reconstruction.yaml
+      transformation_mode: REVISED
+      reason: Historical synthesis finding.
+      continuing_relevance: source-dependent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-015
+      source_item_or_section: constitutive_propositions[15]
+      original_text_or_exact_source_reference: assimilation resolves by dissolving Jewish existence
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: synthesis/predecessor-v1.1-reconstruction.yaml
+      transformation_mode: REVISED
+      reason: Historical-political finding.
+      continuing_relevance: source-dependent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-016
+      source_item_or_section: constitutive_propositions[16]
+      original_text_or_exact_source_reference: political Zionism addresses defenselessness and dependence
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: synthesis/predecessor-v1.1-reconstruction.yaml
+      transformation_mode: REVISED
+      reason: Preserves political achievement without theological inflation.
+      continuing_relevance: source-dependent
+      unresolved_overlap: Theory vs. Practice intersection.
+    - transaction_id: TPV11-PROP-017
+      source_item_or_section: constitutive_propositions[17]
+      original_text_or_exact_source_reference: political Zionism does not establish redemption or Torah
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: synthesis/predecessor-v1.1-reconstruction.yaml
+      transformation_mode: REVISED
+      reason: Preserves political-theological distinction.
+      continuing_relevance: source-dependent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-018
+      source_item_or_section: constitutive_propositions[18]
+      original_text_or_exact_source_reference: cultural Zionism returns to theological problem
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: synthesis/predecessor-v1.1-reconstruction.yaml
+      transformation_mode: REVISED
+      reason: Historical synthesis finding.
+      continuing_relevance: source-dependent
+      unresolved_overlap: Athens vs. Jerusalem intersection.
+    - transaction_id: TPV11-PROP-019
+      source_item_or_section: constitutive_propositions[19]
+      original_text_or_exact_source_reference: State of Israel political achievement not automatic theological fulfillment
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: synthesis/predecessor-v1.1-reconstruction.yaml
+      transformation_mode: REVISED
+      reason: Preserves political dignity and theological uncertainty.
+      continuing_relevance: source-dependent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-020
+      source_item_or_section: constitutive_propositions[20]
+      original_text_or_exact_source_reference: Jewish history is significant but not self-interpreting
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: synthesis/predecessor-v1.1-reconstruction.yaml
+      transformation_mode: REVISED
+      reason: Historical interpretation rule with substantive local application.
+      continuing_relevance: recurring
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-021
+      source_item_or_section: constitutive_propositions[21]
+      original_text_or_exact_source_reference: political causation and providential interpretation are distinct
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: inquiry-profile.yaml governing distinctions
+      transformation_mode: REVISED
+      reason: Problem-specific distinction.
+      continuing_relevance: recurring
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-022
+      source_item_or_section: constitutive_propositions[22]
+      original_text_or_exact_source_reference: rationalized religion may alter revelation's original authority
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: inquiry-profile.yaml reconciliation tests
+      transformation_mode: REVISED
+      reason: Operational test of claimed harmony.
+      continuing_relevance: recurring
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-023
+      source_item_or_section: constitutive_propositions[23]
+      original_text_or_exact_source_reference: no attainable good society is redemption or final society
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theory-vs-practice
+      destination_item: future successor anti-utopian rule
+      transformation_mode: REFERENCE_ONLY
+      reason: General political finitude belongs primarily to Theory vs. Practice.
+      continuing_relevance: local reference retained
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-024
+      source_item_or_section: constitutive_propositions[24]
+      original_text_or_exact_source_reference: persecution grounds guarded communication but does not prove esotericism
+      disposition: ELEVATE
+      destination_canonical_key_or_protocol: shared-protocols
+      destination_item: inference-discipline and uncertainty-preservation
+      transformation_mode: REFERENCE_ONLY
+      reason: General method.
+      continuing_relevance: local activation retained
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-025
+      source_item_or_section: constitutive_propositions[25]
+      original_text_or_exact_source_reference: interpretation of authoritative text may itself be rule
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml jurisdiction
+      transformation_mode: REVISED
+      reason: Interpretation and authority are constitutive to the problem.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-026
+      source_item_or_section: constitutive_propositions[26]
+      original_text_or_exact_source_reference: control of scriptural interpretation transfers practical authority
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml jurisdiction
+      transformation_mode: REVISED
+      reason: Core political consequence.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-027
+      source_item_or_section: constitutive_propositions[27]
+      original_text_or_exact_source_reference: announced subject and accomplished deed must be distinguished
+      disposition: ELEVATE
+      destination_canonical_key_or_protocol: speech-and-deed
+      destination_item: protocols/speech-and-deed.yaml reference
+      transformation_mode: REFERENCE_ONLY
+      reason: General interpretive method.
+      continuing_relevance: required locally
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-028
+      source_item_or_section: constitutive_propositions[28]
+      original_text_or_exact_source_reference: philosophy is a way of life, not merely a method or doctrine
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml permanent tension
+      transformation_mode: REVISED
+      reason: Defines the rank of the philosophic alternative.
+      continuing_relevance: permanent
+      unresolved_overlap: Athens vs. Jerusalem owns complete way-of-life comparison.
+    - transaction_id: TPV11-PROP-029
+      source_item_or_section: constitutive_propositions[29]
+      original_text_or_exact_source_reference: awareness of ignorance prevents false philosophic knowledge
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml anti-capture principle
+      transformation_mode: REVISED
+      reason: Prevents philosophic self-certification.
+      continuing_relevance: permanent
+      unresolved_overlap: Wise vs. Vulgar intersection.
+    - transaction_id: TPV11-PROP-030
+      source_item_or_section: constitutive_propositions[30]
+      original_text_or_exact_source_reference: autobiography does not decide Strauss's final allegiance
+      disposition: ELEVATE
+      destination_canonical_key_or_protocol: source-status
+      destination_item: protocols/source-status.yaml reference
+      transformation_mode: REFERENCE_ONLY
+      reason: General source-status and inference rule.
+      continuing_relevance: source-specific application retained
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-031
+      source_item_or_section: constitutive_propositions[31]
+      original_text_or_exact_source_reference: historicism attempts to supersede permanent alternatives
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: ancients-vs-moderns
+      destination_item: future successor historicism section
+      transformation_mode: REFERENCE_ONLY
+      reason: Primary jurisdiction belongs to Ancients vs. Moderns.
+      continuing_relevance: local proposed-resolution reference retained
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-032
+      source_item_or_section: constitutive_propositions[32]
+      original_text_or_exact_source_reference: eternal order versus historical self-creation is a deepest level
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: ancients-vs-moderns
+      destination_item: future successor permanent tension
+      transformation_mode: REFERENCE_ONLY
+      reason: Primary jurisdiction belongs to Ancients vs. Moderns.
+      continuing_relevance: local cross-reference required
+      unresolved_overlap: The relation remains philosophically open.
+    - transaction_id: TPV11-PROP-033
+      source_item_or_section: constitutive_propositions[33]
+      original_text_or_exact_source_reference: political consequences test seriousness but do not prove metaphysical truth
+      disposition: ELEVATE
+      destination_canonical_key_or_protocol: inference-discipline
+      destination_item: protocols/inference-discipline.yaml reference
+      transformation_mode: REFERENCE_ONLY
+      reason: General inference rule.
+      continuing_relevance: local application retained
+      unresolved_overlap: none
+    - transaction_id: TPV11-PROP-034
+      source_item_or_section: constitutive_propositions[34]
+      original_text_or_exact_source_reference: conflict not overcome by naming alternatives historical traditions
+      disposition: RETAIN
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: problem.yaml anti-resolution rule
+      transformation_mode: REVISED
+      reason: Prevents historicist verbal dissolution.
+      continuing_relevance: permanent
+      unresolved_overlap: Ancients vs. Moderns intersection.
+    - transaction_id: TPV11-PROP-035
+      source_item_or_section: constitutive_propositions[35]
+      original_text_or_exact_source_reference: conflict must be examined in action, politics, interpretation, and history
+      disposition: TRANSFER
+      destination_canonical_key_or_protocol: theologico-political
+      destination_item: inquiry-profile.yaml operations
+      transformation_mode: REVISED
+      reason: Operational requirement.
+      continuing_relevance: recurring
+      unresolved_overlap: Theory vs. Practice intersection.
+    - transaction_id: TPV11-PROP-036
+      source_item_or_section: constitutive_propositions[36]
+      original_text_or_exact_source_reference: disciplined nonresolution required where evidence establishes no victor
+      disposition: ELEVATE
+      destination_canonical_key_or_protocol: uncertainty-preservation
+      destination_item: protocols/uncertainty-preservation.yaml reference and local termination rule
+      transformation_mode: REFERENCE_ONLY
+      reason: General method with constitutive local application.
+      continuing_relevance: permanent
+      unresolved_overlap: none
+
+coverage_assessment:
+  accepted_source_sections_classified:
+    - revision_basis
+    - documentary_source_basis including all nineteen source entries
+    - layered_origin
+    - governing_question
+    - governing_proposition
+    - problem_statement
+    - primary_alternatives
+    - political_mediators_and_settlements
+    - governing_sequence
+    - epistemic_crux
+    - progress_and_return
+    - modern_attempts_at_resolution
+    - jewish_historical_manifestation
+    - political_finitude
+    - hermeneutic_condition
+    - historicism_and_metaphysical_deepening
+    - evidentiary_rules
+    - all constitutive_propositions
+    - serious_alternatives
+    - recognition_signals
+    - highest_scrutiny_condition
+    - required_textual_examination
+    - required_operations
+    - required_distinctions
+    - false_resolutions
+    - anti_capture_rule
+    - boundary_rule
+    - relations
+    - permissible_outputs
+    - opacity_floor
+    - termination_condition
+    - publication_record
+  rejected_items: []
+  unclassified_accepted_items: []
+  implementation_remaining:
+    - create successor problem.yaml
+    - create successor inquiry-profile.yaml
+    - create successor witnesses.yaml
+    - create successor relations.yaml
+    - create predecessor v1.1 synthesis record
+    - update this transaction set with destination commits
+    - validate all cross-references and dispositions
+
+non_certification_notice: >
+  Classification completeness does not certify the successor, the migration, any
+  comprehensive teaching, or the truth or falsity of revelation. The source remains
+  active and untouched until migration certification and final activation.
