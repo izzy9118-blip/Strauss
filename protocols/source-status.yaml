@@ -1,0 +1,89 @@
+schema_version: 1.0
+document_type: shared_interpretive_protocol
+
+identity:
+  canonical_key: source-status
+  title: Source Status Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+
+purpose: >
+  Govern documentary classification before substantive interpretation.
+
+governing_rule: >
+  Every source must be classified according to documentary provenance,
+  authorial status, editorial condition, completeness, and relation to the work
+  being investigated before interpretive claims are made from it.
+
+source_classes:
+  AUTHOR_PUBLISHED:
+    authority: PRIMARY
+    description: Text published or expressly authorized by the author.
+  AUTHOR_ARRANGED_POSTHUMOUS:
+    authority: PRIMARY_WITH_QUALIFICATION
+    description: >
+      Collection or sequence selected by the author but published after death
+      without final authorial completion.
+  AUTHOR_MANUSCRIPT:
+    authority: PRIMARY_WITH_QUALIFICATION
+    description: Authorial manuscript not prepared or authorized for publication.
+  LECTURE_TRANSCRIPT_AUTHOR_REVIEWED:
+    authority: PRIMARY_WITH_QUALIFICATION
+    description: Transcript reviewed or corrected by the lecturer.
+  LECTURE_TRANSCRIPT_UNREVIEWED:
+    authority: DERIVATIVE_PRIMARY
+    description: Transcript not reviewed by the lecturer.
+  STUDENT_NOTES:
+    authority: DERIVATIVE
+    description: Notes produced by a student or auditor.
+  EDITOR_RECONSTRUCTION:
+    authority: EDITORIAL
+    description: Text reconstructed, completed, or arranged through editorial judgment.
+  INTRODUCTION_OR_COMMENTARY:
+    authority: SECONDARY
+    description: Introductory, editorial, or interpretive commentary.
+  LATER_INTERPRETATION:
+    authority: SECONDARY
+    description: Later scholarly or interpretive treatment.
+
+required_fields:
+  - author
+  - source_type
+  - publication_status
+  - editorial_interventions
+  - completeness
+  - known_omissions
+  - relation_to_governing_inquiry
+
+required_operations:
+  - distinguish authorial text from editorial framing
+  - identify missing or projected material
+  - identify whether wording is direct, reconstructed, or reported
+  - preserve documentary qualifications in later citations
+  - prevent secondary framing from replacing primary evidence
+
+prohibited_inferences:
+  - editorial arrangement is automatically authorial doctrine
+  - posthumous publication is equivalent to authorial finality
+  - student notes preserve exact authorial wording
+  - an introduction governs the meaning of the author's text
+  - chronological lateness establishes interpretive authority
+
+valid_outputs:
+  - source_status_confirmed
+  - source_status_qualified
+  - editorial_dependence_identified
+  - authorial_status_unresolved
+  - source_unfit_for_claim
+
+invoked_by:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
