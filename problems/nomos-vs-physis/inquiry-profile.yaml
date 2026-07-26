@@ -1,0 +1,465 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: nomos-vs-physis
+  title: Nomos vs. Physis — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/nomos-vs-physis/problem.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+  governing_rule: >
+    This profile records operations and tests specific to Nomos vs. Physis. It
+    invokes shared protocols by canonical reference, preserves neighboring problem
+    jurisdictions, and does not certify a natural standard merely because a source,
+    law, tradition, historical outcome, or interpreter names one.
+
+purpose: >
+  Govern inquiry into the distinction and conflict between what is by nature and
+  what exists through law, convention, custom, inheritance, artifice, authoritative
+  opinion, historical formation, or political power; determine whether any standard
+  of right is independent of enacted authority; and examine how such a standard can
+  be known and applied without dissolving law into relativism or prudence into will.
+
+source_orientation:
+  founding_collection_study:
+    study_id: SPPP-STUDY-001
+    source: Leo Strauss, Studies in Platonic Political Philosophy
+    source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+    source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+    study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+    synthesis_path: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
+    role: >
+      Supplies the first registered problem-specific reconstruction concerning
+      natural law, human and divine positive law, natural right, prudential
+      application, modern natural right, historical value creation, and the limits
+      of power, recurrence, or success as standards of justice.
+  source_limit: >
+    The founding collection study does not replace independent reconstruction of
+    Plato, Aristotle, classical natural right, Stoic and Roman natural law,
+    biblical divine law, Thomas Aquinas, Machiavelli, Hobbes, Nietzsche, Cohen, or
+    other witnesses. Its findings remain provisional and source-bounded.
+
+shared_protocol_references:
+  required:
+    - canonical_key: source-status
+      path: protocols/source-status.yaml
+      local_application: >
+        Identify whether a claim arises from an authorial text, reported teaching,
+        legal code, historical account, editorial frame, posthumous collection,
+        translation, or later interpretation before assigning authority.
+    - canonical_key: evidence-classification
+      path: protocols/evidence-classification.yaml
+      local_application: >
+        Distinguish explicit definitions, legal propositions, historical reports,
+        textual deeds, supported inferences, hypotheses, and unresolved questions.
+    - canonical_key: inference-discipline
+      path: protocols/inference-discipline.yaml
+      local_application: >
+        Prevent movement from recurrence, necessity, power, antiquity, consensus,
+        success, or historical endurance to unsupported claims of natural justice.
+    - canonical_key: uncertainty-preservation
+      path: protocols/uncertainty-preservation.yaml
+      local_application: >
+        Preserve unresolved questions concerning natural standards, their
+        epistemic accessibility, their relation to divine law, and their prudent
+        application.
+    - canonical_key: speech-and-deed
+      path: protocols/speech-and-deed.yaml
+      local_application: >
+        Compare claims about law, nature, right, equality, necessity, or progress
+        with the institutions, actions, exclusions, outcomes, and transformed
+        meanings produced by those claims.
+  conditional:
+    - canonical_key: claimant-to-wisdom
+      path: protocols/claimant-to-wisdom.yaml
+      activation: >
+        Invoke when legislator, jurist, philosopher, prophet, scientist, historian,
+        sovereign, revolutionary, or scholar claims privileged knowledge of nature,
+        justice, necessity, or the direction of history.
+    - canonical_key: audience-and-rhetoric
+      path: protocols/audience-and-rhetoric.yaml
+      activation: >
+        Invoke where natural-right, legal, theological, or historicist teaching is
+        adapted to rulers, citizens, believers, students, courts, or differentiated
+        audiences.
+    - canonical_key: irony
+      path: protocols/irony.yaml
+      activation: >
+        Invoke where an explicit affirmation of law, equality, nature, or history is
+        qualified by textual arrangement, deed, consequence, or demonstrated rank.
+
+problem_specific_operations:
+  - operation_id: NVP-OP-001
+    name: DEFINE_THE_TERMS_IN_CONTEXT
+    instruction: >
+      Reconstruct the source-specific meanings of physis, nomos, nature, law,
+      custom, convention, right, justice, necessity, order, and history before
+      comparison. Do not assume that identical words preserve identical doctrines.
+  - operation_id: NVP-OP-002
+    name: IDENTIFY_THE_CLAIMED_STANDARD
+    instruction: >
+      State precisely what is claimed to be right by nature, why it is independent
+      of enactment or inheritance, and whether the standard concerns ends, virtues,
+      relations, prohibitions, rights, preservation, equality, or human excellence.
+  - operation_id: NVP-OP-003
+    name: IDENTIFY_THE_EPISTEMIC_ROUTE
+    instruction: >
+      Determine whether the standard is claimed to be known through reason,
+      experience, nature, conscience, teleology, revelation, history, science,
+      common opinion, or practical judgment. Do not treat assertion of access as
+      demonstrated access.
+  - operation_id: NVP-OP-004
+    name: DISTINGUISH_DESCRIPTION_FROM_NORM
+    instruction: >
+      Separate what regularly, necessarily, powerfully, or historically occurs from
+      what ought to occur. Recurrence, survival, strength, victory, or causal
+      effectiveness does not by itself establish right.
+  - operation_id: NVP-OP-005
+    name: DISTINGUISH_FORMS_OF_LAW
+    instruction: >
+      Distinguish human positive law, custom, natural right, natural law, divine
+      positive law, and eternal law where relevant. Do not convert one jurisdiction
+      into another merely because each uses the language of law.
+  - operation_id: NVP-OP-006
+    name: TEST_LAWFULNESS_AGAINST_JUSTICE
+    instruction: >
+      Examine whether an enacted or inherited law is defended because it is lawful,
+      ancient, necessary, effective, sacred, consensual, or just, and preserve the
+      difference among these titles.
+  - operation_id: NVP-OP-007
+    name: TEST_APPLICATION_AND_PRUDENCE
+    instruction: >
+      Determine how a universal or general standard is applied to changing
+      particulars, emergencies, institutions, and imperfect regimes. Preserve the
+      difference between prudent specification and relativistic abandonment.
+  - operation_id: NVP-OP-008
+    name: TEST_POWER_AND_HISTORY
+    instruction: >
+      Examine claims that the stronger, victorious, recurrent, historically
+      successful, progressive, or future-producing cause is therefore natural,
+      legitimate, or just. Require an independent normative argument.
+  - operation_id: NVP-OP-009
+    name: RECONSTRUCT_MODERN_TRANSFORMATIONS
+    instruction: >
+      Distinguish ancient natural right, modern natural rights, preservation-based
+      beginnings, conventionalism, historicism, value creation, scientific mastery,
+      and rationalized religion without treating chronology as rank.
+  - operation_id: NVP-OP-010
+    name: RECORD_JURISDICTION_AND_TRANSFER
+    instruction: >
+      Retain the nature-convention and natural-standard question here; transfer the
+      full reason-revelation conflict, political implementation problem, rank
+      problem, poetic quarrel, and ancient-modern transformation to their governing
+      problems while preserving local references.
+
+activation_signals:
+  direct:
+    - enacted law, inherited custom, or social convention is treated as self-justifying
+    - a source distinguishes what is by nature from what is by law or convention
+    - natural right or natural law is invoked against positive law
+    - power, victory, necessity, recurrence, or history is treated as a title to justice
+    - human positive law, natural law, and divine positive law are conflated
+    - equality, inequality, hierarchy, preservation, excellence, or freedom is claimed to be natural
+    - a universal standard is challenged by changing circumstances or prudential application
+    - modern rights, historicism, value creation, or scientific mastery transforms the meaning of nature
+    - a tradition preserves the language of law while changing its doctrinal referent
+  non_activation_signals:
+    - every dispute about the interpretation of a statute
+    - every conflict between two positive laws
+    - every historical change in custom
+    - every use of the word natural in ordinary speech
+    - every theological claim concerning divine command
+    - every practical disagreement about policy
+    - every claim involving human difference or equality
+
+governing_distinctions:
+  - distinction_id: NVP-DIST-001
+    terms:
+      - what occurs by nature
+      - what is right by nature
+    rule: >
+      A natural fact, tendency, inequality, or recurrence does not by itself establish
+      a natural norm.
+  - distinction_id: NVP-DIST-002
+    terms:
+      - lawful
+      - just
+    rule: >
+      Positive validity and authoritative enactment are not identical with justice,
+      although imperfect law may remain politically necessary.
+  - distinction_id: NVP-DIST-003
+    terms:
+      - natural right
+      - natural law
+    rule: >
+      Preserve each source's terminology and structure; do not assume that an account
+      of right by nature is identical with a jurisprudential doctrine of natural law.
+  - distinction_id: NVP-DIST-004
+    terms:
+      - human positive law
+      - divine positive law
+    rule: >
+      Political enactment and claimed divine command possess different authorities,
+      recognition problems, and epistemic burdens.
+  - distinction_id: NVP-DIST-005
+    terms:
+      - universal standard
+      - prudent application
+    rule: >
+      Variation in application does not by itself negate the standard; invocation of
+      prudence does not by itself justify departure from it.
+  - distinction_id: NVP-DIST-006
+    terms:
+      - necessity
+      - justice
+    rule: >
+      What must be done for survival, order, or political action may remain distinct
+      from what is best or just simply.
+  - distinction_id: NVP-DIST-007
+    terms:
+      - power
+      - right
+    rule: >
+      Capacity to command, conquer, endure, produce effects, or define public law does
+      not establish rightful authority.
+  - distinction_id: NVP-DIST-008
+    terms:
+      - historical causation
+      - normative rank
+    rule: >
+      A doctrine's origin, influence, victory, decline, or historical necessity does
+      not decide its truth or justice.
+  - distinction_id: NVP-DIST-009
+    terms:
+      - ancient natural right
+      - modern natural rights
+    rule: >
+      Preserve the difference between standards ordered toward human excellence and
+      beginnings ordered toward preservation, security, freedom, or individual claim.
+  - distinction_id: NVP-DIST-010
+    terms:
+      - revelation
+      - natural standard
+    rule: >
+      A revealed divine law and a rationally knowable natural standard must not be
+      silently identified, harmonized, or made mutually exclusive without argument.
+  - distinction_id: NVP-DIST-011
+    terms:
+      - convention
+      - arbitrary will
+    rule: >
+      Humanly made law may embody reason, experience, compromise, or inherited wisdom;
+      its conventional status alone does not establish arbitrariness or injustice.
+  - distinction_id: NVP-DIST-012
+    terms:
+      - preservation of vocabulary
+      - preservation of doctrine
+    rule: >
+      A later teaching may retain the words nature, law, right, creation, or morality
+      while transforming the referents and authority those words formerly named.
+
+investigative_questions:
+  standard_and_knowledge:
+    - What is claimed to be right independently of enactment, custom, power, history, or revelation?
+    - What account of human nature, ends, capacities, or relations supports the standard?
+    - By what route is the standard said to be known?
+    - Does the evidence establish the standard, or only the claimant's assertion of it?
+  law_and_authority:
+    - Why is the law obeyed: justice, legitimacy, antiquity, fear, force, consent, necessity, or divine command?
+    - What happens when the lawful and the just diverge?
+    - Which authority interprets or applies the standard, and how is that authority tested?
+    - Does criticism of an unjust law preserve lawfulness or dissolve public order?
+  application:
+    - Is the standard universal, general, regime-relative, role-relative, or historically bounded?
+    - What particulars require prudential judgment?
+    - Does adaptation specify the standard or replace it?
+    - How are emergency, equity, exception, and institutional limitation handled?
+  power_history_and_modernity:
+    - Is strength, success, survival, recurrence, or historical victory being converted into right?
+    - Does modernity discover a truer nature or choose a more manageable beginning?
+    - Does value creation abolish natural standards or merely assert a new authority?
+    - Does scientific predictability disclose human nature or reduce it to usable material?
+  divine_law_boundary:
+    - Is the claim rational natural law, revealed divine law, or a later synthesis of the two?
+    - Does moral agreement prove common authority or only overlapping content?
+    - Has a revealed command been rationalized into autonomous morality without acknowledging the transformation?
+    - Has inability to refute revelation been converted into proof of divine law?
+  documentary_and_comparative:
+    - Are identical terms being used with different meanings across authors or periods?
+    - Is an editor, translator, reviewer, or later interpreter supplying a distinction absent from the primary source?
+    - Have independent witnesses been reconstructed before synthesis?
+    - Are structural resemblance and historical dependence being confused?
+
+false_resolutions:
+  - resolution_id: NVP-FALSE-001
+    claim: Whatever is enacted is just because law defines justice.
+    reason: >
+      Positive law can establish public validity without establishing its own moral
+      correctness.
+  - resolution_id: NVP-FALSE-002
+    claim: Whatever is ancient or inherited is natural.
+    reason: >
+      Antiquity establishes duration or inheritance, not independence from convention.
+  - resolution_id: NVP-FALSE-003
+    claim: Whatever repeatedly occurs in nature is naturally right.
+    reason: >
+      Recurrence and causal regularity are descriptive unless joined to a normative argument.
+  - resolution_id: NVP-FALSE-004
+    claim: The stronger possesses natural right because strength is natural.
+    reason: >
+      Natural capacity does not establish a title to rule, possession, or justice.
+  - resolution_id: NVP-FALSE-005
+    claim: Historical victory or progress establishes superior justice.
+    reason: >
+      Outcomes and historical direction do not interpret or justify themselves.
+  - resolution_id: NVP-FALSE-006
+    claim: Variation in law proves that there is no natural standard.
+    reason: >
+      Disagreement and variation may concern knowledge, application, interest, or error.
+  - resolution_id: NVP-FALSE-007
+    claim: A universal standard supplies a complete rule for every circumstance.
+    reason: >
+      General principles may require equity, prudence, institutional judgment, and
+      attention to particulars.
+  - resolution_id: NVP-FALSE-008
+    claim: Prudence means that justice is whatever the prudent ruler decides.
+    reason: >
+      Practical judgment requires a standard and does not certify its own rank or motive.
+  - resolution_id: NVP-FALSE-009
+    claim: Shared moral content makes natural law and revealed law identical.
+    reason: >
+      Common prescriptions do not erase differences of source, authority, covenant,
+      command, obedience, and recognition.
+  - resolution_id: NVP-FALSE-010
+    claim: Scientific explanation of law or morality refutes their normative claims.
+    reason: >
+      Causal explanation and normative examination answer different questions.
+  - resolution_id: NVP-FALSE-011
+    claim: Modern natural rights are simply the ancient doctrine stated more clearly.
+    reason: >
+      The beginning, end, anthropology, political purpose, and relation to virtue may
+      have changed substantially.
+  - resolution_id: NVP-FALSE-012
+    claim: Calling values created proves that no natural standard exists.
+    reason: >
+      Genealogy or creation of some values does not by itself demonstrate that every
+      claim of natural justice is false.
+
+claimant_tests:
+  required_dimensions:
+    - claimant identity and source status
+    - definition of nature, law, right, and justice
+    - claimed epistemic access
+    - account of human ends or goods
+    - relation between fact and norm
+    - relation to positive and divine law
+    - application to particulars
+    - treatment of power, necessity, and history
+    - speech-and-deed consistency
+    - institutional and political consequences
+    - acknowledged limits and unresolved burdens
+  anti_certification_rule: >
+    No philosopher, jurist, prophet, sovereign, scientist, historian, legislator, or
+    interpreter is certified as knowing natural right through title, office, victory,
+    antiquity, persecution, influence, or self-description.
+
+cross_problem_routing:
+  - target_problem: philosophy-vs-poetry
+    route_when: >
+      Nature is invoked to challenge poetic, ancestral, or civic authority as part of
+      the substantive rivalry between poetic and philosophic wisdom.
+    retain_here: the standard by which nomos is questioned
+  - target_problem: theory-vs-practice
+    route_when: >
+      The primary issue is how a known or presumed standard becomes prudent law,
+      institutional action, equity, exception, or political judgment.
+    retain_here: the universal-standard and conventional-law distinction
+  - target_problem: theologico-political
+    route_when: >
+      The primary issue is ultimate authority between autonomous reason and genuine
+      revelation, prophecy, divine command, or sacred law.
+    retain_here: the distinction between natural and divine law
+  - target_problem: athens-vs-jerusalem
+    route_when: >
+      Nature and creation, autonomous understanding and obedient love, or natural
+      excellence and divine Law appear as comprehensive ways of life.
+    retain_here: the natural-standard question
+  - target_problem: wise-vs-vulgar
+    route_when: >
+      The primary issue is who can recognize, know, teach, interpret, or apply the
+      standard and how counterfeit claimants are distinguished.
+    retain_here: the content and epistemic burden of the standard
+  - target_problem: ancients-vs-moderns
+    route_when: >
+      The primary issue is the historical transformation from ancient natural right
+      to modern rights, mastery, historicism, or value creation.
+    retain_here: the distinction between nature and convention
+
+output_constraints:
+  required:
+    - state the source-specific meanings of nature, law, right, and justice
+    - identify the claimed standard and its epistemic route
+    - distinguish description, necessity, power, lawfulness, and justice
+    - distinguish natural, human positive, and divine positive law where relevant
+    - record prudent application separately from the standard itself
+    - classify evidence and preserve unresolved burdens
+    - record cross-problem transfers without duplicating doctrine
+    - identify independent-witness work still required
+  prohibited:
+    - certifying a natural standard from vocabulary alone
+    - treating positive validity as justice
+    - deriving right directly from recurrence, power, necessity, or history
+    - treating prudence as unrestricted discretion
+    - identifying natural law with revelation without argument
+    - treating causal explanation as normative refutation
+    - using a single Strauss collection as a substitute for independent witnesses
+    - activating or certifying the successor from profile completion
+
+termination_tests:
+  minimum_completion:
+    - the source's meanings of nature and law are reconstructed
+    - the claimed natural standard and epistemic route are explicit
+    - descriptive and normative propositions are separated
+    - positive, natural, and divine law are distinguished where relevant
+    - application and prudence are examined
+    - power, necessity, and history are prevented from self-certification
+    - neighboring jurisdictions and unresolved questions are recorded
+  mandatory_nontermination:
+    - a claimant's title substitutes for evidence
+    - the lawful and the just remain conflated
+    - recurrent fact is treated as natural right without argument
+    - prudent variation is treated either as automatic relativism or automatic justification
+    - natural and revealed law are silently harmonized
+    - independent witness reconstruction is replaced by collection-level synthesis
+  completion_label: PROVISIONAL_INQUIRY_PROFILE_COMPLETE
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This profile is a new subordinate successor record. It does not certify or
+    activate Nomos vs. Physis, revise any predecessor, complete independent source
+    reconstruction, or authorize deletion, doctrinal absorption, or silent migration.
+
+termination:
+  profile_state: FOUNDING_INQUIRY_PROFILE_CREATED
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - witnesses.yaml
+    - relations.yaml
+    - independent source reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
