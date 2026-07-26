@@ -1,0 +1,92 @@
+schema_version: 1.0
+document_type: provisional_problem_synthesis
+
+identity:
+  synthesis_id: WVG-SYN-001
+  problem: wise-vs-vulgar
+  title: Studies in Platonic Political Philosophy — Wise vs. Vulgar Synthesis
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SYNTHESIS_RECORD_FOR_INACTIVE_SUCCESSOR
+
+source_record:
+  study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  primary_source:
+    author: Leo Strauss
+    title: Studies in Platonic Political Philosophy
+    publication_year: 1983
+  migration_source: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+
+jurisdictional_result: >
+  Political society requires guidance but cannot certify wisdom. Philosophy, prophecy,
+  poetry, scholarship, expertise, office, success, persecution, secrecy, election,
+  and social rank remain fallible signs requiring evidence, domain-limited judgment,
+  speech-and-deed comparison, and openness to correction.
+
+permanent_findings:
+  - finding_id: WVG-SPPP-F001
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Vulgar names ordinary dependence upon authoritative opinion and does not mean poor, stupid, crude, or contemptible.
+  - finding_id: WVG-SPPP-F002
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Political virtue grounded in opinion remains genuine and may exceed intellectual sophistication morally.
+  - finding_id: WVG-SPPP-F003
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: The authoritative multitude possesses political power without philosophical knowledge of philosophy.
+  - finding_id: WVG-SPPP-F004
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Eristic, sophistry, scholarship, expertise, and rhetoric can imitate or partially possess philosophical forms without wisdom.
+  - finding_id: WVG-SPPP-F005
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Human heterogeneity requires differentiated education while creating a permanent danger of manipulation and capture.
+  - finding_id: WVG-SPPP-F006
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Xenophontic superiority appears through correction, service, and restraint rather than infallibility or office.
+  - finding_id: WVG-SPPP-F007
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Nietzschean philosopher-commanders and Machiavellian elite disbelief intensify rather than solve the recognition problem.
+  - finding_id: WVG-SPPP-F008
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: The absolute individual cannot be fully known by state or society and may not convert inward standing into moral sovereignty over others.
+  - finding_id: WVG-SPPP-F009
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Recognition of superior understanding must remain provisional, evidentiary, and limited to a defined domain.
+
+false_resolutions:
+  - Wealth, birth, education, credentials, profession, or leisure identifies the wise.
+  - Political equality proves identical philosophical capacity or educational need.
+  - Expertise concerning means supplies knowledge of justice and ends.
+  - Persecution, marginality, secrecy, initiation, or obscurity proves superior rank.
+  - Majority error certifies every dissenter.
+  - Philosophical superiority authorizes self-appointed political sovereignty.
+  - Election, prophecy, or religious office certifies every claimant or deed.
+
+uncertainties:
+  - No external test of complete wisdom is established.
+  - Differentiated communication may be responsible or manipulative depending upon evidence and consequence.
+  - The relation between theoretical superiority, practical competence, and legitimate authority remains unresolved.
+  - The accepted predecessor reconstruction still requires proposition-level redistribution before migration certification.
+
+cross_problem_references:
+  - problem: philosophy-vs-poetry
+    relevance: Poet, philosopher, rhetorician, and comic poet are rival claimants.
+  - problem: theory-vs-practice
+    relevance: Superior understanding, practical competence, and lawful authority remain distinct.
+  - problem: theologico-political
+    relevance: Prophet, philosopher, theologian, sovereign, and interpreter claim ultimate authority.
+  - problem: ancients-vs-moderns
+    relevance: Modern professional, technical, historical, and ideological claimants transform the recognition problem.
+
+termination:
+  state: PROVISIONAL_SOURCE_SYNTHESIS_COMPLETE
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - create inquiry-profile.yaml
+    - create witnesses.yaml
+    - create relations.yaml
+    - create proposition-level migration transactions from the accepted reconstruction
+    - validate retained and transferred material before activation
