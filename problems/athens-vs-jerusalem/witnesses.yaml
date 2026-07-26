@@ -1,0 +1,322 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: athens-vs-jerusalem
+  title: Athens vs. Jerusalem — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/athens-vs-jerusalem/problem.yaml
+  inquiry_profile_reference: problems/athens-vs-jerusalem/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry records independent witnesses, source conditions, local roles, and
+    limits. It does not merge Greek philosophy and Biblical revelation, reduce either
+    to culture, or certify reconciliation from historical coexistence or shared vocabulary.
+
+registry_purpose: >
+  Preserve the documentary independence of the philosophical and Biblical orientations
+  and of major mediators, critics, and historical manifestations through which their
+  confrontation must be reconstructed.
+
+source_status_rules:
+  - rule_id: AVJ-WSR-001
+    rule: >
+      Biblical texts, Greek philosophical works, historical records, legal traditions,
+      medieval commentaries, modern critiques, and editorial frames are distinct source classes.
+  - rule_id: AVJ-WSR-002
+    rule: >
+      Studies in Platonic Political Philosophy is a posthumous collection of qualified
+      primary Strauss sources. Pangle's introduction remains secondary and may not
+      supply Strauss's missing authorial introduction.
+  - rule_id: AVJ-WSR-003
+    rule: >
+      Athens and Jerusalem identify comprehensive orientations, not homogeneous ethnic,
+      cultural, geographic, national, or institutional populations.
+  - rule_id: AVJ-WSR-004
+    rule: >
+      Biblical revelation must be reconstructed from primary texts and traditions;
+      Greek philosophy must be reconstructed from its own works. Strauss's summaries
+      do not replace either.
+  - rule_id: AVJ-WSR-005
+    rule: >
+      Historical influence, coexistence, conflict, survival, suffering, political
+      restoration, or statehood does not interpret itself as philosophical harmony,
+      divine providence, election, or refutation.
+  - rule_id: AVJ-WSR-006
+    rule: >
+      A mediation that preserves traditional vocabulary must be tested for transformed
+      authority, referents, practices, and highest ends.
+
+principal_witnesses:
+  - witness_id: AVJ-WIT-001
+    name: Leo Strauss
+    witness_class: PRIMARY_MODERN_INTERPRETIVE_AND_PHILOSOPHIC_WITNESS
+    local_role: >
+      Governing modern witness for reconstructing Athens and Jerusalem as the two
+      roots and rival comprehensive orientations of Western civilization.
+    documentary_standing:
+      authority: PRIMARY_FOR_STRAUSS_INTERPRETATION
+      limit: >
+        Strauss governs claims about his own arguments, not the final independent truth
+        of Greek philosophy, Biblical revelation, Maimonides, Machiavelli, Nietzsche,
+        Cohen, Jewish history, or the relation between the orientations.
+    registered_sources:
+      - source_id: AVJ-STR-SRC-001
+        title: Studies in Platonic Political Philosophy
+        publication_condition: POSTHUMOUS_COLLECTION_ARRANGED_AND_TITLED_BY_STRAUSS
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+        completed_study_record: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+        synthesis_record: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_id: SPPP-STUDY-001
+        study_status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
+      - source_id: AVJ-STR-SRC-002
+        title: Jerusalem and Athens
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Central witness concerning Biblical and Greek beginnings, creation and nature,
+          obedience and understanding, prophet and philosopher, and rival highest lives.
+        study_status: COMPLETE_SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+      - source_id: AVJ-STR-SRC-003
+        title: Progress or Return?
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Major witness concerning return, progress, revelation, philosophy, and the
+          undefeated conflict as a living basis of Western civilization.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+    claimant_status: INTERPRETER_AND_PHILOSOPHIC_CLAIMANT_REQUIRING_TEST
+
+  - witness_id: AVJ-WIT-002
+    name: Biblical revelation
+    witness_class: INDEPENDENT_REVELATORY_CLAIMANT
+    local_role: >
+      Principal Jerusalem witness presenting creation, divine command, covenant, Law,
+      prophecy, obedience, love, judgment, repentance, promise, and redemption.
+    principal_textual_domains:
+      - Genesis
+      - Torah
+      - Biblical prophecy
+      - other relevant Biblical writings
+    documentary_limit: >
+      The registry does not certify divine origin. Textual layers, transmission,
+      interpretation, genre, and tradition must be examined without reducing the claim
+      to poetry, culture, politics, or psychology.
+    independence_rule: >
+      Reconstruct relevant Biblical texts and traditions before Straussian, philosophical,
+      theological, or historical synthesis.
+    study_status: INDEPENDENT_BIBLICAL_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVJ-WIT-003
+    name: Plato
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_AND_DRAMATIC_WITNESS
+    local_role: >
+      Principal Athens witness concerning wonder, nature, reason, justice, soul,
+      education, philosophy, gods, law, the best regime, and the highest life.
+    required_source_domains:
+      - Apology
+      - Republic
+      - Laws
+      - Gorgias
+      - Phaedrus
+      - Symposium
+      - other relevant dialogues
+    documentary_limit: >
+      Socratic speech is not automatically Platonic doctrine. Dialogue form, speaker,
+      audience, action, silence, and compositional deed must be reconstructed.
+    independence_rule: >
+      Reconstruct Plato independently before comparison with Biblical revelation,
+      Strauss, Maimonides, or later Platonism.
+    study_status: INDEPENDENT_PLATONIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVJ-WIT-004
+    name: Aristotle
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Major Athens witness concerning nature, causality, human excellence, contemplation,
+      ethics, politics, law, prudence, and the highest life.
+    required_source_domains:
+      - Metaphysics
+      - Nicomachean Ethics
+      - Politics
+      - other relevant works
+    documentary_limit: >
+      Later scholastic or theological syntheses may not be projected backward into
+      Aristotle without textual evidence.
+    study_status: INDEPENDENT_ARISTOTELIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVJ-WIT-005
+    name: Socrates
+    witness_class: DISPUTED_CLASSICAL_SUBJECT_AND_PHILOSOPHIC_CLAIMANT
+    local_role: >
+      Central Athens figure represented through conflicting Platonic, Xenophontic,
+      Aristophanic, and later witnesses as examiner, citizen, erotic guide, and servant
+      of a divine mission.
+    documentary_limit: >
+      No direct surviving authorial corpus exists. Historical Socrates and literary
+      representations must not be silently identified or separated.
+    study_status: COMPARATIVE_WITNESS_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVJ-WIT-006
+    name: Maimonides
+    witness_class: INDEPENDENT_MEDIEVAL_PHILOSOPHIC_AND_JEWISH_LEGAL_WITNESS
+    local_role: >
+      Major mediator preserving philosophy, Torah, prophecy, Mosaic Law, knowledge,
+      belief, legal presumption, practice, and guarded teaching within one articulated order.
+    required_source_domains:
+      - Guide of the Perplexed
+      - Mishneh Torah and Book of Knowledge
+      - Treatise on the Art of Logic
+      - relevant letters and legal writings
+    documentary_limit: >
+      Coexistence under Law does not automatically establish final harmony, and Strauss's
+      notes do not replace independent Maimonidean reconstruction.
+    study_status: INDEPENDENT_MAIMONIDEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVJ-WIT-007
+    name: Niccolo Machiavelli
+    witness_class: INDEPENDENT_MODERN_CRITICAL_WITNESS
+    local_role: >
+      Major claimant attempting to escape or transform both Biblical and classical
+      authority through effectual politics, founding, civil religion, and mastery.
+    required_source_domains:
+      - The Prince
+      - Discourses on Livy
+      - other relevant works
+    documentary_limit: >
+      Political success or civil use of religion does not prove the truth or falsity
+      of Athens or Jerusalem.
+    study_status: INDEPENDENT_MACHIAVELLIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVJ-WIT-008
+    name: Friedrich Nietzsche
+    witness_class: INDEPENDENT_MODERN_GENEALOGICAL_AND_CREATIVE_CLAIMANT
+    local_role: >
+      Major witness attempting to overcome inherited divine and natural standards
+      through genealogy, rank, value creation, and future philosophy.
+    documentary_limit: >
+      Genealogical exposure and value creation do not automatically certify the
+      authority of the creator or refute revelation and nature.
+    study_status: INDEPENDENT_NIETZSCHEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVJ-WIT-009
+    name: Hermann Cohen
+    witness_class: INDEPENDENT_MODERN_PHILOSOPHIC_AND_RELIGIOUS_MEDIATOR
+    local_role: >
+      Major rational reconciliation of Judaism, revelation, morality, Law,
+      universalism, particularity, and historical progress.
+    documentary_limit: >
+      Preservation of traditional vocabulary may accompany transformation of creation,
+      revelation, command, holiness, election, messianism, immortality, and redemption.
+    independence_rule: >
+      Reconstruct Cohen's own argument before allowing Strauss's introductory essay to
+      govern the result.
+    study_status: INDEPENDENT_COHEN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: AVJ-WIT-010
+    name: Jewish historical experience
+    witness_class: HISTORICAL_MANIFESTATION_NOT_SELF_INTERPRETING
+    local_role: >
+      Makes Jerusalem's historical and political claims concrete through exile,
+      emancipation, assimilation, persistence, suffering, cultural renewal, Zionism,
+      sovereignty, and the State of Israel.
+    documentary_limit: >
+      Events require interpretation and do not independently prove or disprove covenant,
+      election, providence, Torah, messianism, redemption, philosophy, or progress.
+    study_status: MULTI_SOURCE_HISTORICAL_RECONSTRUCTION_REQUIRED
+
+contextual_and_editorial_witnesses:
+  - witness_id: AVJ-CXT-001
+    name: Thomas L. Pangle
+    witness_class: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+    source_relation: Introduction to Studies in Platonic Political Philosophy
+    permitted_role: >
+      Bibliographic orientation and provisional questions concerning Strauss, Plato,
+      revelation, and the collection's architecture.
+    prohibited_role: >
+      Supplying Strauss's missing introduction or deciding the truth, rank, or
+      reconciliation of Athens and Jerusalem.
+
+witness_relation_rules:
+  independent_reconstruction_rule: >
+    Biblical revelation, Plato, Aristotle, Socrates, Maimonides, Machiavelli,
+    Nietzsche, Cohen, and historical manifestations must be reconstructed independently
+    before comparative synthesis.
+  non_confirmation_rule: >
+    No witness may be forced to confirm SPPP-STUDY-001, Strauss's formulation, or a
+    predetermined reconciliation. Dissent and incompatibility remain visible.
+  no_cultural_reduction_rule: >
+    Athens and Jerusalem may not be treated as ethnic or cultural essences, and no
+    historical population may certify the orientation named after it.
+  no_historical_certification_rule: >
+    Influence, coexistence, survival, suffering, victory, restoration, and statehood do
+    not establish philosophical or theological truth.
+  mediation_transformation_rule: >
+    Every reconciliation must identify which authority, terms, practices, and ends are
+    preserved, transformed, subordinated, or removed.
+  jurisdiction_rule: >
+    Ultimate reason-revelation authority remains Theologico-Political; nature-law
+    distinctions remain Nomos vs. Physis; poetic form remains Philosophy vs. Poetry;
+    practical implementation remains Theory vs. Practice.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-STUDY-001
+      witness: Leo Strauss
+      source: Studies in Platonic Political Philosophy
+      path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+      local_synthesis: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
+      completion: COMPLETE_FOR_REGISTERED_COLLECTION
+      certification: NOT_CERTIFIED
+  pending:
+    - complete Strauss source-specific reconstruction beyond SPPP-STUDY-001
+    - independent Biblical reconstruction
+    - independent Plato reconstruction
+    - independent Aristotle reconstruction
+    - comparative Socrates reconstruction
+    - independent Maimonides reconstruction
+    - independent Machiavelli reconstruction
+    - independent Nietzsche reconstruction
+    - independent Cohen reconstruction
+    - multi-source Jewish historical reconstruction
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This registry is a subordinate successor record. It does not certify or activate
+    Athens vs. Jerusalem, merge the orientations, convert pending studies into evidence,
+    or authorize deletion, cultural reduction, or retrospective revision.
+  prohibitions:
+    - no silent deletion of a witness or source
+    - no Greek or Biblical witness reconstructed only through Strauss
+    - no historical event treated as self-interpreting
+    - no shared vocabulary treated as reconciliation
+    - no political restoration treated as redemption
+    - no secondary framing governing primary meaning
+    - no certification from registry validity alone
+
+termination:
+  registry_state: FOUNDING_WITNESS_REGISTRY_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - Greek and Biblical witness lines remain independent
+    - major mediators and critics are source-bounded
+    - historical manifestation is not self-interpreting
+    - completed and pending studies are distinguished
+    - proposed reconciliations remain testable rather than presumed
+  current_limit: >
+    Structural witness registration is complete for founding production. Independent
+    Greek, Biblical, medieval, modern, and historical reconstruction remains pending.
