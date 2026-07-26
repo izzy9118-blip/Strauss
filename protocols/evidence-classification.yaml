@@ -1,0 +1,75 @@
+schema_version: 1.0
+document_type: shared_interpretive_protocol
+
+identity:
+  canonical_key: evidence-classification
+  title: Evidence Classification Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+
+purpose: >
+  Distinguish what a source directly establishes from what interpretation
+  responsibly infers, proposes, disputes, or leaves unresolved.
+
+governing_rule: >
+  Every substantive finding must identify the evidentiary class supporting it.
+
+classes:
+  DOCUMENTED:
+    definition: Explicitly stated or directly enacted by the source.
+  SUPPORTED_INFERENCE:
+    definition: >
+      Not explicitly stated but strongly supported by wording, structure,
+      comparison, dramatic action, omission, or consequence.
+  WORKING_HYPOTHESIS:
+    definition: Plausible interpretation requiring additional evidence.
+  COMPETING_INTERPRETATION:
+    definition: A serious alternative not yet eliminated by the evidence.
+  CONTRADICTION:
+    definition: >
+      An apparent conflict requiring examination rather than immediate
+      harmonization.
+  UNRESOLVED:
+    definition: >
+      The available evidence does not establish a responsible conclusion.
+
+required_fields:
+  - classification
+  - statement
+  - supporting_evidence
+  - source_location
+  - confidence
+  - alternatives_considered
+
+confidence_values:
+  - HIGH
+  - MODERATE
+  - LOW
+  - NOT_APPLICABLE
+
+prohibited:
+  - presenting inference as explicit statement
+  - presenting hypothesis as established doctrine
+  - removing contradictions through silent harmonization
+  - using confidence language without identifying evidence
+  - collapsing competing interpretations into one preferred account
+
+valid_outputs:
+  - documented_finding
+  - supported_inference
+  - working_hypothesis
+  - competing_interpretation
+  - contradiction_recorded
+  - unresolved_finding
+
+invoked_by:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
