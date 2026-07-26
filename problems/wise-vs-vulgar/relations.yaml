@@ -1,0 +1,90 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: wise-vs-vulgar
+  title: The Wise vs. The Vulgar — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/wise-vs-vulgar/problem.yaml
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  accepted_source_reference: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+  governing_rule: >
+    Relations preserve local relevance without reproducing neighboring doctrine.
+
+relations:
+  - relation_id: WVG-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: INTERSECTS
+    local_proposition: >
+      Claimants to knowledge of nature and right remain subject to recognition and noncertification.
+    boundary: >
+      The status of nature and law remains governed by Nomos vs. Physis.
+  - relation_id: WVG-REL-002
+    related_problem: philosophy-vs-poetry
+    relation_type: RECEIVES_FINDING_FROM
+    local_proposition: >
+      Poet, philosopher, rhetorician, and comic poet are rival claimants to wisdom and education.
+    boundary: >
+      Poetic knowledge, imitation, drama, and education remain governed by Philosophy vs. Poetry.
+  - relation_id: WVG-REL-003
+    related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+    local_proposition: >
+      Theoretical superiority, practical competence, technical expertise, and lawful authority must remain distinct.
+    boundary: >
+      The general mediation from knowledge to action remains governed by Theory vs. Practice.
+  - relation_id: WVG-REL-004
+    related_problem: theologico-political
+    relation_type: INTERSECTS
+    local_proposition: >
+      Prophet, philosopher, theologian, sovereign, jurist, and interpreter are rival claimants to ultimate authority.
+    boundary: >
+      Revelation, divine command, sacred law, and sovereignty remain governed by the Theologico-Political Problem.
+  - relation_id: WVG-REL-005
+    related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    local_proposition: >
+      Philosopher and prophet represent rival exemplary human types and ways of life.
+    boundary: >
+      The comprehensive alternative remains governed by Athens vs. Jerusalem.
+  - relation_id: WVG-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    local_proposition: >
+      Professional philosophy, technical expertise, historical vanguardism, and future philosopher-commanders transform recognition claims.
+    boundary: >
+      Historical transformation and modern projects remain governed by Ancients vs. Moderns.
+
+unresolved_overlaps:
+  - overlap_id: WVG-OV-001
+    problems: [wise-vs-vulgar, theory-vs-practice]
+    issue: >
+      Superior understanding, practical competence, and legitimate political authority may coincide but cannot be presumed identical.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: WVG-OV-002
+    problems: [wise-vs-vulgar, theologico-political]
+    issue: >
+      The community must recognize claimed prophecy without possessing an infallible external test of divine authority.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: WVG-OV-003
+    problems: [wise-vs-vulgar, philosophy-vs-poetry]
+    issue: >
+      Knowledge of souls may establish poetic or rhetorical superiority in a domain without establishing knowledge of the highest end.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: WVG-OV-004
+    problems: [wise-vs-vulgar, ancients-vs-moderns]
+    issue: >
+      Modern expertise and historical knowledge may represent genuine competence while becoming false certificates of wisdom.
+    status: PRESERVE_UNRESOLVED
+
+non_absorption_rule: >
+  Cross-reference poetry, practice, revelation, comprehensive alternatives, natural
+  standards, and historical transformation without reproducing their complete doctrine.
