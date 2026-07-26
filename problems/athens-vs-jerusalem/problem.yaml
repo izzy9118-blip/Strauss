@@ -1,0 +1,104 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: athens-vs-jerusalem
+  canonical_order: 5
+  title: Athens vs. Jerusalem
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+
+source_basis:
+  study_id: SPPP-STUDY-001
+  study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+governing_question: >
+  Can the comprehensive orientations beginning from wonder, nature, and autonomous
+  understanding and from fear of the Lord, creation, command, and obedient love be
+  reconciled without transforming one into the other?
+
+compressed_question: >
+  Can Athens and Jerusalem be reconciled without ceasing to be themselves?
+
+jurisdiction:
+  owns:
+    - autonomous understanding and obedient love as comprehensive ways of life
+    - wonder and fear of the Lord as rival beginnings
+    - nature and creation as rival accounts of the whole
+    - philosopher and prophet as rival highest human types
+    - the best regime and the Messianic age
+    - the historical intertwining and highest incompatibility of Athens and Jerusalem
+  does_not_own:
+    - nomos-vs-physis
+    - philosophy-vs-poetry
+    - theory-vs-practice
+    - theologico-political
+    - wise-vs-vulgar
+    - ancients-vs-moderns
+
+permanent_tension: >
+  Both orientations claim wisdom in the highest sense. Athens cannot surrender
+  autonomous examination without ceasing to be philosophic, while Jerusalem cannot
+  surrender creation, command, and obedient love without ceasing to be revelatory.
+
+boundary:
+  activates_when:
+    - wonder and fear are treated as comprehensive beginnings
+    - nature and creation are compared as accounts of the whole
+    - philosopher and prophet make rival claims to authority
+    - divine Law and natural excellence are treated as interchangeable
+    - the best regime is identified with redemption or the Messianic age
+  does_not_activate_by_itself:
+    - every contrast between Greek and Jewish sources
+    - every dispute about religion
+    - every use of Athens or Jerusalem as a metaphor
+
+relations:
+  - related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+  - related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+  - related_problem: theologico-political
+    relation_type: DEPENDS_ON
+  - related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+  - related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+
+shared_protocols:
+  required:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+    - audience-and-rhetoric
+
+anti_capture_principle: >
+  Neither Athens nor Jerusalem may be reduced to a cultural style, geographical
+  identity, political program, or already reconciled synthesis.
+
+non_absorption_clause: >
+  This problem owns the two comprehensive ways of life and must not absorb the full
+  jurisdiction of revelation, poetic form, natural right, political practice, rank, or modernity.
+
+termination:
+  state: FOUNDING_SUCCESSOR_DRAFT_CREATED
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - inquiry-profile.yaml
+    - witnesses.yaml
+    - relations.yaml
+    - independent Greek and Biblical witness reconstruction
+    - migration validation
