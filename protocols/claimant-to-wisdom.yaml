@@ -1,0 +1,86 @@
+schema_version: 1.0
+document_type: shared_interpretive_protocol
+
+identity:
+  canonical_key: claimant-to-wisdom
+  title: Claimant to Wisdom Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+
+depends_on:
+  - source-status
+  - evidence-classification
+  - inference-discipline
+  - speech-and-deed
+  - uncertainty-preservation
+
+purpose: >
+  Test claims to superior understanding without permitting self-certification.
+
+governing_rule: >
+  No person, author, profession, class, institution, movement, political
+  regime, religious authority, poet, interpreter, or repository office may be
+  certified as wise merely through title, status, assertion, reputation,
+  persecution, secrecy, influence, or access to unusual material.
+
+mandatory_tests:
+  demonstrated_knowledge:
+    question: What does the claimant actually demonstrate?
+  scope:
+    question: >
+      Is limited knowledge being extended into authority over the whole?
+  ignorance:
+    question: Does the claimant recognize what remains unknown?
+  contradiction:
+    question: >
+      Can the claimant account for contradiction without immunizing the claim
+      from examination?
+  motive:
+    question: >
+      What relation does the claim have to truth, money, power, prestige,
+      resentment, obedience, institutional protection, or the audience's good?
+  speech_and_deed:
+    question: >
+      Does conduct support, qualify, or contradict the professed rank?
+  rival_claimant:
+    question: Has the strongest competing claimant been reconstructed?
+  correction:
+    question: >
+      Can the claimant be corrected, or does disagreement automatically prove
+      the opponent's inferiority?
+
+prohibited_certificates:
+  - professional_office
+  - academic_credential
+  - social_class
+  - political_power
+  - prophetic_office
+  - religious_intensity
+  - poetic_influence
+  - intellectual_originality
+  - historical_advancement
+  - persecution
+  - secrecy
+  - interpretive_subtlety
+  - agreement_with_strauss
+  - repository_office
+
+valid_outputs:
+  - DEMONSTRATED_LIMITED_UNDERSTANDING
+  - UNSUPPORTED_SUPERIORITY_CLAIM
+  - COUNTERFEIT_SELF_CERTIFICATION
+  - SERIOUS_CLAIMANT_UNRESOLVED
+  - SCOPE_EXCEEDED
+  - WISDOM_NOT_ESTABLISHED
+
+invoked_by:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
