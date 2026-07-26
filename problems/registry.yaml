@@ -1,0 +1,142 @@
+schema_version: 1.0
+registry_type: foundational_problem_registry
+
+identity:
+  canonical_key: foundational-problem-registry
+  title: Foundational Problem Registry
+  version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  purpose: >
+    Establish the canonical identities, official order, jurisdictional
+    boundaries, repository locations, and migration status of the seven
+    foundational problems.
+  governed_by:
+    path: governance/foundational-problem-architecture.yaml
+    canonical_key: foundational-problem-architecture
+  governing_rule: >
+    The seven foundational problems remain distinct but connected. A problem
+    may reference another problem's findings without reproducing its full
+    doctrine or absorbing its jurisdiction. Interpretive rules of general
+    application are maintained as shared protocols.
+
+identity_rule:
+  canonical_identity: canonical_key
+  ordering_field: canonical_order
+  title_field: title
+  rule: >
+    Canonical identity and canonical order are separate. Reordering, inserting,
+    renaming, or relocating a problem does not alter its stable canonical key
+    or retrospectively alter historical identifiers.
+  legacy_identifier_rule: >
+    Earlier identifiers remain historical aliases and provenance references.
+    They do not determine current canonical order.
+
+canonical_problems:
+  - canonical_key: nomos-vs-physis
+    canonical_order: 1
+    title: Nomos vs. Physis
+    successor_path: problems/nomos-vs-physis/problem.yaml
+    jurisdiction: >
+      The distinction and conflict between what is by nature and what exists
+      through law, convention, custom, inheritance, artifice, or authoritative
+      opinion.
+    migration_status: MIGRATION_PENDING
+
+  - canonical_key: philosophy-vs-poetry
+    canonical_order: 2
+    title: Philosophy vs. Poetry
+    alternate_titles:
+      - The Ancient Quarrel Between Philosophy and Poetry
+    successor_path: problems/philosophy-vs-poetry/problem.yaml
+    jurisdiction: >
+      The ancient quarrel between philosophy and poetry as rival claimants to
+      wisdom, education, knowledge of souls, knowledge of the gods, political
+      authority, and guidance concerning the human good.
+    migration_status: FOUNDING_DRAFT_CREATED
+
+  - canonical_key: theory-vs-practice
+    canonical_order: 3
+    title: Theory vs. Practice
+    successor_path: problems/theory-vs-practice/problem.yaml
+    jurisdiction: >
+      The relation between understanding and action, contemplation and
+      political responsibility, theoretical standards and practical judgment,
+      and philosophic knowledge and statesmanship.
+    migration_status: MIGRATION_PENDING
+
+  - canonical_key: theologico-political
+    canonical_order: 4
+    title: The Theologico-Political Problem
+    predecessor_records:
+      - path: problems/theologico-political.yaml
+        status: ACTIVE_PREDECESSOR
+    successor_path: problems/theologico-political/problem.yaml
+    jurisdiction: >
+      The conflict concerning ultimate authority among autonomous reason,
+      revelation, divine law, prophecy, theology, and political sovereignty.
+    migration_status: RECONSTRUCTION_PENDING
+
+  - canonical_key: athens-vs-jerusalem
+    canonical_order: 5
+    title: Athens vs. Jerusalem
+    successor_path: problems/athens-vs-jerusalem/problem.yaml
+    jurisdiction: >
+      The confrontation between autonomous understanding and obedient love as
+      comprehensive orientations toward the highest human life.
+    migration_status: MIGRATION_PENDING
+
+  - canonical_key: wise-vs-vulgar
+    canonical_order: 6
+    title: The Wise vs. The Vulgar
+    alternate_titles:
+      - The Wise and the Vulgar
+      - The Few and the Many
+    legacy_identifiers:
+      - STR-PROBLEM-003
+    predecessor_records:
+      - path: problems/wise-and-vulgar.yaml
+        version: 0.1-discussion
+        status: ACTIVE_PREDECESSOR
+      - identifier: WVG-RECONSTRUCTION-0.2
+        version: 0.2-reconstruction-draft
+        status: ACCEPTED_MIGRATION_SOURCE
+    successor_path: problems/wise-vs-vulgar/problem.yaml
+    jurisdiction: >
+      The recognition of wisdom, the distinction among genuine and counterfeit
+      claimants to superior understanding, human heterogeneity, differentiated
+      education, audience, mediation, and the political responsibility of
+      philosophy.
+    migration_status: REDISTRIBUTION_PLANNED
+
+  - canonical_key: ancients-vs-moderns
+    canonical_order: 7
+    title: Ancients vs. Moderns
+    successor_path: problems/ancients-vs-moderns/problem.yaml
+    jurisdiction: >
+      The modern transformation of nature, history, progress, science,
+      equality, political philosophy, revelation, education, and the relation
+      between knowledge and power.
+    migration_status: MIGRATION_PENDING
+
+official_order_rule: >
+  The order recorded here is authoritative for presentation, inquiry
+  orientation, and repository navigation. It does not imply that every inquiry
+  must activate the problems sequentially, that later problems are subordinate
+  to earlier ones, or that their permanent tensions can be reduced to a single
+  linear argument.
+
+reference_rule: >
+  Cross-problem references must use canonical_key. Repository paths may also be
+  recorded for resolution, but paths do not constitute identity.
+
+activation_rule: >
+  A successor problem becomes active only after its predecessor is preserved,
+  displaced material is classified, references validate, and the migration is
+  certified. Until then, predecessor and founding-draft statuses remain
+  explicit.
