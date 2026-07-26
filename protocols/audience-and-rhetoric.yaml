@@ -1,0 +1,92 @@
+schema_version: 1.0
+document_type: shared_interpretive_protocol
+
+identity:
+  canonical_key: audience-and-rhetoric
+  title: Audience and Rhetoric Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+
+depends_on:
+  - speech-and-deed
+  - evidence-classification
+  - inference-discipline
+  - uncertainty-preservation
+
+purpose: >
+  Govern examination of audience, motive, capacity, differentiated speech,
+  rhetoric, pedagogy, concealment, and consequence.
+
+governing_rule: >
+  Communication must be examined in relation to the audience's capacity,
+  motive, character, political circumstances, and likely use of the teaching.
+
+audience_dimensions:
+  - intellectual_capacity
+  - moral_character
+  - motive_for_inquiry
+  - desire
+  - ambition
+  - spiritedness
+  - erotic_orientation
+  - political_office
+  - religious_commitment
+  - scholarly_preparation
+  - vulnerability_to_corruption
+  - capacity_for_transformation
+
+communication_forms:
+  - demonstration
+  - dialectic
+  - persuasion
+  - protreptic
+  - myth
+  - narrative
+  - poetry
+  - comedy
+  - irony
+  - omission
+  - silence
+  - concealment
+  - public_defense
+  - private_conversation
+
+required_questions:
+  - What can this audience understand?
+  - What does this audience desire?
+  - What will the teaching do to this audience?
+  - Is liberation accompanied by transformation of desire?
+  - >
+    Does the speaker seek education, protection, persuasion, provocation, or
+    manipulation?
+  - Is differentiated speech justified by evidence?
+  - What foreseeable consequences follow?
+
+governing_limits:
+  - differentiated speech is not unrestricted deception
+  - openness is not automatically responsible
+  - concealment is not automatically prudent
+  - neutral exposure is not necessarily neutral education
+  - capacity to understand is not identical with moral fitness
+  - political usefulness does not establish truth
+
+valid_outputs:
+  - AUDIENCE_APPROPRIATE_INSTRUCTION
+  - AUDIENCE_MISMATCH
+  - PEDAGOGICAL_RESTRAINT
+  - RESPONSIBLE_DIFFERENTIATION
+  - MANIPULATIVE_RHETORIC
+  - CORRUPTING_LIBERATION
+  - AUDIENCE_EFFECT_UNRESOLVED
+
+invoked_by:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
