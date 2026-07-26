@@ -1,0 +1,69 @@
+schema_version: 1.0
+document_type: shared_interpretive_protocol
+
+identity:
+  canonical_key: irony
+  title: Irony Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+
+depends_on:
+  - speech-and-deed
+  - inference-discipline
+  - uncertainty-preservation
+
+purpose: >
+  Govern supported interpretation of disparities between explicit formulation
+  and the complete textual or dramatic deed.
+
+governing_rule: >
+  Irony is a supported disparity between explicit formulation and textual or
+  dramatic deed. It must not be treated as automatic reversal.
+
+possible_functions:
+  - qualification
+  - limitation
+  - protection
+  - provocation
+  - audience_differentiation
+  - exposure_of_contradiction
+  - pedagogical_testing
+  - concealment
+  - comic_deflation
+  - simultaneous_literal_and_nonliteral_meaning
+
+required_evidence:
+  - speaker_and_audience
+  - occasion
+  - dramatic_action
+  - contradiction_or_disproportion
+  - omission
+  - structural_position
+  - consequence
+  - comparison_with_related_passages
+
+valid_outputs:
+  - DOCUMENTED_IRONIC_TENSION
+  - SUPPORTED_IRONIC_QUALIFICATION
+  - POSSIBLE_IRONIC_DIMENSION
+  - IRONY_NOT_ESTABLISHED
+
+prohibited_inferences:
+  - explicit statement therefore false
+  - opposite statement therefore true
+  - modesty therefore concealed greatness
+  - obscurity therefore esoteric doctrine
+  - contradiction therefore irony without further evidence
+  - irony therefore unrestricted hidden teaching
+
+invoked_by:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
