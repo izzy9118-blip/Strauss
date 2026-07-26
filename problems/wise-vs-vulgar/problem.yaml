@@ -13,33 +13,53 @@ identity:
 
 status:
   lifecycle: FOUNDING_DRAFT
-  version: 0.1.0
+  version: 0.2.0
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: 2df128670763d8d7cbbe3717db61db6b66acb994
+  transformation: REVISED_WITHOUT_PREDECESSOR_EFFECT
+  reason: >
+    Register the completed founding inquiry profile, witness registry, relations
+    record, and first source-specific synthesis while preserving the unresolved
+    proposition-level redistribution requirement and both predecessor records.
 
 authority:
   registry_reference: problems/registry.yaml
   architecture_reference: governance/foundational-problem-architecture.yaml
   migration_reference: migrations/foundational-problems-v2/migration.yaml
   predecessor_index_reference: migrations/foundational-problems-v2/predecessor-index.yaml
+  inquiry_profile_reference: problems/wise-vs-vulgar/inquiry-profile.yaml
+  witnesses_reference: problems/wise-vs-vulgar/witnesses.yaml
+  relations_reference: problems/wise-vs-vulgar/relations.yaml
 
 predecessor_provenance:
   active_predecessor:
     path: problems/wise-and-vulgar.yaml
     version: 0.1-discussion
     blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+    status: ACTIVE_PREDECESSOR
   accepted_migration_source:
     identifier: WVG-RECONSTRUCTION-0.2
     preserved_path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
     status: ACCEPTED_FOR_REDISTRIBUTION_NOT_YET_CANONICAL
   governing_rule: >
-    Neither predecessor is replaced or retrospectively rewritten by this inactive successor draft.
+    Neither predecessor is replaced or retrospectively rewritten. Every accepted
+    proposition must receive a controlled disposition before successor activation.
 
 source_basis:
   study_id: SPPP-STUDY-001
   study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
   source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  problem_synthesis: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
   constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+  source_limit: >
+    The completed collection study and accepted predecessor are provisional sources
+    and do not replace independent reconstruction of claimants, texts, institutions,
+    audiences, or historical deeds.
 
 governing_question: >
   How can superior understanding guide political society when wisdom cannot certify
@@ -58,33 +78,60 @@ jurisdiction:
     - differentiated education and partial enlightenment
     - audience and mediation where recognition is central
     - elite self-certification and capture
-    - the limits of identifying wisdom
+    - provisional and domain-limited judgments of rank
+    - political responsibility of superior claimants
+    - repository and artificial-intelligence non-certification
   does_not_own:
-    - nomos-vs-physis
-    - philosophy-vs-poetry
-    - theory-vs-practice
-    - theologico-political
-    - athens-vs-jerusalem
-    - ancients-vs-moderns
+    - canonical_key: nomos-vs-physis
+      reason: >
+        Nomos vs. Physis owns the content and epistemic burden of natural standards.
+    - canonical_key: philosophy-vs-poetry
+      reason: >
+        Philosophy vs. Poetry owns the substantive rivalry among poetic and philosophic forms of wisdom.
+    - canonical_key: theory-vs-practice
+      reason: >
+        Theory vs. Practice owns the movement from understanding to action, counsel,
+        rule, execution, institutions, correction, and chance.
+    - canonical_key: theologico-political
+      reason: >
+        The Theologico-Political Problem owns revelation, prophecy, divine command,
+        sacred law, interpretation, and ultimate authority.
+    - canonical_key: athens-vs-jerusalem
+      reason: >
+        Athens vs. Jerusalem owns the comprehensive philosophic and Biblical ways of life.
+    - canonical_key: ancients-vs-moderns
+      reason: >
+        Ancients vs. Moderns owns the historical transformation of elites, expertise,
+        ideology, science, bureaucracy, historicism, and technology.
 
 permanent_tension: >
   Political society requires judgment beyond ordinary opinion, but no title, office,
-  profession, success, suffering, secrecy, scholarship, election, or self-description
-  can certify the possessor of wisdom.
+  profession, success, suffering, secrecy, scholarship, election, obscurity,
+  influence, institutional selection, repository access, or self-description can
+  certify the possessor of wisdom. Final certification may be impossible while
+  evidence still permits provisional, domain-limited, comparative, and revisable judgments.
 
 boundary:
   activates_when:
-    - a person or class claims superior knowledge or authority
-    - the city must distinguish philosophy from sophistry or expertise from imposture
-    - education is differentiated by capacity or audience
-    - secrecy, persecution, office, success, or prestige is treated as proof of wisdom
-    - superior judgment seeks political guidance or institutional mediation
+    - a person, class, profession, institution, text, or movement claims superior knowledge or authority
+    - the city must distinguish philosophy from sophistry, prophecy from fraud, or expertise from imposture
+    - education is differentiated by capacity, audience, risk, or political necessity
+    - secrecy, persecution, office, success, suffering, election, or prestige is treated as proof of wisdom
+    - superior judgment seeks direct rule, counsel, institutional service, criticism, or guarded influence
+    - ordinary opinion is treated as complete wisdom or moral worthlessness
+    - an elite controls interpretation, credentials, admission, evidence, or correction
+    - a repository or artificial intelligence system is treated as a certified wise authority
   does_not_activate_by_itself:
     - every social inequality
     - every expert judgment
-    - every disagreement between minority and majority
+    - every minority-majority disagreement
+    - every educational accommodation
+    - every secret or confidential communication
+    - every criticism of an elite
 
 relations:
+  - related_problem: nomos-vs-physis
+    relation_type: INTERSECTS
   - related_problem: philosophy-vs-poetry
     relation_type: DEPENDS_ON
   - related_problem: theory-vs-practice
@@ -105,23 +152,35 @@ shared_protocols:
     - speech-and-deed
     - claimant-to-wisdom
     - audience-and-rhetoric
+  conditional:
+    - irony
+    - comedy
 
 anti_capture_principle: >
-  No claimant may certify wisdom through title, office, success, suffering, secrecy,
-  scholarship, election, obscurity, influence, or possession of the repository itself.
+  No claimant, class, profession, institution, state, repository, protocol, or
+  artificial intelligence system may certify wisdom through title, office, success,
+  suffering, secrecy, scholarship, election, obscurity, influence, credentials,
+  possession of evidence, or control of interpretation.
 
 non_absorption_clause: >
-  This problem owns rank, recognition, heterogeneity, and differentiated education.
-  It must not absorb the full doctrines of poetry, revelation, practical judgment,
-  Athens and Jerusalem, or modernity.
+  This problem owns rank, recognition, heterogeneity, differentiated education,
+  mediation, and capture. It must not absorb the full doctrines of nature, poetry,
+  practical judgment, revelation, comprehensive ways of life, or modernity. Shared
+  sources and findings are referenced through subordinate records.
 
 termination:
-  state: FOUNDING_SUCCESSOR_DRAFT_CREATED
+  state: FOUNDING_SUBORDINATE_STRUCTURE_COMPLETE_REDISTRIBUTION_PENDING_NOT_CERTIFIED
   certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+  completed_records:
+    - problems/wise-vs-vulgar/problem.yaml
+    - problems/wise-vs-vulgar/inquiry-profile.yaml
+    - problems/wise-vs-vulgar/witnesses.yaml
+    - problems/wise-vs-vulgar/relations.yaml
+    - problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
   remaining_requirements:
     - proposition-level redistribution of accepted predecessor material
-    - inquiry-profile.yaml
-    - witnesses.yaml
-    - relations.yaml
     - independent source reconstruction
-    - migration validation
+    - automated YAML and path validation
+    - review of unresolved cross-problem jurisdiction
+    - migration certification before activation
