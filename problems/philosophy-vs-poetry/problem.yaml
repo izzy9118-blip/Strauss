@@ -1,0 +1,255 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: philosophy-vs-poetry
+  canonical_order: 2
+  title: Philosophy vs. Poetry
+  alternate_titles:
+    - The Ancient Quarrel Between Philosophy and Poetry
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  source_status: >
+    This is a founding constitutional object created during the
+    foundational-problem restructuring. It is not a synthesis of the entire
+    philosophy-poetry corpus and does not replace source-specific study records.
+
+documentary_basis:
+  primary_strauss_sources:
+    - title: Socrates and Aristophanes
+      role: >
+        Governs the confrontation between philosophy and comedy and the
+        transformation from the early Aristophanic Socrates to mature Socratic
+        political philosophy.
+    - title: Studies in Platonic Political Philosophy
+      role: >
+        Supports the placement of the quarrel between philosophy and poetry
+        near the foundation of Platonic political philosophy and presents the
+        Socratic turn as a response to the poetic accusation.
+      documentary_qualification: >
+        Posthumous collection arranged and titled by Strauss, published
+        without the projected authorial introduction and projected essay on
+        Plato's Gorgias.
+    - title: The Rebirth of Classical Political Rationalism
+      role: >
+        Supplies the recovered sequence in which poetry, rhetoric, comedy,
+        eros, and knowledge of souls correct a politically defective form of
+        philosophy.
+  classical_witnesses:
+    - Plato
+    - Xenophon
+    - Aristophanes
+  documentary_rule: >
+    Full witness interpretation belongs in witnesses.yaml and source-specific
+    study records. This constitution records only the permanent problem.
+
+origin: >
+  Philosophy emerges by distinguishing nature from authoritative poetic,
+  ancestral, and civic accounts of the gods, justice, nobility, and the whole.
+  Poetry answers by exposing philosophy's possible ignorance of the human soul,
+  eros, music, audience, family, law, and political dependence. The mature
+  Socratic form of political philosophy must therefore be examined partly as a
+  response to the poetic accusation rather than as an already complete wisdom
+  confronting an ignorant city.
+
+governing_question: >
+  Which form of understanding can responsibly guide human beings and political
+  communities when philosophy and poetry make rival claims concerning the gods,
+  justice, nobility, eros, the soul, education, and the highest human life?
+
+compressed_question: >
+  What does philosophy know that poetry does not, and what does poetry know
+  that philosophy may fail to understand?
+
+jurisdiction:
+  owns:
+    - the ancient quarrel between philosophy and poetry
+    - philosophy's challenge to poetic and ancestral authority
+    - poetry as a claimant to wisdom and political education
+    - Aristophanes' accusation against Socrates
+    - philosophy's possible ignorance of souls, eros, music, and audience
+    - comedy and tragedy as forms of human disclosure
+    - poetic imitation, image, myth, character, and dramatic action
+    - Plato's use of poetic and dramatic form
+    - rhetoric and psychagogy where poetic guidance of souls is central
+    - autonomous poetry and poetry ordered toward philosophy
+    - the poetic contribution to the Socratic turn
+    - the difference between knowledge of souls and knowledge of the human end
+  does_not_own:
+    - canonical_key: nomos-vs-physis
+      reason: >
+        Nomos vs. Physis governs the distinction between nature and convention
+        that makes philosophy's challenge to poetic authority possible.
+    - canonical_key: theory-vs-practice
+      reason: >
+        Theory vs. Practice governs the general movement from understanding to
+        political action, legislation, prudence, and indirect guidance.
+    - canonical_key: theologico-political
+      reason: >
+        The Theologico-Political Problem governs the conflict among reason,
+        revelation, divine law, prophecy, theology, and political sovereignty.
+    - canonical_key: athens-vs-jerusalem
+      reason: >
+        Athens vs. Jerusalem governs autonomous understanding and obedient love
+        as comprehensive rival ways of life.
+    - canonical_key: wise-vs-vulgar
+      reason: >
+        The Wise vs. The Vulgar governs rank, recognition, human heterogeneity,
+        differentiated education, and the danger of self-certifying superiority.
+    - canonical_key: ancients-vs-moderns
+      reason: >
+        Ancients vs. Moderns governs the modern transformation of poetry into
+        aesthetics, culture, ideology, self-expression, or horizon creation.
+
+permanent_tension:
+  philosophy:
+    claim: >
+      Philosophy seeks reasoned knowledge of beings, justice, the good, and the
+      whole and subjects poetic, ancestral, and civic authority to examination.
+    danger: >
+      Philosophy may understand nature while failing to understand human souls,
+      motives, eros, audience, political dependence, or the consequences of
+      liberation from authoritative opinion.
+  poetry:
+    claim: >
+      Poetry discloses human types, passions, suffering, nobility, shame, eros,
+      imagination, hope, fear, comedy, tragedy, and the political formation of
+      souls.
+    danger: >
+      Poetic power may create or preserve authoritative horizons without
+      possessing knowledge of the final end toward which souls should be guided.
+  socratic_correction: >
+    Mature political philosophy arises when philosophy accepts the need to
+    understand human and political things, differentiated audiences, rhetoric,
+    and poetic knowledge without surrendering the question of truth and the
+    good to poetic authority.
+  unresolved_relation: >
+    Philosophy may claim knowledge of the highest end while depending upon
+    poetic capacities to disclose and move the soul. Poetry may know the soul
+    deeply while lacking knowledge of the highest end. Neither claim may be
+    dismissed in advance.
+
+boundary:
+  activates_when:
+    - philosophy and poetry make rival claims to wisdom
+    - poetic authority governs accounts of gods, justice, virtue, or nobility
+    - a philosopher is accused of ignorance of souls, eros, music, or audience
+    - comedy or tragedy discloses a limitation ignored by explicit doctrine
+    - myth, image, character, or dramatic action bears substantive argument
+    - poetic or rhetorical education forms political opinion
+    - Plato's dramatic deed qualifies an explicit statement about poetry
+    - poetry is treated as autonomous from inquiry into the good
+    - poetry is reduced to propaganda or decorative communication
+  does_not_activate_by_itself:
+    - any use of figurative language
+    - ordinary rhetorical effectiveness
+    - every question of audience differentiation
+    - every conflict between philosophy and religion
+    - every disagreement between theory and political action
+    - literary style without a substantive claim to knowledge or guidance
+
+relations:
+  - related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+    summary: >
+      Philosophy's challenge to poetry begins through the discovery of nature
+      as a standard distinct from inherited poetic authority.
+  - related_problem: theory-vs-practice
+    relation_type: SUPPLIES_PROBLEM_TO
+    summary: >
+      Poetry challenges philosophy to account for prudence, communication,
+      education, embodiment, and political consequence.
+  - related_problem: theologico-political
+    relation_type: HISTORICALLY_PRECEDES
+    summary: >
+      The conflict between philosophy and divinely inspired poetry anticipates
+      but does not exhaust the conflict between reason and revelation.
+  - related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+    summary: >
+      Poetic and prophetic authority intersect, while Biblical revelation must
+      not be reduced to Greek poetry.
+  - related_problem: wise-vs-vulgar
+    relation_type: SUPPLIES_CLAIMANT_TO
+    summary: >
+      Poet, comic poet, and rhetorician enter the recognition problem as rival
+      claimants to wisdom and guidance.
+  - related_problem: ancients-vs-moderns
+    relation_type: TRANSFORMED_BY
+    summary: >
+      Modernity may transform poetry into aesthetics, culture, ideology,
+      self-expression, or deliberate horizon creation.
+
+shared_protocols:
+  required:
+    - canonical_key: source-status
+    - canonical_key: evidence-classification
+    - canonical_key: inference-discipline
+    - canonical_key: uncertainty-preservation
+    - canonical_key: speech-and-deed
+    - canonical_key: irony
+    - canonical_key: comedy
+    - canonical_key: audience-and-rhetoric
+  conditional:
+    - canonical_key: claimant-to-wisdom
+      activation: >
+        Activate when poet, philosopher, rhetorician, legislator, or interpreter
+        claims superior knowledge or authority.
+
+anti_capture_principle: >
+  Neither philosophy nor poetry may certify its own superiority merely through
+  title, antiquity, inspiration, beauty, influence, obscurity, persecution,
+  ridicule, dramatic power, or claimed access to hidden truth. Each claim must
+  be tested through evidence, argument, speech, deed, audience, consequence,
+  knowledge of ignorance, and relation to the human good.
+
+non_absorption_clause: >
+  Philosophy vs. Poetry must not become a general container for every question
+  involving rhetoric, myth, drama, irony, comedy, or audience. It owns poetry
+  as a rival form of wisdom, education, and guidance. General interpretive
+  methods remain governed by shared protocols.
+
+anti_reduction_rules:
+  - poetry must not be reduced to propaganda for rulers or philosophers
+  - comedy must not be reduced to entertainment or dismissal
+  - poetic knowledge of souls must not be treated as knowledge of the highest end without argument
+  - philosophy must not be assumed complete before its confrontation with poetry
+  - Plato's explicit criticism of poetry must be compared with Plato's poetic and dramatic deed
+  - Aristophanes must not be dismissed as a vulgar spokesman for the city
+  - rhetoric must not be identified automatically with manipulation
+  - the Socratic turn must not be reduced to public-relations strategy
+  - Biblical revelation must not be collapsed into Greek poetic inspiration
+
+termination:
+  completion_standard: >
+    Examination is complete when the inquiry has reconstructed the strongest
+    philosophic and poetic claims, identified what each discloses and neglects,
+    examined speaker, audience, dramatic action, image, myth, irony, comedy,
+    and consequence, distinguished knowledge of souls from knowledge of the
+    human end, and preserved any unresolved superiority claim not settled by
+    the evidence.
+  valid_states:
+    - documented_philosophic_claim
+    - documented_poetic_claim
+    - supported_poetic_correction
+    - supported_philosophic_critique
+    - responsible_mediation
+    - rivalry_unresolved
+    - opacity_preserved
+  prohibited_states:
+    - poetry reduced to propaganda
+    - philosophy certified as complete without confronting the poetic accusation
+    - ridicule treated as refutation
+    - beauty or influence treated as truth
+    - poetic insight treated as final wisdom without argument
+    - Plato's dramatic practice ignored
+    - Aristophanes dismissed without reconstruction
+    - revelation reduced to poetry
