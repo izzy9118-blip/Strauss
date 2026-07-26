@@ -1,0 +1,124 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: ancients-vs-moderns
+  title: Ancients vs. Moderns — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/ancients-vs-moderns/problem.yaml
+  inquiry_profile_reference: problems/ancients-vs-moderns/inquiry-profile.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry records witness roles and source limits without treating chronology,
+    novelty, technical power, or historical victory as proof of rank.
+
+witnesses:
+  - witness_id: AVM-WIT-001
+    name: Leo Strauss
+    witness_class: MODERN_INTERPRETIVE_PRIMARY_WITNESS
+    local_role: >
+      Primary witness for reconstructing the ancient-modern quarrel, Machiavellian
+      lowering, Hobbesian regularization, historicism, Nietzsche, and modern rational religion.
+    registered_sources:
+      - title: Studies in Platonic Political Philosophy
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+        synthesis_record: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_status: SEQUENTIAL_AND_SYNTHETIC_RECONSTRUCTION_COMPLETE_NOT_CERTIFIED
+    limit: >
+      Strauss governs claims about his reconstruction, not the final independent rank of ancient or modern witnesses.
+  - witness_id: AVM-WIT-002
+    name: Plato
+    witness_class: INDEPENDENT_ANCIENT_PHILOSOPHIC_WITNESS
+    local_role: >
+      Witness to nature, virtue, the best regime, philosopher-rule, political improbability, and the philosophic life.
+    study_status: PARTIAL_APOLOGY_RECONSTRUCTION_COMPLETE_WIDER_CORPUS_PENDING
+  - witness_id: AVM-WIT-003
+    name: Aristotle
+    witness_class: INDEPENDENT_ANCIENT_PHILOSOPHIC_WITNESS
+    local_role: >
+      Witness to nature, natural right, virtue, prudence, magnanimity, and the hierarchy of lives.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: AVM-WIT-004
+    name: Xenophon
+    witness_class: INDEPENDENT_ANCIENT_PRACTICAL_AND_PHILOSOPHIC_WITNESS
+    local_role: >
+      Witness to political phenomena later presented as Machiavellian and to their ordering within a Socratic horizon.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: AVM-WIT-005
+    name: Machiavelli
+    witness_class: FOUNDING_MODERN_WITNESS
+    local_role: >
+      Witness to effective truth, public authorization of vice and cruelty, civil theology,
+      founding, mastery of fortune, and recovery-transformation of ancient modes.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: AVM-WIT-006
+    name: Hobbes
+    witness_class: MODERN_INSTITUTIONAL_WITNESS
+    local_role: >
+      Witness to self-preservation, fear of violent death, rights, sovereignty, and reliable institutions.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: AVM-WIT-007
+    name: Locke
+    witness_class: MODERN_RIGHTS_AND_PROPERTY_WITNESS
+    local_role: >
+      Witness to preservation, property, rights, comfortable self-preservation, and liberal order.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: AVM-WIT-008
+    name: Nietzsche
+    witness_class: RADICAL_MODERN_WITNESS
+    local_role: >
+      Witness to will to power, natural history of morality, value creation, future philosophers, and eternal affirmation.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: AVM-WIT-009
+    name: Historicism
+    witness_class: MODERN_INTELLECTUAL_HORIZON
+    local_role: >
+      Witness to historical contextualization of all standards and the problem of self-application.
+    study_status: CORPUS_RECONSTRUCTION_PENDING
+  - witness_id: AVM-WIT-010
+    name: C. B. Macpherson
+    witness_class: MODERN_HISTORICAL_MATERIALIST_INTERPRETER
+    local_role: >
+      Witness to social and economic genealogy of liberal theory and the risk of replacing philosophical examination with a prior normative standard.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: AVM-WIT-011
+    name: Hermann Cohen
+    witness_class: MODERN_RATIONAL_RELIGION_WITNESS
+    local_role: >
+      Witness to Kantian autonomy, socialism, democracy, progress, and transformation of revealed Judaism into religion of reason.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+
+witness_relation_rules:
+  - Ancient and modern witnesses must be reconstructed independently before ranking.
+  - Modern claims of novelty must be classified as discovery, authorization, systematization, transformation, or narrowing.
+  - Ancient standards must be tested for practical limitations without dismissing them by outcome alone.
+  - Modern gains must be preserved without treating power or progress as wisdom.
+  - Historical explanation must not replace examination of truth claims.
+  - Strauss's interpretation does not substitute for direct study of the witnesses.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-FP-001
+      path: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+      witness: Leo Strauss
+      completion: SEQUENTIAL_AND_CROSS_PROBLEM_RECONSTRUCTION_COMPLETE
+      certification: NOT_CERTIFIED
+  pending:
+    - Plato wider corpus
+    - Aristotle
+    - Xenophon
+    - Machiavelli
+    - Hobbes
+    - Locke
+    - Nietzsche
+    - historicism corpus
+    - C. B. Macpherson
+    - Hermann Cohen
