@@ -1,0 +1,156 @@
+schema_version: 1.0
+document_type: migration_validation_record
+
+identity:
+  validation_id: FPV2-SPPP-VALIDATION-001
+  scope: SPPP-STUDY-001 repository integration
+  version: 1.0.0
+
+status:
+  lifecycle: PARTIAL_VALIDATION_COMPLETE
+  certification: NOT_CERTIFIED
+  activation_authorized: false
+  automated_yaml_parse: NOT_EXECUTED
+
+validated_commits:
+  witness_registry_philosophy_vs_poetry: 3f5397f43485d580c16b52cacb00dfa8420c62fb
+  witness_registry_theologico_political: 602816fbc5a62290830b853912dd662a13772b8d
+  predecessor_reconciliation: e0261c0ddd789f1af73fb58d5fa433d38ec861d9
+  speech_and_deed_protocol: 1ae264ea4175d89bb072f5caa601a7da6e904ee9
+  foundational_problem_registry: 2f7a2b2a393d5fd604b31b60eccb42b8da03340b
+  integration_completion: e9e175f66f44734306fd7d5e5d3af85809d15ae7
+
+checks:
+  - check_id: SPPP-VAL-001
+    check: source record paths resolve
+    status: PASS
+    evidence:
+      - studies/studies-in-platonic-political-philosophy/source-status.yaml
+      - studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+      - studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+      - studies/studies-in-platonic-political-philosophy/theologico-political-reconstruction.yaml
+      - studies/studies-in-platonic-political-philosophy/repository-integration.yaml
+
+  - check_id: SPPP-VAL-002
+    check: SPPP-STUDY-001 appears in both brother-problem witness registries
+    status: PASS
+    evidence:
+      - problems/philosophy-vs-poetry/witnesses.yaml version 0.2.0
+      - problems/theologico-political/witnesses.yaml version 0.2.0
+
+  - check_id: SPPP-VAL-003
+    check: active Theologico-Political predecessor remains preserved and unmodified
+    status: PASS
+    evidence:
+      active_path: problems/theologico-political.yaml
+      active_blob_sha: 4a35e71916212082598097985deb23699c0018e7
+      historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+      reconciliation_record: migrations/foundational-problems-v2/transactions/theologico-political-sppp-study-001.yaml
+
+  - check_id: SPPP-VAL-004
+    check: five formerly pending successor problem paths resolve
+    status: PASS
+    evidence:
+      - problems/nomos-vs-physis/problem.yaml
+      - problems/theory-vs-practice/problem.yaml
+      - problems/athens-vs-jerusalem/problem.yaml
+      - problems/wise-vs-vulgar/problem.yaml
+      - problems/ancients-vs-moderns/problem.yaml
+
+  - check_id: SPPP-VAL-005
+    check: five SPPP source-bridge syntheses resolve
+    status: PASS
+    evidence:
+      - problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
+      - problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
+      - problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
+      - problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+      - problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+
+  - check_id: SPPP-VAL-006
+    check: canonical keys and orders match the governing registry
+    status: PASS_MANUAL_REVIEW
+    evidence:
+      - nomos-vs-physis order 1
+      - philosophy-vs-poetry order 2
+      - theory-vs-practice order 3
+      - theologico-political order 4
+      - athens-vs-jerusalem order 5
+      - wise-vs-vulgar order 6
+      - ancients-vs-moderns order 7
+
+  - check_id: SPPP-VAL-007
+    check: new identifiers are unique within the integration set
+    status: PASS_MANUAL_REVIEW
+    evidence:
+      - NVP-SPPP-001
+      - TVP-SPPP-001
+      - AVJ-SPPP-001
+      - WVG-SPPP-001
+      - AVM-SPPP-001
+      - TP-SPPP-RECON-001
+      - SPPP-INTEGRATION-COMPLETE-001
+
+  - check_id: SPPP-VAL-008
+    check: speech-and-deed remains a shared protocol rather than an eighth problem
+    status: PASS
+    evidence:
+      path: protocols/speech-and-deed.yaml
+      version: 1.1.0
+      invoked_by_count: 7
+
+  - check_id: SPPP-VAL-009
+    check: jurisdiction and non-absorption safeguards remain explicit
+    status: PASS_MANUAL_REVIEW
+    evidence:
+      - poetry is not revelation
+      - civic theology is not revelation
+      - political necessity is not philosophical demonstration
+      - no successor activation or certification is claimed
+      - independent witnesses remain required
+
+  - check_id: SPPP-VAL-010
+    check: automated YAML parsing of all changed records
+    status: PENDING
+    reason: >
+      No repository YAML validation workflow or executable parser was available
+      through the connected GitHub actions in this production turn. Manual structural
+      and indentation review was performed, but certification requires an automated
+      parse and cross-reference validation run.
+    certification_blocking: true
+
+  - check_id: SPPP-VAL-011
+    check: complete subordinate-record contract for all seven problems
+    status: PARTIAL
+    outstanding:
+      - problems/nomos-vs-physis/inquiry-profile.yaml
+      - problems/nomos-vs-physis/witnesses.yaml
+      - problems/nomos-vs-physis/relations.yaml
+      - problems/theory-vs-practice/inquiry-profile.yaml
+      - problems/theory-vs-practice/witnesses.yaml
+      - problems/theory-vs-practice/relations.yaml
+      - problems/athens-vs-jerusalem/inquiry-profile.yaml
+      - problems/athens-vs-jerusalem/witnesses.yaml
+      - problems/athens-vs-jerusalem/relations.yaml
+      - problems/wise-vs-vulgar/inquiry-profile.yaml
+      - problems/wise-vs-vulgar/witnesses.yaml
+      - problems/wise-vs-vulgar/relations.yaml
+      - problems/ancients-vs-moderns/inquiry-profile.yaml
+      - problems/ancients-vs-moderns/witnesses.yaml
+      - problems/ancients-vs-moderns/relations.yaml
+
+preserved_limits:
+  - No validation result certifies the truth of a doctrine.
+  - No successor is active.
+  - The active predecessors remain authoritative until migration certification.
+  - Manual review is not a substitute for automated YAML parsing.
+  - Source-study completion is not successor completion.
+
+termination:
+  validation_state: PARTIAL_VALIDATION_COMPLETE_CERTIFICATION_BLOCKED
+  next_required_work:
+    - add or run an automated YAML and path validator
+    - complete subordinate records for the five new successors
+    - complete Wise vs. Vulgar proposition-level redistribution
+    - review all unresolved jurisdictional overlaps
+    - certify only after every migration precondition passes
