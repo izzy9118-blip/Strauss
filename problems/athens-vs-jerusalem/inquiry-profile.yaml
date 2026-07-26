@@ -1,0 +1,479 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: athens-vs-jerusalem
+  title: Athens vs. Jerusalem — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/athens-vs-jerusalem/problem.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+  governing_rule: >
+    This profile governs inquiry into Athens and Jerusalem as rival comprehensive
+    orientations. It requires independent Greek and Biblical reconstruction,
+    preserves the strict Theologico-Political jurisdiction over ultimate authority,
+    and prohibits cultural, geographic, ethnic, or already-reconciled reductions.
+
+purpose: >
+  Reconstruct and compare the comprehensive orientations beginning from wonder,
+  nature, seeing, questioning, and autonomous understanding and from fear of the
+  Lord, creation, hearing, command, covenant, and obedient love; determine whether
+  their historical intertwining, philosophical mediation, or theological
+  reconciliation preserves or transforms the highest claims of either orientation.
+
+source_orientation:
+  founding_collection_study:
+    study_id: SPPP-STUDY-001
+    source: Leo Strauss, Studies in Platonic Political Philosophy
+    source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+    source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+    study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+    synthesis_path: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
+    role: >
+      Supplies the first registered problem-specific reconstruction concerning
+      wonder and fear, seeing and hearing, nature and creation, philosopher and
+      prophet, natural excellence and divine Law, best regime and Messianic age,
+      particularity and universality, and major attempted mediations.
+  source_limit: >
+    The collection study does not replace independent reconstruction of the Bible,
+    Plato, Aristotle, Socrates, Maimonides, Machiavelli, Nietzsche, Cohen, Jewish
+    historical experience, or Greek and Jewish traditions. It remains provisional.
+
+shared_protocol_references:
+  required:
+    - canonical_key: source-status
+      path: protocols/source-status.yaml
+      local_application: >
+        Distinguish biblical text, philosophical dialogue, historical report,
+        commentary, translation, legal tradition, autobiography, editorial framing,
+        and posthumous collection before assigning authority.
+    - canonical_key: evidence-classification
+      path: protocols/evidence-classification.yaml
+      local_application: >
+        Separate explicit claims, narrative or dramatic evidence, historical
+        manifestations, supported inference, proposed mediation, and unresolved conflict.
+    - canonical_key: inference-discipline
+      path: protocols/inference-discipline.yaml
+      local_application: >
+        Prevent movement from influence, coexistence, shared vocabulary, political
+        success, historical intermixture, or moral agreement to unsupported reconciliation.
+    - canonical_key: uncertainty-preservation
+      path: protocols/uncertainty-preservation.yaml
+      local_application: >
+        Preserve the unresolved status of the highest claims, source-composition
+        limits, rival interpretations, and the possibility that mediation transforms
+        one or both orientations.
+    - canonical_key: speech-and-deed
+      path: protocols/speech-and-deed.yaml
+      local_application: >
+        Compare explicit descriptions of Athens, Jerusalem, philosophy, prophecy,
+        Law, love, universality, and reconciliation with textual form, action,
+        arrangement, omission, and historical consequence.
+    - canonical_key: audience-and-rhetoric
+      path: protocols/audience-and-rhetoric.yaml
+      local_application: >
+        Examine how teaching is addressed to philosophers, believers, citizens,
+        peoples, rulers, jurists, students, and differentiated audiences.
+  conditional:
+    - canonical_key: claimant-to-wisdom
+      path: protocols/claimant-to-wisdom.yaml
+      activation: >
+        Invoke whenever philosopher, prophet, legislator, theologian, interpreter,
+        people, ruler, or scholar claims privileged access to the highest way of life.
+    - canonical_key: irony
+      path: protocols/irony.yaml
+      activation: >
+        Invoke where announced reconciliation, neutrality, return, progress, or
+        preservation is qualified by transformed terms or textual deed.
+    - canonical_key: comedy
+      path: protocols/comedy.yaml
+      activation: >
+        Invoke only where comic form bears substantive evidence concerning Greek
+        poetic theology, philosophy, gods, law, or the human recognition of authority.
+
+problem_specific_operations:
+  - operation_id: AVJ-OP-001
+    name: RECONSTRUCT_ATHENS_INDEPENDENTLY
+    instruction: >
+      Reconstruct the philosophic orientation through its own Greek witnesses,
+      distinguishing wonder, nature, seeing, questioning, autonomous understanding,
+      natural excellence, philosopher, and best regime from later summaries.
+  - operation_id: AVJ-OP-002
+    name: RECONSTRUCT_JERUSALEM_INDEPENDENTLY
+    instruction: >
+      Reconstruct the Biblical orientation through its own texts and traditions,
+      distinguishing fear of the Lord, creation, hearing, command, covenant, Law,
+      prophecy, obedience, love, repentance, promise, and redemption.
+  - operation_id: AVJ-OP-003
+    name: IDENTIFY_THE_HIGHEST_CLAIMS
+    instruction: >
+      State what each orientation claims concerning the whole, the highest authority,
+      the best human life, justice, law, education, community, and human perfection.
+  - operation_id: AVJ-OP-004
+    name: PRESERVE_BEGINNING_AND_METHOD
+    instruction: >
+      Compare wonder and fear, seeing and hearing, questioning and obedience, nature
+      and creation without reducing the differences to literary style or psychology.
+  - operation_id: AVJ-OP-005
+    name: COMPARE_HIGHEST_TYPES
+    instruction: >
+      Reconstruct philosopher and prophet as distinct claimants to wisdom and
+      authority, including their modes of recognition, communication, lawfulness,
+      political relation, and responsibility.
+  - operation_id: AVJ-OP-006
+    name: COMPARE_STANDARDS_AND_ENDS
+    instruction: >
+      Distinguish natural excellence and divine Law, best regime and Messianic age,
+      autonomous contemplation and obedient love, without assuming equivalence.
+  - operation_id: AVJ-OP-007
+    name: EXAMINE_PARTICULARITY_AND_UNIVERSALITY
+    instruction: >
+      Determine how a universal claim is borne by an individual philosopher, a
+      particular people, a covenant, a law, a city, a church, or humanity, and what
+      authority the historical bearer possesses.
+  - operation_id: AVJ-OP-008
+    name: DISTINGUISH_INTERTWINING_FROM_RECONCILIATION
+    instruction: >
+      Separate historical coexistence, mutual influence, borrowing, conflict,
+      translation, and shared institutions from philosophical or theological harmony.
+  - operation_id: AVJ-OP-009
+    name: TEST_ATTEMPTED_MEDIATIONS
+    instruction: >
+      Examine whether a proposed mediation preserves both orientations or transforms,
+      subordinates, neutralizes, historicizes, aestheticizes, or dissolves one of them.
+  - operation_id: AVJ-OP-010
+    name: PRESERVE_POLITICAL_AND_HISTORICAL_LIMITS
+    instruction: >
+      Distinguish emancipation, assimilation, statehood, cultural renewal, peace,
+      sovereignty, survival, and historical return from covenant, election,
+      providence, redemption, or philosophic resolution.
+  - operation_id: AVJ-OP-011
+    name: PREVENT_CULTURAL_ESSENTIALISM
+    instruction: >
+      Do not identify Athens with all Greeks, Jerusalem with all Jews or believers,
+      philosophy with ethnicity, or revelation with culture. The terms identify
+      comprehensive claims, not homogeneous populations.
+  - operation_id: AVJ-OP-012
+    name: RECORD_JURISDICTION_AND_TRANSFER
+    instruction: >
+      Retain the comprehensive ways of life here while routing nature-convention,
+      poetry, practical implementation, ultimate reason-revelation authority,
+      rank-recognition, and ancient-modern transformation to their governing problems.
+
+activation_signals:
+  direct:
+    - wonder and fear of the Lord are treated as comprehensive beginnings
+    - nature and creation are compared as accounts of the whole
+    - seeing and hearing are ranked as ways of access to truth
+    - philosopher and prophet make rival highest claims
+    - autonomous understanding and obedient love are compared as ways of life
+    - natural excellence and divine Law are treated as equivalent or incompatible
+    - the best regime is identified with the Messianic age or redemption
+    - a particular people or individual bears a universal claim
+    - historical intertwining is treated as proof of reconciliation
+    - Maimonidean, Machiavellian, Nietzschean, Cohenian, liberal, secular, or historicist mediation is proposed
+    - Jewish emancipation, assimilation, Zionism, Israel, survival, or suffering is assigned comprehensive finality
+  non_activation_signals:
+    - every comparison of Greek and Jewish texts
+    - every dispute involving religion and philosophy
+    - every use of Athens or Jerusalem as a metaphor
+    - every question concerning natural and divine law
+    - every historical encounter between Jews and Greeks
+    - every political dispute involving Israel or a religious community
+
+governing_distinctions:
+  - distinction_id: AVJ-DIST-001
+    terms:
+      - Athens
+      - historical Athens or Greek culture
+    rule: >
+      Athens names a philosophic orientation in this problem and must not be reduced
+      to one city, ethnicity, literature, or historical population.
+  - distinction_id: AVJ-DIST-002
+    terms:
+      - Jerusalem
+      - historical Jerusalem, Jewish culture, or institutional religion
+    rule: >
+      Jerusalem names the revelatory orientation and must not be reduced to geography,
+      ethnicity, culture, statehood, or every historical religious practice.
+  - distinction_id: AVJ-DIST-003
+    terms:
+      - wonder
+      - fear of the Lord
+    rule: >
+      These are rival beginnings and orientations, not merely emotional states.
+  - distinction_id: AVJ-DIST-004
+    terms:
+      - seeing and autonomous examination
+      - hearing and obedient reception
+    rule: >
+      Different modes of access and authority must be reconstructed without assuming
+      that one is simply rational and the other merely passive.
+  - distinction_id: AVJ-DIST-005
+    terms:
+      - nature
+      - creation
+    rule: >
+      A naturally intelligible whole and a freely created whole are different claims
+      whose apparent overlap does not establish reconciliation.
+  - distinction_id: AVJ-DIST-006
+    terms:
+      - natural excellence
+      - divine Law and holiness
+    rule: >
+      Similar conduct or virtues do not erase differences of source, authority, end,
+      covenant, obedience, and relation to God.
+  - distinction_id: AVJ-DIST-007
+    terms:
+      - philosopher
+      - prophet
+    rule: >
+      The two claimants possess different beginnings, authorities, modes of speech,
+      audiences, and recognition burdens.
+  - distinction_id: AVJ-DIST-008
+    terms:
+      - best regime
+      - Messianic age or redemption
+    rule: >
+      The highest attainable political order is not automatically divine fulfillment,
+      and redemption is not merely an improved regime.
+  - distinction_id: AVJ-DIST-009
+    terms:
+      - historical intertwining
+      - philosophical reconciliation
+    rule: >
+      Influence, coexistence, translation, or shared history does not decide the
+      compatibility of the highest claims.
+  - distinction_id: AVJ-DIST-010
+    terms:
+      - political restoration
+      - theological redemption
+    rule: >
+      Statehood, sovereignty, defense, dignity, and national return are finite political
+      achievements and do not interpret themselves as covenantal or Messianic fulfillment.
+  - distinction_id: AVJ-DIST-011
+    terms:
+      - preservation of vocabulary
+      - preservation of orientation
+    rule: >
+      A synthesis may retain creation, revelation, Law, reason, love, or messianism
+      while transforming the authority and deed those words originally named.
+  - distinction_id: AVJ-DIST-012
+    terms:
+      - mutual illumination
+      - final harmony
+    rule: >
+      Each orientation may clarify the other without yielding a demonstrated synthesis.
+
+investigative_questions:
+  independent_reconstruction:
+    - What does the strongest Greek witness say about the whole, nature, justice, and the best life?
+    - What does the strongest Biblical witness say about creation, command, Law, love, and redemption?
+    - Have the witnesses been reconstructed in their own sequence and vocabulary?
+    - Are later summaries or reconciliations being projected backward?
+  beginnings_and_authority:
+    - What does it mean to begin from wonder or from fear of the Lord?
+    - What is seen, heard, questioned, received, or obeyed?
+    - What authority may bind the philosopher or believer?
+    - How is the philosopher or prophet recognized without self-certification?
+  ends_and_ways_of_life:
+    - What is the highest human life under each orientation?
+    - How do contemplation, obedience, love, law, holiness, virtue, and political responsibility relate?
+    - Are natural excellence and divine righteousness compatible, overlapping, or rival?
+    - Can the best regime and redemption be compared without conflation?
+  people_and_universality:
+    - How is a universal teaching borne by a particular people, text, law, city, or individual?
+    - Does historical election or philosophic individuality establish authority?
+    - What is preserved through language, ritual, education, memory, and political independence?
+    - Does universality require abolishing particularity?
+  mediation_and_transformation:
+    - Which terms or deeds are preserved by the proposed mediation?
+    - Which authority becomes final in the synthesis?
+    - Does reason rationalize revelation, revelation subordinate philosophy, politics neutralize both, or history claim to supersede them?
+    - Is reconciliation demonstrated or produced by changing the meaning of one side?
+  historical_manifestation:
+    - What can emancipation, assimilation, suffering, persistence, Zionism, and statehood establish?
+    - Which theological or philosophic conclusions remain underdetermined by events?
+    - Is political achievement being identified with providence or redemption?
+    - Is historical failure being treated as refutation of a comprehensive teaching?
+  documentary_and_comparative:
+    - Is the claim explicit, narrative, legal, dramatic, inferential, or historical?
+    - Which documentary layer bears the intention?
+    - Is secondary editorial framing governing primary meaning?
+    - Are mutual influence and causal dependence being confused with truth or reconciliation?
+
+false_resolutions:
+  - resolution_id: AVJ-FALSE-001
+    claim: Athens means Greek culture and Jerusalem means Jewish culture.
+    reason: >
+      The problem concerns comprehensive orientations, not homogeneous cultural or ethnic essences.
+  - resolution_id: AVJ-FALSE-002
+    claim: Shared ethical teachings prove that philosophy and revelation are reconciled.
+    reason: >
+      Common content does not erase differences of source, authority, creation,
+      command, covenant, autonomous reason, and obedience.
+  - resolution_id: AVJ-FALSE-003
+    claim: Historical coexistence or influence proves philosophical compatibility.
+    reason: >
+      Intertwining and mutual illumination can persist alongside incompatible highest claims.
+  - resolution_id: AVJ-FALSE-004
+    claim: Reason cannot refute revelation, therefore Jerusalem is true.
+    reason: >
+      Nonrefutation is not proof and rival revelation claims remain to be examined.
+  - resolution_id: AVJ-FALSE-005
+    claim: Revelation cannot demonstrate itself philosophically, therefore Athens is true.
+    reason: >
+      Failure to meet philosophy's standard does not by itself prove the revelatory claim false.
+  - resolution_id: AVJ-FALSE-006
+    claim: Maimonides demonstrates final harmony merely because philosophy and Law coexist in his work.
+    reason: >
+      Articulated coexistence, legal ordering, guarded writing, and practical mediation
+      require independent reconstruction and do not automatically establish harmony.
+  - resolution_id: AVJ-FALSE-007
+    claim: Modern secular politics resolves the conflict by privatizing religion.
+    reason: >
+      Political jurisdiction may regulate public conflict while leaving comprehensive
+      authority and the highest life unresolved.
+  - resolution_id: AVJ-FALSE-008
+    claim: Zionism or the State of Israel completes Biblical return or redemption.
+    reason: >
+      Political restoration, sovereignty, defense, and dignity are not self-interpreting
+      theological fulfillment.
+  - resolution_id: AVJ-FALSE-009
+    claim: Assimilation resolves the Jewish problem and therefore the Jerusalem claim.
+    reason: >
+      Resolution through disappearance presupposes rather than proves that covenant,
+      Law, memory, and distinct existence lack authoritative meaning.
+  - resolution_id: AVJ-FALSE-010
+    claim: Rational religion preserves revelation without transformation.
+    reason: >
+      Revelation may be converted into autonomous morality, symbol, or historical
+      progress while retaining traditional vocabulary.
+  - resolution_id: AVJ-FALSE-011
+    claim: Mutual criticism means the two orientations are parts of one higher synthesis.
+    reason: >
+      Mutual illumination does not demonstrate a comprehensive standpoint that
+      preserves both highest claims.
+  - resolution_id: AVJ-FALSE-012
+    claim: The conflict is merely historical and can be superseded by progress.
+    reason: >
+      Historicization itself is a contested philosophic claim and may transform rather
+      than resolve nature, creation, truth, and authority.
+
+claimant_tests:
+  required_dimensions:
+    - claimant identity and source status
+    - account of the whole
+    - beginning and mode of access
+    - highest authority
+    - highest human life
+    - relation to law, city, people, and education
+    - mode of recognition and communication
+    - treatment of rival orientation
+    - historical and political consequences
+    - transformations introduced by proposed mediation
+    - unresolved epistemic and theological burdens
+  anti_certification_rule: >
+    No philosopher, prophet, people, state, theologian, interpreter, scholar, survivor,
+    victor, martyr, or historical movement is certified as bearer of the highest wisdom
+    through title, election, suffering, success, antiquity, influence, or self-description.
+
+cross_problem_routing:
+  - target_problem: nomos-vs-physis
+    route_when: >
+      The primary issue is nature and convention or the distinction among natural,
+      human positive, and divine positive law.
+    retain_here: nature and creation as comprehensive accounts of the whole
+  - target_problem: philosophy-vs-poetry
+    route_when: >
+      The primary issue is poetic, dramatic, rhetorical, or philosophical form and
+      rival human knowledge of souls.
+    retain_here: Athens and Jerusalem as comprehensive orientations
+  - target_problem: theory-vs-practice
+    route_when: >
+      The primary issue is how either orientation becomes political judgment,
+      institution, law, toleration, statehood, or finite action.
+    retain_here: the highest ways of life guiding action
+  - target_problem: theologico-political
+    route_when: >
+      The primary issue is ultimate authority among autonomous reason, genuine
+      revelation, prophecy, command, sacred law, interpretation, and sovereignty.
+    retain_here: Athens and Jerusalem as concrete comprehensive alternatives
+  - target_problem: wise-vs-vulgar
+    route_when: >
+      The primary issue is recognition, rank, differentiated education, or capture by
+      philosopher, prophet, theologian, ruler, people, or interpreter.
+    retain_here: the substantive rival orientations
+  - target_problem: ancients-vs-moderns
+    route_when: >
+      The primary issue is modern secularization, historicism, rationalization,
+      privatization, value creation, progress, or transformation of either orientation.
+    retain_here: the permanent confrontation
+
+output_constraints:
+  required:
+    - reconstruct Athens and Jerusalem independently before comparison
+    - state the beginning, authority, account of the whole, and highest life of each
+    - distinguish nature and creation, philosopher and prophet, best regime and redemption
+    - separate historical intertwining from philosophical reconciliation
+    - identify transformations introduced by every proposed mediation
+    - preserve political achievements as finite and non-self-interpreting
+    - classify evidence and unresolved burdens
+    - record cross-problem routing without duplication
+  prohibited:
+    - reducing either orientation to culture, ethnicity, geography, or politics
+    - forcing shared vocabulary into doctrinal harmony
+    - treating nonrefutation as proof
+    - treating historical success, suffering, survival, or statehood as comprehensive certification
+    - treating secondary editorial framing as primary authority
+    - using Strauss to replace independent Greek or Biblical reconstruction
+    - activating or certifying the successor from profile completion
+
+termination_tests:
+  minimum_completion:
+    - both orientations are independently reconstructed
+    - beginnings, authorities, wholes, and highest lives are explicit
+    - philosopher and prophet are distinguished
+    - nature and creation are not conflated
+    - best regime and redemption are not conflated
+    - historical intertwining and reconciliation are separated
+    - proposed mediations are tested for transformation
+    - neighboring jurisdictions and unresolved questions are recorded
+  mandatory_nontermination:
+    - one orientation is reconstructed only through its rival
+    - cultural or ethnic essence substitutes for textual evidence
+    - shared morality is treated as final reconciliation
+    - political restoration is treated as redemption
+    - nonrefutation is converted into proof
+    - independent witness reconstruction is replaced by collection-level synthesis
+  completion_label: PROVISIONAL_INQUIRY_PROFILE_COMPLETE
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This profile is a subordinate successor record. It does not certify or activate
+    Athens vs. Jerusalem, complete independent Greek or Biblical reconstruction, or
+    authorize deletion, doctrinal absorption, cultural reduction, or silent migration.
+
+termination:
+  profile_state: FOUNDING_INQUIRY_PROFILE_CREATED
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - witnesses.yaml
+    - relations.yaml
+    - independent Greek and Biblical witness reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
