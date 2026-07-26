@@ -4,13 +4,13 @@ document_type: migration_validation_record
 identity:
   validation_id: FPV2-SPPP-VALIDATION-001
   scope: SPPP-STUDY-001 repository integration
-  version: 1.0.0
+  version: 1.1.0
 
 status:
-  lifecycle: PARTIAL_VALIDATION_COMPLETE
+  lifecycle: VALIDATOR_IMPLEMENTED_RUN_PENDING
   certification: NOT_CERTIFIED
   activation_authorized: false
-  automated_yaml_parse: NOT_EXECUTED
+  automated_yaml_parse: WORKFLOW_RUN_PENDING
 
 validated_commits:
   witness_registry_philosophy_vs_poetry: 3f5397f43485d580c16b52cacb00dfa8420c62fb
@@ -19,6 +19,8 @@ validated_commits:
   speech_and_deed_protocol: 1ae264ea4175d89bb072f5caa601a7da6e904ee9
   foundational_problem_registry: 2f7a2b2a393d5fd604b31b60eccb42b8da03340b
   integration_completion: e9e175f66f44734306fd7d5e5d3af85809d15ae7
+  validator_script: 5a8ca176ad641eaa24d7dacc041c7ef0963eafb3
+  validation_workflow: 17c2ddae2b74c4a325e414acfc9218e1b857d4f9
 
 checks:
   - check_id: SPPP-VAL-001
@@ -110,13 +112,25 @@ checks:
       - independent witnesses remain required
 
   - check_id: SPPP-VAL-010
-    check: automated YAML parsing of all changed records
-    status: PENDING
-    reason: >
-      No repository YAML validation workflow or executable parser was available
-      through the connected GitHub actions in this production turn. Manual structural
-      and indentation review was performed, but certification requires an automated
-      parse and cross-reference validation run.
+    check: automated YAML, path, identity, and predecessor validation
+    status: WORKFLOW_ADDED_RUN_PENDING
+    implementation:
+      script: scripts/validate_foundational_architecture.py
+      script_commit: 5a8ca176ad641eaa24d7dacc041c7ef0963eafb3
+      workflow: .github/workflows/validate-foundational-architecture.yml
+      workflow_commit: 17c2ddae2b74c4a325e414acfc9218e1b857d4f9
+    scope:
+      - parse YAML under governance, problems, protocols, migration, and SPPP study roots
+      - validate seven unique canonical keys and orders
+      - resolve successor and subordinate paths recorded in the registry
+      - prevent unauthorized certification or activation
+      - validate required shared protocols
+      - verify SPPP integration paths
+      - compare active and preserved Theologico-Political predecessor bytes
+    current_result: >
+      No completed workflow run or status check was returned through the connected
+      GitHub actions after workflow creation. Certification remains blocked until a
+      successful run is observed.
     certification_blocking: true
 
   - check_id: SPPP-VAL-011
@@ -143,13 +157,13 @@ preserved_limits:
   - No validation result certifies the truth of a doctrine.
   - No successor is active.
   - The active predecessors remain authoritative until migration certification.
-  - Manual review is not a substitute for automated YAML parsing.
   - Source-study completion is not successor completion.
+  - The existence of a validator is not equivalent to a successful validation run.
 
 termination:
-  validation_state: PARTIAL_VALIDATION_COMPLETE_CERTIFICATION_BLOCKED
+  validation_state: VALIDATOR_IMPLEMENTED_CERTIFICATION_BLOCKED_PENDING_RUN
   next_required_work:
-    - add or run an automated YAML and path validator
+    - obtain and inspect a successful automated validator run
     - complete subordinate records for the five new successors
     - complete Wise vs. Vulgar proposition-level redistribution
     - review all unresolved jurisdictional overlaps
