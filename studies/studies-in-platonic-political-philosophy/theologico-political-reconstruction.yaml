@@ -1,0 +1,256 @@
+schema_version: 1.0
+document_type: problem_specific_reconstruction
+
+identity:
+  reconstruction_id: SPPP-TP-001
+  title: Studies in Platonic Political Philosophy — The Theologico-Political Problem in Strict Form
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_STUDY_RECORD
+  successor_problem_effect: NONE_WITHOUT_MIGRATION
+
+source_study:
+  study_id: SPPP-STUDY-001
+  path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+
+problem_reference:
+  canonical_key: theologico-political
+  predecessor: problems/theologico-political.yaml
+  successor_draft: problems/theologico-political/problem.yaml
+
+strict_definition: >
+  The theologico-political problem is the unresolved confrontation between autonomous
+  philosophic inquiry and obedient response to a free God who creates, reveals,
+  commands, and judges. It is political because revelation claims authority over a
+  complete way of life and because political communities must establish law,
+  education, worship, interpretation, toleration, and coercive jurisdiction before
+  the truth of the comprehensive alternatives has been finally decided.
+
+primary_alternatives:
+  philosophy:
+    beginning: wonder
+    highest_authority: autonomous_reason_and_inquiry
+    highest_life: examination_and_understanding
+    governing_claim: >
+      No proposition concerning the whole, justice, the good, or the best human life
+      is exempt from examination merely because it is inherited, sacred, politically
+      necessary, or authoritatively commanded.
+    political_difficulty: >
+      Philosophy questions the authoritative opinions through which political society
+      lives and cannot make demonstration equally accessible to every citizen.
+    epistemic_limit: >
+      The collection does not present philosophy as possessing an exhaustive account
+      of the whole sufficient to demonstrate that revelation or miracle is impossible.
+  revelation:
+    beginning: fear_of_the_Lord_and_hearing
+    highest_authority: free_divine_creator_and_lawgiver
+    highest_life: obedient_love_holiness_and_fidelity
+    governing_claim: >
+      Human life receives authoritative direction from a divine Law not created by
+      autonomous reason or political agreement.
+    political_strength: >
+      Revelation supplies a people with a comprehensive orientation concerning God,
+      conduct, family, worship, education, law, history, repentance, judgment, and hope.
+    recognition_difficulty: >
+      Human beings must still identify genuine revelation, true prophecy, authentic
+      Law, and rightful interpretation among rival and counterfeit claimants.
+
+what_counts_as_revelation:
+  positive_elements:
+    - free divine action
+    - creation
+    - historical communication
+    - command
+    - prophecy
+    - covenant
+    - sacred law
+    - obedience
+    - judgment
+    - repentance
+    - promise and redemption
+  exclusions:
+    - belief in civic gods by itself
+    - poetic theology by itself
+    - ritual efficacy by itself
+    - political usefulness by itself
+    - collective identity by itself
+    - moral symbolism by itself
+  governing_rule: >
+    Removing the historical divine deed, free command, and possibility of obedience
+    beyond autonomous reason changes revelation's traditional meaning rather than
+    merely explaining it in neutral terms.
+
+civic_theology_distinction:
+  definition: >
+    Civic theology consists of religious teachings, practices, rites, oaths, gods,
+    and authoritative stories that sustain a political community.
+  possible_functions:
+    - restrain crime
+    - strengthen oaths
+    - encourage courage and sacrifice
+    - legitimate law and office
+    - preserve solidarity
+    - provide sacred restraints
+  limits:
+    - Political efficacy does not prove divine origin.
+    - Political manipulation does not prove every revelation fraudulent.
+    - Victory and defeat do not interpret themselves as divine favor or condemnation.
+    - Poetic or civic gods must not be identified automatically with the God of revelation.
+  principal_collection_witnesses:
+    - Preliminary Observations on the Gods in Thucydides' Work
+    - Niccolo Machiavelli
+    - Jerusalem and Athens
+
+why_the_problem_is_political:
+  political_necessities:
+    - enact law
+    - educate children
+    - regulate worship and interpretation
+    - punish and pardon
+    - defend the community
+    - authorize or restrict speech
+    - decide who may claim public religious authority
+  governing_tension: >
+    Political society cannot live through suspended judgment alone, but the necessity
+    of a public decision does not convert the decision into philosophical or theological truth.
+  recognition_problem: >
+    The city cannot identify philosopher, sophist, prophet, false prophet, priest,
+    ruler, scholar, inspired reformer, or manipulator through title, office, success,
+    persecution, signs, or reputation alone.
+
+why_critique_of_civic_religion_does_not_refute_revelation:
+  - Human invention of some cults does not prove that no divine communication occurred.
+  - Fraudulent prophecy does not disprove prophecy as such, just as sophistry does not disprove philosophy.
+  - Natural and political proximate causes do not by themselves eliminate possible remote or ultimate causation.
+  - Textual layers, repetition, compilation, and editorial arrangement do not by themselves establish the impossibility of revelation.
+  - A criticism beginning by assuming miracles impossible has not defeated revelation from premises shared with revelation.
+
+why_philosophy_cannot_simply_disprove_revelation:
+  burden: >
+    Philosophy would need sufficient knowledge of God, the whole, divine freedom, and
+    causal possibility to demonstrate that creation, miracle, or divine communication is impossible.
+  supported_result: >
+    Philosophy is not rationally compelled to accept revelation merely on authority,
+    but the collection does not present philosophy as having demonstrated revelation impossible.
+  limit: >
+    Openness to revelation as an undefeated possibility is not obedience to a
+    particular Law and does not treat all revelation claims as equally credible.
+
+why_nonrefutation_does_not_prove_revelation:
+  - Failure to refute is not demonstration.
+  - Rival and incompatible revelations require independent examination.
+  - Historical constitution through belief in election does not prove divine election.
+  - Martyrdom, suffering, survival, and political necessity do not certify a doctrine's truth.
+  - A practically necessary belief may remain distinct from a demonstrated theoretical truth.
+
+natural_and_divine_law:
+  required_distinctions:
+    - human positive law
+    - natural law or natural right
+    - divine positive law
+    - eternal law where the Thomistic framework is active
+  governing_rule: >
+    The alternatives are not exhausted by obeying the state or obeying God. Human law
+    may be criticized through rational natural right, divine Law, or rival
+    interpretations of either. Universal moral content does not exhaust covenantal,
+    ceremonial, historical, or obedient dimensions of revealed Law.
+
+maimonidean_mediation:
+  collection_witnesses:
+    - Notes on Maimonides' Book of Knowledge
+    - Note on Maimonides' Letter on Astrology
+    - Note on Maimonides' Treatise on the Art of Logic
+  structure:
+    - Philosophy and natural science enter the foundations of Torah.
+    - Knowledge remains distinct from legally binding belief.
+    - Ordinary prophecy may be accredited through presumption without demonstration.
+    - Sinai and Moses possess unique founding authority.
+    - Later prophecy is judged through Mosaic Torah.
+    - Practical dogmas may be required for responsibility, repentance, and social life without being relabeled demonstration.
+  strongest_finding: >
+    Maimonides preserves articulated coexistence among philosophy, revelation, law,
+    prophecy, belief, and practice rather than erasing their heterogeneity.
+  unresolved_limit: >
+    The collection does not complete the independent reconstruction of Maimonides or
+    demonstrate a final harmony between philosophical knowledge and Mosaic Law.
+
+machiavellian_politicization:
+  collection_witness: Niccolo Machiavelli
+  transformation:
+    - Religion is treated as humanly founded, renewed, used, and destroyed.
+    - Theology becomes civil theology serving political order.
+    - A strong monarch may dispense with religion while republics require it.
+    - Political usefulness becomes the governing public tribunal.
+  unequal_belief_problem: >
+    Citizens may receive religion as authoritative while rulers understand and use it
+    instrumentally. Elite disbelief does not certify elite wisdom and may become domination.
+  limit: >
+    Genealogy and political explanation of religion do not demonstrate that authentic
+    revelation is impossible.
+
+cohenian_rationalization:
+  collection_witness: Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  governing_formula: Revelation is God's creation of reason.
+  transformations:
+    creation: necessary_continuous_relation
+    revelation: nonhistorical_rational_constitution
+    law: moral_education_and_symbol
+    holiness: universal_morality
+    grace: necessary_divine_human_correlation
+    election: stateless_universal_witness
+    messianism: endless_historical_progress
+    immortality: historical_continuity
+    resurrection: moral_rebirth
+  strongest_finding: >
+    Cohen produces a morally serious Jewish religion of reason by allowing nothing in
+    Judaism to overturn autonomous morality.
+  limit: >
+    The harmony is achieved by transforming the historical divine deeds and obedient
+    responses that define revelation in the strict traditional sense.
+
+principal_false_resolutions:
+  - error: Society needs sacred belief; therefore the belief is divinely true.
+    correction: Political necessity is not theological proof.
+  - error: Rulers manipulate religion; therefore all revelation is fraudulent.
+    correction: Human manipulation does not establish the impossibility of divine communication.
+  - error: Philosophy cannot refute revelation; therefore one revelation is true.
+    correction: Nonrefutation is not demonstration and rival revelation claims remain.
+  - error: Revelation is simply rational morality expressed symbolically.
+    correction: This removes free divine action, historical communication, command, and obedience.
+  - error: A political settlement resolves the comprehensive conflict.
+    correction: Sovereignty may establish public jurisdiction without deciding truth.
+
+permanent_triad:
+  truth:
+    question: What is genuinely so?
+  authority:
+    question: Who or what may bind human action?
+  political_necessity:
+    question: What must a community believe or do in order to exist and act?
+  non_absorption_rules:
+    - Truth is not whatever authority declares.
+    - Authority is not whatever is politically useful.
+    - Political necessity is not philosophical demonstration.
+    - Philosophical truth does not automatically possess public authority.
+    - Revealed authority cannot be accepted philosophically without examination.
+    - A community cannot govern solely by unresolved inquiry.
+
+strict_nonresolution: >
+  Philosophy cannot surrender autonomous inquiry to an authority it has not examined.
+  Revelation cannot surrender divine sovereignty to autonomous human reason without
+  ceasing to be revelation. Political society cannot wait for the conflict to be
+  resolved, yet its need for authoritative law cannot turn opinion into knowledge.
+
+termination:
+  reconstruction_state: COMPLETE_FOR_REGISTERED_COLLECTION
+  certification: NOT_CERTIFIED
+  successor_activation: NOT_AUTHORIZED
+  remaining_requirements:
+    - independent Biblical primary-text reconstruction
+    - independent Maimonides reconstruction
+    - independent Machiavelli reconstruction
+    - independent Cohen reconstruction
+    - reconciliation with the existing nineteen-source predecessor through a documented successor transaction

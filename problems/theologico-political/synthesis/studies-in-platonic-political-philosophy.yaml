@@ -1,0 +1,195 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: TP-SPPP-001
+  problem: theologico-political
+  source_study: SPPP-STUDY-001
+  title: The Theologico-Political Problem — Studies in Platonic Political Philosophy
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_MIGRATION
+
+source:
+  study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+  strict_reconstruction: studies/studies-in-platonic-political-philosophy/theologico-political-reconstruction.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+
+relation_to_existing_problem:
+  active_predecessor: problems/theologico-political.yaml
+  successor_draft: problems/theologico-political/problem.yaml
+  predecessor_synthesis: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+  relation: EXTENDS_AND_TESTS_WITHOUT_REPLACING
+  governing_rule: >
+    The nineteen-source predecessor remains active and historically preserved. This
+    collection-level reconstruction supplies new source-specific evidence, confirms
+    some predecessor distinctions, qualifies others, and requires a later documented
+    reconciliation transaction before any successor activation.
+
+collection_contributions:
+  - contribution_id: TP-SPPP-C01
+    source: Philosophy as Rigorous Science and Political Philosophy
+    finding: >
+      Phenomenological reconstruction of religious life and philosophical greatness
+      do not prove revelation or political wisdom. The crisis of political philosophy
+      cannot be resolved by authenticity, worldview, or historical commitment.
+
+  - contribution_id: TP-SPPP-C02
+    source: On Plato's Apology of Socrates and Crito
+    finding: >
+      Philosophy appears before the city through oracle, divine mission, daimonion,
+      impiety law, obedience, persuasion, and civic judgment. The city has real grounds
+      for concern but lacks a reliable certificate of philosopher or divine claimant.
+
+  - contribution_id: TP-SPPP-C03
+    source: Preliminary Observations on the Gods in Thucydides' Work
+    finding: >
+      Civic theology is politically indispensable and epistemically opaque. Sacred
+      restraint, ritual, oath, divination, hope, and impiety do not become transparent
+      providential causation.
+
+  - contribution_id: TP-SPPP-C04
+    source: On Natural Law
+    finding: >
+      Natural law, human positive law, divine positive law, and eternal law must remain
+      distinct. The theologico-political conflict cannot be reduced to a dispute
+      between state command and private conscience.
+
+  - contribution_id: TP-SPPP-C05
+    source: Jerusalem and Athens
+    finding: >
+      The strict alternatives are fear and wonder, hearing and seeing, creation and
+      nature, obedient love and autonomous understanding. Their conflict concerns the
+      beginning and highest authority of human life, not merely institutional religion.
+
+  - contribution_id: TP-SPPP-C06
+    source: Nietzsche
+    finding: >
+      The rejection of divine and natural standards produces human value-creation and
+      future philosopher-commanders but does not certify the creator's authority or
+      refute revelation.
+
+  - contribution_id: TP-SPPP-C07
+    source: Notes on Maimonides' Book of Knowledge
+    finding: >
+      Maimonides preserves demonstrated knowledge, legal belief, prophetic
+      accreditation, Mosaic uniqueness, commanded Law, practical dogma, and love of
+      God in an articulated legal-philosophical order without erasing their differences.
+
+  - contribution_id: TP-SPPP-C08
+    source: Note on Maimonides' Letter on Astrology
+    finding: >
+      Reason, sense, and trustworthy prophetic tradition are distinguished from
+      opinion and astrology. Proximate causation, general divine government, and
+      particular providence retain different epistemic statuses.
+
+  - contribution_id: TP-SPPP-C09
+    source: Note on Maimonides' Treatise on the Art of Logic
+    finding: >
+      Rhetorical arguments for creation are not demonstration. Possibility, actuality,
+      convention, nature, universal, particular, remote cause, and proximate cause must
+      remain distinct before theological or political inference.
+
+  - contribution_id: TP-SPPP-C10
+    source: Niccolo Machiavelli
+    finding: >
+      Religion is placed under political jurisdiction as civil theology. Human
+      founding, use, renewal, destruction, and concealment of religion do not
+      demonstrate authentic revelation impossible but create an unequal-belief danger.
+
+  - contribution_id: TP-SPPP-C11
+    source: Review of J. L. Talmon
+    finding: >
+      Belief in election can be historically constitutive without being historically
+      demonstrable as divine truth. Universal moral vocation and particular peoplehood
+      remain in unresolved tension.
+
+  - contribution_id: TP-SPPP-C12
+    source: Introductory Essay for Hermann Cohen
+    finding: >
+      Cohen achieves rational harmony by redefining revelation as the creation of
+      reason and transforming creation, Law, obedience, holiness, grace, election,
+      Messianism, immortality, and resurrection. The synthesis dissolves the strict
+      conflict rather than proving one side victorious.
+
+strict_problem_update:
+  retained_core: >
+    Revealed divine Law and autonomous philosophic inquiry remain the primary
+    comprehensive alternatives. Political sovereignty, toleration, civil theology,
+    rational religion, statehood, and historical explanation are mediations or
+    attempted resolutions rather than equal comprehensive contenders.
+  sharpened_definition: >
+    The strict problem concerns whether human beings must live ultimately by
+    autonomous inquiry or by obedient response to a free God who creates, reveals,
+    commands, and judges, while political society must establish enforceable law
+    before the comprehensive conflict is resolved.
+  principal_new_distinctions:
+    - civic theology versus genuine revelation
+    - political usefulness versus theological truth
+    - divine deed versus moral symbol
+    - legal presumption versus demonstration
+    - proximate cause versus ultimate cause
+    - nonrefutation versus proof
+    - historical constitution versus divine election
+    - political settlement versus comprehensive resolution
+
+maimonides_machiavelli_cohen_sequence:
+  maimonides: >
+    Preserves heterogeneous jurisdictions within revealed Law and gives philosophy a
+    place without identifying philosophy, belief, prophecy, and command.
+  machiavelli: >
+    Captures theology politically by treating religion as a human artifact and public
+    instrument judged by regime effect.
+  cohen: >
+    Dissolves the conflict rationally by allowing no revealed claim to overturn
+    autonomous morality and by translating divine deeds into ethical ideas.
+  comparative_result: >
+    Maimonides mediates while preserving difference; Machiavelli subordinates religion
+    to politics; Cohen harmonizes through transformation. None demonstrates the strict
+    comprehensive conflict finally resolved.
+
+strict_nonresolution: >
+  Philosophy cannot surrender autonomous inquiry to an authority it has not examined.
+  Revelation cannot surrender divine sovereignty to autonomous human reason without
+  ceasing to be revelation. Political society cannot wait for the conflict to be
+  resolved, yet its need for authoritative law cannot turn opinion into knowledge.
+
+predecessor_reconciliation:
+  required: true
+  performed_by_this_record: false
+  required_actions:
+    - register SPPP-STUDY-001 in the theologico-political witness registry
+    - mark the collection-level reconstruction complete without claiming nineteen independent source studies complete
+    - preserve the original dates, occasions, and source-specific limits of Cohen, Talmon, Jerusalem and Athens, and related predecessor entries
+    - compare this strict reconstruction against every proposition in the active predecessor
+    - record confirmations, qualifications, corrections, and remaining dissent
+    - preserve the active predecessor and exact historical copy until migration certification
+
+safeguards:
+  - no poetic theology treated as revelation
+  - no political utility treated as truth
+  - no natural explanation treated as automatic refutation of divine causation
+  - no philosophy nonrefutation treated as proof of revelation
+  - no historical suffering, survival, or statehood treated as proof of providence
+  - no Cohenian vocabulary treated as preservation of traditional doctrine without comparing the deed named
+  - no Maimonidean legal presumption relabeled philosophical certainty
+  - no Machiavellian genealogy treated as complete metaphysical refutation
+
+registry_action:
+  required: true
+  requested_change: >
+    Add SPPP-STUDY-001 to the completed study index as a qualified collection-level
+    Strauss reconstruction. Preserve all nineteen source-specific study requirements
+    that remain incomplete and the independent primary-text reconstruction requirements.
+  performed_by_this_record: false
+
+termination:
+  synthesis_state: COMPLETE_FOR_REGISTERED_COLLECTION
+  certification: NOT_CERTIFIED
+  predecessor_status: UNCHANGED
+  successor_activation: NOT_AUTHORIZED
