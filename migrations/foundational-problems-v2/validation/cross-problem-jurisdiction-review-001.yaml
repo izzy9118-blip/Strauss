@@ -1,0 +1,332 @@
+schema_version: 1.0
+document_type: cross_problem_jurisdiction_review
+
+identity:
+  review_id: FPV2-CROSS-PROBLEM-REVIEW-001
+  title: Seven-Problem Duplicate-Doctrine and Unresolved-Jurisdiction Review
+  version: 1.0.0
+
+status:
+  lifecycle: REVIEW_COMPLETE_CORRECTIONS_RECORDED_VALIDATION_PENDING
+  certification: NOT_CERTIFIED
+  activation_authorized: false
+  doctrinal_truth_certified: false
+
+authority:
+  architecture: governance/foundational-problem-architecture.yaml
+  registry: problems/registry.yaml
+  migration: migrations/foundational-problems-v2/migration.yaml
+  governing_rule: >
+    The seven foundational problems remain distinct but connected. Repetition is
+    permitted only where it states a boundary, a local application, a source-specific
+    finding, or a controlled relation. A complete governing doctrine and a shared
+    interpretive method may not be duplicated across problem constitutions.
+
+review_scope:
+  problem_constitutions:
+    - problems/nomos-vs-physis/problem.yaml
+    - problems/philosophy-vs-poetry/problem.yaml
+    - problems/theory-vs-practice/problem.yaml
+    - problems/theologico-political/problem.yaml
+    - problems/athens-vs-jerusalem/problem.yaml
+    - problems/wise-vs-vulgar/problem.yaml
+    - problems/ancients-vs-moderns/problem.yaml
+  relation_records:
+    - problems/nomos-vs-physis/relations.yaml
+    - problems/philosophy-vs-poetry/relations.yaml
+    - problems/theory-vs-practice/relations.yaml
+    - problems/theologico-political/relations.yaml
+    - problems/athens-vs-jerusalem/relations.yaml
+    - problems/wise-vs-vulgar/relations.yaml
+    - problems/ancients-vs-moderns/relations.yaml
+  shared_protocols:
+    - protocols/speech-and-deed.yaml
+    - protocols/irony.yaml
+    - protocols/comedy.yaml
+    - protocols/claimant-to-wisdom.yaml
+    - protocols/audience-and-rhetoric.yaml
+  source_limit: >
+    This is an architectural and documentary allocation review. It does not resolve
+    open philosophical questions or replace independent source reconstruction.
+
+automated_run_observation:
+  observed_commits:
+    - 35b6c72e262ca6f717344fe1bb0bf84cbb34c05e
+    - d0be2b265718acc4e56427ad176007e1cbf56f0d
+  combined_statuses_returned: 0
+  pull_request_workflow_runs_returned: 0
+  result: RUN_NOT_OBSERVED
+  certification_effect: BLOCKING
+  rule: >
+    Absence of a visible run is not a passing result. Structural production may
+    continue, but certification and activation remain prohibited.
+
+duplication_classes:
+  allowed:
+    BOUNDARY_RESTATEMENT: >
+      A concise statement of another problem's jurisdiction used to mark a limit.
+    LOCAL_APPLICATION: >
+      Application of a shared protocol to a problem-specific claimant, source, or question.
+    CONTROLLED_RELATION_SUMMARY: >
+      A relation record identifying dependence, intersection, supplied findings, and routing.
+    SOURCE_SPECIFIC_FINDING: >
+      A finding derived from a registered source and stored in a subordinate synthesis.
+  prohibited:
+    GOVERNING_DOCTRINE_DUPLICATION: >
+      The same constitutive doctrine is owned and independently governed by more than one problem.
+    SHARED_PROTOCOL_DUPLICATION: >
+      A general interpretive method is copied into local constitutions as autonomous doctrine.
+    SILENT_JURISDICTION_TRANSFER: >
+      A problem begins governing a neighboring doctrine without a controlled relation and revision record.
+    DUPLICATE_CERTIFICATION: >
+      Repetition, cross-reference, or source overlap is treated as additional proof or certification.
+
+corrections_completed:
+  - correction_id: CPR-001
+    finding: >
+      The shared protocol registry still recorded version 1.0.0 for four reconciled
+      protocol files whose actual protocol versions were 1.1.0.
+    action: >
+      Updated protocols/registry.yaml to align speech-and-deed, irony, comedy, and
+      audience-and-rhetoric metadata with their files.
+    commit: 62c36eeefc43e8409eb7fce22ba202908fa2cad4
+    predecessor_effect: NONE
+  - correction_id: CPR-002
+    finding: >
+      problems/wise-vs-vulgar/relations.yaml retained a stale lifecycle and remaining
+      requirement stating that proposition-level classification was pending after the
+      normalized sixty-seven-transaction classification had been completed.
+    action: >
+      Advanced the relations record to version 0.2.0, aligned it with the transaction
+      ledger, and preserved validation and certification as blockers.
+    commit: 6576547fcc7d2f24565d06825651610755333ad6
+    predecessor_effect: NONE
+
+pairwise_review:
+  - pair_id: NVP-PVP
+    problems: [nomos-vs-physis, philosophy-vs-poetry]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Nomos vs. Physis owns nature, convention, and natural standards. Philosophy vs.
+      Poetry owns the rival poetic and philosophic forms of wisdom arising from that challenge.
+  - pair_id: NVP-TVP
+    problems: [nomos-vs-physis, theory-vs-practice]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Nomos vs. Physis owns the standard and lawful-just distinction. Theory vs.
+      Practice owns application, prudence, institutions, execution, and correction.
+  - pair_id: NVP-TP
+    problems: [nomos-vs-physis, theologico-political]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Nomos vs. Physis owns natural and positive-law distinctions. The Theologico-
+      Political Problem owns ultimate authority among reason, revelation, command,
+      sacred law, interpretation, and sovereignty.
+  - pair_id: NVP-AVJ
+    problems: [nomos-vs-physis, athens-vs-jerusalem]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Nomos vs. Physis owns nature and convention as a permanent distinction. Athens
+      vs. Jerusalem owns nature and creation within comprehensive rival ways of life.
+  - pair_id: NVP-WVG
+    problems: [nomos-vs-physis, wise-vs-vulgar]
+    status: BOUNDARY_PASS_DIRECTIONAL_TYPE_REVIEW_OPEN
+    primary_allocation: >
+      Nomos vs. Physis owns the content and burden of a natural standard. The Wise vs.
+      The Vulgar owns recognition and capture of claimants who assert knowledge of it.
+    open_item: >
+      The reciprocal records use SUPPLIES_FINDING_TO and INTERSECTS rather than an
+      explicit inverse pair. This does not create doctrinal duplication but should be
+      reviewed when relation-direction rules are formally specified.
+  - pair_id: NVP-AVM
+    problems: [nomos-vs-physis, ancients-vs-moderns]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Nomos vs. Physis owns the permanent standard. Ancients vs. Moderns owns the
+      historical transformation of nature, right, rights, history, and value creation.
+
+  - pair_id: PVP-TVP
+    problems: [philosophy-vs-poetry, theory-vs-practice]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Philosophy vs. Poetry owns the poetic accusation concerning prudence, souls,
+      education, and political consequence. Theory vs. Practice owns the general
+      movement from understanding to responsible action.
+  - pair_id: PVP-TP
+    problems: [philosophy-vs-poetry, theologico-political]
+    status: BROTHER_PROBLEM_BOUNDARY_PASS
+    primary_allocation: >
+      Philosophy vs. Poetry owns rival human forms of wisdom and poetic representation.
+      The Theologico-Political Problem owns genuine revelation, divine command, sacred
+      law, interpretation, and ultimate authority.
+    safeguard: >
+      Co-foundational brotherhood requires coactivation where appropriate but does not
+      authorize merger, revelation-poetry reduction, or duplicate governing doctrine.
+  - pair_id: PVP-AVJ
+    problems: [philosophy-vs-poetry, athens-vs-jerusalem]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Philosophy vs. Poetry owns poetic, dramatic, and philosophic forms of disclosure.
+      Athens vs. Jerusalem owns the comprehensive orientations of autonomous
+      understanding and obedient love.
+  - pair_id: PVP-WVG
+    problems: [philosophy-vs-poetry, wise-vs-vulgar]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Philosophy vs. Poetry owns the substantive rival claims. The Wise vs. The Vulgar
+      owns claimant recognition, rank, differentiated education, and capture.
+  - pair_id: PVP-AVM
+    problems: [philosophy-vs-poetry, ancients-vs-moderns]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Philosophy vs. Poetry owns the permanent quarrel. Ancients vs. Moderns owns its
+      transformation into aesthetics, culture, ideology, self-expression, and modern writing.
+
+  - pair_id: TVP-TP
+    problems: [theory-vs-practice, theologico-political]
+    status: BOUNDARY_PASS_DIRECTIONAL_TYPE_REVIEW_OPEN
+    primary_allocation: >
+      The Theologico-Political Problem owns the unresolved authority conflict. Theory
+      vs. Practice owns finite political settlement, toleration, action, and responsibility.
+    open_item: >
+      SUPPLIES_FINDING_TO and INTERSECTS are used reciprocally. The substantive boundary
+      is clear, but directional relation semantics require later formal review.
+  - pair_id: TVP-AVJ
+    problems: [theory-vs-practice, athens-vs-jerusalem]
+    status: BOUNDARY_PASS_DIRECTIONAL_TYPE_REVIEW_OPEN
+    primary_allocation: >
+      Athens vs. Jerusalem owns comprehensive ends and ways of life. Theory vs. Practice
+      owns their mediation into judgment, institution, action, and restraint.
+  - pair_id: TVP-WVG
+    problems: [theory-vs-practice, wise-vs-vulgar]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Theory vs. Practice owns the chain from understanding to action. The Wise vs. The
+      Vulgar owns who is recognized as superior and how capture is prevented.
+  - pair_id: TVP-AVM
+    problems: [theory-vs-practice, ancients-vs-moderns]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Theory vs. Practice owns the permanent action problem. Ancients vs. Moderns owns
+      its transformation through method, sovereignty, institutions, science, and control.
+
+  - pair_id: TP-AVJ
+    problems: [theologico-political, athens-vs-jerusalem]
+    status: OPEN_HIGH_PRIORITY_NO_MERGER
+    primary_allocation: >
+      The Theologico-Political Problem owns the strict conflict over ultimate authority,
+      revelation, command, sacred law, interpretation, and sovereignty. Athens vs.
+      Jerusalem owns the concrete comprehensive ways of life, highest human types,
+      beginnings, and ends.
+    risk: >
+      Both reciprocal records currently use DEPENDS_ON, creating a circular structural
+      dependency. This may reflect genuine co-implication, but it is not the adopted
+      brother-problem designation and must not silently become a merger.
+    required_resolution: >
+      Preserve both jurisdictions and test whether the relation should remain mutual
+      dependence or be revised to INTERSECTS after independent Biblical, Platonic,
+      Maimonidean, and Strauss witness reconstruction.
+  - pair_id: TP-WVG
+    problems: [theologico-political, wise-vs-vulgar]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      The Theologico-Political Problem owns substantive divine and philosophic authority.
+      The Wise vs. The Vulgar owns recognition of prophets, philosophers, theologians,
+      jurists, sovereigns, interpreters, and counterfeits.
+  - pair_id: TP-AVM
+    problems: [theologico-political, ancients-vs-moderns]
+    status: OPEN_MEDIUM_PRIORITY
+    primary_allocation: >
+      The Theologico-Political Problem owns the permanent authority conflict. Ancients
+      vs. Moderns owns modern critique, neutralization, rationalization, historicization,
+      secularization, and attempted supersession.
+    required_resolution: >
+      Independent modern and historicist witnesses must determine whether a given claim
+      is a proposed resolution of the permanent problem or a transformation governed by modernity.
+
+  - pair_id: AVJ-WVG
+    problems: [athens-vs-jerusalem, wise-vs-vulgar]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      Athens vs. Jerusalem owns the comprehensive ways and highest types. The Wise vs.
+      The Vulgar owns recognition, mediation, education, and capture of their bearers.
+  - pair_id: AVJ-AVM
+    problems: [athens-vs-jerusalem, ancients-vs-moderns]
+    status: OPEN_MEDIUM_PRIORITY
+    primary_allocation: >
+      Athens vs. Jerusalem owns the permanent comprehensive confrontation. Ancients vs.
+      Moderns owns modern transformations and attempted supersessions of the alternatives.
+    required_resolution: >
+      Source-specific studies must distinguish historical mediation, rationalization,
+      secularization, and political restoration from genuine preservation of either orientation.
+  - pair_id: WVG-AVM
+    problems: [wise-vs-vulgar, ancients-vs-moderns]
+    status: BOUNDARY_PASS
+    primary_allocation: >
+      The Wise vs. The Vulgar owns the permanent recognition and capture problem.
+      Ancients vs. Moderns owns modern claimant forms such as expertise, bureaucracy,
+      ideology, credentials, scientific authority, and technology.
+
+global_findings:
+  - finding_id: GLOBAL-001
+    status: PASS_WITH_SAFEGUARDS
+    finding: >
+      No present problem constitution was found to require deletion for complete
+      governing-doctrine duplication. Repeated language generally functions as a
+      boundary statement, local application, or controlled relation.
+  - finding_id: GLOBAL-002
+    status: PASS_AFTER_CORRECTION
+    finding: >
+      General irony, comedy, speech-and-deed, claimant, and audience methods remain
+      shared protocols rather than an eighth problem. Registry version drift was corrected.
+  - finding_id: GLOBAL-003
+    status: BOUNDARY_PRESERVED
+    finding: >
+      Political restoration is not redemption appears in The Theologico-Political
+      Problem and Athens vs. Jerusalem for different reasons: the former governs the
+      nonfinality of political jurisdiction; the latter governs the difference between
+      political goods and comprehensive redemptive ends.
+  - finding_id: GLOBAL-004
+    status: BOUNDARY_PRESERVED
+    finding: >
+      Prudential application appears in Nomos vs. Physis as a boundary of universal
+      standards and in Theory vs. Practice as the governing problem of action. The
+      standard and its application remain distinct.
+  - finding_id: GLOBAL-005
+    status: BOUNDARY_PRESERVED
+    finding: >
+      Political responsibility of superior claimants appears in The Wise vs. The Vulgar
+      as a test of rank and capture and in Theory vs. Practice as the chain from
+      understanding to action. Recognition and execution remain distinct.
+  - finding_id: GLOBAL-006
+    status: OPEN
+    finding: >
+      The most serious unresolved seam is not Philosophy vs. Poetry and The
+      Theologico-Political Problem, whose brother relation is explicit, but the boundary
+      between The Theologico-Political Problem and Athens vs. Jerusalem.
+
+validation_requirements_added:
+  - every problem constitution must list all six neighboring problems under does_not_own
+  - every problem and relations record must use only controlled relation types
+  - every relations record must contain six unique reciprocal problem references
+  - every relation must contain a jurisdictional boundary or equivalent ownership fields
+  - the brother-problem designation must be reciprocal and limited to the adopted pair
+  - shared protocol registry versions must equal the protocol-file versions
+  - Wise vs. Vulgar relations state must not claim classification is pending
+  - the cross-problem review must remain present and not be treated as certification
+
+termination:
+  review_state: ARCHITECTURAL_REVIEW_COMPLETE_OPEN_SEAMS_PRESERVED
+  certification: NOT_CERTIFIED
+  activation: NOT_AUTHORIZED
+  blocking_items:
+    - successful automated YAML, path, relation, and transaction validation run not observed
+    - TP-AVJ jurisdictional relation requires independent source-tested resolution
+    - directional relation semantics have not been formally specified for asymmetric pairs
+    - independent witness requirements remain incomplete
+  next_required_work:
+    - extend and run the automated validator against the requirements recorded here
+    - correct every machine-detected structural finding through versioned updates
+    - register and reconstruct the next independent witnesses
+    - update this review after source-tested allocation of the open seams
+    - certify and activate only after all migration preconditions pass
