@@ -1,0 +1,67 @@
+schema_version: 1.0
+document_type: shared_interpretive_protocol
+
+identity:
+  canonical_key: inference-discipline
+  title: Inference Discipline Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+
+depends_on:
+  - source-status
+  - evidence-classification
+
+purpose: >
+  Govern the movement from documentary evidence to interpretive conclusion.
+
+governing_rule: >
+  Interpretive conclusions must not exceed the evidence, scope, or documentary
+  authority of their supporting sources.
+
+required_operations:
+  - identify the exact evidence
+  - distinguish quotation from paraphrase
+  - distinguish author from speaker
+  - distinguish title from demonstrated activity
+  - distinguish local claim from complete doctrine
+  - identify alternative explanations
+  - state the inferential step
+  - state what the inference does not establish
+  - preserve documentary qualifications
+  - record contradictions before attempting resolution
+
+prohibited_inferences:
+  - persecution therefore truth
+  - ridicule therefore superiority
+  - obscurity therefore depth
+  - secrecy therefore wisdom
+  - openness therefore honesty
+  - professional title therefore philosophic rank
+  - influence therefore truth
+  - political success therefore justice
+  - religious intensity therefore revelation
+  - editorial selection therefore authorial endorsement of every implication
+  - similarity of formulation therefore identity of doctrine
+  - absence of refutation therefore proof
+  - chronological lateness therefore superiority
+  - agreement with Strauss therefore correctness
+
+valid_outputs:
+  - inference_supported
+  - inference_bounded
+  - inference_exceeds_evidence
+  - inference_prohibited
+  - alternative_explanation_required
+  - conclusion_withheld
+
+invoked_by:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
