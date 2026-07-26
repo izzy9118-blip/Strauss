@@ -1,0 +1,342 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: theologico-political
+  canonical_order: 4
+  title: The Theologico-Political Problem
+  legacy_identifiers:
+    - STR-PROBLEM-002
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  predecessor_index_reference: migrations/foundational-problems-v2/predecessor-index.yaml
+  transaction_reference: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+  source_status: >
+    This is an inactive successor draft derived through explicit preservation and
+    migration transactions. It does not replace, revise, deactivate, certify, or
+    retrospectively rewrite the active predecessor.
+
+predecessor_provenance:
+  active_predecessor:
+    path: problems/theologico-political.yaml
+    identifier: STR-PROBLEM-002
+    version: 1.1
+    blob_sha: 4a35e71916212082598097985deb23699c0018e7
+    governing_commit: 7a25b1fa3a7660a93318892342df57f661247b0d
+    status: ACTIVE_FOUNDATIONAL_PROBLEM_OBJECT
+  exact_historical_copy:
+    path: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+    blob_sha: 4a35e71916212082598097985deb23699c0018e7
+    preservation_commit: 259cf8b4c13cf5a96c7d665181154e4f4259e753
+  governing_rule: >
+    The active predecessor remains authoritative until the complete seven-problem
+    migration is validated, certified, and activated. This successor may be revised
+    only through new commits and may not alter either predecessor copy.
+
+documentary_basis:
+  primary_migration_source:
+    path: problems/theologico-political.yaml
+    source_count: 19
+    governing_limit: >
+      The nineteen-source predecessor synthesis is accepted migration material,
+      not a substitute for independent source-specific reconstruction.
+  cofoundational_source:
+    title: Socrates and Aristophanes
+    author: Leo Strauss
+    study_record: >
+      studies/socrates-and-aristophanes/
+      philosophy-poetry-theologico-political-reconstruction.yaml
+    local_contribution: >
+      Supplies a co-foundational finding concerning poetic theology, civic gods,
+      the poetic-philosophic rivalry, and the human recognition of divine authority.
+    limit: >
+      It does not by itself reconstruct revelation, divine command, Biblical
+      prophecy, sacred law, or the complete reason-revelation alternative.
+  documentary_rule: >
+    Full source registration belongs in witnesses.yaml; source-specific argument
+    belongs in study and synthesis records. This constitution records the permanent
+    problem, jurisdiction, burdens, boundaries, and nonresolution floor.
+
+origin: >
+  Philosophy arises within political communities governed by authoritative gods,
+  ancestral law, poetic-theological education, and claims of sacred order. Biblical
+  revelation gives the nonphilosophic alternative its comprehensive form as divine
+  creation, command, prophecy, covenant, and sacred law. The problem becomes fully
+  theologico-political because philosophy and revealed law make rival claims about
+  the whole human way of life while political authority must regulate their public
+  conflict without thereby deciding which comprehensive claim is true.
+
+governing_question: >
+  Can philosophy give a rational account of the whole and the best human life
+  sufficient to reject the authoritative claim of divine revelation and divine law;
+  or must philosophy remain answerable to a claim it cannot rationally refute while
+  political communities establish laws and jurisdictions governing their conflict?
+
+compressed_question: >
+  Can reason rightfully refuse divine authority when it cannot prove revelation
+  impossible, and what may political authority settle without settling the truth?
+
+brother_problem_designation:
+  related_problem: philosophy-vs-poetry
+  relation_type: INTERSECTS
+  constitutional_designation: BROTHER_PROBLEM
+  relation_strength: CO_FOUNDATIONAL
+  shared_origin: >
+    Both problems arise when philosophy challenges the authoritative
+    poetic-theological horizon through which political society understands gods,
+    divine law, justice, piety, education, and the highest life.
+  shared_question: >
+    Who can speak with wisdom and authority concerning the gods, justice,
+    education, and the highest human life?
+  coactivation_rule: >
+    Coactivate both problems when poetic and philosophic rivalry concerns gods,
+    piety, prophecy, oath, sacred law, worship, divine mediation, resistance to
+    divine command, the human recognition of divine authority, or the political
+    consequences of theological teaching.
+  distinction: >
+    Philosophy vs. Poetry governs rival human forms of wisdom, imitation,
+    education, dramatic representation, knowledge of souls, eros, music, audience,
+    and poetic guidance. The Theologico-Political Problem governs ultimate authority
+    among autonomous reason, genuine revelation, divine command, prophecy, sacred
+    law, theology, interpretation, and political sovereignty.
+  non_absorption_rule: >
+    Poetry is not revelation. Revelation is not poetic construction. Civic theology
+    is not identical with divine truth. Neither brother problem may reproduce or
+    absorb the other's full doctrine.
+
+jurisdiction:
+  owns:
+    - revealed divine law and the philosophic life as rival comprehensive claims
+    - the rational burden of excluding miracle, prophecy, or revelation
+    - the revelatory burden of distinguishing divine disclosure from human assertion
+    - divine command, prophecy, covenant, sacred law, theology, and revelation
+    - philosophy's claim to unrestricted examination of every comprehensive authority
+    - political law and sovereignty as mediators of theological-philosophic conflict
+    - authority over interpretation of sacred or otherwise authoritative texts
+    - persecution, toleration, and freedom to philosophize where ultimate authority is contested
+    - political settlements that regulate but do not resolve comprehensive truth claims
+    - the distinction between political restoration and redemption
+    - the distinction between causal explanation and refutation of revelation
+    - the limits of historical, psychological, scientific, and political closure
+    - affirmative nonresolution where neither comprehensive alternative is demonstrated victorious
+  does_not_own:
+    - canonical_key: nomos-vs-physis
+      reason: >
+        Nomos vs. Physis governs the general distinction between nature and law,
+        convention, custom, or inherited authority.
+    - canonical_key: philosophy-vs-poetry
+      reason: >
+        Philosophy vs. Poetry governs rival human forms of wisdom, poetic education,
+        imitation, dramatic representation, and knowledge of souls. Brother status
+        requires coactivation, not jurisdictional transfer.
+    - canonical_key: theory-vs-practice
+      reason: >
+        Theory vs. Practice governs the general relation between understanding,
+        political judgment, action, legislation, prudence, and finite political goods.
+    - canonical_key: athens-vs-jerusalem
+      reason: >
+        Athens vs. Jerusalem governs autonomous understanding and obedient love as
+        comprehensive rival orientations toward the highest human life.
+    - canonical_key: wise-vs-vulgar
+      reason: >
+        The Wise vs. The Vulgar governs recognition of genuine and counterfeit
+        wisdom, unequal capacities, differentiated education, and elite capture.
+    - canonical_key: ancients-vs-moderns
+      reason: >
+        Ancients vs. Moderns governs historicism and the modern transformation of
+        nature, revelation, science, progress, history, and political philosophy.
+
+permanent_tension:
+  revealed_divine_law:
+    strongest_claim: >
+      Human life receives authoritative direction from God through creation,
+      command, prophecy, covenant, and sacred law whose wisdom exceeds unaided
+      human reason.
+    challenge_to_philosophy: >
+      Philosophy cannot justify disobedience merely by assuming that miracle,
+      prophecy, revelation, or divine command is impossible.
+    burden: >
+      A claimed revelation must be distinguished from unsupported assertion,
+      inherited opinion, human poetry, political imposition, psychological need,
+      fraudulent prophecy, or interpretive usurpation.
+  philosophic_life:
+    strongest_claim: >
+      No comprehensive claim concerning the whole or the right way of life may be
+      exempted from examination merely because it asserts divine, ancestral, poetic,
+      or political authority.
+    challenge_to_revelation: >
+      A command cannot establish its own truth for philosophy solely by demanding
+      obedience or prohibiting inquiry.
+    burden: >
+      Philosophy may not claim a demonstrated victory unless its account of the
+      whole is sufficient to establish the impossibility or falsity of revelation.
+  political_mediation:
+    function: >
+      Law and sovereignty must establish enforceable jurisdiction concerning
+      conduct, worship, education, interpretation, public teaching, toleration,
+      persecution, and civic peace.
+    limit: >
+      Public jurisdiction establishes who rules and what may be done publicly; it
+      does not establish which comprehensive teaching is true or finally rightful.
+  unresolved_relation: >
+    Philosophy's inability to refute revelation does not prove any particular
+    revelation true. Revelation's claim of divine authority does not constitute a
+    philosophic proof. The conflict remains rationally open unless stronger evidence
+    satisfies the burden of one alternative without presupposing its conclusion.
+
+boundary:
+  activates_when:
+    - a law, text, prophet, institution, or teaching claims divine origin or command
+    - obedience is demanded in place of autonomous examination
+    - philosophy is accused of impiety, heresy, atheism, or political danger
+    - miracle, prophecy, or revelation is dismissed without proof of impossibility
+    - causal, historical, psychological, or scientific explanation is treated as refutation
+    - a sovereign or religious authority claims final jurisdiction over sacred interpretation
+    - freedom to philosophize is granted, restricted, tolerated, or persecuted
+    - political settlement is treated as proof of comprehensive truth or neutrality
+    - revelation is translated into morality, symbolism, culture, or progress
+    - Jewish emancipation, assimilation, Zionism, statehood, survival, or suffering is assigned theological finality
+    - a good, liberal, national, revolutionary, universal, or historical state is treated as final human completion
+    - poetic theology or civic gods are treated as proof for or against genuine revelation
+  does_not_activate_by_itself:
+    - ordinary religious practice without a comprehensive authority claim
+    - cultural or communal identity considered without divine authority or law
+    - every dispute between church and state administration
+    - every use of theological vocabulary
+    - every question concerning gods in poetry
+    - every exercise of political sovereignty
+    - every historical event involving religion
+
+relations:
+  - related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+    summary: >
+      Philosophy's discovery of nature supplies the distinction through which
+      inherited and divine-law claims become examinable.
+  - related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+    constitutional_designation: BROTHER_PROBLEM
+    relation_strength: CO_FOUNDATIONAL
+    summary: >
+      Poetic-philosophic rivalry and theologico-political authority arise together
+      where gods, piety, sacred law, divine mediation, and education are contested.
+  - related_problem: theory-vs-practice
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      The conflict supplies practical problems of toleration, sovereignty,
+      persecution, interpretation, statehood, and finite political settlement.
+  - related_problem: athens-vs-jerusalem
+    relation_type: DEPENDS_ON
+    summary: >
+      Athens and Jerusalem supply the highest comprehensive poles of autonomous
+      understanding and obedient love without exhausting their political mediation.
+  - related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    summary: >
+      Prophets, philosophers, theologians, sovereigns, jurists, and interpreters are
+      rival claimants whose titles and differentiated audiences require examination.
+  - related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Modernity attempts to defeat, neutralize, privatize, rationalize, historicize,
+      or politically supersede the permanent conflict.
+
+shared_protocols:
+  required:
+    - canonical_key: source-status
+    - canonical_key: evidence-classification
+    - canonical_key: inference-discipline
+    - canonical_key: uncertainty-preservation
+    - canonical_key: speech-and-deed
+    - canonical_key: audience-and-rhetoric
+  conditional:
+    - canonical_key: irony
+      activation: >
+        Activate where positive textual evidence supports qualified, indirect, or
+        guarded teaching; never infer inversion from danger alone.
+    - canonical_key: claimant-to-wisdom
+      activation: >
+        Activate when prophet, philosopher, theologian, sovereign, jurist,
+        interpreter, historian, or critic claims superior or final authority.
+    - canonical_key: comedy
+      activation: >
+        Activate where comic action or ridicule substantively bears on gods,
+        piety, philosophy, or authority while preserving the poetry-revelation distinction.
+
+anti_capture_principle: >
+  The inquiry must not silently decide the problem in favor of revealed orthodoxy,
+  atheism, philosophic autonomy, scientific closure, modern secular sovereignty,
+  liberal neutrality, rational religion, assimilation, Zionism, anti-Zionism,
+  providential history, historicism, or a presumed harmony of Jerusalem and Athens.
+  Every claimant and settlement must disclose its title, domain, subjects, evidence,
+  interpretive authority, limits, means of enforcement, and claim to truth.
+
+non_absorption_clause: >
+  The Theologico-Political Problem must not become a container for every question
+  involving religion, gods, law, interpretation, persecution, Jewish history, or
+  political authority. It owns the conflict over ultimate authority among reason,
+  revelation, divine law, prophecy, theology, interpretation, and sovereignty.
+  Neighboring problems retain their complete jurisdictions, and shared interpretive
+  methods remain governed through protocols.
+
+anti_reduction_rules:
+  - revelation must not be reduced to private religious experience
+  - revelation must not be reduced to poetry, civic theology, myth, psychology, culture, or political utility
+  - poetic theology must not be treated as genuine revelation without evidence
+  - inability to refute revelation must not be treated as proof of a particular revelation
+  - a divine command claim must not be treated as philosophic proof of its origin
+  - natural regularities must not be treated as an exhaustive account of the whole
+  - causal or historical explanation must not be treated as refutation
+  - political jurisdiction must not be treated as comprehensive truth
+  - toleration must not be assumed neutral without examining who fixes its limits
+  - political restoration, sovereignty, or statehood must not be identified with redemption
+  - political success must not be treated as truth or failure as falsity
+  - persecution must not be treated as automatic proof of a concealed teaching
+  - autobiography must not be converted into final doctrine
+  - disciplined nonresolution must not be confused with indifference
+
+termination:
+  completion_standard: >
+    Examination is complete when the strongest revealed and philosophic claims have
+    been reconstructed; their reciprocal burdens have been tested without circular
+    premises; political mediation has been distinguished from comprehensive truth;
+    poetic theology has been distinguished from revelation; relevant claimants,
+    audiences, texts, interpretations, and historical settlements have been examined;
+    neighboring jurisdictions have been preserved; and any remaining confrontation
+    has been stated precisely without manufacturing a victor.
+  valid_states:
+    - documented_revelatory_claim
+    - documented_philosophic_claim
+    - supported_rational_critique
+    - supported_theological_challenge
+    - political_settlement_identified
+    - brother_problem_coactivation
+    - comprehensive_conflict_unresolved
+    - opacity_preserved
+    - further_source_reconstruction_required
+  prohibited_states:
+    - revelation dismissed without reconstruction
+    - philosophy forbidden by command alone
+    - inability to refute treated as proof of truth
+    - command treated as self-validating proof
+    - political settlement treated as philosophic resolution
+    - poetic theology treated as revelation
+    - revelation reduced to poetry
+    - history treated as self-interpreting
+    - predecessor silently replaced
+    - successor certified or activated before migration certification
+
+non_certification_notice: >
+  This successor constitution is a founding draft. It does not certify or activate
+  the successor, supersede the active predecessor, establish the truth or falsity of
+  revelation, decide Strauss's final allegiance, or certify victory for philosophy,
+  theology, sovereignty, or historicism.
