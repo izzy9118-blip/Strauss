@@ -1,0 +1,138 @@
+schema_version: 1.0
+document_type: repository_integration_record
+
+identity:
+  integration_id: SPPP-INTEGRATION-001
+  title: Studies in Platonic Political Philosophy — Repository Integration
+  version: 1.0.0
+
+status:
+  lifecycle: INTEGRATION_READY
+  certification: NOT_CERTIFIED
+  source_study_complete: true
+  constitutional_activation: false
+  predecessor_effect: NONE
+
+source_records:
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  sequential_reading: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+  foundational_synthesis: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+  theologico_political_reconstruction: studies/studies-in-platonic-political-philosophy/theologico-political-reconstruction.yaml
+
+problem_integration:
+  - canonical_key: nomos-vs-physis
+    current_problem_status: MIGRATION_PENDING
+    study_contribution_status: COMPLETE_AND_READY_FOR_SUCCESSOR_PRODUCTION
+    contribution: >
+      Natural law is distinguished from human and divine positive law; legal necessity,
+      natural recurrence, power, universal rule, prudence, modern rights, value creation,
+      and symbolic Law are separated.
+    required_next_record: problems/nomos-vs-physis/problem.yaml and subordinate source synthesis
+    activation_effect: NONE
+
+  - canonical_key: philosophy-vs-poetry
+    current_problem_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
+    study_contribution_status: COMPLETE_SOURCE_SPECIFIC_STUDY
+    contribution: >
+      Plato, rhetoric, eristic, Thucydidean history, Xenophontic narrative, biblical
+      imagination, Machiavellian comedy, and Cohenian symbolism deepen the quarrel
+      beyond the completed Socrates and Aristophanes study.
+    bridge_record: problems/philosophy-vs-poetry/synthesis/studies-in-platonic-political-philosophy.yaml
+    witness_registry_update_required: true
+    activation_effect: NONE
+
+  - canonical_key: theory-vs-practice
+    current_problem_status: MIGRATION_PENDING
+    study_contribution_status: COMPLETE_AND_READY_FOR_SUCCESSOR_PRODUCTION
+    contribution: >
+      The collection distinguishes knowledge, deliberation, persuasion, authority,
+      execution, institutions, correction, chance, outcome, founding, preservation,
+      and indirect guidance.
+    required_next_record: problems/theory-vs-practice/problem.yaml and subordinate source synthesis
+    activation_effect: NONE
+
+  - canonical_key: theologico-political
+    current_problem_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED_ACTIVE_PREDECESSOR_RETAINED
+    study_contribution_status: COMPLETE_SOURCE_SPECIFIC_RECONSTRUCTION
+    contribution: >
+      The collection supplies strict distinctions among revelation, civic theology,
+      natural and divine Law, political necessity, Maimonidean mediation,
+      Machiavellian politicization, and Cohenian rationalization.
+    bridge_record: problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml
+    witness_registry_update_required: true
+    predecessor_reconciliation_required: true
+    activation_effect: NONE
+
+  - canonical_key: athens-vs-jerusalem
+    current_problem_status: MIGRATION_PENDING
+    study_contribution_status: COMPLETE_AND_READY_FOR_SUCCESSOR_PRODUCTION
+    contribution: >
+      The collection supplies the direct confrontation between wonder and fear,
+      nature and creation, philosopher and prophet, natural excellence and divine Law,
+      best regime and Messianic age.
+    required_next_record: problems/athens-vs-jerusalem/problem.yaml and subordinate source synthesis
+    activation_effect: NONE
+
+  - canonical_key: wise-vs-vulgar
+    current_problem_status: REDISTRIBUTION_PLANNED
+    study_contribution_status: COMPLETE_AND_READY_FOR_SUCCESSOR_PRODUCTION
+    contribution: >
+      The collection establishes the non-certification of wisdom, the recognition
+      problem, counterfeit philosophy, differentiated education, provisional rank,
+      indirect guidance, and the dangers of elite capture.
+    required_next_record: problems/wise-vs-vulgar/problem.yaml and subordinate source synthesis
+    activation_effect: NONE
+
+  - canonical_key: ancients-vs-moderns
+    current_problem_status: MIGRATION_PENDING
+    study_contribution_status: COMPLETE_AND_READY_FOR_SUCCESSOR_PRODUCTION
+    contribution: >
+      The collection reconstructs modernity as gain in reliability and power through
+      lowered beginnings, institutional regularization, historicism, value creation,
+      rationalized religion, and recurrent narrowing of the human horizon.
+    required_next_record: problems/ancients-vs-moderns/problem.yaml and subordinate source synthesis
+    activation_effect: NONE
+
+governing_protocol_integration:
+  protocol: speech-and-deed
+  status: COMPLETE_STUDY_CONTRIBUTION_READY_FOR_SHARED_PROTOCOL_RECORD
+  findings:
+    - speaker, audience, occasion, speech, action, outcome, and source status must remain distinct
+    - structural evidence must remain distinct from demonstrated intention
+    - irony does not authorize mechanical reversal
+    - omission is evidence only where presence is reasonably expected
+    - report is not certification
+    - preserved vocabulary may conceal transformed doctrinal referents
+    - composite and incomplete works require documentary-layer control
+  required_next_record: shared protocol revision or successor transaction
+
+safeguards:
+  - no silent revision of predecessor problem objects
+  - no certification from completion of a single Strauss-source study
+  - no activation of pending problem successors
+  - no merger of the seven problem jurisdictions
+  - no treatment of Pangle's Introduction as Strauss's missing introduction
+  - no treatment of the posthumous order as a fully demonstrated hidden treatise
+  - no replacement of independent classical, biblical, medieval, or modern witnesses by Strauss's interpretations
+  - no conversion of political utility into truth
+  - no conversion of philosophy's nonrefutation of revelation into proof of revelation
+  - no wisdom certification by office, title, success, suffering, secrecy, scholarship, or self-description
+
+recommended_transactions:
+  - sequence: 1
+    transaction: Register SPPP-STUDY-001 in Philosophy vs. Poetry witness registry.
+  - sequence: 2
+    transaction: Register SPPP-STUDY-001 in Theologico-Political witness registry and reconcile relevant nineteen-source entries.
+  - sequence: 3
+    transaction: Use this study as the first common documentary basis for the five pending foundational-problem successor objects.
+  - sequence: 4
+    transaction: Create or revise the shared speech-and-deed protocol from the collection-level synthesis.
+  - sequence: 5
+    transaction: Validate paths, identifiers, YAML, and cross-problem references before any certification request.
+
+termination:
+  integration_state: SOURCE_PACKAGE_RECORDED_PROBLEM_MIGRATIONS_PENDING
+  repository_effect: >
+    The repository now contains the complete provisional collection study and two
+    problem-specific bridge records. Existing problem lifecycle, certification,
+    predecessor, and activation states remain unchanged.
