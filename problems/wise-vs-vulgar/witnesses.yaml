@@ -1,0 +1,148 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: wise-vs-vulgar
+  title: The Wise vs. The Vulgar — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/wise-vs-vulgar/problem.yaml
+  inquiry_profile_reference: problems/wise-vs-vulgar/inquiry-profile.yaml
+  source_status_protocol: protocols/source-status.yaml
+  accepted_source_reference: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+  governing_rule: >
+    This registry records claimant types, witness roles, and documentary limits. It
+    does not certify a person, class, office, tradition, or profession as wise.
+
+witnesses:
+  - witness_id: WVG-WIT-001
+    name: Leo Strauss
+    witness_class: MODERN_INTERPRETIVE_PRIMARY_WITNESS
+    local_role: >
+      Primary witness for reconstructing the recognition problem, political
+      philosophy's self-correction, differentiated communication, and anti-capture.
+    registered_sources:
+      - title: Studies in Platonic Political Philosophy
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+        synthesis_record: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_status: SEQUENTIAL_AND_SYNTHETIC_RECONSTRUCTION_COMPLETE_NOT_CERTIFIED
+    limit: >
+      Strauss's authority as interpreter does not certify Strauss or any represented claimant as wise.
+  - witness_id: WVG-WIT-002
+    name: Socrates
+    witness_class: DISPUTED_PHILOSOPHIC_CLAIMANT
+    local_role: >
+      Central witness to knowledge of ignorance, examination of claimants, political
+      misrecognition, audience differentiation, and the limits of public self-presentation.
+    study_status: PARTIAL_PLATONIC_RECONSTRUCTION_COMPLETE_COMPARATIVE_WORK_PENDING
+  - witness_id: WVG-WIT-003
+    name: Plato
+    witness_class: INDEPENDENT_PHILOSOPHIC_AND_DRAMATIC_WITNESS
+    local_role: >
+      Witness to philosopher, sophist, rhetorician, ruler, law, education, rank, and
+      the dramatic difficulty of recognizing wisdom.
+    study_status: PARTIAL_APOLOGY_RECONSTRUCTION_COMPLETE_WIDER_CORPUS_PENDING
+  - witness_id: WVG-WIT-004
+    name: Xenophon
+    witness_class: INDEPENDENT_SOCRATIC_AND_PRACTICAL_WITNESS
+    local_role: >
+      Witness to differentiated dialectic, practical superiority, correction,
+      restraint, indirect guidance, and the relation of speech to public deed.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: WVG-WIT-005
+    name: Aristophanes
+    witness_class: INDEPENDENT_POETIC_CLAIMANT
+    local_role: >
+      Witness to philosophy's possible lack of self-knowledge, comic exposure,
+      knowledge of souls, audience, and the danger of solemn intellectual pretension.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: WVG-WIT-006
+    name: Thucydides
+    witness_class: INDEPENDENT_HISTORICAL_WITNESS
+    local_role: >
+      Witness to statesmen, speakers, masses, generals, religious claimants, and the
+      difference among practical judgment, rhetoric, success, and wisdom.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: WVG-WIT-007
+    name: Maimonides
+    witness_class: MEDIEVAL_PHILOSOPHIC_LEGAL_WITNESS
+    local_role: >
+      Witness to sages, prophets, legal presumption, differentiated teaching,
+      scholarship, practical dogma, and the difficulty of recognizing authoritative rank.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: WVG-WIT-008
+    name: Machiavelli
+    witness_class: MODERN_ELITE_MANAGEMENT_WITNESS
+    local_role: >
+      Witness to ruling elites, civil theology, unequal belief, initiation through
+      concealed teaching, effective command, and the danger of intelligent domination.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: WVG-WIT-009
+    name: Nietzsche
+    witness_class: MODERN_HIGHER_TYPE_WITNESS
+    local_role: >
+      Witness to higher types, herd morality, future philosopher-commanders, value
+      creation, scholars, and the unresolved distinction between philosopher and tyrant.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: WVG-WIT-010
+    name: Hermann Cohen
+    witness_class: MODERN_RELIGIOUS_INDIVIDUALITY_WITNESS
+    local_role: >
+      Witness to the absolute individual beyond state and society, moral self-judgment,
+      modesty, intellectual probity, and the limits of judging other souls.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+
+claimant_classes:
+  - philosopher
+  - sophist
+  - scholar
+  - professional philosopher
+  - technical expert
+  - statesman
+  - legislator
+  - poet
+  - rhetorician
+  - prophet
+  - theologian or religious scholar
+  - ideological vanguard
+  - partially liberated intellectual
+  - ordinary believer
+  - decent citizen
+
+witness_relation_rules:
+  - No claimant class is wise by definition.
+  - Political virtue must be reconstructed before being dismissed as vulgar opinion.
+  - Theoretical, practical, technical, moral, poetic, and revelatory claims must be distinguished.
+  - Hiddenness, persecution, inspiration, success, and office are noncertifying signs.
+  - Strauss and each classical or modern witness require independent source reconstruction.
+  - Findings governed by poetry, revelation, practice, or historical transformation must be cross-referenced rather than duplicated.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-FP-001
+      path: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+      witness: Leo Strauss
+      completion: SEQUENTIAL_AND_CROSS_PROBLEM_RECONSTRUCTION_COMPLETE
+      certification: NOT_CERTIFIED
+    - study_id: WVG-RECONSTRUCTION-0.2
+      path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+      witness: Repository accepted reconstruction
+      completion: ACCEPTED_MIGRATION_SOURCE_MATERIALIZED
+      certification: NOT_CANONICAL_NOT_CERTIFIED
+  pending:
+    - Socrates comparative reconstruction
+    - Plato wider corpus
+    - Xenophon
+    - Aristophanes
+    - Thucydides
+    - Maimonides
+    - Machiavelli
+    - Nietzsche
+    - Hermann Cohen
