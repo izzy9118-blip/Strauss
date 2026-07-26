@@ -1,0 +1,488 @@
+schema_version: 1.0
+document_type: source_specific_reconstruction
+
+identity:
+  study_id: PLATO-APOLOGY-PVP-TP-001
+  author: Plato
+  work: Apology of Socrates
+  title: Plato's Apology — Philosophy, Poetry, Soul, and Divine Authority
+  version: 0.1.0
+
+status:
+  lifecycle: PROVISIONAL_RECONSTRUCTION
+  sequential_reading: COMPLETE_FOR_REGISTERED_TRANSLATION
+  certification: NOT_CERTIFIED
+  comparative_synthesis: NOT_AUTHORIZED
+
+source:
+  source_status_record: studies/plato/apology/source-status.yaml
+  registered_translation: Benjamin Jowett
+  provider: Project Gutenberg
+  ebook_number: 1656
+  primary_scope: APOLOGY_BODY_ONLY
+  reviewed_body_range: Project Gutenberg HTML lines 115-317
+  source_limit: >
+    Findings are grounded in the registered English translation and must remain
+    revisable through Greek-text and alternate-translation comparison. Jowett's
+    introduction is excluded from primary findings.
+
+independence_rule: >
+  Plato is reconstructed here without treating Strauss, Aristophanes, Xenophon,
+  Jowett, Pangle, the historical Socrates, or the completed Socrates and
+  Aristophanes synthesis as governing Plato's meaning. Comparison begins only after
+  this independent record is complete.
+
+activated_problems:
+  - canonical_key: philosophy-vs-poetry
+    reason: >
+      The oldest public accusation is poetically mediated; Aristophanes is named;
+      poets are examined as claimants to wisdom; rhetoric and audience govern the trial.
+  - canonical_key: theologico-political
+    reason: >
+      Socrates is tried for impiety and corruption, invokes oracle, god, divine
+      command and sign, and refuses a political prohibition on philosophic inquiry.
+
+activated_protocols:
+  - source-status
+  - evidence-classification
+  - inference-discipline
+  - uncertainty-preservation
+  - speech-and-deed
+  - audience-and-rhetoric
+  - irony
+  - claimant-to-wisdom
+
+argumentative_and_dramatic_sequence:
+  - sequence_id: APO-SEQ-001
+    phase: OPENING_AND_RHETORICAL_CONTEST
+    reconstruction: >
+      Socrates begins by contrasting the persuasive effect of his accusers with
+      their lack of truth. He asks to speak in his accustomed manner rather than in
+      the court's conventional style and tells the judges to attend to truth rather
+      than ornament. The defence is therefore already a contest over what genuine
+      rhetoric is and how a political audience judges it.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 116-121
+
+  - sequence_id: APO-SEQ-002
+    phase: OLD_ACCUSERS_AND_POETIC_FORMATION
+    reconstruction: >
+      Socrates distinguishes recent legal accusers from older, more dangerous
+      accusers who formed the judges' opinions when they were young. He names a
+      comic poet as the exceptional identifiable source and restates the image of a
+      Socrates who studies heavens and earth, makes the weaker argument stronger,
+      teaches others, and is presumed not to believe in gods.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 122-131
+
+  - sequence_id: APO-SEQ-003
+    phase: HUMAN_WISDOM_AND_DELPHIC_RIDDLE
+    reconstruction: >
+      Socrates denies possessing the teachable human and political virtue claimed
+      by paid sophists. He locates his reputation in a limited human wisdom and
+      introduces the Delphic oracle as a divine witness whose assertion that no one
+      is wiser becomes a riddle to be tested rather than passively accepted.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 132-142
+
+  - sequence_id: APO-SEQ-004
+    phase: EXAMINATION_OF_CLAIMANTS
+    reconstruction: >
+      Socrates tests politicians, poets, and artisans. Politicians possess reputation
+      without knowledge; poets produce fine works through inspiration but cannot
+      adequately explain them and extend poetic success into unsupported claims of
+      general wisdom; artisans possess real technical knowledge but overextend it.
+      Socratic superiority is presented as awareness of ignorance, not possession of
+      the knowledge claimed by the others.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 143-154
+
+  - sequence_id: APO-SEQ-005
+    phase: DIVINE_MISSION_AND_POLITICAL_ENMITY
+    reconstruction: >
+      Socrates interprets the oracle by continuing to examine every apparent
+      claimant to wisdom. The mission produces poverty, absorbs private and public
+      time, attracts young imitators, exposes pretension, and generates enmity. The
+      formal accusers represent poets, craftsmen and politicians, and rhetoricians.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 155-159
+
+  - sequence_id: APO-SEQ-006
+    phase: CORRUPTION_CHARGE_AND_EDUCATIVE_AUTHORITY
+    reconstruction: >
+      Meletus cannot name a serious educator beyond laws, judges, audience,
+      senators, assembly, and the city generally. Socrates exposes the implausibility
+      that all Athenians improve youth while he alone corrupts them and distinguishes
+      intentional wrongdoing from an error that should have been corrected through
+      private instruction rather than punishment.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 160-207
+
+  - sequence_id: APO-SEQ-007
+    phase: ATHEISM_AND_DIVINE_AGENCIES
+    reconstruction: >
+      The accusation shifts between different gods and no gods. Socrates separates
+      himself from doctrines associated with Anaxagoras and argues that belief in
+      divine or spiritual agencies is incompatible with complete atheism. The
+      refutation establishes a contradiction in Meletus' accusation more clearly
+      than it establishes the complete content of Socrates' theology.
+    evidence_classification: TEXTUALLY_SUPPORTED
+    source_location: Project Gutenberg body lines 208-231
+
+  - sequence_id: APO-SEQ-008
+    phase: ACHILLES_DIVINE_COMMAND_AND_PHILOSOPHIC_POST
+    reconstruction: >
+      Socrates answers the charge that his way of life is imprudent by invoking
+      Achilles and military steadfastness. He distinguishes unknown death from known
+      injustice and presents philosophic examination as a post assigned by god. He
+      would obey god rather than the city if acquittal required abandoning inquiry.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 232-242
+
+  - sequence_id: APO-SEQ-009
+    phase: GADFLY_AND_PRIVATE_POLITICAL_SERVICE
+    reconstruction: >
+      Socrates describes himself as a divine gift and gadfly whose poverty and
+      neglect of private concerns support his account of a mission to improve the
+      city's souls. The divine sign restrains rather than commands particular action
+      and explains his avoidance of ordinary public politics. His political service
+      occurs through private examination and exhortation.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 243-252
+
+  - sequence_id: APO-SEQ-010
+    phase: SPEECH_AND_DEED_UNDER_DEMOCRACY_AND_OLIGARCHY
+    reconstruction: >
+      Socrates offers actions as evidence: resisting an unlawful collective trial
+      under democracy and refusing the Thirty's command to arrest Leon. These deeds
+      present justice and avoidance of impiety or wrongdoing as superior to fear of
+      death and support continuity between private speech and rare public action.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT_WITH_PLATONIC_REPRESENTATION_LIMIT
+    source_location: Project Gutenberg body lines 253-258
+
+  - sequence_id: APO-SEQ-011
+    phase: OPEN_AUDIENCE_AND_NON_TEACHER_CLAIM
+    reconstruction: >
+      Socrates denies having regular disciples or a private doctrine. Rich and poor,
+      young and old may listen, ask, and answer. The pleasure of exposing false
+      wisdom explains the audience's attraction, while Socrates again presents the
+      examination as divinely imposed.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 259-266
+
+  - sequence_id: APO-SEQ-012
+    phase: REFUSAL_OF_FORENSIC_SUPPLICATION
+    reconstruction: >
+      Socrates refuses to use his children, tears, or entreaty to overpower the
+      judges' oaths. He characterizes such persuasion as dishonourable, unjust, and
+      impious because the judge should be informed and convinced rather than induced
+      to violate law. He affirms belief in gods in a manner he ranks above that of
+      his accusers without supplying a complete theology.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 267-275
+
+  - sequence_id: APO-SEQ-013
+    phase: PENALTY_AND_SELF_RANKING
+    reconstruction: >
+      After conviction Socrates refuses to propose as deserved any known evil for an
+      act he regards as beneficial. He claims that private philosophic service gives
+      real rather than apparent happiness and proposes public maintenance before
+      accepting a fine supported by friends. His manner remains continuous with the
+      defence and alien to the expected political performance of contrition.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 277-292
+
+  - sequence_id: APO-SEQ-014
+    phase: CONDEMNATION_PROPHECY_AND_TWO_AUDIENCES
+    reconstruction: >
+      Socrates divides the court after judgment. To condemners he predicts more
+      accusers and insists that silencing criticism cannot replace self-improvement.
+      To those who voted to acquit he interprets the silence of the divine sign and
+      considers two possibilities for death without claiming knowledge of which is true.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    source_location: Project Gutenberg body lines 294-312
+
+  - sequence_id: APO-SEQ-015
+    phase: FINAL_DIVINE_PROVIDENCE_AND_UNCERTAINTY
+    reconstruction: >
+      Socrates concludes that no evil happens to a good man and that he and his are
+      not neglected by the gods. Yet the final division remains epistemically modest:
+      he dies, the judges live, and god alone knows which is better. Divine trust and
+      acknowledged ignorance coexist rather than being fully systematized.
+    evidence_classification: CONTRADICTION_OR_TENSION_PRESERVED
+    source_location: Project Gutenberg body lines 313-317
+
+strongest_philosophic_claim:
+  proposition: >
+    The greatest human good is the continuing examination of oneself and others
+    concerning virtue, wisdom, truth, and the soul; a life that abandons such
+    examination is not worth living for a human being.
+  basis:
+    - awareness of ignorance is superior to false claims of wisdom
+    - examination exposes overextended political, poetic, and technical authority
+    - justice is treated as a known good superior to unknown death
+    - philosophic service aims at improvement of the soul rather than wealth, reputation, or office
+    - speech and represented deed are presented as consistent under democratic and oligarchic danger
+  limit: >
+    The Apology presents this claim through Socrates' public defence. It does not by
+    itself establish that Plato endorses every formulation without qualification.
+  evidence_classification: DOCUMENTED_OR_EXPLICIT_AS_SOCRATIC_CLAIM
+
+strongest_poetic_claim_as_PRESENT_IN_THE_WORK:
+  proposition: >
+    Poetry possesses the power to form the city's enduring image of the philosopher,
+    educate audiences from youth, associate inquiry into nature and rhetoric with
+    atheism and corruption, and provide authoritative heroic models for action.
+  basis:
+    - the comic representation shapes the older and more dangerous accusation
+    - Socrates uses Achilles and Homeric authority to explain courage and steadfastness
+    - poets produce fine and influential works through a power Socrates describes as inspiration
+  limit: >
+    The Apology does not give Aristophanes or the poets a direct opportunity to
+    defend their strongest wisdom claim. Plato's Socrates' criticism cannot serve as
+    a complete independent reconstruction of poetry.
+  evidence_classification: SUPPORTED_INFERENCE_FROM_POETIC_EFFECT_AND_SOCRATIC_USE
+
+poetic_accusation_against_philosophy:
+  reconstructed_charge: >
+    Philosophy investigates hidden natural things, uses rhetoric to reverse stronger
+    and weaker arguments, teaches young people to imitate examination, undermines
+    confidence in civic gods and authority, and corrupts the inherited education on
+    which political order depends.
+  source_of_charge:
+    - unnamed old accusers
+    - comic representation associated with Aristophanes
+    - later formal accusers acting for poets, politicians, craftsmen, and rhetoricians
+  demonstrated_force: >
+    The accusation governs the audience before the legal trial begins and cannot be
+    fully answered by cross-examining a named accuser because its authority is
+    diffused through memory, childhood education, theatre, and public opinion.
+  unresolved_question: >
+    The work does not independently establish whether the old accusation is wholly
+    false, partly true of an earlier Socrates, or transformed by Plato's public representation.
+
+socratic_critique_of_poets:
+  explicit_claims:
+    - poets may produce fine works through inspiration rather than knowledge
+    - poets may be unable to explain their own works adequately
+    - poetic excellence may generate false confidence concerning matters beyond poetry
+  demonstrated_limit_of_critique: >
+    Socrates' defence itself depends on poetic images and heroic authority, including
+    Achilles, the gadfly, prophecy, the afterlife possibility, and conversation with
+    Homer, Hesiod, Orpheus, and Musaeus. The work therefore does not enact a simple
+    expulsion of poetry from philosophic self-presentation.
+  evidence_classification: SPEECH_AND_DEED_TENSION
+
+philosophy_poetry_findings:
+  - finding_id: APO-PVP-001
+    classification: DOCUMENTED_OR_EXPLICIT
+    proposition: The poetic accusation precedes and helps generate the formal legal accusation.
+  - finding_id: APO-PVP-002
+    classification: DOCUMENTED_OR_EXPLICIT
+    proposition: Poets are examined as claimants to wisdom, not merely as entertainers.
+  - finding_id: APO-PVP-003
+    classification: SUPPORTED_INFERENCE
+    proposition: Poetic power is demonstrated by durable formation of audience opinion even where poetic knowledge is disputed.
+  - finding_id: APO-PVP-004
+    classification: SPEECH_AND_DEED_TENSION
+    proposition: Socrates criticizes poetic inspiration without understanding while using poetic authority and images in his own defence.
+  - finding_id: APO-PVP-005
+    classification: SUPPORTED_INFERENCE
+    proposition: The philosopher's political survival depends partly on whether poetry and rhetoric have prepared the audience to recognize or misrecognize him.
+  - finding_id: APO-PVP-006
+    classification: UNRESOLVED
+    proposition: The work does not settle whether Plato's dramatic art integrates poetic truth sufficiently to establish philosophy's superiority.
+
+strongest_divine_authority_claim:
+  proposition: >
+    Socrates' philosophic activity is an obligation imposed by god through the
+    Delphic oracle, divine signs, dreams or visions, and the interpreted mission of
+    examining apparent wisdom; obedience to this divine command outranks a civic
+    command to abandon philosophy.
+  evidence:
+    - the oracle's riddle initiates and governs the examination
+    - Socrates repeatedly describes his activity as obedience or service to god
+    - the divine sign restrains political action and is silent during the trial
+    - Socrates would refuse acquittal conditioned on ending inquiry
+  limit: >
+    The work does not supply a general proof that the oracle or divine sign is
+    genuinely divine, nor does it identify Socratic divine authority with Biblical revelation.
+  evidence_classification: DOCUMENTED_OR_EXPLICIT_AS_SOCRATIC_CLAIM
+
+theologico_political_findings:
+  - finding_id: APO-TP-001
+    classification: DOCUMENTED_OR_EXPLICIT
+    proposition: The legal charge joins corruption of youth with failure to acknowledge the city's gods and introduction of new divine agencies.
+  - finding_id: APO-TP-002
+    classification: DOCUMENTED_OR_EXPLICIT
+    proposition: Socrates presents divine command as superior to a civic command forbidding philosophic inquiry.
+  - finding_id: APO-TP-003
+    classification: DOCUMENTED_OR_EXPLICIT
+    proposition: Socrates also appeals to law, judicial oath, justice, and piety against manipulative persuasion.
+  - finding_id: APO-TP-004
+    classification: TEXTUALLY_SUPPORTED
+    proposition: Meletus' contradictory atheism charge is refuted more clearly than Socrates' complete theology is established.
+  - finding_id: APO-TP-005
+    classification: SUPPORTED_INFERENCE
+    proposition: Socrates' divine mission politically legitimates philosophy while transforming the city's understanding of service to god.
+  - finding_id: APO-TP-006
+    classification: CONTRADICTION_OR_TENSION
+    proposition: Socrates acknowledges ignorance concerning death while interpreting divine silence and asserting divine care for the good man.
+  - finding_id: APO-TP-007
+    classification: UNRESOLVED
+    proposition: The work does not demonstrate the divine origin of the oracle, sign, or mission to an examiner who does not already accept their authority.
+  - finding_id: APO-TP-008
+    classification: NON_ABSORPTION_FINDING
+    proposition: Delphic and daimonic authority in the Apology must not be identified without argument with prophecy, revelation, or sacred law.
+
+soul_and_education:
+  governing_finding: >
+    Socratic education is not presented as transmission of a completed doctrine. It
+    examines claimed knowledge, reorders concern from wealth and reputation toward
+    wisdom, truth, virtue, and the soul, and provokes young listeners to imitate the examination.
+  audience_differentiation:
+    - old accusers formed the judges when they were children or youths
+    - young men enjoy the exposure of pretenders and imitate Socrates
+    - politicians, poets, craftsmen, and rhetoricians defend different claims to authority
+    - citizens receive special exhortation because of political kinship
+    - condemning and acquitting judges receive different final speeches
+    - rich and poor, young and old, citizen and alien may listen to Socratic conversation
+  political_risk: >
+    Examination can improve souls but also generates humiliation, imitation,
+    resentment, accusations of corruption, and lethal political reaction.
+  unresolved_question: >
+    The dialogue does not establish that every listener is improved or that
+    examination alone supplies the positive content of virtue.
+
+speech_and_deed_analysis:
+  correspondences:
+    - Socrates rejects injustice in speech and is represented resisting illegal commands under democracy and oligarchy.
+    - He denies teaching for pay and points to poverty and open access as deeds supporting the claim.
+    - He ranks soul over wealth and accepts death rather than abandon the represented mission.
+    - He rejects manipulative courtroom rhetoric and refuses the conventional performance of supplication.
+  tensions:
+    - He disclaims formal rhetoric while delivering a highly structured and audience-conscious defence.
+    - He denies being a teacher while repeatedly describing exhortation, examination, and improvement of souls.
+    - He denies knowledge of death while drawing moral and theological conclusions from the divine sign's silence.
+    - He calls the oracle a riddle to be tested yet ultimately treats it as irrefutable and governing.
+    - He criticizes poetic inspiration without understanding while employing poetic examples, images, and possible afterlife narratives.
+  interpretive_rule: >
+    These tensions require dramatic analysis and may indicate qualified teaching,
+    public adaptation, or unresolved difficulty. They do not authorize automatic inversion.
+
+claimant_tests:
+  Socrates:
+    title: limited human wisdom, divine mission, and care of souls
+    demonstrated_strengths:
+      - awareness of ignorance
+      - ability to expose contradictory or overextended claims
+      - represented consistency under political danger
+      - refusal to identify survival with the good
+    unresolved_limits:
+      - positive knowledge of virtue and the soul's perfection
+      - proof of the divine mission
+      - responsibility for effects on young imitators
+      - relation between public defence and private philosophic activity
+  poets:
+    title: inspired production, education, authoritative image, and public memory
+    demonstrated_strengths:
+      - production of fine and enduring works
+      - formation of public opinion from youth
+      - supply of heroic models and language for action
+    unresolved_limits:
+      - understanding of their own works
+      - knowledge beyond poetic production
+      - direct answer to Socrates' criticism
+  city_and_law:
+    title: legal judgment, civic piety, education, and protection of order
+    demonstrated_strengths:
+      - enforceable public jurisdiction
+      - oath-bound procedure
+      - capacity to demand accountability
+    unresolved_limits:
+      - ability to distinguish genuine education from corruption
+      - susceptibility to inherited poetic images and resentment
+      - right to forbid examination where Socrates claims divine command
+  oracle_and_divine_sign:
+    title: divine authority over the philosophic mission
+    demonstrated_strengths:
+      - practical orientation of Socrates' represented life
+      - interpretive coherence with poverty, private examination, and refusal of silence
+    unresolved_limits:
+      - independent demonstration of divine origin
+      - exact relation between oracle, sign, gods, and philosophical reason
+
+false_resolutions_rejected:
+  - Plato's Apology proves the historical Socrates spoke these exact words.
+  - Socrates' refutation of Meletus establishes a complete Platonic theology.
+  - The poetic accusation is irrelevant because Socrates calls it false.
+  - Poets possess no knowledge because they cannot explain their works.
+  - Poetic influence proves poetic truth.
+  - Socrates is simply a civic loyalist because he invokes law and oaths.
+  - Socrates is simply an anarchist because he would obey god rather than a civic ban on philosophy.
+  - The Delphic oracle is identical with Biblical revelation.
+  - The divine sign is philosophically demonstrated because Socrates reports it.
+  - Plato's dramatic deed can be reduced to Socrates' explicit defence.
+  - The work certifies philosophy's superiority before poetry's strongest independent claim is reconstructed.
+  - Agreement with Strauss may be assumed rather than tested.
+
+comparative_implications_not_yet_synthesis:
+  Socrates_and_Aristophanes:
+    permitted_observation: >
+      The Apology confirms that a comic representation is central to the older public
+      accusation and to the political danger confronting Socrates.
+    prohibited_conclusion: >
+      It does not by itself establish Strauss's historical reconstruction of a young
+      Socrates or Aristophanes' causal role in a Socratic turn.
+  Xenophon:
+    required_future_test: >
+      Compare Xenophon's account of the trial, divine sign, piety, teaching, and
+      Socratic political prudence only after independent Xenophontic reconstruction.
+  later_Strauss:
+    required_future_test: >
+      Compare Strauss's On Plato's Apology of Socrates and Crito and related corpus
+      witnesses only after the primary Platonic record remains independently visible.
+
+uncertainties:
+  - Plato's final teaching cannot be equated automatically with Socrates' public speech.
+  - The historical accuracy of the represented defence is not established here.
+  - The exact Greek terms underlying Jowett's god, gods, divine, spiritual agencies, soul, virtue, and wisdom require verification.
+  - The work's deliberate relation between old poetic accusation and present philosophic self-presentation remains open.
+  - Socrates' status as non-teacher and educator remains a substantive tension.
+  - The relation between divine mission and rational examination remains unresolved.
+  - The meaning of the divine sign's silence does not amount to a demonstrated doctrine of providence.
+  - Poetry's strongest independent answer is absent from the courtroom and must be reconstructed elsewhere.
+  - Philosophy's integrative superiority remains provisional and un-certified.
+
+outputs_to_foundational_problems:
+  philosophy_vs_poetry:
+    permitted_findings:
+      - poetic formation of the old accusation
+      - poets as claimants to wisdom and inspiration
+      - durable power of images over political audiences
+      - Socratic dependence on poetic examples and rhetoric
+      - need to compare explicit critique with Platonic dramatic deed
+    status: PROVISIONAL_SOURCE_FINDINGS_NOT_YET_SYNTHESIZED
+  theologico_political:
+    permitted_findings:
+      - impiety and civic gods as legal-political questions
+      - divine mission and civic prohibition as competing practical commands
+      - law and oath as limits on persuasion
+      - distinction between contradictory atheism charge and complete theology
+      - Delphic and daimonic authority not identical with revelation
+    status: PROVISIONAL_SOURCE_FINDINGS_NOT_YET_SYNTHESIZED
+
+termination:
+  study_state: INDEPENDENT_PLATONIC_APOLOGY_RECONSTRUCTION_COMPLETE_FOR_REGISTERED_TRANSLATION
+  certification: NOT_CERTIFIED
+  comparison_authorized: LIMITED_CROSS_REFERENCE_ONLY
+  next_independent_unit: >
+    Register and reconstruct Plato's Republic as the next Platonic witness to the
+    explicit old quarrel, poetic education, imitation, gods, soul, regime, and
+    philosophy, unless a governing source-order record establishes a prior dialogue.
+  required_before_certification:
+    - Greek-text and translation comparison for material terms
+    - cross-reference validation
+    - independent Republic reconstruction
+    - independent Xenophon reconstruction
+    - later comparison with Strauss without forced confirmation
