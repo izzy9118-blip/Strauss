@@ -1,0 +1,1256 @@
+id: STR-PROBLEM-002
+title: The Theologico-Political Problem
+version: 1.1
+status: ACTIVE — FOUNDATIONAL PROBLEM OBJECT
+type: fundamental_problem
+
+revision_basis:
+  previous_version: 1.0
+  disposition: revise_not_replace
+  preserved_identity:
+    - STR-PROBLEM-002
+    - The Theologico-Political Problem
+    - fundamental_problem
+  preservation_rule: >
+    Version 1.0 remains permanently preserved in Git history as the first
+    foundational formulation of Problem Two. Version 1.1 does not retroactively
+    alter, erase, or misrepresent the earlier object.
+  what_version_1_0_established:
+    - >
+      Revelation, philosophy, political law, and sovereignty may make competing
+      claims concerning authority over belief, conduct, interpretation, and law.
+    - >
+      Revelation and philosophy make comprehensive claims concerning the right
+      way of life.
+    - >
+      A political settlement may establish who governs publicly without
+      establishing which comprehensive teaching is true.
+    - >
+      Interpretation of an authoritative text may itself constitute an exercise
+      of political, theological, or philosophic rule.
+    - >
+      Persecution, orthodoxy, censorship, and differentiated audiences create
+      serious grounds for investigating guarded writing.
+    - >
+      Grounds for guarded writing do not independently prove a concealed teaching.
+    - >
+      Neither philosophy nor revelation may be declared victorious before its
+      strongest claim has been reconstructed and examined.
+    - >
+      The remaining contention may be preserved affirmatively rather than closed
+      through an unsupported verdict.
+  reason_for_revision: >
+    Version 1.0 correctly established the jurisdictional, political, and
+    hermeneutic skeleton of the theologico-political problem, but it treated
+    revelation, philosophy, political law, and sovereignty as if they were
+    comprehensive contenders of the same order. The nineteen-source review shows
+    that revealed divine law and the philosophic life are the primary comprehensive
+    alternatives. Political law, sovereignty, toleration, liberal emancipation,
+    rational religion, assimilation, Zionism, and the good society are principally
+    political mediations, historical responses, or attempted resolutions of that
+    prior confrontation. Version 1.1 therefore recenters the problem on whether
+    philosophy can rationally justify its refusal to submit to revelation when it
+    cannot demonstrate that revelation is impossible.
+
+documentary_source_basis:
+  source_count: 19
+  source_rule: >
+    These writings constitute the primary documentary basis of version 1.1.
+    Each source must remain independently reconstructible. The synthesis may not
+    erase differences of occasion, audience, terminology, argumentative sequence,
+    or epistemic status among them.
+  sources:
+    - sequence: 1
+      title: Progress or Return?
+      date: 1952
+      contribution: >
+        Establishes progress and return as rival orientations and presents the
+        unresolved conflict between the biblical and philosophic accounts of the
+        good life as a living foundation of Western civilization.
+    - sequence: 2
+      title: Preface to Spinoza's Critique of Religion
+      canonical_alias: Autobiographical Preface to Spinoza's Critique of Religion
+      date: 1965
+      contribution: >
+        Reconsiders the alleged rational defeat of orthodoxy and asks whether
+        reason can exclude miracle or revelation without a demonstrated exhaustive
+        account of the whole.
+    - sequence: 3
+      title: How to Study Spinoza's Theologico-Political Treatise
+      date: 1948
+      contribution: >
+        Establishes that interpretation must precede historical or psychological
+        explanation and examines Scripture, prophecy, freedom to philosophize,
+        sovereign authority, and differentiated audiences.
+    - sequence: 4
+      title: Preface to Isaac Husik, Philosophical Essays
+      date: 1952
+      contribution: >
+        Distinguishes the living confrontation between philosophy and revealed law
+        from an antiquarian history of medieval Jewish philosophy.
+    - sequence: 5
+      title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
+      date: 1972
+      contribution: >
+        Examines the strongest modern rational reconciliation of Judaism,
+        revelation, morality, law, autonomy, and historical progress.
+    - sequence: 6
+      title: Freud on Moses and Monotheism
+      date: 1958
+      contribution: >
+        Examines psychological and historical explanation as a proposed substitute
+        for revelation and tests whether causal explanation constitutes refutation.
+    - sequence: 7
+      title: Why We Remain Jews
+      date: 1962
+      contribution: >
+        Reconstructs emancipation, assimilation, Jewish persistence, political and
+        cultural Zionism, Torah, and the limits of merely political solutions.
+    - sequence: 8
+      title: On the Interpretation of Genesis
+      date: 1957
+      contribution: >
+        Requires Genesis to be read first as a serious account of creation,
+        command, obedience, disobedience, punishment, and the human place in the
+        whole.
+    - sequence: 9
+      title: Jerusalem and Athens
+      date: 1967
+      scope: Part V — Comments on Jewish History within the complete argument
+      contribution: >
+        Presents Jerusalem and Athens as comprehensive alternatives and examines
+        how Jewish history becomes intelligible within, but does not automatically
+        decide between, rival providential and philosophic accounts.
+    - sequence: 10
+      title: What Is Political Philosophy?
+      date: 1954
+      scope: first paragraph
+      contribution: >
+        Places political philosophy beside the prophetic image of Jerusalem while
+        distinguishing the philosophic best regime from the Kingdom of God.
+    - sequence: 11
+      title: Review of J. L. Talmon, The Nature of Jewish History
+      date: 1957
+      contribution: >
+        Rejects an easy philosophy of Jewish historical progress and presents the
+        Jewish problem as an especially manifest form of the human social and
+        political problem.
+    - sequence: 12
+      title: Letter to the Editor — The State of Israel
+      date: 1957
+      contribution: >
+        Distinguishes the political dignity and necessity of Jewish statehood from
+        redemption, messianic fulfillment, or proof of providence.
+    - sequence: 13
+      title: Introduction to Persecution and the Art of Writing
+      date: 1952
+      contribution: >
+        Establishes the political conditions of philosophic communication and the
+        criteria and limits governing inquiry into exoteric and esoteric writing.
+    - sequence: 14
+      title: Perspectives on the Good Society
+      date: 1963
+      contribution: >
+        Distinguishes finite political improvement from a final society,
+        redemption, or abolition of the permanent human problem.
+    - sequence: 15
+      title: An Unspoken Prologue
+      date: 1959
+      contribution: >
+        Supplies autobiographical evidence concerning orthodoxy, unbelief, Zionism,
+        Nietzsche, and the rediscovery of medieval philosophy without settling
+        Strauss's final doctrinal allegiance.
+    - sequence: 16
+      title: Preface to Hobbes Politische Wissenschaft
+      date: 1965
+      contribution: >
+        Names the theologico-political problem as a continuing theme of Strauss's
+        investigations and examines sovereign peace as political neutralization
+        rather than philosophic resolution.
+    - sequence: 17
+      title: A Giving of Accounts
+      date: 1970
+      contribution: >
+        Presents philosophy through teachers, books, gratitude, intellectual debts,
+        and continued inquiry while limiting doctrinal inference from autobiography.
+    - sequence: 18
+      title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
+      date: 1946
+      contribution: >
+        Reveals the original architecture of the inquiry as philosophy confronted
+        by revealed law, particularly in medieval Jewish and Islamic philosophy.
+    - sequence: 19
+      title: Restatement on Xenophon's Hiero
+      date: 1950
+      contribution: >
+        Deepens the problem through the dispute over tyranny, wisdom, the universal
+        state, eternity, history, and whether truth is discovered or historically
+        created.
+  secondary_source_boundary: >
+    Thomas L. Pangle's introduction to Studies in Platonic Political Philosophy
+    may be used as a provisional secondary reconstruction and bibliographic guide.
+    It may not substitute for Strauss's own arguments or determine the meaning of
+    the nineteen primary source witnesses.
+
+layered_origin:
+  classical_political_origin:
+    principal_witness: Plato
+    description: >
+      The problem first becomes politically visible in the conflict between the
+      philosophic life and the authoritative gods, laws, poets, opinions, education,
+      and judgments of the political community. The city may accuse philosophy of
+      impiety or danger, while philosophy examines whether the city understands
+      justice, piety, or the good.
+  biblical_comprehensive_alternative:
+    principal_witnesses:
+      - Genesis
+      - Torah
+      - biblical prophecy
+    description: >
+      Biblical revelation gives the alternative its most comprehensive form.
+      Revelation presents the whole as created, human life as subject to divine
+      command, wisdom as beginning from fear of the Lord, and individual and
+      collective existence as governed by covenant, law, promise, punishment,
+      repentance, and redemption.
+  medieval_legal_philosophical_articulation:
+    principal_witnesses:
+      - Maimonides
+      - medieval Jewish philosophy
+      - medieval Islamic philosophy
+    description: >
+      The conflict becomes fully legal and political when revelation is encountered
+      as a comprehensive divine law rather than merely as private belief or dogma.
+      Philosophy must then confront prophecy, jurisprudence, political order,
+      scriptural interpretation, and differentiated audiences.
+  modern_naming_and_reordering:
+    principal_witnesses:
+      - Spinoza
+      - Hobbes
+    description: >
+      Modern political philosophy attempts to criticize, subordinate, privatize, or
+      politically neutralize revealed authority. Spinoza reorders Scripture,
+      prophecy, interpretation, sovereign authority, and freedom to philosophize.
+      Hobbes places final public jurisdiction in the sovereign for the sake of peace.
+  jewish_historical_manifestation:
+    principal_subjects:
+      - emancipation
+      - assimilation
+      - Jewish persistence
+      - Zionism
+      - the State of Israel
+    description: >
+      The theologico-political problem becomes historically concrete in the modern
+      Jewish problem. Political equality, assimilation, cultural reconstruction,
+      sovereignty, and statehood address genuine human and political difficulties
+      without settling Torah, covenant, election, providence, or redemption.
+  historicist_deepening:
+    principal_witness: Kojeve
+    description: >
+      The problem reaches a metaphysical depth when the permanence of revelation
+      and philosophy is challenged by the claim that truth and human completion are
+      created through history rather than grounded in an eternal order.
+
+governing_question: >
+  Can philosophy give a rational account of the whole and of the best human life
+  sufficient to reject the authoritative claim of divine revelation and divine law;
+  or must philosophy remain permanently answerable to a claim it cannot rationally
+  refute, even while political communities must establish laws, jurisdictions, and
+  settlements regulating the conflict between them?
+
+governing_proposition: >
+  The theologico-political problem cannot be abolished by historical criticism,
+  scientific explanation, psychological reduction, sovereign decision, liberal
+  toleration, rationalized religion, assimilation, political Zionism, statehood, or
+  historicist supersession because none of these achievements independently
+  establishes the impossibility of revelation, the final sufficiency of philosophy,
+  or a demonstrated harmony between divine law and autonomous inquiry. Political
+  settlements may be necessary and beneficial, but they do not decide the truth of
+  the comprehensive alternatives.
+
+problem_statement: >
+  The theologico-political problem is the unresolved confrontation between revealed
+  divine law and the philosophic life. Revelation claims authoritative obedience
+  concerning the whole human way of life through creation, command, prophecy,
+  covenant, sacred law, promise, punishment, and redemption. Philosophy claims the
+  necessity of unrestricted examination concerning the whole, nature, justice, the
+  good, and the best way of life. Revelation cannot accept philosophic autonomy if
+  autonomous inquiry refuses obedience to divine command. Philosophy cannot accept
+  revelation as authoritative merely because revelation commands obedience.
+  Nevertheless, philosophy cannot claim a demonstrated victory if it lacks an
+  exhaustive account of the whole sufficient to establish that revelation or miracle
+  is impossible. Political communities cannot avoid the conflict because they must
+  decide what may be taught, who may interpret authoritative texts, what law governs
+  conduct, how public peace is secured, and whether philosophic inquiry is tolerated,
+  protected, subordinated, or persecuted. Modern Jewish history displays the problem
+  with exceptional clarity: emancipation, assimilation, cultural reconstruction,
+  Zionism, and the State of Israel answer genuine political needs without settling
+  the truth of Torah, divine election, providence, or redemption. The conflict
+  therefore remains both philosophic and political, both permanent and historically
+  mediated.
+
+primary_alternatives:
+  revealed_divine_law:
+    title_to_authority: >
+      Authority derived from divine creation, command, prophecy, covenant, sacred
+      law, and an authoritative revealed text.
+    beginning_of_wisdom: >
+      Hearing, fear of the Lord, obedience, remembrance, repentance, and fidelity.
+    account_of_human_life: >
+      Human life receives its authoritative direction from a divine law not created
+      by autonomous human reason or political agreement.
+    political_scope:
+      - individual conduct
+      - family life
+      - education
+      - worship
+      - law
+      - community membership
+      - collective memory
+      - political judgment
+      - historical interpretation
+      - the hope of redemption
+    strongest_claim: >
+      The divine law is authoritative because it is given by God, whose wisdom and
+      authority exceed the limits of unaided human reason.
+    challenge_to_philosophy: >
+      Philosophy cannot rationally justify disobedience merely by assuming that
+      miracle, prophecy, revelation, or divine command is impossible.
+  philosophic_life:
+    title_to_authority: >
+      Authority derived from the necessity of examination, the distinction between
+      opinion and knowledge, and the search for truth concerning the whole and the
+      best life.
+    beginning_of_wisdom: >
+      Wonder, questioning, awareness of ignorance, argument, and inquiry into nature.
+    account_of_human_life: >
+      The examined life is superior to a life governed by unexamined opinion,
+      inherited authority, or command accepted without inquiry.
+    political_scope:
+      - freedom to question
+      - education
+      - examination of law
+      - examination of prophecy
+      - examination of political authority
+      - examination of the good society
+      - communication with nonphilosophers
+    strongest_claim: >
+      No comprehensive claim concerning the right way of life may be exempted from
+      examination merely because it asserts divine, ancestral, or political authority.
+    challenge_to_revelation: >
+      A command cannot establish its own truth for philosophy solely by demanding
+      obedience or by prohibiting examination.
+
+political_mediators_and_settlements:
+  political_law:
+    function: >
+      Establishes public, enforceable, and relatively determinate rules concerning
+      conduct, education, worship, interpretation, and civic peace.
+    limit: >
+      Legal validity does not establish the truth of the comprehensive teaching the
+      law protects, tolerates, or suppresses.
+  sovereignty:
+    function: >
+      Supplies a final human decision concerning public jurisdiction, permissible
+      teaching, religious administration, and political peace.
+    limit: >
+      Sovereign decision establishes who rules publicly but does not establish who
+      possesses the highest rightful or truthful authority.
+  toleration:
+    function: >
+      Reduces persecution and permits rival beliefs or ways of life to coexist under
+      a common political order.
+    limit: >
+      Toleration may protect philosophy and religion while assigning both a scope
+      determined by the sovereign or liberal state.
+  liberal_emancipation:
+    function: >
+      Removes legal disabilities and recognizes Jews as equal individual citizens.
+    limit: >
+      Emancipation does not eliminate private hostility, inherited identity,
+      collective memory, or the question of continued Jewish existence.
+  rational_religion:
+    function: >
+      Attempts to reconcile revelation with autonomous morality, universal reason,
+      and historical progress.
+    limit: >
+      The reconciliation may preserve religious terminology while subordinating
+      divine command to a prior rational moral standard.
+  assimilation:
+    function: >
+      Attempts to remove political and social conflict by dissolving Jewish
+      particularity into the surrounding society.
+    limit: >
+      Assimilation solves the Jewish problem only through the disappearance of Jews
+      as a distinct people and therefore presupposes rather than proves that their
+      continued existence lacks authoritative meaning.
+  political_zionism:
+    function: >
+      Addresses Jewish defenselessness, dependence, political homelessness, and the
+      inability to act collectively through sovereign institutions.
+    limit: >
+      Political sovereignty does not settle Torah, covenant, election, providence,
+      messianism, or redemption.
+  cultural_zionism:
+    function: >
+      Attempts to preserve Jewish language, culture, historical memory, and communal
+      substance apart from complete religious orthodoxy.
+    limit: >
+      Inquiry into what is distinctively Jewish returns cultural Zionism to Torah
+      and to the question whether Torah is a human cultural achievement or a divine
+      gift.
+  good_society:
+    function: >
+      Protects decent life, lawful government, political responsibility, and some
+      freedom of inquiry.
+    limit: >
+      No attainable society abolishes ignorance, disagreement, political necessity,
+      imperfection, or the distinction between politics and redemption.
+
+governing_sequence:
+  - stage: original_confrontation
+    description: >
+      Philosophy emerges within political communities governed by gods, ancestral
+      law, authoritative opinion, poetry, and public education. Biblical revelation
+      gives the nonphilosophic alternative its comprehensive form as divine law.
+  - stage: modern_critique
+    description: >
+      Modern philosophy and historical criticism attempt to expose revelation as
+      superstition, imagination, priestcraft, textual construction, or an obsolete
+      historical form.
+  - stage: epistemic_reopening
+    description: >
+      Examination of the modern critique reveals that causal explanation, historical
+      reconstruction, or knowledge of natural regularities does not independently
+      demonstrate that miracle or revelation is impossible.
+  - stage: sovereign_neutralization
+    description: >
+      Hobbesian and Spinozist political strategies establish sovereign jurisdiction,
+      public peace, and a protected or regulated freedom to philosophize without
+      settling which comprehensive alternative is true.
+  - stage: rationalization_and_reduction
+    description: >
+      Modern Jewish and secular thinkers attempt to translate revelation into
+      morality, historical progress, psychology, repression, memory, or cultural
+      identity.
+  - stage: jewish_historical_manifestation
+    description: >
+      Emancipation, assimilation, Jewish persistence, Zionism, and Israel disclose
+      the practical force of the problem while failing to settle its theological and
+      philosophic core.
+  - stage: hermeneutic_consequence
+    description: >
+      Because philosophy and revelation exist under political authority, writers may
+      address differentiated audiences, qualify public teachings, or write under
+      conditions requiring guarded communication.
+  - stage: historicist_deepening
+    description: >
+      Historicism attempts to supersede both revelation and classical philosophy by
+      claiming that truth and human completion arise through history.
+  - stage: permanent_remainder
+    description: >
+      The evidence does not establish a final victory for revelation, philosophy,
+      sovereign settlement, rational religion, or historicism. The confrontation
+      remains open and must be lived and examined rather than harmonized or dismissed.
+
+epistemic_crux:
+  central_difficulty: >
+    Philosophy cannot decisively refute revelation merely by explaining religious
+    belief, reconstructing the human history of sacred texts, identifying natural
+    regularities, or assigning public authority to a sovereign. A decisive refutation
+    would require grounds sufficient to exclude divine action, miracle, prophecy, or
+    revelation rather than merely an account of natural and human causes ordinarily
+    observed.
+  rationalist_burden: >
+    Philosophy must show that its account of the whole is sufficient to establish the
+    impossibility or falsity of revelation. It may not assume as a premise the
+    impossibility it claims to prove.
+  revelatory_burden: >
+    Revelation must disclose its claim in a form that can be distinguished from
+    unsupported assertion, political imposition, inherited opinion, human poetry,
+    psychological need, or fraudulent prophecy.
+  philosophical_nonresolution: >
+    The inability of philosophy to refute revelation does not establish that a
+    particular revelation is true. It establishes that secular or rationalist closure
+    is unwarranted.
+  theological_nonresolution: >
+    The claim of revelation does not by itself establish its truth for philosophy.
+    Obedience commanded by an alleged revelation cannot serve as a philosophic proof
+    of that revelation.
+  consequence: >
+    The conflict remains rationally open because neither alternative may claim a
+    demonstrated victory merely from the limitations of the other.
+
+progress_and_return:
+  progress:
+    description: >
+      The modern orientation toward liberation from inherited authority, autonomous
+      reason, historical criticism, scientific mastery, political reconstruction,
+      emancipation, and the expectation that inherited human problems can be overcome.
+    strongest_claim: >
+      Human beings may replace obedience to inherited or revealed authority with a
+      rational, free, peaceful, and progressively improved political order.
+    required_test: >
+      Determine whether progress has actually refuted revelation, overcome the human
+      problem, or merely established new political and intellectual conditions.
+  return:
+    description: >
+      Return or teshuvah means return to God, commandment, obedience, covenant, and
+      revealed law rather than nostalgic restoration of old customs merely because
+      they are old.
+    strongest_claim: >
+      Modern autonomy represents forgetfulness or rebellion, and the right response
+      is repentance and return to divine authority.
+    required_test: >
+      Determine whether return can be rationally distinguished from inherited
+      orthodoxy, political reaction, or submission to an unverified authority.
+  unresolved_relation: >
+    Progress and return remain rival orientations because modern criticism has not
+    demonstrated revelation's impossibility, while revelation has not supplied a
+    philosophic demonstration compelling unrestricted inquiry to cease.
+
+modern_attempts_at_resolution:
+  spinozist_critique:
+    claim: >
+      Scripture, prophecy, miracle, and theological interpretation can be subjected
+      to historical and rational criticism while freedom to philosophize is protected.
+    achievement: >
+      Separates philosophy from theological control and clarifies the political
+      struggle over scriptural interpretation.
+    limit: >
+      The critique may presuppose the closure of nature and the sufficiency of reason
+      rather than demonstrate them.
+  hobbesian_neutralization:
+    claim: >
+      Sovereign authority can secure peace by determining the public limits of
+      religious and philosophic teaching.
+    achievement: >
+      Reduces civil conflict and supplies a final public jurisdiction.
+    limit: >
+      Public jurisdiction does not settle the truth of revelation or philosophy.
+  liberal_privatization:
+    claim: >
+      Religion may become private belief while public life is governed by formally
+      neutral law and equal citizenship.
+    achievement: >
+      Removes many forms of legal persecution and permits plural coexistence.
+    limit: >
+      Neutrality may silently privilege secular sovereignty and does not eliminate
+      social hostility, collective identity, or comprehensive disagreement.
+  cohenian_rationalization:
+    claim: >
+      Judaism can be understood as ethical monotheism, rational morality, moral law,
+      and messianic historical progress.
+    achievement: >
+      Preserves the ethical seriousness and universal aspiration of Judaism.
+    limit: >
+      Divine command risks becoming a historical or symbolic form of autonomous
+      morality rather than an authority irreducible to reason.
+  freudian_reduction:
+    claim: >
+      Jewish monotheism, memory, guilt, persistence, and identity can be explained
+      through historical and psychological causes.
+    achievement: >
+      Provides a causal account that does not depend upon revealed authority.
+    limit: >
+      A causal explanation of belief or identity does not establish that the object
+      of belief is false.
+  assimilationist_resolution:
+    claim: >
+      Full integration into the surrounding society can eliminate the Jewish problem.
+    achievement: >
+      May remove some barriers of law, language, culture, and social separation.
+    limit: >
+      It solves the problem by eliminating Jewish distinctiveness and therefore
+      assumes rather than establishes that continued Jewish existence lacks meaning.
+  zionist_resolution:
+    claim: >
+      Jewish sovereignty, territory, political action, language, and collective
+      responsibility can resolve the Jewish problem.
+    achievement: >
+      Addresses defenselessness, political homelessness, and collective dependence.
+    limit: >
+      Statehood does not settle Torah, covenant, election, providence, or redemption.
+  historicist_supersession:
+    claim: >
+      Revelation and classical philosophy were historical stages whose conflict is
+      overcome through the self-creation and completion of human history.
+    achievement: >
+      Connects thought, action, recognition, and political transformation.
+    limit: >
+      The claim depends upon a philosophy of history and may culminate in the
+      identification of truth with historical success or universal political completion.
+
+jewish_historical_manifestation:
+  governing_significance: >
+    The Jewish problem is not an external illustration added to the
+    theologico-political problem. It is one of the clearest historical manifestations
+    of the conflict between revealed law, philosophic examination, political
+    citizenship, collective identity, historical interpretation, and redemption.
+  sequence:
+    - stage: legal_emancipation
+      description: >
+        Jews receive equal civil and political rights as individuals.
+      achievement: >
+        Removes legal disabilities and affirms equal citizenship.
+      remainder: >
+        Does not eliminate social hostility, inherited memory, Jewish collective
+        identity, or the question of why Jews remain Jews.
+    - stage: assimilation
+      description: >
+        Jewish particularity is expected to disappear through full integration.
+      achievement: >
+        May reduce visible separation and some causes of discrimination.
+      remainder: >
+        Resolves the Jewish problem only through the disappearance of the Jews.
+    - stage: political_zionism
+      description: >
+        Jews seek territory, sovereignty, defense, political responsibility, and the
+        ability to act collectively.
+      achievement: >
+        Answers defenselessness and political dependence.
+      remainder: >
+        Does not establish redemption or settle the authority of Torah.
+    - stage: cultural_zionism
+      description: >
+        Jewish language, culture, education, and historical memory become the basis
+        of continued Jewish existence.
+      achievement: >
+        Preserves collective substance beyond formal citizenship.
+      remainder: >
+        Inquiry into Jewish substance returns to Torah and the claim of divine gift.
+    - stage: state_of_israel
+      description: >
+        Jewish statehood becomes an actual political achievement.
+      achievement: >
+        Creates institutions of collective defense, political action, responsibility,
+        and national life.
+      remainder: >
+        The existence or success of the state does not independently establish
+        providence, election, messianic fulfillment, or redemption.
+  governing_distinctions:
+    - political restoration and divine redemption
+    - sovereignty and covenant
+    - citizenship and Torah
+    - historical return and messianic return
+    - collective survival and divine election
+    - political causation and providential interpretation
+    - human achievement and divine promise
+  non_self_interpretation_rule: >
+    Jewish survival, suffering, exile, return, sovereignty, military success,
+    political failure, or cultural persistence does not interpret itself. Each event
+    may be examined through political, historical, psychological, legal,
+    philosophical, or providential accounts, but the event alone does not establish
+    which account is true.
+
+political_finitude:
+  proposition: >
+    A decent or good society is a finite political achievement rather than the final
+    resolution of the human problem.
+  political_goods:
+    - public peace
+    - lawful government
+    - protection from persecution
+    - equal citizenship
+    - political responsibility
+    - education
+    - defense
+    - space for inquiry
+    - institutions capable of correction
+  permanent_limits:
+    - ignorance
+    - disagreement concerning the good
+    - political necessity
+    - imperfect law
+    - inequality of judgment
+    - conflict between public authority and inquiry
+    - possible injustice
+    - the distinction between philosophers and nonphilosophers
+    - the distinction between politics and redemption
+  anti_utopian_rule: >
+    No political victory, constitutional settlement, liberal order, revolution,
+    national restoration, or universal state may be identified with the abolition of
+    contradiction or the final completion of human life without independent proof.
+
+hermeneutic_condition:
+  principle: >
+    The theologico-political problem is inseparable from the political conditions
+    under which philosophers, theologians, jurists, historians, and critics write.
+  grounds_for_guarded_writing:
+    - persecution
+    - censorship
+    - accusations of impiety or heresy
+    - communal obligation
+    - legal prohibition
+    - political danger
+    - dependency upon patrons or rulers
+    - differentiated audiences
+    - responsibility for civic peace
+    - protection of inexperienced readers
+  scrutiny_rule: >
+    Grounds for guarded writing require maximum textual scrutiny but do not prove
+    concealment, doctrinal inversion, atheism, orthodoxy, or a complete secret teaching.
+  interpretation_before_explanation_rule: >
+    The investigator must first determine what the work says, how it is ordered,
+    whom it addresses, what it announces, what it omits, and what distinctions it
+    makes before explaining it through biography, psychology, social position,
+    historical circumstance, or political interest.
+  positive_evidence_requirement: >
+    A finding of guarded or differentiated teaching requires positive textual or
+    structural evidence such as contradiction, unusual qualification, altered
+    quotation, deliberate omission, repeated asymmetry, audience differentiation,
+    technical terminology, significant sequence, or an author-supplied rule of reading.
+  prohibited_shortcut: >
+    Persecution or danger alone may never be used to invert every explicit statement.
+
+historicism_and_metaphysical_deepening:
+  governing_alternative:
+    eternal_order:
+      claim: >
+        Truth is grounded in an order not created by human history. Philosophy seeks
+        beings, causes, nature, or an intelligible whole whose truth does not depend
+        upon political success or historical completion.
+      political_consequence: >
+        No city, regime, revolution, nation, empire, or universal state can become
+        the complete embodiment of truth.
+      philosopher: >
+        The philosopher is never fully at home in any particular city and may be
+        understood as a citizen of the whole.
+    historical_self_creation:
+      claim: >
+        Human truth, freedom, recognition, and completion become actual through
+        historical action, conflict, and transformation.
+      political_consequence: >
+        A universal and homogeneous state may be interpreted as the completion of
+        human history and the reconciliation of thought and political life.
+      thinker: >
+        The thinker becomes fully engaged in the historical realization of human
+        truth.
+  relation_to_problem_two: >
+    Historicism attempts to supersede revelation and classical philosophy by treating
+    both as historical forms. The theologico-political problem therefore depends in
+    part upon whether truth transcends history or is created through history.
+  tyranny_test: >
+    Political consequences do not mechanically prove or disprove a metaphysical
+    teaching. Nevertheless, a teaching that cannot confront tyranny, domination,
+    persecution, or the destruction of inquiry may reveal an inadequacy in its account
+    of human beings, wisdom, and political completion.
+
+evidentiary_rules:
+  interpretation_before_explanation: >
+    Reconstruct the source's explicit teaching, sequence, distinctions, and audience
+    before applying causal, historical, sociological, or psychological explanation.
+  causal_explanation_is_not_refutation: >
+    Explaining how a belief, law, identity, or text arose does not establish that its
+    claim to truth is false.
+  political_success_is_not_truth: >
+    Survival, victory, sovereignty, popularity, institutional endurance, or historical
+    success does not establish philosophic or theological truth.
+  political_failure_is_not_disproof: >
+    Defeat, exile, persecution, suffering, institutional collapse, or political
+    weakness does not independently disprove a comprehensive teaching.
+  history_is_not_self_interpreting: >
+    Historical events require interpretation and do not independently select between
+    providential, political, psychological, philosophical, or historicist accounts.
+  autobiography_is_not_doctrine: >
+    Autobiographical writings may establish sequence, intellectual encounter,
+    gratitude, debt, and orientation. They may not independently establish Strauss's
+    final position on revelation, atheism, orthodoxy, or philosophy.
+  public_profession_is_not_final_teaching: >
+    An explicit profession of orthodoxy or heterodoxy must be taken seriously but does
+    not terminate inquiry where positive textual evidence warrants further examination.
+  silence_is_not_automatic_evidence: >
+    An omission becomes significant only when the omitted subject is reasonably
+    expected, the silence is textually bounded, and ordinary explanations have been
+    considered.
+  nonresolution_is_a_finding: >
+    When the evidence establishes the strength and persistence of rival claims without
+    establishing a victor, preserving the unresolved confrontation is a substantive
+    documentary result rather than an analytical failure.
+
+constitutive_propositions:
+  - >
+    The theologico-political problem concerns comprehensive ways of life, not merely
+    institutional coexistence between religion and government.
+  - >
+    Revelation appears most fully as divine law rather than private religious
+    experience.
+  - >
+    The philosophic life requires the freedom and necessity to examine every
+    comprehensive claim.
+  - >
+    Revelation demands obedience to an authority philosophy cannot accept merely
+    because that authority commands obedience.
+  - >
+    Philosophy cannot claim a demonstrated victory merely by assuming that miracle
+    or revelation is impossible.
+  - >
+    Knowledge of natural regularities does not by itself constitute an exhaustive
+    account of the whole.
+  - >
+    Historical criticism may reconstruct the human transmission of a text without
+    proving that divine revelation did not occur.
+  - >
+    Psychological explanation of belief does not establish that the object of belief
+    is unreal.
+  - >
+    Philosophy's inability to refute revelation does not prove that a particular
+    revelation is true.
+  - >
+    Revelation's claim to divine authority does not constitute a philosophic proof of
+    its own truth.
+  - >
+    Political law and sovereignty mediate the conflict but are not comprehensive
+    alternatives of the same rank as revelation and philosophy.
+  - >
+    A sovereign may determine public jurisdiction without deciding the truth of
+    revelation or philosophy.
+  - >
+    Toleration may protect rival teachings while silently assigning the state final
+    authority over their permissible scope.
+  - >
+    Liberal emancipation is a genuine political good but does not eliminate the
+    Jewish problem.
+  - >
+    Assimilation resolves the Jewish problem only by dissolving Jewish existence.
+  - >
+    Political Zionism addresses Jewish defenselessness and political dependence.
+  - >
+    Political Zionism does not establish redemption, covenant, election, or the truth
+    of Torah.
+  - >
+    Cultural Zionism returns to the theological problem when it asks what is
+    distinctively Jewish.
+  - >
+    The State of Israel is a political achievement whose significance must neither
+    be dismissed nor converted automatically into theological fulfillment.
+  - >
+    Jewish survival, suffering, restoration, or sovereignty is historically
+    significant but not self-interpreting.
+  - >
+    Political causation and providential interpretation are distinct explanatory
+    levels and may not be collapsed into one another without argument.
+  - >
+    Rationalized religion may reconcile inherited teaching with modern morality only
+    by altering the original authority claimed by revelation.
+  - >
+    No attainable good society is identical with redemption or the final society.
+  - >
+    Persecution creates grounds for guarded communication but does not prove
+    esotericism.
+  - >
+    Interpretation of an authoritative text may itself constitute an act of rule.
+  - >
+    Control over scriptural interpretation may transfer practical authority from
+    prophet, theologian, or community to philosopher or sovereign.
+  - >
+    The distinction between what a work announces and what it accomplishes is
+    indispensable in theologico-political inquiry.
+  - >
+    Philosophy is a way of life rather than merely a method, doctrine, or collection
+    of intellectual tools.
+  - >
+    Awareness of ignorance is constitutive of the philosophic life and prevents
+    philosophy from claiming knowledge it does not possess.
+  - >
+    Autobiographical evidence concerning Strauss's path does not decide his final
+    allegiance.
+  - >
+    Historicism attempts to supersede the permanent alternatives by treating truth
+    as historically created.
+  - >
+    The alternative between eternal order and historical self-creation belongs to
+    the deepest level of the theologico-political problem.
+  - >
+    Political consequences test the seriousness and adequacy of a teaching but do not
+    mechanically prove metaphysical truth.
+  - >
+    The unresolved conflict between biblical and philosophic accounts of the good
+    life is not overcome by merely naming both as historical traditions.
+  - >
+    The conflict must be examined in action, political life, interpretation, and
+    historical judgment rather than reduced to abstract doctrines.
+  - >
+    Disciplined nonresolution is required where the evidence does not establish a
+    final victor.
+
+serious_alternatives:
+  biblical_obedience:
+    claim: >
+      Divine law authoritatively directs human life, and the proper response to divine
+      command is obedience, repentance, and fidelity.
+    required_test: >
+      Reconstruct the claimed divine origin, the content of the law, the evidence for
+      revelation, and the distinction between divine command and human assertion.
+  philosophic_examination:
+    claim: >
+      The examined life is the highest human life, and no comprehensive authority may
+      exempt itself from rational inquiry.
+    required_test: >
+      Determine whether philosophy can justify its own way of life without claiming
+      knowledge of the whole that it does not possess.
+  modern_rationalist_refutation:
+    claim: >
+      Science, historical criticism, and rational explanation have made revelation
+      intellectually impossible.
+    required_test: >
+      Identify whether the argument demonstrates impossibility or presupposes the
+      closure of nature and sufficiency of reason.
+  sovereign_settlement:
+    claim: >
+      Political peace requires a final public authority capable of regulating religion
+      and philosophy.
+    required_test: >
+      Distinguish necessary jurisdiction from a claim to comprehensive truth and
+      identify which teaching the settlement privileges.
+  rational_reconciliation:
+    claim: >
+      Revelation and philosophy can be reconciled through morality, symbolism,
+      universal reason, or historical progress.
+    required_test: >
+      Determine whether the reconciliation preserves divine command or translates it
+      into an authority already supplied by philosophy.
+  historicist_completion:
+    claim: >
+      History overcomes the opposition by realizing human truth and freedom in a final
+      political order.
+    required_test: >
+      Examine the account of history, the status of eternity, the possibility of
+      tyranny, and whether political completion establishes truth.
+
+recognition_signals:
+  - a law or teaching claims divine origin
+  - obedience is demanded in place of autonomous examination
+  - philosophy is accused of impiety, heresy, atheism, or political danger
+  - a revealed text claims comprehensive authority over individual and collective life
+  - a sovereign claims authority over religion or sacred interpretation
+  - religious authority claims jurisdiction over political law
+  - competing authorities dispute who may interpret an authoritative text
+  - a supposedly neutral settlement determines religion's permissible public scope
+  - freedom to philosophize is granted only conditionally
+  - miracle is dismissed without an argument establishing its impossibility
+  - causal explanation is treated as refutation
+  - historical criticism is treated as proof that revelation did not occur
+  - morality is presented as the complete rational content of revelation
+  - assimilation is presented as the solution to Jewish existence
+  - Zionism or statehood is presented as redemption
+  - statehood is dismissed because it is not redemption
+  - Jewish survival is treated as proof of election
+  - Jewish suffering is treated as disproof of providence
+  - political success is treated as proof of truth
+  - political failure is treated as proof of falsity
+  - persecution or danger is treated as automatic proof of concealment
+  - the good society is presented as the final society
+  - history is presented as having superseded both revelation and philosophy
+  - a universal political order is presented as the completion of truth
+  - autobiography is used to declare Strauss orthodox, atheist, or converted
+  - the distinction between political settlement and philosophic resolution disappears
+
+highest_scrutiny_condition: >
+  When the problem is credibly present, the investigator must apply the highest
+  level of textual scrutiny because the author may confront divine law, communal
+  obligation, political danger, persecution, differentiated audiences, historical
+  catastrophe, or the need to protect both inquiry and public order.
+
+required_textual_examination:
+  - compare the announced and actual subject
+  - identify the political, religious, and historical circumstances of composition
+  - distinguish intended, excluded, and differentiated audiences
+  - identify whether the source is public, private, autobiographical, pedagogical, or polemical
+  - examine explicit professions of orthodoxy, unbelief, loyalty, or neutrality
+  - reconstruct the sequence of the argument before extracting propositions
+  - record rare qualifications of repeated conventional claims
+  - compare contradictions across distant passages
+  - examine incidental statements and unstated implications
+  - compare repeated formulations word by word
+  - inspect ambiguous, technical, legal, theological, or secret terminology
+  - recover incomplete, altered, or strategically placed quotations
+  - identify significant silence and expected omissions
+  - examine titles, dedications, prefaces, beginnings, centers, and endings
+  - inspect inappropriate expressions and clumsy transitions
+  - distinguish what the author says from what the work accomplishes
+  - distinguish description of a position from endorsement of that position
+  - distinguish historical narration from philosophic judgment
+  - distinguish political praise from theological affirmation
+  - distinguish causal explanation from refutation
+  - distinguish autobiographical sequence from doctrinal conclusion
+  - reconstruct each cited author independently before returning to Strauss
+  - identify the strongest ordinary explanation before activating an esoteric hypothesis
+  - seek the passage or structural feature most threatening to the current reading
+
+required_operations:
+  - identify the primary comprehensive alternatives
+  - distinguish primary alternatives from political mediators and settlements
+  - reconstruct the strongest title asserted by revelation
+  - reconstruct the strongest title asserted by philosophy
+  - determine whether the critique of revelation proves impossibility or assumes it
+  - identify the object and domain of every claim to authority
+  - determine who controls authoritative interpretation
+  - distinguish divine law, human law, and sovereign decision
+  - distinguish political settlement from philosophic resolution
+  - distinguish toleration from neutrality
+  - distinguish rational reconciliation from absorption of revelation
+  - distinguish causal explanation from refutation
+  - reconstruct the sequence from emancipation through assimilation and Zionism
+  - distinguish Jewish statehood from redemption
+  - distinguish historical fact from theological interpretation
+  - distinguish political causation from providential interpretation
+  - reconstruct the strongest historicist alternative
+  - examine the alternative between eternal order and historical self-creation
+  - identify what the author could not safely or publicly say
+  - distinguish author, narrator, speaker, character, and cited authority
+  - determine where the text places final practical authority
+  - distinguish autobiography from doctrine
+  - test the strongest rival interpretation
+  - preserve the contention when the evidence does not establish a victor
+
+required_distinctions:
+  - revelation and philosophy
+  - divine law and autonomous inquiry
+  - obedience and examination
+  - hearing and wonder
+  - creation and nature
+  - miracle and natural regularity
+  - inability to refute and proof of truth
+  - political law and comprehensive truth
+  - sovereignty and rightful authority
+  - political settlement and philosophic resolution
+  - toleration and neutrality
+  - emancipation and assimilation
+  - assimilation and disappearance
+  - political Zionism and cultural Zionism
+  - statehood and redemption
+  - historical return and messianic return
+  - Jewish survival and divine election
+  - suffering and theological disproof
+  - political causation and providence
+  - rational religion and revealed command
+  - causal explanation and refutation
+  - historical criticism and philosophic criticism
+  - good society and final society
+  - political victory and truth
+  - political failure and falsity
+  - public profession and final teaching
+  - grounds for concealment and proof of concealment
+  - autobiography and doctrine
+  - eternal order and historical self-creation
+  - philosopher and citizen
+  - city and whole
+  - tyranny and wisdom
+  - nonresolution and indifference
+
+false_resolutions:
+  secularist_dismissal: >
+    Revelation is irrational, obsolete, or unscientific and therefore need not be
+    reconstructed or examined.
+  theocratic_dismissal: >
+    Divine law has spoken, so philosophical examination is illegitimate.
+  scientific_closure: >
+    Knowledge of ordinary natural regularities proves that miracle or revelation is
+    impossible.
+  historical_critical_closure: >
+    Reconstructing the human history or textual composition of Scripture proves that
+    revelation did not occur.
+  causal_explanation_as_refutation: >
+    Explaining faith through psychology, memory, politics, repression, or social need
+    establishes that its object is unreal.
+  liberal_neutralization: >
+    Religion and philosophy are private choices and no contest over public authority
+    remains.
+  sovereign_neutrality: >
+    The sovereign merely protects peace and does not decide the public limits of
+    theology, interpretation, or philosophy.
+  harmonization: >
+    Philosophy and revelation teach the same truth in different language.
+  rationalized_religion_closure: >
+    Revelation is completely preserved when translated into autonomous morality,
+    symbolism, or historical progress.
+  political_reduction: >
+    Theology is merely an instrument of social control.
+  psychological_reduction: >
+    Faith is wholly explained by fear, projection, need, guilt, or repression.
+  historical_reduction: >
+    The conflict belonged to an earlier age and has been overcome by modernity.
+  assimilationist_solution: >
+    The Jewish problem is solved when Jews cease to exist as a distinct people.
+  zionist_completion: >
+    Jewish sovereignty resolves the full Jewish problem.
+  statehood_as_redemption: >
+    The establishment or success of the State of Israel proves messianic fulfillment,
+    providence, or divine election.
+  political_dismissal_of_israel: >
+    Because statehood is not redemption, Jewish sovereignty has no serious political
+    dignity or significance.
+  survival_as_proof: >
+    Jewish persistence independently proves divine election or providence.
+  suffering_as_disproof: >
+    Jewish persecution, exile, or catastrophe independently disproves covenant,
+    election, or providence.
+  final_society_closure: >
+    A good, universal, homogeneous, liberal, national, or revolutionary state
+    abolishes the permanent human problem.
+  historical_success_as_truth: >
+    The victorious or final political order is true because it succeeds historically.
+  literalist_closure: >
+    An explicit profession of orthodoxy or unbelief ends all further inquiry.
+  esoteric_overreach: >
+    Danger to the author proves that every explicit or orthodox statement is false.
+  autobiographical_closure: >
+    Strauss's personal history, Jewish identity, teachers, or political commitments
+    independently establish his final doctrinal position.
+  maimonidean_harmonization: >
+    Philosophic causation and providential justice have been reconciled merely because
+    both appear within a Maimonidean text.
+  indifference_disguised_as_nonresolution: >
+    Because the conflict is unresolved, neither alternative requires serious
+    reconstruction or existential attention.
+
+anti_capture_rule: >
+  The investigator must not silently decide the problem in favor of revealed
+  orthodoxy, atheism, modern secular sovereignty, philosophic autonomy, liberal
+  neutrality, rational religion, assimilation, Zionism, anti-Zionism, providential
+  history, historicism, or a presumed harmony between Jerusalem and Athens. Every
+  comprehensive claim and political settlement must disclose its title, domain,
+  subjects, limits, method of interpretation, means of enforcement, and claim to truth.
+
+boundary_rule: >
+  The problem is present when revelation, philosophy, political law, sovereignty, or
+  a philosophy of history makes a serious claim concerning final authority over the
+  right way of life, divine law, autonomous inquiry, interpretation, collective
+  existence, political legitimacy, or historical completion. The mere presence of
+  religious practice, Jewish identity, political administration, cultural difference,
+  or philosophical vocabulary does not activate the full problem by itself.
+
+relations:
+  nomos_and_physis:
+    distinction: >
+      Nomos and Physis asks whether authoritative law, custom, and regime are grounded
+      in nature or convention. The theologico-political problem begins when law claims
+      divine authority or when philosophy's discovery of nature confronts revelation.
+    overlap: >
+      Both problems concern the authority of law, but Problem Two adds creation,
+      prophecy, divine command, miracle, revelation, obedience, and redemption.
+  wise_and_vulgar:
+    distinction: >
+      The theologico-political problem concerns the comprehensive alternatives and
+      their political contention. Wise and Vulgar concerns unequal capacities,
+      differentiated audiences, and the communication of teaching.
+    overlap: >
+      Persecution and revealed law may require differentiated communication, but
+      audience differentiation must not replace examination of the comprehensive claims.
+  ancients_and_moderns:
+    distinction: >
+      Ancients and Moderns examines the historical transformation of philosophy and
+      political thought. Problem Two examines a confrontation that modernity attempts
+      to defeat, neutralize, rationalize, privatize, or historicize.
+    overlap: >
+      Spinoza, Hobbes, Cohen, Freud, Zionism, and historicism represent major modern
+      attempts to resolve or transform the problem.
+  theory_and_practice:
+    distinction: >
+      Problem Two concerns the truth and authority of comprehensive alternatives.
+      Theory and Practice concerns what responsible action follows under imperfect
+      political conditions.
+    overlap: >
+      Zionism, sovereignty, toleration, persecution, and the good society require
+      practical judgment without resolving the philosophic conflict.
+  jerusalem_and_athens:
+    distinction: >
+      Jerusalem and Athens names revelation and philosophy as the two highest
+      comprehensive alternatives. The theologico-political problem concerns their
+      confrontation within law, interpretation, sovereignty, persecution, Jewish
+      history, and political life.
+    overlap: >
+      Jerusalem and Athens supplies the central poles; Problem Two reconstructs the
+      political, epistemic, historical, and hermeneutic consequences of their conflict.
+
+permissible_outputs:
+  documented_finding: >
+    State what a source explicitly teaches concerning revelation, philosophy, divine
+    law, political authority, Jewish existence, history, or interpretation.
+  textual_implication: >
+    Identify a conclusion required by the source's sequence or distinctions while
+    clearly marking that it is not stated directly.
+  supported_inference: >
+    Identify how a political, theological, historical, or hermeneutic settlement
+    privileges one contender without claiming that its comprehensive teaching is true.
+  working_hypothesis: >
+    Propose that an orthodox profession, apparent harmony, causal explanation, or
+    political settlement may protect a different level of inquiry or audience.
+  critical_finding: >
+    Identify an unproved premise, false neutrality, category collapse, or reduction
+    that prevents a proposed resolution from succeeding.
+  jewish_historical_finding: >
+    State what emancipation, assimilation, Zionism, statehood, survival, or suffering
+    does and does not establish.
+  hermeneutic_finding: >
+    Identify a contradiction, omission, qualification, audience distinction, or
+    structural feature requiring deeper examination.
+  autobiographical_finding: >
+    State an intellectual encounter, sequence, debt, or orientation without converting
+    it into a final doctrinal conclusion.
+  unresolved_uncertainty: >
+    State precisely what the evidence leaves unresolved and why.
+  affirmative_nonresolution: >
+    Preserve the confrontation between divine law and philosophic examination where
+    the available evidence does not responsibly establish a victor.
+
+opacity_floor:
+  - >
+    The evidence establishes that revelation and philosophy make incompatible
+    comprehensive claims, but it does not establish which claim is true.
+  - >
+    Philosophy has not demonstrated revelation's impossibility, but this does not
+    establish that a particular revelation is true.
+  - >
+    Revelation demands obedience, but its demand does not constitute a philosophic
+    proof of divine origin.
+  - >
+    Political settlement establishes who rules publicly, but it does not establish
+    who possesses the highest rightful authority.
+  - >
+    Historical and psychological explanations illuminate the phenomenon without
+    independently refuting its truth claim.
+  - >
+    Jewish history is significant but does not interpret itself.
+  - >
+    The State of Israel is a genuine political achievement but is not thereby
+    redemption or proof of providence.
+  - >
+    Political causation and providential interpretation remain distinguishable even
+    where a source presents them together.
+  - >
+    The evidence establishes grounds for guarded writing but does not yet disclose a
+    complete secret teaching.
+  - >
+    Autobiographical evidence discloses Strauss's path to the problem more clearly
+    than it discloses his final allegiance.
+  - >
+    Historicism presents a serious alternative but does not establish that historical
+    completion creates or validates truth.
+  - >
+    The inquiry reveals a permanent confrontation that cannot be responsibly closed
+    from the available evidence.
+
+termination_condition: >
+  The Problem Two record is complete when the investigator has reconstructed revealed
+  divine law and the philosophic life as the primary comprehensive alternatives;
+  determined whether proposed rational critiques establish the impossibility of
+  revelation or merely presuppose it; distinguished political law, sovereignty,
+  toleration, and liberal emancipation from philosophic resolution; reconstructed
+  rational religion, psychological reduction, assimilation, Zionism, and historicism
+  in their strongest forms; traced the Jewish-historical sequence from emancipation
+  through statehood; distinguished political restoration from redemption and
+  historical causation from providential interpretation; applied the highest
+  hermeneutic scrutiny without automatic inversion; separated autobiography from
+  doctrine; examined the alternative between eternal order and historical
+  self-creation; rejected all premature resolutions; and preserved the remaining
+  confrontation without manufacturing a victor.
+
+publication_record:
+  authorization_basis: >
+    Activated by authenticated repository-owner direction after review and approval
+    of the complete version 1.1 draft.
+  publication_status: ACTIVE
+  predecessor_preservation: >
+    Version 1.0 remains recoverable through Git history and is not retrospectively
+    rewritten.
