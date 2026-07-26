@@ -13,24 +13,25 @@ identity:
 
 status:
   lifecycle: FOUNDING_DRAFT
-  version: 0.2.0
+  version: 0.3.0
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
 revision_history:
-  predecessor_version: 0.1.0
-  predecessor_blob_sha: 2df128670763d8d7cbbe3717db61db6b66acb994
+  predecessor_version: 0.2.0
+  predecessor_blob_sha: 4c927aac3b857642d5b82fcc19f422e588308cbc
   transformation: REVISED_WITHOUT_PREDECESSOR_EFFECT
   reason: >
-    Register the completed founding inquiry profile, witness registry, relations
-    record, and first source-specific synthesis while preserving the unresolved
-    proposition-level redistribution requirement and both predecessor records.
+    Record completion of proposition-level classification, normalized migration
+    transactions, and reconciliation of elevated irony, comedy, audience, rhetoric,
+    exotericism, and speech-deed material with shared protocols.
 
 authority:
   registry_reference: problems/registry.yaml
   architecture_reference: governance/foundational-problem-architecture.yaml
   migration_reference: migrations/foundational-problems-v2/migration.yaml
   predecessor_index_reference: migrations/foundational-problems-v2/predecessor-index.yaml
+  transaction_reference: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   inquiry_profile_reference: problems/wise-vs-vulgar/inquiry-profile.yaml
   witnesses_reference: problems/wise-vs-vulgar/witnesses.yaml
   relations_reference: problems/wise-vs-vulgar/relations.yaml
@@ -45,10 +46,35 @@ predecessor_provenance:
     identifier: WVG-RECONSTRUCTION-0.2
     preserved_path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
-    status: ACCEPTED_FOR_REDISTRIBUTION_NOT_YET_CANONICAL
+    status: ACCEPTED_MIGRATION_SOURCE_CLASSIFIED_NOT_SUPERSEDED
   governing_rule: >
     Neither predecessor is replaced or retrospectively rewritten. Every accepted
-    proposition must receive a controlled disposition before successor activation.
+    top-level classification unit and constitutive proposition now has a controlled
+    disposition, but the successor remains inactive until automated validation,
+    destination review, migration certification, and activation.
+
+migration_classification:
+  transaction_set_id: FPV2-WISE-VS-VULGAR-V0.2
+  path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
+  version: 0.2.0
+  transaction_blob_sha: 9b1041a6ec14772ef4a910f6777a369d7fbb6050
+  implementing_commit: 383a04734533b3a326df52ac9cd05eee37a53a29
+  state: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_IMPLEMENTATION_SUBSTANTIAL_VALIDATION_PENDING
+  coverage:
+    accepted_top_level_units: 18
+    accepted_top_level_units_classified: 18
+    constitutive_propositions: 49
+    constitutive_propositions_classified: 49
+    rejected_with_reason: 0
+  normalization:
+    valid_dispositions_only: true
+    divided_used_only_as_transformation_mode: true
+    one_primary_destination_per_transaction: true
+  effect:
+    predecessor: NONE
+    accepted_source: NONE
+    certification: NONE
+    activation: NONE
 
 source_basis:
   study_id: SPPP-STUDY-001
@@ -83,26 +109,17 @@ jurisdiction:
     - repository and artificial-intelligence non-certification
   does_not_own:
     - canonical_key: nomos-vs-physis
-      reason: >
-        Nomos vs. Physis owns the content and epistemic burden of natural standards.
+      reason: Nomos vs. Physis owns the content and epistemic burden of natural standards.
     - canonical_key: philosophy-vs-poetry
-      reason: >
-        Philosophy vs. Poetry owns the substantive rivalry among poetic and philosophic forms of wisdom.
+      reason: Philosophy vs. Poetry owns the substantive rivalry among poetic and philosophic forms of wisdom.
     - canonical_key: theory-vs-practice
-      reason: >
-        Theory vs. Practice owns the movement from understanding to action, counsel,
-        rule, execution, institutions, correction, and chance.
+      reason: Theory vs. Practice owns the movement from understanding to action, counsel, rule, execution, institutions, correction, and chance.
     - canonical_key: theologico-political
-      reason: >
-        The Theologico-Political Problem owns revelation, prophecy, divine command,
-        sacred law, interpretation, and ultimate authority.
+      reason: The Theologico-Political Problem owns revelation, prophecy, divine command, sacred law, interpretation, and ultimate authority.
     - canonical_key: athens-vs-jerusalem
-      reason: >
-        Athens vs. Jerusalem owns the comprehensive philosophic and Biblical ways of life.
+      reason: Athens vs. Jerusalem owns the comprehensive philosophic and Biblical ways of life.
     - canonical_key: ancients-vs-moderns
-      reason: >
-        Ancients vs. Moderns owns the historical transformation of elites, expertise,
-        ideology, science, bureaucracy, historicism, and technology.
+      reason: Ancients vs. Moderns owns the historical transformation of elites, expertise, ideology, science, bureaucracy, historicism, and technology.
 
 permanent_tension: >
   Political society requires judgment beyond ordinary opinion, but no title, office,
@@ -155,6 +172,11 @@ shared_protocols:
   conditional:
     - irony
     - comedy
+  reconciled_versions:
+    speech-and-deed: 1.1.0
+    irony: 1.1.0
+    comedy: 1.1.0
+    audience-and-rhetoric: 1.1.0
 
 anti_capture_principle: >
   No claimant, class, profession, institution, state, repository, protocol, or
@@ -169,7 +191,7 @@ non_absorption_clause: >
   sources and findings are referenced through subordinate records.
 
 termination:
-  state: FOUNDING_SUBORDINATE_STRUCTURE_COMPLETE_REDISTRIBUTION_PENDING_NOT_CERTIFIED
+  state: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_IMPLEMENTATION_SUBSTANTIAL_VALIDATION_PENDING_NOT_CERTIFIED
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
   completed_records:
@@ -178,9 +200,15 @@ termination:
     - problems/wise-vs-vulgar/witnesses.yaml
     - problems/wise-vs-vulgar/relations.yaml
     - problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+    - migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
+  completed_protocol_reconciliations:
+    - protocols/speech-and-deed.yaml
+    - protocols/irony.yaml
+    - protocols/comedy.yaml
+    - protocols/audience-and-rhetoric.yaml
   remaining_requirements:
-    - proposition-level redistribution of accepted predecessor material
-    - independent source reconstruction
-    - automated YAML and path validation
-    - review of unresolved cross-problem jurisdiction
+    - automated YAML, transaction-value, and path validation
+    - review and expansion of supporting witness registrations
+    - cross-problem duplicate-doctrine review
+    - resolution of validator findings
     - migration certification before activation
