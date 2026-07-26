@@ -1,0 +1,63 @@
+schema_version: 1.0
+document_type: shared_interpretive_protocol
+
+identity:
+  canonical_key: uncertainty-preservation
+  title: Uncertainty Preservation Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+
+depends_on:
+  - evidence-classification
+  - inference-discipline
+
+purpose: >
+  Preserve opacity, unresolved alternatives, contradiction, and incomplete
+  evidence as positive documentary findings.
+
+governing_rule: >
+  Uncertainty, opacity, unresolved alternatives, and incomplete evidence must
+  be preserved rather than concealed, collapsed, or resolved for narrative
+  convenience.
+
+valid_uncertainty_outputs:
+  OPACITY_PRESERVED:
+    meaning: >
+      The text indicates concealment, qualification, or incompleteness without
+      establishing the hidden content.
+  AFFIRMATIVE_NON_RESOLUTION:
+    meaning: Rival claims remain serious and cannot responsibly be ranked.
+  UNRESOLVED_CONTRADICTION:
+    meaning: Conflicting evidence remains active and must not be harmonized.
+  INSUFFICIENT_DOCUMENTATION:
+    meaning: The source condition prevents stronger judgment.
+  BOUNDED_CONCLUSION:
+    meaning: >
+      A limited conclusion is supported without resolving the larger problem.
+
+required_operations:
+  - identify the precise source of uncertainty
+  - identify conclusions still supported despite uncertainty
+  - preserve serious alternatives
+  - distinguish opacity from absence of evidence
+  - state what future evidence could change the classification
+
+prohibited_resolutions:
+  - completing an absent argument
+  - inventing a hidden teaching
+  - forcing agreement between incompatible sources
+  - declaring victory because the opposing claim cannot be disproved
+  - treating uncertainty as repository failure
+  - substituting narrative closure for evidence
+
+invoked_by:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
