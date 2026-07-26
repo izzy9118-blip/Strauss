@@ -6,6 +6,11 @@ status:
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
+revision_history:
+  reason: >
+    Align registry metadata with the reconciled protocol files. This metadata update
+    does not certify, activate, or alter the governing substance of any protocol.
+
 governed_by:
   path: governance/shared-protocol-constitution.yaml
   canonical_key: shared-protocol-constitution
@@ -56,7 +61,7 @@ protocols:
   - canonical_key: speech-and-deed
     title: Speech and Deed Protocol
     path: protocols/speech-and-deed.yaml
-    protocol_version: 1.0.0
+    protocol_version: 1.1.0
     category: INTERPRETIVE
     depends_on:
       - evidence-classification
@@ -68,7 +73,7 @@ protocols:
   - canonical_key: irony
     title: Irony Protocol
     path: protocols/irony.yaml
-    protocol_version: 1.0.0
+    protocol_version: 1.1.0
     category: INTERPRETIVE
     depends_on:
       - speech-and-deed
@@ -81,7 +86,7 @@ protocols:
   - canonical_key: comedy
     title: Comedy Protocol
     path: protocols/comedy.yaml
-    protocol_version: 1.0.0
+    protocol_version: 1.1.0
     category: INTERPRETIVE
     depends_on:
       - speech-and-deed
@@ -109,7 +114,7 @@ protocols:
   - canonical_key: audience-and-rhetoric
     title: Audience and Rhetoric Protocol
     path: protocols/audience-and-rhetoric.yaml
-    protocol_version: 1.0.0
+    protocol_version: 1.1.0
     category: INQUIRY
     depends_on:
       - speech-and-deed
