@@ -1,0 +1,95 @@
+schema_version: 1.0
+document_type: provisional_problem_synthesis
+
+identity:
+  synthesis_id: PVP-SYN-002
+  problem: philosophy-vs-poetry
+  title: Studies in Platonic Political Philosophy — Philosophy vs. Poetry Synthesis
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SYNTHESIS_RECORD
+
+source_record:
+  study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  primary_source:
+    author: Leo Strauss
+    title: Studies in Platonic Political Philosophy
+    publication_year: 1983
+
+jurisdictional_result: >
+  Philosophy seeks causes, definitions, truth, and the whole; poetry, drama, history,
+  and rhetoric disclose and form souls through character, action, passion, image,
+  silence, and consequence. Philosophy's superiority is integrative rather than
+  presumptive and remains conditional upon confronting the strongest poetic accusation.
+
+permanent_findings:
+  - finding_id: PVP-SPPP-F001
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Poetry is a claimant to wisdom and education rather than mere entertainment.
+  - finding_id: PVP-SPPP-F002
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Political philosophy must understand its audiences, effects, rhetoric, and dependence upon political society.
+  - finding_id: PVP-SPPP-F003
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Eristic and rhetoric demonstrate that verbal victory can be severed from truth and education.
+  - finding_id: PVP-SPPP-F004
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Historical and dramatic arrangement, including silence and withdrawal of speech, can bear substantive meaning.
+  - finding_id: PVP-SPPP-F005
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Comedy exposes disproportion and counterfeit rank without making ridicule a final refutation.
+  - finding_id: PVP-SPPP-F006
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Poetry may know souls deeply without possessing final knowledge of the highest human end.
+  - finding_id: PVP-SPPP-F007
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Philosophy may claim superiority only by integrating poetic truths concerning souls, eros, rhetoric, audience, suffering, and consequence.
+  - finding_id: PVP-SPPP-F008
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Poetic theology and genuine revelation must remain distinct.
+
+brother_problem_integration:
+  related_problem: theologico-political
+  designation: BROTHER_PROBLEM
+  strength: CO_FOUNDATIONAL
+  proposition: >
+    The problems coactivate where poetic or philosophic education concerns gods,
+    piety, prophecy, sacred law, divine command, or the human recognition of divine authority.
+  non_absorption_rule: >
+    Poetry is not revelation. Revelation is not poetic construction. Civic or poetic
+    efficacy does not prove divine truth.
+
+false_resolutions:
+  - Philosophy is superior because it calls itself rational.
+  - Poetry is superior because a philosopher is ridiculous or politically defeated.
+  - Poetic knowledge of souls proves knowledge of the highest end.
+  - Rhetorical effectiveness proves truth.
+  - Plato's explicit criticism of poetry exhausts Plato's dramatic deed.
+  - Biblical revelation is only poetic inspiration or myth.
+
+uncertainties:
+  - The collection does not establish a final rank of philosophy and poetry independent of further Platonic and poetic reconstruction.
+  - The absence of speeches in Thucydides Book VIII may be structurally significant, while incompletion remains possible.
+  - The posthumous collection's ordering may disclose an architecture without proving a completed authorial plan.
+
+cross_problem_references:
+  - problem: theologico-political
+    relevance: Ultimate divine authority remains the brother problem's jurisdiction.
+  - problem: wise-vs-vulgar
+    relevance: Poet, philosopher, rhetorician, and interpreter are rival claimants to wisdom.
+  - problem: theory-vs-practice
+    relevance: Knowledge of souls and rhetoric complicates translation of truth into action.
+  - problem: ancients-vs-moderns
+    relevance: Modernity may transform poetry into aesthetics, ideology, or horizon creation.
+
+termination:
+  state: PROVISIONAL_SOURCE_SYNTHESIS_COMPLETE
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - update witness registry with completed study status
+    - test the synthesis against independent Platonic, Xenophontic, Aristophanic, and Thucydidean studies
+    - preserve the brother-problem boundary during integration validation
