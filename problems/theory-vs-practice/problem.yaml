@@ -8,20 +8,36 @@ identity:
 
 status:
   lifecycle: FOUNDING_DRAFT
-  version: 0.1.0
+  version: 0.2.0
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: 254c55fe568068e641c943a70a40e64d6d40a73d
+  transformation: REVISED_WITHOUT_PREDECESSOR_EFFECT
+  reason: >
+    Register the completed founding subordinate structure consisting of the inquiry
+    profile, witness registry, relations record, and first source-specific synthesis.
+    No doctrine, source, predecessor, certification, or activation state is displaced.
 
 authority:
   registry_reference: problems/registry.yaml
   architecture_reference: governance/foundational-problem-architecture.yaml
   migration_reference: migrations/foundational-problems-v2/migration.yaml
+  inquiry_profile_reference: problems/theory-vs-practice/inquiry-profile.yaml
+  witnesses_reference: problems/theory-vs-practice/witnesses.yaml
+  relations_reference: problems/theory-vs-practice/relations.yaml
 
 source_basis:
   study_id: SPPP-STUDY-001
   study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
   source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  problem_synthesis: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
   constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+  source_limit: >
+    The completed collection study is a provisional founding basis and does not
+    replace independent philosophical, historical, political, or institutional witnesses.
 
 governing_question: >
   How can knowledge of ends become a politically effective deed when deliberation,
@@ -35,38 +51,69 @@ jurisdiction:
     - the relation between understanding and action
     - contemplation and political responsibility
     - theoretical standards and practical judgment
-    - prudence, execution, correction, and chance
-    - founding, preservation, and indirect guidance
+    - deliberation, persuasion, authorization, command, and execution
+    - effective and legitimate authority as a distinction
+    - production and right use as a distinction
+    - institutions, distributed knowledge, correction, and accountability
+    - founding, preservation, indirect guidance, and chance
+    - finite political goods under unresolved comprehensive questions
   does_not_own:
-    - nomos-vs-physis
-    - philosophy-vs-poetry
-    - theologico-political
-    - athens-vs-jerusalem
-    - wise-vs-vulgar
-    - ancients-vs-moderns
+    - canonical_key: nomos-vs-physis
+      reason: >
+        Nomos vs. Physis owns the natural, legal, and moral standard that action is
+        claimed to serve.
+    - canonical_key: philosophy-vs-poetry
+      reason: >
+        Philosophy vs. Poetry owns rival forms of wisdom and poetry's specific
+        accusation concerning souls, education, prudence, and political consequence.
+    - canonical_key: theologico-political
+      reason: >
+        The Theologico-Political Problem owns ultimate authority among autonomous
+        reason, genuine revelation, prophecy, divine command, sacred law, and sovereignty.
+    - canonical_key: athens-vs-jerusalem
+      reason: >
+        Athens vs. Jerusalem owns autonomous understanding and obedient love as
+        comprehensive rival orientations toward the highest human life.
+    - canonical_key: wise-vs-vulgar
+      reason: >
+        The Wise vs. The Vulgar owns rank, recognition, differentiated education,
+        mediation, and elite capture.
+    - canonical_key: ancients-vs-moderns
+      reason: >
+        Ancients vs. Moderns owns the historical transformation from virtue and
+        prudence toward method, sovereignty, institutions, mastery, and history.
 
 permanent_tension: >
   Political action cannot wait for complete knowledge, but urgency and successful
-  outcomes do not transform opinion into knowledge or effective authority into rightful authority.
+  outcomes do not transform opinion into knowledge or effective authority into
+  rightful authority. General standards require judgment concerning particulars,
+  while judgment, institutions, and indirect guidance cannot certify their own wisdom.
 
 boundary:
   activates_when:
     - a theoretical judgment must guide action
-    - success is treated as proof of wisdom
-    - authority, legitimacy, and execution are conflated
+    - success or failure is treated as proof of wisdom or folly
+    - authority, legitimacy, expertise, and execution are conflated
+    - production of a means is confused with knowledge of right use
     - founding and preservation are treated as the same capacity
+    - institutions distribute knowledge, correction, or responsibility
     - chance is ignored in judging prior decisions
+    - indirect guidance is compared with direct rule
   does_not_activate_by_itself:
     - every practical task
     - every policy disagreement
-    - every legal question
+    - every legal or administrative question
+    - every failed implementation
+    - every conflict between an ideal and reality
 
 relations:
   - related_problem: nomos-vs-physis
-    relation_type: INTERSECTS
+    relation_type: DEPENDS_ON
   - related_problem: philosophy-vs-poetry
     relation_type: DEPENDS_ON
   - related_problem: theologico-political
+    relation_type: INTERSECTS
+  - related_problem: athens-vs-jerusalem
     relation_type: INTERSECTS
   - related_problem: wise-vs-vulgar
     relation_type: INTERSECTS
@@ -81,21 +128,35 @@ shared_protocols:
     - uncertainty-preservation
     - speech-and-deed
     - audience-and-rhetoric
+  conditional:
+    - claimant-to-wisdom
+    - irony
+    - comedy
 
 anti_capture_principle: >
-  Neither theoretical brilliance nor practical success may certify wisdom, legitimacy,
-  or responsible rule without examining ends, means, institutions, correction, and chance.
+  Neither theoretical brilliance, technical expertise, legal office, force, popular
+  consent, secrecy, practical success, historical victory, nor institutional endurance
+  may certify wisdom, legitimacy, or responsible rule without examining ends, means,
+  judgment, character, correction, accountability, and chance.
 
 non_absorption_clause: >
   This problem owns the general movement from understanding to action and must not
-  absorb the full doctrines of nature, poetry, revelation, rank, or modernity.
+  absorb the full doctrines of nature, poetry, revelation, comprehensive ways of life,
+  rank, or modernity. Shared sources and findings are referenced through subordinate
+  records rather than duplicated as governing doctrine.
 
 termination:
-  state: FOUNDING_SUCCESSOR_DRAFT_CREATED
+  state: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
   certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+  completed_records:
+    - problems/theory-vs-practice/problem.yaml
+    - problems/theory-vs-practice/inquiry-profile.yaml
+    - problems/theory-vs-practice/witnesses.yaml
+    - problems/theory-vs-practice/relations.yaml
+    - problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
   remaining_requirements:
-    - inquiry-profile.yaml
-    - witnesses.yaml
-    - relations.yaml
     - independent source reconstruction
-    - migration validation
+    - automated YAML and path validation
+    - review of unresolved cross-problem jurisdiction
+    - migration certification before activation
