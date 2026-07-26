@@ -11,7 +11,7 @@ status:
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
- authority:
+authority:
   problem_reference: problems/philosophy-vs-poetry/problem.yaml
   relations_reference: problems/philosophy-vs-poetry/relations.yaml
   architecture_reference: governance/foundational-problem-architecture.yaml
