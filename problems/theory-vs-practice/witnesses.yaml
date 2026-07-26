@@ -1,0 +1,319 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: theory-vs-practice
+  title: Theory vs. Practice — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/theory-vs-practice/problem.yaml
+  inquiry_profile_reference: problems/theory-vs-practice/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry records witness identity, source condition, local role, and
+    independent-reconstruction requirements. It does not certify wisdom, legitimacy,
+    prudence, or political success and does not merge philosophical argument,
+    historical narrative, political office, or retrospective explanation.
+
+registry_purpose: >
+  Preserve the distinct witnesses through whom the relation among knowledge,
+  deliberation, persuasion, authority, execution, institutions, correction,
+  founding, preservation, and chance must be reconstructed.
+
+source_status_rules:
+  - rule_id: TVP-WSR-001
+    rule: >
+      Philosophical argument, dramatic representation, historical narrative, law,
+      counsel, autobiography, and institutional record are different evidence types
+      and must not be treated as interchangeable.
+  - rule_id: TVP-WSR-002
+    rule: >
+      Studies in Platonic Political Philosophy is a posthumous collection of qualified
+      primary Strauss sources. Its editorial framing and incomplete projected contents
+      do not supply a single completed authorial treatise.
+  - rule_id: TVP-WSR-003
+    rule: >
+      A speaker's plan, a ruler's self-description, an adviser's counsel, or a later
+      report of success is evidence requiring comparison with action and consequence.
+  - rule_id: TVP-WSR-004
+    rule: >
+      Political success, survival, victory, institutional endurance, or later praise
+      does not establish the truth or justice of the original judgment.
+  - rule_id: TVP-WSR-005
+    rule: >
+      Failure does not by itself refute prior judgment; execution, resources,
+      adversaries, chance, and hidden information must be examined.
+  - rule_id: TVP-WSR-006
+    rule: >
+      Independent witnesses must be reconstructed before Straussian synthesis. No
+      later interpreter may replace Plato, Aristotle, Xenophon, Thucydides,
+      Machiavelli, Hobbes, or the historical deed under review.
+
+principal_witnesses:
+  - witness_id: TVP-WIT-001
+    name: Leo Strauss
+    witness_class: PRIMARY_MODERN_INTERPRETIVE_AND_PHILOSOPHIC_WITNESS
+    local_role: >
+      Governing modern witness for reconstructing the relation between philosophic
+      knowledge and political responsibility, the limits of kingly art, indirect
+      guidance, prudent action, institutions, and historical consequence.
+    documentary_standing:
+      authority: PRIMARY_FOR_STRAUSS_INTERPRETATION
+      limit: >
+        Strauss governs claims about his own arguments, not the final independent
+        meaning of the authors, actors, or institutions he interprets.
+    registered_sources:
+      - source_id: TVP-STR-SRC-001
+        title: Studies in Platonic Political Philosophy
+        publication_condition: POSTHUMOUS_COLLECTION_ARRANGED_AND_TITLED_BY_STRAUSS
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+        completed_study_record: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+        synthesis_record: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_id: SPPP-STUDY-001
+        study_status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
+      - source_id: TVP-STR-SRC-002
+        title: What Is Political Philosophy?
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Major witness concerning political philosophy, prudence, opinion, knowledge,
+          the good society, and the relation between theory and public life.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+      - source_id: TVP-STR-SRC-003
+        title: Restatement on Xenophon's Hiero
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Major witness concerning wisdom and tyranny, counsel, rule, practical
+          possibility, historical completion, and the relation between philosopher and ruler.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+    claimant_status: INTERPRETER_AND_PHILOSOPHIC_CLAIMANT_REQUIRING_TEST
+
+  - witness_id: TVP-WIT-002
+    name: Plato
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_AND_DRAMATIC_WITNESS
+    local_role: >
+      Principal witness concerning knowledge, virtue, rule, education, rhetoric,
+      legislation, philosopher and city, kingly art, and the dramatic limits of
+      applying philosophic standards.
+    required_source_domains:
+      - Euthydemus
+      - Republic
+      - Statesman
+      - Laws
+      - Gorgias
+      - Apology and Crito
+    documentary_limit: >
+      Socratic speech within a dialogue is not automatically Plato's final doctrine.
+      Argument, speaker, audience, action, and outcome must be reconstructed together.
+    independence_rule: >
+      Reconstruct each dialogue before comparison with Strauss, Aristotle, Xenophon,
+      or later doctrines of philosopher-kingship.
+    study_status: INDEPENDENT_PLATONIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: TVP-WIT-003
+    name: Aristotle
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Principal witness concerning practical wisdom, deliberation, choice, action,
+      virtue, law, equity, regime, statesmanship, and the difference between theoretical
+      and practical sciences.
+    required_source_domains:
+      - Nicomachean Ethics
+      - Politics
+      - Rhetoric where relevant
+    documentary_limit: >
+      Later scholastic or modern accounts of prudence may not substitute for Aristotle's
+      own terminology and argumentative sequence.
+    study_status: INDEPENDENT_ARISTOTELIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: TVP-WIT-004
+    name: Xenophon
+    witness_class: INDEPENDENT_HISTORICAL_PHILOSOPHIC_AND_PRACTICAL_WITNESS
+    local_role: >
+      Major witness to leadership, command, persuasion, correction, distributed
+      knowledge, military and political action, desire for rule, restraint, household,
+      counsel, and the practical presentation of Socrates.
+    required_source_domains:
+      - Anabasis
+      - Cyropaedia
+      - Hiero
+      - Memorabilia
+      - Oeconomicus
+      - other relevant works
+    documentary_limit: >
+      Prima facie historical standing does not eliminate literary selection,
+      dramatic arrangement, authorial purpose, or retrospective construction.
+    independence_rule: >
+      Reconstruct Xenophon's actors and works independently before using Strauss's
+      interpretation as final.
+    study_status: INDEPENDENT_XENOPHONTIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: TVP-WIT-005
+    name: Thucydides
+    witness_class: INDEPENDENT_HISTORICAL_AND_POLITICAL_WITNESS
+    local_role: >
+      Principal witness concerning deliberation, rhetoric, leadership, assembly,
+      strategy, institutions, war, necessity, error, correction, contingency, and the
+      relation between speeches and outcomes.
+    required_source_domains:
+      - History of the Peloponnesian War in complete narrative order
+    documentary_limit: >
+      Speeches are composed historical-dramatic evidence, outcomes do not interpret
+      themselves, and the work's incompletion must remain a live documentary limit.
+    study_status: INDEPENDENT_THUCYDIDEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: TVP-WIT-006
+    name: Niccolo Machiavelli
+    witness_class: INDEPENDENT_MODERN_POLITICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Major witness concerning effectual truth, founding, preservation, force,
+      counsel, law, institutions, necessity, fortune, religion, and the attempt to make
+      political action more reliable.
+    required_source_domains:
+      - The Prince
+      - Discourses on Livy
+      - other relevant political and literary works
+    documentary_limit: >
+      Success and effectual power do not certify justice or wisdom; Strauss's reading
+      does not replace Machiavelli's textual deed.
+    study_status: INDEPENDENT_MACHIAVELLIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: TVP-WIT-007
+    name: Thomas Hobbes
+    witness_class: INDEPENDENT_MODERN_POLITICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Major witness concerning method, counsel, command, authorization, covenant,
+      sovereignty, law, peace, institutional construction, and the separation of
+      private judgment from public decision.
+    required_source_domains:
+      - Leviathan
+      - De Cive
+      - Elements of Law where relevant
+    documentary_limit: >
+      Sovereign finality secures public decision but does not automatically establish
+      comprehensive truth, justice, or philosophic wisdom.
+    study_status: INDEPENDENT_HOBBESIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: TVP-WIT-008
+    name: Maimonides
+    witness_class: INDEPENDENT_MEDIEVAL_PHILOSOPHIC_JURISPRUDENTIAL_WITNESS
+    local_role: >
+      Major witness concerning knowledge, belief, prophecy, law, legal presumption,
+      interpretation, practical dogma, responsibility, education, and guarded guidance.
+    required_source_domains:
+      - Mishneh Torah and Book of Knowledge where relevant
+      - Guide of the Perplexed
+      - Treatise on the Art of Logic
+      - relevant letters and legal writings
+    documentary_limit: >
+      Legal or practical authority must not be relabeled demonstration, and Strauss's
+      notes do not replace independent Maimonidean reconstruction.
+    study_status: INDEPENDENT_MAIMONIDEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: TVP-WIT-009
+    name: Political institutions and officeholders
+    witness_class: COMPOSITE_PRACTICAL_AND_INSTITUTIONAL_WITNESS_LINE
+    local_role: >
+      Supplies evidence concerning distributed knowledge, authorization, procedure,
+      correction, implementation, accountability, and the durability or failure of
+      political decisions.
+    documentary_limit: >
+      Institutions do not speak with one unmediated voice. Constitutions, laws,
+      minutes, commands, reports, practices, and outcomes require source-specific
+      reconstruction and cannot certify themselves through endurance.
+    study_status: CASE_SPECIFIC_RECONSTRUCTION_REQUIRED
+
+contextual_and_editorial_witnesses:
+  - witness_id: TVP-CXT-001
+    name: Thomas L. Pangle
+    witness_class: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+    source_relation: Introduction to Studies in Platonic Political Philosophy
+    permitted_role: >
+      Bibliographic orientation and provisional questions to test against Strauss's
+      primary essays and independent witnesses.
+    prohibited_role: >
+      Supplying Strauss's missing authorial introduction or deciding the relation
+      between philosophy, prudence, rule, and political responsibility.
+
+witness_relation_rules:
+  independent_reconstruction_rule: >
+    Each philosophical, historical, political, and institutional witness must be
+    reconstructed on its own terms before comparative synthesis.
+  non_confirmation_rule: >
+    No witness may be forced to confirm SPPP-STUDY-001 or the successor constitution.
+    Dissent, correction, incompatibility, and source-specific limits remain visible.
+  no_outcome_certification_rule: >
+    Victory, survival, reform, institutional endurance, or later praise does not
+    certify the wisdom or justice of the originating decision.
+  no_office_certification_rule: >
+    Legal office, command, expertise, authorship, prophetic title, or philosophic title
+    does not certify practical wisdom.
+  hindsight_control_rule: >
+    Actor knowledge, available alternatives, and temporal pressure must be reconstructed
+    from contemporaneous evidence where possible rather than inferred solely from outcomes.
+  jurisdiction_rule: >
+    Standards of right remain under Nomos vs. Physis; rival poetic-philosophic wisdom
+    remains under Philosophy vs. Poetry; ultimate reason-revelation authority remains
+    Theologico-Political; rank and recognition remain under The Wise vs. The Vulgar.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-STUDY-001
+      witness: Leo Strauss
+      source: Studies in Platonic Political Philosophy
+      path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+      local_synthesis: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
+      completion: COMPLETE_FOR_REGISTERED_COLLECTION
+      certification: NOT_CERTIFIED
+  pending:
+    - Leo Strauss source-specific reconstruction beyond SPPP-STUDY-001
+    - independent Plato reconstruction for Theory vs. Practice
+    - independent Aristotle reconstruction
+    - independent Xenophon reconstruction
+    - independent Thucydides reconstruction
+    - independent Machiavelli reconstruction
+    - independent Hobbes reconstruction
+    - independent Maimonides reconstruction
+    - case-specific institutional and historical reconstruction
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This registry is a subordinate successor record. It does not certify or activate
+    Theory vs. Practice, convert pending studies into completed evidence, or authorize
+    deletion, retrospective revision, or jurisdictional merger.
+  prohibitions:
+    - no silent deletion of a witness or source
+    - no office or expertise treated as wisdom certification
+    - no success or failure treated as self-interpreting
+    - no retrospective knowledge attributed without evidence
+    - no institution treated as self-correcting by title
+    - no collection study replacing independent reconstruction
+    - no certification from registry validity alone
+
+termination:
+  registry_state: FOUNDING_WITNESS_REGISTRY_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - philosophical, historical, political, and institutional witnesses remain distinct
+    - completed and pending studies are distinguished
+    - source and editorial limits are explicit
+    - outcome and office cannot certify wisdom
+    - independent reconstruction requirements remain enforceable
+  current_limit: >
+    Structural witness registration is complete for founding production. Substantive
+    source reconstruction remains pending and may revise local roles through explicit
+    successor versions.
