@@ -1,0 +1,127 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: wise-vs-vulgar
+  canonical_order: 6
+  title: The Wise vs. The Vulgar
+  alternate_titles:
+    - The Wise and the Vulgar
+    - The Few and the Many
+  legacy_identifiers:
+    - STR-PROBLEM-003
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  predecessor_index_reference: migrations/foundational-problems-v2/predecessor-index.yaml
+
+predecessor_provenance:
+  active_predecessor:
+    path: problems/wise-and-vulgar.yaml
+    version: 0.1-discussion
+    blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+  accepted_migration_source:
+    identifier: WVG-RECONSTRUCTION-0.2
+    preserved_path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    status: ACCEPTED_FOR_REDISTRIBUTION_NOT_YET_CANONICAL
+  governing_rule: >
+    Neither predecessor is replaced or retrospectively rewritten by this inactive successor draft.
+
+source_basis:
+  study_id: SPPP-STUDY-001
+  study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+governing_question: >
+  How can superior understanding guide political society when wisdom cannot certify
+  itself and the city cannot reliably distinguish philosopher, sophist, prophet,
+  ruler, scholar, poet, ideologue, expert, or impostor?
+
+compressed_question: >
+  How can the wise be recognized without allowing false elites to certify themselves?
+
+jurisdiction:
+  owns:
+    - rank and recognition
+    - genuine and counterfeit claimants to wisdom
+    - human heterogeneity
+    - ordinary and political virtue
+    - differentiated education and partial enlightenment
+    - audience and mediation where recognition is central
+    - elite self-certification and capture
+    - the limits of identifying wisdom
+  does_not_own:
+    - nomos-vs-physis
+    - philosophy-vs-poetry
+    - theory-vs-practice
+    - theologico-political
+    - athens-vs-jerusalem
+    - ancients-vs-moderns
+
+permanent_tension: >
+  Political society requires judgment beyond ordinary opinion, but no title, office,
+  profession, success, suffering, secrecy, scholarship, election, or self-description
+  can certify the possessor of wisdom.
+
+boundary:
+  activates_when:
+    - a person or class claims superior knowledge or authority
+    - the city must distinguish philosophy from sophistry or expertise from imposture
+    - education is differentiated by capacity or audience
+    - secrecy, persecution, office, success, or prestige is treated as proof of wisdom
+    - superior judgment seeks political guidance or institutional mediation
+  does_not_activate_by_itself:
+    - every social inequality
+    - every expert judgment
+    - every disagreement between minority and majority
+
+relations:
+  - related_problem: philosophy-vs-poetry
+    relation_type: DEPENDS_ON
+  - related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+  - related_problem: theologico-political
+    relation_type: INTERSECTS
+  - related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+  - related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+
+shared_protocols:
+  required:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+    - claimant-to-wisdom
+    - audience-and-rhetoric
+
+anti_capture_principle: >
+  No claimant may certify wisdom through title, office, success, suffering, secrecy,
+  scholarship, election, obscurity, influence, or possession of the repository itself.
+
+non_absorption_clause: >
+  This problem owns rank, recognition, heterogeneity, and differentiated education.
+  It must not absorb the full doctrines of poetry, revelation, practical judgment,
+  Athens and Jerusalem, or modernity.
+
+termination:
+  state: FOUNDING_SUCCESSOR_DRAFT_CREATED
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - proposition-level redistribution of accepted predecessor material
+    - inquiry-profile.yaml
+    - witnesses.yaml
+    - relations.yaml
+    - independent source reconstruction
+    - migration validation
