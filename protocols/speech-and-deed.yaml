@@ -4,34 +4,84 @@ document_type: shared_interpretive_protocol
 identity:
   canonical_key: speech-and-deed
   title: Speech and Deed Protocol
-  protocol_version: 1.0.0
+  protocol_version: 1.1.0
 
 status:
   lifecycle: FOUNDING_DRAFT
   certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 870d6ad7255bc22f5e76a8ec54b9efe44b057878
+  transformation: REVISED
+  reason: >
+    Integrate the completed provisional SPPP-STUDY-001 findings concerning
+    documentary layers, arrangement, omission, structural evidence, transformed
+    vocabulary, and the difference between report and certification.
 
 depends_on:
+  - source-status
   - evidence-classification
   - inference-discipline
+  - uncertainty-preservation
+
+coordinates_with:
+  - irony
+  - comedy
+  - audience-and-rhetoric
+  - claimant-to-wisdom
 
 purpose: >
-  Govern comparison of explicit formulation and textual or dramatic action.
+  Govern comparison of explicit formulation with textual, dramatic, historical,
+  legal, institutional, and interpretive action without treating either speech or
+  deed as automatically transparent.
 
 governing_rule: >
-  Speech must be interpreted through deed, and deed through speech. Neither
-  explicit formulation nor action is automatically transparent.
+  Speech must be interpreted through deed, and deed through speech. A disparity may
+  confirm, narrow, qualify, contradict, disguise, or leave unresolved an explicit
+  claim, but it does not authorize mechanical inversion or automatic accusation of dishonesty.
 
 required_dimensions:
-  - speaker
+  - speaker_or_agent
   - immediate_audience
   - wider_audience
   - occasion
+  - wording
   - explicit_statement
   - action_performed
+  - outcome
+  - title
+  - arrangement
   - structural_placement
   - omission
-  - consequence
+  - silence
+  - source_use
+  - evidentiary_status
+  - documentary_layer
   - comparison_with_other_presentations
+
+interpretive_rules:
+  - rule_id: SAD-001
+    rule: A statement may be qualified by deed without being mechanically reversed.
+  - rule_id: SAD-002
+    rule: A deed is not self-interpreting and must be located by actor, occasion, alternatives, and consequence.
+  - rule_id: SAD-003
+    rule: An omission is evidence only where the omitted matter was reasonably expected to appear.
+  - rule_id: SAD-004
+    rule: Structural arrangement may support interpretation without proving deliberate hidden intention.
+  - rule_id: SAD-005
+    rule: A report, reputation, title, office, or self-description remains distinct from certification.
+  - rule_id: SAD-006
+    rule: Preserving inherited vocabulary does not necessarily preserve the doctrine or referent formerly named by it.
+  - rule_id: SAD-007
+    rule: Audience conditioning does not automatically establish a second opposite doctrine.
+  - rule_id: SAD-008
+    rule: Composite, posthumous, edited, translated, or incomplete works require intention to be assigned to the correct documentary layer.
+  - rule_id: SAD-009
+    rule: A character, chorus, narrator, quoted authority, reviewed author, or institutional actor is not automatically the author.
+  - rule_id: SAD-010
+    rule: Success and failure may disclose consequences without certifying the truth or falsity of the prior judgment.
 
 permitted_findings:
   - SPEECH_CONFIRMS_DEED
@@ -40,21 +90,57 @@ permitted_findings:
   - DEED_QUALIFIES_SPEECH
   - DEED_CONTRADICTS_SPEECH
   - SPEECH_DISGUISES_DEED
+  - STRUCTURE_QUALIFIES_EXPLICIT_SPEECH
+  - OMISSION_SUPPORTS_LIMITED_INFERENCE
+  - DOCUMENTARY_LAYER_CONTROLS_ATTRIBUTION
+  - VOCABULARY_PRESERVED_REFERENT_TRANSFORMED
+  - OUTCOME_REVEALS_LIMIT_WITHOUT_REFUTATION
   - RELATION_UNRESOLVED
+
+application_sequence:
+  - identify the exact speaker or acting agent
+  - identify immediate and wider audiences
+  - identify occasion and available alternatives
+  - classify source status and documentary layer
+  - reconstruct explicit wording before inferring concealment
+  - reconstruct the relevant deed and outcome
+  - test title, order, arrangement, omission, silence, and source use
+  - compare other presentations without forcing harmonization
+  - assign the narrowest supported permitted finding
+  - preserve uncertainty and rival explanations
 
 primary_applications:
   - Socrates' public defense and depicted conduct
   - Plato's criticism of poetry and Plato's dramatic practice
+  - Aristophanic speech, dramatic deed, outcome, and demonstrated rank
+  - Thucydidean speeches, reported speech, arrangement, silence, and Book VIII incompletion
+  - Xenophontic self-description, correction, repeated action, and restraint
   - claims of reluctance and actual pursuit of influence
   - scholarly modesty and the intellectual deed performed
   - public doctrine and audience-specific presentation
+  - legal or religious vocabulary whose practical referent has been transformed
 
 prohibited:
   - treating speech as complete merely because explicit
   - treating deed as self-interpreting
   - treating disparity as proof of dishonesty
+  - treating irony as mechanical reversal
   - treating consistency as proof of truth
-  - treating title or self-description as demonstrated activity
+  - treating title, office, reputation, or self-description as demonstrated activity
+  - treating omission as evidence where presence was not reasonably expected
+  - treating structural pattern as demonstrated secret intention
+  - assigning an editor's, translator's, narrator's, or character's deed to the author without evidence
+  - converting political or dramatic victory into philosophic certification
+
+source_contributions:
+  - study_id: SPPP-STUDY-001
+    path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+    integration_record: studies/studies-in-platonic-political-philosophy/repository-integration.yaml
+    contribution_status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
+    constitutional_effect: SHARED_PROTOCOL_REVISION_ONLY
+    limit: >
+      The collection-level study does not prove that every identified structure was
+      deliberately designed as a hidden teaching and does not replace source-specific study.
 
 invoked_by:
   - nomos-vs-physis
@@ -64,3 +150,11 @@ invoked_by:
   - athens-vs-jerusalem
   - wise-vs-vulgar
   - ancients-vs-moderns
+
+termination:
+  protocol_state: FOUNDING_DRAFT_REVISED
+  certification: NOT_CERTIFIED
+  valid_completion: >
+    The inquiry has compared speech and deed across the required dimensions,
+    classified the documentary layer, ruled out mechanical reversal, assigned the
+    narrowest supported finding, and preserved unresolved alternatives.
