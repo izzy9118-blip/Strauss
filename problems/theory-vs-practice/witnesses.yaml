@@ -1,0 +1,105 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: theory-vs-practice
+  title: Theory vs. Practice — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/theory-vs-practice/problem.yaml
+  inquiry_profile_reference: problems/theory-vs-practice/inquiry-profile.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry records witness roles and limits without replacing source-specific reconstruction.
+
+witnesses:
+  - witness_id: TVP-WIT-001
+    name: Leo Strauss
+    witness_class: MODERN_INTERPRETIVE_PRIMARY_WITNESS
+    local_role: >
+      Primary witness for reconstructing the kingly-art problem, practical judgment,
+      ancient political limits, modern lowering, and the distinction among knowledge,
+      action, authority, and institutions.
+    registered_sources:
+      - title: Studies in Platonic Political Philosophy
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+        synthesis_record: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_status: SEQUENTIAL_AND_SYNTHETIC_RECONSTRUCTION_COMPLETE_NOT_CERTIFIED
+    limit: Strauss's interpretation does not replace independent witnesses.
+  - witness_id: TVP-WIT-002
+    name: Plato
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Witness to the kingly art, philosopher-rule, political improbability, law, rhetoric, and dramatic political limits.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: TVP-WIT-003
+    name: Xenophon
+    witness_class: INDEPENDENT_CLASSICAL_PRACTICAL_WITNESS
+    local_role: >
+      Witness to generalship, correction, distributed knowledge, consent, coercion,
+      indirect guidance, restraint, founding, and public defense through deed.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: TVP-WIT-004
+    name: Thucydides
+    witness_class: INDEPENDENT_HISTORICAL_WITNESS
+    local_role: >
+      Witness to deliberation, rhetoric, strategic judgment, institutional delay,
+      contingency, retrospective understanding, success, and catastrophe.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: TVP-WIT-005
+    name: Maimonides
+    witness_class: MEDIEVAL_PHILOSOPHIC_LEGAL_WITNESS
+    local_role: >
+      Witness to theoretical knowledge, practical dogma, legal presumption, education,
+      repentance, and action under belief short of demonstration.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: TVP-WIT-006
+    name: Machiavelli
+    witness_class: MODERN_FOUNDING_AND_EFFECTIVENESS_WITNESS
+    local_role: >
+      Witness to effective truth, founding, cruelty, fraud, fortune, political outcomes,
+      and different requirements of introduction and preservation.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+  - witness_id: TVP-WIT-007
+    name: Hobbes
+    witness_class: MODERN_INSTITUTIONAL_WITNESS
+    local_role: >
+      Witness to regularization of political order through common passions, rights, sovereignty, and institutions.
+    study_status: INDEPENDENT_RECONSTRUCTION_PENDING
+  - witness_id: TVP-WIT-008
+    name: Hermann Cohen
+    witness_class: MODERN_ETHICAL_PROGRESS_WITNESS
+    local_role: >
+      Witness to infinite moral progress, social action, institutional dependence,
+      and the limits of moral theory under political catastrophe.
+    study_status: PARTIAL_STRAUSS_RECONSTRUCTION_COMPLETE_DIRECT_STUDY_PENDING
+
+witness_relation_rules:
+  - Theoretical, practical, legal, military, rhetorical, and administrative competence must be classified separately.
+  - Success or failure may not determine a witness's rank without ex ante reconstruction.
+  - Strauss's practical judgments do not replace direct reconstruction of the interpreted works.
+  - Ultimate ends require cross-reference to Nomos vs. Physis, Athens vs. Jerusalem, or the Theologico-Political Problem as appropriate.
+  - Recognition of a competent or wise actor requires cross-reference to The Wise vs. The Vulgar.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-FP-001
+      path: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+      witness: Leo Strauss
+      completion: SEQUENTIAL_AND_CROSS_PROBLEM_RECONSTRUCTION_COMPLETE
+      certification: NOT_CERTIFIED
+  pending:
+    - Plato
+    - Xenophon
+    - Thucydides
+    - Maimonides
+    - Machiavelli
+    - Hobbes
+    - Hermann Cohen
