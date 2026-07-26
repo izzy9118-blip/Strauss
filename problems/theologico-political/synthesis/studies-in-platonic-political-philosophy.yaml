@@ -1,0 +1,102 @@
+schema_version: 1.0
+document_type: provisional_problem_synthesis
+
+identity:
+  synthesis_id: TP-SYN-002
+  problem: theologico-political
+  title: Studies in Platonic Political Philosophy — Theologico-Political Synthesis
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SYNTHESIS_RECORD_FOR_INACTIVE_SUCCESSOR
+
+source_record:
+  study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  primary_source:
+    author: Leo Strauss
+    title: Studies in Platonic Political Philosophy
+    publication_year: 1983
+
+jurisdictional_result: >
+  The strict problem is the unresolved confrontation between autonomous philosophy
+  and obedient revelation as rival claims to highest authority over the whole human
+  way of life. Political law and sovereignty must establish public jurisdiction before
+  that comprehensive conflict is resolved, but political necessity cannot become proof.
+
+permanent_findings:
+  - finding_id: TP-SPPP-F001
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Civic theology, sacred practice, and political usefulness are not identical with genuine revelation.
+  - finding_id: TP-SPPP-F002
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Traditional revelation includes free divine creation, historical communication, command, prophecy, covenant, Law, and obedient response.
+  - finding_id: TP-SPPP-F003
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Philosophy cannot accept revelation merely on authority, yet cannot claim victory without demonstrating revelation impossible or false.
+  - finding_id: TP-SPPP-F004
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Philosophy's inability to refute revelation does not prove any particular revelation true.
+  - finding_id: TP-SPPP-F005
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Political society requires authoritative opinion and law before comprehensive knowledge is available.
+  - finding_id: TP-SPPP-F006
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Maimonides preserves distinctions among knowledge, belief, legal presumption, prophecy, Mosaic authority, practical dogma, and commanded action.
+  - finding_id: TP-SPPP-F007
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Machiavelli places religion under political jurisdiction as civil theology without demonstrating revelation impossible.
+  - finding_id: TP-SPPP-F008
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Cohen dissolves the conflict by identifying revelation with reason and transforming free divine acts and absolute obedience.
+  - finding_id: TP-SPPP-F009
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED
+    proposition: Historical constitution through election, suffering, or political necessity does not establish theological truth.
+
+brother_problem_integration:
+  related_problem: philosophy-vs-poetry
+  designation: BROTHER_PROBLEM
+  strength: CO_FOUNDATIONAL
+  proposition: >
+    Coactivate both problems where poetic and philosophic authority concerns gods,
+    piety, prophecy, sacred law, divine mediation, or recognition of divine authority.
+  non_absorption_rule: >
+    Poetry is not revelation. Revelation is not poetic construction. Civic theology
+    and political efficacy are not proof of divine truth.
+
+false_resolutions:
+  - Society needs sacred belief; therefore the belief is divinely true.
+  - Rulers manipulate religion; therefore all revelation is false.
+  - Philosophy cannot disprove revelation; therefore one revelation is proven.
+  - Revelation is simply rational morality expressed symbolically.
+  - Political settlement, sovereignty, toleration, or statehood resolves comprehensive truth.
+  - Causal, historical, psychological, or textual explanation independently refutes revelation.
+
+uncertainties:
+  - The collection does not prove revelation true or false.
+  - Maimonidean mediation preserves heterogeneity whose final coherence remains open.
+  - The relation between political necessity and truthful public teaching remains unresolved.
+  - Cohen's rational religion may preserve moral seriousness while transforming traditional revelation beyond recognition.
+
+cross_problem_references:
+  - problem: philosophy-vs-poetry
+    relevance: Brother problem governing rival human wisdom and poetic theology.
+  - problem: athens-vs-jerusalem
+    relevance: Supplies the comprehensive poles of autonomous understanding and obedient love.
+  - problem: theory-vs-practice
+    relevance: Public law mediates conflict without deciding truth.
+  - problem: wise-vs-vulgar
+    relevance: Prophet, philosopher, theologian, sovereign, and interpreter are rival claimants.
+  - problem: ancients-vs-moderns
+    relevance: Modernity politicizes, privatizes, rationalizes, historicizes, or supersedes revelation.
+
+termination:
+  state: PROVISIONAL_SOURCE_SYNTHESIS_COMPLETE
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - update witness registry with completed study status
+    - compare this synthesis with the preserved predecessor reconstruction
+    - validate non-duplication with Athens vs Jerusalem and Philosophy vs Poetry
+    - test findings against independent Biblical, Maimonidean, Machiavellian, and Cohen studies
