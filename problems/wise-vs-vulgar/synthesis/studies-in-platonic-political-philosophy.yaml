@@ -1,0 +1,58 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: WVG-SPPP-001
+  problem: wise-vs-vulgar
+  source_study: SPPP-STUDY-001
+  title: The Wise vs. The Vulgar — Studies in Platonic Political Philosophy
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+  cross_problem_synthesis: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+  accepted_predecessor_source: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+
+strict_problem: >
+  How can superior understanding guide political society when wisdom cannot certify
+  itself and the city cannot reliably distinguish philosopher, sophist, prophet,
+  ruler, scholar, poet, ideologue, or impostor?
+
+principal_findings:
+  - Dependence on authoritative opinion is the ordinary political condition, not proof of moral worthlessness.
+  - Political decency can be genuine without philosophical knowledge.
+  - The city possesses authority without knowledge sufficient to identify philosophy.
+  - Eristic, prestige, technique, secrecy, and professional status can counterfeit wisdom.
+  - Human beings differ in capacity, motive, character, and response to education.
+  - Equal civic dignity does not imply identical educational capacity or vocation.
+  - Theory does not automatically confer political legitimacy or competence.
+  - Persecution, success, election, scholarship, office, obscurity, and hidden teaching do not certify wisdom.
+  - Superior judgment may guide through counsel, education, institutional service, criticism, and restraint rather than unrestricted sovereignty.
+
+unresolved_questions:
+  - how wisdom may be provisionally recognized without self-certification
+  - how differentiated education avoids domination and contempt
+  - how superior judgment may guide without claiming unrestricted rule
+  - how institutions can test claimants without presuming that office equals wisdom
+
+jurisdiction_limits:
+  - Poet and philosopher as substantive rival claimants remain under Philosophy vs. Poetry.
+  - Prophet and divine authority remain under The Theologico-Political Problem.
+  - General movement from knowledge to action remains under Theory vs. Practice.
+  - Accepted predecessor material requires proposition-level redistribution before activation.
+
+termination:
+  synthesis_state: COMPLETE_FOR_REGISTERED_COLLECTION
+  certification: NOT_CERTIFIED
+  remaining_work:
+    - proposition-level predecessor redistribution
+    - complete successor subordinate records
+    - independent witness reconstruction
+    - migration validation
