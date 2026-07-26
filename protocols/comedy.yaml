@@ -4,11 +4,23 @@ document_type: shared_interpretive_protocol
 identity:
   canonical_key: comedy
   title: Comedy Protocol
-  protocol_version: 1.0.0
+  protocol_version: 1.1.0
 
 status:
   lifecycle: FOUNDING_DRAFT
   certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 7b0f6b235b2760f9aba811c71cbbbf3d40f7c3ae
+  reason: >
+    Reconcile accepted Wise vs. Vulgar material concerning false rank, scholarly
+    solemnity, ridicule, self-implication, and the difference between comic exposure
+    and final refutation.
+  migration_source:
+    path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
+    transaction_reference: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
 
 depends_on:
   - speech-and-deed
@@ -16,13 +28,21 @@ depends_on:
   - uncertainty-preservation
 
 purpose: >
-  Govern the interpretation of comic action as potentially substantive
-  evidence.
+  Govern the interpretation of comic action as potentially substantive evidence
+  concerning rank, motive, embodiment, dependence, audience, education, authority,
+  and limitation.
 
 governing_rule: >
-  Comic elements may disclose philosophically relevant disproportion,
-  pretension, motive, embodiment, dependence, or limitation and must not be
-  excluded merely because they are humorous, low, embarrassing, or vulgar.
+  Comic elements may disclose philosophically relevant disproportion, pretension,
+  motive, embodiment, dependence, or limitation and must not be excluded merely
+  because they are humorous, low, embarrassing, or vulgar. Comic success, laughter,
+  or exposure does not by itself establish the complete superiority of the comic
+  speaker, author, audience, or interpreter.
+
+permanent_interpretive_key: >
+  Strauss's comedy corrects solemn scholarship. This directs attention to jokes,
+  understatement, awkward detail, register, self-deprecation, and disproportion; it
+  does not authorize automatic inversion or dismissal of explicit argument.
 
 comic_signals:
   - joke
@@ -36,6 +56,9 @@ comic_signals:
   - disproportion
   - self_deprecation
   - solemnity_disrupted_by_low_detail
+  - title_or_office_exposed_by_action
+  - public_victory_with_private_or_structural_defeat
+  - laugher_or_poet_implicated_in_the_joke
 
 possible_disclosures:
   - false_rank
@@ -48,16 +71,44 @@ possible_disclosures:
   - ignorance_of_audience
   - ignorance_of_ends
   - disparity_between_claim_and_capacity
+  - false_neutrality
+  - failed_education
+  - dependence_of_the_high_on_the_low
+  - hidden_cost_of_a_victorious_principle
+  - limitation_of_the_exposer
+
+required_examination:
+  - identify who laughs and who is laughed at
+  - distinguish immediate laughers from the work's wiser or later audiences
+  - compare explicit statement with comic deed and outcome
+  - identify the serious issue preserved inside the ridiculous presentation
+  - test whether the comic author or interpreter is self-implicated
+  - distinguish exposure of one defect from a complete judgment of the person or doctrine
+  - preserve tragedy, suffering, justice, and unresolved alternatives where comedy does not exhaust them
+  - classify the evidence and degree of inference
 
 required_caution: >
-  A comic exposure may establish a defect without resolving the serious
-  question embodied by the ridiculous person.
+  A comic exposure may establish a defect without resolving the serious question
+  embodied by the ridiculous person. Comedy can be total within a dramatic form while
+  remaining a partial mirror of life.
+
+claimant_and_rank_safeguards:
+  - ridicule does not certify the laugher
+  - inability to answer a joke does not prove complete intellectual inferiority
+  - comic defeat does not prove the defeated claim wholly false
+  - comic victory may reveal the ugliness or contradiction of the victorious principle
+  - solemn vocabulary and professional dignity do not prove seriousness or wisdom
+  - low bodily detail may correct rank without reducing human life to appetite
+  - the comic poet remains a claimant to wisdom and must be tested through speech and deed
 
 valid_outputs:
   - DOCUMENTED_COMIC_ACTION
   - SUPPORTED_COMIC_DISCLOSURE
   - COMIC_DEFLATION_OF_RANK
   - COMIC_LIMIT_ESTABLISHED
+  - COMIC_SELF_IMPLICATION
+  - VICTORIOUS_PRINCIPLE_COMICALLY_QUALIFIED
+  - SERIOUS_ISSUE_PRESERVED_WITHIN_COMEDY
   - COMIC_SIGNIFICANCE_UNRESOLVED
 
 prohibited:
@@ -67,6 +118,15 @@ prohibited:
   - solemnity treated as evidence of seriousness
   - laughter treated as proof of philosophic superiority
   - comic exposure treated as final resolution
+  - every joke treated as coded doctrine
+  - vulgarity treated as absence of philosophical relevance
+  - comic success treated as a practical political program
+  - the interpreter's amusement treated as evidence of superior rank
+
+termination_rule: >
+  A comic finding is complete only when the comic signal, speaker, audience, action,
+  consequence, disclosed disproportion, preserved serious question, self-implication,
+  and remaining uncertainty are recorded.
 
 invoked_by:
   - nomos-vs-physis
