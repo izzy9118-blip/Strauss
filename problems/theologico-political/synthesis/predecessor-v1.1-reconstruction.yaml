@@ -1,0 +1,356 @@
+schema_version: 1.0
+document_type: provisional_problem_synthesis
+
+identity:
+  synthesis_id: TP-SYN-001
+  problem: theologico-political
+  title: The Theologico-Political Problem v1.1 — Preserved Predecessor Reconstruction
+  version: 0.1.0
+
+status:
+  lifecycle: PROVISIONAL
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SYNTHESIS_RECORD_FOR_INACTIVE_SUCCESSOR
+
+source_record:
+  active_predecessor:
+    path: problems/theologico-political.yaml
+    identifier: STR-PROBLEM-002
+    version: 1.1
+    blob_sha: 4a35e71916212082598097985deb23699c0018e7
+    governing_commit: 7a25b1fa3a7660a93318892342df57f661247b0d
+  preserved_copy:
+    path: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+    blob_sha: 4a35e71916212082598097985deb23699c0018e7
+    preservation_commit: 259cf8b4c13cf5a96c7d665181154e4f4259e753
+  transaction_ledger: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+  source_scope: >
+    Preserves the accepted nineteen-source predecessor reconstruction while
+    redistributing constitutional, operational, witness, relational, historical,
+    and shared-method material into the successor architecture.
+
+source_status: >
+  Version 1.1 remains the active predecessor until migration certification and
+  activation. This synthesis neither supersedes it nor certifies its propositions.
+  It preserves the strongest supported reconstruction, classifications, limits,
+  unresolved tensions, and successor implications.
+
+governing_reconstruction: >
+  The theologico-political problem is the unresolved confrontation between revealed
+  divine law and the philosophic life. Revelation claims authoritative obedience
+  concerning the whole human way of life through creation, command, prophecy,
+  covenant, sacred law, punishment, promise, repentance, and redemption. Philosophy
+  claims the necessity of unrestricted examination concerning the whole, nature,
+  justice, the good, and the best human life. Political law and sovereignty must
+  mediate their public conflict but cannot by jurisdiction alone decide which
+  comprehensive teaching is true.
+
+primary_alternatives:
+  revealed_divine_law:
+    strongest_claim: >
+      Divine law is authoritative because it is given by God, whose wisdom and
+      authority exceed unaided human reason.
+    strongest_challenge: >
+      Philosophy cannot justify disobedience merely by assuming that miracle,
+      prophecy, revelation, or divine command is impossible.
+    unresolved_burden: >
+      Claimed revelation must be distinguished from unsupported assertion,
+      inherited opinion, human poetry, political imposition, psychological need,
+      fraudulent prophecy, and interpretive usurpation.
+  philosophic_life:
+    strongest_claim: >
+      No comprehensive claim concerning the right way of life may be exempted from
+      examination merely because it asserts divine, ancestral, textual, or political authority.
+    strongest_challenge: >
+      A command cannot establish its own truth for philosophy solely by demanding
+      obedience or prohibiting inquiry.
+    unresolved_burden: >
+      Philosophy may not claim demonstrated victory unless its account of the whole
+      is sufficient to establish revelation's impossibility or falsity without circular premises.
+
+central_epistemic_result: >
+  Historical criticism, scientific explanation, psychological reduction, causal
+  reconstruction, and knowledge of ordinary natural regularities do not independently
+  establish that miracle or revelation is impossible. Philosophy's inability to
+  refute revelation does not prove any particular revelation true, and revelation's
+  claim to divine authority does not constitute philosophic proof. The conflict
+  therefore remains rationally open unless stronger evidence meets one burden without
+  presupposing its conclusion.
+
+political_mediation:
+  governing_finding: >
+    Political law and sovereignty establish enforceable public jurisdiction over
+    conduct, worship, education, interpretation, teaching, toleration, persecution,
+    and civic peace.
+  permanent_limit: >
+    Public jurisdiction determines who rules and what may be done publicly; it does
+    not establish which comprehensive teaching possesses final truth or rightful authority.
+  mediators_examined:
+    - political law
+    - sovereignty
+    - toleration
+    - liberal emancipation
+    - rational religion
+    - assimilation
+    - political Zionism
+    - cultural Zionism
+    - the good society
+  anti_neutrality_finding: >
+    A settlement described as neutral may still assign the state or sovereign final
+    authority over the permissible public scope of theology, interpretation, and philosophy.
+
+argumentative_sequence:
+  - stage: ORIGINAL_CONFRONTATION
+    reconstruction: >
+      Philosophy emerges within political communities governed by gods, ancestral
+      law, poetry, authoritative opinion, and civic education. Biblical revelation
+      gives the alternative its comprehensive form as divine law.
+  - stage: MODERN_CRITIQUE
+    reconstruction: >
+      Modern philosophy and criticism seek to expose revelation as superstition,
+      imagination, priestcraft, textual construction, psychological need, or obsolete history.
+  - stage: EPISTEMIC_REOPENING
+    reconstruction: >
+      Examination shows that explanation of belief, text, or natural regularity does
+      not independently prove miracle or revelation impossible.
+  - stage: SOVEREIGN_NEUTRALIZATION
+    reconstruction: >
+      Hobbesian and Spinozist strategies establish public jurisdiction, peace, and
+      regulated freedom to philosophize without resolving comprehensive truth.
+  - stage: RATIONALIZATION_AND_REDUCTION
+    reconstruction: >
+      Revelation is translated into morality, progress, psychology, repression,
+      memory, culture, identity, or political utility.
+  - stage: JEWISH_HISTORICAL_MANIFESTATION
+    reconstruction: >
+      Emancipation, assimilation, persistence, Zionism, and Israel display the
+      practical force and unresolved theological depth of the problem.
+  - stage: HERMENEUTIC_CONSEQUENCE
+    reconstruction: >
+      Persecution, communal obligation, censorship, and differentiated audiences
+      create grounds for guarded communication and disputes over authoritative interpretation.
+  - stage: HISTORICIST_DEEPENING
+    reconstruction: >
+      Historicism attempts to supersede revelation and classical philosophy by
+      claiming that truth and completion arise through historical action.
+  - stage: PERMANENT_REMAINDER
+    reconstruction: >
+      The evidence establishes no final victory for revelation, philosophy,
+      sovereignty, rational religion, political restoration, or historicism.
+
+progress_and_return:
+  progress:
+    strongest_claim: >
+      Human beings may replace inherited or revealed authority with rational,
+      autonomous, peaceful, and progressively improved political order.
+    required_test: >
+      Determine whether progress has refuted revelation and overcome the human
+      problem or only created new political and intellectual conditions.
+  return:
+    strongest_claim: >
+      Modern autonomy is forgetfulness or rebellion, and the right response is
+      repentance and return to God, covenant, commandment, and revealed law.
+    required_test: >
+      Determine whether return can be distinguished from inherited orthodoxy,
+      political reaction, or submission to an unverified authority.
+  preserved_result: >
+    Neither orientation has demonstrated final victory; their conflict must be
+    reconstructed rather than replaced by commitment, nostalgia, or confidence in history.
+
+modern_attempts_at_resolution:
+  - attempt: Spinozist critique
+    achievement: >
+      Subjects Scripture, prophecy, miracle, and interpretation to criticism and
+      protects a form of freedom to philosophize.
+    limit: >
+      May presuppose natural closure and reason's sufficiency rather than demonstrate them.
+  - attempt: Hobbesian neutralization
+    achievement: Establishes final public jurisdiction for peace.
+    limit: Does not decide the truth of revelation or philosophy.
+  - attempt: Liberal privatization
+    achievement: Reduces persecution and permits plural coexistence.
+    limit: May silently privilege secular sovereignty and leave comprehensive disagreement intact.
+  - attempt: Cohenian rationalization
+    achievement: Preserves ethical seriousness and universal aspiration.
+    limit: May subordinate divine command to autonomous morality and historical progress.
+  - attempt: Freudian reduction
+    achievement: Supplies causal accounts of monotheism, memory, guilt, persistence, and identity.
+    limit: Causal explanation does not establish the object's falsity.
+  - attempt: Assimilation
+    achievement: May remove legal and social barriers.
+    limit: closure and reason's sufficiency.
+  - attempt: HOBBESIAN_NEUTRALIZATION
+    achievement: Peace through final sovereign public jurisdiction.
+    unresolved_limit: Jurisdiction does not settle comprehensive truth.
+  - attempt: LIBERAL_PRIVATIZATION
+    achievement: Equal citizenship and plural coexistence.
+    unresolved_limit: Neutrality may privilege secular state authority and does not eliminate comprehensive disagreement.
+  - attempt: COHENIAN_RATIONALIZATION
+    achievement: Ethical seriousness, universal morality, and historical aspiration.
+    unresolved_limit: Divine command may become symbolic form of autonomous morality.
+  - attempt: FREUDIAN_REDUCTION
+    achievement: Causal account of belief, memory, guilt, persistence, and identity.
+    unresolved_limit: Explanation does not establish the object of belief false.
+  - attempt: ASSIMILATIONIST_RESOLUTION
+    achievement: Potential removal of barriers and separation.
+    unresolved_limit: Assumes rather than proves that continued Jewish existence lacks authoritative meaning.
+  - attempt: ZIONIST_RESOLUTION
+    achievement: Answers defenselessness, homelessness, and collective dependence.
+    unresolved_limit: Political restoration is not theological fulfillment.
+  - attempt: HISTORICIST_SUPERSESSION
+    achievement: Connects thought, action, recognition, and political transformation.
+    unresolved_limit: Depends on a contested philosophy of history and may identify truth with historical success.
+
+jewish_historical_sequence:
+  governing_rule: >
+    The Jewish problem is a central historical manifestation of the conflict, not a
+    self-interpreting proof of any providential, philosophic, political, or
+    psychological account.
+  stages:
+    - stage: LEGAL_EMANCIPATION
+      achievement: Equal civil and political rights.
+      remainder: Social hostility, memory, identity, and the question of why Jews remain Jews.
+    - stage: ASSIMILATION
+      achievement: Possible reduction of separation.
+      remainder: Resolution through disappearance of Jewish distinctiveness.
+    - stage: POLITICAL_ZIONISM
+      achievement: Territory, defense, sovereignty, and collective responsibility.
+      remainder: Authority of Torah, covenant, providence, and redemption.
+    - stage: CULTURAL_ZIONISM
+      achievement: Language, culture, education, and memory.
+      remainder: Whether Jewish substance is human culture or divine gift.
+    - stage: STATE_OF_ISRAEL
+      achievement: Actual institutions of national life, defense, action, and responsibility.
+      remainder: Election, providence, messianic fulfillment, and redemption.
+  permanent_distinctions:
+    - political restoration and divine redemption
+    - sovereignty and covenant
+    - citizenship and Torah
+    - historical return and messianic return
+    - collective survival and divine election
+    - political causation and providential interpretation
+    - human achievement and divine promise
+
+hermeneutic_findings:
+  - finding_id: TP-HERM-001
+    proposition: Interpretation of an authoritative text may itself constitute an act of rule.
+  - finding_id: TP-HERM-002
+    proposition: Control of interpretation may transfer practical authority among prophet, community, theologian, philosopher, jurist, and sovereign.
+  - finding_id: TP-HERM-003
+    proposition: Interpretation must precede historical, psychological, sociological, or political explanation.
+  - finding_id: TP-HERM-004
+    proposition: Persecution and danger require maximum scrutiny but do not prove esotericism or inversion.
+  - finding_id: TP-HERM-005
+    proposition: Positive textual or structural evidence is required for guarded-teaching claims.
+  - finding_id: TP-HERM-006
+    proposition: Autobiographical sequence and intellectual debt do not decide final doctrine.
+
+brother_problem_integration:
+  related_problem: philosophy-vs-poetry
+  relation_type: INTERSECTS
+  constitutional_designation: BROTHER_PROBLEM
+  relation_strength: CO_FOUNDATIONAL
+  cofoundational_finding: >
+    The quarrel between philosophy and poetry concerns gods, piety, education,
+    authoritative orientation, and what makes gods gods for human beings; philosophy
+    cannot responsibly judge divine authority while ignoring soul, eros, music,
+    audience, poetry, and political consequence.
+  jurisdiction_boundary: >
+    Philosophy vs. Poetry owns rival human wisdom, dramatic representation,
+    imitation, education, and knowledge of souls. The Theologico-Political Problem
+    owns ultimate authority among reason, revelation, divine command, prophecy,
+    sacred law, interpretation, theology, and sovereignty.
+  non_absorption_rule: >
+    Poetry is not revelation. Revelation is not poetic construction. Political or
+    poetic efficacy is not proof of divine truth.
+  source_limit: >
+    Socrates and Aristophanes supplies cofoundational evidence but cannot alone
+    reconstruct Biblical revelation or the complete reason-revelation conflict.
+
+permanent_findings:
+  - finding_id: TP-F001
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: The problem concerns comprehensive ways of life, not merely religion-state administration.
+  - finding_id: TP-F002
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: Revelation appears most fully as divine law rather than private experience.
+  - finding_id: TP-F003
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: Philosophy claims the necessity of examining every comprehensive authority.
+  - finding_id: TP-F004
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: Natural regularities and causal explanation do not independently establish revelation's impossibility.
+  - finding_id: TP-F005
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: Failure to refute revelation does not prove a particular revelation true.
+  - finding_id: TP-F006
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: A claim of divine command does not constitute philosophic proof of divine origin.
+  - finding_id: TP-F007
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: Political law and sovereignty mediate the conflict but are not comprehensive alternatives of equal rank.
+  - finding_id: TP-F008
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: Political settlements establish public jurisdiction without deciding ultimate truth.
+  - finding_id: TP-F009
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: Jewish history is significant but not self-interpreting.
+  - finding_id: TP-F010
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: Statehood is a genuine political achievement but not thereby redemption or proof of providence.
+  - finding_id: TP-F011
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: No attainable good society is identical with final human completion.
+  - finding_id: TP-F012
+    classification: DOCUMENTED_OR_STRONGLY_SUPPORTED_IN_PREDECESSOR
+    proposition: Disciplined nonresolution is a substantive result where neither contender satisfies its burden.
+
+uncertainties:
+  - The predecessor does not establish which comprehensive alternative is true.
+  - Philosophy has not demonstrated revelation's impossibility, but no particular revelation is thereby proved.
+  - The evidence does not establish Strauss's final personal allegiance.
+  - Historicism's status as transformation, third alternative, or attempted supersession remains open.
+  - The boundary between Athens vs. Jerusalem and the political-legal confrontation requires further transaction review.
+  - The boundary between poetic theology, civic gods, claimed prophecy, and genuine revelation requires continued brother-problem inquiry.
+  - Independent reconstruction of the nineteen source witnesses may qualify or correct the predecessor synthesis.
+
+successor_distribution:
+  problem_constitution: problems/theologico-political/problem.yaml
+  inquiry_profile: problems/theologico-political/inquiry-profile.yaml
+  witness_registry: problems/theologico-political/witnesses.yaml
+  relations_record: problems/theologico-political/relations.yaml
+  transaction_ledger: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+  shared_protocol_references:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+    - audience-and-rhetoric
+    - irony where supported
+    - claimant-to-wisdom where activated
+  neighboring_references:
+    - philosophy-vs-poetry
+    - nomos-vs-physis
+    - theory-vs-practice
+    - athens-vs-jerusalem
+    - wise-vs-vulgar
+    - ancients-vs-moderns
+
+termination:
+  state: PREDECESSOR_SYNTHESIS_REDISTRIBUTED_PROVISIONALLY
+  certification: NOT_CERTIFIED
+  successor_activation: NOT_AUTHORIZED
+  further_required_work:
+    - update migration transactions with implementing commits
+    - update registry and predecessor index successor status
+    - validate reciprocal brother-problem relations
+    - validate YAML and cross-references
+    - begin independent source-specific witness reconstruction
+    - preserve corrections and dissent without rewriting the predecessor
+
+non_certification_notice: >
+  This synthesis records the strongest supported reconstruction inherited from the
+  active v1.1 predecessor and its controlled redistribution. It does not certify
+  truth, resolve revelation against philosophy, activate the successor, or authorize
+  removal or modification of the active predecessor.
