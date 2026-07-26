@@ -1,0 +1,54 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: NVP-SPPP-001
+  problem: nomos-vs-physis
+  source_study: SPPP-STUDY-001
+  title: Nomos vs. Physis — Studies in Platonic Political Philosophy
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+  cross_problem_synthesis: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+
+strict_problem: >
+  Is there a standard of right independent of enacted law, inherited custom,
+  political power, historical circumstance, or revealed command; and how can such
+  a standard be known and applied without turning prudence into relativism?
+
+principal_findings:
+  - Political society requires law before the justice of law is demonstrated.
+  - The lawful is not identical with the just, but imperfect law is not dispensable.
+  - Natural law, human positive law, and divine positive law must remain distinct.
+  - Recurrent natural power does not establish a natural right of the stronger.
+  - Universal standards require prudential application to changing particulars.
+  - Modern natural right lowers the beginning toward preservation, security, and individual claim.
+  - Nietzsche radicalizes convention as value creation; Machiavelli treats stable nature chiefly as predictable political material.
+  - Cohen preserves Law by subjecting particulars to autonomous morality and symbolic interpretation.
+
+unresolved_questions:
+  - whether anything is right by nature
+  - how a natural standard can be known
+  - how natural right relates to revealed divine law
+  - how prudence applies a universal standard without dissolving it
+
+jurisdiction_limits:
+  - The full reason-revelation conflict remains theologico-political.
+  - The complete ancient-modern transformation remains under Ancients vs. Moderns.
+  - This collection does not replace independent classical, biblical, medieval, or modern witnesses.
+
+termination:
+  synthesis_state: COMPLETE_FOR_REGISTERED_COLLECTION
+  certification: NOT_CERTIFIED
+  remaining_work:
+    - independent witness reconstruction
+    - complete successor subordinate records
+    - migration validation
