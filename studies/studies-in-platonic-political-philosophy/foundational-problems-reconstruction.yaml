@@ -1,0 +1,286 @@
+schema_version: 1.0
+document_type: source_specific_reconstruction
+
+identity:
+  study_id: SPPP-FP-001
+  author: Leo Strauss
+  work: Studies in Platonic Political Philosophy
+  title: Studies in Platonic Political Philosophy — Seven-Problem Reconstruction
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_RECONSTRUCTION
+  sequential_reading: COMPLETE
+  cross_volume_synthesis: COMPLETE
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_STUDY_RECORD
+
+source:
+  source_status_record: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  edition: University of Chicago Press, 1983
+  source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+  source_limit: >
+    Strauss's essays are primary evidence for Strauss's arguments. The collection is
+    posthumous, its title and arrangement were chosen by Strauss, and the projected
+    authorial introduction and projected essay on Plato's Gorgias were not completed.
+    Pangle's introduction is secondary and Cropsey's foreword is editorial provenance.
+
+independence_rule: >
+  This record reconstructs Strauss's arguments in this collection. It does not replace
+  independent reconstruction of Plato, Xenophon, Thucydides, the Bible, Maimonides,
+  Machiavelli, Nietzsche, Hobbes, Locke, Talmon, Macpherson, Cohen, or the historical
+  Socrates, and it does not convert Strauss's interpretation into the final meaning of
+  those witnesses.
+
+activated_problems:
+  - canonical_key: nomos-vs-physis
+  - canonical_key: philosophy-vs-poetry
+  - canonical_key: theory-vs-practice
+  - canonical_key: theologico-political
+  - canonical_key: athens-vs-jerusalem
+  - canonical_key: wise-vs-vulgar
+  - canonical_key: ancients-vs-moderns
+
+activated_protocols:
+  - source-status
+  - evidence-classification
+  - inference-discipline
+  - uncertainty-preservation
+  - speech-and-deed
+  - irony
+  - comedy
+  - claimant-to-wisdom
+  - audience-and-rhetoric
+
+sequential_reconstruction:
+  - unit_id: SPPP-ESSAY-001
+    essay: Philosophy as Rigorous Science and Political Philosophy
+    governing_result: >
+      The modern loss of political philosophy arises through positivism, historicism,
+      and existentialism. Political philosophy cannot be restored by repeating
+      classical conclusions; it must recover the question of the right order and the
+      philosophic way of life while examining philosophy's historical and political condition.
+  - unit_id: SPPP-ESSAY-002
+    essay: On Plato's Apology of Socrates and Crito
+    governing_result: >
+      Socrates stands before the authoritative multitude, whose legal power exceeds
+      its knowledge of philosophy. The Laws' speech preserves authority, persuasion,
+      consent, and fallibility without establishing unconditional obedience to every law.
+  - unit_id: SPPP-ESSAY-003
+    essay: On the Euthydemus
+    governing_result: >
+      Eristic counterfeits philosophy through argument, refutation, certainty, and
+      teaching claims while abolishing learning. The kingly art uniting knowledge,
+      right use, wisdom, happiness, and rule is sought but not successfully identified.
+  - unit_id: SPPP-ESSAY-004
+    essay: Preliminary Observations on the Gods in Thucydides' Work
+    governing_result: >
+      Sacred belief, oath, ritual, hope, and piety are politically indispensable, but
+      Thucydidean history does not become transparent providential history. The
+      concentration and withdrawal of fully dramatized speech may rank Sicily, while
+      incompletion and authorial-intention uncertainty remain preserved.
+  - unit_id: SPPP-ESSAY-005
+    essay: Xenophon's Anabasis
+    governing_result: >
+      Xenophon displays practical superiority through speech, courage, correction,
+      consent, coercion, deception, restraint, and refusal of concrete tyranny. Success,
+      office, and public usefulness do not certify complete wisdom or justice.
+  - unit_id: SPPP-ESSAY-006
+    essay: On Natural Law
+    governing_result: >
+      Natural law must be distinguished from human positive law and divine positive
+      law. Classical natural right begins from nature and human ends; modern natural
+      right increasingly begins from preservation, right, property, and sovereignty.
+  - unit_id: SPPP-ESSAY-007
+    essay: Jerusalem and Athens
+    governing_result: >
+      Biblical wisdom begins from fear of the Lord, creation, command, and obedient
+      response; Greek philosophy begins from wonder, nature, and autonomous inquiry.
+      The alternatives cannot be harmonized through shared vocabulary without transformation.
+  - unit_id: SPPP-ESSAY-008
+    essay: Nietzsche
+    governing_result: >
+      Nietzsche attempts to overcome nature and revelation through will to power,
+      value creation, future philosopher-commanders, and eternal affirmation. The
+      authority of created values and the distinction between philosopher and tyrant remain unresolved.
+  - unit_id: SPPP-ESSAY-009
+    essay: Notes on Maimonides' Book of Knowledge
+    governing_result: >
+      Maimonides introduces philosophy into the foundations of Torah while preserving
+      distinctions among knowledge, belief, prophecy, Mosaic authority, legal
+      presumption, practical dogma, commanded action, repentance, and love of God.
+  - unit_id: SPPP-ESSAY-010
+    essay: Note on Maimonides' Letter on Astrology
+    governing_result: >
+      Reason, sense, and trustworthy prophetic or just tradition are distinguished
+      from endoxa. Astrology is rejected without reducing every causal question to
+      miracle; proximate political causation and remote divine government remain distinguishable.
+  - unit_id: SPPP-ESSAY-011
+    essay: Note on Maimonides' Treatise on the Art of Logic
+    governing_result: >
+      Logic distinguishes demonstration from rhetoric and genuine future possibility
+      from retrospective necessity. Political science concerns self, household, city,
+      and nations; technical distinction is necessary but does not settle the highest end.
+  - unit_id: SPPP-ESSAY-012
+    essay: Niccolo Machiavelli
+    governing_result: >
+      Machiavelli publicly legitimates practices long known to the ancients, lowers
+      political standards toward effective truth, treats religion as civil theology,
+      and narrows the horizon by suppressing the Socratic pole within ancient political knowledge.
+  - unit_id: SPPP-ESSAY-013
+    essay: Review of Macpherson's The Political Theory of Possessive Individualism
+    governing_result: >
+      Hobbesian competition cannot be shown to arise only from possessive market
+      society. Historical and economic genealogy must not replace examination of the
+      truth of a political thinker's account of human nature and rational society.
+  - unit_id: SPPP-ESSAY-014
+    essay: Review of Talmon's The Nature of Jewish History—Its Universal Significance
+    governing_result: >
+      Belief in election is constitutive and historically causal without becoming
+      theologically proven by historical method. The unresolved question is why a
+      universal passion for right action requires a particular nation as bearer.
+  - unit_id: SPPP-ESSAY-015
+    essay: Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
+    governing_result: >
+      Cohen preserves Jewish language and devotion under autonomous reason by
+      transforming creation, revelation, Law, holiness, grace, election, Messianism,
+      immortality, and resurrection. The reconciliation may dissolve rather than settle
+      the conflict between reason and traditional revelation.
+
+cross_volume_architecture:
+  governing_result: >
+    Platonic political philosophy is philosophy that investigates political life and
+    understands its own political situation. It refuses to identify political necessity
+    with truth, refuses to identify truth with political authority, preserves the
+    reason-revelation alternative, and tests every claimant through speech, deed,
+    audience, consequence, source condition, and acknowledged uncertainty.
+  negative_result: >
+    Positivism, historicism, civic theology, Nietzschean value creation, social
+    reduction, Machiavellian effectiveness, and Cohenian rational religion do not
+    eliminate the foundational problems without presupposition, narrowing, or transformation.
+  positive_result: >
+    Political society requires law, opinion, education, and practical judgment;
+    philosophy requires autonomous inquiry; revelation retains an undefeated claim to
+    free divine creation and command; poetry retains genuine knowledge and power
+    concerning souls; and no claimant may certify its own wisdom or authority.
+
+problem_reconstructions:
+  nomos_vs_physis:
+    governing_result: >
+      Law is indispensable but not self-justifying. Natural right must be distinguished
+      from enacted law, inherited custom, recurring natural fact, power, and divine
+      positive law. Universal standards require prudential application without becoming relativism.
+    permanent_findings:
+      - recurring natural fact is not automatically natural moral right
+      - the lawful and the just remain distinct
+      - human positive law, divine positive law, and natural law possess different jurisdictions
+      - modern natural right lowers the beginning toward preservation, right, and property
+      - denial of natural ends transfers legislation to will, history, or value creators
+  philosophy_vs_poetry:
+    governing_result: >
+      Philosophy seeks causes, definitions, truth, and the whole; poetry, drama,
+      history, and rhetoric disclose and form souls through character, action, passion,
+      image, silence, and consequence. Philosophy's superiority is integrative rather than presumptive.
+    permanent_findings:
+      - poetry is a claimant to wisdom rather than mere entertainment
+      - rhetoric is necessary for political address but must remain ordered to truth
+      - comedy exposes disproportion without automatically refuting
+      - structural and dramatic deed may qualify explicit doctrine
+      - poetry must not be reduced to revelation and revelation must not be reduced to poetry
+  theory_vs_practice:
+    governing_result: >
+      Knowledge of ends does not automatically provide legitimate authority,
+      persuasion, command, execution, institutional capacity, or control of chance.
+      Practical success does not prove truth; practical failure does not automatically refute judgment.
+    permanent_findings:
+      - the kingly art remains unidentified
+      - production and possession of goods differ from right use
+      - indirect guidance can preserve consent while risking manipulation
+      - founding and preservation require different capacities
+      - theory and practice correct one another without becoming identical
+  theologico_political:
+    governing_result: >
+      Autonomous inquiry and obedient revelation make rival claims to highest
+      authority. Political society must establish public jurisdiction before the
+      comprehensive truth conflict is resolved, and its need for authoritative opinion
+      cannot turn political settlement into knowledge.
+    permanent_findings:
+      - civic theology is not identical with revelation
+      - political usefulness neither proves nor disproves divine truth
+      - philosophy's inability to refute revelation does not prove a particular revelation
+      - Maimonides preserves articulated coexistence rather than complete synthesis
+      - Machiavelli politicizes religion and Cohen rationalizes revelation
+  athens_vs_jerusalem:
+    governing_result: >
+      Athens and Jerusalem are comprehensive rival beginnings: wonder, nature, and
+      autonomous understanding versus fear of the Lord, creation, command, and
+      obedient love. Their historical interpenetration does not establish doctrinal harmony.
+    permanent_findings:
+      - creation and nature are different beginnings
+      - prophet and philosopher claim authority differently
+      - Messianic age and best regime must not be identified
+      - universal biblical vocation remains particular in bearer
+      - modern syntheses transform one or both alternatives
+  wise_vs_vulgar:
+    governing_result: >
+      Political society requires guidance but cannot certify wisdom. Philosophy,
+      prophecy, poetry, scholarship, expertise, office, success, persecution, secrecy,
+      election, and social rank all remain fallible signs requiring examination.
+    permanent_findings:
+      - vulgar does not mean poor, stupid, crude, or contemptible
+      - political virtue grounded in opinion remains genuine
+      - human heterogeneity requires differentiated education
+      - elite disbelief and hidden teaching can become capture rather than guidance
+      - recognition of superior understanding remains provisional and domain-limited
+  ancients_vs_moderns:
+    governing_result: >
+      Modernity gains reliability, institutional power, and causal control partly by
+      lowering, transforming, or denying ancient standards of nature, virtue, and the
+      highest life. Its practical gains are real; their human and philosophic cost remains open.
+    permanent_findings:
+      - chronology establishes no rank
+      - ancient philosophy begins from highest ends and accepts political improbability
+      - modernity begins from predictable passions and seeks reliable realization
+      - many modern discoveries result from narrowing rather than enlargement
+      - technical and historical consciousness do not certify wisdom
+
+speech_and_deed_governing_method:
+  proposition: >
+    Every claim must be examined through speaker, audience, occasion, wording, action,
+    consequence, structure, omission, source use, and uncertainty. Speech and deed is
+    a shared protocol, not an eighth foundational problem.
+  safeguards:
+    - irony is not mechanical inversion
+    - omission is evidence only where presence is reasonably expected
+    - structural significance does not prove complete authorial intention
+    - a represented statement is not automatically authorial doctrine
+    - preservation of a word does not necessarily preserve the doctrine formerly named by it
+    - comedy and ridicule may expose without certifying final rank
+
+cross_problem_non_absorption:
+  - Nomos vs. Physis owns nature, convention, and the status of law; it does not own every legal dispute.
+  - Philosophy vs. Poetry owns rival human forms of wisdom and education; it does not own revelation.
+  - Theory vs. Practice owns mediation from understanding to action; it does not determine the highest end by success.
+  - The Theologico-Political Problem owns ultimate authority among reason, revelation, and sovereignty; it does not own all religion.
+  - Athens vs. Jerusalem owns comprehensive rival ways of life; it does not reproduce the full political mediation problem.
+  - The Wise vs. The Vulgar owns recognition, heterogeneity, and differentiated guidance; it does not certify an elite.
+  - Ancients vs. Moderns owns transformation of standards and projects; it does not make chronology a rank.
+
+uncertainties:
+  - The posthumous collection's order may disclose an illuminating architecture, but complete authorial design is not demonstrated.
+  - The volume does not prove revelation true or false.
+  - The volume does not identify a completed kingly art or a certifiable class of wise rulers.
+  - The exact natural standard and its authoritative political application remain disputed.
+  - The superiority of philosophy to poetry remains conditional upon integration of poetic knowledge.
+  - Modern practical gains cannot be weighed finally against the loss produced by narrowing without further inquiry.
+  - Strauss's interpretations do not replace independent reconstruction of the classical, biblical, medieval, and modern witnesses.
+
+termination:
+  state: SEQUENTIAL_AND_CROSS_PROBLEM_RECONSTRUCTION_COMPLETE
+  certification: NOT_CERTIFIED
+  next_required_work:
+    - register this source in each problem witness registry
+    - preserve problem-specific synthesis records
+    - complete successor constitutions and subordinate records under the foundational migration
+    - validate cross-problem relations and non-duplication
+    - test the provisional findings against independent witness reconstructions
