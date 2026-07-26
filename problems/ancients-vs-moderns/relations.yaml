@@ -1,0 +1,89 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: ancients-vs-moderns
+  title: Ancients vs. Moderns — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/ancients-vs-moderns/problem.yaml
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  governing_rule: >
+    Relations preserve local relevance without reproducing neighboring doctrine.
+
+relations:
+  - relation_id: AVM-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: INTERSECTS
+    local_proposition: >
+      Modernity lowers, transforms, historicizes, or denies classical nature and natural right.
+    boundary: >
+      The substantive status of nature and law remains governed by Nomos vs. Physis.
+  - relation_id: AVM-REL-002
+    related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+    local_proposition: >
+      Modernity may transform poetry into aesthetics, ideology, culture, self-expression, or deliberate horizon creation.
+    boundary: >
+      Rival human forms of wisdom and poetic education remain governed by Philosophy vs. Poetry.
+  - relation_id: AVM-REL-003
+    related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+    local_proposition: >
+      Modernity seeks reliable realization through predictable passions, institutions, method, and mastery of contingency.
+    boundary: >
+      The general mediation from understanding to action remains governed by Theory vs. Practice.
+  - relation_id: AVM-REL-004
+    related_problem: theologico-political
+    relation_type: INTERSECTS
+    local_proposition: >
+      Modernity attempts to defeat, privatize, politicize, rationalize, historicize, or supersede revelation.
+    boundary: >
+      Ultimate authority among reason, revelation, divine law, and sovereignty remains governed by the Theologico-Political Problem.
+  - relation_id: AVM-REL-005
+    related_problem: athens-vs-jerusalem
+    relation_type: RECEIVES_FINDING_FROM
+    local_proposition: >
+      Modern political philosophy arises partly as an attempted escape from the unresolved conflict between Athens and Jerusalem.
+    boundary: >
+      The comprehensive alternatives themselves remain governed by Athens vs. Jerusalem.
+  - relation_id: AVM-REL-006
+    related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    local_proposition: >
+      Professional philosophy, technical expertise, historicist scholarship, and ideological vanguards make modern claims to superior authority.
+    boundary: >
+      Recognition and anti-capture remain governed by The Wise vs. The Vulgar.
+
+unresolved_overlaps:
+  - overlap_id: AVM-OV-001
+    problems: [ancients-vs-moderns, theory-vs-practice]
+    issue: >
+      Modern institutional reliability may represent a genuine practical gain while depending upon lowered ends.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: AVM-OV-002
+    problems: [ancients-vs-moderns, nomos-vs-physis]
+    issue: >
+      Modern rejection of natural ends may expose inherited dogmatism while transferring authority to will or history.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: AVM-OV-003
+    problems: [ancients-vs-moderns, theologico-political]
+    issue: >
+      Rationalization or privatization may reduce persecution while transforming or displacing revelation's comprehensive claim.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: AVM-OV-004
+    problems: [ancients-vs-moderns, athens-vs-jerusalem]
+    issue: >
+      Modern synthesis may represent genuine insight while subordinating or dissolving one comprehensive alternative.
+    status: PRESERVE_UNRESOLVED
+
+non_absorption_rule: >
+  Cross-reference nature, poetry, practical realization, revelation, comprehensive
+  alternatives, and recognition without reproducing their complete governing doctrines.
