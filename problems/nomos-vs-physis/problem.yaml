@@ -1,0 +1,190 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: nomos-vs-physis
+  canonical_order: 1
+  title: Nomos vs. Physis
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  source_status: >
+    This is an inactive successor draft created under the seven-problem migration.
+    It defines the permanent problem and does not replace source-specific studies,
+    witness registries, or any predecessor record.
+
+documentary_basis:
+  founding_strauss_source:
+    title: Studies in Platonic Political Philosophy
+    study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+    local_contribution: >
+      Supplies the distinction among human positive law, divine positive law, and
+      natural law; the difference between recurring natural fact and natural right;
+      and the ancient-to-modern transformation of natural right.
+  documentary_rule: >
+    Full witness interpretation belongs in study and synthesis records. This
+    constitution records only the permanent jurisdiction, burdens, boundaries, and
+    nonresolution floor.
+
+origin: >
+  Human beings begin within inherited laws, customs, opinions, religious practices,
+  languages, and political institutions. Philosophy begins when these authoritative
+  ways become questionable in light of nature and the possibility of a standard not
+  reducible to enactment, inheritance, utility, power, or historical success.
+
+governing_question: >
+  Is there a standard of right by nature through which law, convention, custom,
+  artifice, inheritance, power, and authoritative opinion can be judged; and how can
+  such a standard guide political life without becoming rigid abstraction or being
+  confused with divine positive law?
+
+compressed_question: >
+  What is right by nature rather than merely lawful, inherited, useful, powerful, or commanded?
+
+jurisdiction:
+  owns:
+    - the distinction between nature and convention, law, custom, inheritance, and artifice
+    - the distinction between the lawful and the just
+    - natural right and natural law as rational standards
+    - the distinction among human positive law, divine positive law, and natural law
+    - the difference between recurring natural fact and natural moral right
+    - equity and prudential application of general standards to particular cases
+    - the natural or conventional status of political institutions and human distinctions
+    - the transformation or denial of nature in modern political philosophy
+  does_not_own:
+    - canonical_key: philosophy-vs-poetry
+      reason: Rival poetic and philosophic claims to wisdom and education belong there.
+    - canonical_key: theory-vs-practice
+      reason: The general mediation from standards to action, authority, and execution belongs there.
+    - canonical_key: theologico-political
+      reason: Ultimate authority among reason, revelation, divine law, and sovereignty belongs there.
+    - canonical_key: athens-vs-jerusalem
+      reason: Nature and creation as comprehensive beginnings belong there in their full form.
+    - canonical_key: wise-vs-vulgar
+      reason: Recognition of wisdom and differentiated education belong there.
+    - canonical_key: ancients-vs-moderns
+      reason: The historical transformation of nature and political standards belongs there.
+
+permanent_tension:
+  law_and_convention:
+    strongest_claim: >
+      Political society cannot exist without general laws, inherited practices,
+      authoritative opinions, and stable expectations that precede complete knowledge.
+    danger: >
+      Enactment, antiquity, consensus, sacred reputation, or political usefulness may
+      be mistaken for justice.
+  nature_and_natural_right:
+    strongest_claim: >
+      Political philosophy requires a standard not reducible to what a community
+      happens to command, praise, inherit, or enforce.
+    danger: >
+      Nature may be reduced to recurring fact, biological force, rigid rule, or a
+      projection of the investigator's own convention.
+  application:
+    strongest_claim: >
+      General standards require prudence, equity, and judgment of circumstances.
+    danger: >
+      Circumstantial variation may be used to dissolve every standard into relativism
+      or to justify effective injustice.
+  unresolved_relation: >
+    Law is indispensable but not self-justifying. The existence, content, and proper
+    political application of natural right remain open to continued inquiry.
+
+boundary:
+  activates_when:
+    - a law or custom is treated as just because it is enacted, ancient, sacred, or accepted
+    - a recurring natural fact is treated as a natural right
+    - nature is invoked as a standard of political judgment
+    - divine positive law is identified with natural law without argument
+    - legal generality conflicts with a particular case requiring equity or prudence
+    - modern thought denies stable human ends or transfers value creation to will or history
+  does_not_activate_by_itself:
+    - every legal dispute
+    - every question of policy implementation
+    - every theological command
+    - every historical change in law
+    - every biological or scientific claim about nature
+
+relations:
+  - related_problem: philosophy-vs-poetry
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      The discovery of nature makes inherited poetic and civic authority examinable.
+  - related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+    summary: >
+      Natural standards require prudential mediation into law and action.
+  - related_problem: theologico-political
+    relation_type: INTERSECTS
+    summary: >
+      Natural law and divine positive law must remain distinct where revelation claims authority.
+  - related_problem: athens-vs-jerusalem
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      Greek nature and Biblical creation supply rival comprehensive beginnings.
+  - related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    summary: >
+      The claimant who knows nature cannot certify that knowledge by title or office.
+  - related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Modernity transforms, lowers, historicizes, or denies classical nature and natural right.
+
+shared_protocols:
+  required:
+    - canonical_key: source-status
+    - canonical_key: evidence-classification
+    - canonical_key: inference-discipline
+    - canonical_key: uncertainty-preservation
+    - canonical_key: speech-and-deed
+  conditional:
+    - canonical_key: claimant-to-wisdom
+      activation: Activate when a legislator, philosopher, scientist, theologian, or ruler claims final knowledge of nature or right.
+    - canonical_key: audience-and-rhetoric
+      activation: Activate when natural-right claims are translated into public law or education.
+
+anti_capture_principle: >
+  No legislator, court, philosopher, scientist, theologian, majority, tradition,
+  revolutionary movement, or successful regime may certify its own account of nature
+  or justice through office, consensus, antiquity, necessity, recurrence, or victory.
+
+non_absorption_clause: >
+  Nomos vs. Physis must not become a container for every legal, religious, or policy
+  question. It owns the status of nature, convention, law, custom, and right. Ultimate
+  divine authority, practical implementation, recognition of wisdom, and historical
+  transformation remain governed by their neighboring problems.
+
+anti_reduction_rules:
+  - recurring natural fact must not be treated as natural right
+  - enacted law must not be treated as justice merely because it is valid
+  - natural law must not be identified automatically with divine positive law
+  - prudential variation must not be treated as proof of relativism
+  - political necessity must not be treated as proof of natural justice
+  - denial of nature must not be treated as freedom from all legislation or hierarchy
+
+termination:
+  completion_standard: >
+    Examination is complete when the inquiry distinguishes enacted, inherited,
+    divine, and natural standards; reconstructs the strongest conventional and
+    natural claims; examines application through prudence and equity; and preserves
+    unresolved questions concerning the content and authority of natural right.
+  valid_states:
+    - documented_conventional_claim
+    - documented_natural_claim
+    - law_justice_distinction_preserved
+    - prudential_application_supported
+    - natural_right_unresolved
+  prohibited_states:
+    - law certified as justice by enactment alone
+    - power or recurrence certified as natural right
+    - divine and natural law silently collapsed
+    - relativism inferred from circumstantial variation
