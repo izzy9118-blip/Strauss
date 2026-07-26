@@ -1,0 +1,78 @@
+schema_version: 1.0
+document_type: shared_interpretive_protocol
+
+identity:
+  canonical_key: comedy
+  title: Comedy Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+
+depends_on:
+  - speech-and-deed
+  - inference-discipline
+  - uncertainty-preservation
+
+purpose: >
+  Govern the interpretation of comic action as potentially substantive
+  evidence.
+
+governing_rule: >
+  Comic elements may disclose philosophically relevant disproportion,
+  pretension, motive, embodiment, dependence, or limitation and must not be
+  excluded merely because they are humorous, low, embarrassing, or vulgar.
+
+comic_signals:
+  - joke
+  - ridicule
+  - understatement
+  - exaggeration
+  - embarrassment
+  - anticlimax
+  - bodily_detail
+  - vulgar_expression
+  - disproportion
+  - self_deprecation
+  - solemnity_disrupted_by_low_detail
+
+possible_disclosures:
+  - false_rank
+  - intellectual_vanity
+  - professional_pretension
+  - spiritual_conceit
+  - wounded_pride
+  - bodily_dependence
+  - political_helplessness
+  - ignorance_of_audience
+  - ignorance_of_ends
+  - disparity_between_claim_and_capacity
+
+required_caution: >
+  A comic exposure may establish a defect without resolving the serious
+  question embodied by the ridiculous person.
+
+valid_outputs:
+  - DOCUMENTED_COMIC_ACTION
+  - SUPPORTED_COMIC_DISCLOSURE
+  - COMIC_DEFLATION_OF_RANK
+  - COMIC_LIMIT_ESTABLISHED
+  - COMIC_SIGNIFICANCE_UNRESOLVED
+
+prohibited:
+  - comedy treated as decoration
+  - ridicule treated as refutation
+  - comic inferiority treated as complete intellectual inferiority
+  - solemnity treated as evidence of seriousness
+  - laughter treated as proof of philosophic superiority
+  - comic exposure treated as final resolution
+
+invoked_by:
+  - nomos-vs-physis
+  - philosophy-vs-poetry
+  - theory-vs-practice
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  - ancients-vs-moderns
