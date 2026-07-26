@@ -4,12 +4,20 @@ document_type: foundational_problem_relations
 identity:
   problem: wise-vs-vulgar
   title: The Wise vs. The Vulgar — Relations
-  version: 0.1.0
+  version: 0.2.0
 
 status:
-  lifecycle: FOUNDING_DRAFT
+  lifecycle: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_VALIDATION_PENDING
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: a584c04337ba6dff534ff7a89a8a69c3a7c04abd
+  reason: >
+    Align the relations record with the completed and normalized proposition-level
+    classification. The active predecessor and accepted migration source remain
+    untouched, and no certification or activation is authorized.
 
 authority:
   problem_reference: problems/wise-vs-vulgar/problem.yaml
@@ -17,6 +25,7 @@ authority:
   architecture_reference: governance/foundational-problem-architecture.yaml
   registry_reference: problems/registry.yaml
   migration_reference: migrations/foundational-problems-v2/migration.yaml
+  transaction_reference: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   rule: >
     This record states controlled relations without transferring or duplicating the
     substantive doctrines of neighboring problems and without permitting rank or
@@ -191,26 +200,31 @@ unresolved_relations:
 
 migration_safeguards:
   migration_status:
-    lifecycle: CLASSIFICATION_AND_REDISTRIBUTION_PENDING
+    lifecycle: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_VALIDATION_PENDING
     certification: NOT_CERTIFIED
     activation: NOT_ACTIVE
   predecessor_effect: NONE
+  accepted_source_effect: NONE
+  classification_reference:
+    path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
+    version: 0.2.0
+    state: COMPLETE_NOT_CERTIFIED
   rule: >
     This relations record is a subordinate successor draft. It creates no activation,
-    certification, predecessor classification, historical deletion, elite
-    self-certification, jurisdictional merger, or automatic transfer of findings.
+    certification, predecessor alteration, accepted-source alteration, historical
+    deletion, elite self-certification, jurisdictional merger, or automatic transfer of findings.
 
 termination:
-  relations_state: FOUNDING_RELATIONS_RECORD_CREATED
+  relations_state: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_RELATIONS_ALIGNED_VALIDATION_PENDING
   certification: NOT_CERTIFIED
   completion_conditions:
     - all six neighboring problems possess explicit controlled relations
     - every relation preserves a jurisdictional boundary
     - coactivation does not authorize absorption
     - unresolved overlaps remain visible
-    - predecessor redistribution remains explicit
+    - classification and destination references remain explicit
   remaining_requirements:
-    - proposition-level redistribution of accepted predecessor material
     - independent witness reconstruction
-    - automated YAML and path validation
+    - automated YAML, relation, transaction-value, and path validation
+    - cross-problem duplicate-doctrine and unresolved-jurisdiction review
     - migration certification before activation
