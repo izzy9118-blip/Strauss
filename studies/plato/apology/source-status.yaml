@@ -1,0 +1,132 @@
+schema_version: 1.0
+document_type: source_status_record
+
+identity:
+  study_key: plato-apology
+  author: Plato
+  work: Apology of Socrates
+  original_language: Ancient Greek
+  version: 0.1.0
+
+status:
+  lifecycle: ACTIVE_STUDY_SOURCE
+  certification: NOT_CERTIFIED
+  study_activation: INDEPENDENT_PLATONIC_WITNESS_RECONSTRUCTION
+
+repository_context:
+  philosophy_vs_poetry_witness_registry: problems/philosophy-vs-poetry/witnesses.yaml
+  theologico_political_witness_registry: problems/theologico-political/witnesses.yaml
+  philosophy_vs_poetry_profile: problems/philosophy-vs-poetry/inquiry-profile.yaml
+  theologico_political_profile: problems/theologico-political/inquiry-profile.yaml
+  governing_rule: >
+    Plato is reconstructed independently before comparison with Aristophanes,
+    Xenophon, Strauss, or the provisional Socrates and Aristophanes synthesis.
+
+registered_text:
+  edition_type: PUBLIC_DOMAIN_ENGLISH_TRANSLATION
+  translator: Benjamin Jowett
+  repository_provider: Project Gutenberg
+  ebook_number: 1656
+  title_as_registered: Apology
+  release_date: 1999-02
+  last_update_recorded_by_provider: 2020-10-04
+  language: English
+  stable_page: https://www.gutenberg.org/ebooks/1656
+  reading_text: https://www.gutenberg.org/files/1656/1656-h/1656-h.htm
+  source_scope: APOLOGY_BODY_ONLY
+  source_body_start_marker: "## APOLOGY"
+  source_body_end_marker: "End of the Project Gutenberg EBook of Apology"
+  legal_status: PUBLIC_DOMAIN_TEXT_WITH_PROJECT_GUTENBERG_LICENSE_AND_TRADEMARK_TERMS
+
+parallel_reference:
+  provider: Perseus Digital Library — Scaife Viewer
+  work_urn: urn:cts:greekLit:tlg0059.tlg002
+  English_reference: urn:cts:greekLit:tlg0059.tlg002.perseus-eng2
+  role: >
+    Stable work identity and future Greek-English sectional alignment. It is not
+    treated as the completed registered reading witness until the selected edition,
+    translator, and section mapping are verified in a later source-status revision.
+  verification_status: WORK_IDENTITY_LOCATED_SECTION_MAPPING_PENDING
+
+source_hierarchy:
+  primary_work:
+    authority: PRIMARY_PLATONIC_WITNESS_IN_TRANSLATION
+    scope: >
+      The body of Plato's Apology as represented by the registered Jowett translation.
+  translator:
+    authority: TRANSLATION_MEDIATOR
+    limit: >
+      English wording, capitalization, theological diction, punctuation, paragraphing,
+      and supplied alternatives may reflect Jowett's nineteenth-century choices.
+  project_gutenberg_metadata:
+    authority: REPOSITORY_AND_EDITION_METADATA
+    limit: Does not govern Plato's teaching.
+  jowett_introduction:
+    authority: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+    status: EXCLUDED_FROM_PRIMARY_RECONSTRUCTION
+    limit: >
+      The introduction may orient questions but cannot govern Plato's dramatic deed,
+      Socrates' speech, or the independent reconstruction.
+  web_search_or_catalog_description:
+    authority: DISCOVERY_ONLY
+    limit: Not evidence for the dialogue's teaching.
+
+known_limits:
+  - the registered English text is not the Greek original
+  - the Project Gutenberg HTML does not provide a verified Stephanus-section map in this record
+  - translation choices concerning god, gods, divine sign, spirit, demigod, piety, virtue, and soul require later Greek comparison
+  - Socrates is a dramatic and reported speaker within Plato's work, not automatically Plato's final doctrine
+  - the work's relation to the historical trial and historical Socrates remains disputed
+  - Jowett's introduction is not part of the primary reading corpus
+  - no claim from this translation may be forced to confirm Strauss's interpretation
+
+required_citation_form:
+  work_level: Plato, Apology, Benjamin Jowett translation, Project Gutenberg eBook 1656
+  provisional_location_method: Project Gutenberg HTML body line range and internal argumentative sequence
+  future_location_method: Stephanus section plus verified Greek-English edition reference
+
+reading_integrity:
+  primary_body_reviewed_sequentially: true
+  introduction_excluded_from_primary_findings: true
+  body_range_reviewed: Project Gutenberg HTML lines 115-317
+  translation_limit_carried_forward: true
+  direct_quote_policy: >
+    Quote sparingly and record translation identity. Substantive findings should be
+    paraphrased and later checked against a verified Greek edition where wording bears weight.
+
+problem_activation:
+  philosophy_vs_poetry:
+    activated: true
+    reasons:
+      - Aristophanes and the old accusers shape the public image of Socrates
+      - poets are examined as claimants to wisdom and inspiration
+      - rhetoric, audience, education, imitation, and public representation govern the trial
+      - Plato's dramatic deed must be distinguished from Socrates' explicit defence
+  theologico_political:
+    activated: true
+    reasons:
+      - impiety and the city's gods form a legal charge
+      - Socrates presents the Delphic oracle, divine command, divine sign, and obedience to god
+      - philosophy and political law assert competing practical commands
+      - divine authority, civic oaths, justice, piety, and death are joined
+  brother_problem_rule: >
+    The poetic formation of the accusation and Socrates' account of divine authority
+    require coactivation without identifying poetry with revelation or the city's gods
+    with genuine divine disclosure.
+
+migration_and_non_absorption_safeguards:
+  - no revision or replacement of the completed Socrates and Aristophanes study
+  - no presumption that Plato confirms Strauss
+  - no merger of Philosophy vs. Poetry and The Theologico-Political Problem
+  - no conversion of Socratic speech into Plato's final doctrine without dramatic analysis
+  - no identification of Delphic, daimonic, civic, poetic, and revelatory authority without argument
+  - no certification of historical accuracy from Platonic representation alone
+  - no certification or activation of a foundational successor from this source record
+
+termination:
+  source_registration_state: COMPLETE_FOR_JOWETT_PROJECT_GUTENBERG_WITNESS
+  further_required_source_work:
+    - verify a Greek edition and sectional alignment
+    - compare material translation terms where they bear interpretive weight
+    - register any later translation used for correction or dissent
+  certification: NOT_CERTIFIED
