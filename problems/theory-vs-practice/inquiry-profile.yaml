@@ -1,0 +1,476 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: theory-vs-practice
+  title: Theory vs. Practice — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/theory-vs-practice/problem.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+  governing_rule: >
+    This profile records operations and tests specific to the movement from
+    understanding to responsible action. It invokes shared protocols by reference,
+    preserves neighboring jurisdictions, and does not certify theoretical brilliance,
+    practical success, office, or effective control as wisdom or rightful authority.
+
+purpose: >
+  Govern inquiry into how knowledge, judgment, deliberation, persuasion, authority,
+  command, execution, institutions, character, correction, and chance relate when
+  human beings must act before complete theoretical certainty is available; determine
+  how superior understanding may guide action without converting expertise into
+  sovereignty or political urgency into knowledge.
+
+source_orientation:
+  founding_collection_study:
+    study_id: SPPP-STUDY-001
+    source: Leo Strauss, Studies in Platonic Political Philosophy
+    source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+    source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+    study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+    synthesis_path: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
+    role: >
+      Supplies the first registered problem-specific reconstruction concerning the
+      failure to identify a demonstrated kingly art, distinctions among deliberation,
+      persuasion, authority, execution, founding, preservation, correction, and chance,
+      and the difference between practical success and truth.
+  source_limit: >
+    The collection study does not replace independent reconstruction of Plato,
+    Aristotle, Xenophon, Thucydides, Machiavelli, Hobbes, Maimonides, political
+    institutions, or historical actors. It supplies a provisional founding basis only.
+
+shared_protocol_references:
+  required:
+    - canonical_key: source-status
+      path: protocols/source-status.yaml
+      local_application: >
+        Identify whether evidence comes from philosophical argument, dramatic action,
+        historical narrative, counsel, law, office, autobiography, retrospective
+        explanation, or editorial framing.
+    - canonical_key: evidence-classification
+      path: protocols/evidence-classification.yaml
+      local_application: >
+        Distinguish proposed ends, practical judgments, decisions, actions, outcomes,
+        causal explanations, supported inferences, and unresolved counterfactuals.
+    - canonical_key: inference-discipline
+      path: protocols/inference-discipline.yaml
+      local_application: >
+        Prevent movement from success, failure, urgency, authority, technical skill,
+        or retrospective coherence to unsupported claims of wisdom or legitimacy.
+    - canonical_key: uncertainty-preservation
+      path: protocols/uncertainty-preservation.yaml
+      local_application: >
+        Preserve uncertainty concerning counterfactual outcomes, available options,
+        actor knowledge, chance, mixed motives, and the completeness of theoretical guidance.
+    - canonical_key: speech-and-deed
+      path: protocols/speech-and-deed.yaml
+      local_application: >
+        Compare stated ends, counsel, reluctance, prudence, legitimacy, and restraint
+        with actions, institutional effects, outcomes, omissions, and corrections.
+    - canonical_key: audience-and-rhetoric
+      path: protocols/audience-and-rhetoric.yaml
+      local_application: >
+        Examine how knowledge is communicated to rulers, citizens, soldiers, students,
+        juries, assemblies, believers, and differentiated audiences.
+  conditional:
+    - canonical_key: claimant-to-wisdom
+      path: protocols/claimant-to-wisdom.yaml
+      activation: >
+        Invoke whenever philosopher, statesman, expert, strategist, legislator,
+        commander, adviser, prophet, scholar, or institution claims superior judgment.
+    - canonical_key: irony
+      path: protocols/irony.yaml
+      activation: >
+        Invoke where claims of reluctance, modesty, neutrality, service, or practical
+        necessity are qualified by the deed actually performed.
+    - canonical_key: comedy
+      path: protocols/comedy.yaml
+      activation: >
+        Invoke where comic action exposes imprudence, overconfidence, disproportion,
+        failed education, or the gap between announced wisdom and practical consequence.
+
+problem_specific_operations:
+  - operation_id: TVP-OP-001
+    name: IDENTIFY_THE_THEORETICAL_CLAIM
+    instruction: >
+      State what is claimed to be known, the evidence or argument supporting it, its
+      level of certainty, and whether it concerns ends, means, causes, character,
+      institutions, or probable consequences.
+  - operation_id: TVP-OP-002
+    name: IDENTIFY_THE_PRACTICAL_DECISION
+    instruction: >
+      State the concrete decision, actor, jurisdiction, available alternatives,
+      temporal pressure, information limits, affected parties, and intended end.
+  - operation_id: TVP-OP-003
+    name: SEPARATE_THE_CHAIN_OF_ACTION
+    instruction: >
+      Distinguish understanding, deliberation, persuasion, authorization, command,
+      execution, institutional implementation, compliance, correction, and outcome.
+      Do not compress these into a single act of rule.
+  - operation_id: TVP-OP-004
+    name: DISTINGUISH_ENDS_MEANS_AND_USE
+    instruction: >
+      Determine whether the claimant knows the end, produces a means, possesses the
+      authority to use it, and understands its right use. Technical production does
+      not establish knowledge of ends.
+  - operation_id: TVP-OP-005
+    name: TEST_AUTHORITY_AND_LEGITIMACY
+    instruction: >
+      Distinguish effective control, legal office, consent, expertise, superior
+      understanding, obedience, and rightful authority. None may certify the others.
+  - operation_id: TVP-OP-006
+    name: EXAMINE_PRACTICAL_JUDGMENT
+    instruction: >
+      Test attention to particulars, timing, character, feasibility, institutional
+      capacity, competing goods, foreseeable harms, and the limits of general rules.
+  - operation_id: TVP-OP-007
+    name: EXAMINE_CORRECTION
+    instruction: >
+      Determine whether the actor or institution can detect error, receive dissent,
+      revise judgment, distribute knowledge, reverse course, and preserve accountability.
+  - operation_id: TVP-OP-008
+    name: DISTINGUISH_FOUNDING_AND_PRESERVATION
+    instruction: >
+      Separate capacities required to initiate, conquer, legislate, or transform an
+      order from those required to administer, educate, correct, stabilize, and preserve it.
+  - operation_id: TVP-OP-009
+    name: CONTROL_FOR_CHANCE_AND_OUTCOME
+    instruction: >
+      Identify luck, contingency, hidden information, adversary action, timing, and
+      unintended consequence. Do not treat success or failure as self-interpreting.
+  - operation_id: TVP-OP-010
+    name: TEST_INDIRECT_GUIDANCE
+    instruction: >
+      Examine counsel, education, writing, institutional design, law, rhetoric,
+      exemplarity, and restraint as alternatives to direct philosophic sovereignty.
+  - operation_id: TVP-OP-011
+    name: TEST_THE_KINGLY_ART_CLAIM
+    instruction: >
+      Require evidence before claiming that one art or ruler unites knowledge of the
+      good, production, right use, legitimacy, command, execution, and control of chance.
+  - operation_id: TVP-OP-012
+    name: RECORD_JURISDICTION_AND_TRANSFER
+    instruction: >
+      Retain the movement from understanding to action here while routing the standard
+      of right, poetic accusation, reason-revelation conflict, comprehensive ways of
+      life, rank-recognition problem, and ancient-modern transformation to their
+      governing problems.
+
+activation_signals:
+  direct:
+    - a theoretical judgment is proposed as a guide to political action
+    - urgency is used to suspend examination or convert opinion into knowledge
+    - success or failure is treated as proof of wisdom or folly
+    - expertise, office, force, consent, and legitimacy are conflated
+    - an adviser, philosopher, prophet, expert, or institution claims authority to rule
+    - technical production is confused with knowledge of right use
+    - founding and preservation are treated as the same capacity
+    - practical judgment must specify a general standard in changing particulars
+    - institutions distribute knowledge, correction, responsibility, or execution
+    - chance and unintended consequence affect the interpretation of action
+    - indirect guidance is compared with direct sovereignty
+  non_activation_signals:
+    - every ordinary practical task
+    - every policy disagreement
+    - every case of failed execution
+    - every legal or administrative procedure
+    - every conflict between an ideal and reality
+    - every instance of expertise
+
+governing_distinctions:
+  - distinction_id: TVP-DIST-001
+    terms:
+      - theoretical knowledge
+      - practical judgment
+    rule: >
+      Knowledge of general ends or causes is not identical with judgment concerning
+      changing particulars, timing, feasibility, and competing goods.
+  - distinction_id: TVP-DIST-002
+    terms:
+      - opinion under urgency
+      - knowledge
+    rule: >
+      The necessity of deciding before certainty is available does not increase the
+      epistemic status of the decision.
+  - distinction_id: TVP-DIST-003
+    terms:
+      - effective authority
+      - legitimate authority
+    rule: >
+      Capacity to secure obedience does not establish rightfulness, while rightful
+      title does not guarantee effective execution.
+  - distinction_id: TVP-DIST-004
+    terms:
+      - expertise
+      - sovereignty
+    rule: >
+      Superior knowledge within one domain does not supply comprehensive political
+      jurisdiction or authority over ends.
+  - distinction_id: TVP-DIST-005
+    terms:
+      - production
+      - right use
+    rule: >
+      The maker of an instrument, policy, law, argument, or institution need not know
+      its highest end or proper use.
+  - distinction_id: TVP-DIST-006
+    terms:
+      - deliberation
+      - decision
+      - execution
+    rule: >
+      These are distinct functions that may be performed by different persons or
+      institutions and must not be attributed to one intelligence without evidence.
+  - distinction_id: TVP-DIST-007
+    terms:
+      - founding
+      - preservation
+    rule: >
+      Innovation, conquest, or legislation may require capacities different from
+      administration, education, correction, and durable maintenance.
+  - distinction_id: TVP-DIST-008
+    terms:
+      - intention
+      - outcome
+    rule: >
+      Good intention does not ensure good effect, and bad outcome does not by itself
+      prove the original judgment irrational.
+  - distinction_id: TVP-DIST-009
+    terms:
+      - success
+      - wisdom
+    rule: >
+      Success may result from judgment, force, institutional support, adversary error,
+      or chance and therefore requires causal and normative interpretation.
+  - distinction_id: TVP-DIST-010
+    terms:
+      - direct rule
+      - indirect guidance
+    rule: >
+      Counsel, education, writing, law, institutional design, and restraint may permit
+      superior understanding to guide without claiming unrestricted sovereignty.
+  - distinction_id: TVP-DIST-011
+    terms:
+      - individual prudence
+      - institutional correction
+    rule: >
+      Institutions may distribute knowledge and correct individuals without becoming
+      self-knowing or eliminating personal responsibility.
+  - distinction_id: TVP-DIST-012
+    terms:
+      - finite political good
+      - final human completion
+    rule: >
+      Peace, security, lawfulness, independence, reform, and good administration may be
+      genuine goods without resolving the highest human end.
+
+investigative_questions:
+  knowledge_and_decision:
+    - What is known, by whom, with what certainty, and at what time?
+    - What decision must be made before fuller knowledge becomes available?
+    - Which alternatives were genuinely available to the actor?
+    - Does urgency justify action, or is it being used to silence examination?
+  chain_of_action:
+    - Who deliberates, persuades, authorizes, commands, executes, complies, and corrects?
+    - Where does information enter or disappear in the chain?
+    - Which institution or person can halt, revise, or reverse the action?
+    - Who bears responsibility for intended and foreseeable effects?
+  ends_means_and_authority:
+    - Does the claimant know the end or only possess a technique or instrument?
+    - Is authority legal, effective, consensual, expert, traditional, sacred, or philosophic?
+    - What justifies the transition from knowledge to command?
+    - Can superior counsel guide without sovereign power?
+  judgment_and_character:
+    - Does the actor understand the souls, motives, capacities, and likely responses of others?
+    - How are courage, moderation, ambition, fear, loyalty, and desire related to judgment?
+    - Is practical superiority shown through correction and restraint or asserted as infallibility?
+    - Does the actor distinguish personal interest from the common or higher good?
+  institutions_and_correction:
+    - What knowledge is distributed across offices, practices, and persons?
+    - How are dissent, error reports, and failed predictions handled?
+    - Do institutions reduce dependence on rare virtue while lowering the governing end?
+    - Does procedure preserve responsibility or enable evasion of responsibility?
+  chance_and_outcome:
+    - Which results arose from judgment, institutional capacity, coercion, adversary error, or chance?
+    - What counterfactual claims can and cannot be supported?
+    - Is later success retroactively justifying an earlier decision?
+    - Is failure being treated as refutation without examining the action's conditions?
+  documentary_and_comparative:
+    - Is retrospective narrative replacing contemporary evidence?
+    - Are a speaker's claims of prudence or reluctance confirmed by deed?
+    - Have philosophical, historical, and political witnesses been reconstructed independently?
+    - Is a source-specific finding being universalized beyond its scope?
+
+false_resolutions:
+  - resolution_id: TVP-FALSE-001
+    claim: The person who knows the truth should therefore rule without limitation.
+    reason: >
+      Knowledge, recognition, legitimacy, communication, execution, institutions, and
+      accountability remain distinct.
+  - resolution_id: TVP-FALSE-002
+    claim: Political urgency turns the best available opinion into knowledge.
+    reason: >
+      Urgency changes the need to decide, not the evidentiary status of the judgment.
+  - resolution_id: TVP-FALSE-003
+    claim: Success proves that the decision was wise and just.
+    reason: >
+      Success may result from force, chance, institutional resources, or adversary error.
+  - resolution_id: TVP-FALSE-004
+    claim: Failure proves that the prior judgment was false or imprudent.
+    reason: >
+      Failure may arise from execution, chance, betrayal, hidden information, or a
+      conflict between sound judgment and insufficient power.
+  - resolution_id: TVP-FALSE-005
+    claim: Expertise in producing a means includes knowledge of its right use.
+    reason: >
+      Technical competence does not establish the end, priority, or moral legitimacy of use.
+  - resolution_id: TVP-FALSE-006
+    claim: Legal office proves practical wisdom.
+    reason: >
+      Office supplies jurisdiction but does not certify knowledge, character, or judgment.
+  - resolution_id: TVP-FALSE-007
+    claim: Philosophic insight makes persuasion and institutions unnecessary.
+    reason: >
+      Political action occurs through souls, laws, offices, resources, habits, and
+      collective procedures that cannot be bypassed by possession of a proposition.
+  - resolution_id: TVP-FALSE-008
+    claim: Institutional procedure removes the need for individual virtue and responsibility.
+    reason: >
+      Institutions distribute and constrain action but remain dependent on judgment,
+      maintenance, interpretation, and responsible officeholders.
+  - resolution_id: TVP-FALSE-009
+    claim: A founder is therefore the best preserver and administrator.
+    reason: >
+      Founding and preservation may require different motives, capacities, and restraints.
+  - resolution_id: TVP-FALSE-010
+    claim: Indirect guidance is always more prudent or innocent than direct rule.
+    reason: >
+      Counsel, writing, education, and institutional design can exercise power while
+      concealing responsibility or avoiding public accountability.
+  - resolution_id: TVP-FALSE-011
+    claim: A finite political settlement resolves the comprehensive human problem.
+    reason: >
+      Peace, law, sovereignty, reform, or independence may remain distinct from wisdom,
+      justice simply, revelation, redemption, or the highest life.
+  - resolution_id: TVP-FALSE-012
+    claim: No action is responsible until complete knowledge is available.
+    reason: >
+      Political life requires judgment under uncertainty; preservation of uncertainty
+      does not excuse refusal to decide when action is genuinely required.
+
+claimant_tests:
+  required_dimensions:
+    - claimant identity and source status
+    - claimed knowledge and level of certainty
+    - end served
+    - alternatives considered
+    - audience and communication method
+    - legal and political authority
+    - means and execution capacity
+    - institutional dependencies
+    - treatment of dissent and correction
+    - relation between personal and common good
+    - role of chance and unintended consequence
+    - outcome and retrospective interpretation
+  anti_certification_rule: >
+    No philosopher, statesman, commander, expert, adviser, prophet, scholar,
+    institution, or successful founder is certified as practically wise through title,
+    office, victory, secrecy, technical skill, suffering, or self-description.
+
+cross_problem_routing:
+  - target_problem: nomos-vs-physis
+    route_when: >
+      The primary issue is the natural, legal, or moral standard that action should serve.
+    retain_here: the application of the standard through judgment and institutions
+  - target_problem: philosophy-vs-poetry
+    route_when: >
+      Poetry specifically accuses philosophy of imprudence, ignorance of souls,
+      ineffective education, or political irresponsibility.
+    retain_here: the general movement from understanding to action
+  - target_problem: theologico-political
+    route_when: >
+      Action concerns ultimate authority among reason, revelation, divine command,
+      sacred law, interpretation, toleration, or sovereignty.
+    retain_here: the practical mediation and finite political decision
+  - target_problem: athens-vs-jerusalem
+    route_when: >
+      The primary question is which comprehensive way of life should govern action.
+    retain_here: how either orientation becomes judgment and deed
+  - target_problem: wise-vs-vulgar
+    route_when: >
+      The primary issue is recognition, rank, education, or capture by a claimant to superior judgment.
+    retain_here: the chain from claimed knowledge to responsible action
+  - target_problem: ancients-vs-moderns
+    route_when: >
+      The primary issue is the historical transformation from rare virtue and prudence
+      to method, sovereignty, institutions, prediction, control, or historicist action.
+    retain_here: the permanent theory-practice relation
+
+output_constraints:
+  required:
+    - state the theoretical claim and its evidentiary status
+    - identify the concrete decision, actor, alternatives, and temporal limits
+    - separate deliberation, persuasion, authority, execution, and outcome
+    - distinguish effective authority from legitimate authority
+    - distinguish means-production from right use
+    - examine correction, institutions, character, and chance
+    - classify success and failure rather than treating them as self-interpreting
+    - record cross-problem transfers without duplication
+    - preserve counterfactual and causal uncertainty
+  prohibited:
+    - certifying rule from theoretical brilliance
+    - certifying wisdom from success or office
+    - turning urgency into knowledge
+    - attributing every outcome to the original decision
+    - treating expertise as comprehensive sovereignty
+    - treating institutions as self-correcting without human judgment
+    - treating indirect guidance as power-free
+    - activating or certifying the successor from profile completion
+
+termination_tests:
+  minimum_completion:
+    - the theoretical claim and practical decision are distinguished
+    - the chain of action is reconstructed
+    - ends, means, authority, execution, and outcome are separated
+    - actor knowledge and information limits are recorded
+    - correction and institutional dependencies are examined
+    - chance and counterfactual uncertainty are preserved
+    - neighboring jurisdictions are routed explicitly
+  mandatory_nontermination:
+    - success or failure substitutes for analysis
+    - authority and legitimacy remain conflated
+    - production and right use remain conflated
+    - actor knowledge is reconstructed from hindsight alone
+    - chance and institutional mediation are omitted
+    - independent witness reconstruction is replaced by collection-level synthesis
+  completion_label: PROVISIONAL_INQUIRY_PROFILE_COMPLETE
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This profile is a subordinate successor record. It does not certify or activate
+    Theory vs. Practice, complete independent source reconstruction, or authorize
+    deletion, doctrinal absorption, or silent migration.
+
+termination:
+  profile_state: FOUNDING_INQUIRY_PROFILE_CREATED
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - witnesses.yaml
+    - relations.yaml
+    - independent source reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
