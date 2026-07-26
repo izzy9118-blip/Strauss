@@ -1,0 +1,382 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: nomos-vs-physis
+  title: Nomos vs. Physis — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/nomos-vs-physis/problem.yaml
+  inquiry_profile_reference: problems/nomos-vs-physis/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry records witness identity, documentary condition, local role,
+    independent-reconstruction requirement, and evidentiary limits. It does not
+    contain complete interpretations, merge distinct natural-law traditions, or
+    certify any claimant's access to nature, right, law, or justice.
+
+registry_purpose: >
+  Preserve the independent standing and source-specific burdens of the principal
+  witnesses through whom the distinction between nature and convention, the lawful
+  and the just, natural right and natural law, and ancient and modern transformations
+  of those distinctions must be reconstructed.
+
+source_status_rules:
+  - rule_id: NVP-WSR-001
+    rule: >
+      An author-published philosophical, legal, theological, historical, or political
+      work is primary evidence for its author's argument subject to edition,
+      translation, occasion, genre, speaker, audience, and internal sequence.
+  - rule_id: NVP-WSR-002
+    rule: >
+      Leo Strauss's individual essays in Studies in Platonic Political Philosophy are
+      qualified primary Strauss sources. The collection is posthumous; its title and
+      order were chosen by Strauss, but the missing intended introduction and Gorgias
+      essay may not be supplied by editorial interpretation.
+  - rule_id: NVP-WSR-003
+    rule: >
+      Thomas L. Pangle's introduction is secondary editorial and interpretive context.
+      It may guide questions and bibliography but may not govern Strauss's meaning.
+  - rule_id: NVP-WSR-004
+    rule: >
+      Natural right, natural law, human positive law, divine positive law, and eternal
+      law must be reconstructed from each witness's own vocabulary and architecture.
+      Shared terminology does not authorize doctrinal merger.
+  - rule_id: NVP-WSR-005
+    rule: >
+      A historical report of power, necessity, recurrence, conquest, survival, or
+      institutional success is evidence concerning action and consequence, not
+      automatic evidence of natural right.
+  - rule_id: NVP-WSR-006
+    rule: >
+      Biblical divine-law claims and philosophical natural standards remain
+      independent claimants. Neither may be reconstructed only through the other's
+      categories or through Strauss's summaries.
+  - rule_id: NVP-WSR-007
+    rule: >
+      Modern genealogical, scientific, historical, psychological, or political
+      explanation of a norm does not by itself establish the norm's falsity or justice.
+  - rule_id: NVP-WSR-008
+    rule: >
+      A translation, editor, commentator, jurist, or later school must be distinguished
+      from the primary witness whose doctrine it transmits or transforms.
+
+principal_witnesses:
+  - witness_id: NVP-WIT-001
+    name: Leo Strauss
+    witness_class: PRIMARY_MODERN_INTERPRETIVE_AND_PHILOSOPHIC_WITNESS
+    local_role: >
+      Governing modern witness for reconstructing the nature-convention distinction,
+      classical natural right, natural law, modern natural rights, historicism, and
+      the relation among human, natural, and divine law within the repository.
+    documentary_standing:
+      authority: PRIMARY_FOR_STRAUSS_INTERPRETATION
+      limit: >
+        Strauss governs claims about his own arguments and readings, not the final
+        independent meaning or truth of Plato, Aristotle, Thucydides, the Bible,
+        Thomas Aquinas, Machiavelli, Hobbes, Nietzsche, Cohen, or natural right itself.
+    registered_sources:
+      - source_id: NVP-STR-SRC-001
+        title: Studies in Platonic Political Philosophy
+        publication_condition: POSTHUMOUS_COLLECTION_ARRANGED_AND_TITLED_BY_STRAUSS
+        source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+        local_function: >
+          Supplies the completed provisional founding collection study concerning
+          natural law, lawfulness and justice, political necessity, modern
+          transformations, and the limits of power and history as standards.
+        source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+        completed_study_record: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+        synthesis_record: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
+        study_id: SPPP-STUDY-001
+        study_status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
+      - source_id: NVP-STR-SRC-002
+        title: Natural Right and History
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Required major witness for classical natural right, modern natural rights,
+          conventionalism, historicism, and the crisis of natural standards.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+      - source_id: NVP-STR-SRC-003
+        title: What Is Political Philosophy?
+        source_class: PRIMARY_STRAUSS_SOURCE
+        local_function: >
+          Required witness concerning political philosophy's orientation toward the
+          good society, opinion, knowledge, and natural right.
+        study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+    claimant_status: INTERPRETER_AND_PHILOSOPHIC_CLAIMANT_REQUIRING_TEST
+    anti_capture_rule: >
+      Strauss's interpretive authority does not permit a registry, synthesis, or
+      secondary statement to certify natural right without source-specific argument.
+
+  - witness_id: NVP-WIT-002
+    name: Plato
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Principal classical witness concerning nature, law, justice, convention,
+      education, regime, the good, and the relation between philosophic standards and
+      political enactment.
+    required_source_domains:
+      - Republic
+      - Laws
+      - Gorgias
+      - Crito
+      - Statesman
+      - other dialogues as documentary relevance is established
+    documentary_limit: >
+      Socratic or Athenian speech within a dialogue is not automatically Plato's final
+      doctrine. Dramatic action, interlocutor, audience, occasion, and compositional
+      deed must be reconstructed.
+    independence_rule: >
+      Reconstruct Plato from the dialogues before allowing Strauss, Aristotle,
+      conventional natural-law histories, or later Platonism to govern the result.
+    study_status: INDEPENDENT_PLATONIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: NVP-WIT-003
+    name: Aristotle
+    witness_class: INDEPENDENT_CLASSICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Principal witness concerning nature, political association, natural and legal
+      justice, equity, regime, prudence, virtue, slavery, citizenship, and the relation
+      between universal standards and variable particulars.
+    required_source_domains:
+      - Nicomachean Ethics
+      - Politics
+      - Rhetoric where relevant
+    documentary_limit: >
+      Later Aristotelian, scholastic, or jurisprudential formulations may not be
+      projected backward without textual evidence.
+    independence_rule: >
+      Reconstruct Aristotle's terminology, argumentative sequence, and practical
+      qualifications before comparison with Plato, Aquinas, Strauss, or modern rights.
+    study_status: INDEPENDENT_ARISTOTELIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: NVP-WIT-004
+    name: Thucydides
+    witness_class: INDEPENDENT_HISTORICAL_AND_POLITICAL_WITNESS
+    local_role: >
+      Witness to justice, necessity, power, law, piety, speech, action, and consequence
+      within war, including claims that recurrent strength or necessity governs the
+      relations of cities.
+    required_source_domains:
+      - History of the Peloponnesian War
+      - Melian dialogue within the complete narrative
+      - Sicilian expedition and Book VIII structural sequence
+    documentary_limit: >
+      Speeches are dramatic-historical compositions within a narrative and are not
+      transparent authorial doctrine. Power and outcome do not interpret themselves.
+    independence_rule: >
+      Reconstruct the complete narrative deed before treating any speech as a natural
+      law of politics or a refutation of justice.
+    study_status: INDEPENDENT_THUCYDIDEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: NVP-WIT-005
+    name: Biblical revelation and divine law
+    witness_class: INDEPENDENT_REVELATORY_AND_LEGAL_CLAIMANT
+    local_role: >
+      Presents creation, command, covenant, sacred law, obedience, judgment, and
+      holiness as authoritative divine ordering of human life.
+    principal_textual_domains:
+      - Genesis
+      - Torah
+      - Biblical prophecy where relevant
+    documentary_limit: >
+      The registry does not certify divine origin. Divine positive law must not be
+      identified automatically with rational natural law or reduced to custom,
+      poetry, morality, or political legislation.
+    independence_rule: >
+      Reconstruct the relevant biblical texts and traditions independently before
+      comparing their claims with philosophical nature or natural law.
+    study_status: INDEPENDENT_BIBLICAL_RECONSTRUCTION_REQUIRED
+
+  - witness_id: NVP-WIT-006
+    name: Cicero and the Roman natural-law tradition
+    witness_class: INDEPENDENT_CLASSICAL_LEGAL_AND_PHILOSOPHIC_WITNESS_LINE
+    local_role: >
+      Major witness line concerning universal law, nature, reason, justice, political
+      order, and the transmission of Greek philosophy into Roman jurisprudential form.
+    required_source_domains:
+      - De Re Publica
+      - De Legibus
+      - De Officiis where relevant
+    documentary_limit: >
+      Stoic, Academic, Roman, rhetorical, and political elements must be distinguished;
+      later summaries may not substitute for the surviving texts.
+    study_status: INDEPENDENT_CICERONIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: NVP-WIT-007
+    name: Thomas Aquinas
+    witness_class: INDEPENDENT_MEDIEVAL_PHILOSOPHIC_AND_THEOLOGICAL_WITNESS
+    local_role: >
+      Principal witness concerning eternal law, natural law, human law, divine law,
+      practical reason, promulgation, change, dispensation, and the relation between
+      philosophy and revealed theology.
+    required_source_domains:
+      - Summa Theologiae, Treatise on Law
+      - related works as necessary
+    documentary_limit: >
+      Thomistic natural law may not be treated as identical with classical natural
+      right, biblical command, or modern natural rights without reconstruction.
+    independence_rule: >
+      Reconstruct Aquinas's complete hierarchy of laws and theological setting before
+      comparison with Aristotle, Strauss, or secular jurisprudence.
+    study_status: INDEPENDENT_THOMISTIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: NVP-WIT-008
+    name: Niccolo Machiavelli
+    witness_class: INDEPENDENT_MODERN_POLITICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Major witness to the modern transformation of nature, necessity, virtue,
+      founding, acquisition, religion, and reliable political effect.
+    required_source_domains:
+      - The Prince
+      - Discourses on Livy
+      - other relevant works
+    documentary_limit: >
+      Political effectiveness, recurrence, and usable regularity may not be treated as
+      demonstrated natural right. Strauss's Machiavelli does not replace Machiavelli.
+    study_status: INDEPENDENT_MACHIAVELLIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: NVP-WIT-009
+    name: Thomas Hobbes
+    witness_class: INDEPENDENT_MODERN_POLITICAL_PHILOSOPHIC_WITNESS
+    local_role: >
+      Major witness concerning state of nature, preservation, natural right, natural
+      law, covenant, sovereignty, and the modern lowering or reconstruction of the
+      political beginning.
+    required_source_domains:
+      - Leviathan
+      - De Cive
+      - Elements of Law where relevant
+    documentary_limit: >
+      Sovereign validity and peace do not by themselves establish comprehensive
+      justice or continuity with classical natural right.
+    study_status: INDEPENDENT_HOBBESIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: NVP-WIT-010
+    name: Friedrich Nietzsche
+    witness_class: INDEPENDENT_GENEALOGICAL_AND_PHILOSOPHIC_CLAIMANT
+    local_role: >
+      Major witness concerning genealogy, value creation, rank, nature, history,
+      morality, and the attempted supersession of inherited and rational standards.
+    documentary_limit: >
+      Demonstrating historical formation or value creation in some cases does not by
+      itself prove that every natural standard is impossible or that the creator's
+      authority is justified.
+    independence_rule: >
+      Reconstruct Nietzsche's strongest argument rather than reducing it to relativism,
+      nihilism, or modern subjectivism.
+    study_status: INDEPENDENT_NIETZSCHEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: NVP-WIT-011
+    name: Hermann Cohen
+    witness_class: INDEPENDENT_MODERN_PHILOSOPHIC_AND_RELIGIOUS_WITNESS
+    local_role: >
+      Major witness to the transformation of revelation, law, morality, autonomy,
+      universalism, and historical progress within a religion of reason.
+    documentary_limit: >
+      Preservation of the vocabulary of creation, revelation, Law, holiness, and
+      messianism does not by itself preserve their earlier doctrinal referents.
+    independence_rule: >
+      Reconstruct Cohen's own argument before allowing Strauss's introductory essay to
+      govern the meaning or rank of the reconciliation.
+    study_status: INDEPENDENT_COHEN_RECONSTRUCTION_REQUIRED
+
+contextual_and_editorial_witnesses:
+  - witness_id: NVP-CXT-001
+    name: Thomas L. Pangle
+    witness_class: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+    source_relation: Introduction to Studies in Platonic Political Philosophy
+    permitted_role: >
+      Bibliographic guidance, provisional orientation, and questions to test against
+      Strauss's individual primary essays.
+    prohibited_role: >
+      Supplying Strauss's missing introduction, deciding the natural-right problem,
+      or governing the meaning of independent classical, biblical, medieval, or
+      modern witnesses.
+
+witness_relation_rules:
+  independent_reconstruction_rule: >
+    Each principal witness and witness line must be reconstructed on its own terms
+    before comparative synthesis. Strauss must be reconstructed source by source.
+  non_confirmation_rule: >
+    No independent witness may be forced to confirm SPPP-STUDY-001, the successor
+    constitution, a conventional history of natural law, or another witness's
+    terminology.
+  no_majority_rule: >
+    Agreement among sources does not mechanically establish natural right; source
+    status, argument, speech, deed, occasion, and evidentiary burden remain controlling.
+  no_genealogical_refutation_rule: >
+    Historical origin or causal explanation does not automatically refute normative
+    truth, while a claim of transcendence does not exempt a norm from examination.
+  no_self_certifying_law_rule: >
+    Enactment, age, divine title, philosophical title, scientific title, success, or
+    necessity does not certify a law's justice or a claimant's knowledge.
+  jurisdiction_rule: >
+    Evidence concerning ultimate authority of genuine revelation belongs primarily to
+    the Theologico-Political Problem; practical implementation belongs primarily to
+    Theory vs. Practice; the historical transformation belongs primarily to Ancients
+    vs. Moderns.
+
+source_specific_study_index:
+  completed:
+    - study_id: SPPP-STUDY-001
+      witness: Leo Strauss
+      source: Studies in Platonic Political Philosophy
+      path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+      local_synthesis: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
+      completion: COMPLETE_FOR_REGISTERED_COLLECTION
+      certification: NOT_CERTIFIED
+  pending:
+    - Leo Strauss source-specific reconstruction beyond SPPP-STUDY-001
+    - independent Plato reconstruction for Nomos vs. Physis
+    - independent Aristotle reconstruction
+    - independent Thucydides reconstruction
+    - independent biblical divine-law reconstruction
+    - independent Cicero reconstruction
+    - independent Thomas Aquinas reconstruction
+    - independent Machiavelli reconstruction
+    - independent Hobbes reconstruction
+    - independent Nietzsche reconstruction
+    - independent Hermann Cohen reconstruction
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This registry is a subordinate successor record. It does not certify or activate
+    Nomos vs. Physis, convert pending studies into completed evidence, merge witness
+    traditions, or authorize deletion or retrospective revision.
+  prohibitions:
+    - no silent deletion of a witness or accepted source
+    - no merger of natural right and natural law by vocabulary alone
+    - no identification of divine and natural law without argument
+    - no causal explanation treated as normative refutation
+    - no positive law treated as self-justifying
+    - no collection-level synthesis replacing independent reconstruction
+    - no certification from registry structure alone
+
+termination:
+  registry_state: FOUNDING_WITNESS_REGISTRY_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - principal witness lines are distinct and source-bounded
+    - completed and pending studies are distinguished
+    - source and editorial limits are explicit
+    - natural, human positive, and divine-law witness lines remain separate
+    - independent reconstruction requirements remain enforceable
+  current_limit: >
+    Structural witness registration is complete for founding production. Substantive
+    source reconstruction remains pending and may revise local roles through explicit
+    successor versions.
