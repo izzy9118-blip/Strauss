@@ -15,7 +15,7 @@ status:
   predecessor_effect: NONE
   successor_activation_effect: NONE
 
- authority:
+authority:
   migration_constitution: migrations/foundational-problems-v2/migration.yaml
   architecture_constitution: governance/foundational-problem-architecture.yaml
   predecessor_transaction_set: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
