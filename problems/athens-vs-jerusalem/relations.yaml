@@ -1,0 +1,182 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: athens-vs-jerusalem
+  title: Athens vs. Jerusalem — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/athens-vs-jerusalem/problem.yaml
+  inquiry_profile_reference: problems/athens-vs-jerusalem/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  rule: >
+    State controlled relations while preserving Athens and Jerusalem as comprehensive
+    orientations and preventing absorption of neighboring jurisdictions.
+
+relation_vocabulary:
+  controlled_types_used:
+    - DEPENDS_ON
+    - INTERSECTS
+    - SUPPLIES_FINDING_TO
+  rule: >
+    Relations identify dependence or overlap and do not establish philosophical rank,
+    theological truth, historical causation, cultural identity, or final reconciliation.
+
+relations:
+  - relation_id: AVJ-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+    summary: >
+      The discovery of nature and the distinction between natural and conventional law
+      supply central terms through which Athens confronts creation, command, and divine Law.
+    boundary: >
+      Nomos vs. Physis owns the general nature-convention and natural-law distinctions.
+      Athens vs. Jerusalem owns the comprehensive orientations built around nature and creation.
+    non_absorption_rule: >
+      Athens is not exhausted by nature, and Jerusalem is not exhausted by divine positive law.
+
+  - relation_id: AVJ-REL-002
+    related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+    summary: >
+      Greek poetry, philosophy, Biblical narrative, prophecy, image, law, and symbol
+      disclose and form souls through different authoritative forms.
+    boundary: >
+      Philosophy vs. Poetry owns rival human forms of wisdom, representation, and
+      education. Athens vs. Jerusalem owns the comprehensive philosophic and revelatory ways of life.
+    non_absorption_rule: >
+      Biblical revelation is not poetry, and literary form does not settle comprehensive truth.
+
+  - relation_id: AVJ-REL-003
+    related_problem: theory-vs-practice
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      Each orientation supplies different accounts of obedience, judgment, law,
+      political responsibility, education, and the relation between the highest life and the city.
+    boundary: >
+      Athens vs. Jerusalem owns the comprehensive ends and ways of life. Theory vs.
+      Practice owns their mediation into responsible action under imperfect conditions.
+    non_absorption_rule: >
+      Practical consequences do not rank the orientations, and the orientations must
+      not be reduced to political programs.
+
+  - relation_id: AVJ-REL-004
+    related_problem: theologico-political
+    relation_type: DEPENDS_ON
+    summary: >
+      The strict conflict between autonomous reason and genuine revelation supplies
+      the authority question within which Athens and Jerusalem appear as concrete alternatives.
+    boundary: >
+      The Theologico-Political Problem owns ultimate authority, revelation, prophecy,
+      divine command, sacred law, interpretation, and sovereignty. Athens vs. Jerusalem
+      owns the complete rival ways of life and their highest ends.
+    non_absorption_rule: >
+      The authority conflict must not absorb history, love, community, education, or
+      the concrete ways of life; Athens and Jerusalem must not duplicate the full doctrine.
+
+  - relation_id: AVJ-REL-005
+    related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    summary: >
+      Philosopher, prophet, theologian, jurist, ruler, people, and interpreter appear as
+      rival bearers of wisdom and authority whose recognition cannot rest on title alone.
+    boundary: >
+      The Wise vs. The Vulgar owns rank, recognition, differentiated education,
+      mediation, and capture. Athens vs. Jerusalem owns the substantive ways of life.
+    non_absorption_rule: >
+      Recognition difficulty does not dissolve the comprehensive claims, while election,
+      title, office, suffering, or success does not certify the claimant.
+
+  - relation_id: AVJ-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Modernity seeks to escape, privatize, rationalize, historicize, secularize,
+      create beyond, or politically supersede Athens and Jerusalem.
+    boundary: >
+      Ancients vs. Moderns owns the transformation under modernity. Athens vs.
+      Jerusalem owns the permanent comprehensive confrontation.
+    non_absorption_rule: >
+      Modern supersession cannot be presumed from chronology or power, and the
+      alternatives must not be reduced to obsolete stages.
+
+coactivation_rules:
+  - activate nomos-vs-physis when nature, creation, natural excellence, or divine Law is the primary standard question
+  - activate philosophy-vs-poetry when poetic, dramatic, narrative, prophetic, or philosophic form bears substantive evidence
+  - activate theory-vs-practice when either orientation becomes political judgment, institution, law, toleration, or restraint
+  - activate theologico-political when ultimate authority among reason, revelation, prophecy, command, and sovereignty is at issue
+  - activate wise-vs-vulgar when recognition or rank of philosopher, prophet, theologian, ruler, people, or interpreter is central
+  - activate ancients-vs-moderns when secularization, rationalization, progress, historicism, or value creation transforms either orientation
+
+cross_problem_safeguards:
+  - Athens and Jerusalem are not geographic or cultural essences.
+  - Historical coexistence and influence do not establish reconciliation.
+  - Shared moral content does not erase different authorities and highest ends.
+  - Political restoration is not redemption.
+  - Natural excellence is not identical with divine Law.
+  - Poetic or narrative form does not reduce revelation to poetry.
+  - Recognition of philosopher or prophet cannot certify itself.
+  - Modernity cannot declare the conflict obsolete through chronology alone.
+
+unresolved_relations:
+  - question_id: AVJ-UNREL-001
+    question: >
+      Can autonomous understanding and obedient love be reconciled without one ceasing
+      to possess final authority?
+    status: OPEN
+    routing: athens-vs-jerusalem and theologico-political
+  - question_id: AVJ-UNREL-002
+    question: >
+      Does Maimonidean articulation preserve harmony, lawful coexistence, or an
+      unresolved hierarchy among philosophy, prophecy, Law, and belief?
+    status: OPEN
+    routing: athens-vs-jerusalem with independent Maimonides reconstruction
+  - question_id: AVJ-UNREL-003
+    question: >
+      Can a universal teaching remain universal while being borne by a particular
+      people, covenant, city, law, or individual philosopher?
+    status: OPEN
+    routing: athens-vs-jerusalem and wise-vs-vulgar
+  - question_id: AVJ-UNREL-004
+    question: >
+      Does historical intertwining deepen mutual understanding or conceal the continued
+      incompatibility of the highest claims?
+    status: OPEN
+    routing: athens-vs-jerusalem with independent historical reconstruction
+  - question_id: AVJ-UNREL-005
+    question: >
+      Do modern rationalization, secularization, historicism, and political restoration
+      resolve the alternatives or transform them into different doctrines?
+    status: OPEN
+    routing: athens-vs-jerusalem and ancients-vs-moderns
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This relations record is a subordinate successor draft. It creates no activation,
+    certification, historical deletion, cultural reduction, jurisdictional merger, or
+    automatic transfer of findings.
+
+termination:
+  relations_state: FOUNDING_RELATIONS_RECORD_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - all six neighboring problems possess explicit controlled relations
+    - every relation preserves the comprehensive-orientation boundary
+    - coactivation does not authorize absorption
+    - unresolved overlaps remain visible
+  remaining_requirements:
+    - independent Greek and Biblical witness reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
