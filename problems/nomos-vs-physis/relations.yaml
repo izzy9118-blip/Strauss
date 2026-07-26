@@ -1,0 +1,79 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: nomos-vs-physis
+  title: Nomos vs. Physis — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/nomos-vs-physis/problem.yaml
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  governing_rule: >
+    Relations preserve local relevance without reproducing neighboring doctrine.
+
+relations:
+  - relation_id: NVP-REL-001
+    related_problem: philosophy-vs-poetry
+    relation_type: SUPPLIES_FINDING_TO
+    local_proposition: >
+      The discovery of nature permits examination of inherited poetic and civic authority.
+    boundary: >
+      Rival poetic and philosophic forms of wisdom remain governed by Philosophy vs. Poetry.
+  - relation_id: NVP-REL-002
+    related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+    local_proposition: >
+      Natural standards require prudence, equity, law, and institutional mediation.
+    boundary: >
+      General movement from understanding to action remains governed by Theory vs. Practice.
+  - relation_id: NVP-REL-003
+    related_problem: theologico-political
+    relation_type: INTERSECTS
+    local_proposition: >
+      Natural law and divine positive law must remain distinct in source and authority.
+    boundary: >
+      Ultimate authority among reason, revelation, and sovereignty remains governed by the Theologico-Political Problem.
+  - relation_id: NVP-REL-004
+    related_problem: athens-vs-jerusalem
+    relation_type: SUPPLIES_FINDING_TO
+    local_proposition: >
+      Nature and creation are different comprehensive beginnings.
+    boundary: >
+      Their full relation as highest ways of life belongs to Athens vs. Jerusalem.
+  - relation_id: NVP-REL-005
+    related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    local_proposition: >
+      Claimants to knowledge of nature and right remain subject to recognition and noncertification.
+    boundary: >
+      Human heterogeneity and claimant examination remain governed by The Wise vs. The Vulgar.
+  - relation_id: NVP-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    local_proposition: >
+      Modernity lowers, transforms, historicizes, or denies classical nature and natural right.
+    boundary: >
+      Historical transformation and the modern project remain governed by Ancients vs. Moderns.
+
+unresolved_overlaps:
+  - overlap_id: NVP-OV-001
+    problems: [nomos-vs-physis, theologico-political]
+    issue: >
+      Whether a revealed command also expresses natural right cannot be decided by source identity alone.
+    status: PRESERVE_UNRESOLVED
+  - overlap_id: NVP-OV-002
+    problems: [nomos-vs-physis, theory-vs-practice]
+    issue: >
+      The boundary between prudential variation and alteration of the governing standard remains case-dependent.
+    status: PRESERVE_UNRESOLVED
+
+non_absorption_rule: >
+  Cross-reference natural, revelatory, practical, recognition, and historical findings
+  without creating parallel governing copies of another problem's doctrine.
