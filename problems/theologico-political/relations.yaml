@@ -1,0 +1,226 @@
+schema_version: 1.0
+document_type: foundational_problem_relations
+
+identity:
+  problem: theologico-political
+  title: The Theologico-Political Problem — Relations
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/theologico-political/problem.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  transaction_reference: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+  rule: >
+    This record uses controlled relation types to preserve dependencies,
+    intersections, findings supplied to neighboring problems, jurisdictional
+    boundaries, and unresolved overlaps without duplicating another problem's doctrine.
+
+relation_vocabulary:
+  controlled_types_used:
+    - DEPENDS_ON
+    - INTERSECTS
+    - SUPPLIES_FINDING_TO
+  designation_rule: >
+    BROTHER_PROBLEM is a constitutional designation and relation strength attached
+    to INTERSECTS. It is not an independent uncontrolled relation type.
+
+relations:
+  - relation_id: TP-REL-001
+    related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+    summary: >
+      Philosophy's distinction between nature and inherited law makes divine-law,
+      ancestral, poetic, and conventional authority available for examination.
+    theologico_political_jurisdiction: >
+      The conflict begins when law claims divine origin or when philosophy's inquiry
+      into nature confronts revelation, miracle, prophecy, command, and sacred law.
+    neighboring_jurisdiction: >
+      Nomos vs. Physis owns the general distinction between nature and law,
+      convention, custom, inheritance, artifice, and authoritative opinion.
+    non_absorption_rule: >
+      The divine-authority conflict may use the nature-law distinction but may not
+      reproduce the complete Nomos vs. Physis doctrine.
+
+  - relation_id: TP-REL-002
+    related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+    constitutional_designation: BROTHER_PROBLEM
+    relation_strength: CO_FOUNDATIONAL
+    shared_origin: >
+      Both problems arise when philosophy challenges the authoritative
+      poetic-theological horizon through which political society understands gods,
+      divine law, justice, piety, education, and the highest life.
+    shared_question: >
+      Who can speak with wisdom and authority concerning the gods, justice,
+      education, and the highest human life?
+    theologico_political_jurisdiction: >
+      Ultimate authority among autonomous reason, genuine revelation, divine
+      command, prophecy, sacred law, theology, interpretation, and political sovereignty.
+    philosophy_vs_poetry_jurisdiction: >
+      Rival human forms of wisdom, imitation, dramatic representation, education,
+      knowledge of souls, eros, music, audience, and poetic guidance.
+    coactivation_rule: >
+      Activate both problems when inquiry concerns gods, piety, prophecy, oath,
+      sacred law, worship, divine mediation, resistance to divine command, human
+      recognition of divine authority, or political consequences of theological teaching.
+    non_absorption_rule: >
+      Poetry is not revelation. Revelation is not poetic construction. Civic
+      theology is not identical with divine truth. Comic overthrow of a god is not
+      proof against revelation. Neither brother problem may reproduce the other's full doctrine.
+    reciprocal_record:
+      path: problems/philosophy-vs-poetry/relations.yaml
+      relation_id: PVP-REL-003
+      expected_relation_type: INTERSECTS
+      expected_designation: BROTHER_PROBLEM
+      expected_strength: CO_FOUNDATIONAL
+    founding_source:
+      title: Socrates and Aristophanes
+      study_record: >
+        studies/socrates-and-aristophanes/
+        philosophy-poetry-theologico-political-reconstruction.yaml
+      local_finding: >
+        Strauss's inquiry into poetry and philosophy becomes an inquiry into
+        Socrates' teaching concerning gods and what makes gods gods for human beings.
+      limit: >
+        The source does not independently reconstruct Biblical revelation, prophecy,
+        divine command, sacred law, or the complete reason-revelation alternative.
+
+  - relation_id: TP-REL-003
+    related_problem: theory-vs-practice
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      The permanent conflict generates practical questions of toleration,
+      persecution, sovereignty, interpretation, emancipation, Zionism, statehood,
+      public peace, finite political goods, and responsible action under uncertainty.
+    theologico_political_jurisdiction: >
+      Determines what such settlements do and do not establish concerning ultimate authority.
+    neighboring_jurisdiction: >
+      Theory vs. Practice owns the general relation between understanding, judgment,
+      action, legislation, prudence, statesmanship, and political responsibility.
+    non_absorption_rule: >
+      Political mediation may be referenced here without reproducing the general
+      doctrine of responsible action or finite political judgment.
+
+  - relation_id: TP-REL-004
+    related_problem: athens-vs-jerusalem
+    relation_type: DEPENDS_ON
+    summary: >
+      Athens and Jerusalem supply the highest poles of autonomous understanding and
+      obedient love whose confrontation becomes political through law,
+      interpretation, persecution, sovereignty, and historical existence.
+    theologico_political_jurisdiction: >
+      Owns the epistemic and political conflict over revelation, philosophy,
+      sacred law, interpretation, and public authority.
+    neighboring_jurisdiction: >
+      Athens vs. Jerusalem owns the complete rival orientations and the question of
+      the highest human life.
+    non_absorption_rule: >
+      The Theologico-Political Problem may identify the poles and their political
+      consequences but must not reproduce the complete Athens-Jerusalem doctrine.
+    unresolved_overlap: >
+      The precise boundary between the comprehensive ways of life and their legal,
+      political, and hermeneutic confrontation remains subject to later source testing.
+
+  - relation_id: TP-REL-005
+    related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    summary: >
+      Prophets, philosophers, theologians, jurists, sovereigns, historians,
+      interpreters, and critics appear as rival claimants to wisdom and authority
+      addressing differentiated audiences under unequal capacities and risks.
+    theologico_political_jurisdiction: >
+      Owns the substantive conflict over divine and philosophic authority and the
+      political control of interpretation.
+    neighboring_jurisdiction: >
+      Wise vs. Vulgar owns recognition of genuine and counterfeit wisdom, human
+      heterogeneity, differentiated education, audience, mediation, and capture.
+    non_absorption_rule: >
+      Claimant and audience findings must invoke shared protocols and cross-reference
+      Wise vs. Vulgar rather than copying its recognition doctrine.
+
+  - relation_id: TP-REL-006
+    related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Modern philosophy, historical criticism, science, liberalism, rational
+      religion, psychology, nationalism, Zionism, and historicism attempt to defeat,
+      neutralize, privatize, translate, or supersede the permanent conflict.
+    theologico_political_jurisdiction: >
+      Tests whether each modern attempt establishes revelation's impossibility,
+      philosophy's sufficiency, a valid reconciliation, or only a new political settlement.
+    neighboring_jurisdiction: >
+      Ancients vs. Moderns owns the historical and philosophic transformation of
+      nature, revelation, science, progress, equality, history, and political philosophy.
+    non_absorption_rule: >
+      The Theologico-Political Problem may test modern resolutions locally but must
+      not duplicate the complete account of modernity or historicism.
+    unresolved_overlap: >
+      The relation between eternal order and historical self-creation belongs
+      primarily to Ancients vs. Moderns while remaining a deep challenge to the
+      permanence of the theologico-political conflict.
+
+unresolved_relations:
+  - relation_id: TP-UNRES-001
+    related_problem: philosophy-vs-poetry
+    question: >
+      How far can inquiry into the human recognition, poetic mediation, and civic
+      function of gods proceed before the question becomes one of genuine revelation
+      and ultimate divine authority?
+    status: OPEN
+    rule: >
+      Record unresolved overlap under both problems without duplicate governing doctrine.
+
+  - relation_id: TP-UNRES-002
+    related_problem: athens-vs-jerusalem
+    question: >
+      Which propositions belong to the comprehensive alternative between obedient
+      love and autonomous understanding, and which belong to their political,
+      legal, and interpretive confrontation?
+    status: OPEN
+    rule: >
+      Preserve primary jurisdiction by governing question and use reference where
+      responsible allocation is not yet possible.
+
+  - relation_id: TP-UNRES-003
+    related_problem: ancients-vs-moderns
+    question: >
+      Does historicism constitute a third comprehensive alternative, a modern
+      transformation of philosophy, or an attempted supersession of both permanent alternatives?
+    status: OPEN
+    rule: >
+      Do not decide the status of historicism before independent reconstruction.
+
+validation_requirements:
+  - every related_problem resolves through problems/registry.yaml
+  - every relation_type belongs to the controlled vocabulary used by the migration
+  - the reciprocal brother-problem record resolves and matches type, designation, and strength
+  - boundaries preserve neighboring primary jurisdiction
+  - unresolved overlaps remain explicit
+  - no relation duplicates another problem's full doctrine
+
+migration_safeguards:
+  active_predecessor: problems/theologico-political.yaml
+  historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  transaction_ledger: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+  certification: NOT_CERTIFIED
+  activation: NOT_ACTIVE
+  destructive_actions_authorized: false
+  prohibitions:
+    - no uncontrolled relation vocabulary
+    - no merger of brother problems
+    - no silent jurisdiction transfer
+    - no doctrinal duplication in place of cross-reference
+    - no closure of unresolved overlap without evidence and revision record
+    - no replacement of the active predecessor before migration certification
+
+non_certification_notice: >
+  This relations record is an inactive successor draft. It does not certify the
+  successor, settle the unresolved overlaps, activate the migration, or establish
+  the truth or rank of any comprehensive teaching.
