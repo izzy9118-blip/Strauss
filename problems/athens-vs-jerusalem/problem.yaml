@@ -1,0 +1,190 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: athens-vs-jerusalem
+  canonical_order: 5
+  title: Athens vs. Jerusalem
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  source_status: >
+    This is an inactive successor draft created under the seven-problem migration.
+    It defines the permanent comprehensive alternative and does not replace the
+    complete political mediation governed by the Theologico-Political Problem.
+
+documentary_basis:
+  founding_strauss_source:
+    title: Studies in Platonic Political Philosophy
+    study_record: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+    local_contribution: >
+      Supplies the contrast between fear of the Lord and wonder, creation and
+      nature, obedient love and autonomous understanding, prophets and philosophers,
+      Messianic hope and the best regime, and Cohen's attempted rational synthesis.
+
+origin: >
+  Western humanity is historically formed through Biblical revelation and Greek
+  philosophy. Each claims wisdom concerning the whole and the highest human life,
+  but they begin from different acts: hearing and obedient response to divine command,
+  and seeing, wonder, and autonomous inquiry into nature.
+
+governing_question: >
+  Is the highest human life constituted by autonomous understanding of nature and the
+  good, or by obedient love and faithful response to the free Creator and divine Law;
+  and can these comprehensive orientations be reconciled without transforming one
+  into the other?
+
+compressed_question: >
+  Does the highest life begin in wonder and inquiry or in fear, hearing, and obedience?
+
+jurisdiction:
+  owns:
+    - Athens and Jerusalem as comprehensive rival orientations
+    - wonder and fear of the Lord as rival beginnings of wisdom
+    - nature and creation as comprehensive accounts of the whole
+    - autonomous understanding and obedient love as rival highest lives
+    - philosopher and prophet as rival exemplary human types
+    - classical best regime and Messianic age as distinct horizons
+    - universal claims borne by Greek inquiry and particular Biblical election
+    - attempted harmonies, syntheses, or transformations of Athens and Jerusalem
+  does_not_own:
+    - canonical_key: nomos-vs-physis
+      reason: The general distinction among nature, law, convention, and natural right belongs there.
+    - canonical_key: philosophy-vs-poetry
+      reason: Rival human forms of wisdom, drama, imitation, and poetic education belong there.
+    - canonical_key: theory-vs-practice
+      reason: The general mediation from understanding or command to action belongs there.
+    - canonical_key: theologico-political
+      reason: Political sovereignty, sacred law, persecution, toleration, and public jurisdiction belong there.
+    - canonical_key: wise-vs-vulgar
+      reason: Recognition of philosopher, prophet, scholar, and impostor belongs there.
+    - canonical_key: ancients-vs-moderns
+      reason: Modern transformations and projects attempting to supersede the alternatives belong there.
+
+permanent_tension:
+  athens:
+    strongest_claim: >
+      No inherited or divine claim may be exempt from autonomous examination; the
+      highest life seeks knowledge of beings, nature, justice, the good, and the whole.
+    burden: >
+      Philosophy must show that it can account for the limits of human reason and the
+      undefeated possibility of revelation without assuming its conclusion.
+  jerusalem:
+    strongest_claim: >
+      Human beings owe obedient love to the free God who creates, commands, reveals,
+      judges, and establishes covenant and Law.
+    burden: >
+      A claimed revelation must be distinguished from poetry, civic theology,
+      psychology, inherited assertion, false prophecy, and interpretive usurpation.
+  shared_claim:
+    proposition: >
+      Both claim wisdom in the highest sense and orient the whole human way of life.
+    danger: >
+      Shared words such as God, law, wisdom, virtue, or justice may conceal incompatible meanings.
+  unresolved_relation: >
+    Their historical interpenetration does not establish philosophical harmony.
+    Philosophy's inability to refute revelation does not prove revelation, and
+    revelation's claim to obedience does not constitute philosophic proof.
+
+boundary:
+  activates_when:
+    - fear of the Lord and wonder are compared as beginnings of wisdom
+    - creation and nature are compared as accounts of the whole
+    - obedience and autonomous inquiry are compared as highest human orientations
+    - prophet and philosopher claim comprehensive authority
+    - Messianic age and best regime are identified or contrasted
+    - a universal teaching appears through a particular chosen people
+    - a modern thinker claims to harmonize, surpass, or dissolve the alternatives
+  does_not_activate_by_itself:
+    - every contrast between religion and philosophy
+    - every historical interaction between Jews and Greeks
+    - every political dispute involving sacred law
+    - every question concerning poetry or civic gods
+    - every use of the names Athens or Jerusalem
+
+relations:
+  - related_problem: nomos-vs-physis
+    relation_type: RECEIVES_FINDING_FROM
+    summary: >
+      Nature and divine positive law supply distinct standards whose full comprehensive meaning is examined here.
+  - related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+    summary: >
+      Greek poetry and Biblical revelation must not be collapsed, although both shape authoritative horizons.
+  - related_problem: theory-vs-practice
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      Philosophic inquiry and prophetic command act upon political life through different practical forms.
+  - related_problem: theologico-political
+    relation_type: SUPPLIES_FINDING_TO
+    summary: >
+      Athens and Jerusalem supply the comprehensive poles whose public conflict requires political mediation.
+  - related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+    summary: >
+      Philosopher and prophet are rival claimants whose authority cannot be certified by title alone.
+  - related_problem: ancients-vs-moderns
+    relation_type: INTERSECTS
+    summary: >
+      Modernity attempts to supersede, synthesize, historicize, or transform both comprehensive alternatives.
+
+shared_protocols:
+  required:
+    - canonical_key: source-status
+    - canonical_key: evidence-classification
+    - canonical_key: inference-discipline
+    - canonical_key: uncertainty-preservation
+    - canonical_key: speech-and-deed
+  conditional:
+    - canonical_key: claimant-to-wisdom
+      activation: Activate when prophet, philosopher, theologian, or synthesizer claims highest authority.
+    - canonical_key: audience-and-rhetoric
+      activation: Activate when either comprehensive teaching addresses peoples, rulers, students, or congregations.
+    - canonical_key: irony
+      activation: Activate where guarded philosophic treatment of revelation or prophecy is textually supported.
+
+anti_capture_principle: >
+  Neither Athens nor Jerusalem may certify itself through antiquity, civilization,
+  revelation claim, philosophical vocabulary, moral elevation, suffering, political
+  success, historical influence, or the failure of the rival to prove its own case.
+
+non_absorption_clause: >
+  Athens vs. Jerusalem must not become a container for every question involving
+  philosophy, religion, Jewish history, Greece, or the gods. It owns the comprehensive
+  rival beginnings and ways of life. Political jurisdiction, poetry, natural law,
+  recognition, and modern transformation remain governed by neighboring problems.
+
+anti_reduction_rules:
+  - Biblical revelation must not be reduced to Greek poetry or culture
+  - Greek philosophy must not be reduced to one historical culture among others
+  - creation and nature must not be harmonized through shared vocabulary alone
+  - Messianic age must not be identified automatically with the best regime
+  - particular election must not be dissolved into universal ethics without transformation
+  - philosophy's nonrefutation must not be treated as proof of revelation
+  - rationalization of revelation must not be treated as preservation without examining transformed deeds
+
+termination:
+  completion_standard: >
+    Examination is complete when the strongest Athenian and Jerusalemite claims are
+    reconstructed independently; their beginnings, authorities, ways of life, and
+    political implications are distinguished; attempted syntheses are tested for
+    transformation; and the undefeated alternative is preserved where evidence does not decide.
+  valid_states:
+    - athens_reconstructed
+    - jerusalem_reconstructed
+    - comprehensive_difference_preserved
+    - attempted_synthesis_examined
+    - highest_life_unresolved
+  prohibited_states:
+    - harmony declared through shared vocabulary
+    - one side reduced to culture or psychology
+    - nonrefutation converted into proof
+    - political settlement treated as philosophic victory
