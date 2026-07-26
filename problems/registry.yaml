@@ -4,7 +4,7 @@ registry_type: foundational_problem_registry
 identity:
   canonical_key: foundational-problem-registry
   title: Foundational Problem Registry
-  version: 1.1.0
+  version: 1.2.0
 
 status:
   lifecycle: FOUNDING_DRAFT
@@ -78,14 +78,28 @@ canonical_problems:
   - canonical_key: theologico-political
     canonical_order: 4
     title: The Theologico-Political Problem
+    legacy_identifiers:
+      - STR-PROBLEM-002
     predecessor_records:
       - path: problems/theologico-political.yaml
+        version: 1.1
+        blob_sha: 4a35e71916212082598097985deb23699c0018e7
         status: ACTIVE_PREDECESSOR
+      - path: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+        version: 1.1
+        blob_sha: 4a35e71916212082598097985deb23699c0018e7
+        status: EXACT_HISTORICAL_COPY
     successor_path: problems/theologico-political/problem.yaml
+    subordinate_records:
+      inquiry_profile: problems/theologico-political/inquiry-profile.yaml
+      witnesses: problems/theologico-political/witnesses.yaml
+      relations: problems/theologico-political/relations.yaml
+      synthesis_directory: problems/theologico-political/synthesis/
+      migration_transactions: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
     jurisdiction: >
       The conflict concerning ultimate authority among autonomous reason,
-      revelation, divine law, prophecy, theology, and political sovereignty.
-    migration_status: RECONSTRUCTION_PENDING
+      revelation, divine law, prophecy, theology, interpretation, and political sovereignty.
+    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED_ACTIVE_PREDECESSOR_RETAINED
 
   - canonical_key: athens-vs-jerusalem
     canonical_order: 5
@@ -143,5 +157,4 @@ reference_rule: >
 activation_rule: >
   A successor problem becomes active only after its predecessor is preserved,
   displaced material is classified, references validate, and the migration is
-  certified. Until then, predecessor and founding-draft statuses remain
-  explicit.
+  certified. Until then, predecessor and founding-draft statuses remain explicit.
