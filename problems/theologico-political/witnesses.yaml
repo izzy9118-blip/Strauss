@@ -1,0 +1,462 @@
+schema_version: 1.0
+document_type: foundational_problem_witness_registry
+
+identity:
+  problem: theologico-political
+  title: The Theologico-Political Problem — Witness Registry
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/theologico-political/problem.yaml
+  inquiry_profile_reference: problems/theologico-political/inquiry-profile.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  transaction_reference: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+  predecessor_reference: problems/theologico-political.yaml
+  source_status_protocol: protocols/source-status.yaml
+  governing_rule: >
+    This registry records witness identity, source condition, local role,
+    independent-reconstruction requirement, and documentary limit. Full arguments
+    and interpretations belong in source-specific studies and synthesis records.
+
+predecessor_source_basis:
+  identifier: STR-PROBLEM-002
+  version: 1.1
+  source_count: 19
+  active_path: problems/theologico-political.yaml
+  preserved_path: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  blob_sha: 4a35e71916212082598097985deb23699c0018e7
+  rule: >
+    Every registered source remains independently reconstructible. The predecessor
+    synthesis may orient inquiry but may not erase differences of occasion,
+    audience, terminology, argumentative sequence, or epistemic status.
+
+source_status_rules:
+  - rule_id: TP-WSR-001
+    rule: >
+      An author-published Strauss essay, lecture, review, letter, or preface is a
+      primary Strauss witness subject to its own occasion, audience, editorial
+      condition, and scope.
+  - rule_id: TP-WSR-002
+    rule: >
+      A posthumous collection or editorial introduction must be distinguished from
+      Strauss's author-published text and may not supply missing authorial doctrine.
+  - rule_id: TP-WSR-003
+    rule: >
+      Biblical revelation, prophecy, Torah, Genesis, and divine-law claims must be
+      reconstructed from their relevant primary texts and traditions rather than
+      only through Strauss's summary of them.
+  - rule_id: TP-WSR-004
+    rule: >
+      A historical, psychological, sociological, philological, or political account
+      of belief is evidence about mediation and causation, not automatic evidence
+      that the claimed divine object is false.
+  - rule_id: TP-WSR-005
+    rule: >
+      Autobiographical evidence may establish sequence, encounter, gratitude, debt,
+      identity, and orientation but may not independently establish final doctrine.
+  - rule_id: TP-WSR-006
+    rule: >
+      Political success, survival, suffering, exile, restoration, sovereignty, or
+      institutional endurance does not interpret itself or certify a comprehensive
+      teaching.
+  - rule_id: TP-WSR-007
+    rule: >
+      Poetic theology, civic gods, ritual, and the human recognition of divine
+      authority must not be identified with genuine revelation, prophecy, or divine law.
+
+principal_witnesses:
+  - witness_id: TP-WIT-001
+    name: Leo Strauss
+    witness_class: PRIMARY_MODERN_INTERPRETIVE_AND_PHILOSOPHIC_WITNESS
+    local_role: >
+      Governing modern witness for the repository's reconstruction of the
+      theologico-political problem, its source history, epistemic burdens, political
+      mediations, Jewish historical manifestation, and disciplined nonresolution.
+    documentary_limit: >
+      Strauss's texts govern claims about his arguments, not the independent truth
+      of revelation, Biblical prophecy, Plato, Maimonides, Spinoza, Hobbes, Cohen,
+      Freud, Kojeve, or the historical events he interprets.
+    claimant_status: INTERPRETER_AND_PHILOSOPHIC_CLAIMANT_REQUIRING_TEST
+
+  - witness_id: TP-WIT-002
+    name: Biblical revelation
+    witness_class: INDEPENDENT_REVELATORY_CLAIMANT
+    local_role: >
+      Comprehensive claimant presenting creation, divine command, covenant,
+      prophecy, sacred law, obedience, punishment, repentance, promise, and redemption.
+    principal_textual_domains:
+      - Genesis
+      - Torah
+      - Biblical prophecy
+    documentary_limit: >
+      The registry does not certify divine origin. Claimed revelation must be
+      distinguished from human transmission, interpretation, poetry, fraud,
+      political imposition, and psychological explanation without reducing it to them.
+    study_status: INDEPENDENT_PRIMARY_TEXT_RECONSTRUCTION_REQUIRED
+
+  - witness_id: TP-WIT-003
+    name: Philosophy
+    witness_class: INDEPENDENT_PHILOSOPHIC_CLAIMANT
+    local_role: >
+      Comprehensive claimant asserting the necessity of unrestricted examination
+      concerning the whole, nature, justice, the good, and the best human life.
+    principal_witness_lines:
+      - Socrates
+      - Plato
+      - Maimonides and medieval philosophy
+      - Spinoza
+      - Hobbes
+      - Strauss
+    documentary_limit: >
+      No individual philosopher or school may stand for philosophy as such without
+      independent reconstruction and comparison.
+    study_status: MULTIPLE_INDEPENDENT_RECONSTRUCTIONS_REQUIRED
+
+  - witness_id: TP-WIT-004
+    name: Political sovereignty and law
+    witness_class: POLITICAL_MEDIATOR_AND_AUTHORITY_CLAIMANT
+    local_role: >
+      Establishes enforceable public jurisdiction concerning teaching, worship,
+      interpretation, toleration, persecution, civic peace, and freedom to philosophize.
+    documentary_limit: >
+      Legal and political finality does not establish final philosophic or theological truth.
+    study_status: SOURCE_SPECIFIC_RECONSTRUCTION_REQUIRED
+
+  - witness_id: TP-WIT-005
+    name: Jewish historical experience
+    witness_class: HISTORICAL_MANIFESTATION_NOT_SELF_INTERPRETING
+    local_role: >
+      Makes the conflict concrete through emancipation, assimilation, persistence,
+      suffering, cultural reconstruction, Zionism, sovereignty, and the State of Israel.
+    documentary_limit: >
+      Historical events require interpretation and do not independently prove or
+      disprove Torah, covenant, election, providence, messianism, or redemption.
+    study_status: MULTI_SOURCE_HISTORICAL_RECONSTRUCTION_REQUIRED
+
+registered_strauss_sources:
+  - source_id: TP-SRC-001
+    title: Progress or Return?
+    date: 1952
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Rival orientations of progress and return; unresolved Biblical-philosophic
+      conflict as a living foundation of Western civilization.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-002
+    title: Preface to Spinoza's Critique of Religion
+    canonical_alias: Autobiographical Preface to Spinoza's Critique of Religion
+    date: 1965
+    source_class: PRIMARY_STRAUSS_SOURCE_WITH_AUTOBIOGRAPHICAL_DIMENSION
+    local_role: >
+      Reopens the alleged rational defeat of orthodoxy and tests whether reason can
+      exclude miracle without an exhaustive account of the whole.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-003
+    title: How to Study Spinoza's Theologico-Political Treatise
+    date: 1948
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Interpretation before explanation; Scripture, prophecy, sovereign authority,
+      freedom to philosophize, and differentiated audiences.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-004
+    title: Preface to Isaac Husik, Philosophical Essays
+    date: 1952
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Distinguishes the living conflict between philosophy and revealed law from
+      antiquarian intellectual history.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-005
+    title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
+    date: 1972
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Examines a major rational reconciliation of Judaism, revelation, morality,
+      law, autonomy, and historical progress.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-006
+    title: Freud on Moses and Monotheism
+    date: 1958
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Tests whether psychological and historical causal explanation constitutes refutation.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-007
+    title: Why We Remain Jews
+    date: 1962
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Emancipation, assimilation, Jewish persistence, Zionism, Torah, and the limits
+      of merely political solutions.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-008
+    title: On the Interpretation of Genesis
+    date: 1957
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Genesis as a serious account of creation, command, obedience, disobedience,
+      punishment, and the human place in the whole.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-009
+    title: Jerusalem and Athens
+    date: 1967
+    scope: Part V within the complete argument
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Jerusalem and Athens as comprehensive alternatives; Jewish history under
+      rival providential and philosophic interpretations.
+    study_status: COMPLETE_ARGUMENT_RECONSTRUCTION_REQUIRED
+
+  - source_id: TP-SRC-010
+    title: What Is Political Philosophy?
+    date: 1954
+    scope: first paragraph
+    source_class: PRIMARY_STRAUSS_SOURCE_WITH_RESTRICTED_REGISTERED_SCOPE
+    local_role: >
+      Political philosophy beside the prophetic image of Jerusalem; best regime
+      distinguished from the Kingdom of God.
+    study_status: SCOPE_LIMIT_MUST_BE_PRESERVED
+
+  - source_id: TP-SRC-011
+    title: Review of J. L. Talmon, The Nature of Jewish History
+    date: 1957
+    source_class: PRIMARY_STRAUSS_REVIEW
+    local_role: >
+      Rejects easy historical progress and presents the Jewish problem as a manifest
+      form of the human social and political problem.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-012
+    title: Letter to the Editor — The State of Israel
+    date: 1957
+    source_class: PRIMARY_STRAUSS_PUBLIC_LETTER
+    local_role: >
+      Distinguishes political dignity and necessity of statehood from redemption,
+      messianic fulfillment, or proof of providence.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-013
+    title: Introduction to Persecution and the Art of Writing
+    date: 1952
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Political conditions of communication and criteria and limits for inquiry
+      into exoteric and esoteric writing.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-014
+    title: Perspectives on the Good Society
+    date: 1963
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Finite political improvement distinguished from redemption or a final society.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-015
+    title: An Unspoken Prologue
+    date: 1959
+    source_class: PRIMARY_STRAUSS_AUTOBIOGRAPHICAL_SOURCE
+    local_role: >
+      Orthodoxy, unbelief, Zionism, Nietzsche, and rediscovery of medieval philosophy.
+    documentary_limit: >
+      Autobiographical sequence does not settle Strauss's final doctrinal allegiance.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-016
+    title: Preface to Hobbes Politische Wissenschaft
+    date: 1965
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Names the theologico-political problem as a continuing theme and distinguishes
+      sovereign peace from philosophic resolution.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-017
+    title: A Giving of Accounts
+    date: 1970
+    source_class: PRIMARY_STRAUSS_AUTOBIOGRAPHICAL_SOURCE
+    local_role: >
+      Teachers, books, gratitude, intellectual debts, and continuing inquiry.
+    documentary_limit: >
+      Intellectual debts and gratitude do not independently establish final doctrine.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-018
+    title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
+    date: 1946
+    source_class: PRIMARY_STRAUSS_PROJECT_PLAN
+    local_role: >
+      Early architecture of philosophy confronted by revealed law in medieval
+      Jewish and Islamic philosophy.
+    documentary_limit: >
+      A projected plan establishes intended architecture at a date, not completion
+      or unaltered final doctrine.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+  - source_id: TP-SRC-019
+    title: Restatement on Xenophon's Hiero
+    date: 1950
+    source_class: PRIMARY_STRAUSS_SOURCE
+    local_role: >
+      Tyranny, wisdom, universal state, eternity, history, and whether truth is
+      discovered or historically created.
+    study_status: PREDECESSOR_SYNTHESIS_PRESENT_SOURCE_SPECIFIC_RECORD_REQUIRED
+
+cofoundational_source:
+  source_id: TP-COF-001
+  author: Leo Strauss
+  title: Socrates and Aristophanes
+  date: 1966
+  source_class: AUTHOR_PUBLISHED_PRIMARY_STRAUSS_SOURCE
+  local_role: >
+    Supplies the brother-problem finding concerning poetic theology, civic gods,
+    the human recognition of divine authority, and philosophy's need for knowledge
+    of souls before judging gods and law.
+  completed_study_record: >
+    studies/socrates-and-aristophanes/
+    philosophy-poetry-theologico-political-reconstruction.yaml
+  limit: >
+    Does not independently reconstruct Biblical revelation, divine command,
+    prophecy, sacred law, or the full reason-revelation alternative.
+
+independent_historical_and_philosophic_witnesses:
+  - witness_id: TP-IND-001
+    name: Plato
+    role: Classical witness to philosophy, gods, law, piety, poetry, and the city.
+    independence_rule: Reconstruct Plato independently before Straussian synthesis.
+    study_status: PENDING
+  - witness_id: TP-IND-002
+    name: Maimonides
+    role: Medieval witness to philosophy, prophecy, divine law, jurisprudence, and guarded writing.
+    independence_rule: Reconstruct Maimonides from relevant primary works before using Strauss's interpretation as final.
+    study_status: PENDING
+  - witness_id: TP-IND-003
+    name: Spinoza
+    role: Modern critic and reorganizer of Scripture, prophecy, interpretation, sovereignty, and freedom to philosophize.
+    independence_rule: Reconstruct the Theologico-Political Treatise independently before final comparison.
+    study_status: PENDING
+  - witness_id: TP-IND-004
+    name: Hobbes
+    role: Witness to sovereign neutralization, public doctrine, peace, and political jurisdiction.
+    independence_rule: Reconstruct Hobbes independently before accepting the settlement's rank or neutrality.
+    study_status: PENDING
+  - witness_id: TP-IND-005
+    name: Hermann Cohen
+    role: Major rational reconciliation of Judaism, morality, revelation, and progress.
+    independence_rule: Reconstruct Cohen's own argument before Straussian critique governs.
+    study_status: PENDING
+  - witness_id: TP-IND-006
+    name: Sigmund Freud
+    role: Psychological and historical explanatory claimant concerning Moses, monotheism, memory, and identity.
+    independence_rule: Distinguish explanatory achievement from claimed refutation.
+    study_status: PENDING
+  - witness_id: TP-IND-007
+    name: Alexandre Kojeve
+    role: Historicist claimant concerning tyranny, universal state, historical completion, and truth.
+    independence_rule: Reconstruct the historicist alternative in its strongest form.
+    study_status: PENDING
+
+secondary_and_editorial_context:
+  - witness_id: TP-CXT-001
+    name: Thomas L. Pangle
+    source_relation: Introduction to Studies in Platonic Political Philosophy
+    source_class: SECONDARY_EDITORIAL_AND_INTERPRETIVE_CONTEXT
+    permitted_role: >
+      Provisional orientation and bibliographic guidance concerning the
+      theological-political problem, Socrates, poetry, and Platonic philosophy.
+    prohibited_role: >
+      Substituting for Strauss's primary texts or deciding the truth of revelation,
+      philosophy, or the nineteen-source predecessor synthesis.
+
+witness_relation_rules:
+  independent_reconstruction_rule: >
+    Biblical texts, Plato, Maimonides, Spinoza, Hobbes, Cohen, Freud, Kojeve, and
+    each Strauss source must be reconstructed on their own terms before final
+    comparison or corpus synthesis.
+  non_confirmation_rule: >
+    No independent witness may be forced to confirm the active predecessor or the
+    Socrates and Aristophanes brother-problem synthesis. Dissent, correction,
+    incompatibility, and source-specific limitation must remain visible.
+  no_majority_rule: >
+    Agreement among witnesses does not mechanically establish truth; source status,
+    argument, occasion, textual deed, and evidence remain controlling.
+  no_self_interpreting_history_rule: >
+    Historical events and political outcomes require interpretation and cannot
+    choose among philosophic, theological, psychological, political, or historicist accounts by themselves.
+  brother_problem_rule: >
+    Evidence concerning poetic theology and human recognition of gods must
+    cross-reference Philosophy vs. Poetry; evidence concerning genuine revelation,
+    command, prophecy, sacred law, and ultimate authority remains here.
+
+study_index:
+  completed:
+    - study_id: PVP-STUDY-001
+      source: Leo Strauss, Socrates and Aristophanes
+      local_status: COFOUNDATIONAL_STUDY_COMPLETE_NOT_SUFFICIENT_FOR_FULL_SUCCESSOR
+      path: >
+        studies/socrates-and-aristophanes/
+        philosophy-poetry-theologico-political-reconstruction.yaml
+  predecessor_synthesis:
+    - source: The Theologico-Political Problem v1.1 nineteen-source review
+      path: problems/theologico-political.yaml
+      status: ACTIVE_PREDECESSOR_SYNTHESIS_PRESERVED
+  pending:
+    - nineteen source-specific Strauss records
+    - independent Biblical primary-text reconstruction
+    - independent Plato reconstruction
+    - independent Maimonides reconstruction
+    - independent Spinoza reconstruction
+    - independent Hobbes reconstruction
+    - independent Cohen reconstruction
+    - independent Freud reconstruction
+    - independent Kojeve reconstruction
+
+migration_safeguards:
+  migration_status:
+    lifecycle: PLANNING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  active_predecessor: problems/theologico-political.yaml
+  exact_historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  rule: >
+    This registry is a subordinate successor draft. It does not revise or replace
+    the active predecessor, convert planned studies into completed evidence, certify
+    any claimant, or authorize activation.
+  prohibitions:
+    - no silent deletion of a witness or source
+    - no retrospective rewriting of source status
+    - no merger of independent witnesses before reconstruction
+    - no secondary source governing primary meaning
+    - no autobiography treated as doctrine
+    - no political event treated as self-interpreting
+    - no poetic theology treated as revelation
+    - no certification from registry validity alone
+
+termination:
+  registry_state: FOUNDING_WITNESS_REGISTRY_CREATED
+  certification: NOT_CERTIFIED
+  completion_conditions:
+    - all predecessor sources are registered with source status and limits
+    - principal revelatory, philosophic, political, and historical witnesses are distinct
+    - independent reconstruction requirements are explicit
+    - cofoundational Socrates and Aristophanes evidence is bounded
+    - secondary framing is prevented from governing primary meaning
+    - completed, predecessor, and pending study states are distinguished
+  current_limit: >
+    Structural registration is complete for founding production. Substantive source
+    reconstruction remains pending and may revise this registry through documented versions.
