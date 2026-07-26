@@ -1,0 +1,512 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: wise-vs-vulgar
+  title: The Wise vs. The Vulgar — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/wise-vs-vulgar/problem.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  predecessor_index_reference: migrations/foundational-problems-v2/predecessor-index.yaml
+  protocol_registry_reference: protocols/registry.yaml
+  governing_rule: >
+    This profile governs the recognition, testing, education, mediation, and political
+    responsibility of claimants to superior understanding. It invokes shared protocols
+    by reference, preserves accepted predecessor material for proposition-level
+    redistribution, and prohibits any claimant or repository object from certifying itself.
+
+purpose: >
+  Determine how political society may distinguish genuine from counterfeit claimants
+  to wisdom when human beings differ in capacity, motive, character, and education,
+  while titles, offices, success, suffering, secrecy, scholarship, election,
+  expertise, obscurity, and influence remain unreliable certificates of rank.
+
+predecessor_orientation:
+  active_predecessor:
+    path: problems/wise-and-vulgar.yaml
+    version: 0.1-discussion
+    blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+    status: ACTIVE_PREDECESSOR_UNTIL_MIGRATION_CERTIFICATION
+  accepted_migration_source:
+    identifier: WVG-RECONSTRUCTION-0.2
+    path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    status: ACCEPTED_FOR_REDISTRIBUTION_NOT_YET_CANONICAL
+  governing_rule: >
+    Accepted material must receive proposition-level dispositions before successor
+    activation. This profile does not classify, delete, or silently relocate that material.
+
+source_orientation:
+  founding_collection_study:
+    study_id: SPPP-STUDY-001
+    source: Leo Strauss, Studies in Platonic Political Philosophy
+    source_class: QUALIFIED_PRIMARY_STRAUSS_COLLECTION
+    source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+    study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+    synthesis_path: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+    role: >
+      Supplies the first registered successor-source reconstruction concerning
+      non-certification of wisdom, counterfeit philosophy, eristic, prestige,
+      differentiated education, provisional rank, indirect guidance, political
+      decency, and the dangers of elite capture.
+  source_limit: >
+    The collection study and accepted predecessor do not replace independent
+    reconstruction of claimant sources, works, institutions, audiences, or historical deeds.
+
+shared_protocol_references:
+  required:
+    - canonical_key: source-status
+      path: protocols/source-status.yaml
+      local_application: >
+        Identify whether evidence comes from an authorial work, character, report,
+        office, credential, institutional record, persecution narrative,
+        autobiography, editorial frame, or later reputation.
+    - canonical_key: evidence-classification
+      path: protocols/evidence-classification.yaml
+      local_application: >
+        Separate self-description, attributed rank, demonstrated activity, practical
+        outcome, supported inference, dissent, and unresolved recognition.
+    - canonical_key: inference-discipline
+      path: protocols/inference-discipline.yaml
+      local_application: >
+        Prevent movement from title, office, success, suffering, secrecy, learning,
+        popularity, exclusion, or persecution to unsupported certification of wisdom.
+    - canonical_key: uncertainty-preservation
+      path: protocols/uncertainty-preservation.yaml
+      local_application: >
+        Preserve provisional recognition, incomplete evidence, rival explanations,
+        institutional limits, and the possibility of both false positive and false negative judgments.
+    - canonical_key: speech-and-deed
+      path: protocols/speech-and-deed.yaml
+      local_application: >
+        Compare claims of wisdom, reluctance, service, modesty, piety, expertise,
+        neutrality, or responsibility with actions, audiences, omissions, outcomes,
+        corrections, and demonstrated rank.
+    - canonical_key: claimant-to-wisdom
+      path: protocols/claimant-to-wisdom.yaml
+      local_application: >
+        Apply the shared claimant examination without allowing this problem to redefine
+        or weaken its general safeguards.
+    - canonical_key: audience-and-rhetoric
+      path: protocols/audience-and-rhetoric.yaml
+      local_application: >
+        Examine differentiated education, partial enlightenment, mediation, guarded
+        communication, persuasion, and the risks imposed on different audiences.
+  conditional:
+    - canonical_key: irony
+      path: protocols/irony.yaml
+      activation: >
+        Invoke where explicit modesty, ignorance, equality, service, secrecy, or
+        superiority is qualified by speech, deed, arrangement, and consequence.
+    - canonical_key: comedy
+      path: protocols/comedy.yaml
+      activation: >
+        Invoke where ridicule exposes pretension, false rank, scholarly blindness,
+        vulgar misrecognition, or the self-implication of the superior claimant.
+
+problem_specific_operations:
+  - operation_id: WVG-OP-001
+    name: IDENTIFY_THE_CLAIMANT
+    instruction: >
+      Record the person, class, office, institution, text, tradition, profession, or
+      movement claiming superior knowledge, authority, virtue, inspiration, expertise,
+      or historical insight.
+  - operation_id: WVG-OP-002
+    name: IDENTIFY_THE_TITLE_AND_CLAIMED_DOMAIN
+    instruction: >
+      State the claimant's title, source of recognition, domain of alleged knowledge,
+      audience, jurisdiction, and requested authority. Do not infer comprehensive rank
+      from local expertise.
+  - operation_id: WVG-OP-003
+    name: RECONSTRUCT_THE_STRONGEST_CLAIM
+    instruction: >
+      Present the claimant's argument, evidence, practice, and self-understanding in
+      its strongest source-supported form before criticism or comparison.
+  - operation_id: WVG-OP-004
+    name: DISTINGUISH_TITLE_FROM_ACTIVITY
+    instruction: >
+      Compare philosopher, poet, prophet, scholar, expert, ruler, jurist, teacher,
+      ideologue, or scientist as a title with the activity actually demonstrated.
+  - operation_id: WVG-OP-005
+    name: TEST_SPEECH_DEED_AND_CORRECTION
+    instruction: >
+      Examine whether the claimant's conduct confirms the announced end; whether error,
+      dissent, correction, restraint, and acknowledgment of limits are possible.
+  - operation_id: WVG-OP-006
+    name: DISTINGUISH_LOCAL_FROM_COMPREHENSIVE_KNOWLEDGE
+    instruction: >
+      Determine whether technical, scholarly, historical, political, poetic,
+      theological, or scientific competence is being extended beyond its demonstrated domain.
+  - operation_id: WVG-OP-007
+    name: EXAMINE_HUMAN_HETEROGENEITY
+    instruction: >
+      Record differences of capacity, motive, character, experience, education,
+      desire, courage, moderation, and response to teaching without converting
+      difference into inherited worth or contempt.
+  - operation_id: WVG-OP-008
+    name: EXAMINE_DIFFERENTIATED_EDUCATION
+    instruction: >
+      Determine what is taught, withheld, sequenced, simplified, dramatized, or guarded;
+      which souls benefit or are endangered; and whether differentiation serves truth,
+      the student's good, political necessity, or elite control.
+  - operation_id: WVG-OP-009
+    name: PRESERVE_ORDINARY_DECENCY
+    instruction: >
+      Distinguish dependence on authoritative opinion from moral worthlessness. Record
+      civic virtue, loyalty, courage, moderation, care, and practical judgment where
+      present without relabeling them philosophy.
+  - operation_id: WVG-OP-010
+    name: TEST_MODES_OF_GUIDANCE
+    instruction: >
+      Compare direct rule, counsel, education, criticism, writing, institutional
+      service, law, example, and restraint. Superior judgment does not automatically
+      authorize sovereignty or withdrawal.
+  - operation_id: WVG-OP-011
+    name: TEST_ELITE_CAPTURE
+    instruction: >
+      Examine whether secrecy, credentials, jargon, control of interpretation,
+      institutional monopoly, selection of evidence, or claims of unequal capacity
+      protect inquiry or immunize a ruling group from correction.
+  - operation_id: WVG-OP-012
+    name: TEST_VULGAR_MISRECOGNITION
+    instruction: >
+      Examine whether the many mistake wisdom for impiety, uselessness, obscurity,
+      weakness, pretension, eccentricity, or danger, while preserving the possibility
+      that public concern may have rational grounds.
+  - operation_id: WVG-OP-013
+    name: RECORD_PROVISIONAL_RANK
+    instruction: >
+      Classify rank as demonstrated within a limited domain, supported but provisional,
+      disputed, counterfeit, unresolved, or outside present evidence. Do not issue final certification.
+  - operation_id: WVG-OP-014
+    name: RECORD_JURISDICTION_AND_TRANSFER
+    instruction: >
+      Retain recognition, rank, heterogeneity, education, mediation, and capture here;
+      route substantive doctrines of nature, poetry, action, revelation, comprehensive
+      ways of life, and modernity to their governing problems.
+
+activation_signals:
+  direct:
+    - a person, class, profession, office, institution, text, or movement claims superior knowledge or authority
+    - the city must distinguish philosophy from sophistry, prophecy from fraud, or expertise from imposture
+    - titles, credentials, secrecy, persecution, election, success, or suffering are used as proof of wisdom
+    - human capacities or educational needs are treated as unequal
+    - teaching is differentiated by audience, capacity, danger, or political necessity
+    - superior judgment seeks direct rule, counsel, institutional service, or guarded influence
+    - ordinary opinion is treated as either complete wisdom or moral worthlessness
+    - an elite controls interpretation, evidence, admission, or access to authoritative texts
+    - a majority, audience, institution, or scholar misrecognizes a claimant
+    - the repository or an AI system is treated as a certified wise authority
+  non_activation_signals:
+    - every difference in skill or knowledge
+    - every social hierarchy
+    - every minority-majority disagreement
+    - every expert consultation
+    - every educational accommodation
+    - every secret or confidential communication
+    - every criticism of an elite
+
+governing_distinctions:
+  - distinction_id: WVG-DIST-001
+    terms:
+      - wisdom
+      - title or reputation for wisdom
+    rule: >
+      Name, credential, office, tradition, fame, and self-description do not establish the activity named.
+  - distinction_id: WVG-DIST-002
+    terms:
+      - local expertise
+      - comprehensive wisdom
+    rule: >
+      Demonstrated competence within one domain does not establish knowledge of the
+      whole, the good, justice, or rightful political rule.
+  - distinction_id: WVG-DIST-003
+    terms:
+      - ordinary opinion
+      - moral or civic worthlessness
+    rule: >
+      Dependence on authoritative opinion does not eliminate decency, courage,
+      moderation, loyalty, care, or practical competence.
+  - distinction_id: WVG-DIST-004
+    terms:
+      - equal civic dignity
+      - identical capacity or vocation
+    rule: >
+      Political equality does not demonstrate identical intellectual, educational, or vocational capacities.
+  - distinction_id: WVG-DIST-005
+    terms:
+      - human heterogeneity
+      - inherited or caste superiority
+    rule: >
+      Differences of capacity and character require evidence and do not justify
+      hereditary status, contempt, domination, or permanent exclusion.
+  - distinction_id: WVG-DIST-006
+    terms:
+      - differentiated education
+      - manipulative concealment
+    rule: >
+      Sequencing or adaptation may serve the learner and truth; it may also protect
+      power. Motive, evidence, effect, correction, and alternatives must be examined.
+  - distinction_id: WVG-DIST-007
+    terms:
+      - persecution
+      - proof of wisdom
+    rule: >
+      Persecution may reveal danger or injustice but does not certify the persecuted claimant's truth or rank.
+  - distinction_id: WVG-DIST-008
+    terms:
+      - success
+      - wisdom
+    rule: >
+      Success may arise from force, office, resources, conformity, chance, or audience
+      appetite and therefore requires interpretation.
+  - distinction_id: WVG-DIST-009
+    terms:
+      - secrecy
+      - esoteric wisdom
+    rule: >
+      Concealment may arise from persecution, prudence, fraud, vanity, obscurity, or
+      institutional interest and requires positive evidence.
+  - distinction_id: WVG-DIST-010
+    terms:
+      - political authority
+      - philosophical wisdom
+    rule: >
+      The city may possess rightful jurisdiction without wisdom, while a philosopher
+      may possess insight without political legitimacy or competence.
+  - distinction_id: WVG-DIST-011
+    terms:
+      - elite guidance
+      - unrestricted sovereignty
+    rule: >
+      Counsel, education, criticism, and institutional service may permit guidance
+      without granting comprehensive rule.
+  - distinction_id: WVG-DIST-012
+    terms:
+      - provisional recognition
+      - certification
+    rule: >
+      Evidence may support limited and revisable judgments of rank without producing an infallible certificate.
+  - distinction_id: WVG-DIST-013
+    terms:
+      - vulgar misunderstanding
+      - irrational hostility
+    rule: >
+      Public misrecognition may be serious while the city's concern about powerful,
+      heterodox, or unaccountable claimants retains rational grounds.
+  - distinction_id: WVG-DIST-014
+    terms:
+      - possession of repository evidence
+      - possession of wisdom
+    rule: >
+      Access to sources, tools, models, memory, or institutional records does not
+      certify understanding, judgment, truthfulness, or responsibility.
+
+investigative_questions:
+  claimant_and_domain:
+    - Who claims superior understanding, and through what title or recognition mechanism?
+    - What domain is actually demonstrated?
+    - What authority or deference does the claimant request?
+    - Does the claimant acknowledge limits and neighboring expertise?
+  speech_deed_and_correction:
+    - Does the claimant's deed confirm the announced purpose?
+    - Can the claimant identify and correct error?
+    - How are dissent, criticism, and contrary evidence treated?
+    - Does secrecy protect inquiry or immunize the claimant?
+  audience_and_education:
+    - Which audiences are distinguished, and on what evidence?
+    - What is taught directly, indirectly, gradually, symbolically, or not at all?
+    - Does differentiation serve the learner's good, public safety, truth, or elite interest?
+    - Can the excluded or ordinary audience challenge the classification imposed upon it?
+  political_relation:
+    - Should the claimant rule, advise, educate, criticize, serve institutions, or abstain?
+    - What political legitimacy accompanies the claimed knowledge?
+    - How is responsibility assigned for indirect guidance and consequences?
+    - Can institutions test claimants without equating office with wisdom?
+  ordinary_and_superior_types:
+    - What genuine virtues and competences appear among nonphilosophers?
+    - What defects appear among learned, prestigious, or superior claimants?
+    - Are differences of capacity stable, educable, situational, or uncertain?
+    - Is contempt for ordinary opinion concealing dependence on ordinary decency?
+  capture_and_counterfeit:
+    - Which signals of wisdom can be cheaply imitated?
+    - Does jargon, obscurity, credentialing, secrecy, or complexity prevent external testing?
+    - Who controls the archive, admission, interpretation, evaluation, or correction process?
+    - What incentives reward counterfeit certainty or exaggerated rank?
+  documentary_and_comparative:
+    - Is rank self-attributed, attributed by allies, imposed by enemies, or demonstrated through action?
+    - Are persecution, victory, or institutional endurance being treated as self-interpreting?
+    - Have rival claimants been reconstructed independently?
+    - Is a later synthesis erasing unresolved disagreement or failed recognition?
+
+false_resolutions:
+  - resolution_id: WVG-FALSE-001
+    claim: A philosopher, scholar, expert, prophet, ruler, or institution is wise because it bears the title.
+    reason: >
+      Titles identify claims and roles, not demonstrated rank.
+  - resolution_id: WVG-FALSE-002
+    claim: Success, victory, influence, office, or endurance proves wisdom.
+    reason: >
+      These may arise from power, resources, conformity, chance, or institutional advantage.
+  - resolution_id: WVG-FALSE-003
+    claim: Persecution, exclusion, suffering, or martyrdom proves the claimant true.
+    reason: >
+      Injustice against a claimant does not certify the claimant's doctrine or judgment.
+  - resolution_id: WVG-FALSE-004
+    claim: Secrecy or obscurity proves possession of hidden wisdom.
+    reason: >
+      Concealment has multiple causes and requires positive textual and practical evidence.
+  - resolution_id: WVG-FALSE-005
+    claim: Equal civic dignity means identical capacity, education, and vocation.
+    reason: >
+      Political equality and human heterogeneity answer different questions.
+  - resolution_id: WVG-FALSE-006
+    claim: Human heterogeneity justifies inherited elites or unrestricted rule by the few.
+    reason: >
+      Difference does not certify identity, motive, legitimacy, permanence, or immunity from correction.
+  - resolution_id: WVG-FALSE-007
+    claim: The many are vulgar and therefore morally worthless or politically irrelevant.
+    reason: >
+      Ordinary opinion may coexist with genuine decency, courage, care, and rightful political authority.
+  - resolution_id: WVG-FALSE-008
+    claim: The city persecutes philosophy, therefore all public concern about philosophy is irrational.
+    reason: >
+      Philosophy, sophistry, rhetoric, secrecy, and unaccountable influence can be
+      difficult to distinguish, giving the city real though fallible grounds for concern.
+  - resolution_id: WVG-FALSE-009
+    claim: Differentiated education is either always wise or always manipulative.
+    reason: >
+      Audience, sequence, motive, truth, risk, effect, alternatives, and correction must be examined.
+  - resolution_id: WVG-FALSE-010
+    claim: Superior theoretical understanding establishes political competence and legitimacy.
+    reason: >
+      Theory, judgment, communication, execution, authority, institutions, and character remain distinct.
+  - resolution_id: WVG-FALSE-011
+    claim: Institutional selection reliably identifies the wise.
+    reason: >
+      Institutions can test evidence but may reward conformity, prestige, capture, or measurable proxies.
+  - resolution_id: WVG-FALSE-012
+    claim: No reliable certificate exists, therefore all claims to superior understanding are equal.
+    reason: >
+      Final certification may be impossible while evidence supports provisional,
+      domain-limited, comparative, and revisable judgments.
+  - resolution_id: WVG-FALSE-013
+    claim: An AI system or repository possesses wisdom because it stores more evidence or follows the protocol.
+    reason: >
+      Retrieval, memory, consistency, validation, and procedural compliance do not
+      establish understanding of the whole, judgment, responsibility, or truth.
+
+claimant_tests:
+  required_dimensions:
+    - claimant identity, title, and source status
+    - domain and scope of claimed knowledge
+    - evidence, argument, and demonstrated activity
+    - speech-and-deed relation
+    - audience and educational practice
+    - error correction and response to dissent
+    - political legitimacy and requested authority
+    - incentives, institutional position, and capture risk
+    - relation to ordinary decency and public concern
+    - alternative claimants and comparative evidence
+    - acknowledged limits and unresolved questions
+  permitted_rank_labels:
+    - DEMONSTRATED_WITHIN_LIMITED_DOMAIN
+    - SUPPORTED_PROVISIONAL_CLAIMANT
+    - DISPUTED_CLAIMANT
+    - COUNTERFEIT_OR_FAILED_CLAIMANT
+    - UNRESOLVED
+    - OUTSIDE_CURRENT_EVIDENCE
+  anti_certification_rule: >
+    No person, class, office, profession, institution, text, tradition, repository, or
+    artificial intelligence system may certify itself as wise through title, success,
+    suffering, secrecy, scholarship, election, obscurity, influence, or possession of evidence.
+
+cross_problem_routing:
+  - target_problem: nomos-vs-physis
+    route_when: the primary issue is the content or knowledge of a natural standard
+    retain_here: recognition and rank of the claimant who asserts the standard
+  - target_problem: philosophy-vs-poetry
+    route_when: poet and philosopher are substantive rival forms of wisdom and education
+    retain_here: recognition and testing of the rival claimants
+  - target_problem: theory-vs-practice
+    route_when: the primary issue is how superior understanding becomes judgment, counsel, rule, or institutional action
+    retain_here: recognition, legitimacy, mediation, and capture
+  - target_problem: theologico-political
+    route_when: the primary issue is genuine revelation, prophecy, divine command, sacred law, or ultimate authority
+    retain_here: recognition of prophet, philosopher, theologian, jurist, and false claimant
+  - target_problem: athens-vs-jerusalem
+    route_when: philosopher and prophet represent comprehensive rival ways of life
+    retain_here: rank and recognition of their bearers
+  - target_problem: ancients-vs-moderns
+    route_when: modern expertise, science, bureaucracy, ideology, historicism, or value creation transforms elite claims
+    retain_here: permanent recognition and capture problem
+
+output_constraints:
+  required:
+    - identify claimant, title, domain, audience, and requested authority
+    - reconstruct the strongest claim before ranking
+    - compare title and speech with demonstrated activity and deed
+    - distinguish local expertise from comprehensive wisdom
+    - examine correction, dissent, incentives, and capture
+    - preserve ordinary decency and human heterogeneity together
+    - classify rank provisionally and within a defined domain
+    - record cross-problem routing without duplicating substantive doctrine
+    - preserve predecessor redistribution status
+  prohibited:
+    - final certification of wisdom
+    - title, office, success, suffering, secrecy, or scholarship used as proof
+    - equal dignity converted into identical capacity
+    - heterogeneity converted into inherited worth or unrestricted rule
+    - the many reduced to moral worthlessness
+    - differentiated education presumed innocent or manipulative without evidence
+    - repository or AI procedure treated as wisdom
+    - activating the successor before proposition-level redistribution and certification
+
+termination_tests:
+  minimum_completion:
+    - claimant identity, title, domain, and requested authority are explicit
+    - strongest claim and contrary evidence are reconstructed
+    - speech and deed are compared
+    - correction, dissent, audience, and capture are examined
+    - ordinary decency and human heterogeneity are preserved
+    - rank is classified provisionally and within scope
+    - neighboring jurisdictions and unresolved questions are recorded
+  mandatory_nontermination:
+    - title or outcome substitutes for evidence
+    - local expertise is treated as comprehensive wisdom
+    - persecution or secrecy is treated as proof
+    - the ordinary audience is dismissed without reconstruction
+    - differentiated education is not tested for capture
+    - predecessor redistribution is bypassed
+    - independent witness reconstruction is replaced by collection-level synthesis
+  completion_label: PROVISIONAL_INQUIRY_PROFILE_COMPLETE
+
+migration_safeguards:
+  migration_status:
+    lifecycle: CLASSIFICATION_AND_REDISTRIBUTION_PENDING
+    certification: NOT_CERTIFIED
+    activation: NOT_ACTIVE
+  predecessor_effect: NONE
+  rule: >
+    This profile is a subordinate successor record. It does not classify the accepted
+    predecessor, certify or activate The Wise vs. The Vulgar, or authorize deletion,
+    retrospective revision, elite self-certification, or jurisdictional absorption.
+
+termination:
+  profile_state: FOUNDING_INQUIRY_PROFILE_CREATED
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - witnesses.yaml
+    - relations.yaml
+    - proposition-level redistribution of accepted predecessor material
+    - independent source reconstruction
+    - automated YAML and path validation
+    - migration certification before activation
