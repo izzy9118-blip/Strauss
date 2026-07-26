@@ -1,0 +1,55 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVM-SPPP-001
+  problem: ancients-vs-moderns
+  source_study: SPPP-STUDY-001
+  title: Ancients vs. Moderns — Studies in Platonic Political Philosophy
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+  cross_problem_synthesis: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+
+strict_problem: >
+  Did modern political thought discover a truer standard, or did it gain reliability,
+  institutional power, and control by lowering or narrowing the fuller ancient and biblical questions?
+
+principal_findings:
+  - Chronology alone establishes no rank.
+  - Ancient political philosophy begins from the good life, virtue, justice, nature, and the best regime.
+  - The ancients preserve the height of the standard while accepting political improbability.
+  - Machiavelli and Hobbes begin from ordinary passions, preservation, fear, and institutional reliability.
+  - Modernity replaces dependence on fortune, providence, rare virtue, and wisdom with project, method, sovereignty, and control.
+  - Historicism attacks ancient nature and modern universal reason but risks self-contradiction.
+  - Nietzsche radicalizes modern creation while leaving the creator's authority unresolved.
+  - Cohen's modern purification elevates morality while transforming revelation, Law, and immortality.
+  - Some modern discoveries appear new because the Socratic or comprehensive horizon has narrowed.
+
+unresolved_questions:
+  - whether modern reliability rests on truer knowledge or lowered ends
+  - whether practical power can establish philosophical superiority
+  - whether historicism can avoid self-contradiction
+  - whether modern transformations preserve or replace revelation and natural right
+
+jurisdiction_limits:
+  - Nature and natural right remain under Nomos vs. Physis.
+  - The strict reason-revelation conflict remains theologico-political.
+  - The complete Athens-Jerusalem alternative remains distinct.
+  - The collection does not replace independent ancient or modern witnesses.
+
+termination:
+  synthesis_state: COMPLETE_FOR_REGISTERED_COLLECTION
+  certification: NOT_CERTIFIED
+  remaining_work:
+    - independent ancient and modern witness reconstruction
+    - complete successor subordinate records
+    - migration validation
