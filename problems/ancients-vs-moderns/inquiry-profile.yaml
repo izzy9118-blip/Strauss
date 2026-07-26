@@ -1,0 +1,151 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: ancients-vs-moderns
+  title: Ancients vs. Moderns — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/ancients-vs-moderns/problem.yaml
+  relations_reference: problems/ancients-vs-moderns/relations.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+
+source_orientation:
+  founding_study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  founding_synthesis: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+  source_limit: >
+    The Strauss collection supplies the founding architecture but does not replace
+    independent ancient and modern witness reconstruction.
+
+shared_protocol_references:
+  required:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+  conditional:
+    - claimant-to-wisdom
+    - audience-and-rhetoric
+    - irony
+
+problem_specific_operations:
+  - operation_id: AVM-OP-001
+    name: RECONSTRUCT_ANCIENT_STANDARD
+    instruction: >
+      Identify the ancient account of nature, virtue, justice, the best regime, the
+      philosophic life, political possibility, and the limits of control.
+  - operation_id: AVM-OP-002
+    name: RECONSTRUCT_MODERN_PROJECT
+    instruction: >
+      Identify the modern beginning in preservation, rights, property, sovereignty,
+      ordinary passions, institutional reliability, science, history, or value creation.
+  - operation_id: AVM-OP-003
+    name: DISTINGUISH_NOVELTY_AND_AUTHORIZATION
+    instruction: >
+      Determine whether the modern thinker discovers a new phenomenon, publicly
+      authorizes an old practice, systematizes it, or changes its rank and horizon.
+  - operation_id: AVM-OP-004
+    name: TEST_FOR_NARROWING
+    instruction: >
+      Determine what dimensions of nature, soul, virtue, revelation, or the highest
+      life are excluded to gain clarity, reliability, or control.
+  - operation_id: AVM-OP-005
+    name: RECORD_GAINS_AND_LOSSES
+    instruction: >
+      Preserve genuine gains in institutions, rights, science, security, and material
+      capacity while identifying standards or human possibilities that recede.
+  - operation_id: AVM-OP-006
+    name: TEST_PROGRESS_AND_RESTORATION
+    instruction: >
+      Refuse chronology, novelty, antiquity, or historical victory as self-certifying
+      and test whether progress or restoration can account for changed circumstances.
+  - operation_id: AVM-OP-007
+    name: APPLY_HISTORICISM_TO_ITSELF
+    instruction: >
+      Determine whether a historicist claim presents itself as merely historical or
+      as universally true and preserve any self-application tension.
+
+activation_signals:
+  direct:
+    - ancient and modern standards or projects are compared
+    - progress, historical lateness, or scientific power is treated as proof of rank
+    - Machiavelli, Hobbes, Locke, Nietzsche, historicism, socialism, or rational religion transform older standards
+    - modern novelty may consist in narrowing, authorization, or systematization
+    - restoration of ancient thought or institutions is proposed
+    - technical or historical consciousness is treated as wisdom concerning ends
+  non_activation_signals:
+    - every comparison between older and newer authors
+    - every technological change
+    - every historical event
+    - every use of the words ancient or modern
+
+governing_distinctions:
+  - distinction_id: AVM-DIST-001
+    terms: [chronology, rank]
+    rule: Earlier or later date does not establish superiority.
+  - distinction_id: AVM-DIST-002
+    terms: [new_phenomenon, new_authorization_or_system]
+    rule: Modern novelty may concern public defense, rank, method, or institutions rather than first discovery.
+  - distinction_id: AVM-DIST-003
+    terms: [enlargement, narrowing]
+    rule: Increased clarity or control may result from excluding dimensions previously considered essential.
+  - distinction_id: AVM-DIST-004
+    terms: [political_power, wisdom]
+    rule: Institutional or technical superiority does not establish knowledge of the human good.
+  - distinction_id: AVM-DIST-005
+    terms: [progress, completion]
+    rule: Improvement in one domain does not prove complete human progress.
+  - distinction_id: AVM-DIST-006
+    terms: [historical_context, truth]
+    rule: Historical explanation does not replace examination of a teaching's truth claim.
+
+investigative_questions:
+  - What is the governing ancient standard and highest end?
+  - What modern problem is being solved, and through which lowered or transformed beginning?
+  - Is the phenomenon new, newly authorized, newly systematized, or newly ranked?
+  - What becomes more reliable or controllable?
+  - What human dimensions disappear from the field?
+  - Does the modern account explain or merely presuppose the superiority of progress?
+  - Can the ancient standard address modern institutional conditions?
+  - Does historicism apply its historical claim to itself?
+
+false_resolutions:
+  - antiquity proves wisdom
+  - modernity proves progress
+  - impracticality proves the ancient standard false
+  - effectiveness proves comprehensive understanding
+  - technical mastery equals human wisdom
+  - historicism escapes historical limitation
+  - restoration can ignore changed conditions
+
+output_constraints:
+  required:
+    - reconstruct both standards independently
+    - distinguish novelty, authorization, systematization, and narrowing
+    - preserve gains and losses
+    - test chronology and progress claims
+    - record neighboring jurisdiction by reference
+  prohibited:
+    - certify either side by date
+    - reduce ancient thought to obsolete context
+    - equate modern power with wisdom
+    - dismiss modern gains to protect an ancient standard
+
+termination:
+  state_options:
+    - ANCIENT_STANDARD_RECONSTRUCTED
+    - MODERN_PROJECT_RECONSTRUCTED
+    - NOVELTY_CLASSIFIED
+    - NARROWING_TEST_COMPLETED
+    - GAINS_AND_LOSSES_PRESERVED
+    - FINAL_RANK_UNRESOLVED
