@@ -1,0 +1,148 @@
+schema_version: 1.0
+document_type: shared_protocol_constitution
+
+identity:
+  canonical_key: shared-protocol-constitution
+  title: Shared Protocol Constitution
+  version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+purpose: >
+  Establish the identity, authority, scope, invocation, dependency, revision,
+  preservation, and non-duplication rules governing shared interpretive and
+  documentary protocols used across the seven foundational problems.
+
+governing_rule: >
+  Interpretive and documentary rules that apply across multiple foundational
+  problems must be maintained as shared protocols. Individual problems may
+  invoke and apply those protocols but may not reproduce, redefine, weaken, or
+  silently modify their governing rules.
+
+functions:
+  problem_constitution: >
+    Governs the permanent question, jurisdiction, boundaries, relations, and
+    valid termination states of one foundational problem.
+  shared_protocol: >
+    Governs a reusable method of textual interpretation, evidence
+    classification, claimant examination, audience examination, or uncertainty
+    preservation.
+  study_record: >
+    Preserves documentary evidence and source-specific analysis to which
+    protocols are applied.
+  synthesis_record: >
+    Accumulates findings produced through protocols without replacing source
+    records, problem constitutions, or protocols.
+
+protocol_identity:
+  stable_identity_field: canonical_key
+  version_field: protocol_version
+  rule: >
+    Protocol identity is permanent. Revision changes the protocol version, not
+    its canonical key.
+
+invocation:
+  constitutional_reference: >
+    A problem constitution identifies the protocols whose authority it
+    recognizes.
+  operational_application: >
+    A problem inquiry profile records the specific way each invoked protocol
+    applies to that problem.
+  study_execution: >
+    Every study record must record the exact protocol versions used when
+    producing classified findings.
+  incorporation_rule: >
+    Invocation incorporates the governing protocol by reference. It does not
+    create a local copy.
+
+precedence:
+  order:
+    - repository architecture constitution
+    - shared protocol constitution
+    - foundational problem constitution
+    - shared protocol
+    - problem inquiry profile
+    - documentary study record
+    - provisional synthesis
+  clarification: >
+    Precedence governs constraints, not substantive evidence. A higher artifact
+    does not supply the factual content of a lower artifact.
+  conflict_rule: >
+    When a problem-specific application conflicts with a shared protocol, the
+    shared protocol controls and the local application must be corrected.
+
+non_duplication:
+  permitted:
+    - canonical protocol references
+    - short summaries of local relevance
+    - problem-specific questions
+    - problem-specific examples
+    - stricter local safeguards consistent with the protocol
+  prohibited:
+    - copied governing protocol text
+    - locally weakened evidentiary standards
+    - parallel protocol versions inside problem directories
+    - untracked modification of a protocol rule
+    - local redefinition of protocol output classes
+
+dependency_order:
+  documentary:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+  interpretive:
+    - speech-and-deed
+    - irony
+    - comedy
+  inquiry:
+    - claimant-to-wisdom
+    - audience-and-rhetoric
+  rule: >
+    Protocol dependencies must be explicit, directional, and free of circular
+    authority.
+
+versioning:
+  active_reference_rule: >
+    Active problem objects identify the current protocol version governing new
+    inquiry.
+  certified_record_rule: >
+    Certified study and synthesis records preserve the exact protocol versions
+    used at the time of production.
+  non_retroactivity: >
+    Revision of a protocol does not silently alter the classification or
+    validity of prior records.
+  breaking_change_rule: >
+    A revision that changes required evidence, prohibited inference, output
+    classification, or termination logic requires a major version increment.
+
+revision:
+  required_steps:
+    - preserve the prior protocol version
+    - state the reason for revision
+    - identify affected problem applications
+    - identify affected future inquiry
+    - determine whether prior records require review
+    - prohibit automatic retrospective reclassification
+    - validate all references
+    - certify the successor version
+
+anti_capture:
+  rule: >
+    No foundational problem may redefine a shared protocol because the
+    protocol produces a conclusion inconvenient to that problem's preferred
+    interpretation.
+  prohibited_examples:
+    - treating irony as automatic reversal
+    - treating comedy as dismissal
+    - treating uncertainty as failure
+    - lowering evidence standards for preferred authors
+    - treating professional rank as wisdom
+    - treating exotericism as unrestricted deception
+    - treating editorial status as authorial status
+
+registry:
+  path: protocols/registry.yaml
