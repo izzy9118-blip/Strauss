@@ -1,0 +1,154 @@
+schema_version: 1.0
+document_type: foundational_problem_inquiry_profile
+
+identity:
+  problem: wise-vs-vulgar
+  title: The Wise vs. The Vulgar — Inquiry Profile
+  version: 0.1.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  problem_reference: problems/wise-vs-vulgar/problem.yaml
+  relations_reference: problems/wise-vs-vulgar/relations.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  registry_reference: problems/registry.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+  protocol_registry_reference: protocols/registry.yaml
+  accepted_source_reference: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+
+source_orientation:
+  accepted_migration_source: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+  additional_study: studies/studies-in-platonic-political-philosophy/foundational-problems-reconstruction.yaml
+  source_synthesis: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+  source_limit: >
+    The successor remains inactive. Accepted predecessor material requires controlled
+    redistribution and independent witness testing before certification.
+
+shared_protocol_references:
+  required:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+    - claimant-to-wisdom
+    - audience-and-rhetoric
+  conditional:
+    - irony
+    - comedy
+
+problem_specific_operations:
+  - operation_id: WVG-OP-001
+    name: IDENTIFY_CLAIMANT_AND_DOMAIN
+    instruction: >
+      Identify the claimant, title, domain of competence, claimed authority, intended
+      subjects, evidence, and consequences before judging rank.
+  - operation_id: WVG-OP-002
+    name: DISTINGUISH_FORMS_OF_SUPERIORITY
+    instruction: >
+      Separate theoretical understanding, practical competence, technical expertise,
+      moral character, lawful authority, poetic power, prophetic claim, and social prestige.
+  - operation_id: WVG-OP-003
+    name: PRESERVE_VULGAR_DIGNITY
+    instruction: >
+      Treat ordinary political virtue and dependence upon opinion as genuine human and
+      political conditions rather than stupidity, poverty, crudity, or contemptibility.
+  - operation_id: WVG-OP-004
+    name: EXAMINE_HUMAN_HETEROGENEITY
+    instruction: >
+      Reconstruct differences in capacity, desire, character, motive, education, and
+      response without converting them into hereditary or professional caste.
+  - operation_id: WVG-OP-005
+    name: TEST_DIFFERENTIATED_COMMUNICATION
+    instruction: >
+      Determine whether reserve, sequence, myth, rhetoric, simplification, or indirect
+      teaching serves education responsibly or protects manipulation and elite capture.
+  - operation_id: WVG-OP-006
+    name: COMPARE_SPEECH_AND_DEED
+    instruction: >
+      Test claims of wisdom through demonstrated understanding, correction, restraint,
+      audience responsibility, and relation between profession and action.
+  - operation_id: WVG-OP-007
+    name: PRESERVE_PROVISIONAL_RECOGNITION
+    instruction: >
+      Record supported judgments only within the demonstrated domain and preserve the
+      inability to certify complete wisdom.
+
+activation_signals:
+  direct:
+    - a person or class claims superior wisdom, expertise, revelation, or historical knowledge
+    - the city must distinguish philosopher from sophist or prophet from false prophet
+    - differentiated education or restricted communication is proposed
+    - office, credentials, success, persecution, secrecy, or inspiration is treated as proof of rank
+    - ordinary political virtue is dismissed as contemptible vulgarity
+    - elite disbelief creates asymmetry between rulers and citizens
+  non_activation_signals:
+    - every difference in ability or education
+    - every majority-minority disagreement
+    - every use of expertise
+    - every private or difficult teaching
+
+governing_distinctions:
+  - distinction_id: WVG-DIST-001
+    terms: [vulgar_opinion, stupidity_or_contemptibility]
+    rule: Dependence upon authoritative opinion does not establish low intelligence or low moral worth.
+  - distinction_id: WVG-DIST-002
+    terms: [theoretical_understanding, practical_competence, legitimate_authority]
+    rule: These may coincide but must be demonstrated separately.
+  - distinction_id: WVG-DIST-003
+    terms: [technical_expertise, architectonic_wisdom]
+    rule: Knowledge of means does not determine justice or the highest end.
+  - distinction_id: WVG-DIST-004
+    terms: [reserve, deception]
+    rule: Differentiated communication requires evidence of educational purpose, truthfulness, and accountability.
+  - distinction_id: WVG-DIST-005
+    terms: [persecution_or_secrecy, truth]
+    rule: Marginality and hiddenness do not certify wisdom.
+  - distinction_id: WVG-DIST-006
+    terms: [provisional_rank, complete_wisdom]
+    rule: Supported superiority in one domain must not be extended to the whole without evidence.
+
+investigative_questions:
+  - What exactly does the claimant know or claim to know?
+  - What evidence and deeds support the claim?
+  - What is the demonstrated domain and limit?
+  - How does the claimant respond to correction, failure, or reversal?
+  - What role do title, institution, wealth, secrecy, inspiration, or persecution play?
+  - Who receives the teaching, and what effects does it produce?
+  - Does differentiation preserve education or create capture?
+  - What dignity and knowledge remain with ordinary political virtue?
+
+false_resolutions:
+  - social or professional status identifies the wise
+  - majority error certifies the dissenter
+  - credentials equal philosophy
+  - expertise equals rule
+  - persecution equals truth
+  - secrecy equals esotericism and wisdom
+  - prophecy or election certifies every claimant
+  - philosophical superiority authorizes self-appointed sovereignty
+
+output_constraints:
+  required:
+    - identify claimant, domain, evidence, audience, deed, and limit
+    - preserve ordinary virtue and human heterogeneity
+    - classify recognition as provisional
+    - record capture risks and neighboring jurisdiction
+  prohibited:
+    - certify a class or office as wise
+    - use hiddenness or persecution as proof
+    - collapse competence, character, knowledge, and authority
+    - authorize unrestricted deception
+
+termination:
+  state_options:
+    - CLAIMANT_RECONSTRUCTED
+    - DOMAIN_IDENTIFIED
+    - ORDINARY_VIRTUE_PRESERVED
+    - DIFFERENTIATED_GUIDANCE_EXAMINED
+    - CAPTURE_RISK_DOCUMENTED
+    - RECOGNITION_PROVISIONAL
