@@ -1,0 +1,225 @@
+schema_version: 1.0
+document_type: foundational_problem_architecture_constitution
+
+identity:
+  canonical_key: foundational-problem-architecture
+  title: Foundational Problem Architecture Constitution
+  version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+purpose: >
+  Govern the identity, official order, jurisdiction, connection, revision,
+  preservation, redistribution, and certification of the repository's seven
+  foundational problems.
+
+governing_rule: >
+  The seven foundational problems must remain distinct but connected. Each
+  problem may reference findings, witnesses, and conclusions governed by
+  another problem, but it must not reproduce that problem's full doctrine or
+  absorb its jurisdiction. Interpretive rules that apply across multiple
+  problems must be maintained as shared protocols rather than duplicated
+  inside individual problem objects.
+
+foundational_structure:
+  registry: problems/registry.yaml
+  official_problem_count: 7
+  problems:
+    - Nomos vs. Physis
+    - Philosophy vs. Poetry
+    - Theory vs. Practice
+    - The Theologico-Political Problem
+    - Athens vs. Jerusalem
+    - The Wise vs. The Vulgar
+    - Ancients vs. Moderns
+  order_rule: >
+    The registry order is authoritative for repository presentation and inquiry
+    orientation. It does not make later problems subordinate to earlier ones or
+    require every inquiry to activate the problems sequentially.
+
+identity_and_order:
+  stable_identity_field: canonical_key
+  official_order_field: canonical_order
+  rule: >
+    Canonical identity and canonical order are distinct. Inserting, reordering,
+    renaming, or relocating a problem does not alter its stable canonical key
+    or retrospectively alter historical identifiers.
+  legacy_identifiers: >
+    Existing identifiers remain historical aliases and provenance references.
+    They do not determine canonical order.
+
+jurisdiction:
+  required_fields:
+    - governing question
+    - compressed question
+    - primary jurisdiction
+    - permanent tension
+    - boundary conditions
+    - neighboring problem relations
+    - non-absorption clause
+  primary_jurisdiction_rule: >
+    A proposition belongs primarily to the problem whose governing question it
+    directly answers, alters, or complicates.
+  secondary_relevance_rule: >
+    Another problem may reference the proposition and state its local relevance
+    without reproducing the proposition's full governing doctrine.
+  unresolved_overlap_rule: >
+    Where jurisdiction cannot yet be responsibly determined, preserve the item
+    as unresolved in the migration record rather than create duplicate
+    governing copies.
+
+shared_protocols:
+  constitution: governance/shared-protocol-constitution.yaml
+  registry: protocols/registry.yaml
+  rule: >
+    Methods of general application, including source status, evidence
+    classification, inference discipline, uncertainty preservation, speech and
+    deed, irony, comedy, claimant examination, and audience examination, are
+    governed through shared protocols.
+  local_application_rule: >
+    A problem may invoke a protocol and record a problem-specific application,
+    but may not reproduce, redefine, weaken, or silently modify the protocol.
+
+problem_object_contract:
+  constitutional_file: problem.yaml
+  required_contents:
+    - identity
+    - status
+    - governing question
+    - compressed question
+    - jurisdiction
+    - permanent tension
+    - boundary
+    - relations
+    - shared protocol references
+    - anti-capture principle
+    - non-absorption clause
+    - termination conditions
+  prohibited_contents:
+    - complete chapter analyses
+    - accumulated reading notes
+    - full witness interpretations
+    - copied shared protocol text
+    - uncited interpretive accumulation
+    - silent historical replacement
+  rule: >
+    A problem object defines the permanent problem. It is not an archive of
+    every interpretation produced under that problem.
+
+subordinate_records:
+  inquiry_profile:
+    filename: inquiry-profile.yaml
+    function: >
+      Record problem-specific operations, distinctions, recognition signals,
+      investigative questions, false resolutions, and output constraints.
+  witnesses:
+    filename: witnesses.yaml
+    function: >
+      Register witnesses and their local jurisdictional roles without replacing
+      source-specific study records.
+  relations:
+    filename: relations.yaml
+    function: >
+      Record explicit dependencies, intersections, transfers, limits, and
+      unresolved overlaps among problems.
+  synthesis:
+    directory: synthesis/
+    function: >
+      Preserve provisional findings, competing formulations, unresolved
+      tensions, proposed constitutional implications, and revision history.
+
+revision_and_redistribution:
+  governing_rule: >
+    Revision must preserve accepted work by jurisdiction rather than preserve
+    the accidental boundaries of an earlier problem object.
+  dispositions:
+    RETAIN: >
+      Material remains valid and belongs within the problem being revised.
+    TRANSFER: >
+      Material remains valid but belongs primarily within another foundational
+      problem.
+    ELEVATE: >
+      Material applies across multiple problems and must become a shared
+      protocol.
+    PRESERVE_HISTORICALLY: >
+      Material records an earlier formulation or stage and remains recoverable
+      without governing current work.
+    REJECT_WITH_REASON: >
+      Material is unsupported, contradictory, duplicative, or superseded and
+      is excluded only with an explicit reason.
+  prohibition: >
+    No accepted material may disappear merely because its original container
+    has been revised.
+
+transfer_provenance:
+  required_fields:
+    - source problem
+    - source version
+    - original item or section
+    - disposition
+    - destination problem or protocol
+    - reason
+    - transformation mode
+    - continuing relevance
+    - unresolved overlap
+    - implementing commit
+  transformation_modes:
+    - VERBATIM
+    - REVISED
+    - DIVIDED
+    - CONSOLIDATED
+    - REFERENCE_ONLY
+
+non_duplication:
+  permitted:
+    - canonical references
+    - brief jurisdictional summaries
+    - problem-specific applications
+    - source quotations required for independent analysis
+  prohibited:
+    - parallel governing copies of the same doctrine
+    - copied protocol definitions inside problem objects
+    - untracked doctrinal forks
+    - duplication used in place of explicit relations
+  conflict_rule: >
+    Where two problems require different applications of a common method, the
+    shared rule remains in the protocol and each problem records only its local
+    application.
+
+historical_preservation:
+  governing_rule: >
+    Existing problem objects must remain recoverable before replacement,
+    relocation, consolidation, or removal from the active tree.
+  required_sequence:
+    - record predecessor path, version, identifier, blob hash, and commit
+    - preserve the predecessor through repository history or an explicit historical record
+    - create and validate the successor structure
+    - classify displaced material
+    - record all transfers, elevations, preservations, and rejections
+    - certify the migration
+    - only then remove a predecessor from the active path
+  prohibition: >
+    No predecessor may be retrospectively rewritten to appear as though it had
+    always conformed to the new architecture.
+
+certification:
+  required_conditions:
+    - the registry is valid and complete
+    - every problem has a unique canonical key and official order
+    - every problem has a defined jurisdiction and non-absorption clause
+    - shared methods are governed through protocols
+    - displaced accepted material is classified
+    - transfers preserve provenance
+    - predecessor records remain recoverable
+    - cross-references resolve
+    - no uncontrolled governing duplication remains
+    - unresolved jurisdictional conflicts are recorded
+  prohibited_certification:
+    - certification based only on YAML validity
+    - certification while accepted material is unclassified
+    - certification while predecessor records are lost
+    - certification while a problem silently absorbs another problem
+    - certification while staging artifacts remain authoritative
