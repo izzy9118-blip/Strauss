@@ -4,26 +4,33 @@ registry_type: foundational_problem_registry
 identity:
   canonical_key: foundational-problem-registry
   title: Foundational Problem Registry
-  version: 1.2.0
+  version: 1.3.0
 
 status:
   lifecycle: FOUNDING_DRAFT
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
+revision_history:
+  predecessor_version: 1.2.0
+  predecessor_blob_sha: 5ed8813002de05db25813c44296e3a85d580a32c
+  reason: >
+    Record the inactive founding successor drafts and SPPP subordinate syntheses for
+    Nomos vs. Physis, Theory vs. Practice, Athens vs. Jerusalem, The Wise vs. The
+    Vulgar, and Ancients vs. Moderns.
+
 authority:
   purpose: >
-    Establish the canonical identities, official order, jurisdictional
-    boundaries, repository locations, and migration status of the seven
-    foundational problems.
+    Establish the canonical identities, official order, jurisdictional boundaries,
+    repository locations, and migration status of the seven foundational problems.
   governed_by:
     path: governance/foundational-problem-architecture.yaml
     canonical_key: foundational-problem-architecture
   governing_rule: >
-    The seven foundational problems remain distinct but connected. A problem
-    may reference another problem's findings without reproducing its full
-    doctrine or absorbing its jurisdiction. Interpretive rules of general
-    application are maintained as shared protocols.
+    The seven foundational problems remain distinct but connected. A problem may
+    reference another problem's findings without reproducing its full doctrine or
+    absorbing its jurisdiction. Interpretive rules of general application are
+    maintained as shared protocols.
 
 identity_rule:
   canonical_identity: canonical_key
@@ -31,22 +38,28 @@ identity_rule:
   title_field: title
   rule: >
     Canonical identity and canonical order are separate. Reordering, inserting,
-    renaming, or relocating a problem does not alter its stable canonical key
-    or retrospectively alter historical identifiers.
+    renaming, or relocating a problem does not alter its stable canonical key or
+    retrospectively alter historical identifiers.
   legacy_identifier_rule: >
-    Earlier identifiers remain historical aliases and provenance references.
-    They do not determine current canonical order.
+    Earlier identifiers remain historical aliases and provenance references. They
+    do not determine current canonical order.
 
 canonical_problems:
   - canonical_key: nomos-vs-physis
     canonical_order: 1
     title: Nomos vs. Physis
     successor_path: problems/nomos-vs-physis/problem.yaml
+    subordinate_records:
+      synthesis_directory: problems/nomos-vs-physis/synthesis/
+      founding_source_bridge: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
+      remaining_required:
+        - inquiry-profile.yaml
+        - witnesses.yaml
+        - relations.yaml
     jurisdiction: >
-      The distinction and conflict between what is by nature and what exists
-      through law, convention, custom, inheritance, artifice, or authoritative
-      opinion.
-    migration_status: MIGRATION_PENDING
+      The distinction and conflict between what is by nature and what exists through
+      law, convention, custom, inheritance, artifice, or authoritative opinion.
+    migration_status: FOUNDING_DRAFT_CREATED_NOT_CERTIFIED
 
   - canonical_key: philosophy-vs-poetry
     canonical_order: 2
@@ -60,20 +73,27 @@ canonical_problems:
       relations: problems/philosophy-vs-poetry/relations.yaml
       synthesis_directory: problems/philosophy-vs-poetry/synthesis/
     jurisdiction: >
-      The ancient quarrel between philosophy and poetry as rival claimants to
-      wisdom, education, knowledge of souls, knowledge of the gods, political
-      authority, and guidance concerning the human good.
+      The ancient quarrel between philosophy and poetry as rival claimants to wisdom,
+      education, knowledge of souls, knowledge of the gods, political authority, and
+      guidance concerning the human good.
     migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
 
   - canonical_key: theory-vs-practice
     canonical_order: 3
     title: Theory vs. Practice
     successor_path: problems/theory-vs-practice/problem.yaml
+    subordinate_records:
+      synthesis_directory: problems/theory-vs-practice/synthesis/
+      founding_source_bridge: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
+      remaining_required:
+        - inquiry-profile.yaml
+        - witnesses.yaml
+        - relations.yaml
     jurisdiction: >
-      The relation between understanding and action, contemplation and
-      political responsibility, theoretical standards and practical judgment,
-      and philosophic knowledge and statesmanship.
-    migration_status: MIGRATION_PENDING
+      The relation between understanding and action, contemplation and political
+      responsibility, theoretical standards and practical judgment, and philosophic
+      knowledge and statesmanship.
+    migration_status: FOUNDING_DRAFT_CREATED_NOT_CERTIFIED
 
   - canonical_key: theologico-political
     canonical_order: 4
@@ -96,6 +116,7 @@ canonical_problems:
       relations: problems/theologico-political/relations.yaml
       synthesis_directory: problems/theologico-political/synthesis/
       migration_transactions: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+      sppp_reconciliation: migrations/foundational-problems-v2/transactions/theologico-political-sppp-study-001.yaml
     jurisdiction: >
       The conflict concerning ultimate authority among autonomous reason,
       revelation, divine law, prophecy, theology, interpretation, and political sovereignty.
@@ -105,10 +126,17 @@ canonical_problems:
     canonical_order: 5
     title: Athens vs. Jerusalem
     successor_path: problems/athens-vs-jerusalem/problem.yaml
+    subordinate_records:
+      synthesis_directory: problems/athens-vs-jerusalem/synthesis/
+      founding_source_bridge: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
+      remaining_required:
+        - inquiry-profile.yaml
+        - witnesses.yaml
+        - relations.yaml
     jurisdiction: >
       The confrontation between autonomous understanding and obedient love as
       comprehensive orientations toward the highest human life.
-    migration_status: MIGRATION_PENDING
+    migration_status: FOUNDING_DRAFT_CREATED_NOT_CERTIFIED
 
   - canonical_key: wise-vs-vulgar
     canonical_order: 6
@@ -126,29 +154,41 @@ canonical_problems:
         version: 0.2-reconstruction-draft
         status: ACCEPTED_MIGRATION_SOURCE
     successor_path: problems/wise-vs-vulgar/problem.yaml
+    subordinate_records:
+      synthesis_directory: problems/wise-vs-vulgar/synthesis/
+      founding_source_bridge: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+      remaining_required:
+        - inquiry-profile.yaml
+        - witnesses.yaml
+        - relations.yaml
+        - proposition-level redistribution
     jurisdiction: >
       The recognition of wisdom, the distinction among genuine and counterfeit
       claimants to superior understanding, human heterogeneity, differentiated
-      education, audience, mediation, and the political responsibility of
-      philosophy.
-    migration_status: REDISTRIBUTION_PLANNED
+      education, audience, mediation, and the political responsibility of philosophy.
+    migration_status: FOUNDING_DRAFT_CREATED_REDISTRIBUTION_PENDING_NOT_CERTIFIED
 
   - canonical_key: ancients-vs-moderns
     canonical_order: 7
     title: Ancients vs. Moderns
     successor_path: problems/ancients-vs-moderns/problem.yaml
+    subordinate_records:
+      synthesis_directory: problems/ancients-vs-moderns/synthesis/
+      founding_source_bridge: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+      remaining_required:
+        - inquiry-profile.yaml
+        - witnesses.yaml
+        - relations.yaml
     jurisdiction: >
-      The modern transformation of nature, history, progress, science,
-      equality, political philosophy, revelation, education, and the relation
-      between knowledge and power.
-    migration_status: MIGRATION_PENDING
+      The modern transformation of nature, history, progress, science, equality,
+      political philosophy, revelation, education, and the relation between knowledge and power.
+    migration_status: FOUNDING_DRAFT_CREATED_NOT_CERTIFIED
 
 official_order_rule: >
-  The order recorded here is authoritative for presentation, inquiry
-  orientation, and repository navigation. It does not imply that every inquiry
-  must activate the problems sequentially, that later problems are subordinate
-  to earlier ones, or that their permanent tensions can be reduced to a single
-  linear argument.
+  The order recorded here is authoritative for presentation, inquiry orientation,
+  and repository navigation. It does not imply that every inquiry must activate the
+  problems sequentially, that later problems are subordinate to earlier ones, or
+  that their permanent tensions can be reduced to a single linear argument.
 
 reference_rule: >
   Cross-problem references must use canonical_key. Repository paths may also be
@@ -157,4 +197,4 @@ reference_rule: >
 activation_rule: >
   A successor problem becomes active only after its predecessor is preserved,
   displaced material is classified, references validate, and the migration is
-  certified. Until then, predecessor and founding-draft statuses remain explicit.
+  certified. Creation of all seven founding drafts does not authorize activation.
