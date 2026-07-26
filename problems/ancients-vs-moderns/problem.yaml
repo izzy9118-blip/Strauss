@@ -1,0 +1,106 @@
+schema_version: 1.0
+document_type: foundational_problem
+
+identity:
+  canonical_key: ancients-vs-moderns
+  canonical_order: 7
+  title: Ancients vs. Moderns
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  version: 0.1.0
+  certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+
+authority:
+  registry_reference: problems/registry.yaml
+  architecture_reference: governance/foundational-problem-architecture.yaml
+  migration_reference: migrations/foundational-problems-v2/migration.yaml
+
+source_basis:
+  study_id: SPPP-STUDY-001
+  study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+governing_question: >
+  Did modern political thought discover a truer standard, or did it gain reliability,
+  institutional power, and control by lowering or narrowing the fuller ancient and
+  biblical questions?
+
+compressed_question: >
+  Does modern power rest on deeper truth or on a lowered horizon?
+
+jurisdiction:
+  owns:
+    - the modern transformation of nature, right, history, science, and political philosophy
+    - progress, historicism, value creation, technical mastery, and institutional control
+    - the relation between ancient standards and modern reliability
+    - modern transformations of revelation, education, equality, and knowledge
+    - chronology and innovation as insufficient standards of rank
+  does_not_own:
+    - nomos-vs-physis
+    - philosophy-vs-poetry
+    - theory-vs-practice
+    - theologico-political
+    - athens-vs-jerusalem
+    - wise-vs-vulgar
+
+permanent_tension: >
+  Modernity gains practical control by beginning from ordinary passions, preservation,
+  fear, method, sovereignty, and institutional reliability, while ancient and Biblical
+  horizons preserve higher questions of virtue, nature, justice, revelation, and the best life.
+
+boundary:
+  activates_when:
+    - modernity claims superiority through progress, novelty, method, or power
+    - ancient standards are dismissed as politically impossible
+    - history or value creation replaces nature and revelation
+    - institutional reliability is treated as proof of the highest understanding
+    - religious doctrine is rationalized, privatized, or historicized
+  does_not_activate_by_itself:
+    - every chronological comparison
+    - every technological innovation
+    - every difference between old and new institutions
+
+relations:
+  - related_problem: nomos-vs-physis
+    relation_type: DEPENDS_ON
+  - related_problem: philosophy-vs-poetry
+    relation_type: INTERSECTS
+  - related_problem: theory-vs-practice
+    relation_type: INTERSECTS
+  - related_problem: theologico-political
+    relation_type: INTERSECTS
+  - related_problem: athens-vs-jerusalem
+    relation_type: INTERSECTS
+  - related_problem: wise-vs-vulgar
+    relation_type: INTERSECTS
+
+shared_protocols:
+  required:
+    - source-status
+    - evidence-classification
+    - inference-discipline
+    - uncertainty-preservation
+    - speech-and-deed
+    - claimant-to-wisdom
+
+anti_capture_principle: >
+  Neither antiquity nor novelty, practical success nor political weakness, historical
+  endurance nor technical power may certify philosophical rank.
+
+non_absorption_clause: >
+  This problem owns the transformation of the ancient and Biblical horizons under
+  modernity. It must not absorb the full doctrines of nature, poetry, practice,
+  revelation, Athens and Jerusalem, or rank.
+
+termination:
+  state: FOUNDING_SUCCESSOR_DRAFT_CREATED
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - inquiry-profile.yaml
+    - witnesses.yaml
+    - relations.yaml
+    - independent ancient and modern witness reconstruction
+    - migration validation
