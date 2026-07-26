@@ -1,0 +1,127 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: PVP-SPPP-001
+  problem: philosophy-vs-poetry
+  source_study: SPPP-STUDY-001
+  title: Philosophy vs. Poetry — Studies in Platonic Political Philosophy
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_SUCCESSOR_TRANSACTION
+
+source:
+  study_path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+  synthesis_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+  source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+
+relation_to_existing_foundation:
+  prior_study: PVP-STUDY-001
+  prior_path: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
+  relation: EXTENDS_WITHOUT_REPLACING
+  rule: >
+    The completed Socrates and Aristophanes reconstruction remains the founding
+    source-specific basis. The present collection adds Platonic, Thucydidean,
+    Xenophontic, biblical, Maimonidean, Machiavellian, Nietzschean, and Cohenian
+    evidence without forcing those independent witnesses to confirm the earlier synthesis.
+
+principal_contributions:
+  - contribution_id: PVP-SPPP-C01
+    source: On Plato's Apology of Socrates and Crito
+    finding: >
+      Plato's philosophic deed is dramatic and rhetorical. Speaker, audience,
+      accusation, oracle, law, persuasion, action, and outcome prevent philosophy
+      from being reduced to propositions detached from political form.
+  - contribution_id: PVP-SPPP-C02
+    source: On the Euthydemus
+    finding: >
+      Eristic possesses argument, refutation, technique, and public attraction while
+      lacking responsibility for truth and the student's good. Formal reasoning does
+      not certify philosophy.
+  - contribution_id: PVP-SPPP-C03
+    source: Preliminary Observations on the Gods in Thucydides' Work
+    finding: >
+      History discloses political and theological meaning through arrangement,
+      speeches, reported speech, silence, reversal, and outcome. Structural deed can
+      rank events without explicit doctrinal declaration.
+  - contribution_id: PVP-SPPP-C04
+    source: Xenophon's Anabasis
+    finding: >
+      Narrative judges practical character through repeated action, correction,
+      institutional relation, desire for rule, and restraint more adequately than
+      self-description alone.
+  - contribution_id: PVP-SPPP-C05
+    source: Jerusalem and Athens
+    finding: >
+      Biblical narrative, image, genealogy, law, and prophecy constitute a serious
+      rival orientation that cannot be dismissed as merely subrational poetry or
+      identified automatically with philosophical demonstration.
+  - contribution_id: PVP-SPPP-C06
+    source: Notes on Maimonides and Treatise on the Art of Logic
+    finding: >
+      Rhetorical, legal, demonstrative, narrative, and practical forms possess
+      different jurisdictions. Persuasion must not be relabeled proof.
+  - contribution_id: PVP-SPPP-C07
+    source: Niccolo Machiavelli
+    finding: >
+      Metaphor, comedy, quotation, omission, source transformation, numerical
+      suggestion, and reader complicity make writing a political deed. Concealment
+      can educate or corrupt and does not certify wisdom.
+  - contribution_id: PVP-SPPP-C08
+    source: Introductory Essay for Hermann Cohen
+    finding: >
+      Symbol and idealization preserve religious language while transforming its
+      referents. Preserving a word is not necessarily preserving the doctrine or deed
+      formerly named by it.
+
+strict_synthesis:
+  philosophy_claim: >
+    Philosophy seeks causes, definitions, distinctions, nature, the good, and the whole.
+  poetry_claim: >
+    Poetry, drama, history, rhetoric, narrative, image, and symbol disclose human
+    types, passions, motives, suffering, authority, and political consequence.
+  shared_danger: >
+    Both can form audiences, conceal limits, claim authority, and become instruments
+    of domination when detached from truth and responsibility for souls.
+  supported_resolution: >
+    Philosophy may claim superiority only by integrating the truths through which
+    poetic and dramatic forms expose truncated inquiry, while retaining the wider
+    question of the whole and refusing to turn poetic efficacy into truth.
+  unresolved_limit: >
+    The collection does not demonstrate a final abolition of the ancient quarrel.
+
+non_absorption_rules:
+  - Poetry is not revelation.
+  - Revelation is not poetic construction.
+  - Rhetorical success is not demonstration.
+  - Dramatic victory is not authorial doctrine.
+  - Comedy exposes without supplying a complete final ranking.
+  - Structural evidence is not automatic proof of deliberate hidden intention.
+  - Strauss's interpretation does not replace independent reconstruction of Plato, Thucydides, Xenophon, the Bible, or other witnesses.
+
+speech_and_deed_implications:
+  - interpret philosophical speech through its political audience and occasion
+  - test claims of artlessness, wisdom, piety, and virtue through literary and political deed
+  - examine title, sequence, silence, omission, quotation, source use, and consequence
+  - distinguish irony from mechanical reversal
+  - distinguish report, probability, legal presumption, rhetorical support, and demonstration
+
+registry_action:
+  required: true
+  requested_change: >
+    Add SPPP-STUDY-001 to the completed source-specific study index and replace the
+    pending status of Studies in Platonic Political Philosophy with a completed
+    provisional collection study, while preserving the posthumous and editorial limits.
+  performed_by_this_record: false
+
+termination:
+  synthesis_state: COMPLETE_FOR_REGISTERED_COLLECTION
+  certification: NOT_CERTIFIED
+  remaining_work:
+    - witness registry successor update
+    - independent reconstruction of classical and biblical witnesses
+    - constitutional problem revision only through documented migration
