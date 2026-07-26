@@ -8,60 +8,109 @@ identity:
 
 status:
   lifecycle: FOUNDING_DRAFT
-  version: 0.1.0
+  version: 0.2.0
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: c4f3c0a1661c43390073c653e27b6a803603d563
+  transformation: REVISED_WITHOUT_PREDECESSOR_EFFECT
+  reason: >
+    Register the completed founding inquiry profile, witness registry, relations
+    record, and first source-specific synthesis without certifying rank, doctrine,
+    migration, or activation.
 
 authority:
   registry_reference: problems/registry.yaml
   architecture_reference: governance/foundational-problem-architecture.yaml
   migration_reference: migrations/foundational-problems-v2/migration.yaml
+  inquiry_profile_reference: problems/ancients-vs-moderns/inquiry-profile.yaml
+  witnesses_reference: problems/ancients-vs-moderns/witnesses.yaml
+  relations_reference: problems/ancients-vs-moderns/relations.yaml
 
 source_basis:
   study_id: SPPP-STUDY-001
   study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
   source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+  problem_synthesis: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
   constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+  source_limit: >
+    The completed collection study is a provisional founding basis and does not
+    replace independent ancient, Biblical, medieval, modern, scientific, historicist,
+    or institutional witnesses.
 
 governing_question: >
   Did modern political thought discover a truer standard, or did it gain reliability,
   institutional power, and control by lowering or narrowing the fuller ancient and
-  biblical questions?
+  Biblical questions?
 
 compressed_question: >
   Does modern power rest on deeper truth or on a lowered horizon?
 
 jurisdiction:
   owns:
-    - the modern transformation of nature, right, history, science, and political philosophy
-    - progress, historicism, value creation, technical mastery, and institutional control
-    - the relation between ancient standards and modern reliability
-    - modern transformations of revelation, education, equality, and knowledge
     - chronology and innovation as insufficient standards of rank
+    - ancient, Biblical, and modern beginnings and highest ends as a comparative sequence
+    - the modern transformation of nature, right, history, science, and political philosophy
+    - progress, historicism, value creation, secularization, and rationalization
+    - method, sovereignty, science, technology, institutions, and control as modern forms
+    - the relation between ancient standards and modern reliability
+    - practical gains and human costs of modern lowering or narrowing
+    - modern transformations of revelation, education, equality, and knowledge
+    - return, recovery, and the limits of restoring an earlier horizon unchanged
   does_not_own:
-    - nomos-vs-physis
-    - philosophy-vs-poetry
-    - theory-vs-practice
-    - theologico-political
-    - athens-vs-jerusalem
-    - wise-vs-vulgar
+    - canonical_key: nomos-vs-physis
+      reason: >
+        Nomos vs. Physis owns nature, convention, natural right, natural law, and the
+        normative standard apart from their historical transformation.
+    - canonical_key: philosophy-vs-poetry
+      reason: >
+        Philosophy vs. Poetry owns rival human forms of wisdom, representation,
+        education, and knowledge of souls.
+    - canonical_key: theory-vs-practice
+      reason: >
+        Theory vs. Practice owns the permanent relation among understanding, judgment,
+        authority, execution, institutions, correction, and chance.
+    - canonical_key: theologico-political
+      reason: >
+        The Theologico-Political Problem owns ultimate authority between autonomous
+        reason and genuine revelation, prophecy, divine command, and sacred law.
+    - canonical_key: athens-vs-jerusalem
+      reason: >
+        Athens vs. Jerusalem owns the complete philosophic and Biblical ways of life.
+    - canonical_key: wise-vs-vulgar
+      reason: >
+        The Wise vs. The Vulgar owns rank, recognition, expertise, differentiated
+        education, mediation, and elite capture.
 
 permanent_tension: >
-  Modernity gains practical control by beginning from ordinary passions, preservation,
-  fear, method, sovereignty, and institutional reliability, while ancient and Biblical
-  horizons preserve higher questions of virtue, nature, justice, revelation, and the best life.
+  Modernity gains practical control by beginning from ordinary passions,
+  preservation, fear, rights, method, sovereignty, science, and institutional
+  reliability, while ancient and Biblical horizons preserve higher questions of
+  virtue, nature, justice, revelation, holiness, contemplation, and the best life.
+  The gain is real, but neither practical power nor ancient height interprets itself
+  as philosophical superiority.
 
 boundary:
   activates_when:
-    - modernity claims superiority through progress, novelty, method, or power
-    - ancient standards are dismissed as politically impossible
-    - history or value creation replaces nature and revelation
+    - modernity claims superiority through progress, novelty, method, science, or power
+    - ancient standards are dismissed as impossible, aristocratic, theological, or obsolete
+    - preservation, security, rights, equality, or freedom replaces virtue or the best life as the beginning
+    - method, sovereignty, institutions, administration, or technology replaces rare virtue and prudence
+    - history or value creation replaces nature, revelation, or universal reason
+    - religious doctrine is rationalized, privatized, politicized, psychologized, or historicized
     - institutional reliability is treated as proof of the highest understanding
-    - religious doctrine is rationalized, privatized, or historicized
+    - ancient or Biblical vocabulary is preserved with transformed referents
+    - modern crises generate a proposed return to ancient or Biblical sources
+    - chronology is used as a standard of rank
   does_not_activate_by_itself:
     - every chronological comparison
     - every technological innovation
     - every difference between old and new institutions
+    - every case of progress or decline
+    - every recovery of an older text
+    - every disagreement between generations
 
 relations:
   - related_problem: nomos-vs-physis
@@ -85,22 +134,35 @@ shared_protocols:
     - uncertainty-preservation
     - speech-and-deed
     - claimant-to-wisdom
+  conditional:
+    - audience-and-rhetoric
+    - irony
+    - comedy
 
 anti_capture_principle: >
-  Neither antiquity nor novelty, practical success nor political weakness, historical
-  endurance nor technical power may certify philosophical rank.
+  Neither antiquity nor novelty, practical success nor political weakness,
+  historical endurance nor technical power, scientific prestige nor revolutionary
+  victory may certify philosophical rank. No ancient, modern, civilization,
+  institution, technology, or historical movement may declare itself the final tribunal.
 
 non_absorption_clause: >
-  This problem owns the transformation of the ancient and Biblical horizons under
+  This problem owns the transformation of ancient and Biblical horizons under
   modernity. It must not absorb the full doctrines of nature, poetry, practice,
-  revelation, Athens and Jerusalem, or rank.
+  revelation, Athens and Jerusalem, or rank. Shared sources and findings are
+  referenced through subordinate records rather than duplicated as governing doctrine.
 
 termination:
-  state: FOUNDING_SUCCESSOR_DRAFT_CREATED
+  state: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
   certification: NOT_CERTIFIED
+  activation: PENDING_FOUNDATIONAL_MIGRATION
+  completed_records:
+    - problems/ancients-vs-moderns/problem.yaml
+    - problems/ancients-vs-moderns/inquiry-profile.yaml
+    - problems/ancients-vs-moderns/witnesses.yaml
+    - problems/ancients-vs-moderns/relations.yaml
+    - problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
   remaining_requirements:
-    - inquiry-profile.yaml
-    - witnesses.yaml
-    - relations.yaml
-    - independent ancient and modern witness reconstruction
-    - migration validation
+    - independent ancient, Biblical, medieval, modern, historicist, scientific, and institutional reconstruction
+    - automated YAML and path validation
+    - review of unresolved cross-problem jurisdiction
+    - migration certification before activation
