@@ -1,0 +1,109 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVJ-TALMON-001
+  problem: athens-vs-jerusalem
+  source_study: TALMON-STUDY-001
+  title: Athens vs. Jerusalem — Talmon, The Nature of Jewish History
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_id: CORPUS-SRC-111
+  witness_id: CORPUS-WIT-111
+  source_status: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml
+  study_path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication: Journal of Modern History 29, no. 3, 1957
+  printed_page: 232
+  original_edition_comparison: PENDING
+
+strict_problem: >
+  How are the Jewish passion for right acting and the Greek passion for right seeing and
+  thinking related as distinct basic elements of Western civilization, and why does the
+  Jewish orientation require a peculiar nation as its primary bearer?
+
+reconstructed_alternatives:
+  jerusalem:
+    reported_claims:
+      - election constitutes a peculiar people historically
+      - chosen people, holy nation, and people of priests orient toward right acting
+      - exile, precarious existence, and statehood remain bound to the unresolved Jewish problem
+  athens:
+    reported_claims:
+      - right seeing and thinking names the Greek passion
+      - historical inquiry withholds theological assent while resisting reductive explanation
+  unresolved_relation: >
+    The review names the two passions as basic Western elements but does not explain their
+    final rank, compatibility, or why right acting requires a peculiar nation.
+
+principal_findings:
+  - Jewish election is presented as historically constitutive without being historically certified as divine truth.
+  - The Jewish passion for right acting is distinguished from the Greek passion for right seeing and thinking.
+  - Jewish particularity is not reduced to ethnic pride; it bears universal Western significance.
+  - The State of Israel does not remove the ambiguity attached to Jewish existence everywhere and at all times.
+  - Strauss's final sentence preserves the necessity of explaining why a universal moral passion requires a peculiar nation.
+
+jurisdiction_and_non_absorption:
+  owns:
+    - Jewish right acting and Greek right seeing and thinking
+    - peculiar nation and universal significance
+    - election, exile, statehood, and enduring Jewish ambiguity
+  theologico_political_reference:
+    relation: COACTIVATED_STRUCTURAL_AUTHORITY_PROBLEM
+    receives:
+      - theological election versus historical explanation
+      - Church and State
+    non_absorption: Athens versus Jerusalem may not absorb the full jurisdiction of revelation, theology, or political sovereignty.
+  ancients_vs_moderns_reference:
+    relation: SECONDARY_HISTORICAL_INTERSECTION
+    receives:
+      - modern historiography and the State of Israel
+      - Western political differentiation
+    non_absorption: The concrete Jewish-Greek alternatives may not be reduced to chronology.
+  philosophy_vs_poetry_reference:
+    relation: BOUNDARY_REFERENCE_ONLY
+    non_absorption: Election, holy nation, and sacred history are not poetic constructions.
+
+speech_and_deed_result:
+  explicit_speech: Strauss reports Talmon approvingly and hopes one theme will be developed further.
+  textual_deed: He preserves Jewish particularity, Greek difference, and historical methodological restraint while ending on an unanswered question.
+  relation: APPROBATION_BOUNDED_BY_UNRESOLVED_BEARER_QUESTION
+  conclusion: >
+    The review establishes the distinction and conjunction of Jewish and Greek passions more
+    clearly than their hierarchy or reconciliation.
+
+unresolved_questions:
+  - why the passion for right acting requires primarily a peculiar nation
+  - whether historical explanation can approach the truth of election beyond its effects
+  - how statehood, exile, and universal significance are related
+  - whether Talmon's full book qualifies Strauss's compressed report
+  - whether the original 1957 printing differs materially from the 1983 reprint
+
+source_limits:
+  - TALMON-STUDY-001 reconstructs Strauss's one-page review, not Talmon's complete work.
+  - Pangle's Introduction is secondary and cannot govern the review.
+  - The reviewed witness is the 1983 collected reprint; original journal comparison remains pending.
+
+prohibitions:
+  - no historical effect treated as proof of election
+  - no statehood treated as resolution of Jewish existence
+  - no universal significance treated as cancellation of Jewish particularity
+  - no Jewish-Greek distinction treated as a certified hierarchy
+  - no poetry identified with revelation
+  - no doctrine, migration, or successor certification
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - independent reconstruction of Talmon's book and relevant Jewish and Greek witnesses
+    - original 1957 journal comparison
+    - later jurisdiction-preserving migration validation
