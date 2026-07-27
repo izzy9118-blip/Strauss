@@ -4,7 +4,7 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.4.0
+  version: 1.5.0
 
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
@@ -14,16 +14,17 @@ status:
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 
 revision_history:
-  predecessor_version: 1.3.0
-  predecessor_blob_sha: f86c5d2f5801ba8de46c467fe1be531393231bf8
+  predecessor_version: 1.4.0
+  predecessor_blob_sha: 6f8dd96682617e38b19c256b9fde0a68deaa3998
   transformation: SUBSTANTIVE_FORWARD_REVISION
   reason: >
-    Complete bounded item-level source-identity registration for all nineteen writings in
-    the active Theologico-Political predecessor basis. Every record preserves its exact
-    predecessor title, date, sequence, aliases or registered scope where applicable,
-    derivative contribution status, missing reviewed witness, incomplete independent study,
-    and noncertification. Registration does not admit source text, create source-level
-    findings, certify doctrine or migration, activate successors, or displace predecessors.
+    Register CORPUS-WIT-109 as the first reviewed item witness in the nineteen-source
+    Theologico-Political sequence. The witness is the complete Jerusalem and Athens item
+    within the reviewed 1983 Studies in Platonic Political Philosophy container, with
+    original 1967 publication evidence, stable printed and PDF locators, container
+    fingerprint, searchable-text condition, and page-image authority. Independent sequential
+    reconstruction, source-level findings, doctrine, migration, activation, and predecessor
+    transition remain incomplete or unauthorized.
 
 purpose: >
   Provide deterministic discovery, source identity, documentary status, provenance,
@@ -53,9 +54,9 @@ identifier_rules:
   gap_prefix: CORPUS-GAP
   identity_rule: >
     A source entity identifies a work or collection. A reviewed witness identifies a
-    particular edition, translation, file, or textual presentation. A source-status record
-    identifies the verified and missing documentary conditions of one source identity. A
-    study record identifies repository analysis. These identities may not be collapsed.
+    particular edition, translation, file, item, or textual presentation. A source-status
+    record identifies verified and missing documentary conditions. A study identifies
+    repository analysis. These identities may not be collapsed.
 
 source_entities:
   - source_id: CORPUS-SRC-001
@@ -118,7 +119,23 @@ source_entities:
   - {source_id: CORPUS-SRC-106, creator: Leo Strauss, canonical_title: 'Freud on Moses and Monotheism', date: 1958, entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[6]', source_status_record: CORPUS-STATUS-106, item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, ancients-vs-moderns]}
   - {source_id: CORPUS-SRC-107, creator: Leo Strauss, canonical_title: 'Why We Remain Jews', date: 1962, entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[7]', source_status_record: CORPUS-STATUS-107, item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, athens-vs-jerusalem]}
   - {source_id: CORPUS-SRC-108, creator: Leo Strauss, canonical_title: 'On the Interpretation of Genesis', date: 1957, entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[8]', source_status_record: CORPUS-STATUS-108, item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, athens-vs-jerusalem, nomos-vs-physis]}
-  - {source_id: CORPUS-SRC-109, creator: Leo Strauss, canonical_title: 'Jerusalem and Athens', date: 1967, registered_scope: 'Part V — Comments on Jewish History within the complete argument', entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[9]', source_status_record: CORPUS-STATUS-109, item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, study_status: INDEPENDENT_ITEM_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, athens-vs-jerusalem]}
+  - source_id: CORPUS-SRC-109
+    creator: Leo Strauss
+    canonical_title: Jerusalem and Athens
+    date: 1967
+    registered_scope: Part V — Comments on Jewish History within the complete argument
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[9]
+    source_status_record: CORPUS-STATUS-109
+    reviewed_witnesses: [CORPUS-WIT-109]
+    item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_IN_POSTHUMOUS_COLLECTION_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    study_status: INDEPENDENT_ITEM_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem]
+    limits:
+      - reviewed witness is the 1983 collected reprint, not a separately reviewed 1967 printing
+      - registered Part V scope does not stand for the complete essay
+      - Pangle's introduction is secondary and may not govern Strauss's essay
+      - item-witness registration does not complete independent sequential reconstruction
   - {source_id: CORPUS-SRC-110, creator: Leo Strauss, canonical_title: 'What Is Political Philosophy?', date: 1954, registered_scope: 'first paragraph', entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[10]', source_status_record: CORPUS-STATUS-110, item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, theory-vs-practice, athens-vs-jerusalem]}
   - {source_id: CORPUS-SRC-111, creator: Leo Strauss, canonical_title: 'Review of J. L. Talmon, The Nature of Jewish History', date: 1957, entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[11]', source_status_record: CORPUS-STATUS-111, item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, study_status: INDEPENDENT_ITEM_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, ancients-vs-moderns]}
   - {source_id: CORPUS-SRC-112, creator: Leo Strauss, canonical_title: 'Letter to the Editor — The State of Israel', date: 1957, entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[12]', source_status_record: CORPUS-STATUS-112, item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, athens-vs-jerusalem, theory-vs-practice]}
@@ -163,6 +180,25 @@ reviewed_witnesses:
     source_status_path: studies/socrates-and-aristophanes/source-status.yaml
     repository_copy_status: NOT_DISTRIBUTED_BY_REGISTRY
     ocr_rule: PAGE_IMAGES_GOVERN_WORDING_WHERE_OCR_IS_UNCERTAIN
+  - witness_id: CORPUS-WIT-109
+    source_id: CORPUS-SRC-109
+    witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+    container_source_id: CORPUS-SRC-002
+    container_witness_id: CORPUS-WIT-001
+    container_title: Studies in Platonic Political Philosophy
+    collected_title: Jerusalem and Athens — Some Preliminary Reflections
+    original_publication: The City College Papers, no. 6, The City College of New York, 1967
+    printed_page_range: {start: 147, end: 173}
+    pdf_page_range_one_based: {start: 151, end: 177}
+    local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+    container_page_count: 263
+    container_file_size_bytes: 12551057
+    container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+    source_status_path: studies/theologico-political/jerusalem-and-athens/source-status.yaml
+    text_condition: SEARCHABLE_TEXT_WITH_LAYOUT_AND_PAGE_IMAGES
+    wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+    repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+    original_edition_comparison: PENDING
 
 source_status_records:
   - {status_id: CORPUS-STATUS-001, source_id: CORPUS-SRC-002, path: studies/studies-in-platonic-political-philosophy/source-status.yaml, document_type: source_status_record, completion: REGISTERED_FOR_COMPLETED_PROVISIONAL_STUDY, certification: NOT_CERTIFIED}
@@ -176,7 +212,7 @@ source_status_records:
   - {status_id: CORPUS-STATUS-106, source_id: CORPUS-SRC-106, path: studies/theologico-political/freud-on-moses-and-monotheism/source-status.yaml, document_type: source_status_record, completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, certification: NOT_CERTIFIED}
   - {status_id: CORPUS-STATUS-107, source_id: CORPUS-SRC-107, path: studies/theologico-political/why-we-remain-jews/source-status.yaml, document_type: source_status_record, completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, certification: NOT_CERTIFIED}
   - {status_id: CORPUS-STATUS-108, source_id: CORPUS-SRC-108, path: studies/theologico-political/on-the-interpretation-of-genesis/source-status.yaml, document_type: source_status_record, completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, certification: NOT_CERTIFIED}
-  - {status_id: CORPUS-STATUS-109, source_id: CORPUS-SRC-109, path: studies/theologico-political/jerusalem-and-athens/source-status.yaml, document_type: source_status_record, completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, certification: NOT_CERTIFIED}
+  - {status_id: CORPUS-STATUS-109, source_id: CORPUS-SRC-109, path: studies/theologico-political/jerusalem-and-athens/source-status.yaml, document_type: source_status_record, completion: REVIEWED_ITEM_WITNESS_REGISTERED_IN_POSTHUMOUS_COLLECTION_INDEPENDENT_RECONSTRUCTION_REQUIRED, certification: NOT_CERTIFIED}
   - {status_id: CORPUS-STATUS-110, source_id: CORPUS-SRC-110, path: studies/theologico-political/what-is-political-philosophy/source-status.yaml, document_type: source_status_record, completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, certification: NOT_CERTIFIED}
   - {status_id: CORPUS-STATUS-111, source_id: CORPUS-SRC-111, path: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml, document_type: source_status_record, completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, certification: NOT_CERTIFIED}
   - {status_id: CORPUS-STATUS-112, source_id: CORPUS-SRC-112, path: studies/theologico-political/letter-to-editor-state-of-israel/source-status.yaml, document_type: source_status_record, completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, certification: NOT_CERTIFIED}
@@ -217,22 +253,25 @@ repository_documentary_artifacts:
     transaction_ledger: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   - artifact_type: PREDECESSOR_INDEX
     path: migrations/foundational-problems-v2/predecessor-index.yaml
+  - artifact_type: REVIEWED_WITNESS_PRIORITY_SCHEDULE
+    path: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
 
 coverage:
   source_entities_registered: 22
-  reviewed_witnesses_registered: 3
+  reviewed_witnesses_registered: 4
   source_status_records_registered: 22
   study_records_registered: 7
   problem_witness_registries_registered: 7
   theologico_political_predecessor_sources_registered: 19
   theologico_political_item_level_statuses_registered: 19
+  theologico_political_reviewed_item_witnesses_registered: 1
   current_studies_tree_yaml_records_accounted_for: 29
   exhaustive_within_declared_scope: true
 
 corpus_gaps:
   - {gap_id: CORPUS-GAP-001, category: STRAUSS_BIBLIOGRAPHY, statement: 'The registry does not yet contain an item-level record for every work by Leo Strauss.', effect: CORPUS_REMAINS_OPEN}
   - {gap_id: CORPUS-GAP-002, category: EDITION_COMPARISON, statement: 'The reviewed 1980 University of Chicago Press paperback of Socrates and Aristophanes is registered, but comparison with the 1966 Basic Books printing remains pending.', effect: EDITION_SPECIFIC_DIFFERENCES_NOT_YET_TESTED}
-  - {gap_id: CORPUS-GAP-003, category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES, statement: 'All nineteen predecessor writings now have bounded item-level source-identity records, but none of those nineteen records by itself supplies a reviewed item witness or completed independent sequential reconstruction.', effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL}
+  - {gap_id: CORPUS-GAP-003, category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES, statement: 'All nineteen predecessor writings have bounded source identities; Jerusalem and Athens has one reviewed collected item witness, while the other eighteen lack reviewed item witnesses, and all nineteen remain without completed independent sequential item studies in this production sequence.', effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL}
   - {gap_id: CORPUS-GAP-004, category: INDEPENDENT_CLASSICAL_WITNESSES, statement: 'Direct Aristophanes and Xenophon studies and most Platonic dialogue studies remain pending.', effect: FINAL_COMPARATIVE_RANKING_BLOCKED}
   - {gap_id: CORPUS-GAP-005, category: BIBLICAL_AND_MEDIEVAL_WITNESSES, statement: 'Biblical, Maimonidean, Farabian, Spinozist, Hobbesian, and other independent primary-text corpora remain incomplete.', effect: THEOLOGICO_POLITICAL_AND_ATHENS_JERUSALEM_COMPLETION_BLOCKED}
   - {gap_id: CORPUS-GAP-006, category: TRANSLATION_AND_ORIGINAL_LANGUAGE, statement: "Plato's Apology requires verified Greek-text and translation alignment.", effect: WORDING_DEPENDENT_FINDINGS_REMAIN_REVISABLE}
@@ -243,11 +282,13 @@ validation_rules:
   - every registered path must resolve within the repository
   - every study must bind to a registered source entity
   - all nineteen predecessor source titles and dates must match the active predecessor record
-  - all predecessor aliases and registered scopes must remain attached to the correct source identity
+  - aliases and registered scopes must remain attached to the correct source identity
   - the active Theologico-Political predecessor must match its preserved copy
   - every canonical problem must have one registered witness registry
-  - reviewed-witness fingerprints must match their source-status records
-  - all nineteen Theologico-Political item-level statuses must match source identity, predecessor sequence, missing-witness condition, incomplete-study condition, and noncertification state
+  - reviewed-container fingerprints must match source-status records
+  - reviewed item witnesses must match their item source-status locator and container-fingerprint records
+  - missing and reviewed item-witness states must remain distinct
+  - all nineteen independent sequential item studies remain incomplete unless separately registered
   - counts in coverage must match registry contents and the studies tree
   - source inclusion may not change certification, migration, or activation status
   - complete current-state indexing may not be described as a complete corpus
@@ -255,13 +296,13 @@ validation_rules:
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   theologico_political_identity_registration_state: COMPLETE_19_OF_19
-  theologico_political_reviewed_witness_state: INCOMPLETE
+  theologico_political_reviewed_witness_state: INCOMPLETE_1_OF_19
   theologico_political_independent_study_state: INCOMPLETE
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
   certification: NOT_CERTIFIED
   next_required_units:
-    - prioritize and register reviewed witnesses for the nineteen Theologico-Political source identities
-    - conduct independent sequential studies before source-level comparison or promotion
-    - compare the reviewed Socrates and Aristophanes paperback with the 1966 Basic Books printing where later precision requires it
+    - conduct an independent sequential reconstruction of the reviewed Jerusalem and Athens item
+    - register reviewed item witnesses for the Cohen essay and Talmon review already locatable in the SPPP container
+    - acquire and register reviewed witnesses for the remaining sixteen item identities
     - expand independent Aristophanes, Plato, Xenophon, biblical, medieval, and modern witness studies
     - preserve all later additions through forward registry revision
