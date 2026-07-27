@@ -1,0 +1,343 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: TALMON-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Review of J. L. Talmon, The Nature of Jewish History—Its Universal Significance
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1957_edition_comparison: PENDING
+  reviewed_work_reconstruction: INCOMPLETE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-111
+  source_status_id: CORPUS-STATUS-111
+  reviewed_witness_id: CORPUS-WIT-111
+  author: Leo Strauss
+  canonical_title: Review of J. L. Talmon, The Nature of Jewish History
+  collected_title: Review of J. L. Talmon, The Nature of Jewish History—Its Universal Significance
+  original_publication:
+    journal: Journal of Modern History
+    volume: 29
+    issue: 3
+    year: 1957
+    evidence: item footnote in the reviewed collected witness
+  reviewed_work:
+    author: J. L. Talmon
+    title: The Nature of Jewish History—Its Universal Significance
+    publisher: Hillel Foundation
+    place: London
+    year: 1957
+    witness_state: NOT_REGISTERED
+  reviewed_container:
+    source_id: CORPUS-SRC-002
+    witness_id: CORPUS-WIT-001
+    title: Studies in Platonic Political Philosophy
+    publisher: University of Chicago Press
+    year: 1983
+    local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+    page_count: 263
+    file_size_bytes: 12551057
+    sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+  locators:
+    printed_pages: {start: 232, end: 232}
+    pdf_pages_one_based: {start: 236, end: 236}
+  text_condition: SEARCHABLE_TEXT_WITH_LAYOUT_AND_PAGE_IMAGE
+  wording_rule: PAGE_IMAGE_GOVERNS_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The reviewed witness is the 1983 collected reprint, not a separately reviewed copy of the 1957 Journal of Modern History printing.
+  - Talmon's book is identified bibliographically but is not available as a reviewed witness in this study.
+  - The review is one page and cannot establish Talmon's complete argument beyond Strauss's report.
+  - The collection is posthumous; Strauss selected its title and order but did not complete its intended introduction.
+  - Joseph Cropsey's Foreword supplies publication provenance only.
+  - Thomas L. Pangle's Introduction is secondary and provisional and does not govern Strauss's review.
+  - The active predecessor and collection-level studies are derivative analytical records, not independent witnesses to this review.
+
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+
+method_application:
+  governing_question: >
+    How can the historian understand the Jewish people's belief in election as historically
+    constitutive without reducing it to economics, psychology, or ethnic pride and without
+    accepting the theological truth of election as historian?
+  recovered_source_question: >
+    Why does the Jewish passion for right acting require a peculiar nation as its bearer,
+    and how does that particularity acquire universal political significance through the
+    Western relation between Church and State?
+  comparison_rule: >
+    Reconstruct Talmon's claims only as Strauss reports them, distinguish Strauss's explicit
+    approbation and concluding request from Talmon's thesis, and do not promote the active
+    predecessor's claims about progress unless the item itself supports them.
+
+speaker_and_documentary_layers:
+  strauss:
+    role: author of the review
+    rule: Strauss's judgments include his descriptions of Talmon's work, his explicit assessments, and his final request for further development.
+  talmon:
+    role: reviewed author reconstructed through Strauss's report
+    rule: Talmon's full doctrine remains unestablished without the reviewed book.
+  historian_as_historian:
+    role: methodological standpoint within the reported argument
+    rule: Historical inability or refusal to affirm theology is not a proof that theology is false.
+  theological_understanding:
+    role: interpretation of election as divine truth
+    rule: The review distinguishes this understanding from historical explanation without resolving its truth.
+  editorial_layers:
+    role: publication and collection context only
+    examples: [Joseph Cropsey, Thomas L. Pangle]
+    rule: Editorial placement may not determine Strauss's judgment.
+
+sequential_reading:
+  - unit: TALMON-RU-001
+    printed_page: 232
+    pdf_page_one_based: 236
+    textual_scope: opening through the continuing ambiguity of Jewish existence
+    function: Establish Talmon's standpoint and the historically constitutive role of election.
+    documented_findings:
+      - id: TALMON-DF-001
+        proposition: >
+          Strauss calls Talmon's book an earnest statement by a man who is both a Jew and
+          a historian rather than a Jewish historian.
+        classification: documented_finding
+      - id: TALMON-DF-002
+        proposition: >
+          According to Strauss's report, the historian cannot and need not go behind the fact
+          that the Jewish people was constituted by its belief in being the chosen people.
+        classification: documented_finding
+      - id: TALMON-DF-003
+        proposition: >
+          The belief in election is reported as making possible and in effect causing Jewish
+          exile and precarious existence throughout the ages.
+        classification: documented_finding
+      - id: TALMON-DF-004
+        proposition: >
+          Establishment of the State of Israel has not removed the problematic ambiguity
+          attached to Jewish existence everywhere and at all times.
+        classification: documented_finding
+    supported_inference:
+      id: TALMON-SI-001
+      proposition: >
+        Strauss presents Jewish political statehood as insufficient by itself to resolve the
+        historical and existential problem generated by election and dispersion.
+
+  - unit: TALMON-RU-002
+    printed_page: 232
+    pdf_page_one_based: 236
+    textual_scope: economic and psychological accounts through the critique of ethnic pride
+    function: Preserve the historian's middle position between reductionism and theology.
+    documented_findings:
+      - id: TALMON-DF-005
+        proposition: >
+          Strauss reports Talmon's judgment that economic and psychological accounts of
+          Jewish history are radically inadequate.
+        classification: documented_finding
+      - id: TALMON-DF-006
+        proposition: >
+          The historian as historian is neither compelled nor able to accept the theological
+          understanding of election.
+        classification: documented_finding
+      - id: TALMON-DF-007
+        proposition: >
+          Talmon is praised for exposing the parochialism of the common notion that belief in
+          election stems from ethnic pride.
+        classification: documented_finding
+    supported_inference:
+      id: TALMON-SI-002
+      proposition: >
+        The review preserves election as a historically effective belief that resists reduction
+        while withholding historical certification of its theological truth.
+    unresolved_uncertainty:
+      id: TALMON-UU-001
+      proposition: >
+        The review does not determine whether a standpoint beyond history can establish or
+        refute the theological understanding of election.
+
+  - unit: TALMON-RU-003
+    printed_page: 232
+    pdf_page_one_based: 236
+    textual_scope: chosen people and holy nation through the concluding hope
+    function: Relate Jewish particularity to Western civilization and preserve the unanswered question of the peculiar nation.
+    documented_findings:
+      - id: TALMON-DF-008
+        proposition: >
+          The ideas of chosen people, holy nation, and people of priests express the Jewish
+          passion for right acting as distinguished from the Greek passion for right seeing and thinking.
+        classification: documented_finding
+      - id: TALMON-DF-009
+        proposition: >
+          Strauss reports this Jewish passion as one of the two basic elements of Western civilization.
+        classification: documented_finding
+      - id: TALMON-DF-010
+        proposition: >
+          It is presented as the root of the peculiarly Western relation between Church and
+          State that prevented the emergence of Oriental despotism in the West.
+        classification: documented_finding
+      - id: TALMON-DF-011
+        proposition: >
+          Strauss concludes by hoping that Talmon will explain more precisely why the passion
+          for right acting requires primarily a peculiar nation as its bearer.
+        classification: documented_finding
+    supported_inference:
+      id: TALMON-SI-003
+      proposition: >
+        Strauss's concluding request marks the necessity of the peculiar nation as the review's
+        unresolved explanatory problem rather than as a completed result.
+
+permanent_source_level_findings:
+  - id: TALMON-PF-001
+    proposition: A historically constitutive religious belief may be indispensable to explanation without being certified as theologically true by the historian.
+    classification: documented_finding
+  - id: TALMON-PF-002
+    proposition: Economic, psychological, and ethnic-pride reductions are inadequate to the historical force of Jewish election.
+    classification: documented_finding
+  - id: TALMON-PF-003
+    proposition: Political statehood does not by itself remove the problematic ambiguity of Jewish existence.
+    classification: documented_finding
+  - id: TALMON-PF-004
+    proposition: The Jewish passion for right acting and the Greek passion for right seeing and thinking are presented as two basic elements of Western civilization.
+    classification: documented_finding
+  - id: TALMON-PF-005
+    proposition: Jewish particularity is connected to the Western differentiation of Church and State rather than reduced to ethnic pride.
+    classification: documented_finding
+  - id: TALMON-PF-006
+    proposition: The necessity of a peculiar nation as bearer of right acting remains an explicit unanswered question.
+    classification: documented_finding
+  - id: TALMON-PF-007
+    proposition: The review does not explicitly reject a philosophy of historical progress; that predecessor characterization is not confirmed by this item.
+    classification: bounded_conclusion
+  - id: TALMON-PF-008
+    proposition: The review presents the Jewish problem as historically and politically universal without reducing Jewish particularity to a generic human problem.
+    classification: supported_inference
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss offers a concise, approving reconstruction of Talmon's argument and ends with
+    a stated hope that Talmon will develop one theme further.
+  textual_deed: >
+    The review separates historical explanation from theological assent, rejects reductive
+    accounts, relates Jewish particularity to Western political structure, and leaves the
+    central bearer-question unresolved.
+  relation: APPROBATION_QUALIFIED_BY_EXPLICIT_REQUEST_FOR_FURTHER_EXPLANATION
+  finding: >
+    Strauss's praise is real but bounded. The final sentence identifies a missing explanation
+    and prevents the review from being treated as a complete endorsement of Talmon's account.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - theological election versus historical explanation
+      - religious belief as constitutive political fact
+      - Church and State as differentiated authorities
+      - the relation between sacred identity and political order
+  athens_vs_jerusalem:
+    role: PRIMARY_CONCRETE_ALTERNATIVES
+    receives:
+      - Jewish passion for right acting
+      - Greek passion for right seeing and thinking
+      - the peculiar nation as bearer of universal significance
+    non_absorption: The concrete Jewish-Greek distinction may not be reduced to the abstract structure of theology and politics.
+  ancients_vs_moderns:
+    role: SECONDARY_HISTORICAL_AND_POLITICAL_INTERSECTION
+    receives:
+      - modern historical method and its limits
+      - the State of Israel and unresolved Jewish existence
+      - Western Church-State differentiation and the category of Oriental despotism
+    non_absorption: Historical periodization does not decide election's truth or the superiority of either passion.
+  philosophy_vs_poetry:
+    role: BOUNDARY_REFERENCE_ONLY
+    non_absorption: Election, holy nation, and priestly people may not be reclassified as poetic construction merely because the historian studies them as beliefs.
+  wise_vs_vulgar:
+    role: NO_DIRECT_FINDING
+  nomos_vs_physis:
+    role: REFERENCED_INTERSECTION
+    receives:
+      - sacred identity and historical law without a direct natural-law argument
+  theory_vs_practice:
+    role: REFERENCED_INTERSECTION
+    receives:
+      - right acting, political statehood, and institutional differentiation without a complete theory of action
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  state: PROVISIONAL_RETEST_COMPLETE_NO_PROMOTION
+  confirmations:
+    - the Jewish problem cannot be reduced to economic or psychological explanation
+    - election has historical and political consequences even when theology is not accepted by the historian
+    - Church-State differentiation belongs to the universal significance of Jewish history
+    - political statehood does not dissolve the deeper Jewish problem
+  qualifications:
+    - the item does not explicitly reject an easy philosophy of Jewish historical progress
+    - the item does not present the Jewish problem simply as a generic human social and political problem
+    - the peculiar nation remains necessary in Talmon's account but insufficiently explained according to Strauss's final sentence
+    - the review distinguishes historical explanation from theological truth rather than resolving election
+  unresolved:
+    - Talmon's complete argument is unavailable without his book
+    - the original 1957 journal printing has not been compared with the reviewed 1983 reprint
+    - the theological truth of election remains unresolved
+    - the causal relation among election, exile, precariousness, statehood, and universal significance remains only briefly stated
+  predecessor_effect: NONE
+
+uncertainties:
+  - id: TALMON-U-001
+    statement: The study reconstructs Strauss's one-page review and cannot certify Talmon's complete doctrine.
+  - id: TALMON-U-002
+    statement: Strauss's degree of agreement with each reported Talmon proposition is not identical; explicit praise attaches most clearly to the critique of ethnic-pride reduction and the final theme remains underdeveloped.
+  - id: TALMON-U-003
+    statement: The category of Oriental despotism is reported through Talmon and is not independently reconstructed or endorsed here.
+  - id: TALMON-U-004
+    statement: Original-edition wording and layout remain revisable pending comparison with the 1957 Journal of Modern History printing.
+  - id: TALMON-U-005
+    statement: Neither historical efficacy nor endurance establishes the divine truth of election or providence.
+
+prohibitions:
+  - Do not attribute Talmon's complete doctrine to this one-page review.
+  - Do not attribute every reported Talmon claim to Strauss as Strauss's final doctrine.
+  - Do not treat historical constitution by belief as theological proof.
+  - Do not treat the historian's inability to affirm election as proof that election is false.
+  - Do not reduce Jewish election to economics, psychology, ethnic pride, or generic identity.
+  - Do not treat statehood as final resolution of Jewish existence.
+  - Do not promote the predecessor's progress characterization without item-level evidence.
+  - Do not identify election or sacred history with poetic construction.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
+
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  reviewed_work_reconstruction_state: INCOMPLETE
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  original_edition_comparison_required: true
+  certification: NOT_CERTIFIED
+  next_units:
+    - update CORPUS-STATUS-111 to record TALMON-STUDY-001
+    - register CORPUS-WIT-111 and TALMON-STUDY-001 in corpus/index.yaml
+    - register the source study and problem-local syntheses in findings/index.yaml
+    - create distinct Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns synthesis bridges
+    - validate predecessor qualifications without silent harmonization
+    - preserve all certification, migration, activation, predecessor, and Sanctum-repin blockers
