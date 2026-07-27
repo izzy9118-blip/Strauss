@@ -4,7 +4,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 0.8.0
+  version: 0.9.0
 
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
@@ -14,25 +14,40 @@ status:
   destructive_actions_authorized: false
 
 revision_history:
-  predecessor_version: 0.7.0
-  predecessor_blob_sha: 9c4908228110129fdc296d7db095cefd8936b612
+  predecessor_version: 0.8.0
+  predecessor_blob_sha: d6e0bf60520d140c52933a6d964ace371eaff9ed
   reason: >
-    Register the reviewed Socrates and Aristophanes witness and source-status record in
-    the typed corpus interface. Preserve original publication, reviewed edition, filename,
-    PDF, OCR, page images, study, and independent ancient witnesses as distinct documentary
-    layers and preserve every doctrine, migration, predecessor, and activation limit.
+    Synchronize the mapping with corpus registry v1.3.0 after bounded item-level
+    source-identity registration for the first two writings in the active nineteen-source
+    Theologico-Political predecessor basis. Preserve missing reviewed witnesses, incomplete
+    independent sequential studies, source-status noncertification, active predecessor
+    authority, and the prohibition on describing an incomplete interface as completed.
 
 source_state:
   repository: izzy9118-blip/Strauss
   governing_commit_before_mapping: c3493bd721efa53e813e7bff4e79f3968517996c
-  preserved_roots: [governance/, problems/, protocols/, studies/, migrations/foundational-problems-v2/, history/, scripts/]
+  preserved_roots:
+    - governance/
+    - problems/
+    - protocols/
+    - studies/
+    - migrations/foundational-problems-v2/
+    - history/
+    - scripts/
 
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 1.6.0
+  version: 1.7.0
   rule: >
     Structural, bundle, corpus, findings, source-status, and witness validation must never
     be reported as doctrinal, source-specific, migration, successor, or repository completion.
+
+production_process:
+  path: history/production-plans/2026-07-27-ten-step-completion-process.yaml
+  state: IN_PROGRESS
+  current_step: 8
+  final_repin_step: 10
+  final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 
 mapping_rules:
   - No source record is deleted, moved, or edited merely to satisfy the lean interface.
@@ -44,6 +59,7 @@ mapping_rules:
   - Title-page and copyright-page evidence govern a conflicting local filename.
   - Page images govern wording where OCR is uncertain or conflicts.
   - A reviewed Strauss witness does not replace independent Aristophanes, Plato, Xenophon, or historical-Socrates witnesses.
+  - A registered source identity without a reviewed witness does not establish source-level findings.
   - Registry inclusion does not admit or distribute source text.
   - Registry inclusion does not promote a proposition beyond its record-local evidence status.
   - Multiple records derived from one source do not constitute independent corroboration.
@@ -54,7 +70,9 @@ mappings:
     source:
       registry: problems/registry.yaml
       successor_directories: problems/*/
-      active_predecessors: [problems/theologico-political.yaml, problems/wise-and-vulgar.yaml]
+      active_predecessors:
+        - problems/theologico-political.yaml
+        - problems/wise-and-vulgar.yaml
     interface:
       manifest_section: problems
       loader: problem_bundles.py
@@ -67,7 +85,16 @@ mappings:
 
   hermeneutics:
     target_role: interpretive_reading_disciplines
-    source: [protocols/source-status.yaml, protocols/evidence-classification.yaml, protocols/inference-discipline.yaml, protocols/uncertainty-preservation.yaml, protocols/speech-and-deed.yaml, protocols/irony.yaml, protocols/comedy.yaml, protocols/audience-and-rhetoric.yaml, protocols/claimant-to-wisdom.yaml]
+    source:
+      - protocols/source-status.yaml
+      - protocols/evidence-classification.yaml
+      - protocols/inference-discipline.yaml
+      - protocols/uncertainty-preservation.yaml
+      - protocols/speech-and-deed.yaml
+      - protocols/irony.yaml
+      - protocols/comedy.yaml
+      - protocols/audience-and-rhetoric.yaml
+      - protocols/claimant-to-wisdom.yaml
     interface:
       - {path: hermeneutics/literary-concealment.yaml, contract_version: STRAUSS-HERMENEUTIC-LC-1}
       - {path: hermeneutics/whole-and-part.yaml, contract_version: STRAUSS-HERMENEUTIC-WP-1}
@@ -80,7 +107,12 @@ mappings:
 
   method:
     target_role: inquiry_sequence
-    source: [protocols/source-status.yaml, protocols/evidence-classification.yaml, protocols/inference-discipline.yaml, protocols/uncertainty-preservation.yaml, governance/foundational-problem-architecture.yaml]
+    source:
+      - protocols/source-status.yaml
+      - protocols/evidence-classification.yaml
+      - protocols/inference-discipline.yaml
+      - protocols/uncertainty-preservation.yaml
+      - governance/foundational-problem-architecture.yaml
     interface:
       - {path: method/recover-question.yaml, contract_version: STRAUSS-METHOD-RQ-1}
       - {path: method/reconstruct-alternatives.yaml, contract_version: STRAUSS-METHOD-RA-1}
@@ -106,32 +138,36 @@ mappings:
       - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.1.0
+      registry_version: 1.3.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
-    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_REVIEWED_WITNESS_ADDITION
+    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_ITEM_LEVEL_SOURCE_STATUS_ADDITIONS
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
-    reviewed_witness_addition:
-      source_id: CORPUS-SRC-001
-      witness_id: CORPUS-WIT-003
-      source_status_id: CORPUS-STATUS-003
-      source_status_path: studies/socrates-and-aristophanes/source-status.yaml
-      original_publication: Basic Books 1966
-      reviewed_edition: University of Chicago Press paperback 1980
-      local_filename_year: NONAUTHORITATIVE
-      page_count: 321
-      file_size_bytes: 25818895
-      sha256: 1b74826f62bbc70d887e0f224b553c3bb521c55688ae9ba28c455ee080df9fa6
-      text_condition: SEARCHABLE_OCR_WITH_AUTHORITATIVE_PAGE_IMAGES
+    reviewed_witnesses:
+      count: 3
+      source_ids:
+        - CORPUS-SRC-001
+        - CORPUS-SRC-002
+        - CORPUS-SRC-003
+    theologico_political_item_level_statuses:
+      active_predecessor_source_count: 19
+      registered_count: 2
+      remaining_count: 17
+      reviewed_witness_count_for_registered_items: 0
+      independent_sequential_study_count_for_registered_items: 0
+      records:
+        - {source_id: CORPUS-SRC-101, status_id: CORPUS-STATUS-101, path: studies/theologico-political/progress-or-return/source-status.yaml}
+        - {source_id: CORPUS-SRC-102, status_id: CORPUS-STATUS-102, path: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml}
     present_function:
       - register source entities separately from reviewed witnesses and studies
       - account for every YAML record in the current studies tree
-      - validate SPPP and Socrates and Aristophanes fingerprints against source-status records
-      - enforce bibliographic and OCR authority rules
-      - preserve explicit gaps for edition comparison and independent witnesses
+      - validate reviewed-witness fingerprints against source-status records
+      - generically validate registered Theologico-Political item-level identities, aliases, predecessor sequences, missing witnesses, incomplete studies, and noncertification
+      - preserve explicit corpus gaps and missing-evidence states
     limit: >
-      Current-state exhaustiveness does not create a complete corpus, admit source text,
-      complete independent witnesses, certify findings, or authorize migration and activation.
+      Current-state exhaustiveness and item-level identity registration do not create a
+      complete corpus, admit source text, complete independent witnesses, certify findings,
+      or authorize migration and activation.
 
   findings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
@@ -148,7 +184,18 @@ mappings:
 
   runtime:
     target_role: deterministic_loaders_contract_validators_and_candidate_report_builder
-    interface: [adapter.py, problem_bundles.py, corpus_registry.py, findings_registry.py, tests/test_adapter.py, tests/test_hermeneutics.py, tests/test_methods.py, tests/test_problem_bundles.py, tests/test_corpus_registry.py, tests/test_findings_registry.py, .github/workflows/validate-lean-interface.yml]
+    interface:
+      - adapter.py
+      - problem_bundles.py
+      - corpus_registry.py
+      - findings_registry.py
+      - tests/test_adapter.py
+      - tests/test_hermeneutics.py
+      - tests/test_methods.py
+      - tests/test_problem_bundles.py
+      - tests/test_corpus_registry.py
+      - tests/test_findings_registry.py
+      - .github/workflows/validate-lean-interface.yml
     transformation: NEW_OPERATIONAL_LAYER
     completion: PARTIALLY_RECONSTRUCTED
     limit: >
@@ -169,17 +216,19 @@ non_effects:
   - No accepted migration source is superseded.
   - No source-specific finding is promoted.
   - No source text is admitted or distributed.
+  - A registered source identity is not a reviewed witness or independent reconstruction.
   - The filename year does not override bibliographic evidence.
   - OCR does not override page images.
-  - The reviewed witness does not replace independent ancient witnesses.
+  - Reviewed Strauss witnesses do not replace independent ancient witnesses.
   - No Assembly authority is conferred; Sanctum validation remains separate.
 
 validation_states:
   structural_interface_valid_when:
     - manifest paths and declared YAML records resolve
+    - manifest, audit, mapping, and registry versions agree
     - adapter validates manifest and speech contract
     - problem_bundles validates all seven complete bundles
-    - corpus_registry validates source identities, witnesses, source-status records, studies, predecessor sources, paths, counts, fingerprints, and gaps
+    - corpus_registry validates source identities, witnesses, source-status records, studies, predecessor sources, paths, counts, fingerprints, aliases, missing-witness conditions, and gaps
     - findings_registry validates finding sets, exact record coverage, bindings, indexes, and gaps
     - all structural and behavioral tests pass
     - GitHub Actions passes on the implementing commit
@@ -204,15 +253,19 @@ completed_production_units:
   - complete read-only foundational problem bundles
   - typed current-state corpus and findings registries
   - reviewed Socrates and Aristophanes witness and source-status registration
+  - first two bounded Theologico-Political item-level source identities
+  - generic item-level Theologico-Political source-status validator and tests
 
 next_production_units:
-  - create item-level source-status records for the nineteen Theologico-Political writings
-  - compare the reviewed Socrates and Aristophanes edition with the 1966 printing where needed
+  - create item-level source-status record for How to Study Spinoza's Theologico-Political Treatise
+  - continue through the remaining sixteen predecessor writings
+  - identify and register reviewed witnesses for item-level source reconstruction
   - create source-specific method and hermeneutic application fixtures
   - expand independent witness reconstruction
   - validate actual candidate ministerial reports
 
 repinning_rule: >
-  Sanctum may pin a new Strauss interface commit after structural and behavioral
-  validation passes. The pin must preserve all declared incompleteness and may not
-  describe a validated interface or reviewed witness as doctrinally certified or complete.
+  Do not repin Sanctum as a completed Strauss interface while semantic completion remains
+  INCOMPLETE. A separately authorized interim pin may follow successful structural and
+  behavioral validation only if it preserves every declared incompleteness and does not
+  imply doctrinal certification, migration completion, or unrestricted runtime readiness.
