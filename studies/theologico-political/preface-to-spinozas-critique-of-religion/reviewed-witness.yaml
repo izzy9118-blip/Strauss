@@ -1,0 +1,156 @@
+schema_version: 1.0
+document_type: reviewed_item_witness_record
+
+identity:
+  witness_id: CORPUS-WIT-102
+  source_id: CORPUS-SRC-102
+  title: Reviewed platform-reference witness — Preface to Spinoza's Critique of Religion
+  version: 1.0.0
+
+status:
+  lifecycle: QUALIFIED_PLATFORM_REFERENCE_WITNESS_REGISTERED
+  witness_class: PLATFORM_REFERENCE_WITNESS
+  certification: NOT_CERTIFIED
+  independent_sequential_study: NOT_YET_COMPLETED
+  source_text_admission: NOT_REQUESTED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
+
+protocol_authority:
+  governing_protocol: protocols/platform-reference-witness.yaml
+  protocol_version: 1.0.0
+  acquisition_record: history/reviewed-witness-acquisitions/2026-07-27-preface-spinoza-file-library-witness.yaml
+  qualification_rule: >
+    Registration establishes complete textual reviewability and repeatable relocation through
+    a controlled platform reference. It does not establish repository byte custody,
+    cryptographic identity, independent corroboration, doctrinal authority, or source-study completion.
+
+source_identity:
+  author: Leo Strauss
+  canonical_title: Preface to Spinoza's Critique of Religion
+  canonical_aliases:
+    - Autobiographical Preface to Spinoza's Critique of Religion
+    - Preface to the English Translation of Spinoza's Critique of Religion
+  date: 1965
+  corpus_source_id: CORPUS-SRC-102
+  source_status_id: CORPUS-STATUS-102
+
+container_bibliography:
+  title: Jewish Philosophy and the Crisis of Modernity
+  subtitle: Essays and Lectures in Modern Jewish Thought
+  author: Leo Strauss
+  editor: Kenneth Hart Green
+  series: SUNY Series in the Jewish Writings of Leo Strauss
+  publisher: State University of New York Press
+  publication_place: Albany
+  publication_year: 1997
+  isbn:
+    cloth: 0-7914-2773-0
+    paperback: 0-7914-2774-9
+
+platform_reference:
+  platform_name: ChatGPT File Library
+  platform_object_identifier: file_0000000073c081fd9fb65f9ea7552cde
+  displayed_filename: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress.pdf
+  access_date: 2026-07-27
+  access_scope: COMPLETE_525_PAGE_SEARCHABLE_PDF_WITH_RENDERED_PAGE_IMAGES
+  relocation_rule: >
+    Locate the recorded platform object by exact identifier or displayed filename, then use
+    the container table of contents and printed pagination to relocate the complete item.
+  repository_copy_status: NOT_DISTRIBUTED_BY_THIS_RECORD
+
+item_identity_and_locators:
+  collected_title: Preface to Spinoza's Critique of Religion
+  collected_date_label: 1965
+  printed_page_range: {start: 137, end: 180}
+  pdf_page_range_one_based: PENDING_DIRECT_OFFSET_VERIFICATION
+  item_completeness: COMPLETE_ITEM_BY_TABLE_OF_CONTENTS_BOUNDARY
+  locator_reproducibility: COMPLETE_FOR_PRINTED_PAGINATION_WITHIN_RECORDED_PLATFORM_OBJECT
+  locator_basis:
+    - The container table of contents places the item at printed page 137.
+    - The next item begins at printed page 181.
+    - The registered item therefore occupies printed pages 137 through 180.
+
+publication_provenance:
+  original_1965_publication:
+    container_title: Spinoza's Critique of Religion
+    publisher: Schocken Books
+    publication_place: New York
+    translator: Elsa M. Sinclair
+    original_preface_range: PENDING_SEPARATE_ORIGINAL_EDITION_REVIEW
+  collected_reprint_acknowledgment: >
+    The 1997 collection identifies the text as the Preface to the English Translation
+    of Spinoza's Critique of Religion and states that it is reprinted from the 1965
+    Schocken publication.
+  editorial_composite_condition: >
+    The 1997 editor states that the collected text is based essentially on the 1965
+    version and incorporates almost all slight editorial changes made by Strauss in
+    the 1968 Liberalism Ancient and Modern version, on the editor's assumption that
+    the 1968 version is Strauss's final statement.
+  original_1965_edition_comparison: PENDING
+  authorial_1968_reprint_comparison: PENDING
+  rule: >
+    This witness registers the 1997 editorial composite as reviewed. It is not silently
+    identified with a separately reviewed 1965 or 1968 printing.
+
+textual_condition:
+  searchable_text: true
+  page_images_available: true
+  parsed_text_authority: SUBORDINATE_TO_RENDERED_PAGE_IMAGES_WHERE_WORDING_CONFLICTS_OR_IS_UNCERTAIN
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  complete_text_reviewability: CONFIRMED
+
+byte_identity:
+  byte_custody_state: NOT_EXPOSED_TO_REPOSITORY
+  sha256_state: UNAVAILABLE_WITH_REASON_PRESERVED
+  sha256_value: NOT_AVAILABLE
+  file_size_state: NOT_AVAILABLE
+  reason: >
+    The controlled platform exposes parsed text, rendered page images, an object identifier,
+    a displayed filename, and page count, but it does not expose the underlying bytes or a
+    trusted digest to the repository write interface.
+  non_equivalence_rule: >
+    The platform object identifier is not a SHA256 digest, and textual reviewability is not
+    repository custody or byte-level reproducibility.
+
+jurisdiction_and_limits:
+  governing_problem: theologico-political
+  additional_problem_bindings: [athens-vs-jerusalem, ancients-vs-moderns]
+  distinctions:
+    - historical and political defeat of orthodoxy from rational refutation
+    - inability to refute revelation from proof of revelation
+    - possibility of revelation from actuality of a particular revelation
+    - source identity from reviewed witness
+    - 1997 editorial composite from separately reviewed 1965 and 1968 textual states
+    - platform identity from cryptographic identity
+    - witness registration from independent sequential reconstruction
+    - source-level findings from active-predecessor synthesis
+  non_effects:
+    - no source-level proposition promotion
+    - no independent Spinoza, Jewish, Biblical, theological, or historical corroboration
+    - no confirmation or revision of the active predecessor
+    - no doctrinal certification
+    - no migration certification
+    - no successor activation
+    - no predecessor displacement
+    - no completed-interface Sanctum repin
+
+next_required_action:
+  action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  range: printed pages 137-180
+  prerequisites_satisfied: QUALIFIED_PLATFORM_REFERENCE_WITNESS_REGISTERED
+  remaining_requirements:
+    - reconstruct the complete item in textual order before problem-local isolation
+    - distinguish autobiography, historical narrative, reported positions, and philosophic argument
+    - classify documented findings, supported inferences, hypotheses, and unresolved uncertainties
+    - compare the source reconstruction with the active predecessor without silent harmonization
+    - preserve the 1997 composite condition and pending 1965 and 1968 edition comparisons
+    - register no digest or exact PDF-page offset unless directly verified
+
+termination:
+  witness_state: QUALIFIED_PLATFORM_REFERENCE_WITNESS_REGISTERED
+  byte_identity_state: UNAVAILABLE_WITH_REASON_PRESERVED
+  study_state: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE

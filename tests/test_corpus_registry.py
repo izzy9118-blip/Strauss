@@ -9,7 +9,7 @@ class CorpusRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_repository_state(self) -> None:
         registry = corpus_registry.load_registry()
         self.assertEqual(corpus_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.8.0")
+        self.assertEqual(registry["identity"]["version"], "1.9.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE",
@@ -37,10 +37,10 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertTrue(corpus_registry.BASE_REQUIRED_STUDY_PATHS.issubset(actual))
         self.assertEqual(
             registry["coverage"]["current_studies_tree_yaml_records_accounted_for"],
-            34,
+            35,
         )
         self.assertEqual(registry["coverage"]["study_records_registered"], 10)
-        self.assertEqual(registry["coverage"]["reviewed_witnesses_registered"], 6)
+        self.assertEqual(registry["coverage"]["reviewed_witnesses_registered"], 7)
 
     def test_nineteen_tp_sources_preserve_predecessor_identity(self) -> None:
         registry = corpus_registry.load_registry()
@@ -62,7 +62,7 @@ class CorpusRegistryTests(unittest.TestCase):
             19,
         )
 
-    def test_sixteen_tp_sources_remain_without_witness_or_study(self) -> None:
+    def test_fifteen_tp_sources_remain_without_witness_or_study(self) -> None:
         registry = corpus_registry.load_registry()
         entries = {
             item["source_id"]: item
@@ -74,8 +74,9 @@ class CorpusRegistryTests(unittest.TestCase):
             for item in registry["source_entities"]
             if corpus_registry._tp_sequence_from_source_id(item["source_id"]) is not None
             and item["source_id"] not in corpus_registry.COMPLETE_TP_ITEMS
+            and item["source_id"] not in corpus_registry.WITNESS_ONLY_TP_ITEMS
         ]
-        self.assertEqual(len(sources), 16)
+        self.assertEqual(len(sources), 15)
         for source in sources:
             status = corpus_registry.load_yaml(
                 corpus_registry._resolve(entries[source["source_id"]]["path"])
@@ -92,6 +93,30 @@ class CorpusRegistryTests(unittest.TestCase):
             self.assertEqual(status["termination"]["study_state"], "INCOMPLETE")
             self.assertEqual(status["termination"]["certification"], "NOT_CERTIFIED")
             self.assertEqual(status["termination"]["successor_effect"], "NONE")
+
+    def test_spinoza_preface_platform_witness_is_registered_with_study_pending(self) -> None:
+        registry = corpus_registry.load_registry()
+        source = next(item for item in registry["source_entities"] if item["source_id"] == "CORPUS-SRC-102")
+        entry = next(item for item in registry["source_status_records"] if item["source_id"] == "CORPUS-SRC-102")
+        witness = next(item for item in registry["reviewed_witnesses"] if item["witness_id"] == "CORPUS-WIT-102")
+        status = corpus_registry.load_yaml(corpus_registry._resolve(entry["path"]))
+        witness_record = corpus_registry.load_yaml(corpus_registry._resolve(witness["witness_record_path"]))
+
+        self.assertEqual(source["reviewed_witnesses"], ["CORPUS-WIT-102"])
+        self.assertNotIn("study_records", source)
+        self.assertEqual(source["item_level_source_status"], "REVIEWED_ITEM_WITNESS_REGISTERED_STUDY_PENDING")
+        self.assertEqual(witness["witness_class"], "PLATFORM_REFERENCE_WITNESS")
+        self.assertEqual(witness["printed_page_range"], {"start": 137, "end": 180})
+        self.assertEqual(witness["pdf_page_range_one_based"], "PENDING_DIRECT_OFFSET_VERIFICATION")
+        self.assertEqual(witness["platform_object_identifier"], "file_0000000073c081fd9fb65f9ea7552cde")
+        self.assertEqual(witness["sha256_state"], "UNAVAILABLE_WITH_REASON_PRESERVED")
+        self.assertEqual(status["status"]["reviewed_witness"], "CORPUS-WIT-102")
+        self.assertEqual(status["status"]["independent_sequential_study"], "NOT_YET_COMPLETED")
+        self.assertEqual(status["termination"]["study_state"], "INCOMPLETE")
+        self.assertEqual(status["termination"]["successor_effect"], "NONE")
+        self.assertEqual(witness_record["status"]["witness_class"], "PLATFORM_REFERENCE_WITNESS")
+        self.assertEqual(witness_record["byte_identity"]["sha256_state"], "UNAVAILABLE_WITH_REASON_PRESERVED")
+        self.assertEqual(witness_record["termination"]["study_state"], "INCOMPLETE")
 
     def _assert_complete_item(
         self,

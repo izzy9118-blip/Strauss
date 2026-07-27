@@ -9,15 +9,26 @@ identity:
     - Autobiographical Preface to Spinoza's Critique of Religion
   author: Leo Strauss
   date: 1965
-  version: 1.0.0
+  version: 1.1.0
 
 status:
-  lifecycle: REGISTERED_SOURCE_IDENTITY
+  lifecycle: REVIEWED_WITNESS_REGISTERED_STUDY_PENDING
   certification: NOT_CERTIFIED
   source_text_admission: NOT_REQUESTED
-  reviewed_witness: NOT_YET_REGISTERED
+  reviewed_witness: CORPUS-WIT-102
   independent_sequential_study: NOT_YET_COMPLETED
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+  successor_effect: NONE
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 85f86eae3bcef13f98408ddda9d8f1a18a2e8930
+  transformation: FORWARD_REVISION_AFTER_QUALIFIED_PLATFORM_REFERENCE_REGISTRATION
+  reason: >
+    Register CORPUS-WIT-102 under the Platform-Reference Witness Protocol using the
+    complete 1997 SUNY collected item while preserving absent byte custody, unavailable
+    SHA256 and file size, unresolved PDF-page offset, pending 1965 and 1968 edition
+    comparisons, incomplete sequential reconstruction, noncertification, and no successor effect.
 
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
@@ -26,6 +37,8 @@ registration_basis:
   corpus_source_id: CORPUS-SRC-102
   governing_problem: theologico-political
   preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  platform_reference_protocol: protocols/platform-reference-witness.yaml
+  acquisition_record: history/reviewed-witness-acquisitions/2026-07-27-preface-spinoza-file-library-witness.yaml
 
 verified_documentary_facts:
   - The active predecessor identifies the work as Preface to Spinoza's Critique of Religion.
@@ -33,32 +46,52 @@ verified_documentary_facts:
   - The active predecessor records the date as 1965.
   - The active predecessor treats the work as the second of nineteen writings in its documentary source basis.
   - The current corpus registry identifies the work as CORPUS-SRC-102.
+  - The reviewed platform witness is the complete item on printed pages 137 through 180 of the 1997 SUNY collection.
+  - The 1997 collection identifies the original 1965 Schocken publication and Elsa M. Sinclair translation.
+  - The 1997 collected text is an editorial composite whose relation to the 1965 and 1968 versions remains separately unverified.
 
 predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_WITNESS
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_COMPLETE_SEQUENTIAL_RECONSTRUCTION
   statement: >
     Reconsiders the alleged rational defeat of orthodoxy and asks whether reason can
     exclude miracle or revelation without a demonstrated exhaustive account of the whole.
   preservation_rule: >
-    This statement remains attributable to the active predecessor. Registration here does
-    not independently confirm, promote, revise, or certify it.
+    This statement remains attributable to the active predecessor. Witness registration
+    does not independently confirm, promote, revise, or certify it.
 
-publication_and_witness_condition:
-  publication_venue: UNVERIFIED_IN_THIS_RECORD
-  edition: UNVERIFIED_IN_THIS_RECORD
-  pagination: UNVERIFIED_IN_THIS_RECORD
-  local_file: NOT_REGISTERED
-  fingerprint: NOT_AVAILABLE
-  text_condition: NOT_ASSESSED
-  locator_reproducibility: INCOMPLETE
+reviewed_witness:
+  witness_id: CORPUS-WIT-102
+  witness_record: studies/theologico-political/preface-to-spinozas-critique-of-religion/reviewed-witness.yaml
+  witness_class: PLATFORM_REFERENCE_WITNESS
+  lifecycle: QUALIFIED_PLATFORM_REFERENCE_WITNESS_REGISTERED
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  platform_name: ChatGPT File Library
+  platform_object_identifier: file_0000000073c081fd9fb65f9ea7552cde
+  displayed_filename: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress.pdf
+  access_date: 2026-07-27
+  printed_page_range: {start: 137, end: 180}
+  pdf_page_range_one_based: PENDING_DIRECT_OFFSET_VERIFICATION
+  item_completeness: COMPLETE_ITEM_BY_TABLE_OF_CONTENTS_BOUNDARY
+  searchable_text: true
+  page_images_available: true
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  byte_custody_state: NOT_EXPOSED_TO_REPOSITORY
+  sha256_state: UNAVAILABLE_WITH_REASON_PRESERVED
+  file_size_state: NOT_AVAILABLE
+  original_1965_edition_comparison: PENDING
+  authorial_1968_reprint_comparison: PENDING
 
 source_classification:
-  author_relation: PRIMARY_STRAUSS_WRITING
-  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
-  analytical_use: ORIENTATION_ONLY_UNTIL_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+  author_relation: PRIMARY_STRAUSS_WRITING_IN_LATER_EDITORIAL_COMPOSITE
+  documentary_rank: QUALIFIED_PRIMARY_SOURCE_WITNESS_WITHOUT_BYTE_CUSTODY
+  analytical_use: AVAILABLE_FOR_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
   independence_limit: >
-    The active predecessor and later repository records are derivative from this source and
-    do not constitute independent corroboration of its argument.
+    The active predecessor, acquisition record, editorial apparatus, and later repository
+    records are derivative from or about this source and do not constitute independent
+    corroboration of its argument.
 
 required_distinctions:
   - orthodoxy's historical political defeat from rational refutation
@@ -67,27 +100,35 @@ required_distinctions:
   - exhaustive account of the whole from partial natural explanation
   - predecessor synthesis from source-level documented finding
   - source identity from reviewed edition or textual witness
+  - platform reference from repository byte custody
+  - platform object identifier from cryptographic fingerprint
+  - 1997 editorial composite from separately reviewed 1965 and 1968 versions
+  - witness registration from independent sequential reconstruction
 
 prohibitions:
   - Do not treat the predecessor contribution statement as a source-level quotation.
   - Do not infer that reason has defeated or confirmed orthodoxy.
-  - Do not infer publication venue, edition, pagination, or textual condition.
-  - Do not assign page locators before a reviewed witness is registered.
-  - Do not count this registration as an independent sequential reconstruction.
+  - Do not treat the platform object identifier as a SHA256 digest.
+  - Do not claim repository custody, file size, or an exact PDF-page offset.
+  - Do not identify the 1997 composite with a separately reviewed 1965 or 1968 printing.
+  - Do not count witness registration as an independent sequential reconstruction.
   - Do not use this record to certify doctrine, migration, or successor activation.
   - Do not displace or revise the active predecessor through this record.
 
 next_required_actions:
-  - identify and register a reviewed edition or textual witness
-  - record publication provenance and stable locators
-  - compute a file fingerprint when a lawful local witness is reviewed
-  - conduct an independent sequential reading
+  - conduct an independent sequential reading of printed pages 137 through 180
   - classify source-level findings by evidence status
+  - distinguish autobiographical narrative, historical report, reported argument, and Strauss's explicit judgment
   - compare the source-level reconstruction with the active predecessor without silent harmonization
+  - compare the 1965 original and 1968 authorial revision when lawful witnesses become available
+  - forward-revise this record if exact bytes are later materialized and fingerprinted
 
 termination:
   source_identity_state: REGISTERED
-  reviewed_witness_state: MISSING
+  reviewed_witness_state: REGISTERED_QUALIFIED_PLATFORM_REFERENCE
+  witness_id: CORPUS-WIT-102
   study_state: INCOMPLETE
+  independent_corroboration: INCOMPLETE
+  byte_identity_state: UNAVAILABLE_WITH_REASON_PRESERVED
   certification: NOT_CERTIFIED
   successor_effect: NONE
