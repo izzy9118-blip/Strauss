@@ -40,15 +40,18 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/theologico-political/synthesis/jerusalem-and-athens.yaml",
     "problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml",
+    "problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml",
     "problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml",
     "problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml",
+    "problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml",
     "problems/wise-vs-vulgar/synthesis/plato-apology.yaml",
     "problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml",
+    "problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml",
 }
 
 EXPECTED_TRANSACTION_PATHS = {
@@ -86,11 +89,24 @@ DIRECT_SOURCE_KEYS = [
     "CORPUS-SRC-001",
     "CORPUS-SRC-002",
     "CORPUS-SRC-003",
+    "CORPUS-SRC-102",
     "CORPUS-SRC-105",
     "CORPUS-SRC-111",
 ]
 
 SOURCE_STUDY_CONTRACTS = {
+    "FINDSET-008": {
+        "source_id": "CORPUS-SRC-109",
+        "local_syntheses": ["FINDSET-111", "FINDSET-112"],
+        "problem_bindings": {
+            "FINDSET-111": "theologico-political",
+            "FINDSET-112": "athens-vs-jerusalem",
+        },
+        "required_limits": {
+            "original_edition_comparison": "PENDING",
+            "independent_corroboration": "INCOMPLETE",
+        },
+    },
     "FINDSET-009": {
         "source_id": "CORPUS-SRC-105",
         "local_syntheses": ["FINDSET-113", "FINDSET-114", "FINDSET-115"],
@@ -99,8 +115,10 @@ SOURCE_STUDY_CONTRACTS = {
             "FINDSET-114": "athens-vs-jerusalem",
             "FINDSET-115": "ancients-vs-moderns",
         },
-        "extra_limit_field": "original_edition_comparison",
-        "extra_limit_value": "PENDING",
+        "required_limits": {
+            "original_edition_comparison": "PENDING",
+            "independent_corroboration": "INCOMPLETE",
+        },
     },
     "FINDSET-010": {
         "source_id": "CORPUS-SRC-111",
@@ -110,8 +128,27 @@ SOURCE_STUDY_CONTRACTS = {
             "FINDSET-117": "athens-vs-jerusalem",
             "FINDSET-118": "ancients-vs-moderns",
         },
-        "extra_limit_field": "reviewed_work_reconstruction",
-        "extra_limit_value": "INCOMPLETE",
+        "required_limits": {
+            "original_edition_comparison": "PENDING",
+            "reviewed_work_reconstruction": "INCOMPLETE",
+            "independent_corroboration": "INCOMPLETE",
+        },
+    },
+    "FINDSET-011": {
+        "source_id": "CORPUS-SRC-102",
+        "local_syntheses": ["FINDSET-119", "FINDSET-120", "FINDSET-121"],
+        "problem_bindings": {
+            "FINDSET-119": "theologico-political",
+            "FINDSET-120": "athens-vs-jerusalem",
+            "FINDSET-121": "ancients-vs-moderns",
+        },
+        "required_limits": {
+            "witness_id": "CORPUS-WIT-102",
+            "original_1965_edition_comparison": "PENDING",
+            "authorial_1968_reprint_comparison": "PENDING",
+            "byte_identity_state": "UNAVAILABLE_WITH_REASON_PRESERVED",
+            "independent_corroboration": "INCOMPLETE",
+        },
     },
 }
 
@@ -250,7 +287,7 @@ def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[
     result = {key: [] for key in DIRECT_SOURCE_KEYS}
     result["CORPUS-SRC-101-119"] = []
     predecessor_sources = {f"CORPUS-SRC-{number:03d}" for number in range(101, 120)}
-    separately_indexed = {"CORPUS-SRC-105", "CORPUS-SRC-111"}
+    separately_indexed = {"CORPUS-SRC-102", "CORPUS-SRC-105", "CORPUS-SRC-111"}
     for item in finding_sets:
         bindings = set(item.get("source_bindings", []))
         finding_id = item["finding_set_id"]
@@ -300,12 +337,13 @@ def _validate_source_study_derivations(
             errors.append(f"{study_id} source binding mismatch")
         if study.get("derived_local_syntheses") != contract["local_syntheses"]:
             errors.append(f"{study_id} local synthesis derivation mismatch")
-        if study.get("independent_corroboration") != "INCOMPLETE":
-            errors.append(f"{study_id} must preserve incomplete corroboration")
         if study.get("certification") != "NOT_CERTIFIED":
             errors.append(f"{study_id} must remain NOT_CERTIFIED")
-        if study.get(contract["extra_limit_field"]) != contract["extra_limit_value"]:
-            errors.append(f"{study_id} must preserve {contract['extra_limit_field']}")
+        if study.get("successor_effect") not in {None, "NONE"}:
+            errors.append(f"{study_id} may not affect successor activation")
+        for field, expected in contract["required_limits"].items():
+            if study.get(field) != expected:
+                errors.append(f"{study_id} must preserve {field}={expected!r}")
 
         for finding_id, expected_problem in contract["problem_bindings"].items():
             synthesis = by_id.get(finding_id)
@@ -333,8 +371,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.3.0":
-        errors.append("findings registry identity.version must be 1.3.0")
+    if identity.get("version") != "1.4.0":
+        errors.append("findings registry identity.version must be 1.4.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -349,8 +387,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(registry.get("findings_gaps", []), "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 33:
-        errors.append(f"expected 33 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 37:
+        errors.append(f"expected 37 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 
@@ -522,35 +560,49 @@ def build_registry_context(
     selected_ids: set[str] | None = None
     indexes = registry["indexes"]
     if problem is not None:
-        if problem not in indexes["by_problem"]:
-            raise FindingsRegistryError(f"Unknown problem key: {problem}")
-        selected_ids = set(indexes["by_problem"][problem])
+        by_problem = indexes["by_problem"]
+        if problem not in by_problem:
+            raise FindingsRegistryError(f"Unknown problem filter: {problem}")
+        selected_ids = set(by_problem[problem])
     if source is not None:
-        if source not in indexes["by_source"]:
-            raise FindingsRegistryError(f"Unknown source index key: {source}")
-        source_ids = set(indexes["by_source"][source])
+        by_source = indexes["by_source"]
+        if source not in by_source:
+            raise FindingsRegistryError(f"Unknown source filter: {source}")
+        source_ids = set(by_source[source])
         selected_ids = source_ids if selected_ids is None else selected_ids & source_ids
     if record_class is not None:
-        if record_class not in indexes["by_record_class"]:
-            raise FindingsRegistryError(f"Unknown record class: {record_class}")
-        class_ids = set(indexes["by_record_class"][record_class])
+        by_class = indexes["by_record_class"]
+        if record_class not in by_class:
+            raise FindingsRegistryError(f"Unknown record-class filter: {record_class}")
+        class_ids = set(by_class[record_class])
         selected_ids = class_ids if selected_ids is None else selected_ids & class_ids
 
-    selected = [
-        {"declaration": item, "record": load_yaml(_resolve(item["path"]))}
+    chosen = [
+        item
         for item in finding_sets
         if selected_ids is None or item["finding_set_id"] in selected_ids
+    ]
+    materialized = [
+        {
+            "declaration": item,
+            "record": load_yaml(_resolve(item["path"])),
+        }
+        for item in chosen
     ]
     return {
         "identity": registry["identity"],
         "status": registry["status"],
+        "filters": {
+            "problem": problem,
+            "source": source,
+            "record_class": record_class,
+        },
+        "finding_sets": materialized,
         "coverage": registry["coverage"],
-        "filters": {"problem": problem, "source": source, "record_class": record_class},
-        "finding_sets": selected,
-        "findings_gaps": registry["findings_gaps"],
-        "authority": "READ_ONLY_FINDINGS_DISCOVERY_AND_PROVENANCE_CONTEXT",
+        "authority": "READ_ONLY_DISCOVERY_PROVENANCE_AND_JURISDICTION_CONTEXT",
         "non_effects": [
             "no proposition promotion",
+            "no independent corroboration through derived repetition",
             "no doctrinal certification",
             "no migration certification",
             "no successor activation",
@@ -581,10 +633,14 @@ def main() -> int:
     if args.validate:
         print(
             "Typed findings registry validation passed for the current committed findings "
-            "record state; findings remain open, materially incomplete, and not certified."
+            "state; findings remain open, materially incomplete, and not certified."
         )
         return 0
-    context = build_registry_context(args.problem, args.source, args.record_class)
+    context = build_registry_context(
+        problem=args.problem,
+        source=args.source,
+        record_class=args.record_class,
+    )
     print(json.dumps(context, indent=2 if args.pretty else None, ensure_ascii=False))
     return 0
 

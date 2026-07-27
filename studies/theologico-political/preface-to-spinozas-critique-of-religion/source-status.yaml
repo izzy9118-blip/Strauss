@@ -7,28 +7,31 @@ identity:
   canonical_title: Preface to Spinoza's Critique of Religion
   canonical_aliases:
     - Autobiographical Preface to Spinoza's Critique of Religion
+    - Preface to the English Translation of Spinoza's Critique of Religion
   author: Leo Strauss
   date: 1965
-  version: 1.1.0
+  version: 1.2.0
 
 status:
-  lifecycle: REVIEWED_WITNESS_REGISTERED_STUDY_PENDING
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
   certification: NOT_CERTIFIED
   source_text_admission: NOT_REQUESTED
   reviewed_witness: CORPUS-WIT-102
-  independent_sequential_study: NOT_YET_COMPLETED
+  independent_sequential_study: SPINOZA-PREFACE-STUDY-001
+  analytical_state: COMPLETE_PROVISIONAL_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
   successor_effect: NONE
 
 revision_history:
-  predecessor_version: 1.0.0
-  predecessor_blob_sha: 85f86eae3bcef13f98408ddda9d8f1a18a2e8930
-  transformation: FORWARD_REVISION_AFTER_QUALIFIED_PLATFORM_REFERENCE_REGISTRATION
+  predecessor_version: 1.1.0
+  predecessor_blob_sha: 98ce0327ec8b730a203c86e0666f443e0e554d1e
+  transformation: FORWARD_REVISION_AFTER_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
   reason: >
-    Register CORPUS-WIT-102 under the Platform-Reference Witness Protocol using the
-    complete 1997 SUNY collected item while preserving absent byte custody, unavailable
-    SHA256 and file size, unresolved PDF-page offset, pending 1965 and 1968 edition
-    comparisons, incomplete sequential reconstruction, noncertification, and no successor effect.
+    Record completion of SPINOZA-PREFACE-STUDY-001 after qualified platform-reference
+    registration of CORPUS-WIT-102. Preserve the 1997 editorial-composite condition,
+    absent byte custody, unavailable SHA256 and file size, unresolved PDF-page offset,
+    pending 1965 and 1968 edition comparisons, incomplete independent corroboration,
+    noncertification, predecessor authority, and no successor effect.
 
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
@@ -41,23 +44,29 @@ registration_basis:
   acquisition_record: history/reviewed-witness-acquisitions/2026-07-27-preface-spinoza-file-library-witness.yaml
 
 verified_documentary_facts:
-  - The active predecessor identifies the work as Preface to Spinoza's Critique of Religion.
-  - The active predecessor records Autobiographical Preface to Spinoza's Critique of Religion as a canonical alias.
-  - The active predecessor records the date as 1965.
-  - The active predecessor treats the work as the second of nineteen writings in its documentary source basis.
-  - The current corpus registry identifies the work as CORPUS-SRC-102.
-  - The reviewed platform witness is the complete item on printed pages 137 through 180 of the 1997 SUNY collection.
+  - The active predecessor identifies this work, its date, and its second position in the nineteen-source basis.
+  - The reviewed platform witness is the complete collected item on printed pages 137 through 180 of the 1997 SUNY collection.
   - The 1997 collection identifies the original 1965 Schocken publication and Elsa M. Sinclair translation.
-  - The 1997 collected text is an editorial composite whose relation to the 1965 and 1968 versions remains separately unverified.
+  - The reviewed text is an editorial composite based essentially on the 1965 version and incorporating almost all slight 1968 changes.
+  - SPINOZA-PREFACE-STUDY-001 reconstructs the item in ten ordered reading units, including its note apparatus.
+  - Exact bytes, digest, file size, and one-based PDF-page offset remain unavailable to the repository.
 
 predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_COMPLETE_SEQUENTIAL_RECONSTRUCTION
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_RETESTED_AND_PROVISIONALLY_QUALIFIED_BY_SPINOZA_PREFACE_STUDY_001
   statement: >
     Reconsiders the alleged rational defeat of orthodoxy and asks whether reason can
     exclude miracle or revelation without a demonstrated exhaustive account of the whole.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  study_result: >
+    SPINOZA-PREFACE-STUDY-001 confirms that the Preface distinguishes orthodoxy's
+    historical or political defeat from rational refutation and argues that excluding
+    revelation would require a comprehensive account of the whole not supplied by
+    Spinoza. It qualifies the predecessor by distinguishing possibility from actuality,
+    orthodoxy claiming knowledge from orthodoxy resting on belief, an ambiguous victory
+    for orthodoxy in general from a victory for Jewish orthodoxy, and modern rationalism
+    from the reopened possibility of premodern rationalism.
   preservation_rule: >
-    This statement remains attributable to the active predecessor. Witness registration
-    does not independently confirm, promote, revise, or certify it.
+    Retesting does not certify, supersede, activate, migrate, or displace the active predecessor.
 
 reviewed_witness:
   witness_id: CORPUS-WIT-102
@@ -84,51 +93,78 @@ reviewed_witness:
   original_1965_edition_comparison: PENDING
   authorial_1968_reprint_comparison: PENDING
 
+independent_sequential_study:
+  study_id: SPINOZA-PREFACE-STUDY-001
+  corpus_study_id: CORPUS-STUDY-011
+  path: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
+  reconstruction_state: COMPLETE_PROVISIONAL
+  ordered_reading_units: 10
+  permanent_source_level_findings: 12
+  certification: NOT_CERTIFIED
+  limits:
+    - The study is independent of the active predecessor and collection-level syntheses as governing interpretations.
+    - It is not independent corroboration because it reconstructs the same registered platform witness.
+    - Spinoza, Cohen, Rosenzweig, Buber, Heidegger, Nietzsche, Zionist, Jewish, biblical, medieval, and historical sources remain independently incomplete.
+    - Original 1965 and authorial 1968 edition comparison remains pending.
+    - Exact bytes, digest, file size, and one-based PDF-page offset remain unavailable.
+
 source_classification:
   author_relation: PRIMARY_STRAUSS_WRITING_IN_LATER_EDITORIAL_COMPOSITE
   documentary_rank: QUALIFIED_PRIMARY_SOURCE_WITNESS_WITHOUT_BYTE_CUSTODY
-  analytical_use: AVAILABLE_FOR_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  analytical_use: COMPLETE_PROVISIONAL_ITEM_RECONSTRUCTION_AVAILABLE
   independence_limit: >
-    The active predecessor, acquisition record, editorial apparatus, and later repository
-    records are derivative from or about this source and do not constitute independent
-    corroboration of its argument.
+    The reviewed item and SPINOZA-PREFACE-STUDY-001 concern Strauss's Preface.
+    They are not independent corroboration of Spinoza, orthodoxy, revelation,
+    miracle, Jewish history, modern philosophy, Zionism, or the represented thinkers.
 
 required_distinctions:
-  - orthodoxy's historical political defeat from rational refutation
-  - miracle or revelation as a claim from proof that revelation occurred
+  - orthodoxy's historical or political defeat from rational refutation
+  - miracle or revelation as a possibility from proof that revelation occurred
   - inability to exclude revelation from proof of revelation
   - exhaustive account of the whole from partial natural explanation
+  - orthodoxy claiming knowledge from orthodoxy resting on belief
+  - modern rationalism from premodern Jewish, medieval, and classical rationalism
   - predecessor synthesis from source-level documented finding
   - source identity from reviewed edition or textual witness
   - platform reference from repository byte custody
   - platform object identifier from cryptographic fingerprint
   - 1997 editorial composite from separately reviewed 1965 and 1968 versions
-  - witness registration from independent sequential reconstruction
+  - reviewed witness from sequential reconstruction and both from independent corroboration
+  - primary Theologico-Political jurisdiction from controlled secondary problem relations
 
 prohibitions:
   - Do not treat the predecessor contribution statement as a source-level quotation.
   - Do not infer that reason has defeated or confirmed orthodoxy.
+  - Do not infer the actuality of revelation from reason's inability to exclude it.
+  - Do not infer that a miracle occurred from the possibility of miracle.
+  - Do not treat political dignity, statehood, survival, catastrophe, or persecution as theoretical proof.
   - Do not treat the platform object identifier as a SHA256 digest.
   - Do not claim repository custody, file size, or an exact PDF-page offset.
   - Do not identify the 1997 composite with a separately reviewed 1965 or 1968 printing.
-  - Do not count witness registration as an independent sequential reconstruction.
-  - Do not use this record to certify doctrine, migration, or successor activation.
-  - Do not displace or revise the active predecessor through this record.
+  - Do not count SPINOZA-PREFACE-STUDY-001 as independent corroboration.
+  - Do not use attention to persecution and audience as mechanical reversal or unrestricted deception.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
 
 next_required_actions:
-  - conduct an independent sequential reading of printed pages 137 through 180
-  - classify source-level findings by evidence status
-  - distinguish autobiographical narrative, historical report, reported argument, and Strauss's explicit judgment
-  - compare the source-level reconstruction with the active predecessor without silent harmonization
-  - compare the 1965 original and 1968 authorial revision when lawful witnesses become available
-  - forward-revise this record if exact bytes are later materialized and fingerprinted
+  - register CORPUS-STUDY-011 and FINDSET-011 in the typed corpus and findings registries
+  - create distinct Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns synthesis bridges
+  - compare the 1997 composite with separately reviewed 1965 and 1968 textual states
+  - materialize and fingerprint exact bytes only through later forward revision if they become available
+  - independently reconstruct Spinoza and the represented Jewish, biblical, medieval, modern, Zionist, and historical sources
+  - classify any migration effect proposition by proposition without silent harmonization
 
 termination:
   source_identity_state: REGISTERED
   reviewed_witness_state: REGISTERED_QUALIFIED_PLATFORM_REFERENCE
-  witness_id: CORPUS-WIT-102
-  study_state: INCOMPLETE
+  reviewed_witness_id: CORPUS-WIT-102
+  locator_state: PRINTED_LOCATORS_REPRODUCIBLE_PDF_OFFSET_AND_BYTE_IDENTITY_INCOMPLETE
+  study_state: COMPLETE_PROVISIONAL
+  study_id: SPINOZA-PREFACE-STUDY-001
+  study_path: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
   independent_corroboration: INCOMPLETE
+  original_1965_edition_comparison: PENDING
+  authorial_1968_reprint_comparison: PENDING
   byte_identity_state: UNAVAILABLE_WITH_REASON_PRESERVED
   certification: NOT_CERTIFIED
   successor_effect: NONE
