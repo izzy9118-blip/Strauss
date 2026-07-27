@@ -6,7 +6,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 0.7.0
+  version: 0.8.0
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
@@ -18,17 +18,18 @@ status:
   constitutional_effect: NONE_ON_EXISTING_PROBLEM_MIGRATION
   governing_notice: >
     A resolved path, valid YAML document, passing loader, complete current-state index,
-    or successful test does not establish substantive completeness, doctrinal truth,
-    claimant rank, migration certification, or readiness for unrestricted ministerial reasoning.
+    registered reviewed witness, or successful test does not establish substantive
+    completeness, doctrinal truth, claimant rank, migration certification, or readiness
+    for unrestricted ministerial reasoning.
 
 revision_history:
-  predecessor_version: 0.6.0
-  predecessor_blob_sha: 0fefc76c8ad52e8fe6c961821cc2a8e7c56007fb
+  predecessor_version: 0.7.0
+  predecessor_blob_sha: 65c854d0e826d97501f46f75f18916cf12582dd2
   reason: >
-    Register a typed findings registry exhaustive for the repository's current committed
-    findings-record state. Preserve proposition-level evidence and qualifications in their
-    governing records, the findings store as open and materially incomplete, and all
-    doctrinal, migration, activation, predecessor-displacement, and Assembly authority as unauthorized.
+    Register a reviewed University of Chicago Press 1980 paperback witness and source-status
+    record for Socrates and Aristophanes. Preserve original 1966 publication, reviewed
+    edition, local filename, source text, OCR, page image, study, and independent ancient
+    witnesses as distinct documentary layers, with all doctrine and migration states unchanged.
 
 purpose: >
   Provide one compact, machine-readable entry point through which a runtime can load
@@ -38,7 +39,7 @@ purpose: >
 
 audit:
   path: audits/operational-completeness.yaml
-  version: 1.5.0
+  version: 1.6.0
   classification_vocabulary:
     - SUBSTANTIVELY_RECONSTRUCTED
     - PARTIALLY_RECONSTRUCTED
@@ -56,6 +57,7 @@ component_completion:
   problem_bundle_loader: PARTIALLY_RECONSTRUCTED_READ_ONLY_BUNDLE_SUPPORT
   corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
+  reviewed_source_witnesses: SPPP_SA_AND_PLATO_APOLOGY_REGISTERED_WITH_RECORDED_LIMITS
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
@@ -63,7 +65,7 @@ component_completion:
   corpus_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_AND_FINDINGS_CONTRACTS_VALIDATED_SOURCE_FIXTURES_INCOMPLETE
+  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_AND_REVIEWED_WITNESS_CONTRACTS_VALIDATED_SOURCE_FIXTURES_INCOMPLETE
 
 source_hierarchy:
   tiers:
@@ -221,13 +223,23 @@ speech:
 corpus:
   index: corpus/index.yaml
   loader: corpus_registry.py
-  registry_version: 1.0.0
+  registry_version: 1.1.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
+  reviewed_witnesses:
+    - source: Studies in Platonic Political Philosophy
+      witness_id: CORPUS-WIT-001
+    - source: Plato's Apology of Socrates
+      witness_id: CORPUS-WIT-002
+    - source: Socrates and Aristophanes
+      witness_id: CORPUS-WIT-003
+      source_status: studies/socrates-and-aristophanes/source-status.yaml
+      bibliographic_rule: ORIGINAL_1966_REVIEWED_1980_FILENAME_YEAR_NONAUTHORITATIVE
+      text_rule: PAGE_IMAGES_GOVERN_WHERE_OCR_IS_UNCERTAIN
   limitation: >
     The registry accounts for every current source identity and studies-tree YAML record,
-    but the wider Strauss corpus, item-level source statuses, editions, translations,
-    independent witnesses, and source-text access remain incomplete.
+    but the wider Strauss corpus, item-level source statuses, edition comparisons,
+    translations, independent witnesses, and source-text access remain incomplete.
 
 findings:
   index: findings/index.yaml
@@ -257,10 +269,13 @@ runtime:
     - load complete read-only foundational problem bundles
     - load the typed current-state corpus registry
     - load the typed current-state findings registry
+    - validate reviewed witness metadata against source-status records
     - validate typed speech requests
     - build non-authoritative candidate report structures
   prohibited_operations:
     - admit or distribute source texts through a registry
+    - allow a local filename to override title-page or copyright-page evidence
+    - treat OCR as authoritative where page images disagree or remain unclear
     - promote a finding beyond its record-local evidence status
     - certify doctrine, wisdom, or migration
     - activate successor problems
