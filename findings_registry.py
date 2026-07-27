@@ -159,7 +159,7 @@ def _canonical_problem_keys() -> list[str]:
     registry = load_yaml(PROBLEM_REGISTRY_PATH)
     return [
         item.get("canonical_key")
-        for item in registry.get("problems", [])
+        for item in registry.get("canonical_problems", [])
         if isinstance(item, dict)
     ]
 
