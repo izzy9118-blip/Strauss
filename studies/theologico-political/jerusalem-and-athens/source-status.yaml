@@ -4,64 +4,130 @@ identity:
   status_id: CORPUS-STATUS-109
   corpus_source_id: CORPUS-SRC-109
   canonical_title: Jerusalem and Athens
+  full_collected_title: Jerusalem and Athens — Some Preliminary Reflections
   author: Leo Strauss
   date: 1967
-  version: 1.0.0
+  version: 1.1.0
   registered_scope: Part V — Comments on Jewish History within the complete argument
+
 status:
-  lifecycle: REGISTERED_SOURCE_IDENTITY
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
   certification: NOT_CERTIFIED
   source_text_admission: NOT_REQUESTED
-  reviewed_witness: NOT_YET_REGISTERED
+  reviewed_witness: CORPUS-WIT-109
   independent_sequential_study: NOT_YET_COMPLETED
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: a39061ee4784677de26a74bbea9e56f6f2b45a64
+  reason: >
+    Register the complete collected item in the reviewed Studies in Platonic Political
+    Philosophy PDF, including original-publication evidence, printed and PDF page locators,
+    container fingerprint, searchable-text condition, and page-image authority. Preserve
+    independent sequential reconstruction, source-level findings, doctrine, migration,
+    activation, and predecessor transition as incomplete or unauthorized.
+
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
   active_predecessor_source_sequence: 9
   corpus_registry: corpus/index.yaml
   corpus_source_id: CORPUS-SRC-109
   governing_problem: theologico-political
+  adjacent_problem: athens-vs-jerusalem
   preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  witness_priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
+
 verified_documentary_facts:
-  - The active predecessor identifies this work, date, sequence position, and registered Part V scope.
-  - The SPPP collection registry places Jerusalem and Athens in the posthumous collection, but item-level witness verification remains pending.
+  - The active predecessor identifies this work, its 1967 date, sequence position, and registered Part V scope.
+  - The complete collected item appears in Studies in Platonic Political Philosophy under the title Jerusalem and Athens — Some Preliminary Reflections.
+  - The item occupies printed pages 147 through 173 and PDF pages 151 through 177, counted one-based.
+  - The opening-page reprint notice identifies The City College Papers, no. 6, The City College of New York, 1967, as the prior publication.
+  - The reviewed container is the University of Chicago Press 1983 posthumous collection.
+
+reviewed_witness:
+  witness_id: CORPUS-WIT-109
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  container_source_id: CORPUS-SRC-002
+  container_witness_id: CORPUS-WIT-001
+  container_title: Studies in Platonic Political Philosophy
+  container_publication:
+    publisher: University of Chicago Press
+    year: 1983
+  original_publication_evidence:
+    publication: The City College Papers
+    issue: no. 6
+    institution: The City College of New York
+    year: 1967
+    evidence_location: opening-page reprint notice
+  printed_page_range:
+    start: 147
+    end: 173
+  pdf_page_range_one_based:
+    start: 151
+    end: 177
+  local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+  container_page_count: 263
+  container_file_size_bytes: 12551057
+  container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+  text_condition: SEARCHABLE_TEXT_WITH_LAYOUT_AND_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_CONTAINER
+  edition_limit: >
+    This witness is the 1983 collected reprint. The original 1967 City College Papers
+    printing has not been separately reviewed or compared for variant readings.
+
 predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_ITEM_WITNESS
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOW_BOUND_TO_A_REVIEWED_ITEM_WITNESS_BUT_NOT_YET_RETESTED_BY_INDEPENDENT_SEQUENTIAL_STUDY
   statement: >
     Presents Jerusalem and Athens as comprehensive alternatives and examines how Jewish
     history becomes intelligible within, but does not automatically decide between, rival
     providential and philosophic accounts.
-  preservation_rule: This derivative statement is not independently confirmed or certified here.
-publication_and_witness_condition:
-  publication_venue: UNVERIFIED_AT_ITEM_LEVEL
-  edition: POSTHUMOUS_COLLECTION_ITEM_KNOWN_ITEM_LEVEL_WITNESS_NOT_REGISTERED
-  pagination: UNVERIFIED_AT_ITEM_LEVEL
-  local_file: NOT_REGISTERED_AS_ITEM_WITNESS
-  fingerprint: NOT_AVAILABLE
-  text_condition: NOT_ASSESSED_AT_ITEM_LEVEL
-  locator_reproducibility: INCOMPLETE
+  preservation_rule: >
+    Witness registration makes the complete item reproducibly available for testing. It
+    does not independently confirm, revise, promote, or certify the predecessor statement.
+
 source_classification:
   author_relation: PRIMARY_STRAUSS_WRITING
-  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_ITEM_WITNESS
-  analytical_use: ORIENTATION_ONLY_UNTIL_ITEM_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+  documentary_rank: QUALIFIED_PRIMARY_STRAUSS_ITEM_WITH_REVIEWED_COLLECTED_WITNESS
+  analytical_use: READY_FOR_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  independence_limit: >
+    The reviewed item is a witness to Strauss's essay. It is not an independent biblical,
+    Platonic, prophetic, historical, or theological witness to the alternatives discussed.
+
 required_distinctions:
   - Jerusalem from Athens as comprehensive alternatives
   - Jewish history from providential proof
-  - collection-level witness from item-level reconstruction
-  - registered Part V scope from the complete argument
+  - complete essay from registered Part V scope
+  - original 1967 publication from the reviewed 1983 collected reprint
+  - collection title and order from the complete argument of this item
+  - Cropsey's editorial provenance and Pangle's secondary introduction from Strauss's essay
+  - item-witness registration from independent sequential reconstruction
   - Athens vs Jerusalem jurisdiction from the broader Theologico-Political problem
+
 prohibitions:
   - Do not let the registered Part V scope stand for the complete essay.
   - Do not treat historical persistence as proof of providence.
-  - Do not count collection-level reading as independent item-level reconstruction.
-  - Do not certify doctrine, migration, or activation.
+  - Do not count the collection, predecessor, or collection-level study as independent corroboration.
+  - Do not let Pangle's introduction govern Strauss's argument.
+  - Do not infer original-edition wording where the 1967 printing has not been compared.
+  - Do not treat reviewed-witness registration as source-study completion.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
+
 next_required_actions:
-  - register the complete item within a reviewed witness with stable locators
-  - reconstruct the complete argument and then the registered Part V scope
-  - compare source-level findings with both brother and adjacent problem jurisdictions
+  - conduct an independent sequential reading of printed pages 147 through 173
+  - reconstruct the complete essay before isolating the registered Part V contribution
+  - classify source-level findings by documentary status and precise locator
+  - independently reconstruct relevant biblical, Platonic, prophetic, and historical witnesses before comparative ranking
+  - compare source-level findings with both the active predecessor and Athens-vs-Jerusalem successor without silent harmonization
+
 termination:
   source_identity_state: REGISTERED
-  reviewed_witness_state: MISSING
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-109
+  locator_state: REPRODUCIBLE_FOR_REVIEWED_CONTAINER
+  original_edition_comparison: PENDING
   study_state: INCOMPLETE
   certification: NOT_CERTIFIED
   successor_effect: NONE

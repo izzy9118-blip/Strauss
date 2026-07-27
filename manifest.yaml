@@ -6,7 +6,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 1.0.0
+  version: 1.1.0
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
@@ -23,15 +23,14 @@ status:
     certification, or readiness for unrestricted ministerial reasoning.
 
 revision_history:
-  predecessor_version: 0.9.0
-  predecessor_blob_sha: ba51a6b9c657f18cd787a66acceccd8d87a090dc
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 32761c1b98214bb991d2a0c6d22a926cdde824bb
   reason: >
-    Register bounded item-level source identities for all nineteen writings in the active
-    Theologico-Political predecessor basis and synchronize the operational interface with
-    corpus registry v1.4.0. Preserve the distinction between complete identity registration
-    and absent reviewed item witnesses, incomplete independent sequential studies,
-    unverified derivative predecessor claims, doctrinal noncertification, migration
-    incompleteness, successor nonactivation, and active predecessor authority.
+    Register CORPUS-WIT-109 as the first reviewed item witness in the nineteen-source
+    Theologico-Political sequence and synchronize the operational interface with corpus
+    registry v1.5.0. Preserve all nineteen source identities, eighteen missing item witnesses,
+    nineteen incomplete independent studies, derivative predecessor claims, doctrinal and
+    migration noncertification, successor nonactivation, and active predecessor authority.
 
 purpose: >
   Provide one compact, machine-readable entry point through which a runtime can load
@@ -41,7 +40,7 @@ purpose: >
 
 audit:
   path: audits/operational-completeness.yaml
-  version: 1.8.0
+  version: 1.9.0
   classification_vocabulary:
     - SUBSTANTIVELY_RECONSTRUCTED
     - PARTIALLY_RECONSTRUCTED
@@ -59,8 +58,8 @@ component_completion:
   problem_bundle_loader: PARTIALLY_RECONSTRUCTED_READ_ONLY_BUNDLE_SUPPORT
   corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-  reviewed_source_witnesses: SPPP_SA_AND_PLATO_APOLOGY_REGISTERED_WITH_RECORDED_LIMITS
-  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_REGISTERED_WITHOUT_REVIEWED_ITEM_WITNESSES
+  reviewed_source_witnesses: SPPP_SA_PLATO_APOLOGY_AND_JERUSALEM_ATHENS_ITEM_REGISTERED_WITH_RECORDED_LIMITS
+  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_1_OF_19_REVIEWED_ITEM_WITNESSES_0_OF_19_INDEPENDENT_STUDIES
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
@@ -68,14 +67,10 @@ component_completion:
   corpus_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_REVIEWED_WITNESS_AND_FULL_TP_IDENTITY_STATUS_CONTRACTS_VALIDATED_SOURCE_APPLICATION_INCOMPLETE
+  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_AND_MIXED_TP_WITNESS_STATE_CONTRACTS_VALIDATED_SOURCE_APPLICATION_INCOMPLETE
 
 source_hierarchy:
-  tiers:
-    - primary_external
-    - primary_contemporaneous
-    - secondary_about_own_primary_acts
-    - secondary_interpretive
+  tiers: [primary_external, primary_contemporaneous, secondary_about_own_primary_acts, secondary_interpretive]
   rule: >
     Primary sources govern secondary sources where primary sources are available.
     Source type, edition, translation, editorial condition, and documentary limits
@@ -88,13 +83,7 @@ proposition_kinds:
   - comparative_question
   - unresolved_uncertainty
 
-load_order:
-  - method
-  - hermeneutics
-  - problems
-  - speech
-  - corpus
-  - findings
+load_order: [method, hermeneutics, problems, speech, corpus, findings]
 
 problems:
   - canonical_key: nomos-vs-physis
@@ -197,34 +186,39 @@ speech:
 corpus:
   index: corpus/index.yaml
   loader: corpus_registry.py
-  registry_version: 1.4.0
+  registry_version: 1.5.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   reviewed_witnesses:
     - {source: Studies in Platonic Political Philosophy, witness_id: CORPUS-WIT-001}
     - {source: Plato's Apology of Socrates, witness_id: CORPUS-WIT-002}
-    - source: Socrates and Aristophanes
-      witness_id: CORPUS-WIT-003
-      source_status: studies/socrates-and-aristophanes/source-status.yaml
-      bibliographic_rule: ORIGINAL_1966_REVIEWED_1980_FILENAME_YEAR_NONAUTHORITATIVE
-      text_rule: PAGE_IMAGES_GOVERN_WHERE_OCR_IS_UNCERTAIN
+    - {source: Socrates and Aristophanes, witness_id: CORPUS-WIT-003}
+    - source: Jerusalem and Athens
+      witness_id: CORPUS-WIT-109
+      container_witness_id: CORPUS-WIT-001
+      printed_pages: 147-173
+      pdf_pages_one_based: 151-177
+      original_publication: The City College Papers, no. 6, The City College of New York, 1967
+      item_status: studies/theologico-political/jerusalem-and-athens/source-status.yaml
+      text_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
   theologico_political_item_level_statuses:
     registered_count: 19
     total_predecessor_sources: 19
     remaining_without_item_level_status: 0
-    reviewed_witness_count: 0
+    reviewed_witness_count: 1
+    remaining_without_reviewed_item_witness: 18
     independent_sequential_study_count: 0
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     root: studies/theologico-political/
+    priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
     rule: >
-      Complete source-identity registration is not reviewed-witness completion, source-level
-      reconstruction, independent corroboration, doctrinal certification, or migration completion.
+      Complete source-identity registration and one reviewed item witness do not constitute
+      independent reconstruction, corroboration, doctrinal certification, or migration completion.
   limitation: >
-    All nineteen active Theologico-Political predecessor writings now have bounded
-    item-level source-identity status records, but those records do not by themselves provide
-    reviewed item witnesses, stable locators, fingerprints, or independent sequential studies.
-    The wider Strauss corpus, edition comparisons, translations, independent witnesses, and
-    source-text access remain incomplete.
+    All nineteen predecessor writings have bounded item identities, but only Jerusalem and
+    Athens has a reviewed item witness and none has a completed independent sequential item
+    study in this production sequence. The wider corpus, edition comparisons, translations,
+    independent witnesses, and source-text access remain incomplete.
 
 findings:
   index: findings/index.yaml
@@ -251,15 +245,15 @@ runtime:
     - load bounded operational context
     - load complete read-only foundational problem bundles
     - load typed current-state corpus and findings registries
-    - validate reviewed-witness metadata against source-status records
-    - validate all nineteen bounded Theologico-Political item-level source identities and missing-witness conditions
+    - validate reviewed-witness metadata and item locators against source-status records
+    - validate all nineteen bounded Theologico-Political item identities and mixed witness states
     - validate typed speech requests
     - build non-authoritative candidate report structures
   prohibited_operations:
     - admit or distribute source texts through a registry
     - allow a local filename to override title-page or copyright-page evidence
     - treat OCR as authoritative where page images disagree or remain unclear
-    - treat source-identity registration as independent source reconstruction
+    - treat item-witness registration as independent source reconstruction
     - promote a finding beyond its record-local evidence status
     - certify doctrine, wisdom, or migration
     - activate successor problems
