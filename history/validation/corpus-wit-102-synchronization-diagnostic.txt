@@ -1,0 +1,2 @@
+corpus_registry.py expected one occurrence, found 0: '    "studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.y'
+exit_code=1
