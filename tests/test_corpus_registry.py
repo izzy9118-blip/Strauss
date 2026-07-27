@@ -9,7 +9,7 @@ class CorpusRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_repository_state(self) -> None:
         registry = corpus_registry.load_registry()
         self.assertEqual(corpus_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.0.0")
+        self.assertEqual(registry["identity"]["version"], "1.1.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE",
@@ -42,6 +42,7 @@ class CorpusRegistryTests(unittest.TestCase):
             corpus_registry._actual_study_tree_paths(),
             corpus_registry.EXPECTED_STUDY_TREE_PATHS,
         )
+        self.assertEqual(len(corpus_registry.EXPECTED_STUDY_TREE_PATHS), 10)
 
     def test_nineteen_theologico_political_sources_are_preserved_verbatim_by_identity(self) -> None:
         registry = corpus_registry.load_registry()
@@ -76,6 +77,46 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertIn("projected essay on Plato's Gorgias", limits)
         self.assertIn("Pangle", limits)
         self.assertIn("secondary", limits)
+
+    def test_socrates_and_aristophanes_witness_is_bibliographically_grounded(self) -> None:
+        registry = corpus_registry.load_registry()
+        source = next(
+            item
+            for item in registry["source_entities"]
+            if item["source_id"] == "CORPUS-SRC-001"
+        )
+        witness = next(
+            item
+            for item in registry["reviewed_witnesses"]
+            if item["witness_id"] == "CORPUS-WIT-003"
+        )
+        status = corpus_registry.load_yaml(
+            corpus_registry.ROOT
+            / "studies"
+            / "socrates-and-aristophanes"
+            / "source-status.yaml"
+        )
+        self.assertEqual(source["source_status_record"], "CORPUS-STATUS-003")
+        self.assertEqual(source["reviewed_witnesses"], ["CORPUS-WIT-003"])
+        self.assertEqual(witness["page_count"], 321)
+        self.assertEqual(witness["file_size_bytes"], 25818895)
+        self.assertEqual(
+            witness["sha256"],
+            "1b74826f62bbc70d887e0f224b553c3bb521c55688ae9ba28c455ee080df9fa6",
+        )
+        self.assertEqual(witness["page_count"], status["reviewed_witness"]["page_count"])
+        self.assertEqual(
+            witness["filename_year_status"],
+            "NONAUTHORITATIVE_AND_CONTRADICTED_BY_TITLE_AND_COPYRIGHT_PAGES",
+        )
+        self.assertEqual(
+            witness["ocr_rule"],
+            "PAGE_IMAGES_GOVERN_WORDING_WHERE_OCR_IS_UNCERTAIN",
+        )
+        limits = "\n".join(source["limits"])
+        self.assertIn("1980 paperback", limits)
+        self.assertIn("1966 Basic Books", limits)
+        self.assertIn("filename year", limits)
 
     def test_plato_apology_translation_limit_is_explicit(self) -> None:
         registry = corpus_registry.load_registry()
