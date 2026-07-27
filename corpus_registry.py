@@ -57,6 +57,7 @@ BASE_REQUIRED_STUDY_PATHS = {
     "studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml",
     "studies/theologico-political/review-talmon-nature-of-jewish-history/reviewed-witness.yaml",
     "studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml",
+    "studies/theologico-political/preface-to-spinozas-critique-of-religion/reviewed-witness.yaml",
 }
 
 REQUIRED_TOP_LEVEL = {
@@ -121,6 +122,20 @@ COMPLETE_TP_ITEMS: dict[str, dict[str, Any]] = {
         ),
         "printed_page_range": {"start": 232, "end": 232},
         "pdf_page_range_one_based": {"start": 236, "end": 236},
+    },
+}
+
+WITNESS_ONLY_TP_ITEMS: dict[str, dict[str, Any]] = {
+    "CORPUS-SRC-102": {
+        "status_id": "CORPUS-STATUS-102",
+        "witness_id": "CORPUS-WIT-102",
+        "witness_record_path": (
+            "studies/theologico-political/preface-to-spinozas-critique-of-religion/"
+            "reviewed-witness.yaml"
+        ),
+        "printed_page_range": {"start": 137, "end": 180},
+        "pdf_page_range_one_based": "PENDING_DIRECT_OFFSET_VERIFICATION",
+        "platform_object_identifier": "file_0000000073c081fd9fb65f9ea7552cde",
     },
 }
 
@@ -319,6 +334,78 @@ def _validate_completed_tp_item(
             errors.append(f"{witness_id} record must preserve successor_effect NONE")
 
 
+def _validate_witness_only_tp_item(
+    registry: dict[str, Any],
+    source: dict[str, Any],
+    status_record: dict[str, Any],
+    source_id: str,
+    errors: list[str],
+) -> None:
+    spec = WITNESS_ONLY_TP_ITEMS[source_id]
+    witness_id = spec["witness_id"]
+    state = status_record.get("status", {})
+    termination = status_record.get("termination", {})
+
+    if state.get("reviewed_witness") != witness_id:
+        errors.append(f"{spec['status_id']} must retain {witness_id}")
+    if state.get("independent_sequential_study") != "NOT_YET_COMPLETED":
+        errors.append(f"{spec['status_id']} must preserve incomplete sequential study")
+    if source.get("reviewed_witnesses") != [witness_id]:
+        errors.append(f"{source_id} must list {witness_id}")
+    if source.get("study_records") not in (None, []):
+        errors.append(f"{source_id} may not list a study before reconstruction")
+
+    witness = _find_record(registry.get("reviewed_witnesses", []), "witness_id", witness_id)
+    if not isinstance(witness, dict):
+        errors.append(f"{witness_id} is missing")
+        return
+    if witness.get("source_id") != source_id:
+        errors.append(f"{witness_id} source binding mismatch")
+    if witness.get("witness_class") != "PLATFORM_REFERENCE_WITNESS":
+        errors.append(f"{witness_id} must retain platform-reference witness class")
+    for field in ("printed_page_range", "pdf_page_range_one_based", "platform_object_identifier"):
+        if witness.get(field) != spec[field]:
+            errors.append(f"{witness_id} {field} mismatch")
+    if witness.get("byte_custody_state") != "NOT_EXPOSED_TO_REPOSITORY":
+        errors.append(f"{witness_id} must preserve absent repository byte custody")
+    if witness.get("sha256_state") != "UNAVAILABLE_WITH_REASON_PRESERVED":
+        errors.append(f"{witness_id} may not fabricate cryptographic identity")
+
+    reviewed = status_record.get("reviewed_witness", {})
+    if not isinstance(reviewed, dict) or reviewed.get("witness_id") != witness_id:
+        errors.append(f"{spec['status_id']} reviewed_witness block mismatch")
+    else:
+        for field in ("printed_page_range", "pdf_page_range_one_based", "platform_object_identifier"):
+            if witness.get(field) != reviewed.get(field):
+                errors.append(f"{witness_id} {field} mismatch between registry and status")
+
+    if termination.get("reviewed_witness_state") != "REGISTERED_QUALIFIED_PLATFORM_REFERENCE":
+        errors.append(f"{spec['status_id']} witness state mismatch")
+    if termination.get("study_state") != "INCOMPLETE":
+        errors.append(f"{spec['status_id']} study state must remain INCOMPLETE")
+    if termination.get("independent_corroboration") != "INCOMPLETE":
+        errors.append(f"{spec['status_id']} must preserve incomplete corroboration")
+    if termination.get("certification") != "NOT_CERTIFIED":
+        errors.append(f"{spec['status_id']} must remain NOT_CERTIFIED")
+    if termination.get("successor_effect") != "NONE":
+        errors.append(f"{spec['status_id']} may not affect successor activation")
+
+    witness_record_path = spec["witness_record_path"]
+    if witness.get("witness_record_path") != witness_record_path:
+        errors.append(f"{witness_id} witness record path mismatch")
+    witness_record = load_yaml(_resolve(witness_record_path))
+    if witness_record.get("identity", {}).get("witness_id") != witness_id:
+        errors.append(f"{witness_id} record identity mismatch")
+    if witness_record.get("status", {}).get("witness_class") != "PLATFORM_REFERENCE_WITNESS":
+        errors.append(f"{witness_id} record witness class mismatch")
+    if witness_record.get("status", {}).get("certification") != "NOT_CERTIFIED":
+        errors.append(f"{witness_id} record must remain NOT_CERTIFIED")
+    if witness_record.get("status", {}).get("successor_effect") != "NONE":
+        errors.append(f"{witness_id} record must preserve successor_effect NONE")
+    if witness_record.get("byte_identity", {}).get("sha256_state") != "UNAVAILABLE_WITH_REASON_PRESERVED":
+        errors.append(f"{witness_id} record must preserve missing digest")
+
+
 def _validate_tp_sources_and_statuses(
     registry: dict[str, Any], predecessor_sources: list[dict[str, Any]], errors: list[str]
 ) -> None:
@@ -405,6 +492,8 @@ def _validate_tp_sources_and_statuses(
 
         if source_id in COMPLETE_TP_ITEMS:
             _validate_completed_tp_item(registry, source, status_record, source_id, errors)
+        elif source_id in WITNESS_ONLY_TP_ITEMS:
+            _validate_witness_only_tp_item(registry, source, status_record, source_id, errors)
         else:
             if state.get("reviewed_witness") != "NOT_YET_REGISTERED":
                 errors.append(f"{status_id} must remain without a reviewed witness")
@@ -430,8 +519,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.8.0":
-        errors.append("corpus registry identity.version must be 1.8.0")
+    if identity.get("version") != "1.9.0":
+        errors.append("corpus registry identity.version must be 1.9.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
@@ -456,7 +545,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
 
     expected_counts = {
         "source entities": (len(source_ids), 22),
-        "reviewed witnesses": (len(witness_ids), 6),
+        "reviewed witnesses": (len(witness_ids), 7),
         "source-status records": (len(status_ids), 22),
         "study records": (len(study_ids), 10),
         "corpus gaps": (len(gap_ids), 7),
@@ -524,7 +613,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "problem_witness_registries_registered": len(problem_registries) if isinstance(problem_registries, list) else 0,
         "theologico_political_predecessor_sources_registered": len(tp_entities),
         "theologico_political_item_level_statuses_registered": 19,
-        "theologico_political_reviewed_item_witnesses_registered": 3,
+        "theologico_political_reviewed_item_witnesses_registered": 4,
         "theologico_political_independent_item_studies_registered": 3,
         "current_studies_tree_yaml_records_accounted_for": len(actual_studies),
         "exhaustive_within_declared_scope": True,
@@ -540,8 +629,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         errors.append("registry termination state must preserve bounded current-state completion")
     if termination.get("theologico_political_identity_registration_state") != "COMPLETE_19_OF_19":
         errors.append("TP identity registration must remain COMPLETE_19_OF_19")
-    if termination.get("theologico_political_reviewed_witness_state") != "INCOMPLETE_3_OF_19":
-        errors.append("TP reviewed-witness state must be INCOMPLETE_3_OF_19")
+    if termination.get("theologico_political_reviewed_witness_state") != "INCOMPLETE_4_OF_19":
+        errors.append("TP reviewed-witness state must be INCOMPLETE_4_OF_19")
     if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_3_OF_19":
         errors.append("TP independent-study state must be INCOMPLETE_3_OF_19")
     if termination.get("corpus_state") != "OPEN_AND_MATERIALLY_INCOMPLETE":

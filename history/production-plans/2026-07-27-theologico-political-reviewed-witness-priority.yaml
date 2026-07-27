@@ -4,23 +4,20 @@ record_type: reviewed_witness_priority_schedule
 identity:
   id: TP-REVIEWED-WITNESS-PRIORITY-001
   title: Theologico-Political Reviewed-Witness Priority Schedule
-  version: 1.4.0
+  version: 1.5.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_SCHEDULE
   certification: NOT_CERTIFIED
   identity_registration: COMPLETE_19_OF_19
-  reviewed_witness_completion: INCOMPLETE_3_OF_19
+  reviewed_witness_completion: INCOMPLETE_4_OF_19
   independent_sequential_study_completion: INCOMPLETE_3_OF_19
 
 revision_history:
-  predecessor_version: 1.3.0
-  predecessor_blob_sha: 14a4149011becc9a3fa12f95ba804ab7b3ea6c7e
-  reason: >
-    Record completion of TALMON-STUDY-001 after CORPUS-WIT-111 registration, preserve its
-    provisional and noncorroborating status, and advance the next acquisition target to
-    CORPUS-SRC-102 without ranking truth or altering predecessor authority.
-
+  predecessor_version: 1.4.0
+  predecessor_blob_sha: 053d7c717fa177451b4342a2fbd7e07b9f3bef41
+  reason: Record qualified platform-reference registration of CORPUS-WIT-102, preserve its incomplete sequential study and
+    missing byte identity, and advance the next acquisition target to CORPUS-SRC-103 without ranking truth.
 purpose: >
   Order reviewed-witness and sequential-study production for the nineteen source identities
   by documentary availability, foundational jurisdiction, source-asymmetry repair,
@@ -35,10 +32,14 @@ governing_records:
   process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
 
 criteria:
-  - {id: DOCUMENTARY_AVAILABILITY, rule: Prefer a lawful reviewed witness already available with stable bibliographic evidence and locators.}
-  - {id: FOUNDATIONAL_JURISDICTION, rule: Prefer sources that directly govern the reason-revelation confrontation and its political form.}
-  - {id: SOURCE_ASYMMETRY_REPAIR, rule: Prefer sources represented only through derivative predecessor or collection-level synthesis.}
-  - {id: INDEPENDENT_RECONSTRUCTION_READINESS, rule: Prefer an item that can be isolated and read sequentially without importing adjacent essays.}
+  - {id: DOCUMENTARY_AVAILABILITY, rule: Prefer a lawful reviewed witness already available with stable bibliographic evidence
+      and locators.}
+  - {id: FOUNDATIONAL_JURISDICTION, rule: Prefer sources that directly govern the reason-revelation confrontation and its
+      political form.}
+  - {id: SOURCE_ASYMMETRY_REPAIR, rule: Prefer sources represented only through derivative predecessor or collection-level
+      synthesis.}
+  - {id: INDEPENDENT_RECONSTRUCTION_READINESS, rule: Prefer an item that can be isolated and read sequentially without importing
+      adjacent essays.}
   - {id: NONDUPLICATION, rule: Do not mistake records derived from one witness for independent corroboration.}
   - {id: LOCATOR_REPRODUCIBILITY, rule: Prefer witnesses with stable printed pagination and recorded container fingerprint.}
 
@@ -92,10 +93,20 @@ priority_groups:
         witness_locator: {container_witness_id: CORPUS-WIT-001, printed_pages: 232, pdf_pages_one_based: 236}
         next_action: ORIGINAL_EDITION_COMPARISON_AND_INDEPENDENT_TALMON_WORK_RECONSTRUCTION
 
+      - rank: 4
+        source_id: CORPUS-SRC-102
+        status_id: CORPUS-STATUS-102
+        title: Preface to Spinoza's Critique of Religion
+        witness_id: CORPUS-WIT-102
+        state: QUALIFIED_PLATFORM_REFERENCE_WITNESS_REGISTERED_STUDY_PENDING
+        witness_locator:
+          platform_object_identifier: file_0000000073c081fd9fb65f9ea7552cde
+          printed_pages: 137-180
+          pdf_pages_one_based: PENDING_DIRECT_OFFSET_VERIFICATION
+        next_action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
   - priority: 2
     designation: FOUNDATIONAL_ACQUISITION_TARGETS
     items:
-      - {rank: 4, source_id: CORPUS-SRC-102, title: "Preface to Spinoza's Critique of Religion", next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 5, source_id: CORPUS-SRC-103, title: "How to Study Spinoza's Theologico-Political Treatise", next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 6, source_id: CORPUS-SRC-108, title: On the Interpretation of Genesis, next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 7, source_id: CORPUS-SRC-113, title: Introduction to Persecution and the Art of Writing, next_action: ACQUIRE_AND_REGISTER_WITNESS}
@@ -116,36 +127,46 @@ priority_groups:
     designation: ARCHITECTURAL_AND_COMPARATIVE_DEEPENING
     items:
       - {rank: 16, source_id: CORPUS-SRC-110, title: "What Is Political Philosophy?", next_action: ACQUIRE_AND_REGISTER_WITNESS}
-      - {rank: 17, source_id: CORPUS-SRC-118, title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays, next_action: ACQUIRE_AND_REGISTER_WITNESS}
+      - {rank: 17, source_id: CORPUS-SRC-118, title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical
+          Essays, next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 18, source_id: CORPUS-SRC-119, title: "Restatement on Xenophon's Hiero", next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 19, source_id: CORPUS-SRC-106, title: Freud on Moses and Monotheism, next_action: ACQUIRE_AND_REGISTER_WITNESS}
 
 selection:
-  completed_source_ids: [CORPUS-SRC-109, CORPUS-SRC-105, CORPUS-SRC-111]
-  completed_witness_ids: [CORPUS-WIT-109, CORPUS-WIT-105, CORPUS-WIT-111]
-  completed_study_ids: [JA-STUDY-001, COHEN-STUDY-001, TALMON-STUDY-001]
-  selection_state: THREE_REVIEWED_ITEM_WITNESSES_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
+  completed_source_ids:
+    - CORPUS-SRC-109
+    - CORPUS-SRC-105
+    - CORPUS-SRC-111
+    - CORPUS-SRC-102
+  completed_witness_ids:
+    - CORPUS-WIT-109
+    - CORPUS-WIT-105
+    - CORPUS-WIT-111
+    - CORPUS-WIT-102
+  completed_study_ids:
+    - JA-STUDY-001
+    - COHEN-STUDY-001
+    - TALMON-STUDY-001
+  selection_state: FOUR_REVIEWED_ITEM_WITNESSES_THREE_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
   completed_units:
-    - source status updated through complete provisional study for all three items
-    - CORPUS-WIT-109, CORPUS-WIT-105, CORPUS-WIT-111, and CORPUS-STUDY-008 through CORPUS-STUDY-010 registered
-    - FINDSET-008 through FINDSET-010 and FINDSET-111 through FINDSET-118 registered
-    - complete essays reconstructed before problem-local isolation
-    - Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns jurisdictions preserved without absorption
+    - source status updated through complete provisional study for CORPUS-SRC-105, CORPUS-SRC-109, and CORPUS-SRC-111
+    - CORPUS-WIT-102 registered as a qualified platform-reference witness with study pending
+    - CORPUS-STUDY-008 through CORPUS-STUDY-010 and FINDSET-008 through FINDSET-010 remain registered
+    - Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns jurisdictions remain preserved without absorption
   limits:
     - original 1967, 1972, and 1957 edition comparisons remain pending
     - the studies are not independent biblical, Greek, Cohenian, Talmonian, or Kantian corroboration
     - no doctrine, migration, or successor certification
 
 next_item_witness_unit:
-  source_id: CORPUS-SRC-102
-  title: Preface to Spinoza's Critique of Religion
+  source_id: CORPUS-SRC-103
+  title: How to Study Spinoza's Theologico-Political Treatise
   action: ACQUIRE_AND_REGISTER_REVIEWED_WITNESS
   required_preservations:
     - lawful source acquisition and stable publication provenance
-    - complete-item locators and witness fingerprint
+    - complete-item locators and witness identity
     - distinction between source identity, reviewed witness, study, and predecessor synthesis
     - witness registration before independent sequential reconstruction
-
 prohibitions:
   - Do not treat collection availability or a source-specific study as independent corroboration.
   - Do not let Pangle's Introduction govern Strauss's item argument.
@@ -155,7 +176,14 @@ prohibitions:
 
 termination:
   schedule_state: ACTIVE
-  reviewed_item_witness_registration: COMPLETE_FOR_CORPUS_WIT_105_CORPUS_WIT_109_AND_CORPUS_WIT_111
+  reviewed_item_witness_registration: COMPLETE_FOR_CORPUS_WIT_102_CORPUS_WIT_105_CORPUS_WIT_109_AND_CORPUS_WIT_111
   independent_sequential_reconstruction: COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_JA_STUDY_001_AND_TALMON_STUDY_001
-  next_item_witness: CORPUS-SRC-102
+  next_item_witness: CORPUS-SRC-103
   certification: NOT_CERTIFIED
+  next_item_study: CORPUS-SRC-102
+next_item_study_unit:
+  source_id: CORPUS-SRC-102
+  witness_id: CORPUS-WIT-102
+  title: Preface to Spinoza's Critique of Religion
+  action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  registered_scope: printed pages 137-180 of the 1997 SUNY collected platform-reference witness
