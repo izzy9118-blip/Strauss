@@ -64,6 +64,11 @@ class TalmonIntegrationCompletionTests(unittest.TestCase):
         self.assertEqual(source_status["termination"]["original_edition_comparison"], "PENDING")
         self.assertEqual(source_status["termination"]["reviewed_work_reconstruction"], "INCOMPLETE")
 
+    def test_generated_python_cache_artifacts_are_excluded(self) -> None:
+        exclusions = (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
+        self.assertIn("__pycache__/", exclusions)
+        self.assertIn("*.py[cod]", exclusions)
+
 
 if __name__ == "__main__":
     unittest.main()
