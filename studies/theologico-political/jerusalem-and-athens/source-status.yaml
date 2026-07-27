@@ -1,0 +1,67 @@
+schema_version: 1.0
+document_type: source_status_record
+identity:
+  status_id: CORPUS-STATUS-109
+  corpus_source_id: CORPUS-SRC-109
+  canonical_title: Jerusalem and Athens
+  author: Leo Strauss
+  date: 1967
+  version: 1.0.0
+  registered_scope: Part V — Comments on Jewish History within the complete argument
+status:
+  lifecycle: REGISTERED_SOURCE_IDENTITY
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: NOT_YET_REGISTERED
+  independent_sequential_study: NOT_YET_COMPLETED
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 9
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-109
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+verified_documentary_facts:
+  - The active predecessor identifies this work, date, sequence position, and registered Part V scope.
+  - The SPPP collection registry places Jerusalem and Athens in the posthumous collection, but item-level witness verification remains pending.
+predecessor_contribution_record:
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_ITEM_WITNESS
+  statement: >
+    Presents Jerusalem and Athens as comprehensive alternatives and examines how Jewish
+    history becomes intelligible within, but does not automatically decide between, rival
+    providential and philosophic accounts.
+  preservation_rule: This derivative statement is not independently confirmed or certified here.
+publication_and_witness_condition:
+  publication_venue: UNVERIFIED_AT_ITEM_LEVEL
+  edition: POSTHUMOUS_COLLECTION_ITEM_KNOWN_ITEM_LEVEL_WITNESS_NOT_REGISTERED
+  pagination: UNVERIFIED_AT_ITEM_LEVEL
+  local_file: NOT_REGISTERED_AS_ITEM_WITNESS
+  fingerprint: NOT_AVAILABLE
+  text_condition: NOT_ASSESSED_AT_ITEM_LEVEL
+  locator_reproducibility: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_WRITING
+  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_ITEM_WITNESS
+  analytical_use: ORIENTATION_ONLY_UNTIL_ITEM_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+required_distinctions:
+  - Jerusalem from Athens as comprehensive alternatives
+  - Jewish history from providential proof
+  - collection-level witness from item-level reconstruction
+  - registered Part V scope from the complete argument
+  - Athens vs Jerusalem jurisdiction from the broader Theologico-Political problem
+prohibitions:
+  - Do not let the registered Part V scope stand for the complete essay.
+  - Do not treat historical persistence as proof of providence.
+  - Do not count collection-level reading as independent item-level reconstruction.
+  - Do not certify doctrine, migration, or activation.
+next_required_actions:
+  - register the complete item within a reviewed witness with stable locators
+  - reconstruct the complete argument and then the registered Part V scope
+  - compare source-level findings with both brother and adjacent problem jurisdictions
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: MISSING
+  study_state: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
