@@ -1,0 +1,21 @@
+schema_version: 1.0
+record_type: inquiry_method
+identity: {key: reconstruct-alternatives, version: 1.0.0}
+source_records:
+  - protocols/evidence-classification.yaml
+  - protocols/inference-discipline.yaml
+  - protocols/claimant-to-wisdom.yaml
+objective: >
+  Reconstruct each serious alternative in its strongest available form before comparison,
+  criticism, synthesis, or ranking.
+steps:
+  - identify each claimant, authority, way of life, or explanatory alternative
+  - reconstruct each from its own primary sources where available
+  - distinguish self-description from demonstrated deed and consequence
+  - state the burden each alternative places on its rivals
+  - preserve asymmetries of evidence, scope, and source status
+  - compare only after independent reconstruction is recorded
+failure_conditions:
+  - forcing one witness to confirm another
+  - treating title, office, success, suffering, or influence as certification
+  - manufacturing a victor where reciprocal burdens remain unmet
