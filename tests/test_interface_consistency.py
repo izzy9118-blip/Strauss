@@ -23,24 +23,15 @@ class InterfaceConsistencyTests(unittest.TestCase):
         mapping = load_yaml("migrations/lean-operational-interface.yaml")
         corpus = load_yaml("corpus/index.yaml")
 
-        self.assertEqual(
-            manifest["audit"]["version"],
-            audit["identity"]["version"],
-        )
-        self.assertEqual(
-            mapping["completion_audit"]["version"],
-            audit["identity"]["version"],
-        )
-        self.assertEqual(
-            manifest["corpus"]["registry_version"],
-            corpus["identity"]["version"],
-        )
+        self.assertEqual(manifest["audit"]["version"], audit["identity"]["version"])
+        self.assertEqual(mapping["completion_audit"]["version"], audit["identity"]["version"])
+        self.assertEqual(manifest["corpus"]["registry_version"], corpus["identity"]["version"])
         self.assertEqual(
             mapping["mappings"]["corpus"]["interface"]["registry_version"],
             corpus["identity"]["version"],
         )
 
-    def test_two_of_nineteen_status_language_matches_registry(self) -> None:
+    def test_nineteen_of_nineteen_status_language_matches_registry(self) -> None:
         manifest = load_yaml("manifest.yaml")
         audit = load_yaml("audits/operational-completeness.yaml")
         mapping = load_yaml("migrations/lean-operational-interface.yaml")
@@ -51,7 +42,7 @@ class InterfaceConsistencyTests(unittest.TestCase):
             for item in corpus["source_status_records"]
             if item["source_id"].startswith("CORPUS-SRC-1")
         ]
-        self.assertEqual(len(item_statuses), 2)
+        self.assertEqual(len(item_statuses), 19)
         self.assertEqual(
             manifest["corpus"]["theologico_political_item_level_statuses"]["registered_count"],
             len(item_statuses),
@@ -66,7 +57,38 @@ class InterfaceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             manifest["corpus"]["theologico_political_item_level_statuses"]["remaining_without_item_level_status"],
-            19 - len(item_statuses),
+            0,
+        )
+        self.assertEqual(
+            corpus["termination"]["theologico_political_identity_registration_state"],
+            "COMPLETE_19_OF_19",
+        )
+
+    def test_identity_completion_does_not_claim_witness_or_study_completion(self) -> None:
+        manifest = load_yaml("manifest.yaml")
+        audit = load_yaml("audits/operational-completeness.yaml")
+        mapping = load_yaml("migrations/lean-operational-interface.yaml")
+        corpus = load_yaml("corpus/index.yaml")
+
+        self.assertEqual(
+            corpus["termination"]["theologico_political_reviewed_witness_state"],
+            "INCOMPLETE",
+        )
+        self.assertEqual(
+            corpus["termination"]["theologico_political_independent_study_state"],
+            "INCOMPLETE",
+        )
+        self.assertEqual(
+            manifest["corpus"]["theologico_political_item_level_statuses"]["reviewed_witness_count"],
+            0,
+        )
+        self.assertEqual(
+            audit["summary"]["theologico_political_item_level_status"]["independently_reconstructed_count_within_this_sequence"],
+            0,
+        )
+        self.assertEqual(
+            mapping["mappings"]["corpus"]["theologico_political_item_level_statuses"]["independent_sequential_study_count"],
+            0,
         )
 
     def test_completion_and_repin_limits_remain_explicit(self) -> None:

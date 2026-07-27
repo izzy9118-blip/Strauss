@@ -6,7 +6,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 0.9.0
+  version: 1.0.0
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
@@ -23,15 +23,15 @@ status:
     certification, or readiness for unrestricted ministerial reasoning.
 
 revision_history:
-  predecessor_version: 0.8.0
-  predecessor_blob_sha: c9295e9d248751e26b837a7922d3f6df375f79c7
+  predecessor_version: 0.9.0
+  predecessor_blob_sha: ba51a6b9c657f18cd787a66acceccd8d87a090dc
   reason: >
-    Synchronize the operational manifest with corpus registry v1.3.0 after registering
-    bounded item-level source identities for the first two writings in the active
-    nineteen-source Theologico-Political predecessor basis. Preserve their missing reviewed
-    witnesses, incomplete independent sequential studies, derivative predecessor claims,
-    open-corpus status, and every doctrinal, migration, activation, predecessor, and
-    Assembly-authority limit.
+    Register bounded item-level source identities for all nineteen writings in the active
+    Theologico-Political predecessor basis and synchronize the operational interface with
+    corpus registry v1.4.0. Preserve the distinction between complete identity registration
+    and absent reviewed item witnesses, incomplete independent sequential studies,
+    unverified derivative predecessor claims, doctrinal noncertification, migration
+    incompleteness, successor nonactivation, and active predecessor authority.
 
 purpose: >
   Provide one compact, machine-readable entry point through which a runtime can load
@@ -41,7 +41,7 @@ purpose: >
 
 audit:
   path: audits/operational-completeness.yaml
-  version: 1.7.0
+  version: 1.8.0
   classification_vocabulary:
     - SUBSTANTIVELY_RECONSTRUCTED
     - PARTIALLY_RECONSTRUCTED
@@ -60,7 +60,7 @@ component_completion:
   corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   reviewed_source_witnesses: SPPP_SA_AND_PLATO_APOLOGY_REGISTERED_WITH_RECORDED_LIMITS
-  theologico_political_item_level_source_statuses: 2_OF_19_REGISTERED_WITHOUT_REVIEWED_WITNESSES
+  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_REGISTERED_WITHOUT_REVIEWED_ITEM_WITNESSES
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
@@ -68,7 +68,7 @@ component_completion:
   corpus_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_REVIEWED_WITNESS_AND_ITEM_LEVEL_SOURCE_STATUS_CONTRACTS_VALIDATED_SOURCE_FIXTURES_INCOMPLETE
+  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_REVIEWED_WITNESS_AND_FULL_TP_IDENTITY_STATUS_CONTRACTS_VALIDATED_SOURCE_APPLICATION_INCOMPLETE
 
 source_hierarchy:
   tiers:
@@ -154,63 +154,35 @@ problems:
 problem_bundle_completion:
   state: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
   loader: problem_bundles.py
-  bundle_members:
-    - constitution
-    - inquiry_profile
-    - witness_registry
-    - relation_record
-    - synthesis_records
+  bundle_members: [constitution, inquiry_profile, witness_registry, relation_record, synthesis_records]
   limitation: >
-    Bundle loading makes the governing records available together and validates identity,
-    relation coverage, non-certification, and path integrity. It does not complete missing
-    witnesses, settle doctrine, certify migrations, activate successors, or confer Assembly authority.
+    Bundle loading validates identity, relation coverage, non-certification, and path integrity.
+    It does not complete missing witnesses, settle doctrine, certify migrations, activate
+    successors, or confer Assembly authority.
 
 hermeneutic_completion:
   state: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
-  limitation: >
-    Contract reconstruction establishes evidentiary and procedural rules. It does not
-    complete their application to every source, work, author, or finding in the corpus.
+  limitation: Contract reconstruction does not complete application to every source, author, or finding.
 
 hermeneutics:
-  - key: literary-concealment
-    path: hermeneutics/literary-concealment.yaml
-    contract_version: STRAUSS-HERMENEUTIC-LC-1
-  - key: whole-and-part
-    path: hermeneutics/whole-and-part.yaml
-    contract_version: STRAUSS-HERMENEUTIC-WP-1
-  - key: speaker-and-author
-    path: hermeneutics/speaker-and-author.yaml
-    contract_version: STRAUSS-HERMENEUTIC-SA-1
-  - key: audience
-    path: hermeneutics/audience.yaml
-    contract_version: STRAUSS-HERMENEUTIC-AUD-1
-  - key: contradiction
-    path: hermeneutics/contradiction.yaml
-    contract_version: STRAUSS-HERMENEUTIC-CON-1
-  - key: historical-and-philosophical-understanding
-    path: hermeneutics/historical-and-philosophical-understanding.yaml
-    contract_version: STRAUSS-HERMENEUTIC-HPU-1
+  - {key: literary-concealment, path: hermeneutics/literary-concealment.yaml, contract_version: STRAUSS-HERMENEUTIC-LC-1}
+  - {key: whole-and-part, path: hermeneutics/whole-and-part.yaml, contract_version: STRAUSS-HERMENEUTIC-WP-1}
+  - {key: speaker-and-author, path: hermeneutics/speaker-and-author.yaml, contract_version: STRAUSS-HERMENEUTIC-SA-1}
+  - {key: audience, path: hermeneutics/audience.yaml, contract_version: STRAUSS-HERMENEUTIC-AUD-1}
+  - {key: contradiction, path: hermeneutics/contradiction.yaml, contract_version: STRAUSS-HERMENEUTIC-CON-1}
+  - {key: historical-and-philosophical-understanding, path: hermeneutics/historical-and-philosophical-understanding.yaml, contract_version: STRAUSS-HERMENEUTIC-HPU-1}
 
 method_completion:
   state: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   limitation: >
-    The method contracts govern question recovery, independent reconstruction, ordered
-    reading, and problem preservation. They do not execute source interpretation by
-    themselves or complete every source-specific method record.
+    Method contracts govern question recovery, independent reconstruction, ordered reading,
+    and problem preservation but do not execute source interpretation by themselves.
 
 method:
-  - key: recover-question
-    path: method/recover-question.yaml
-    contract_version: STRAUSS-METHOD-RQ-1
-  - key: reconstruct-alternatives
-    path: method/reconstruct-alternatives.yaml
-    contract_version: STRAUSS-METHOD-RA-1
-  - key: textual-order
-    path: method/textual-order.yaml
-    contract_version: STRAUSS-METHOD-TO-1
-  - key: preserve-problem
-    path: method/preserve-problem.yaml
-    contract_version: STRAUSS-METHOD-PP-1
+  - {key: recover-question, path: method/recover-question.yaml, contract_version: STRAUSS-METHOD-RQ-1}
+  - {key: reconstruct-alternatives, path: method/reconstruct-alternatives.yaml, contract_version: STRAUSS-METHOD-RA-1}
+  - {key: textual-order, path: method/textual-order.yaml, contract_version: STRAUSS-METHOD-TO-1}
+  - {key: preserve-problem, path: method/preserve-problem.yaml, contract_version: STRAUSS-METHOD-PP-1}
 
 speech:
   mechanism: speech/speech-mechanism.yaml
@@ -218,47 +190,41 @@ speech:
   completion: PARTIALLY_RECONSTRUCTED
   voice_status: subordinate_to_reasoning
   limitation: >
-    The contract governs inputs, evidence, audience, speech and deed, concealment,
-    irony, comedy, uncertainty, typed candidate output, and stopping conditions. Source
-    interpretation and final natural-language composition remain reasoning operations,
-    not automatic consequences of loading the contract.
+    The contract governs inputs, evidence, audience, speech and deed, concealment, irony,
+    comedy, uncertainty, typed candidate output, and stopping conditions. It does not
+    automatically perform source interpretation or final natural-language composition.
 
 corpus:
   index: corpus/index.yaml
   loader: corpus_registry.py
-  registry_version: 1.3.0
+  registry_version: 1.4.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   reviewed_witnesses:
-    - source: Studies in Platonic Political Philosophy
-      witness_id: CORPUS-WIT-001
-    - source: Plato's Apology of Socrates
-      witness_id: CORPUS-WIT-002
+    - {source: Studies in Platonic Political Philosophy, witness_id: CORPUS-WIT-001}
+    - {source: Plato's Apology of Socrates, witness_id: CORPUS-WIT-002}
     - source: Socrates and Aristophanes
       witness_id: CORPUS-WIT-003
       source_status: studies/socrates-and-aristophanes/source-status.yaml
       bibliographic_rule: ORIGINAL_1966_REVIEWED_1980_FILENAME_YEAR_NONAUTHORITATIVE
       text_rule: PAGE_IMAGES_GOVERN_WHERE_OCR_IS_UNCERTAIN
   theologico_political_item_level_statuses:
-    registered_without_reviewed_witness:
-      - source_id: CORPUS-SRC-101
-        status_id: CORPUS-STATUS-101
-        path: studies/theologico-political/progress-or-return/source-status.yaml
-      - source_id: CORPUS-SRC-102
-        status_id: CORPUS-STATUS-102
-        path: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
-    registered_count: 2
+    registered_count: 19
     total_predecessor_sources: 19
-    remaining_without_item_level_status: 17
+    remaining_without_item_level_status: 0
+    reviewed_witness_count: 0
+    independent_sequential_study_count: 0
+    status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
+    root: studies/theologico-political/
     rule: >
-      Source-identity registration without a reviewed witness is not source-level
+      Complete source-identity registration is not reviewed-witness completion, source-level
       reconstruction, independent corroboration, doctrinal certification, or migration completion.
   limitation: >
-    The registry accounts for every current source identity and studies-tree YAML record,
-    but seventeen of the nineteen Theologico-Political predecessor writings still lack
-    item-level source-status records, the first two lack reviewed witnesses and independent
-    sequential studies, and the wider Strauss corpus, edition comparisons, translations,
-    independent witnesses, and source-text access remain incomplete.
+    All nineteen active Theologico-Political predecessor writings now have bounded
+    item-level source-identity status records, but those records do not by themselves provide
+    reviewed item witnesses, stable locators, fingerprints, or independent sequential studies.
+    The wider Strauss corpus, edition comparisons, translations, independent witnesses, and
+    source-text access remain incomplete.
 
 findings:
   index: findings/index.yaml
@@ -267,10 +233,8 @@ findings:
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   limitation: >
-    The registry accounts for every current analytical or integration study, problem
-    synthesis, foundational migration transaction, active predecessor finding basis, and
-    accepted migration source. Individual proposition extraction, source-asymmetry repair,
-    independent witness expansion, doctrinal certification, and successor activation remain incomplete.
+    Individual proposition extraction, source-asymmetry repair, independent witness expansion,
+    doctrinal certification, and successor activation remain incomplete.
 
 runtime:
   adapter: adapter.py
@@ -286,10 +250,9 @@ runtime:
     - validate declared paths and contracts
     - load bounded operational context
     - load complete read-only foundational problem bundles
-    - load the typed current-state corpus registry
-    - load the typed current-state findings registry
-    - validate reviewed witness metadata against source-status records
-    - validate bounded item-level source identities and their missing-witness conditions
+    - load typed current-state corpus and findings registries
+    - validate reviewed-witness metadata against source-status records
+    - validate all nineteen bounded Theologico-Political item-level source identities and missing-witness conditions
     - validate typed speech requests
     - build non-authoritative candidate report structures
   prohibited_operations:
@@ -311,21 +274,18 @@ sanctum_contract:
   outside_my_ground_permitted: true
   completed_interface_repin_status: BLOCKED_WHILE_SEMANTIC_COMPLETION_IS_INCOMPLETE
   output_rule: >
-    The adapter emits candidate ministerial context and reports. Git remains the
-    authoritative memory, and Sanctum's Validation Gate alone may confer Assembly-level
-    authority on a returned record. No pin may describe the Strauss interface as completed
-    while this manifest states semantic_completion: INCOMPLETE.
+    The adapter emits candidate ministerial context and reports. Git remains authoritative
+    memory, and Sanctum's Validation Gate alone may confer Assembly-level authority. No pin
+    may describe the Strauss interface as completed while semantic_completion is INCOMPLETE.
 
 migration:
   mapping_record: migrations/lean-operational-interface.yaml
   mode: ADDITIVE_NON_DESTRUCTIVE
   flat_problem_projection_deferred: true
   reason: >
-    The lean interface is established through explicit mappings while active
-    predecessors, successor directories, studies, protocols, governance records,
-    migration ledgers, and historical copies remain intact. The existing path
-    problems/theologico-political.yaml is an active predecessor and cannot be silently
-    overwritten by a new flat projection.
+    Explicit mappings preserve active predecessors, successor directories, studies,
+    protocols, governance records, migration ledgers, and historical copies. The active
+    predecessor at problems/theologico-political.yaml may not be overwritten silently.
 
 safeguards:
   independent_reconstruction_before_comparison: true

@@ -1,0 +1,64 @@
+schema_version: 1.0
+document_type: source_status_record
+identity:
+  status_id: CORPUS-STATUS-105
+  corpus_source_id: CORPUS-SRC-105
+  canonical_title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  author: Leo Strauss
+  date: 1972
+  version: 1.0.0
+status:
+  lifecycle: REGISTERED_SOURCE_IDENTITY
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: NOT_YET_REGISTERED
+  independent_sequential_study: NOT_YET_COMPLETED
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 5
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-105
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+verified_documentary_facts:
+  - The active predecessor identifies this work, date, and sequence position.
+  - The SPPP collection registry places an essay of this title in the posthumous collection, but item-level witness verification remains pending.
+predecessor_contribution_record:
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_ITEM_WITNESS
+  statement: >
+    Examines the strongest modern rational reconciliation of Judaism, revelation,
+    morality, law, autonomy, and historical progress.
+  preservation_rule: This derivative statement is not independently confirmed or certified here.
+publication_and_witness_condition:
+  publication_venue: UNVERIFIED_AT_ITEM_LEVEL
+  edition: POSTHUMOUS_COLLECTION_ITEM_KNOWN_ITEM_LEVEL_WITNESS_NOT_REGISTERED
+  pagination: UNVERIFIED_AT_ITEM_LEVEL
+  local_file: NOT_REGISTERED_AS_ITEM_WITNESS
+  fingerprint: NOT_AVAILABLE
+  text_condition: NOT_ASSESSED_AT_ITEM_LEVEL
+  locator_reproducibility: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_WRITING
+  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_ITEM_WITNESS
+  analytical_use: ORIENTATION_ONLY_UNTIL_ITEM_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+required_distinctions:
+  - Strauss's essay from Hermann Cohen's work
+  - rational reconciliation from demonstrated resolution
+  - collection witness from item-level reconstruction
+  - editorial placement from authorial doctrine
+  - predecessor synthesis from source-level documented finding
+prohibitions:
+  - Do not treat the collection-level study as an independent item-level reconstruction.
+  - Do not treat the predecessor contribution as a source-level quotation.
+  - Do not certify reconciliation, doctrine, migration, or activation.
+next_required_actions:
+  - register the item within a reviewed witness with stable locators
+  - reconstruct the essay independently in its original and collected occasions
+  - compare source-level findings with the predecessor without silent harmonization
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: MISSING
+  study_state: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE

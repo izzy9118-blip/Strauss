@@ -4,7 +4,7 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 1.7.0
+  version: 1.8.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
@@ -13,19 +13,19 @@ status:
   repository_completion: INCOMPLETE
 
 revision_history:
-  predecessor_version: 1.6.0
-  predecessor_blob_sha: baf783c833e5a7a30411462301d76fd6c8fae294
+  predecessor_version: 1.7.0
+  predecessor_blob_sha: 71d6d3eeb5bfa09e1de2d51920e5817725be6a8b
   reason: >
-    Record bounded item-level source-status registration for the first two writings in the
-    active nineteen-source Theologico-Political predecessor basis and synchronize the audit
-    with corpus registry v1.3.0. Preserve missing reviewed witnesses, incomplete independent
-    sequential studies, derivative predecessor contribution statements, and all doctrinal,
-    migration, activation, predecessor, and Assembly-authority limits.
+    Record complete bounded item-level source-identity registration for all nineteen
+    writings in the active Theologico-Political predecessor basis. Preserve the absence of
+    reviewed item witnesses, stable locators, fingerprints, and independent sequential
+    studies; preserve derivative predecessor contribution statements as unverified; and
+    preserve all doctrinal, migration, activation, predecessor, and Assembly-authority limits.
 
 basis:
   repository: izzy9118-blip/Strauss
-  prior_validated_interface_commit: 383242ef5dd68d76ab9173003d63f5a4cb8298a3
-  current_revision_scope: production/synchronize-completion-language
+  prior_validated_interface_commit: a8dbd24d6da7be921e545c3a11028834a4faf801
+  current_revision_scope: production/complete-tp-source-status-identities
   manifest: manifest.yaml
   corpus_registry: corpus/index.yaml
   corpus_registry_loader: corpus_registry.py
@@ -33,21 +33,21 @@ basis:
   production_process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   mapping_record: migrations/lean-operational-interface.yaml
   governing_rule: >
-    A registered source identity improves documentary separation and future discoverability.
-    Without a reviewed witness and independent sequential reconstruction it does not create
-    source-level findings, corroborate the predecessor synthesis, certify doctrine or
-    migration, activate a successor, displace a predecessor, or complete the repository.
+    Complete registration of source identities and explicit missing-evidence conditions does
+    not supply reviewed witnesses, source-level findings, independent corroboration,
+    doctrinal or migration certification, successor activation, predecessor displacement,
+    unrestricted runtime readiness, or repository completion.
 
 classification_vocabulary:
   SUBSTANTIVELY_RECONSTRUCTED:
     meaning: >
-      The object contains a developed governing contract, registry, or source-status
-      record with explicit identity, provenance, limits, valid operations, termination,
-      and behavioral validation. This does not constitute doctrinal certification.
+      A developed governing contract, registry, or source-status record exists with explicit
+      identity, provenance, limits, valid operations, termination, and behavioral validation.
+      This does not constitute doctrinal certification.
   PARTIALLY_RECONSTRUCTED:
     meaning: >
-      A substantial contract or implementation exists, but important execution,
-      evidence domains, source-specific applications, or authoritative composition remain incomplete.
+      A substantial contract or implementation exists, but important execution, evidence
+      domains, source-specific applications, or authoritative composition remain incomplete.
   MAPPED_TO_RICHER_RECORDS:
     meaning: The object is principally an index or compact interface to richer records.
   STRUCTURAL_PLACEHOLDER:
@@ -67,36 +67,24 @@ summary:
     - seven read-only foundational problem bundles
     - typed current-state corpus registry
     - typed current-state findings registry
-    - reviewed Studies in Platonic Political Philosophy PDF witness
-    - reviewed Plato Apology translation witness
-    - reviewed Socrates and Aristophanes PDF witness and source-status record
-    - bounded source-identity status for Progress or Return?
-    - bounded source-identity status for Preface to Spinoza's Critique of Religion
-    - generic validation of registered Theologico-Political item-level source statuses
+    - three reviewed source witnesses with recorded limits
+    - bounded source-identity status records for all nineteen active Theologico-Political predecessor writings
+    - generic validation of all nineteen item-level identities, aliases, scopes, predecessor sequences, missing witnesses, incomplete studies, and noncertification states
   theologico_political_item_level_status:
     active_predecessor_source_count: 19
-    registered_source_identity_count: 2
-    registered_without_reviewed_witness_count: 2
-    remaining_without_item_level_status_count: 17
+    registered_source_identity_count: 19
+    registered_without_reviewed_witness_count: 19
+    remaining_without_item_level_status_count: 0
     independently_reconstructed_count_within_this_sequence: 0
-    records:
-      - source_id: CORPUS-SRC-101
-        status_id: CORPUS-STATUS-101
-        path: studies/theologico-political/progress-or-return/source-status.yaml
-        reviewed_witness: MISSING
-        independent_sequential_study: INCOMPLETE
-      - source_id: CORPUS-SRC-102
-        status_id: CORPUS-STATUS-102
-        path: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
-        reviewed_witness: MISSING
-        independent_sequential_study: INCOMPLETE
+    status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
+    registry_root: studies/theologico-political/
     interpretation_limit: >
-      These records establish source identities and explicit absence conditions. They do not
+      These records establish identities and missing-evidence states. They do not
       independently establish the predecessor contribution statements attributed to the works.
   remaining_major_deficiencies:
-    - seventeen Theologico-Political predecessor writings lack item-level source-status records
-    - the first two item-level records lack reviewed witnesses, stable locators, fingerprints, and independent sequential studies
-    - comparison with the original 1966 Basic Books printing of Socrates and Aristophanes remains pending where edition differences matter
+    - all nineteen Theologico-Political item-level identities require reviewed witnesses or explicit lawful witness determinations
+    - all nineteen require independent sequential reconstruction unless a later record documents a narrower justified status
+    - stable locators, fingerprints, publication provenance, and textual conditions remain incomplete for those item-level records
     - direct independent Aristophanes, Xenophon, biblical, medieval, and most Platonic witness studies remain incomplete
     - source-specific applications of method and hermeneutics remain incomplete
     - individual propositions are not yet normalized as separate queryable objects
@@ -104,70 +92,41 @@ summary:
     - doctrinal certification and successor activation remain separately unauthorized
 
 records:
-  - path: studies/theologico-political/progress-or-return/source-status.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - registers canonical identity, date, predecessor sequence, and corpus source binding
-      - preserves the predecessor contribution as a derivative unverified synthesis claim
-      - records missing publication, edition, pagination, file, fingerprint, and textual-condition evidence
-      - prohibits source-level quotation or locator claims before witness registration
-      - terminates with reviewed witness missing, study incomplete, and successor effect none
-    remaining:
-      - identify and register a reviewed textual witness
-      - establish publication provenance and stable locators
-      - conduct an independent sequential reconstruction
-      - compare resulting findings with the active predecessor without silent harmonization
-
-  - path: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - registers canonical identity, canonical alias, date, predecessor sequence, and corpus source binding
-      - preserves the predecessor contribution as a derivative unverified synthesis claim
-      - distinguishes inability to exclude revelation from proof that revelation occurred
-      - records missing publication, edition, pagination, file, fingerprint, and textual-condition evidence
-      - terminates with reviewed witness missing, study incomplete, and successor effect none
-    remaining:
-      - identify and register a reviewed textual witness
-      - establish publication provenance and stable locators
-      - conduct an independent sequential reconstruction
-      - compare resulting findings with the active predecessor without silent harmonization
-
-  - path: studies/socrates-and-aristophanes/source-status.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - distinguishes original publication, reviewed edition, and local filename
-      - records title-page and copyright-page bibliographic evidence
-      - records PDF page count, file size, hash, metadata, and OCR condition
-      - establishes page images as authoritative where OCR is uncertain
-      - distinguishes Strauss's book from independent Aristophanes, Plato, Xenophon, and historical-Socrates witnesses
-      - binds the completed provisional study without certifying it
-    remaining:
-      - comparison with the 1966 Basic Books printing
-      - source-text admission remains separate and unrequested
-      - independent ancient witness reconstruction remains incomplete
-
   - path: corpus/index.yaml
     classification: SUBSTANTIVELY_RECONSTRUCTED
-    registry_version: 1.3.0
+    registry_version: 1.4.0
     completion: CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
     present_function:
       - 22 typed source entities
       - 3 reviewed witnesses
-      - 5 source-status records
+      - 22 source-status records
       - 7 analytical and integration study records
-      - all 12 YAML records in the studies tree accounted for
+      - all 29 YAML records in the studies tree accounted for
       - all 7 problem witness registries
-      - all 19 Theologico-Political predecessor source identities and dates
-      - 2 bounded Theologico-Political item-level source identities without reviewed witnesses
+      - all 19 Theologico-Political predecessor identities, dates, aliases, and registered scopes preserved
+      - all 19 item-level source identities registered with explicit missing-witness and incomplete-study conditions
       - 7 positive corpus-gap records
     remaining:
-      - seventeen Theologico-Political item-level source-status records
-      - reviewed witnesses and independent studies for the first two item-level records
+      - reviewed item witnesses, publication provenance, stable locators, fingerprints, and independent studies for the nineteen Theologico-Political writings
       - complete Strauss bibliography and edition-specific source statuses
       - edition comparison for Socrates and Aristophanes
       - Greek alignment for Plato's Apology
       - broader classical, biblical, medieval, and modern independent witness corpora
       - source-text admission and runtime source access remain separate
+
+  - path: studies/theologico-political/
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    present_function:
+      - contains one bounded source-status record for each of the nineteen predecessor writings
+      - records exact title, date, sequence, aliases, and registered scopes where applicable
+      - preserves predecessor contributions as derivative unverified synthesis statements
+      - records publication, edition, pagination, local-file, fingerprint, textual-condition, and locator gaps
+      - terminates each record with witness missing, study incomplete, certification not certified, and successor effect none
+    remaining:
+      - reviewed witness registration
+      - independent sequential reconstruction
+      - source-level evidence classification
+      - comparison with the active predecessor without silent harmonization
 
   - path: corpus_registry.py
     classification: SUBSTANTIVELY_RECONSTRUCTED
@@ -175,7 +134,7 @@ records:
       - validates unique source, witness, status, study, and gap identifiers
       - validates exact current studies-tree and problem-witness-registry coverage
       - validates nineteen predecessor titles and dates and preserved-copy equality
-      - validates SPPP and Socrates and Aristophanes witness fingerprints against source-status records
+      - validates reviewed-witness fingerprints against source-status records
       - generically validates registered Theologico-Political item-level identities, aliases, predecessor sequences, missing witnesses, incomplete studies, locator limits, noncertification, and successor non-effect
       - loads a read-only discovery and provenance context
     remaining:
@@ -192,8 +151,8 @@ records:
   - path: manifest.yaml
     classification: PARTIALLY_RECONSTRUCTED
     present_function:
-      - registers corpus registry v1.3.0 and the exact 2-of-19 item-level source-status state
-      - distinguishes source-identity registration from reviewed witness and independent reconstruction
+      - registers corpus registry v1.4.0 and exact 19-of-19 source-identity completion
+      - records zero reviewed item witnesses and zero independent sequential studies in this sequence
       - preserves all structural, semantic, runtime, migration, predecessor, and certification limits
       - blocks any description of Sanctum repinning as a completed interface while semantic completion is incomplete
     remaining:
@@ -202,9 +161,8 @@ records:
   - path: tests/test_corpus_registry.py
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
-      - validates source-status, fingerprint, edition, filename, OCR, and page-image rules
+      - validates all nineteen identities, dates, aliases, registered scopes, sequences, missing witnesses, incomplete studies, locator limits, noncertification, and successor non-effect
       - validates exact current studies-tree coverage
-      - validates the first two Theologico-Political item-level source identities and their missing-witness conditions
       - preserves predecessor and open-corpus safeguards
     remaining:
       - reviewed-witness fixtures, independent sequential-study fixtures, and source-level comparison fixtures
@@ -212,14 +170,13 @@ records:
 production_order:
   governing_process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   completed_in_current_sequence:
-    - first Theologico-Political item-level source-identity status
-    - second Theologico-Political item-level source-identity status
-    - generic item-level status validator and behavioral tests
-    - manifest, audit, and mapping synchronization to corpus registry v1.3.0
+    - all nineteen bounded Theologico-Political item-level source identities
+    - full status-range registry and generic validation
+    - manifest, audit, mapping, registry, and behavioral-test synchronization
   next:
-    - create item-level source-status record for How to Study Spinoza's Theologico-Political Treatise
-    - continue through the remaining sixteen predecessor writings
-    - identify and register reviewed witnesses for item-level source reconstruction
+    - establish a reviewed-witness priority schedule for the nineteen writings
+    - register the first available lawful reviewed item witness with publication provenance, stable locators, and fingerprint where applicable
+    - begin independent sequential reconstruction only after witness status is explicit
     - create source-specific method and hermeneutic application fixtures
     - expand independent Aristophanes, Plato, Xenophon, biblical, medieval, and modern witness studies
     - validate actual ministerial reports against the full contract stack
@@ -233,7 +190,7 @@ production_order:
 non_effects:
   - This audit does not certify any doctrine, claimant, source, finding, successor problem, or migration.
   - This audit does not admit or distribute any source text.
-  - This audit does not treat source-identity registration as independent source reconstruction.
+  - Complete source-identity registration is not reviewed-witness or independent-study completion.
   - This audit does not convert derivative predecessor contribution statements into source-level findings.
   - This audit does not alter active predecessors or accepted migration sources.
   - This audit does not authorize successor activation.
