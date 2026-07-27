@@ -1,23 +1,288 @@
 schema_version: 1.0
-record_type: inquiry_method
-identity: {key: preserve-problem, version: 1.0.0}
+record_type: inquiry_method_contract
+
+identity:
+  key: preserve-problem
+  title: Preserve the Problem
+  version: 1.1.0
+  contract_version: STRAUSS-METHOD-PP-1
+
+status:
+  lifecycle: OPERATIONAL_CONTRACT
+  semantic_completion: SUBSTANTIVELY_RECONSTRUCTED
+  source_specific_application: INCOMPLETE
+  certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 4449e1cfbc3e734c57259744c5c2dede1a9c5095
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the initial nonclosure rule with a typed contract governing permanent
+    questions, jurisdiction, burdens, findings, dissent, seams, political settlement,
+    philosophical nonresolution, migration preservation, and termination.
+
 source_records:
   - governance/foundational-problem-architecture.yaml
   - migrations/foundational-problems-v2/migration.yaml
+  - protocols/evidence-classification.yaml
+  - protocols/inference-discipline.yaml
   - protocols/uncertainty-preservation.yaml
+  - hermeneutics/contradiction.yaml
+  - hermeneutics/whole-and-part.yaml
+  - method/recover-question.yaml
+  - method/reconstruct-alternatives.yaml
+  - method/textual-order.yaml
+
 objective: >
-  Preserve a permanent problem, its strongest alternatives, and its unresolved burdens
-  rather than closing inquiry through summary, policy preference, chronology, or authority.
-steps:
-  - state the governing question and jurisdiction
-  - record what the evidence establishes and what remains inference
-  - preserve dissent, contradiction, opacity, and missing witnesses
-  - distinguish political settlement from philosophical or theological resolution
-  - reference neighboring problems without absorbing their doctrine
-  - terminate with an explicit nonresolution where the burdens remain unmet
+  Preserve a permanent problem, its strongest alternatives, reciprocal burdens,
+  documentary findings, contradictions, jurisdictional seams, and unresolved questions
+  rather than closing inquiry through summary, chronology, authority, policy preference,
+  practical success, or repository convenience.
+
+governing_rule: >
+  A problem record must distinguish what is documented, inferred, hypothesized,
+  disputed, practically settled, philosophically unresolved, and jurisdictionally
+  transferred. Completion of a bounded inquiry may clarify the problem without resolving it.
+
+input_contract:
+  required_fields:
+    - inquiry_ref
+    - canonical_problem
+    - governing_question
+    - jurisdiction
+    - non_jurisdiction
+    - sources
+    - findings
+    - alternatives
+    - burdens
+    - contradictions_and_dissent
+    - neighboring_problem_relations
+    - practical_settlements
+    - unresolved_questions
+    - missing_witnesses
+    - predecessor_and_migration_status
+  canonical_problem_required_fields:
+    - canonical_key
+    - title
+    - source_path
+    - status
+  finding_required_fields:
+    - finding_id
+    - proposition_kind
+    - statement
+    - evidence
+    - source_location
+    - confidence
+    - jurisdictional_owner
+    - limits
+  burden_required_fields:
+    - burden_id
+    - bearer
+    - claim
+    - required_showing
+    - status
+    - evidence
+    - remaining_requirement
+  neighboring_relation_required_fields:
+    - related_problem
+    - relation_type
+    - shared_question_or_finding
+    - distinction
+    - non_absorption_rule
+
+application_sequence:
+  - step_id: PP-STEP-001
+    operation: identify canonical problem, governing question, jurisdiction, and non-jurisdiction
+  - step_id: PP-STEP-002
+    operation: preserve inquiry scope and source status before synthesis
+  - step_id: PP-STEP-003
+    operation: register every finding with proposition kind, evidence, location, confidence, and limit
+  - step_id: PP-STEP-004
+    operation: reconstruct strongest alternatives and their reciprocal burdens
+  - step_id: PP-STEP-005
+    operation: record contradictions and dissent before proposing synthesis
+  - step_id: PP-STEP-006
+    operation: distinguish practical settlement, political success, legal authority, and historical outcome from philosophic or theological resolution
+  - step_id: PP-STEP-007
+    operation: route transferred material to the proper problem or shared protocol without deletion
+  - step_id: PP-STEP-008
+    operation: record neighboring-problem intersections with explicit distinctions and non-absorption rules
+  - step_id: PP-STEP-009
+    operation: preserve missing witnesses, source asymmetries, opacity, and evidence gaps
+  - step_id: PP-STEP-010
+    operation: identify bounded conclusions supported despite unresolved larger burdens
+  - step_id: PP-STEP-011
+    operation: classify every unresolved question and evidence that could change it
+  - step_id: PP-STEP-012
+    operation: record predecessor, migration, certification, and activation effects explicitly
+  - step_id: PP-STEP-013
+    operation: terminate with resolution, bounded conclusion, or affirmative nonresolution
+  - step_id: PP-STEP-014
+    operation: prohibit retrospective rewriting and preserve forward correction paths
+
+resolution_states:
+  - DOCUMENTARY_FINDING_COMPLETE_WITHIN_SCOPE
+  - BOUNDED_CONCLUSION
+  - PRACTICAL_SETTLEMENT_ONLY
+  - POLITICAL_OR_LEGAL_AUTHORITY_ESTABLISHED_TRUTH_UNRESOLVED
+  - RECIPROCAL_BURDENS_REMAIN
+  - CONTRADICTION_PRESERVED
+  - AFFIRMATIVE_NON_RESOLUTION
+  - OPACITY_PRESERVED
+  - INSUFFICIENT_DOCUMENTATION
+  - PROBLEM_TRANSFORMED_NOT_RESOLVED
+  - PROBLEM_RESOLVED_WITHIN_EXPRESS_SCOPE
+
+burden_statuses:
+  - MET_WITHIN_REGISTERED_SCOPE
+  - PARTIALLY_MET
+  - UNMET
+  - BLOCKED_BY_MISSING_EVIDENCE
+  - BLOCKED_BY_UNRECONSTRUCTED_WITNESS
+  - RECIPROCAL_AND_UNRESOLVED
+  - NOT_APPLICABLE_TO_BOUNDED_FINDING
+
+jurisdiction_rules:
+  - Each foundational problem owns a distinct permanent question.
+  - A finding may be referenced by another problem without reproducing the full doctrine.
+  - Shared interpretive rules belong in hermeneutics or protocols, not duplicated across problems.
+  - Transferred material retains source and migration provenance.
+  - Philosophy vs. Poetry and The Theologico-Political Problem remain brother problems, not one merged problem.
+  - The Theologico-Political Problem and Athens vs. Jerusalem remain structurally related but distinct.
+  - Wise vs. Vulgar governs recognition, rank, audience, mediation, and responsibility, not every substantive doctrine held by the few or many.
+  - Ancients vs. Moderns must not absorb every chronological difference.
+
+settlement_distinctions:
+  practical_settlement:
+    meaning: A course of action, institutional arrangement, or bounded resolution adopted in practice.
+  political_settlement:
+    meaning: A regime, law, verdict, or authoritative decision that orders conduct.
+  historical_outcome:
+    meaning: What occurred or prevailed, without automatic truth or justice.
+  philosophical_resolution:
+    meaning: A supported resolution of the governing rational alternatives and burdens.
+  theological_resolution:
+    meaning: A supported resolution concerning divine authority or revelation, not reducible to political success or poetic construction.
+
+migration_preservation:
+  dispositions:
+    - RETAIN
+    - TRANSFER
+    - ELEVATE
+    - PRESERVE_HISTORICALLY
+    - REJECT_WITH_REASON
+  transformations:
+    - VERBATIM
+    - REVISED
+    - DIVIDED
+    - CONSOLIDATED
+    - REFERENCE_ONLY
+  rules:
+    - accepted predecessor material is never silently discarded
+    - predecessors and historical copies remain recoverable
+    - a successor cannot activate before preservation, classification, validation, and certification
+    - correction moves forward and never rewrites a certified historical record in place
+    - a valid new architecture does not retroactively make predecessor history false
+
+valid_outputs:
+  - PROBLEM_JURISDICTION_CONFIRMED
+  - NON_JURISDICTION_RECORDED
+  - DOCUMENTARY_FINDING_RETAINED
+  - MATERIAL_TRANSFERRED_WITH_PROVENANCE
+  - SHARED_RULE_ELEVATED
+  - PREDECESSOR_PRESERVED
+  - PRACTICAL_SETTLEMENT_DISTINGUISHED
+  - BOUNDED_CONCLUSION_RECORDED
+  - DISSENT_PRESERVED
+  - JURISDICTIONAL_SEAM_PRESERVED
+  - RECIPROCAL_BURDENS_PRESERVED
+  - AFFIRMATIVE_NON_RESOLUTION
+  - PROBLEM_RESOLVED_WITHIN_EXPRESS_SCOPE
+  - INSUFFICIENT_DOCUMENTATION
+
+required_output_fields:
+  - classification
+  - canonical_problem
+  - governing_question
+  - jurisdiction_and_non_jurisdiction
+  - retained_findings
+  - transferred_or_elevated_material
+  - alternatives_and_burdens
+  - contradictions_and_dissent
+  - neighboring_problem_relations
+  - practical_and_political_settlements
+  - bounded_conclusions
+  - unresolved_questions
+  - missing_witnesses
+  - predecessor_and_migration_effects
+  - confidence
+  - termination_status
+
 prohibitions:
   - silent closure
-  - predecessor deletion
+  - predecessor deletion or retrospective harmonization
   - uncertainty converted into consensus
-  - practical success treated as truth
-  - repository or artificial intelligence self-certification
+  - practical or political success treated as truth
+  - legal authority treated as wisdom
+  - historical victory treated as philosophical refutation
+  - neighboring problem absorbed for convenience
+  - shared protocol duplicated as problem doctrine
+  - unresolved dissent omitted from synthesis
+  - source-specific finding promoted beyond its recorded evidence status
+  - repository, adapter, minister, or artificial intelligence self-certification
+
+failure_recovery:
+  premature_closure:
+    action: restore alternatives, burdens, contradiction, and unresolved questions
+  jurisdictional_absorption:
+    action: separate shared finding, owned doctrine, and cross-reference with non-absorption rule
+  lost_predecessor_material:
+    action: recover source from history and create explicit migration disposition
+  practical_truth_confusion:
+    action: split settlement or outcome from philosophic and theological status
+  missing_witness:
+    action: record incomplete comparison and block final ranking
+  consensus_without_dissent:
+    action: restore dissent or issue a non-synthesis result
+
+termination_rule: >
+  Problem preservation is complete only when governing question, jurisdiction,
+  non-jurisdiction, findings, evidence, alternatives, burdens, contradictions, dissent,
+  neighboring relations, settlements, bounded conclusions, unresolved questions,
+  missing witnesses, predecessor and migration effects, confidence, and termination
+  status are explicit. Affirmative nonresolution is a complete outcome where burdens remain.
+
+behavioral_tests:
+  - id: PP-TEST-001
+    behavior: practical settlement cannot become philosophical resolution automatically
+  - id: PP-TEST-002
+    behavior: historical victory cannot certify truth or justice
+  - id: PP-TEST-003
+    behavior: dissent remains visible in synthesis and non-synthesis
+  - id: PP-TEST-004
+    behavior: shared findings may be referenced without problem absorption
+  - id: PP-TEST-005
+    behavior: shared interpretive rules are elevated rather than duplicated
+  - id: PP-TEST-006
+    behavior: accepted predecessor material receives an explicit disposition
+  - id: PP-TEST-007
+    behavior: missing independent witness blocks final comparative ranking
+  - id: PP-TEST-008
+    behavior: bounded conclusion may coexist with unresolved larger problem
+  - id: PP-TEST-009
+    behavior: correction moves forward without rewriting history
+  - id: PP-TEST-010
+    behavior: affirmative nonresolution is accepted as complete termination
+
+speech_mechanism_integration:
+  contract: speech/speech-mechanism.yaml
+  rule: >
+    Candidate reports must distinguish bounded findings from problem resolution, state
+    jurisdiction and cross-problem references, preserve dissent and nonresolution, and
+    disclose predecessor, migration, certification, and activation effects.
+
+self_limitation: >
+  This method preserves questions and burdens. It does not require permanent indecision,
+  prevent bounded resolution when evidence warrants it, or authorize the repository to
+  call its own architecture philosophically final.
