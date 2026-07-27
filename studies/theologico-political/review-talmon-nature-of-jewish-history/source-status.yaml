@@ -1,0 +1,65 @@
+schema_version: 1.0
+document_type: source_status_record
+identity:
+  status_id: CORPUS-STATUS-111
+  corpus_source_id: CORPUS-SRC-111
+  canonical_title: Review of J. L. Talmon, The Nature of Jewish History
+  author: Leo Strauss
+  date: 1957
+  version: 1.0.0
+status:
+  lifecycle: REGISTERED_SOURCE_IDENTITY
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: NOT_YET_REGISTERED
+  independent_sequential_study: NOT_YET_COMPLETED
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 11
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-111
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+verified_documentary_facts:
+  - The active predecessor identifies this review, date, and sequence position.
+  - The SPPP collection registry places a review of Talmon in the posthumous collection, but item-level verification remains pending.
+predecessor_contribution_record:
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_ITEM_WITNESS
+  statement: >
+    Rejects an easy philosophy of Jewish historical progress and presents the Jewish problem
+    as an especially manifest form of the human social and political problem.
+  preservation_rule: This derivative statement is not independently confirmed or certified here.
+publication_and_witness_condition:
+  publication_venue: UNVERIFIED_AT_ITEM_LEVEL
+  edition: POSTHUMOUS_COLLECTION_ITEM_KNOWN_ITEM_LEVEL_WITNESS_NOT_REGISTERED
+  pagination: UNVERIFIED_AT_ITEM_LEVEL
+  local_file: NOT_REGISTERED_AS_ITEM_WITNESS
+  fingerprint: NOT_AVAILABLE
+  text_condition: NOT_ASSESSED_AT_ITEM_LEVEL
+  locator_reproducibility: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_REVIEW
+  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_ITEM_WITNESS
+  analytical_use: ORIENTATION_ONLY_UNTIL_ITEM_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+required_distinctions:
+  - Strauss's review from Talmon's reviewed work
+  - historical progress from political improvement
+  - Jewish problem from proof of election or providence
+  - review occasion from collection placement
+  - predecessor synthesis from source-level documented finding
+prohibitions:
+  - Do not attribute Talmon's claims to Strauss without reconstructing the review relation.
+  - Do not treat historical development as philosophical proof.
+  - Do not count collection-level reading as independent item-level reconstruction.
+  - Do not certify doctrine, migration, or activation.
+next_required_actions:
+  - register a reviewed item witness and the reviewed work's identity
+  - reconstruct review, target, audience, and occasion independently
+  - compare source-level findings with the predecessor without silent harmonization
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: MISSING
+  study_state: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
