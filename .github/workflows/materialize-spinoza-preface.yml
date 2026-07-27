@@ -1,0 +1,47 @@
+name: Materialize CORPUS-SRC-102 integration
+
+on:
+  push:
+    branches:
+      - production/corpus-src-102-sequential-reconstruction
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    if: contains(github.event.head_commit.message, 'Stage generated CORPUS-SRC-102 integration payload')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install validation dependencies
+        run: python -m pip install pyyaml jsonschema
+      - name: Materialize generated files
+        shell: bash
+        run: |
+          cat .stage/payload.part* > .stage/payload.b64
+          base64 --decode .stage/payload.b64 > .stage/payload.tar.gz
+          echo '1f682953b39d388e14c0009d5716d5eb02969447aa3254687d59965017273e1a  .stage/payload.tar.gz' | sha256sum --check -
+          tar -xzf .stage/payload.tar.gz
+          python .stage/update_metadata.py
+          rm -rf .stage
+      - name: Validate complete repository interface
+        run: |
+          python adapter.py --validate
+          python problem_bundles.py --validate
+          python corpus_registry.py --validate
+          python findings_registry.py --validate
+          python -m unittest discover -s tests -p 'test_*.py'
+      - name: Commit materialized production unit
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Integrate CORPUS-SRC-102 sequential reconstruction'
+          git push
