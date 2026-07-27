@@ -1,0 +1,19 @@
+schema_version: 1.0
+record_type: inquiry_method
+identity: {key: textual-order, version: 1.0.0}
+source_records:
+  - protocols/speech-and-deed.yaml
+  - protocols/inference-discipline.yaml
+objective: >
+  Preserve the order in which a work presents its claims, examples, corrections,
+  reversals, silences, and ending.
+steps:
+  - read sequentially before thematic rearrangement
+  - record transitions and changes of speaker, audience, or register
+  - distinguish preliminary, provisional, corrected, and final formulations
+  - compare explicit conclusion with the deed of the whole
+  - retain page, section, or passage references sufficient for reproducibility
+failure_conditions:
+  - extracting propositions without sequence
+  - treating the first formulation as the final teaching
+  - allowing thematic synthesis to erase dramatic or argumentative development
