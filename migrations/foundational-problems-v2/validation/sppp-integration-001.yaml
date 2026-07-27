@@ -4,22 +4,81 @@ document_type: migration_validation_record
 identity:
   validation_id: FPV2-SPPP-VALIDATION-001
   scope: SPPP-STUDY-001 integration and seven-problem founding architecture
-  version: 1.3.0
+  version: 1.4.0
 
 status:
-  lifecycle: AUTOMATED_VALIDATION_REQUESTED_VIA_PULL_REQUEST
+  lifecycle: AUTOMATED_STRUCTURAL_VALIDATION_PASSED_CERTIFICATION_PENDING
   certification: NOT_CERTIFIED
   activation_authorized: false
-  automated_yaml_parse: PR_WORKFLOW_RUN_REQUESTED_NOT_YET_OBSERVED
+  automated_yaml_parse: PASS
 
 revision_history:
-  predecessor_version: 1.2.0
-  predecessor_blob_sha: 66d3ee9b3828c32667452dd86390a039b1ccdbb3
+  predecessor_version: 1.3.0
+  predecessor_blob_sha: 4de76c9dbfcb6559fb72143b92f7a7b51336287e
   reason: >
-    Correct stale commit provenance, record completion of the cross-problem
-    duplicate-doctrine and jurisdiction review, record alignment of shared-protocol
-    registry versions and the Wise vs. Vulgar relations state, and request an
-    observable pull-request validation run. No automated success is claimed.
+    Record the first observed successful pull-request run of the extended
+    foundational architecture validator after correcting the predecessor-index YAML
+    failure. Structural validation does not certify doctrinal truth, complete
+    independent witness reconstruction, migration certification, or activation.
+
+automated_validation_evidence:
+  repository: izzy9118-blip/Strauss
+  pull_request: 2
+  branch: validation/foundational-architecture-pr-run
+  validated_head_commit: b0c696b86189ed8cf76fbc3150f777fd150f9a18
+  workflow:
+    name: Validate Foundational Architecture
+    workflow_id: 321002957
+    run_id: 30226732324
+    run_number: 39
+    status: COMPLETED
+    conclusion: SUCCESS
+  job:
+    name: validate
+    job_id: 89858055058
+    conclusion: SUCCESS
+  artifact:
+    name: foundational-architecture-validation-output
+    artifact_id: 8638761694
+    digest: sha256:b8a9a3c8b1ff1ae1713b3e615e0e33a83f222ac2190c20f27a733d9ec50f9dfb
+    retention_days: 30
+  output:
+    yaml_files_parsed: 71
+    canonical_identity_and_order_alignment: PASS
+    subordinate_contract_alignment: PASS
+    reciprocal_relation_and_boundary_validation: PASS
+    protocol_registry_version_alignment: PASS
+    wise_vs_vulgar_transaction_validation: PASS
+    predecessor_preservation_and_sppp_paths: PASS
+    cross_problem_pair_coverage: PASS
+  exact_output:
+    - Validation passed: parsed 71 YAML files.
+    - Seven canonical problem identities, orders, and subordinate contracts align.
+    - All reciprocal relation records resolve and preserve jurisdictional boundaries.
+    - Shared protocol registry versions match their governing files.
+    - Wise vs. Vulgar contains 18 section and 49 proposition transactions.
+    - Predecessor preservation and SPPP integration paths are valid.
+    - Cross-problem review covers all 21 unique problem pairs.
+
+corrections_preceding_success:
+  - correction_id: VALIDATION-COR-001
+    finding: >
+      protocols/registry.yaml recorded version 1.0.0 for four protocol files that
+      had been reconciled to version 1.1.0.
+    correction_commit: 62c36eeefc43e8409eb7fce22ba202908fa2cad4
+  - correction_id: VALIDATION-COR-002
+    finding: >
+      problems/wise-vs-vulgar/relations.yaml retained a stale lifecycle and
+      remaining requirement after proposition-level classification was complete.
+    correction_commit: 6576547fcc7d2f24565d06825651610755333ad6
+  - correction_id: VALIDATION-COR-003
+    finding: >
+      The initial automated run failed because predecessor-index.yaml contained an
+      unquoted colon in a plain scalar and retained stale Wise vs. Vulgar successor states.
+    failed_run_id: 30226659603
+    failed_job_id: 89857873939
+    failed_artifact_id: 8638742993
+    correction_commit: b0c696b86189ed8cf76fbc3150f777fd150f9a18
 
 validated_commits:
   witness_registry_philosophy_vs_poetry: 3f5397f43485d580c16b52cacb00dfa8420c62fb
@@ -42,176 +101,104 @@ validated_commits:
   foundational_problem_registry: 8bf54ff3fae53d8cf3e40b9ea6eea61424d2ffd7
   cross_problem_jurisdiction_review: e7cb09715595c3ec5f1b1bd8652a246c7ea6333f
   validator_script_extension: 383a648c3de7b493537253f467965354ea0d0c23
+  workflow_artifact_extension: 321243559c6b75de969b3486166de00f34a7a0a1
+  predecessor_index_correction: b0c696b86189ed8cf76fbc3150f777fd150f9a18
   validation_workflow: 17c2ddae2b74c4a325e414acfc9218e1b857d4f9
 
 checks:
   - check_id: SPPP-VAL-001
-    check: source record paths resolve
-    status: PASS_MANUAL_REVIEW_AUTOMATION_PENDING
-    evidence:
-      - studies/studies-in-platonic-political-philosophy/source-status.yaml
-      - studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
-      - studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
-      - studies/studies-in-platonic-political-philosophy/theologico-political-reconstruction.yaml
-      - studies/studies-in-platonic-political-philosophy/repository-integration.yaml
+    check: YAML parsing under all governing roots
+    status: PASS_AUTOMATED
+    evidence: 71 YAML files parsed
 
   - check_id: SPPP-VAL-002
-    check: SPPP-STUDY-001 appears in both brother-problem witness registries
-    status: PASS_MANUAL_REVIEW_AUTOMATION_PENDING
-    evidence:
-      - problems/philosophy-vs-poetry/witnesses.yaml version 0.2.0
-      - problems/theologico-political/witnesses.yaml version 0.2.0
+    check: seven canonical identities, orders, and complete subordinate contracts
+    status: PASS_AUTOMATED
 
   - check_id: SPPP-VAL-003
-    check: active Theologico-Political predecessor remains preserved and unmodified
-    status: PASS_MANUAL_REVIEW_AUTOMATION_PENDING
-    evidence:
-      active_path: problems/theologico-political.yaml
-      active_blob_sha: 4a35e71916212082598097985deb23699c0018e7
-      historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
-      reconciliation_record: migrations/foundational-problems-v2/transactions/theologico-political-sppp-study-001.yaml
+    check: six unique controlled reciprocal relations and jurisdictional boundaries for every problem
+    status: PASS_AUTOMATED
 
   - check_id: SPPP-VAL-004
-    check: all seven successor problem paths and subordinate contracts resolve
-    status: PASS_MANUAL_REVIEW_AUTOMATION_PENDING
-    contract:
-      - problem.yaml
-      - inquiry-profile.yaml
-      - witnesses.yaml
-      - relations.yaml
-      - synthesis directory containing at least one YAML record
+    check: adopted brother-problem relation is reciprocal, controlled, and limited to the adopted pair
+    status: PASS_AUTOMATED
     evidence:
-      - problems/nomos-vs-physis/
-      - problems/philosophy-vs-poetry/
-      - problems/theory-vs-practice/
-      - problems/theologico-political/
-      - problems/athens-vs-jerusalem/
-      - problems/wise-vs-vulgar/
-      - problems/ancients-vs-moderns/
+      pair:
+        - philosophy-vs-poetry
+        - theologico-political
+      relation_type: INTERSECTS
+      designation: BROTHER_PROBLEM
+      strength: CO_FOUNDATIONAL
 
   - check_id: SPPP-VAL-005
-    check: SPPP source-bridge syntheses resolve for all seven problems
-    status: PASS_MANUAL_REVIEW_AUTOMATION_PENDING
-    evidence:
-      - problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
-      - problems/philosophy-vs-poetry/synthesis/studies-in-platonic-political-philosophy.yaml
-      - problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
-      - problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml
-      - problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
-      - problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
-      - problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+    check: shared protocol registry paths and versions align with protocol files
+    status: PASS_AUTOMATED
 
   - check_id: SPPP-VAL-006
-    check: canonical keys and orders match the governing registry
-    status: PASS_MANUAL_REVIEW_AUTOMATION_PENDING
+    check: Wise vs. Vulgar transaction fields, controlled values, counts, and blob preservation
+    status: PASS_AUTOMATED
     evidence:
-      - nomos-vs-physis order 1
-      - philosophy-vs-poetry order 2
-      - theory-vs-practice order 3
-      - theologico-political order 4
-      - athens-vs-jerusalem order 5
-      - wise-vs-vulgar order 6
-      - ancients-vs-moderns order 7
+      section_transactions: 18
+      proposition_transactions: 49
+      total_transactions: 67
+      rejected_with_reason: 0
 
   - check_id: SPPP-VAL-007
-    check: shared interpretive methods remain protocols and registry versions align
-    status: PASS_AFTER_VERSIONED_CORRECTION_AUTOMATION_PENDING
+    check: active and preserved Theologico-Political predecessor bytes remain identical
+    status: PASS_AUTOMATED
     evidence:
-      speech_and_deed: protocols/speech-and-deed.yaml version 1.1.0
-      irony: protocols/irony.yaml version 1.1.0
-      comedy: protocols/comedy.yaml version 1.1.0
-      audience_and_rhetoric: protocols/audience-and-rhetoric.yaml version 1.1.0
-      protocol_registry_alignment_commit: 62c36eeefc43e8409eb7fce22ba202908fa2cad4
+      active_path: problems/theologico-political.yaml
+      historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+      blob_sha: 4a35e71916212082598097985deb23699c0018e7
 
   - check_id: SPPP-VAL-008
-    check: Wise vs. Vulgar accepted source and active predecessor remain untouched
-    status: PASS_MANUAL_REVIEW_AUTOMATION_PENDING
+    check: Wise vs. Vulgar active predecessor and accepted migration source match recorded Git blob identities
+    status: PASS_AUTOMATED
     evidence:
-      active_predecessor: problems/wise-and-vulgar.yaml
-      active_blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
-      accepted_source: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
-      accepted_blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
-      transaction_ledger: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
+      active_predecessor_blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+      accepted_source_blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
 
   - check_id: SPPP-VAL-009
-    check: Wise vs. Vulgar proposition-level classification coverage and relations state
-    status: PASS_AFTER_VERSIONED_CORRECTION_AUTOMATION_PENDING
-    evidence:
-      ledger_version: 0.2.0
-      accepted_top_level_units: 18
-      accepted_top_level_units_classified: 18
-      constitutive_propositions: 49
-      constitutive_propositions_classified: 49
-      rejected_with_reason: 0
-      controlled_dispositions_only: true
-      divided_used_only_as_transformation_mode: true
-      one_primary_destination_per_transaction: true
-      relations_alignment_commit: 6576547fcc7d2f24565d06825651610755333ad6
+    check: SPPP integration paths and all seven source bridges resolve
+    status: PASS_AUTOMATED
 
   - check_id: SPPP-VAL-010
-    check: cross-problem duplicate-doctrine and unresolved-jurisdiction review
-    status: REVIEW_COMPLETE_OPEN_SEAMS_PRESERVED_AUTOMATION_PENDING
+    check: cross-problem review covers all twenty-one unique unordered problem pairs
+    status: PASS_AUTOMATED
     evidence:
       path: migrations/foundational-problems-v2/validation/cross-problem-jurisdiction-review-001.yaml
-      review_commit: e7cb09715595c3ec5f1b1bd8652a246c7ea6333f
       pair_count: 21
-      governing_doctrine_deletions_required: 0
-      highest_priority_open_seam: theologico-political and athens-vs-jerusalem
 
   - check_id: SPPP-VAL-011
-    check: jurisdiction and non-absorption safeguards remain explicit
-    status: PASS_MANUAL_REVIEW_AUTOMATION_PENDING
-    evidence:
-      - poetry is not revelation
-      - civic theology is not revelation
-      - political necessity is not philosophical demonstration
-      - chronology and power do not certify superiority
-      - titles, offices, success, persecution, scholarship, repositories, and AI do not certify wisdom
-      - no successor activation or certification is claimed
-      - independent witnesses remain required
+    check: unauthorized successor certification or activation is absent
+    status: PASS_AUTOMATED
 
   - check_id: SPPP-VAL-012
-    check: automated YAML, path, identity, relation, protocol, transaction, coverage, and predecessor validation
-    status: PULL_REQUEST_RUN_REQUESTED_NOT_YET_OBSERVED
-    implementation:
-      script: scripts/validate_foundational_architecture.py
-      script_commit: 383a648c3de7b493537253f467965354ea0d0c23
-      workflow: .github/workflows/validate-foundational-architecture.yml
-      workflow_commit: 17c2ddae2b74c4a325e414acfc9218e1b857d4f9
-    scope:
-      - parse YAML under governing roots
-      - validate seven unique canonical keys and orders
-      - require complete subordinate contracts and nonempty synthesis directories
-      - validate all six does_not_own boundaries for every problem
-      - validate six unique controlled relations for every problem and relation record
-      - validate reciprocal relation coverage and adopted brother-problem designation
-      - validate protocol registry paths and exact protocol versions
-      - validate Wise vs. Vulgar transaction fields, values, counts, and blob preservation
-      - compare active and preserved Theologico-Political predecessor bytes
-      - require SPPP integration paths and all seven source bridges
-      - require cross-problem review coverage of all twenty-one problem pairs
-    observed_result: >
-      Direct-push commits returned no combined status and the available workflow-run
-      connector exposes pull-request-triggered runs. This revision therefore requests
-      an observable pull-request run and does not claim success.
-    certification_blocking: true
+    check: doctrinal and migration completion beyond structural validation
+    status: INCOMPLETE_NOT_FAILED
+    outstanding:
+      - independent witness reconstruction remains incomplete
+      - Theologico-Political and Athens vs. Jerusalem jurisdictional seam remains open
+      - directional semantics for asymmetric relation pairs remain to be formally specified
+      - transaction implementation provenance remains provisional in some records
+      - migration-wide certification evidence has not been completed
 
 preserved_limits:
-  - No validation result certifies the truth of a doctrine.
+  - Structural validation does not certify the truth of a doctrine.
   - No successor is active.
   - Active predecessors remain authoritative until migration certification and activation.
-  - Manual review is not a substitute for automated parsing and path validation.
   - Source-study completion and proposition classification are not migration certification.
   - Classification does not authorize deletion of accepted source material.
   - Cross-problem review does not resolve open philosophical questions by architecture alone.
+  - A successful run validates the tested repository state, not all future revisions.
 
 termination:
-  validation_state: PR_VALIDATION_REQUESTED_CERTIFICATION_BLOCKED_PENDING_OBSERVED_RESULT
+  validation_state: AUTOMATED_STRUCTURAL_VALIDATION_PASSED_MIGRATION_CERTIFICATION_BLOCKED_BY_SUBSTANTIVE_REQUIREMENTS
   next_required_work:
-    - open the validation branch as a pull request against main
-    - observe the workflow run and inspect every job result
-    - resolve every validator finding through versioned correction
-    - record successful run, job, and commit identifiers only after success is observed
-    - review supporting Wise vs. Vulgar witness registrations for completeness
+    - verify the validation-record revision also passes on the pull-request head
+    - merge the validated pull request without activating successors
+    - review and expand supporting Wise vs. Vulgar witness registrations
     - reconstruct independent witnesses for open jurisdictional seams
-    - certify and activate only after every migration precondition passes
+    - update transaction implementation provenance where provisional
+    - prepare migration-wide certification evidence only after all preconditions pass
+    - activate successors only after migration certification
