@@ -6,14 +6,24 @@ identity:
   canonical_title: Review of J. L. Talmon, The Nature of Jewish History
   author: Leo Strauss
   date: 1957
-  version: 1.0.0
+  version: 1.2.0
 status:
-  lifecycle: REGISTERED_SOURCE_IDENTITY
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
   certification: NOT_CERTIFIED
   source_text_admission: NOT_REQUESTED
-  reviewed_witness: NOT_YET_REGISTERED
-  independent_sequential_study: NOT_YET_COMPLETED
+  reviewed_witness: CORPUS-WIT-111
+  independent_sequential_study: TALMON-STUDY-001
+  analytical_state: COMPLETE_PROVISIONAL_FOR_REVIEWED_1983_COLLECTED_WITNESS
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: bdfd8d8a16a4e9b07853cc32034d1c20affd420a
+  reason: >
+    Register CORPUS-WIT-111 and record completion of TALMON-STUDY-001 from the
+    complete one-page 1983 collected item. Preserve distinctions among Strauss's review,
+    Talmon's unreviewed book, witness registration, source-specific reconstruction,
+    independent corroboration, original 1957 journal comparison, predecessor synthesis,
+    doctrine, migration, successor activation, and predecessor displacement.
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
   active_predecessor_source_sequence: 11
@@ -23,43 +33,110 @@ registration_basis:
   preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
   - The active predecessor identifies this review, date, and sequence position.
-  - The SPPP collection registry places a review of Talmon in the posthumous collection, but item-level verification remains pending.
+  - The complete review appears on printed page 232 of Studies in Platonic Political Philosophy.
+  - The item footnote identifies Talmon's book as published in London by the Hillel Foundation in 1957.
+  - The item footnote identifies Strauss's review as published in the Journal of Modern History 29, no. 3, in 1957.
+  - TALMON-STUDY-001 reconstructs the complete one-page review in three ordered reading units.
 predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_ITEM_WITNESS
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_RETESTED_AND_PROVISIONALLY_QUALIFIED_BY_TALMON_STUDY_001
   statement: >
     Rejects an easy philosophy of Jewish historical progress and presents the Jewish problem
     as an especially manifest form of the human social and political problem.
-  preservation_rule: This derivative statement is not independently confirmed or certified here.
+  study_result: >
+    TALMON-STUDY-001 confirms that the review resists economic and psychological reduction,
+    preserves the political insufficiency of statehood, and connects Jewish election to a
+    universal Western political problem. It does not explicitly reject a philosophy of historical
+    progress, and it does not reduce Jewish particularity to a generic human social problem.
+  preservation_rule: >
+    The predecessor statement remains historically preserved and active but is not promoted as
+    a source-level finding. Retesting does not certify, migrate, activate, supersede, or displace it.
 publication_and_witness_condition:
-  publication_venue: UNVERIFIED_AT_ITEM_LEVEL
-  edition: POSTHUMOUS_COLLECTION_ITEM_KNOWN_ITEM_LEVEL_WITNESS_NOT_REGISTERED
-  pagination: UNVERIFIED_AT_ITEM_LEVEL
-  local_file: NOT_REGISTERED_AS_ITEM_WITNESS
-  fingerprint: NOT_AVAILABLE
-  text_condition: NOT_ASSESSED_AT_ITEM_LEVEL
-  locator_reproducibility: INCOMPLETE
+  original_review_publication: Journal of Modern History 29, no. 3, 1957
+  reviewed_work_publication: J. L. Talmon, The Nature of Jewish History—Its Universal Significance, London, Hillel Foundation, 1957
+  reviewed_collected_edition: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  complete_item_printed_page_range: {start: 232, end: 232}
+  complete_item_pdf_page_range_one_based: {start: 236, end: 236}
+  container_source_id: CORPUS-SRC-002
+  container_witness_id: CORPUS-WIT-001
+  local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+  container_page_count: 263
+  container_file_size_bytes: 12551057
+  container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  text_condition: SEARCHABLE_TEXT_WITH_LAYOUT_AND_PAGE_IMAGE
+  wording_rule: PAGE_IMAGE_GOVERNS_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1983_COLLECTED_ITEM
+  original_1957_edition_comparison: PENDING
+  reviewed_work_witness: NOT_REGISTERED
+reviewed_witness:
+  witness_id: CORPUS-WIT-111
+  source_id: CORPUS-SRC-111
+  record_path: studies/theologico-political/review-talmon-nature-of-jewish-history/reviewed-witness.yaml
+  container_witness_id: CORPUS-WIT-001
+  printed_page_range: {start: 232, end: 232}
+  pdf_page_range_one_based: {start: 236, end: 236}
+  container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+independent_sequential_study:
+  study_id: TALMON-STUDY-001
+  corpus_study_id: CORPUS-STUDY-010
+  path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS
+  reconstruction_state: COMPLETE_PROVISIONAL
+  ordered_reading_units: 3
+  permanent_source_level_findings: 8
+  certification: NOT_CERTIFIED
+  limits:
+    - The study is independent of the active predecessor and collection-level synthesis as governing interpretations.
+    - It is not independent corroboration because it uses the same reviewed collected witness.
+    - Talmon's book is not a reviewed witness and remains independently unreconstructed.
+    - Original 1957 journal comparison remains pending.
 source_classification:
   author_relation: PRIMARY_STRAUSS_REVIEW
-  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_ITEM_WITNESS
-  analytical_use: ORIENTATION_ONLY_UNTIL_ITEM_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+  documentary_rank: QUALIFIED_PRIMARY_STRAUSS_ITEM_WITH_REVIEWED_COLLECTED_WITNESS
+  analytical_use: COMPLETE_PROVISIONAL_ITEM_RECONSTRUCTION_AVAILABLE
+  independence_limit: >
+    The reviewed item and TALMON-STUDY-001 establish Strauss's one-page review. They do not
+    independently establish Talmon's complete argument, the theological truth of election,
+    Jewish history, Church-State causation, or the category of Oriental despotism.
 required_distinctions:
   - Strauss's review from Talmon's reviewed work
-  - historical progress from political improvement
-  - Jewish problem from proof of election or providence
-  - review occasion from collection placement
+  - Talmon's reported claims from Strauss's explicit praise and concluding request
+  - historical constitution by belief from theological proof of election
+  - economic and psychological reduction from historical explanation
+  - statehood from resolution of Jewish existence
+  - Jewish particularity from ethnic pride and generic humanity
+  - collected witness from original 1957 journal printing
+  - reviewed witness from sequential reconstruction and both from independent corroboration
   - predecessor synthesis from source-level documented finding
+  - Theologico-Political jurisdiction from Athens-versus-Jerusalem and Ancients-versus-Moderns
+  - sacred history from poetic construction
 prohibitions:
-  - Do not attribute Talmon's claims to Strauss without reconstructing the review relation.
-  - Do not treat historical development as philosophical proof.
-  - Do not count collection-level reading as independent item-level reconstruction.
-  - Do not certify doctrine, migration, or activation.
+  - Do not attribute Talmon's complete doctrine to Strauss's one-page review.
+  - Do not attribute every reported Talmon claim to Strauss as final doctrine.
+  - Do not treat historical efficacy as theological proof or historical nonaffirmation as theological refutation.
+  - Do not treat statehood as final resolution of Jewish existence.
+  - Do not promote the predecessor's historical-progress characterization without item-level evidence.
+  - Do not count TALMON-STUDY-001 as independent corroboration of Talmon or the traditions discussed.
+  - Do not let Pangle's Introduction govern Strauss's review.
+  - Do not identify election or sacred history with poetic construction.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
 next_required_actions:
-  - register a reviewed item witness and the reviewed work's identity
-  - reconstruct review, target, audience, and occasion independently
-  - compare source-level findings with the predecessor without silent harmonization
+  - compare the collected witness with the original 1957 Journal of Modern History printing when available
+  - acquire and independently reconstruct Talmon's reviewed work
+  - independently reconstruct relevant Jewish, historical, theological, Greek, and political witnesses
+  - preserve TALMON-STUDY-001 through typed corpus, findings, and problem-local synthesis registrations
+  - classify any later migration effect proposition by proposition without silent harmonization
 termination:
   source_identity_state: REGISTERED
-  reviewed_witness_state: MISSING
-  study_state: INCOMPLETE
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-111
+  locator_state: REPRODUCIBLE_FOR_REVIEWED_CONTAINER
+  study_state: COMPLETE_PROVISIONAL
+  study_id: TALMON-STUDY-001
+  study_path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
+  reviewed_work_reconstruction: INCOMPLETE
+  independent_corroboration: INCOMPLETE
+  original_edition_comparison: PENDING
   certification: NOT_CERTIFIED
   successor_effect: NONE
