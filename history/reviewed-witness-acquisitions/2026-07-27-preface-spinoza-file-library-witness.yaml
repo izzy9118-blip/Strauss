@@ -1,0 +1,166 @@
+schema_version: 1.0
+record_type: reviewed_witness_acquisition_candidate
+
+identity:
+  id: TP-WITNESS-ACQ-102-001
+  title: Acquisition Candidate — Preface to Spinoza's Critique of Religion
+  version: 1.0.0
+  recorded_date: 2026-07-27
+
+status:
+  lifecycle: ACQUISITION_CANDIDATE_REVIEWED_NOT_REGISTERED
+  certification: NOT_CERTIFIED
+  corpus_registration_effect: NONE
+  source_text_admission: NOT_REQUESTED
+  independent_sequential_study_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+purpose: >
+  Preserve the discovery and bounded review of a complete platform-accessible textual
+  witness for CORPUS-SRC-102 without fabricating a byte-level fingerprint, silently
+  converting a File Library reference into repository custody, or treating acquisition
+  review as witness registration, sequential reconstruction, doctrinal certification,
+  migration, activation, or predecessor displacement.
+
+source_identity:
+  corpus_source_id: CORPUS-SRC-102
+  source_status_id: CORPUS-STATUS-102
+  canonical_title: Preface to Spinoza's Critique of Religion
+  canonical_aliases:
+    - Autobiographical Preface to Spinoza's Critique of Religion
+    - Preface to the English Translation of Spinoza's Critique of Religion
+  author: Leo Strauss
+  date: 1965
+  active_predecessor_source_sequence: 2
+  governing_problem: theologico-political
+
+candidate_container_witness:
+  title: Jewish Philosophy and the Crisis of Modernity
+  subtitle: Essays and Lectures in Modern Jewish Thought
+  author: Leo Strauss
+  editor: Kenneth Hart Green
+  series: SUNY Series in the Jewish Writings of Leo Strauss
+  publisher: State University of New York Press
+  publication_place: Albany
+  publication_year: 1997
+  isbn:
+    cloth: 0-7914-2773-0
+    paperback: 0-7914-2774-9
+  witness_type: SEARCHABLE_PDF_WITH_PAGE_IMAGES_AVAILABLE_THROUGH_CHATGPT_FILE_LIBRARY
+  file_library_reference:
+    object_id: file_0000000073c081fd9fb65f9ea7552cde
+    displayed_filename: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress.pdf
+    page_count: 525
+    repository_copy_status: NOT_DISTRIBUTED_BY_THIS_RECORD
+    byte_access_state: NOT_EXPOSED_TO_REPOSITORY_WRITE_INTERFACE
+
+item_identity_and_locators:
+  collected_title: Preface to Spinoza's Critique of Religion
+  collected_date_label: 1965
+  printed_page_range:
+    start: 137
+    end: 180
+  locator_basis:
+    - The container table of contents places the item at printed page 137.
+    - The next item begins at printed page 181.
+    - The item therefore occupies printed pages 137 through 180 in this collected witness.
+  pdf_page_range_one_based: PENDING_DIRECT_PAGE_IMAGE_SPOT_CHECK
+  item_completeness: COMPLETE_ITEM_BY_TABLE_OF_CONTENTS_BOUNDARY
+  searchable_text_state: AVAILABLE
+  page_images_state: AVAILABLE
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+publication_provenance:
+  source_acknowledgment: >
+    The 1997 collection states that the Preface to the English Translation of
+    Spinoza's Critique of Religion is reprinted from Leo Strauss, Spinoza's
+    Critique of Religion, translated by Elsa M. Sinclair, copyright 1965 by
+    Schocken Books, Inc.
+  original_1965_publication:
+    container_title: Spinoza's Critique of Religion
+    publisher: Schocken Books
+    translator: Elsa M. Sinclair
+    printed_page_range_in_original: PENDING_ORIGINAL_EDITION_REVIEW
+  editorial_composite_condition: >
+    The editor's note states that the present text is based essentially on the
+    1965 version and incorporates almost all slight editorial changes made by
+    Strauss in the 1968 Liberalism Ancient and Modern version, on the editor's
+    assumption that the 1968 version is Strauss's final statement.
+  original_1965_edition_comparison: PENDING
+  final_1968_reprint_comparison: PENDING
+  editorial_layer_rule: >
+    Kenneth Hart Green's introduction, notes, selection, and assumptions remain
+    editorial evidence and may not govern Strauss's argument.
+
+review_condition:
+  complete_text_reviewability: CONFIRMED
+  page_image_reviewability: CONFIRMED
+  stable_printed_locators: CONFIRMED_FOR_1997_COLLECTED_WITNESS
+  byte_level_fingerprint:
+    algorithm: SHA256
+    value: NOT_AVAILABLE
+    reason: >
+      The File Library interface exposes parsed text and rendered page images but
+      does not expose the underlying file bytes or a trusted file digest to the
+      repository write interface.
+  file_size_bytes: NOT_AVAILABLE
+  locator_reproducibility: PARTIAL_PRINTED_PAGINATION_COMPLETE_BYTE_IDENTITY_INCOMPLETE
+
+bounded_content_markers:
+  opening_marker: >
+    The item opens by identifying the 1925-28 German study, its young Jewish
+    author, and the theologico-political predicament under the Weimar Republic.
+  concluding_marker: >
+    The argumentative body concludes by distinguishing modern from premodern
+    rationalism and stating that Strauss had read Spinoza too literally because
+    he had not read him literally enough; editorial notes follow.
+  use_rule: >
+    These markers identify item boundaries and reviewability only. They are not a
+    substitute for the required independent sequential reconstruction.
+
+registration_decision:
+  state: DEFERRED_PENDING_BYTE_LEVEL_IDENTITY_OR_CONTROLLED_PLATFORM_REFERENCE_POLICY
+  reason: >
+    The witness is textually reviewable with stable printed locators, but the
+    repository's established reviewed-witness practice records a byte-level
+    fingerprint. Registering a fabricated digest or silently weakening that
+    requirement would violate provenance and reproducibility safeguards.
+  next_required_action: >
+    Materialize the exact PDF bytes in a tool-accessible workspace and compute a
+    SHA256 digest, or adopt an explicit controlled policy for platform-reference
+    witnesses that preserves the absence of byte custody and prohibits false
+    equivalence with fingerprinted local witnesses.
+
+required_distinctions:
+  - source identity from a reviewed witness
+  - platform-accessible witness from repository-custodied bytes
+  - printed locator reproducibility from byte-level identity
+  - 1965 original text from 1968 authorial revisions and the 1997 editorial composite
+  - editorial introduction and notes from Strauss's argumentative body
+  - witness acquisition from witness registration
+  - witness registration from independent sequential reconstruction
+  - source-level reconstruction from predecessor synthesis
+  - inability to refute orthodoxy from proof of any revelation
+  - historical or political defeat from rational refutation
+
+prohibitions:
+  - Do not invent a SHA256 value, file size, or exact PDF-page offset.
+  - Do not treat the File Library object identifier as a cryptographic fingerprint.
+  - Do not distribute the source text through this record.
+  - Do not treat the 1997 editorial composite as identical to a separately reviewed 1965 or 1968 printing.
+  - Do not let the editor's introduction or notes govern Strauss's argument.
+  - Do not count this acquisition record as CORPUS-WIT-102.
+  - Do not count this acquisition record as an independent sequential reconstruction.
+  - Do not confirm, revise, or displace the active predecessor through this record.
+  - Do not certify doctrine, migration, successor activation, or repository completion.
+
+termination:
+  acquisition_candidate_state: DOCUMENTED
+  textual_reviewability: CONFIRMED
+  reviewed_witness_registration: DEFERRED
+  fingerprint_state: MISSING_WITH_REASON_PRESERVED
+  sequential_study_state: NOT_STARTED_BY_THIS_RECORD
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
