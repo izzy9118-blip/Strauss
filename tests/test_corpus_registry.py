@@ -128,7 +128,7 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertEqual(status["termination"]["independent_corroboration"], "INCOMPLETE")
         self.assertEqual(status["termination"]["certification"], "NOT_CERTIFIED")
         self.assertEqual(status["termination"]["successor_effect"], "NONE")
-        self.assertEqual(study_record["identity"]["study_id"], "JA-STUDY-001")
+        self.assertEqual(study_record["identity"]["id"], "JA-STUDY-001")
         self.assertEqual(
             study_record["termination"]["reading_state"],
             "COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS",
