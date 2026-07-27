@@ -1,0 +1,20 @@
+schema_version: 1.0
+record_type: hermeneutic_rule
+identity: {key: literary-concealment, version: 1.0.0}
+source_protocols:
+  - protocols/irony.yaml
+  - protocols/audience-and-rhetoric.yaml
+  - protocols/speech-and-deed.yaml
+governing_question: >
+  Does the text qualify, redirect, or conceal its teaching through form, audience,
+  indirection, omission, irony, or dramatic action?
+rules:
+  - Concealment is an earned finding, never a default presumption.
+  - Irony is not mechanical inversion of an explicit statement.
+  - Danger, persecution, obscurity, or contradiction alone does not prove an esoteric teaching.
+  - Compare title, explicit claim, textual deed, audience, occasion, omission, and consequence.
+  - Preserve more than one plausible reading where the evidence does not decide.
+prohibited_outputs:
+  - hidden doctrine asserted without positive textual evidence
+  - authorial intention inferred solely from danger
+  - explicit speech automatically reversed

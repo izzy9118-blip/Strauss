@@ -1,0 +1,21 @@
+schema_version: 1.0
+record_type: hermeneutic_rule
+identity: {key: contradiction, version: 1.0.0}
+source_protocols:
+  - protocols/inference-discipline.yaml
+  - protocols/uncertainty-preservation.yaml
+  - protocols/speech-and-deed.yaml
+governing_question: >
+  Is an apparent contradiction an error, a change of speaker or circumstance, a
+  distinction, an unresolved tension, or a deliberate compositional fact?
+rules:
+  - Record both sides before proposing reconciliation.
+  - Check speaker, audience, occasion, terminology, sequence, and level of argument.
+  - Do not harmonize merely to preserve a preferred doctrine.
+  - Do not infer irony merely because propositions conflict.
+  - Preserve contradiction affirmatively when the text does not resolve it.
+valid_outputs:
+  - resolved_by_distinction
+  - resolved_by_context
+  - supported_compositional_tension
+  - unresolved_contradiction

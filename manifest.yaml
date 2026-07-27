@@ -1,0 +1,148 @@
+schema_version: 1.0
+record_type: strauss_operational_manifest
+
+identity:
+  id: STRAUSS-MANIFEST-001
+  repository: izzy9118-blip/Strauss
+  minister_id: leo-strauss
+  title: Minister of Political Philosophy
+  version: 0.1.1
+
+status:
+  lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
+  certification: NOT_CERTIFIED
+  activation: AVAILABLE_FOR_VALIDATED_ADAPTER_USE
+  constitutional_effect: NONE_ON_EXISTING_PROBLEM_MIGRATION
+
+purpose: >
+  Provide one compact, machine-readable entry point through which a runtime can load
+  the Strauss repository's problems, hermeneutics, method, speech discipline, corpus
+  index, and findings index without deleting, overwriting, or silently harmonizing the
+  repository records from which the interface is derived.
+
+source_hierarchy:
+  tiers:
+    - primary_external
+    - primary_contemporaneous
+    - secondary_about_own_primary_acts
+    - secondary_interpretive
+  rule: >
+    Primary sources govern secondary sources where primary sources are available.
+    Source type, edition, translation, editorial condition, and documentary limits
+    remain explicit in every source-specific reconstruction.
+
+proposition_kinds:
+  - documented_finding
+  - supported_inference
+  - working_hypothesis
+  - comparative_question
+  - unresolved_uncertainty
+
+load_order:
+  - method
+  - hermeneutics
+  - problems
+  - speech
+  - corpus
+  - findings
+
+problems:
+  - canonical_key: nomos-vs-physis
+    canonical_order: 1
+    source: problems/nomos-vs-physis/problem.yaml
+  - canonical_key: philosophy-vs-poetry
+    canonical_order: 2
+    source: problems/philosophy-vs-poetry/problem.yaml
+  - canonical_key: theory-vs-practice
+    canonical_order: 3
+    source: problems/theory-vs-practice/problem.yaml
+  - canonical_key: theologico-political
+    canonical_order: 4
+    source: problems/theologico-political/problem.yaml
+    active_predecessor: problems/theologico-political.yaml
+    historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  - canonical_key: athens-vs-jerusalem
+    canonical_order: 5
+    source: problems/athens-vs-jerusalem/problem.yaml
+  - canonical_key: wise-vs-vulgar
+    canonical_order: 6
+    source: problems/wise-vs-vulgar/problem.yaml
+    active_predecessor: problems/wise-and-vulgar.yaml
+    accepted_migration_source: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+  - canonical_key: ancients-vs-moderns
+    canonical_order: 7
+    source: problems/ancients-vs-moderns/problem.yaml
+
+hermeneutics:
+  - key: literary-concealment
+    path: hermeneutics/literary-concealment.yaml
+  - key: whole-and-part
+    path: hermeneutics/whole-and-part.yaml
+  - key: speaker-and-author
+    path: hermeneutics/speaker-and-author.yaml
+  - key: audience
+    path: hermeneutics/audience.yaml
+  - key: contradiction
+    path: hermeneutics/contradiction.yaml
+  - key: historical-and-philosophical-understanding
+    path: hermeneutics/historical-and-philosophical-understanding.yaml
+
+method:
+  - key: recover-question
+    path: method/recover-question.yaml
+  - key: reconstruct-alternatives
+    path: method/reconstruct-alternatives.yaml
+  - key: textual-order
+    path: method/textual-order.yaml
+  - key: preserve-problem
+    path: method/preserve-problem.yaml
+
+speech:
+  mechanism: speech/speech-mechanism.yaml
+  voice_status: subordinate_to_reasoning
+
+corpus:
+  index: corpus/index.yaml
+
+findings:
+  index: findings/index.yaml
+
+runtime:
+  adapter: adapter.py
+  validation_command: python adapter.py --validate
+  test_command: python -m unittest discover -s tests -p 'test_*.py'
+
+sanctum_contract:
+  assembly_repository: izzy9118-blip/Sanctum
+  registry_path: registry/ministers.yaml
+  participation: universal
+  outside_my_ground_permitted: true
+  output_rule: >
+    The adapter emits candidate ministerial context and reports. Git remains the
+    authoritative memory, and Sanctum's Validation Gate alone may confer Assembly-level
+    authority on a returned record.
+
+migration:
+  mapping_record: migrations/lean-operational-interface.yaml
+  mode: ADDITIVE_NON_DESTRUCTIVE
+  flat_problem_projection_deferred: true
+  reason: >
+    The requested lean interface is established through explicit mappings while active
+    predecessors, successor directories, studies, protocols, governance records,
+    migration ledgers, and historical copies remain intact. The existing path
+    problems/theologico-political.yaml is an active predecessor and cannot be silently
+    overwritten by a new flat projection.
+
+safeguards:
+  independent_reconstruction_before_comparison: true
+  documentary_evidence_before_interpretation: true
+  preserve_uncertainty: true
+  silent_revision_prohibited: true
+  predecessor_overwrite_prohibited: true
+  cross_problem_absorption_prohibited: true
+  poetry_is_not_revelation: true
+  irony_is_not_mechanical_inversion: true
+  laughter_does_not_certify_wisdom: true
+  title_does_not_certify_wisdom: true
+  repository_self_certification_prohibited: true
+  artificial_intelligence_self_certification_prohibited: true

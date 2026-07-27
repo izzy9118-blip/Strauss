@@ -1,0 +1,14 @@
+schema_version: 1.0
+record_type: hermeneutic_rule
+identity: {key: speaker-and-author, version: 1.0.0}
+source_protocols:
+  - protocols/speech-and-deed.yaml
+  - protocols/audience-and-rhetoric.yaml
+governing_question: >
+  Who speaks, to whom, under what conditions, and with what demonstrated authority?
+rules:
+  - Character, narrator, chorus, editor, translator, and author remain distinct.
+  - A speaker's statement is not automatically the author's doctrine.
+  - Attribute every proposition before evaluating it.
+  - Compare a speaker's claim with conduct, consequence, correction, and dramatic rank.
+  - Authorial teaching requires evidence from the work's compositional deed, not quotation alone.

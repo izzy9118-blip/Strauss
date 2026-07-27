@@ -1,0 +1,15 @@
+schema_version: 1.0
+record_type: hermeneutic_rule
+identity: {key: whole-and-part, version: 1.0.0}
+source_protocols:
+  - protocols/speech-and-deed.yaml
+  - protocols/inference-discipline.yaml
+governing_question: >
+  What does a passage mean as a part of the argument, dramatic action, work, corpus,
+  and governing problem rather than as an isolated proposition?
+rules:
+  - Read the part in its immediate sequence before comparing remote parallels.
+  - Distinguish a character's local purpose from the work's compositional deed.
+  - Test whether beginning, middle, and ending revise the apparent rank of a statement.
+  - Do not allow a memorable sentence to replace the whole argument.
+  - Corpus-level comparison may qualify but may not erase work-specific evidence.

@@ -1,0 +1,35 @@
+schema_version: 1.0
+record_type: corpus_index
+identity: {id: STRAUSS-CORPUS-INDEX-001, version: 0.1.0}
+status:
+  lifecycle: REFERENCE_INDEX
+  certification: NOT_CERTIFIED
+purpose: >
+  Provide discovery paths for registered sources without moving source records or
+  representing the present corpus as complete.
+source_status_protocol: protocols/source-status.yaml
+collections:
+  strauss_primary_and_qualified_primary:
+    - title: Socrates and Aristophanes
+      study: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
+      status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
+    - title: Studies in Platonic Political Philosophy
+      source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
+      study: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+      status: COMPLETE_FOR_REGISTERED_COLLECTION_PROVISIONAL_NOT_CERTIFIED
+  independent_primary_witnesses:
+    - author: Plato
+      work: Apology of Socrates
+      source_status: studies/plato/apology/source-status.yaml
+      study: studies/plato/apology/philosophy-poetry-divine-authority-reconstruction.yaml
+      status: COMPLETE_FOR_REGISTERED_TRANSLATION_PROVISIONAL_NOT_CERTIFIED
+  historical_and_migration_sources:
+    - history/foundational-problems/
+    - migrations/foundational-problems-v2/predecessor-index.yaml
+witness_registries:
+  pattern: problems/*/witnesses.yaml
+limits:
+  - The index is not an exhaustive bibliography.
+  - A completed study of one translation or collection does not complete an author or problem.
+  - Editorial introductions and translations retain their recorded documentary limits.
+  - Corpus inclusion does not certify truth, rank, or canonical activation.

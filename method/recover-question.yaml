@@ -1,0 +1,20 @@
+schema_version: 1.0
+record_type: inquiry_method
+identity: {key: recover-question, version: 1.0.0}
+source_records:
+  - governance/foundational-problem-architecture.yaml
+  - protocols/source-status.yaml
+  - protocols/evidence-classification.yaml
+objective: >
+  Recover the question that organizes the work before extracting a doctrine or applying
+  a later category.
+steps:
+  - preserve the user's inquiry and the source's stated problem separately
+  - identify the work's opening difficulty, title, occasion, and explicit questions
+  - trace which alternatives the work treats as serious
+  - identify what the ending resolves, transforms, or leaves open
+  - route the recovered question to one or more foundational problems without absorption
+failure_conditions:
+  - beginning from a presumed Straussian answer
+  - substituting a summary topic for the governing question
+  - allowing a secondary introduction to govern a primary work

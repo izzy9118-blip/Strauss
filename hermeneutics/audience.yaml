@@ -1,0 +1,15 @@
+schema_version: 1.0
+record_type: hermeneutic_rule
+identity: {key: audience, version: 1.0.0}
+source_protocols:
+  - protocols/audience-and-rhetoric.yaml
+  - protocols/claimant-to-wisdom.yaml
+governing_question: >
+  Which audiences are addressed, formed, excluded, tested, protected, persuaded,
+  entertained, or endangered by the text?
+rules:
+  - Distinguish intended, immediate, represented, institutional, and later audiences.
+  - Audience differentiation requires evidence of capacity, motive, risk, or purpose.
+  - Popularity, obscurity, initiation, or exclusion does not certify rank.
+  - Examine what each audience can see, misunderstand, imitate, or do after hearing.
+  - Preserve uncertainty where the audience cannot be securely identified.
