@@ -44,7 +44,9 @@ class StraussAdapterTests(unittest.TestCase):
                     ],
                     "source_location": "lines 10-20",
                     "confidence": "HIGH",
-                    "alternatives_considered": [],
+                    "alternatives_considered": [
+                        "no serious alternative identified at this source location"
+                    ],
                 },
                 {
                     "kind": "unresolved_uncertainty",
@@ -214,7 +216,7 @@ class StraussAdapterTests(unittest.TestCase):
     def test_outside_my_ground_is_a_complete_typed_response(self) -> None:
         request = self.valid_request()
         request["mode"] = "outside_my_ground"
-        request["activated_problems"] = []
+        request["activated_problems"] = ["theory-vs-practice"]
         request.pop("findings")
         request["outside_my_ground_reason"] = (
             "The inquiry asks for a technical determination not governed by political philosophy."
