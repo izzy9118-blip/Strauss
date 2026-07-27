@@ -2,8 +2,9 @@
 """Validate and load the typed Strauss findings registry.
 
 The registry indexes committed findings-bearing records by reference. It preserves
-record-local evidence classes, uncertainty, dissent, migration state, and provenance.
-It does not normalize every proposition, certify doctrine, or activate successors.
+record-local evidence classes, uncertainty, dissent, migration state, jurisdiction,
+and provenance. It does not normalize every proposition, certify doctrine, or activate
+successors.
 """
 
 from __future__ import annotations
@@ -11,7 +12,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 import yaml
 
@@ -36,7 +37,9 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml",
     "problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml",
+    "problems/theologico-political/synthesis/jerusalem-and-athens.yaml",
     "problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml",
+    "problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml",
     "problems/wise-vs-vulgar/synthesis/plato-apology.yaml",
     "problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml",
@@ -172,9 +175,7 @@ def _record_claims_certification(record: dict[str, Any]) -> bool:
     if _certification_is_prohibited(record.get("certification")):
         return True
     status = record.get("status")
-    if isinstance(status, dict) and _certification_is_prohibited(status.get("certification")):
-        return True
-    return False
+    return isinstance(status, dict) and _certification_is_prohibited(status.get("certification"))
 
 
 def _derived_problem_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[str]]:
@@ -226,9 +227,7 @@ def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[
 
 
 def _validate_reference_fields(
-    finding_sets: list[dict[str, Any]],
-    finding_ids: set[str],
-    errors: list[str],
+    finding_sets: list[dict[str, Any]], finding_ids: set[str], errors: list[str]
 ) -> None:
     for item in finding_sets:
         finding_id = item.get("finding_set_id")
@@ -252,7 +251,6 @@ def _validate_reference_fields(
 
 def validate_registry(registry: dict[str, Any]) -> list[str]:
     errors: list[str] = []
-
     missing = sorted(REQUIRED_TOP_LEVEL - set(registry))
     if missing:
         errors.append("findings registry missing sections: " + ", ".join(missing))
@@ -260,8 +258,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.0.0":
-        errors.append("findings registry identity.version must be 1.0.0")
+    if identity.get("version") != "1.1.0":
+        errors.append("findings registry identity.version must be 1.1.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -277,8 +275,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(gaps, "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 22:
-        errors.append(f"expected 22 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 25:
+        errors.append(f"expected 25 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 
@@ -305,14 +303,10 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         if _record_claims_certification(record):
             errors.append(f"registered record claims prohibited certification: {path_value}")
 
-        preserved_path = item.get("preserved_path")
-        if preserved_path is not None:
-            if not isinstance(preserved_path, str) or not _resolve(preserved_path).is_file():
-                errors.append(f"{finding_id}.preserved_path does not resolve")
-        active_predecessor_path = item.get("active_predecessor_path")
-        if active_predecessor_path is not None:
-            if not isinstance(active_predecessor_path, str) or not _resolve(active_predecessor_path).is_file():
-                errors.append(f"{finding_id}.active_predecessor_path does not resolve")
+        for field in ("preserved_path", "active_predecessor_path"):
+            target = item.get(field)
+            if target is not None and (not isinstance(target, str) or not _resolve(target).is_file()):
+                errors.append(f"{finding_id}.{field} does not resolve")
 
         bindings = item.get("source_bindings", [])
         if not isinstance(bindings, list):
@@ -467,10 +461,7 @@ def build_registry_context(
         selected_ids = class_ids if selected_ids is None else selected_ids & class_ids
 
     selected = [
-        {
-            "declaration": item,
-            "record": load_yaml(_resolve(item["path"])),
-        }
+        {"declaration": item, "record": load_yaml(_resolve(item["path"]))}
         for item in finding_sets
         if selected_ids is None or item["finding_set_id"] in selected_ids
     ]
@@ -478,11 +469,7 @@ def build_registry_context(
         "identity": registry["identity"],
         "status": registry["status"],
         "coverage": registry["coverage"],
-        "filters": {
-            "problem": problem,
-            "source": source,
-            "record_class": record_class,
-        },
+        "filters": {"problem": problem, "source": source, "record_class": record_class},
         "finding_sets": selected,
         "findings_gaps": registry["findings_gaps"],
         "authority": "READ_ONLY_FINDINGS_DISCOVERY_AND_PROVENANCE_CONTEXT",
@@ -518,15 +505,11 @@ def main() -> int:
     if args.validate:
         print(
             "Typed findings registry validation passed for the current committed findings "
-            "record state; findings remain open, incomplete, and not certified."
+            "record state; findings remain open, materially incomplete, and not certified."
         )
         return 0
-    try:
-        context = build_registry_context(args.problem, args.source, args.record_class)
-    except FindingsRegistryError as exc:
-        print(f"ERROR: {exc}")
-        return 1
-    print(json.dumps(context, indent=2 if args.pretty else None, sort_keys=args.pretty))
+    context = build_registry_context(args.problem, args.source, args.record_class)
+    print(json.dumps(context, indent=2 if args.pretty else None, ensure_ascii=False))
     return 0
 
 

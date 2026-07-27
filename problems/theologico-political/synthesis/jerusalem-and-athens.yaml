@@ -1,0 +1,111 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: TP-JA-001
+  problem: theologico-political
+  source_study: JA-STUDY-001
+  title: The Theologico-Political Problem — Jerusalem and Athens
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_CERTIFIED_MIGRATION
+
+source:
+  source_id: CORPUS-SRC-109
+  witness_id: CORPUS-WIT-109
+  source_status: studies/theologico-political/jerusalem-and-athens/source-status.yaml
+  study_path: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication_evidence: The City College Papers, no. 6, The City College of New York, 1967
+  printed_pages: 147-173
+  original_edition_comparison: PENDING
+
+relation_to_existing_problem:
+  active_predecessor: problems/theologico-political.yaml
+  successor_draft: problems/theologico-political/problem.yaml
+  predecessor_synthesis: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+  relation: RETESTS_QUALIFIES_AND_SUPPLIES_WITHOUT_REPLACING
+  governing_rule: >
+    The active predecessor remains authoritative and historically preserved. This source-local
+    synthesis may confirm, qualify, or challenge predecessor propositions, but no proposition
+    is migrated, certified, activated, or used to displace the predecessor by this record.
+
+strict_problem_contribution:
+  governing_claim: >
+    The source presents revealed divine law and autonomous philosophic inquiry as rival
+    comprehensive authorities whose conflict concerns the beginning, the whole, justice,
+    wisdom, and the highest human life. Political history and settlement cannot decide the
+    truth of either alternative.
+  documented_findings:
+    - Biblical revelation begins from creation, command, covenant, miracle, prophetic report, and obedient response.
+    - Greek philosophy begins from wonder, questioning, the discovery of nature, rational account, and awareness of ignorance.
+    - Similar moral propositions do not establish harmony when authority, grounds, and final ends differ.
+    - Miracle and authorized report are indispensable to the biblical claimant but are neither proved nor disproved by the essay.
+    - Philosophy subjects ancestral and divine-law claims to examination without thereby demonstrating revelation impossible.
+    - Jewish political history manifests the conflict but does not certify providence or philosophic victory.
+  supported_inferences:
+    - Preserving the unresolved confrontation is an affirmative result of testing the strongest alternatives, not a default refusal to judge.
+    - The inability to refute revelation is not proof of revelation, and the inability of revelation to persuade philosophy is not proof of philosophy.
+
+predecessor_reconciliation:
+  state: PROVISIONAL_NO_PROMOTION
+  confirmations:
+    - reason and revealed divine law remain the primary comprehensive alternatives
+    - political and historical mediations do not decide comprehensive truth
+    - philosophy cannot claim victory by reducing revelation to history, psychology, or politics
+  qualifications:
+    - Athens versus Jerusalem retains an irreducible concrete jurisdiction and may not be absorbed by the broader authority problem
+    - Torah, prophecy, command, and covenant are not reducible to poetic theology
+    - the registered Part V contribution remains subordinate to the complete essay
+    - miracle's necessity to the claim is distinct from proof that the reported miracle occurred
+  unresolved:
+    - Strauss's final personal judgment is not certified
+    - the original 1967 printing has not been compared with the reviewed 1983 reprint
+    - independent biblical, Platonic, prophetic, and historical reconstructions remain incomplete
+  migration_effect: NONE
+
+brother_and_adjacent_problem_rules:
+  philosophy_vs_poetry:
+    relation: BROTHER_PROBLEM_REFERENCE
+    supplied_finding: Homeric poetic authority and Torah as binding divine law are distinct claimant forms.
+    non_absorption: Poetry is not revelation; poetic theology is not divine command.
+  athens_vs_jerusalem:
+    relation: COACTIVATED_CONCRETE_ALTERNATIVES
+    supplied_findings:
+      - hearing and obedient love versus seeing, wonder, and autonomous understanding
+      - creation and command versus nature and rational account
+      - two conflicting roots of Western civilization
+    non_absorption: The concrete ways of life may not be reduced to the abstract authority conflict alone.
+  nomos_vs_physis:
+    relation: SUPPLIES_FINDING_TO
+    supplied_finding: The discovery of nature challenges ancestral and divine-law claims without exhausting revelation.
+
+source_and_evidence_limits:
+  - JA-STUDY-001 is source-specific analysis of Strauss's essay, not independent corroboration of biblical or Greek claims.
+  - Pangle's Introduction is secondary and cannot govern Strauss's argument.
+  - Collection placement may orient inquiry but does not demonstrate a complete hidden authorial design.
+  - Page images govern where extracted text is uncertain or conflicts.
+  - Original-edition wording remains revisable pending 1967 comparison.
+
+prohibitions:
+  - no nonrefutation treated as proof
+  - no political success, suffering, survival, statehood, or persistence treated as proof of providence
+  - no poetic theology treated as revelation
+  - no moral overlap treated as comprehensive reconciliation
+  - no source-specific synthesis treated as doctrinal certification
+  - no predecessor displacement or successor activation
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  predecessor_status: UNCHANGED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - original 1967 edition comparison
+    - independent biblical, Platonic, prophetic, and historical witness reconstruction
+    - proposition-level migration classification only after adequate source coverage

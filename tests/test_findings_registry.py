@@ -9,7 +9,7 @@ class FindingsRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_findings_state(self) -> None:
         registry = findings_registry.load_registry()
         self.assertEqual(findings_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.0.0")
+        self.assertEqual(registry["identity"]["version"], "1.1.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE",
@@ -24,7 +24,7 @@ class FindingsRegistryTests(unittest.TestCase):
         registry = findings_registry.load_registry()
         finding_ids = [item["finding_set_id"] for item in registry["finding_sets"]]
         gap_ids = [item["gap_id"] for item in registry["findings_gaps"]]
-        self.assertEqual(len(finding_ids), 22)
+        self.assertEqual(len(finding_ids), 25)
         self.assertEqual(len(finding_ids), len(set(finding_ids)))
         self.assertEqual(len(gap_ids), 6)
         self.assertEqual(len(gap_ids), len(set(gap_ids)))
@@ -38,6 +38,7 @@ class FindingsRegistryTests(unittest.TestCase):
         }
         self.assertEqual(registered, findings_registry._actual_synthesis_paths())
         self.assertEqual(registered, findings_registry.EXPECTED_SYNTHESIS_PATHS)
+        self.assertEqual(len(registered), 12)
 
     def test_migration_transaction_tree_is_exhaustively_registered(self) -> None:
         registry = findings_registry.load_registry()
@@ -58,7 +59,25 @@ class FindingsRegistryTests(unittest.TestCase):
             in {"SOURCE_SPECIFIC_STUDY", "INTEGRATION_GOVERNANCE_RECORD"}
         }
         self.assertEqual(registered, findings_registry._corpus_study_paths())
-        self.assertEqual(len(registered), 7)
+        self.assertEqual(len(registered), 8)
+
+    def test_jerusalem_and_athens_study_and_local_syntheses_are_explicitly_derived(self) -> None:
+        registry = findings_registry.load_registry()
+        by_id = {item["finding_set_id"]: item for item in registry["finding_sets"]}
+        study = by_id["FINDSET-008"]
+        tp = by_id["FINDSET-111"]
+        avj = by_id["FINDSET-112"]
+
+        self.assertEqual(study["source_bindings"], ["CORPUS-SRC-109"])
+        self.assertEqual(study["derived_local_syntheses"], ["FINDSET-111", "FINDSET-112"])
+        self.assertEqual(tp["derived_from"], ["FINDSET-008"])
+        self.assertEqual(tp["problem_bindings"], ["theologico-political"])
+        self.assertEqual(tp["successor_effect"], "NONE")
+        self.assertEqual(avj["derived_from"], ["FINDSET-008"])
+        self.assertEqual(avj["problem_bindings"], ["athens-vs-jerusalem"])
+        self.assertEqual(avj["successor_effect"], "NONE")
+        self.assertEqual(study["independent_corroboration"], "INCOMPLETE")
+        self.assertEqual(study["certification"], "NOT_CERTIFIED")
 
     def test_indexes_are_derived_from_finding_set_bindings(self) -> None:
         registry = findings_registry.load_registry()
@@ -83,30 +102,32 @@ class FindingsRegistryTests(unittest.TestCase):
         )
         registry = findings_registry.load_registry()
         predecessor = next(
-            item
-            for item in registry["finding_sets"]
+            item for item in registry["finding_sets"]
             if item["finding_set_id"] == "FINDSET-301"
         )
         self.assertEqual(predecessor["successor_effect"], "NONE")
         self.assertEqual(predecessor["status"], "ACTIVE_PREDECESSOR_UNTOUCHED")
 
-    def test_source_filter_does_not_treat_derivation_as_independent_corroboration(self) -> None:
-        context = findings_registry.build_registry_context(source="CORPUS-SRC-001")
+    def test_source_filter_preserves_derivation_without_counting_corroboration(self) -> None:
+        context = findings_registry.build_registry_context(source="CORPUS-SRC-101-119")
         ids = [item["declaration"]["finding_set_id"] for item in context["finding_sets"]]
-        self.assertEqual(ids, ["FINDSET-001", "FINDSET-102"])
+        self.assertIn("FINDSET-008", ids)
+        self.assertIn("FINDSET-111", ids)
+        self.assertIn("FINDSET-112", ids)
+        self.assertIn("FINDSET-301", ids)
         self.assertIn("no proposition promotion", context["non_effects"])
         self.assertIn("no doctrinal certification", context["non_effects"])
 
-    def test_problem_filter_preserves_brother_problem_separation(self) -> None:
-        pvp = findings_registry.build_registry_context(problem="philosophy-vs-poetry")
+    def test_problem_filter_preserves_jurisdictional_separation(self) -> None:
         tp = findings_registry.build_registry_context(problem="theologico-political")
-        pvp_ids = {item["declaration"]["finding_set_id"] for item in pvp["finding_sets"]}
+        avj = findings_registry.build_registry_context(problem="athens-vs-jerusalem")
         tp_ids = {item["declaration"]["finding_set_id"] for item in tp["finding_sets"]}
-        self.assertIn("FINDSET-102", pvp_ids)
-        self.assertNotIn("FINDSET-102", tp_ids)
-        self.assertIn("FINDSET-105", tp_ids)
-        self.assertNotIn("FINDSET-105", pvp_ids)
-        self.assertIn("FINDSET-001", pvp_ids & tp_ids)
+        avj_ids = {item["declaration"]["finding_set_id"] for item in avj["finding_sets"]}
+        self.assertIn("FINDSET-008", tp_ids & avj_ids)
+        self.assertIn("FINDSET-111", tp_ids)
+        self.assertNotIn("FINDSET-111", avj_ids)
+        self.assertIn("FINDSET-112", avj_ids)
+        self.assertNotIn("FINDSET-112", tp_ids)
 
     def test_unknown_filters_fail(self) -> None:
         with self.assertRaises(findings_registry.FindingsRegistryError):

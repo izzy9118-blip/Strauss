@@ -4,7 +4,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.0.0
+  version: 1.2.0
 
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
@@ -14,40 +14,33 @@ status:
   destructive_actions_authorized: false
 
 revision_history:
-  predecessor_version: 0.9.0
-  predecessor_blob_sha: c5ae3de5a57eb799ceb99170432654b1ededf111
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 564b320983299f73cb8899d84f9dd293dff81fdc
   reason: >
-    Synchronize the mapping with corpus registry v1.4.0 after bounded item-level
-    source-identity registration for all nineteen writings in the active
-    Theologico-Political predecessor basis. Preserve missing reviewed item witnesses,
-    incomplete independent sequential studies, derivative predecessor contributions,
-    active predecessor authority, and the prohibition on describing identity completion
-    as semantic, doctrinal, migration, or repository completion.
+    Synchronize the mapping with corpus registry v1.6.0, findings registry v1.1.0,
+    and JA-STUDY-001. Preserve one-of-nineteen study completion as bounded and
+    provisional, not independent corroboration, doctrine, certified migration,
+    successor activation, predecessor displacement, or repository completion.
 
 source_state:
   repository: izzy9118-blip/Strauss
-  governing_commit_before_mapping: c3493bd721efa53e813e7bff4e79f3968517996c
-  preserved_roots:
-    - governance/
-    - problems/
-    - protocols/
-    - studies/
-    - migrations/foundational-problems-v2/
-    - history/
-    - scripts/
+  governing_commit_before_mapping: 30cce5863e8a538c5c99a70925e5d3cef7906d5f
+  preserved_roots: [governance/, problems/, protocols/, studies/, migrations/foundational-problems-v2/, history/, scripts/]
 
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 1.8.0
+  version: 2.0.0
   rule: >
-    Structural, bundle, corpus, findings, source-status, and witness validation must never
-    be reported as doctrinal, source-specific, migration, successor, or repository completion.
+    Structural, bundle, corpus, findings, witness, source-status, and source-study validation
+    must never be reported as doctrinal, migration, successor, or repository completion.
 
 production_process:
   path: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   state: IN_PROGRESS
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
+  completed_witness_subunit: JERUSALEM_ATHENS_1_OF_19
+  completed_study_subunit: JERUSALEM_ATHENS_1_OF_19_COMPLETE_PROVISIONAL
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 
@@ -55,12 +48,11 @@ mapping_rules:
   - No source record is deleted, moved, or edited merely to satisfy the lean interface.
   - Existing migration, predecessor, certification, and activation states remain governing.
   - Forward revision preserves predecessor blob identity and states the substantive change.
-  - Interface validity, identity completeness, witness completeness, study completeness, and semantic completion are distinct states.
+  - Interface validity, identity completeness, witness completeness, study completion, independent corroboration, and semantic completion are distinct states.
   - Contract reconstruction does not complete source-specific application.
   - Source entity, reviewed edition, local file, OCR layer, page image, source-status record, study, synthesis, and migration ledger may not be collapsed.
-  - A registered source identity without a reviewed witness does not establish source-level findings.
-  - Registry inclusion does not admit or distribute source text.
-  - Registry inclusion does not promote a proposition beyond its record-local evidence status.
+  - A source-specific study does not constitute independent corroboration of sources represented within it.
+  - Registry inclusion does not admit source text or promote propositions beyond record-local status.
   - Multiple records derived from one source do not constitute independent corroboration.
   - Active predecessors remain authoritative until an authorized certified transition.
 
@@ -77,22 +69,20 @@ mappings:
       validation_command: python problem_bundles.py --validate
     transformation: REFERENCE_WITH_STATUS_PRESERVATION_AND_READ_ONLY_BUNDLE_LOADING
     completion: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
+    new_source_relations:
+      - path: problems/theologico-political/synthesis/jerusalem-and-athens.yaml
+        source: CORPUS-SRC-109
+        derivation: FINDSET-008_TO_FINDSET-111
+      - path: problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml
+        source: CORPUS-SRC-109
+        derivation: FINDSET-008_TO_FINDSET-112
     limit: >
-      Bundle loading does not finish independent witnesses, proposition-level migration,
-      doctrinal certification, predecessor transition, or successor activation.
+      Problem-local integration does not finish independent witnesses, proposition-level
+      migration, doctrinal certification, predecessor transition, or successor activation.
 
   hermeneutics:
     target_role: interpretive_reading_disciplines
-    source:
-      - protocols/source-status.yaml
-      - protocols/evidence-classification.yaml
-      - protocols/inference-discipline.yaml
-      - protocols/uncertainty-preservation.yaml
-      - protocols/speech-and-deed.yaml
-      - protocols/irony.yaml
-      - protocols/comedy.yaml
-      - protocols/audience-and-rhetoric.yaml
-      - protocols/claimant-to-wisdom.yaml
+    source: [protocols/source-status.yaml, protocols/evidence-classification.yaml, protocols/inference-discipline.yaml, protocols/uncertainty-preservation.yaml, protocols/speech-and-deed.yaml, protocols/irony.yaml, protocols/comedy.yaml, protocols/audience-and-rhetoric.yaml, protocols/claimant-to-wisdom.yaml]
     interface:
       - {path: hermeneutics/literary-concealment.yaml, contract_version: STRAUSS-HERMENEUTIC-LC-1}
       - {path: hermeneutics/whole-and-part.yaml, contract_version: STRAUSS-HERMENEUTIC-WP-1}
@@ -100,21 +90,23 @@ mappings:
       - {path: hermeneutics/audience.yaml, contract_version: STRAUSS-HERMENEUTIC-AUD-1}
       - {path: hermeneutics/contradiction.yaml, contract_version: STRAUSS-HERMENEUTIC-CON-1}
       - {path: hermeneutics/historical-and-philosophical-understanding.yaml, contract_version: STRAUSS-HERMENEUTIC-HPU-1}
+    source_application:
+      record: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
 
   method:
     target_role: inquiry_sequence
-    source:
-      - protocols/source-status.yaml
-      - protocols/evidence-classification.yaml
-      - protocols/inference-discipline.yaml
-      - protocols/uncertainty-preservation.yaml
-      - governance/foundational-problem-architecture.yaml
+    source: [protocols/source-status.yaml, protocols/evidence-classification.yaml, protocols/inference-discipline.yaml, protocols/uncertainty-preservation.yaml, governance/foundational-problem-architecture.yaml]
     interface:
       - {path: method/recover-question.yaml, contract_version: STRAUSS-METHOD-RQ-1}
       - {path: method/reconstruct-alternatives.yaml, contract_version: STRAUSS-METHOD-RA-1}
       - {path: method/textual-order.yaml, contract_version: STRAUSS-METHOD-TO-1}
       - {path: method/preserve-problem.yaml, contract_version: STRAUSS-METHOD-PP-1}
+    source_application:
+      record: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+      reading_units: 12
+      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
 
   speech:
@@ -125,48 +117,50 @@ mappings:
 
   corpus:
     target_role: typed_source_identity_status_study_provenance_witness_and_gap_registry
-    source:
-      - studies/**/*.yaml
-      - problems/*/witnesses.yaml
-      - problems/theologico-political.yaml
-      - history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
-      - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    source: [studies/**/*.yaml, problems/*/witnesses.yaml, problems/theologico-political.yaml, history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml, history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml]
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.4.0
+      registry_version: 1.6.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
-    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COMPLETE_TP_IDENTITY_STATUS_RANGE
+    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_JA_SOURCE_STUDY
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
     reviewed_witnesses:
-      count: 3
-      source_ids: [CORPUS-SRC-001, CORPUS-SRC-002, CORPUS-SRC-003]
+      count: 4
+      source_ids: [CORPUS-SRC-001, CORPUS-SRC-002, CORPUS-SRC-003, CORPUS-SRC-109]
     theologico_political_item_level_statuses:
       active_predecessor_source_count: 19
       registered_count: 19
       remaining_count: 0
-      reviewed_witness_count: 0
-      independent_sequential_study_count: 0
+      reviewed_witness_count: 1
+      remaining_without_reviewed_witness: 18
+      independent_sequential_study_count: 1
+      remaining_without_independent_sequential_study: 18
+      completed_study_id: JA-STUDY-001
       status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
       root: studies/theologico-political/
     present_function:
-      - register source entities separately from reviewed witnesses and studies
-      - account for every YAML record in the current studies tree
-      - validate reviewed-witness fingerprints against source-status records
-      - validate all nineteen Theologico-Political identities, aliases, scopes, sequences, missing witnesses, incomplete studies, and noncertification
-      - preserve explicit corpus gaps and missing-evidence states
+      - register source entities separately from witnesses and studies
+      - account for all 30 YAML records in the current studies tree
+      - validate all nineteen identities, aliases, scopes, witness states, study states, and noncertification
+      - validate CORPUS-WIT-109 fingerprint and locators and CORPUS-STUDY-008 binding
+      - preserve corpus gaps and original-edition comparison limits
     limit: >
-      Current-state exhaustiveness and complete identity registration do not create a
-      complete corpus, admit source text, complete independent witnesses or studies,
-      certify findings, or authorize migration and activation.
+      Current-state exhaustiveness and one complete provisional item study do not create a
+      complete corpus, admit source text, supply independent corroboration, certify findings,
+      or authorize migration and activation.
 
   findings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.0.0
+      registry_version: 1.1.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
+    newly_registered:
+      - {finding_set_id: FINDSET-008, path: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml}
+      - {finding_set_id: FINDSET-111, path: problems/theologico-political/synthesis/jerusalem-and-athens.yaml, derived_from: FINDSET-008}
+      - {finding_set_id: FINDSET-112, path: problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml, derived_from: FINDSET-008}
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
     limit: >
       Findings registration does not normalize every proposition, establish independent
@@ -174,13 +168,7 @@ mappings:
 
   runtime:
     target_role: deterministic_loaders_contract_validators_and_candidate_report_builder
-    interface:
-      - adapter.py
-      - problem_bundles.py
-      - corpus_registry.py
-      - findings_registry.py
-      - tests/
-      - .github/workflows/validate-lean-interface.yml
+    interface: [adapter.py, problem_bundles.py, corpus_registry.py, findings_registry.py, tests/, .github/workflows/validate-lean-interface.yml]
     completion: PARTIALLY_RECONSTRUCTED
     limit: >
       Runtime validation does not perform source interpretation, source-text admission,
@@ -196,28 +184,27 @@ path_conflicts:
 
 non_effects:
   - No successor problem is certified or activated.
-  - No active predecessor is displaced.
-  - No accepted migration source is superseded.
-  - No source-specific finding is promoted.
+  - No active predecessor is displaced and no accepted migration source is superseded.
+  - No source-specific finding is promoted beyond its record-local status.
   - No source text is admitted or distributed.
-  - Complete source-identity registration is not reviewed-witness or independent-study completion.
+  - One source study is not independent corroboration or repository completion.
   - No Assembly authority is conferred; Sanctum validation remains separate.
 
 validation_states:
   structural_interface_valid_when:
     - manifest paths and declared YAML records resolve
-    - manifest, audit, mapping, and registry versions agree
+    - manifest, audit, mapping, corpus, findings, and process versions and counts agree
     - adapter validates manifest and speech contract
-    - problem_bundles validates all seven complete bundles
-    - corpus_registry validates identities, witnesses, source-status records, studies, predecessor sources, paths, counts, fingerprints, aliases, scopes, missing-witness conditions, and gaps
-    - findings_registry validates finding sets, exact record coverage, bindings, indexes, and gaps
+    - problem_bundles validates all seven complete bundles and twelve synthesis records
+    - corpus_registry validates identities, witnesses, statuses, studies, predecessor equality, paths, counts, fingerprints, locators, and gaps
+    - findings_registry validates twenty-five finding sets, exact record coverage, derivations, bindings, indexes, and gaps
     - all structural and behavioral tests pass
     - GitHub Actions passes on the implementing commit
   semantic_completion_requires:
-    - reviewed witnesses and independent studies for registered writings
-    - source-specific method and hermeneutic applications
-    - edition comparison where wording or pagination requires it
+    - reviewed witnesses and independent studies for remaining writings
+    - original-edition comparison where wording or pagination requires it
     - expanded independent classical, biblical, medieval, and modern witnesses
+    - source-specific method and hermeneutic application across the corpus
     - actual candidate-report validation against the full contract stack
   doctrinal_certification_requires:
     - separate source-grounded and migration-specific certification records
@@ -227,25 +214,23 @@ validation_states:
     - predecessor preservation and complete classified migration coverage
     - reference and schema validation
     - explicit authorized certification
-    - no activation merely from interface or witness readiness
+    - no activation merely from interface, witness, or study readiness
 
 completed_production_units:
   - speech, hermeneutic, and method operational contracts
   - complete read-only foundational problem bundles
   - typed current-state corpus and findings registries
-  - three reviewed source witnesses with recorded limits
-  - complete 19-of-19 Theologico-Political item-level source-identity status range
+  - complete 19-of-19 Theologico-Political source-identity range
+  - CORPUS-WIT-109 reviewed item witness
+  - JA-STUDY-001 complete provisional source-specific reconstruction and two local synthesis bridges
 
 next_production_units:
-  - establish a reviewed-witness priority schedule for the nineteen Theologico-Political writings
-  - register the first available lawful reviewed item witness with stable provenance and locators
-  - conduct independent sequential reconstruction only after witness status is explicit
-  - create source-specific method and hermeneutic application fixtures
+  - validate and merge this bounded integration
+  - register and reconstruct the Cohen essay and Talmon review already locatable in SPPP
+  - acquire and reconstruct the remaining sixteen item witnesses
   - expand independent witness reconstruction
   - validate actual candidate ministerial reports
 
 repinning_rule: >
   Do not repin Sanctum as a completed Strauss interface while semantic completion remains
-  INCOMPLETE. A separately authorized interim pin may follow successful structural and
-  behavioral validation only if it preserves every declared incompleteness and does not
-  imply doctrinal certification, migration completion, or unrestricted runtime readiness.
+  INCOMPLETE. Passing validation establishes only the integrity of this bounded revision.

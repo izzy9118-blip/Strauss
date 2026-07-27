@@ -4,7 +4,7 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 1.9.0
+  version: 2.0.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
@@ -13,44 +13,45 @@ status:
   repository_completion: INCOMPLETE
 
 revision_history:
-  predecessor_version: 1.8.0
-  predecessor_blob_sha: fcd5bfab3d4b2bc61e9a664d6528ab563aad63e2
+  predecessor_version: 1.9.0
+  predecessor_blob_sha: f356fd89975f2bf99e2956b5628e580d7a63a8b3
   reason: >
-    Record the first reviewed item witness in the nineteen-source Theologico-Political
-    sequence: CORPUS-WIT-109 for Jerusalem and Athens within the reviewed 1983 SPPP
-    container. Preserve the distinction between witness readiness and independent sequential
-    reconstruction, source-level findings, doctrinal or migration certification, successor
-    activation, predecessor transition, and repository completion.
+    Record completion and typed integration of JA-STUDY-001, the first complete provisional
+    independent sequential item study in the nineteen-source Theologico-Political production
+    sequence. Preserve original-edition comparison, independent corroboration, eighteen
+    missing witnesses and studies, doctrinal and migration noncertification, successor
+    nonactivation, active predecessor authority, and the completed-interface Sanctum repin block.
 
 basis:
   repository: izzy9118-blip/Strauss
-  prior_validated_interface_commit: 30f0651a6ea52684a84879048be98ab9e2ab8a4e
-  current_revision_scope: production/tp-reviewed-witness-priority
+  prior_validated_interface_commit: 30cce5863e8a538c5c99a70925e5d3cef7906d5f
+  current_revision_scope: production/jerusalem-athens-sequential-integration
   manifest: manifest.yaml
   corpus_registry: corpus/index.yaml
   corpus_registry_loader: corpus_registry.py
   findings_registry: findings/index.yaml
+  findings_registry_loader: findings_registry.py
   production_process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   witness_priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
   mapping_record: migrations/lean-operational-interface.yaml
   governing_rule: >
-    A reviewed item witness establishes a reproducible documentary object for reading. It
-    does not establish the argument's final meaning, supply independent corroboration,
-    promote a predecessor synthesis claim, certify doctrine or migration, activate a
-    successor, displace a predecessor, or complete the repository.
+    A complete provisional source-specific reconstruction establishes a bounded analytical
+    record for one reviewed witness. It does not supply independent corroboration, original-
+    edition verification, final doctrine, certified migration, successor activation,
+    predecessor displacement, unrestricted runtime readiness, or repository completion.
 
 classification_vocabulary:
   SUBSTANTIVELY_RECONSTRUCTED:
     meaning: >
-      A developed governing contract, registry, source-status, or witness record exists with
+      A developed contract, registry, source-status, witness, study, or synthesis exists with
       explicit identity, provenance, limits, valid operations, termination, and validation.
       This does not constitute doctrinal certification.
   PARTIALLY_RECONSTRUCTED:
     meaning: >
-      A substantial contract or implementation exists, but important execution, evidence
-      domains, source-specific applications, or authoritative composition remain incomplete.
+      A substantial implementation exists, but important evidence domains, source-specific
+      applications, independent witnesses, or authoritative composition remain incomplete.
   MAPPED_TO_RICHER_RECORDS:
-    meaning: The object is principally an index or compact interface to richer records.
+    meaning: The object principally indexes or references richer repository records.
   STRUCTURAL_PLACEHOLDER:
     meaning: The object is loadable but insufficient to govern reliable inquiry by itself.
   EMPTY_OR_UNIMPLEMENTED:
@@ -68,148 +69,171 @@ summary:
     - seven read-only foundational problem bundles
     - typed current-state corpus and findings registries
     - bounded source identities for all nineteen active Theologico-Political predecessor writings
-    - four reviewed witnesses in the corpus registry, including one Theologico-Political item witness
-    - mixed-state validation for eighteen missing item witnesses and one registered item witness
-    - reviewed-witness priority schedule grounded in availability and foundational relevance
+    - four reviewed witnesses, including CORPUS-WIT-109 for Jerusalem and Athens
+    - JA-STUDY-001 complete provisional sequential reconstruction of the complete collected essay
+    - CORPUS-STUDY-008 and FINDSET-008 typed registrations
+    - FINDSET-111 and FINDSET-112 jurisdiction-preserving problem-local syntheses
   theologico_political_item_level_status:
     active_predecessor_source_count: 19
     registered_source_identity_count: 19
     reviewed_item_witness_count: 1
     registered_without_reviewed_witness_count: 18
     remaining_without_item_level_status_count: 0
-    independently_reconstructed_count_within_this_sequence: 0
+    independently_reconstructed_count_within_this_sequence: 1
+    remaining_without_independent_sequential_study: 18
     selected_reviewed_source_id: CORPUS-SRC-109
     selected_reviewed_witness_id: CORPUS-WIT-109
+    completed_study_id: JA-STUDY-001
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     registry_root: studies/theologico-political/
     interpretation_limit: >
-      CORPUS-WIT-109 establishes a reproducible collected item. It does not independently
-      establish the active predecessor's contribution statement or settle the relation
-      between Jerusalem and Athens.
+      JA-STUDY-001 is an independent reconstruction relative to predecessor and collection-
+      level synthesis as governing interpretations, but it is not independent corroboration
+      of biblical, Greek, prophetic, historical, or theological witnesses.
   remaining_major_deficiencies:
-    - eighteen Theologico-Political item identities still lack reviewed item witnesses
-    - all nineteen lack completed independent sequential item studies in this production sequence
-    - the original 1967 printing of Jerusalem and Athens has not been compared with the reviewed 1983 collected reprint
-    - direct independent biblical, Platonic, prophetic, historical, medieval, and modern witnesses remain incomplete
-    - source-specific applications of method and hermeneutics remain incomplete
-    - individual propositions are not yet normalized as separate queryable objects
+    - eighteen Theologico-Political item identities lack reviewed item witnesses
+    - eighteen Theologico-Political writings lack independent sequential item studies
+    - the original 1967 Jerusalem and Athens printing has not been compared with the reviewed 1983 reprint
+    - independent biblical, Platonic, prophetic, historical, medieval, and modern witnesses remain incomplete
+    - source-specific applications of method and hermeneutics remain incomplete beyond current studies
+    - most propositions are not normalized as separate queryable objects
     - actual candidate ministerial reports have not been validated against the full contract stack
-    - doctrinal certification and successor activation remain separately unauthorized
+    - doctrinal certification, migration certification, and successor activation remain unauthorized
 
 records:
+  - path: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    identity: JA-STUDY-001
+    present_function:
+      - reconstructs the complete essay in twelve ordered units before isolating Part V
+      - records thirty-seven documented findings and permanent source-level findings
+      - distinguishes documented finding, supported inference, comparative question, and unresolved uncertainty
+      - applies textual-order, alternatives, whole-and-part, speaker-and-author, audience, contradiction, historical understanding, and concealment contracts by reference
+      - preserves Strauss, biblical texts, Greek texts, editors, and secondary interpreters as distinct voices
+      - preserves Theologico-Political and Athens-versus-Jerusalem jurisdictions without absorption
+      - retests the predecessor without promotion, certification, or displacement
+    remaining:
+      - original 1967 edition comparison
+      - independent source-tradition reconstruction and corroboration
+      - later authorized proposition-level migration review
+
+  - path: studies/theologico-political/jerusalem-and-athens/source-status.yaml
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    present_function:
+      - registers CORPUS-WIT-109 and JA-STUDY-001 as distinct documentary layers
+      - records printed pages 147-173 and PDF pages 151-177
+      - records the 1967 City College Papers reprint notice
+      - preserves the SPPP container fingerprint and page-image authority
+      - terminates with complete provisional study, original-edition comparison pending, and no successor effect
+    remaining:
+      - original printing comparison
+      - independent biblical, Greek, prophetic, and historical witnesses
+
   - path: corpus/index.yaml
     classification: SUBSTANTIVELY_RECONSTRUCTED
-    registry_version: 1.5.0
+    registry_version: 1.6.0
     completion: CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
     present_function:
       - 22 typed source entities
       - 4 reviewed witnesses
       - 22 source-status records
-      - 7 analytical and integration study records
-      - all 29 YAML records in the studies tree accounted for
+      - 8 analytical and integration study records
+      - all 30 YAML records in the studies tree accounted for
       - all 7 problem witness registries
-      - all 19 Theologico-Political identities, dates, aliases, and registered scopes preserved
-      - one reviewed Theologico-Political item witness with stable printed and PDF locators
+      - 19 Theologico-Political identities, 1 reviewed item witness, and 1 complete provisional item study
       - 7 positive corpus-gap records
     remaining:
-      - eighteen reviewed item witnesses and nineteen independent item studies
+      - eighteen reviewed item witnesses and studies
       - complete Strauss bibliography and edition-specific source statuses
-      - original-edition comparison for Jerusalem and Athens and Socrates and Aristophanes
-      - Greek alignment for Plato's Apology
-      - broader classical, biblical, medieval, and modern independent witness corpora
+      - broader independent classical, biblical, medieval, and modern corpora
       - source-text admission and runtime source access remain separate
 
-  - path: studies/theologico-political/jerusalem-and-athens/source-status.yaml
+  - path: findings/index.yaml
     classification: SUBSTANTIVELY_RECONSTRUCTED
+    registry_version: 1.1.0
+    completion: CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
     present_function:
-      - registers CORPUS-WIT-109 within the reviewed SPPP container
-      - records printed pages 147-173 and PDF pages 151-177
-      - records the 1967 City College Papers reprint notice
-      - preserves the container SHA-256 and page-image authority rule
-      - distinguishes the complete essay from the registered Part V scope
-      - terminates with witness registered, study incomplete, certification not certified, and successor effect none
+      - 25 typed finding sets
+      - 8 source-specific or integration records
+      - 12 problem-local syntheses
+      - 3 migration transaction ledgers
+      - 2 preserved finding bases
+      - explicit derivation from FINDSET-008 to FINDSET-111 and FINDSET-112
     remaining:
-      - independent sequential reading of the complete item
-      - source-level evidence classification and precise proposition locators
-      - original 1967 edition comparison
-      - independent biblical, Platonic, prophetic, and historical reconstruction
+      - proposition-level normalization and source-asymmetry repair
+      - independent corroboration and authorized certification remain absent
 
-  - path: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
+  - path: problems/theologico-political/synthesis/jerusalem-and-athens.yaml
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
-      - documents priority criteria without ranking truth
-      - records CORPUS-SRC-109 as first selected and reviewed item
-      - identifies CORPUS-SRC-105 and CORPUS-SRC-111 as next available item witnesses
-      - advances CORPUS-SRC-109 to independent sequential reconstruction
+      - supplies source-local reason-revelation findings
+      - records predecessor confirmations and qualifications without migration effect
+      - preserves poetry-revelation and brother-problem distinctions
     remaining:
-      - register later item witnesses through forward revision
-      - revise priority only through documented evidence or availability changes
+      - independent source expansion and later certified migration review
+
+  - path: problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    present_function:
+      - reconstructs the two comprehensive orientations and their irreducible concrete jurisdiction
+      - preserves reference to the broader authority conflict without absorption
+    remaining:
+      - independent biblical and Greek witness reconstruction
 
   - path: corpus_registry.py
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
-      - validates unique identifiers and exact current studies-tree coverage
-      - validates predecessor identities, aliases, scopes, and preserved-copy equality
-      - validates container witness fingerprints
-      - validates mixed missing-witness and reviewed-item-witness states
-      - validates CORPUS-WIT-109 container fingerprint and printed/PDF locators
-      - preserves incomplete independent-study, noncertification, and successor non-effect states
+      - validates exact current studies-tree coverage and all typed counts
+      - validates nineteen predecessor identities, aliases, scopes, and preserved-copy equality
+      - validates the special complete-study state for CORPUS-SRC-109 and missing states for the other eighteen
+      - validates witness fingerprints, locators, study binding, noncertification, and successor non-effect
     remaining:
-      - no source retrieval, interpretation, proposition promotion, certification, or activation
+      - no source retrieval, interpretation, certification, or activation
 
-  - path: findings/index.yaml
+  - path: findings_registry.py
     classification: SUBSTANTIVELY_RECONSTRUCTED
-    registry_version: 1.0.0
-    completion: CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
+    present_function:
+      - validates twenty-five finding sets and twelve exact synthesis records
+      - validates corpus-study exhaustiveness, derivations, indexes, source and problem bindings
+      - preserves predecessor equality, noncertification, and no successor effect
     remaining:
-      - proposition-level normalization and source-asymmetry repair
-      - actual report validation and authorized certification remain absent
+      - no proposition promotion, doctrinal certification, or migration execution
 
   - path: manifest.yaml
     classification: PARTIALLY_RECONSTRUCTED
     present_function:
-      - registers corpus registry v1.5.0 and exact 19 identities, 1 reviewed item witness, and 0 independent item studies
-      - preserves all structural, semantic, runtime, migration, predecessor, and certification limits
-      - blocks any description of Sanctum repinning as a completed interface while semantic completion is incomplete
+      - registers corpus v1.6.0, findings v1.1.0, 19 identities, 1 witness, and 1 study
+      - preserves structural, semantic, runtime, migration, predecessor, and certification limits
+      - blocks completed-interface Sanctum repinning
     remaining:
-      - manifest does not itself perform source interpretation or report composition
-
-  - path: tests/test_corpus_registry.py
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - validates eighteen missing-witness item states and one reviewed-witness item state
-      - validates item locators, container fingerprint, original publication notice, and continued study incompleteness
-      - preserves predecessor, open-corpus, and noncertification safeguards
-    remaining:
-      - independent sequential-study and source-level comparison fixtures
+      - manifest does not perform interpretation or authoritative report composition
 
 production_order:
   governing_process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   completed_in_current_sequence:
-    - all nineteen bounded item identities
-    - reviewed-witness priority schedule
-    - CORPUS-WIT-109 registration for Jerusalem and Athens
-    - mixed witness-state registry validation and behavioral tests
+    - CORPUS-WIT-109 registration
+    - JA-STUDY-001 complete provisional sequential reconstruction
+    - source-status, corpus, findings, and two problem-local synthesis registrations
+    - substantive validator and behavioral-test revision
   next:
-    - conduct independent sequential reconstruction of Jerusalem and Athens, printed pages 147-173
-    - register reviewed item witnesses for the Cohen essay and Talmon review already located in the SPPP container
-    - acquire and register witnesses for the remaining sixteen sources
-    - create source-specific method and hermeneutic application fixtures
+    - run complete structural and behavioral validation for this integration
+    - register the reviewed Cohen essay item witness already located in SPPP
+    - reconstruct the Cohen essay independently after witness registration
+    - register and reconstruct the Talmon review
+    - acquire the remaining sixteen item witnesses
     - expand independent biblical, Platonic, Xenophontic, medieval, and modern witness studies
     - validate actual ministerial reports against the full contract stack
   final_repin:
     status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
     rule: >
-      Do not repin Sanctum as a completed Strauss interface while this audit records
-      repository_completion: INCOMPLETE. Any separately authorized interim pin must preserve
-      every declared limit and must not imply doctrinal or semantic completion.
+      Do not repin Sanctum as a completed Strauss interface while repository_completion is
+      INCOMPLETE. Passing tests validates this bounded revision, not the completed project.
 
 non_effects:
   - This audit does not certify any doctrine, claimant, source, finding, successor problem, or migration.
-  - This audit does not admit or distribute any source text.
-  - A reviewed item witness is not an independent study or independent corroborating witness.
-  - This audit does not convert derivative predecessor contribution statements into source-level findings.
+  - This audit does not admit or distribute source text.
+  - A source-specific study is not independent corroboration of the traditions it examines.
+  - This audit does not convert predecessor contributions into certified source-level doctrine.
   - This audit does not alter active predecessors or accepted migration sources.
-  - This audit does not authorize successor activation.
-  - This audit does not authorize a completed-interface Sanctum repin.
+  - This audit does not authorize successor activation or completed-interface Sanctum repinning.
   - Later completion must proceed through forward revision with preserved provenance.

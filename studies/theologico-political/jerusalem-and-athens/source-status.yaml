@@ -7,7 +7,7 @@ identity:
   full_collected_title: Jerusalem and Athens — Some Preliminary Reflections
   author: Leo Strauss
   date: 1967
-  version: 1.1.0
+  version: 1.2.0
   registered_scope: Part V — Comments on Jewish History within the complete argument
 
 status:
@@ -15,18 +15,19 @@ status:
   certification: NOT_CERTIFIED
   source_text_admission: NOT_REQUESTED
   reviewed_witness: CORPUS-WIT-109
-  independent_sequential_study: NOT_YET_COMPLETED
+  independent_sequential_study: JA-STUDY-001
+  analytical_state: COMPLETE_PROVISIONAL_FOR_REVIEWED_1983_COLLECTED_WITNESS
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
 
 revision_history:
-  predecessor_version: 1.0.0
-  predecessor_blob_sha: a39061ee4784677de26a74bbea9e56f6f2b45a64
+  predecessor_version: 1.1.0
+  predecessor_blob_sha: bad5c33ce5136397403039cf0f69b059d326c4c6
   reason: >
-    Register the complete collected item in the reviewed Studies in Platonic Political
-    Philosophy PDF, including original-publication evidence, printed and PDF page locators,
-    container fingerprint, searchable-text condition, and page-image authority. Preserve
-    independent sequential reconstruction, source-level findings, doctrine, migration,
-    activation, and predecessor transition as incomplete or unauthorized.
+    Record completion of the independent sequential reconstruction of the complete collected
+    essay in the reviewed 1983 Studies in Platonic Political Philosophy witness. Preserve the
+    original 1967 edition comparison, independent biblical and Greek witness reconstruction,
+    doctrinal and migration certification, successor activation, and predecessor transition
+    as incomplete or unauthorized.
 
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
@@ -44,6 +45,7 @@ verified_documentary_facts:
   - The item occupies printed pages 147 through 173 and PDF pages 151 through 177, counted one-based.
   - The opening-page reprint notice identifies The City College Papers, no. 6, The City College of New York, 1967, as the prior publication.
   - The reviewed container is the University of Chicago Press 1983 posthumous collection.
+  - JA-STUDY-001 reconstructs the complete essay in twelve ordered reading units before isolating the registered Part V contribution.
 
 reviewed_witness:
   witness_id: CORPUS-WIT-109
@@ -60,12 +62,8 @@ reviewed_witness:
     institution: The City College of New York
     year: 1967
     evidence_location: opening-page reprint notice
-  printed_page_range:
-    start: 147
-    end: 173
-  pdf_page_range_one_based:
-    start: 151
-    end: 177
+  printed_page_range: {start: 147, end: 173}
+  pdf_page_range_one_based: {start: 151, end: 177}
   local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
   container_page_count: 263
   container_file_size_bytes: 12551057
@@ -78,23 +76,42 @@ reviewed_witness:
     This witness is the 1983 collected reprint. The original 1967 City College Papers
     printing has not been separately reviewed or compared for variant readings.
 
+independent_sequential_study:
+  study_id: JA-STUDY-001
+  corpus_study_id: CORPUS-STUDY-008
+  path: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS
+  reconstruction_state: COMPLETE_PROVISIONAL
+  ordered_reading_units: 12
+  permanent_source_level_findings: 9
+  certification: NOT_CERTIFIED
+  limits:
+    - The study is independent of the active predecessor and collection-level synthesis as governing interpretations.
+    - It is not independent corroboration because it uses the same reviewed collected witness.
+    - Biblical, Platonic, Aristotelian, Homeric, prophetic, and Jewish historical witnesses remain independently uncompleted.
+    - Original 1967 edition comparison remains pending.
+
 predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOW_BOUND_TO_A_REVIEWED_ITEM_WITNESS_BUT_NOT_YET_RETESTED_BY_INDEPENDENT_SEQUENTIAL_STUDY
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_RETESTED_AND_PROVISIONALLY_QUALIFIED_BY_JA_STUDY_001
   statement: >
     Presents Jerusalem and Athens as comprehensive alternatives and examines how Jewish
     history becomes intelligible within, but does not automatically decide between, rival
     providential and philosophic accounts.
+  study_result: >
+    JA-STUDY-001 provisionally confirms the comprehensive-alternative structure and the
+    inability of Jewish political history to decide providence or philosophic truth. It
+    qualifies the predecessor by preserving Athens versus Jerusalem as an irreducible
+    concrete jurisdiction and by distinguishing Torah and revelation from poetic theology.
   preservation_rule: >
-    Witness registration makes the complete item reproducibly available for testing. It
-    does not independently confirm, revise, promote, or certify the predecessor statement.
+    This retesting does not certify, supersede, activate, or displace the active predecessor.
 
 source_classification:
   author_relation: PRIMARY_STRAUSS_WRITING
   documentary_rank: QUALIFIED_PRIMARY_STRAUSS_ITEM_WITH_REVIEWED_COLLECTED_WITNESS
-  analytical_use: READY_FOR_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  analytical_use: COMPLETE_PROVISIONAL_ITEM_RECONSTRUCTION_AVAILABLE
   independence_limit: >
-    The reviewed item is a witness to Strauss's essay. It is not an independent biblical,
-    Platonic, prophetic, historical, or theological witness to the alternatives discussed.
+    The reviewed item and its study concern Strauss's essay. They are not independent biblical,
+    Platonic, prophetic, historical, or theological witnesses to the alternatives discussed.
 
 required_distinctions:
   - Jerusalem from Athens as comprehensive alternatives
@@ -103,24 +120,24 @@ required_distinctions:
   - original 1967 publication from the reviewed 1983 collected reprint
   - collection title and order from the complete argument of this item
   - Cropsey's editorial provenance and Pangle's secondary introduction from Strauss's essay
-  - item-witness registration from independent sequential reconstruction
+  - reviewed witness from sequential reconstruction and both from independent corroboration
   - Athens vs Jerusalem jurisdiction from the broader Theologico-Political problem
+  - poetic theology from revelation and divine law
 
 prohibitions:
   - Do not let the registered Part V scope stand for the complete essay.
   - Do not treat historical persistence as proof of providence.
-  - Do not count the collection, predecessor, or collection-level study as independent corroboration.
+  - Do not count the collection, predecessor, collection-level study, or JA-STUDY-001 as independent corroboration of the source tradition.
   - Do not let Pangle's introduction govern Strauss's argument.
   - Do not infer original-edition wording where the 1967 printing has not been compared.
-  - Do not treat reviewed-witness registration as source-study completion.
+  - Do not treat completed provisional reconstruction as doctrinal certainty.
   - Do not certify doctrine, migration, successor activation, or predecessor displacement.
 
 next_required_actions:
-  - conduct an independent sequential reading of printed pages 147 through 173
-  - reconstruct the complete essay before isolating the registered Part V contribution
-  - classify source-level findings by documentary status and precise locator
+  - compare the reviewed 1983 reprint with the original 1967 printing where wording or pagination matters
   - independently reconstruct relevant biblical, Platonic, prophetic, and historical witnesses before comparative ranking
-  - compare source-level findings with both the active predecessor and Athens-vs-Jerusalem successor without silent harmonization
+  - preserve JA-STUDY-001 findings through typed corpus, findings, and problem-local synthesis registrations
+  - classify any later migration effect proposition by proposition without silent harmonization
 
 termination:
   source_identity_state: REGISTERED
@@ -128,6 +145,9 @@ termination:
   reviewed_witness_id: CORPUS-WIT-109
   locator_state: REPRODUCIBLE_FOR_REVIEWED_CONTAINER
   original_edition_comparison: PENDING
-  study_state: INCOMPLETE
+  study_state: COMPLETE_PROVISIONAL
+  study_id: JA-STUDY-001
+  study_path: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+  independent_corroboration: INCOMPLETE
   certification: NOT_CERTIFIED
   successor_effect: NONE

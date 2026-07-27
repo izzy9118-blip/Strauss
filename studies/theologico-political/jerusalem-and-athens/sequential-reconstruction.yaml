@@ -1,0 +1,570 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: JA-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Jerusalem and Athens — Some Preliminary Reflections
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1967_edition_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-109
+  source_status_id: CORPUS-STATUS-109
+  reviewed_witness_id: CORPUS-WIT-109
+  author: Leo Strauss
+  canonical_title: Jerusalem and Athens
+  collected_title: Jerusalem and Athens — Some Preliminary Reflections
+  original_publication:
+    publication: The City College Papers
+    issue: no. 6
+    institution: The City College of New York
+    year: 1967
+    evidence: opening-page reprint notice in reviewed collected witness
+  reviewed_container:
+    source_id: CORPUS-SRC-002
+    witness_id: CORPUS-WIT-001
+    title: Studies in Platonic Political Philosophy
+    publisher: University of Chicago Press
+    year: 1983
+    local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+    page_count: 263
+    file_size_bytes: 12551057
+    sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+  locators:
+    printed_pages: {start: 147, end: 173}
+    pdf_pages_one_based: {start: 151, end: 177}
+  text_condition: SEARCHABLE_TEXT_WITH_LAYOUT_AND_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The reviewed witness is the 1983 collected reprint, not a separately reviewed copy of the 1967 printing.
+  - The collection is posthumous; Strauss selected its title and order but did not complete its intended introduction.
+  - Joseph Cropsey's Foreword supplies publication provenance only.
+  - Thomas L. Pangle's Introduction is secondary and provisional and does not govern Strauss's essay.
+  - The collection-level SPPP studies and the active predecessor are derivative analytical records, not independent witnesses to this essay.
+  - The registered Part V scope may not substitute for reconstruction of the complete essay.
+
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+
+method_application:
+  governing_question: >
+    What are the incompatible claims of biblical revelation and Greek philosophy concerning
+    the beginning, the whole, divine law, justice, wisdom, and the right way of life, and how
+    can their confrontation be understood without a neutral synthesis that deprives either
+    alternative of its comprehensive claim?
+  recovered_source_question: >
+    Can a reader formed by both biblical and Greek inheritances recover their roots and live
+    their unresolved conflict rather than dissolving it through historical explanation,
+    theological-philosophical harmonization, or political settlement?
+  alternatives_reconstructed:
+    jerusalem:
+      core: >
+        The whole is governed by the free and inscrutable will of the creator God, who calls
+        human beings into covenant and commands a life of trust, obedience, humility, and love.
+      epistemic_form: authorized revelation, remembered divine speech, prophetic report, and faith
+      political_form: divine law addressed to a particular people while making a universal claim
+      human_perfection: righteousness through hearing, obedience, repentance, mercy, and fidelity
+    athens:
+      core: >
+        The whole is governed by unchangeable necessity and is approached through autonomous
+        questioning, discovery of nature, dialectical examination, and knowledge of permanent forms.
+      epistemic_form: inquiry beginning from wonder, opinion, contradiction, and rational account
+      political_form: natural right and political philosophy judging laws by the good and human perfection
+      human_perfection: the philosophic life, intellectual virtue, and freedom through understanding
+  comparison_rule: >
+    Reconstruct each alternative at its strongest from Strauss's ordered presentation before
+    assessing relation, contradiction, or superiority. Agreement on isolated moral propositions
+    may not erase disagreement concerning beginnings, authority, and the highest life.
+
+speaker_and_documentary_layers:
+  strauss:
+    role: author of the reviewed essay
+    rule: Only Strauss's explicit prose and the essay's demonstrable arrangement are attributable to Strauss.
+  biblical_speakers_and_texts:
+    role: independently represented authorities examined by Strauss
+    examples: [Genesis, Isaiah, Job, Daniel, Proverbs, Ecclesiastes, Torah, prophets]
+    rule: Strauss's account does not replace independent reconstruction of these texts and traditions.
+  greek_speakers_and_texts:
+    role: independently represented philosophic and poetic authorities examined by Strauss
+    examples: [Homer, Hesiod, Socrates, Plato, Aristotle, Greek natural philosophers]
+    rule: Character, poet, philosopher, and Strauss remain distinct until evidence establishes a relation.
+  editors_and_secondary_interpreters:
+    role: documentary or secondary context only
+    examples: [Joseph Cropsey, Thomas L. Pangle]
+    rule: Their claims may not decide Strauss's argument.
+
+sequential_reading:
+  - unit: JA-RU-001
+    printed_pages: 147-148
+    pdf_pages_one_based: 151-152
+    function: Establish the confrontation and reject a neutral standpoint.
+    documented_findings:
+      - id: JA-DF-001
+        proposition: >
+          Strauss names the confrontation between biblical revelation and Greek philosophy
+          through the symbolic opposition of Jerusalem and Athens.
+        classification: documented_finding
+      - id: JA-DF-002
+        proposition: >
+          A merely neutral presentation is inadequate because each alternative claims to
+          identify the one thing needful and therefore demands commitment.
+        classification: documented_finding
+      - id: JA-DF-003
+        proposition: >
+          Strauss nevertheless undertakes preliminary external presentation because inherited
+          Western life is formed by both roots and cannot responsibly abandon inquiry into either.
+        classification: documented_finding
+    supported_inference:
+      id: JA-SI-001
+      proposition: >
+        The essay's initial deed is not to synthesize the alternatives but to create a disciplined
+        space in which their comprehensive claims can confront one another without premature verdict.
+
+  - unit: JA-RU-002
+    printed_pages: 149-150
+    pdf_pages_one_based: 153-154
+    function: Compare the two beginnings.
+    documented_findings:
+      - id: JA-DF-004
+        proposition: >
+          The Bible begins from the beginning through the revealed account of creation, whereas
+          Greek philosophy begins from the question of the beginning.
+        classification: documented_finding
+      - id: JA-DF-005
+        proposition: >
+          The philosophic question presupposes that the beginning is not accepted on authority
+          but must be sought through inquiry.
+        classification: documented_finding
+      - id: JA-DF-006
+        proposition: >
+          Surface agreements concerning God, justice, and the human place in the whole do not
+          overcome the deeper conflict concerning how the beginning is known.
+        classification: documented_finding
+
+  - unit: JA-RU-003
+    printed_pages: 150-152
+    pdf_pages_one_based: 154-156
+    function: Contrast creation with the philosophic cosmos and nature.
+    documented_findings:
+      - id: JA-DF-007
+        proposition: >
+          The biblical account presents an ordered creation brought forth and separated by
+          divine speech, while the philosophic account seeks permanent necessities and natural order.
+        classification: documented_finding
+      - id: JA-DF-008
+        proposition: >
+          Differences in the sequence of light, heavenly bodies, living beings, humanity, and
+          Sabbath cannot be harmonized without altering the governing logic of at least one account.
+        classification: documented_finding
+      - id: JA-DF-009
+        proposition: >
+          The Bible does not begin from the philosophic concept of nature; created beings are
+          understood through their relation to divine command and purpose.
+        classification: documented_finding
+    unresolved_uncertainty:
+      id: JA-UU-001
+      proposition: >
+        The exact extent to which Strauss regards the Genesis account as creation from absolute
+        nothing, rather than ordered separation from an initial condition, remains a question
+        requiring independent reconstruction of Genesis and the relevant theological traditions.
+
+  - unit: JA-RU-004
+    printed_pages: 152-154
+    pdf_pages_one_based: 156-158
+    function: Contrast human status and the highest life.
+    documented_findings:
+      - id: JA-DF-010
+        proposition: >
+          Biblical humanity appears as male and female created in the image of God and entrusted
+          with dominion, while Greek philosophy emphasizes speech, political nature, and rational capacity.
+        classification: documented_finding
+      - id: JA-DF-011
+        proposition: >
+          Biblical righteousness is grounded in covenant and obedient response to divine command;
+          philosophic virtue is grounded in the perfection and natural end of the human being.
+        classification: documented_finding
+      - id: JA-DF-012
+        proposition: >
+          Jerusalem's highest orientation is humble hearing, trust, and love, whereas Athens'
+          highest orientation is free and autonomous understanding.
+        classification: documented_finding
+    comparative_question:
+      id: JA-CQ-001
+      proposition: >
+        Can moral agreement persist when the two accounts assign different grounds, authorities,
+        and final ends to apparently similar virtues?
+
+  - unit: JA-RU-005
+    printed_pages: 154-156
+    pdf_pages_one_based: 158-160
+    function: Deepen the disagreement concerning pride, humility, justice, mercy, and faith.
+    documented_findings:
+      - id: JA-DF-013
+        proposition: >
+          Greek magnanimity and biblical humility disclose rival rankings of self-sufficiency,
+          dependence, greatness, and obedience.
+        classification: documented_finding
+      - id: JA-DF-014
+        proposition: >
+          Biblical righteousness cannot be reduced to moral rectitude because repentance,
+          divine mercy, and faithful obedience alter the relation between sin and justice.
+        classification: documented_finding
+      - id: JA-DF-015
+        proposition: >
+          The Abraham and Isaac episode is presented as an extreme test in which obedience to
+          divine command cannot be judged solely by an autonomous moral standard.
+        classification: documented_finding
+    supported_inference:
+      id: JA-SI-002
+      proposition: >
+        The quarrel concerns not merely which acts are just but who or what possesses authority
+        to define justice when command, reason, and ordinary morality diverge.
+
+  - unit: JA-RU-006
+    printed_pages: 156-158
+    pdf_pages_one_based: 160-162
+    function: Establish revelation's dependence on miracle and authorized report.
+    documented_findings:
+      - id: JA-DF-016
+        proposition: >
+          The biblical claim is inseparable from particular divine interventions and remembered
+          miracles through which a people receives law and covenant.
+        classification: documented_finding
+      - id: JA-DF-017
+        proposition: >
+          Faith does not present itself as a conclusion of unaided reason but as trust in an
+          authoritative report concerning acts that ordinary human experience regards as impossible.
+        classification: documented_finding
+      - id: JA-DF-018
+        proposition: >
+          Knowledge of God in the biblical account depends on God's free self-disclosure rather
+          than on a naturally available human ascent to the first cause.
+        classification: documented_finding
+    unresolved_uncertainty:
+      id: JA-UU-002
+      proposition: >
+        The essay does not provide a neutral proof either that the reported miracles occurred or
+        that miracle is impossible; their status remains central to the unresolved confrontation.
+
+  - unit: JA-RU-007
+    printed_pages: 158-160
+    pdf_pages_one_based: 162-164
+    function: Reconstruct the discovery of nature and the philosophic critique of authority.
+    documented_findings:
+      - id: JA-DF-019
+        proposition: >
+          Philosophy emerges through the distinction between what is by nature and what exists
+          through art, convention, ancestral custom, or authoritative report.
+        classification: documented_finding
+      - id: JA-DF-020
+        proposition: >
+          The plurality and contradiction of laws lead philosophy to seek a natural standard
+          beyond the ancestral and to replace authority with rational account.
+        classification: documented_finding
+      - id: JA-DF-021
+        proposition: >
+          From the philosophic standpoint, a revealed law risks appearing as one code among
+          many unless its divine origin is independently established.
+        classification: documented_finding
+    supported_inference:
+      id: JA-SI-003
+      proposition: >
+        Nomos versus physis is a constitutive internal articulation of the larger Jerusalem-Athens
+        confrontation but does not exhaust revelation's claim or the Theologico-Political problem.
+
+  - unit: JA-RU-008
+    printed_pages: 160-162
+    pdf_pages_one_based: 164-166
+    function: Compare poetic authority, Torah, logos, and rival accounts of the whole.
+    documented_findings:
+      - id: JA-DF-022
+        proposition: >
+          Homer functions as a Greek authoritative beginning, but Greek poetry does not possess
+          the same structure of binding divine law that characterizes Torah.
+        classification: documented_finding
+      - id: JA-DF-023
+        proposition: >
+          The shared term logos cannot by itself reconcile biblical divine speech with autonomous
+          philosophic reason because its governing meaning differs across the traditions.
+        classification: documented_finding
+      - id: JA-DF-024
+        proposition: >
+          The common object called the whole is differently understood: philosophy seeks an
+          order governed by intelligible necessity, while the Bible presents an order governed
+          by the free and partly inscrutable creator.
+        classification: documented_finding
+      - id: JA-DF-025
+        proposition: >
+          The Bible's documentary form is heterogeneous and cannot responsibly be treated as a
+          single philosophic treatise with one univocal human speaker.
+        classification: documented_finding
+    jurisdiction_note: >
+      Poetic theology belongs to Philosophy versus Poetry; Torah, prophecy, divine command,
+      and revelation remain under The Theologico-Political Problem. Their intersection may
+      be referenced but not absorbed.
+
+  - unit: JA-RU-009
+    printed_pages: 162-165
+    pdf_pages_one_based: 166-169
+    function: Examine prophecy, righteous suffering, Job, and Daniel.
+    documented_findings:
+      - id: JA-DF-026
+        proposition: >
+          Prophetic and wisdom texts intensify rather than eliminate the problem of divine
+          justice, especially through innocent or righteous suffering.
+        classification: documented_finding
+      - id: JA-DF-027
+        proposition: >
+          Job's demand for an intelligible account is answered by divine rebuke, repentance,
+          and restoration rather than by a theoretical demonstration of providential justice.
+        classification: documented_finding
+      - id: JA-DF-028
+        proposition: >
+          Daniel introduces resurrection and postmortem recompense through authoritative
+          revelation, not through a philosophic proof of immortality.
+        classification: documented_finding
+    unresolved_uncertainty:
+      id: JA-UU-003
+      proposition: >
+        The relation among piety, wisdom, suffering, resurrection, and intelligible justice
+        remains unresolved without independent textual reconstruction of Job, Daniel, and
+        their interpretive traditions.
+
+  - unit: JA-RU-010
+    printed_pages: 165-168
+    pdf_pages_one_based: 169-172
+    function: Reconstruct Greek philosophic wisdom and Socratic limitation.
+    documented_findings:
+      - id: JA-DF-029
+        proposition: >
+          Philosophy begins in wonder, understood as awareness of not knowing, and seeks an
+          account of all things rather than obedience to a received command.
+        classification: documented_finding
+      - id: JA-DF-030
+        proposition: >
+          Socratic wisdom is human and limited: it knows its ignorance while continuing inquiry
+          into the whole and the permanent forms accessible through dialectic.
+        classification: documented_finding
+      - id: JA-DF-031
+        proposition: >
+          Philosophic freedom depends on the confidence that the whole possesses an intelligible
+          and unchangeable character even though complete wisdom is unavailable to human beings.
+        classification: documented_finding
+    comparative_question:
+      id: JA-CQ-002
+      proposition: >
+        Does awareness of philosophic limitation strengthen openness to revelation, or does the
+        philosophic commitment to intelligibility already govern how revelation is judged?
+
+  - unit: JA-RU-011
+    printed_pages: 168-171
+    pdf_pages_one_based: 172-175
+    function: Reconstruct biblical wisdom and its subordination to fear of God.
+    documented_findings:
+      - id: JA-DF-032
+        proposition: >
+          Biblical wisdom appears as a divine gift ordered by fear of the Lord and obedience,
+          not as self-sufficient human mastery of the whole.
+        classification: documented_finding
+      - id: JA-DF-033
+        proposition: >
+          Solomon, Proverbs, Job, and Ecclesiastes preserve tensions among wisdom, justice,
+          prosperity, suffering, vanity, command, and the inability to comprehend God's work.
+        classification: documented_finding
+      - id: JA-DF-034
+        proposition: >
+          Ecclesiastes culminates in fear of God and obedience to commandments after testing
+          the limits of human wisdom, pleasure, labor, and historical achievement.
+        classification: documented_finding
+    supported_inference:
+      id: JA-SI-004
+      proposition: >
+        Strauss presents biblical wisdom as internally reflective and self-critical, but not
+        as autonomous philosophy freed from revelation and command.
+
+  - unit: JA-RU-012
+    printed_pages: 171-173
+    pdf_pages_one_based: 175-177
+    function: Bring the confrontation into Jewish history and political existence.
+    documented_findings:
+      - id: JA-DF-035
+        proposition: >
+          The Jewish question is political and theological because the universal creator's
+          law is joined to the election and historical existence of a particular people.
+        classification: documented_finding
+      - id: JA-DF-036
+        proposition: >
+          Exile, emancipation, assimilation, statehood, and historical persistence may alter
+          the political condition of the Jewish people without finally deciding providence,
+          revelation, or the truth of the philosophic alternative.
+        classification: documented_finding
+      - id: JA-DF-037
+        proposition: >
+          The conflict of Jerusalem and Athens remains a living tension within Western
+          civilization rather than a contradiction already dissolved by historical progress.
+        classification: documented_finding
+    supported_inference:
+      id: JA-SI-005
+      proposition: >
+        Part V concretizes the comprehensive alternatives in political history but does not
+        reduce The Theologico-Political Problem to Jewish politics or Athens versus Jerusalem
+        to a merely historical comparison.
+
+permanent_source_level_findings:
+  - id: JA-PF-001
+    proposition: Jerusalem and Athens are rival comprehensive orientations, not complementary cultural themes.
+    classification: documented_finding
+  - id: JA-PF-002
+    proposition: Their conflict concerns beginnings, authority, the whole, law, justice, wisdom, and the highest life.
+    classification: documented_finding
+  - id: JA-PF-003
+    proposition: Biblical revelation begins from divine creation and command; Greek philosophy begins from questioning and the discovery of nature.
+    classification: documented_finding
+  - id: JA-PF-004
+    proposition: Similar moral teachings do not establish agreement when their grounds and final ends differ.
+    classification: documented_finding
+  - id: JA-PF-005
+    proposition: Miracle and authorized report are indispensable to the biblical claim but are not demonstrable through ordinary human experience within the essay.
+    classification: documented_finding
+  - id: JA-PF-006
+    proposition: Philosophy's discovery of nature subjects ancestral and divine law claims to rational examination without thereby proving revelation impossible.
+    classification: supported_inference
+  - id: JA-PF-007
+    proposition: Biblical wisdom remains ordered by fear, obedience, and divine gift; Socratic wisdom remains ordered by wonder, inquiry, and awareness of ignorance.
+    classification: documented_finding
+  - id: JA-PF-008
+    proposition: Jewish political history manifests the confrontation but cannot by itself prove providence or philosophical truth.
+    classification: documented_finding
+  - id: JA-PF-009
+    proposition: The essay preserves the conflict rather than authorizing a final victory, synthesis, or neutral standpoint.
+    classification: supported_inference
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss describes the reflections as preliminary and acknowledges that an external
+    presentation cannot fully satisfy either comprehensive claimant.
+  textual_deed: >
+    He reconstructs the alternatives from their beginnings, follows each through creation,
+    law, justice, wisdom, and history, and ends without a certified reconciliation or victory.
+  relation: CONFIRMATION_WITH_QUALIFICATION
+  finding: >
+    The essay's ordered deed confirms that preserving the problem is not indecision but the
+    result of testing the alternatives across their deepest claims. The conclusion remains
+    provisional because independent source traditions and original-edition comparison remain incomplete.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - reason and revelation as rival comprehensive authorities
+      - miracle, prophecy, divine command, covenant, and law
+      - inability of political settlement or historical explanation to certify truth
+      - unresolved authority to define the highest life
+  athens_vs_jerusalem:
+    role: PRIMARY_CONCRETE_ALTERNATIVES
+    receives:
+      - autonomous understanding and obedient love as comprehensive ways of life
+      - rival beginnings and accounts of the whole
+      - the two-root structure of Western civilization
+      - Jewish historical existence as a concrete field of confrontation
+  nomos_vs_physis:
+    role: REFERENCED_SUPPLIED_FINDING
+    receives:
+      - discovery of nature as a challenge to ancestral and divine law claims
+    non_absorption: Does not receive the full reason-revelation confrontation.
+  philosophy_vs_poetry:
+    role: REFERENCED_BROTHER_PROBLEM
+    receives:
+      - distinction between Homeric poetic authority and Torah as binding divine law
+    non_absorption: Poetry is not revelation; poetic theology is not divine command.
+  theory_vs_practice:
+    role: REFERENCED_SUPPLIED_FINDING
+    receives:
+      - political settlements and historical actions do not certify comprehensive truth
+  wise_vs_vulgar:
+    role: REFERENCED_SUPPLIED_FINDING
+    receives:
+      - competing claimant forms of wisdom and the limits of authority by title or office
+  ancients_vs_moderns:
+    role: REFERENCED_SUPPLIED_FINDING
+    receives:
+      - modern harmonization and historicist resolution attempts remain subject to the original alternatives
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  state: PROVISIONAL_RECONCILIATION_COMPLETE_NO_PROMOTION
+  confirmations:
+    - The primary comprehensive alternatives are philosophic reason and revealed divine law.
+    - Political and historical mediations do not decide the truth of either alternative.
+    - Philosophy cannot claim victory merely by treating revelation as a historical or psychological phenomenon.
+    - The unresolved contention may be preserved affirmatively.
+  qualifications:
+    - The source gives Athens versus Jerusalem an irreducible concrete jurisdiction that must not be absorbed into the broader Theologico-Political successor.
+    - The source distinguishes Homeric poetic authority from Torah strongly enough to preserve poetry and revelation as different claimant forms.
+    - The source's account of miracle establishes the indispensability of the claim, not the truth of the reported event.
+    - The registered Part V contribution must remain subordinate to the complete essay's sequence.
+  unresolved:
+    - Strauss's final personal judgment between the alternatives is not certified by this study.
+    - Original 1967 edition comparison remains pending.
+    - Independent reconstruction of biblical, Platonic, Aristotelian, prophetic, and Jewish historical witnesses remains incomplete.
+  predecessor_effect: NONE
+
+uncertainties:
+  - id: JA-U-001
+    statement: The essay does not certify whether Strauss finally chooses philosophy, revelation, or permanent inquiry as a third position.
+  - id: JA-U-002
+    statement: The relation between an external presentation and Strauss's own provisional standpoint remains interpretively open.
+  - id: JA-U-003
+    statement: No conclusion about miracle can be promoted beyond the essay's reconstructed alternatives without additional argument and evidence.
+  - id: JA-U-004
+    statement: Collection placement may orient inquiry but does not demonstrate a complete hidden design.
+  - id: JA-U-005
+    statement: Wording-dependent claims remain revisable pending comparison with the original 1967 printing.
+
+prohibitions:
+  - Do not let Pangle's Introduction govern Strauss's essay.
+  - Do not identify biblical, prophetic, Platonic, Aristotelian, Homeric, or editorial voices with Strauss without evidence.
+  - Do not treat miracle's indispensability to biblical faith as proof that a miracle occurred.
+  - Do not treat inability to refute revelation as proof of revelation.
+  - Do not treat historical persistence, persecution, statehood, or political success as proof of providence.
+  - Do not reduce Jerusalem and Athens to morality versus immorality, religion versus science, or two compatible cultural contributions.
+  - Do not identify poetry with revelation or Torah with poetic construction.
+  - Do not certify a final Strauss doctrine, migration, successor activation, or predecessor displacement.
+
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  original_edition_comparison_required: true
+  certification: NOT_CERTIFIED
+  next_units:
+    - update CORPUS-STATUS-109 to record completed provisional sequential reconstruction
+    - register JA-STUDY-001 in corpus/index.yaml and findings/index.yaml
+    - create problem-local synthesis bridges for Theologico-Political and Athens-vs-Jerusalem
+    - validate nonduplication, jurisdiction, provenance, and proposition classifications
+    - preserve all certification and activation blockers

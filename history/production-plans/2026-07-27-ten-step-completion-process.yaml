@@ -4,45 +4,44 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.2.0
+  version: 1.4.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
   completion: IN_PROGRESS
   governing_rule: >
-    Structural validity, typed registration, and passing tests do not establish
-    substantive completion. Each completed step must preserve source hierarchy,
-    independent reconstruction, uncertainty, predecessor authority, and the
-    prohibition on repository or artificial-intelligence self-certification.
+    Structural validity, typed registration, completed provisional study, and passing tests
+    do not establish substantive repository completion. Every unit must preserve source
+    hierarchy, independent reconstruction, uncertainty, predecessor authority, nonabsorption,
+    and the prohibition on repository or artificial-intelligence self-certification.
 
 revision_history:
-  predecessor_version: 1.1.0
-  predecessor_blob_sha: 5b7e14aec64f95c2a7d286b70c3ec56c2aa42d3b
+  predecessor_version: 1.2.0
+  predecessor_blob_sha: cdc238e892205f27178392257cd2f0ac43fee99a
   reason: >
-    Record completion of bounded item-level source-identity registration for all nineteen
-    writings in the active Theologico-Political predecessor basis. Advance Step 8 from
-    identity registration to reviewed-witness prioritization and independent source study,
-    while preserving semantic incompleteness and the Step 10 completed-interface repin blocker.
+    Advance Step 8 after registering CORPUS-WIT-109 and completing JA-STUDY-001 with typed
+    corpus, findings, and jurisdiction-preserving problem-local synthesis registrations.
+    Preserve eighteen missing item witnesses and studies and the Step 10 repin blocker.
 
 steps:
   - sequence: 1
     action: Create a complete repository audit.
     state: IMPLEMENTED_AND_ACTIVE
     governing_record: audits/operational-completeness.yaml
-    current_version: 1.8.0
-    limit: The audit records incompleteness; it does not cure it.
+    current_version: 2.0.0
+    limit: The audit records incompleteness; it does not cure or certify it.
   - sequence: 2
     action: Correct the manifest completion language.
     state: IMPLEMENTED_AND_ACTIVE
     governing_record: manifest.yaml
-    current_version: 1.0.0
+    current_version: 1.2.0
     limit: The manifest remains semantically incomplete and not doctrinally certified.
   - sequence: 3
     action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
     state: IMPLEMENTED_CONTRACT_SOURCE_APPLICATION_INCOMPLETE
     governing_record: speech/speech-mechanism.yaml
-    limit: The speech contract is subordinate to source-grounded reasoning and requires continuing behavioral application.
+    limit: The speech contract remains subordinate to source-grounded reasoning.
   - sequence: 4
     action: Strengthen adapter.py to validate substantive contracts.
     state: IMPLEMENTED_LIMITED_READ_ONLY
@@ -51,109 +50,90 @@ steps:
   - sequence: 5
     action: Reconstruct the six hermeneutic objects.
     state: IMPLEMENTED_CONTRACTS_SOURCE_APPLICATION_INCOMPLETE
-    governing_records:
-      - hermeneutics/literary-concealment.yaml
-      - hermeneutics/whole-and-part.yaml
-      - hermeneutics/speaker-and-author.yaml
-      - hermeneutics/audience.yaml
-      - hermeneutics/contradiction.yaml
-      - hermeneutics/historical-and-philosophical-understanding.yaml
+    governing_records: [hermeneutics/literary-concealment.yaml, hermeneutics/whole-and-part.yaml, hermeneutics/speaker-and-author.yaml, hermeneutics/audience.yaml, hermeneutics/contradiction.yaml, hermeneutics/historical-and-philosophical-understanding.yaml]
   - sequence: 6
     action: Reconstruct the four method objects.
     state: IMPLEMENTED_CONTRACTS_SOURCE_APPLICATION_INCOMPLETE
-    governing_records:
-      - method/recover-question.yaml
-      - method/reconstruct-alternatives.yaml
-      - method/textual-order.yaml
-      - method/preserve-problem.yaml
+    governing_records: [method/recover-question.yaml, method/reconstruct-alternatives.yaml, method/textual-order.yaml, method/preserve-problem.yaml]
   - sequence: 7
     action: Complete the seven problem objects and their source relations.
     state: ACTIVE_INCOMPLETE
     governing_record: problems/registry.yaml
     completed:
-      - seven subordinate bundles exist and load in canonical order
+      - seven subordinate bundles load in canonical order
       - controlled relation records exist
       - active predecessors and accepted migration sources remain preserved
+      - Jerusalem and Athens now supplies distinct provisional syntheses to Theologico-Political and Athens-versus-Jerusalem
     remaining:
       - complete source-specific application to each problem
       - complete independent witness reconstruction
       - complete proposition-level migration where required
-      - resolve or preserve jurisdictional seams without absorption
+      - preserve jurisdictional seams without absorption
   - sequence: 8
     action: Populate corpus and findings with real typed registrations.
     state: ACTIVE_INCOMPLETE
-    governing_records:
-      - corpus/index.yaml
-      - findings/index.yaml
+    governing_records: [corpus/index.yaml, findings/index.yaml]
     completed:
-      - current committed source and study state is typed and bounded
-      - current committed findings-bearing records are typed and bounded
-      - all 19 active Theologico-Political predecessor writings have bounded item-level source identities
-      - all 19 identity records preserve title, date, sequence, aliases or registered scope, missing witness, incomplete study, and noncertification
-      - generic validation and behavioral tests cover the complete status range
+      - all 19 Theologico-Political predecessor writings have bounded item identities
+      - CORPUS-WIT-109 is registered with provenance, fingerprint, and locators
+      - JA-STUDY-001 is complete provisional for the reviewed 1983 collected witness
+      - CORPUS-STUDY-008, FINDSET-008, FINDSET-111, and FINDSET-112 are registered
+      - corpus and findings registries preserve derivation, jurisdiction, gaps, and noncertification
     remaining:
-      - establish reviewed witnesses and publication provenance for the nineteen item-level identities
-      - conduct independent sequential studies after witness status is explicit
-      - expand independent primary witnesses beyond Strauss's own writings
-      - normalize propositions where governing records remain aggregate
+      - establish reviewed witnesses for eighteen item identities
+      - conduct eighteen independent sequential item studies
+      - compare the original 1967 Jerusalem and Athens printing where wording matters
+      - expand independent primary witnesses beyond Strauss's writings
+      - normalize propositions where warranted by reproducible extraction
       - preserve later additions through forward revision
   - sequence: 9
     action: Run behavioral tests.
     state: ACTIVE_CONTINUOUS
-    governing_records:
-      - tests/
-      - .github/workflows/validate-lean-interface.yml
+    governing_records: [tests/, .github/workflows/validate-lean-interface.yml]
     completed_in_current_sequence:
-      - complete 19-of-19 item-level source-identity coverage tests
-      - manifest, audit, mapping, registry, and process consistency tests
-      - missing-witness, incomplete-study, noncertification, and successor non-effect tests
+      - tests drafted for one completed provisional TP item study and eighteen incomplete states
+      - tests drafted for corpus/findings coverage, derivation, jurisdiction, and completion-language consistency
+    current_requirement: Run the complete GitHub Actions validation before merge.
     limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
   - sequence: 10
     action: Repin the completed Strauss interface in Sanctum.
     state: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
     governing_record: izzy9118-blip/Sanctum/registry/ministers.yaml
     prohibition: >
-      Do not describe a limited or structurally valid Strauss interface as completed.
-      A later completed-interface Sanctum pin may occur only after substantive completion,
-      declared validation, and accurate resolution or preservation of all remaining blockers.
+      Do not describe a limited or structurally valid Strauss interface as completed. A later
+      completed-interface pin requires substantive completion, declared validation, accurate
+      preservation or resolution of blockers, and separate Sanctum validation.
 
 current_production_unit:
   step: 8
   completed_subunit:
-    title: Theologico-Political item-level source-identity registration
-    state: COMPLETE_19_OF_19
-    status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
-    root: studies/theologico-political/
+    title: Jerusalem and Athens reviewed witness and complete provisional item reconstruction
+    state: COMPLETE_PENDING_BRANCH_VALIDATION_AND_MERGE
+    source_id: CORPUS-SRC-109
+    witness_id: CORPUS-WIT-109
+    study_id: JA-STUDY-001
+    corpus_study_id: CORPUS-STUDY-008
+    finding_sets: [FINDSET-008, FINDSET-111, FINDSET-112]
     non_effect: >
-      Identity completion does not supply reviewed witnesses, stable locators, fingerprints,
-      independent reconstruction, source-level findings, doctrine, migration, or activation.
+      Completion of this bounded source unit does not supply independent corroboration,
+      doctrine, certified migration, successor activation, predecessor displacement, or
+      completed-interface readiness.
   next_subunit:
-    title: Reviewed-witness priority and first item-level witness registration
+    title: Introductory Essay for Hermann Cohen reviewed item witness and sequential reconstruction
+    source_id: CORPUS-SRC-105
     first_action: >
-      Create a controlled priority record for the nineteen writings based on foundational
-      relevance, source availability, documentary condition, and nonduplication. Select the
-      first source only through documented criteria, then register a lawful reviewed witness
-      before beginning independent sequential reconstruction.
-    required_fields:
-      - source identity and priority basis
-      - publication provenance
-      - edition or textual witness identity
-      - file or stable external locator where lawful
-      - fingerprint where a local witness is reviewed
-      - textual condition and locator reliability
-      - relation to existing predecessor and collection-level records
-      - explicit noncertification and independent-witness limits
+      Register the complete item in the reviewed SPPP container with publication provenance,
+      printed and PDF locators, container fingerprint, text condition, and explicit distinction
+      between witness registration and independent sequential study.
+    following_source: CORPUS-SRC-111
   non_effects:
-    - no source-text admission through identity records
-    - no independent study completion
-    - no doctrinal certification
-    - no migration certification
-    - no successor activation
-    - no predecessor displacement
+    - no source-text admission through registries
+    - no doctrinal or migration certification
+    - no successor activation or predecessor displacement
     - no Sanctum repin as a completed interface
 
 termination:
   state: CONTINUE_UNTIL_GENUINE_BLOCKER
   blocker_rule: >
-    A blocker must identify the exact missing source, authority, path, validation
-    failure, or jurisdictional conflict and the precise cure required.
+    A blocker must identify the exact missing source, authority, path, validation failure,
+    or jurisdictional conflict and the precise cure required.
