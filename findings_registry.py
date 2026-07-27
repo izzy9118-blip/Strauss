@@ -22,13 +22,7 @@ REGISTRY_PATH = ROOT / "findings" / "index.yaml"
 CORPUS_PATH = ROOT / "corpus" / "index.yaml"
 PROBLEM_REGISTRY_PATH = ROOT / "problems" / "registry.yaml"
 TP_ACTIVE_PATH = ROOT / "problems" / "theologico-political.yaml"
-TP_PRESERVED_PATH = (
-    ROOT
-    / "history"
-    / "foundational-problems"
-    / "theologico-political"
-    / "STR-PROBLEM-002-v1.1-active-predecessor.yaml"
-)
+TP_PRESERVED_PATH = ROOT / "history" / "foundational-problems" / "theologico-political" / "STR-PROBLEM-002-v1.1-active-predecessor.yaml"
 
 EXPECTED_SYNTHESIS_PATHS = {
     "problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml",
@@ -38,8 +32,10 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml",
     "problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/theologico-political/synthesis/jerusalem-and-athens.yaml",
+    "problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml",
+    "problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/wise-vs-vulgar/synthesis/plato-apology.yaml",
     "problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml",
@@ -52,28 +48,14 @@ EXPECTED_TRANSACTION_PATHS = {
 }
 
 REQUIRED_TOP_LEVEL = {
-    "identity",
-    "status",
-    "purpose",
-    "scope_rule",
-    "finding_unit_rule",
-    "identifier_rules",
-    "finding_sets",
-    "indexes",
-    "coverage",
-    "proposition_kinds",
-    "preservation_rules",
-    "findings_gaps",
-    "validation_rules",
-    "termination",
+    "identity", "status", "purpose", "scope_rule", "finding_unit_rule",
+    "identifier_rules", "finding_sets", "indexes", "coverage", "proposition_kinds",
+    "preservation_rules", "findings_gaps", "validation_rules", "termination",
 }
 
 REFERENCE_FIELDS = {
-    "derived_from",
-    "derived_local_syntheses",
-    "derivation_targets",
-    "migration_targets",
-    "repository_artifact_bindings",
+    "derived_from", "derived_local_syntheses", "derivation_targets",
+    "migration_targets", "repository_artifact_bindings",
 }
 
 
@@ -128,11 +110,7 @@ def _unique_ids(records: Any, field: str, label: str, errors: list[str]) -> set[
 
 
 def _actual_synthesis_paths() -> set[str]:
-    return {
-        str(path.relative_to(ROOT))
-        for path in (ROOT / "problems").glob("*/synthesis/*.yaml")
-        if path.is_file()
-    }
+    return {str(path.relative_to(ROOT)) for path in (ROOT / "problems").glob("*/synthesis/*.yaml") if path.is_file()}
 
 
 def _actual_transaction_paths() -> set[str]:
@@ -142,29 +120,17 @@ def _actual_transaction_paths() -> set[str]:
 
 def _corpus_source_ids() -> set[str]:
     corpus = load_yaml(CORPUS_PATH)
-    return {
-        item.get("source_id")
-        for item in corpus.get("source_entities", [])
-        if isinstance(item, dict) and isinstance(item.get("source_id"), str)
-    }
+    return {item.get("source_id") for item in corpus.get("source_entities", []) if isinstance(item, dict) and isinstance(item.get("source_id"), str)}
 
 
 def _corpus_study_paths() -> set[str]:
     corpus = load_yaml(CORPUS_PATH)
-    return {
-        item.get("path")
-        for item in corpus.get("study_records", [])
-        if isinstance(item, dict) and isinstance(item.get("path"), str)
-    }
+    return {item.get("path") for item in corpus.get("study_records", []) if isinstance(item, dict) and isinstance(item.get("path"), str)}
 
 
 def _canonical_problem_keys() -> list[str]:
     registry = load_yaml(PROBLEM_REGISTRY_PATH)
-    return [
-        item.get("canonical_key")
-        for item in registry.get("canonical_problems", [])
-        if isinstance(item, dict)
-    ]
+    return [item.get("canonical_key") for item in registry.get("canonical_problems", []) if isinstance(item, dict)]
 
 
 def _certification_is_prohibited(value: Any) -> bool:
@@ -197,10 +163,7 @@ def _derived_record_class_index(finding_sets: list[dict[str, Any]]) -> dict[str,
     }
     for item in finding_sets:
         record_class = item.get("record_class")
-        if record_class in {
-            "ACTIVE_PREDECESSOR_FINDING_BASIS",
-            "ACCEPTED_MIGRATION_SOURCE_FINDING_BASIS",
-        }:
+        if record_class in {"ACTIVE_PREDECESSOR_FINDING_BASIS", "ACCEPTED_MIGRATION_SOURCE_FINDING_BASIS"}:
             result["PRESERVED_FINDING_BASIS"].append(item["finding_set_id"])
         elif record_class in result:
             result[record_class].append(item["finding_set_id"])
@@ -226,9 +189,7 @@ def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[
     return result
 
 
-def _validate_reference_fields(
-    finding_sets: list[dict[str, Any]], finding_ids: set[str], errors: list[str]
-) -> None:
+def _validate_reference_fields(finding_sets: list[dict[str, Any]], finding_ids: set[str], errors: list[str]) -> None:
     for item in finding_sets:
         finding_id = item.get("finding_set_id")
         for field in REFERENCE_FIELDS:
@@ -243,10 +204,7 @@ def _validate_reference_fields(
                 errors.append(f"{finding_id}.{field} references unknown finding sets: {unknown!r}")
         classification_ledger = item.get("classification_ledger")
         if classification_ledger is not None and classification_ledger not in finding_ids:
-            errors.append(
-                f"{finding_id}.classification_ledger references unknown finding set "
-                f"{classification_ledger!r}"
-            )
+            errors.append(f"{finding_id}.classification_ledger references unknown finding set {classification_ledger!r}")
 
 
 def validate_registry(registry: dict[str, Any]) -> list[str]:
@@ -258,8 +216,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.1.0":
-        errors.append("findings registry identity.version must be 1.1.0")
+    if identity.get("version") != "1.2.0":
+        errors.append("findings registry identity.version must be 1.2.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -275,8 +233,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(gaps, "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 25:
-        errors.append(f"expected 25 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 28:
+        errors.append(f"expected 28 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 
@@ -338,11 +296,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
             f"missing_expected={sorted(EXPECTED_SYNTHESIS_PATHS - actual_syntheses)!r}, "
             f"new_unexpected={sorted(actual_syntheses - EXPECTED_SYNTHESIS_PATHS)!r}"
         )
-    registered_syntheses = {
-        item["path"]
-        for item in finding_sets
-        if item.get("record_class") == "PROBLEM_LOCAL_SYNTHESIS"
-    }
+    registered_syntheses = {item["path"] for item in finding_sets if item.get("record_class") == "PROBLEM_LOCAL_SYNTHESIS"}
     if registered_syntheses != actual_syntheses:
         errors.append(
             "problem synthesis records are not exhaustively registered: "
@@ -357,11 +311,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
             f"missing_expected={sorted(EXPECTED_TRANSACTION_PATHS - actual_transactions)!r}, "
             f"new_unexpected={sorted(actual_transactions - EXPECTED_TRANSACTION_PATHS)!r}"
         )
-    registered_transactions = {
-        item["path"]
-        for item in finding_sets
-        if item.get("record_class") == "MIGRATION_TRANSACTION_LEDGER"
-    }
+    registered_transactions = {item["path"] for item in finding_sets if item.get("record_class") == "MIGRATION_TRANSACTION_LEDGER"}
     if registered_transactions != actual_transactions:
         errors.append(
             "migration transactions are not exhaustively registered: "
@@ -371,10 +321,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
 
     corpus_studies = _corpus_study_paths()
     registered_studies = {
-        item["path"]
-        for item in finding_sets
-        if item.get("record_class")
-        in {"SOURCE_SPECIFIC_STUDY", "INTEGRATION_GOVERNANCE_RECORD"}
+        item["path"] for item in finding_sets
+        if item.get("record_class") in {"SOURCE_SPECIFIC_STUDY", "INTEGRATION_GOVERNANCE_RECORD"}
     }
     if registered_studies != corpus_studies:
         errors.append(
@@ -404,10 +352,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "problem_syntheses_registered": len(registered_syntheses),
         "migration_transaction_ledgers_registered": len(registered_transactions),
         "preserved_finding_bases_registered": sum(
-            1
-            for item in finding_sets
-            if item.get("record_class")
-            in {"ACTIVE_PREDECESSOR_FINDING_BASIS", "ACCEPTED_MIGRATION_SOURCE_FINDING_BASIS"}
+            1 for item in finding_sets
+            if item.get("record_class") in {"ACTIVE_PREDECESSOR_FINDING_BASIS", "ACCEPTED_MIGRATION_SOURCE_FINDING_BASIS"}
         ),
         "current_problem_synthesis_tree_yaml_records_accounted_for": len(actual_syntheses),
         "current_foundational_transaction_tree_yaml_records_accounted_for": len(actual_transactions),
@@ -417,9 +363,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     }
     for field, expected in expected_coverage.items():
         if coverage.get(field) != expected:
-            errors.append(
-                f"coverage.{field} mismatch: expected {expected!r}, found {coverage.get(field)!r}"
-            )
+            errors.append(f"coverage.{field} mismatch: expected {expected!r}, found {coverage.get(field)!r}")
 
     termination = registry.get("termination", {})
     if termination.get("registry_state") != "COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -428,15 +372,10 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         errors.append("termination.findings_state must remain open, incomplete, and noncertified")
     if termination.get("certification") != "NOT_CERTIFIED":
         errors.append("termination may not certify findings")
-
     return errors
 
 
-def build_registry_context(
-    problem: str | None = None,
-    source: str | None = None,
-    record_class: str | None = None,
-) -> dict[str, Any]:
+def build_registry_context(problem: str | None = None, source: str | None = None, record_class: str | None = None) -> dict[str, Any]:
     registry = load_registry()
     errors = validate_registry(registry)
     if errors:
@@ -462,8 +401,7 @@ def build_registry_context(
 
     selected = [
         {"declaration": item, "record": load_yaml(_resolve(item["path"]))}
-        for item in finding_sets
-        if selected_ids is None or item["finding_set_id"] in selected_ids
+        for item in finding_sets if selected_ids is None or item["finding_set_id"] in selected_ids
     ]
     return {
         "identity": registry["identity"],
@@ -473,14 +411,7 @@ def build_registry_context(
         "finding_sets": selected,
         "findings_gaps": registry["findings_gaps"],
         "authority": "READ_ONLY_FINDINGS_DISCOVERY_AND_PROVENANCE_CONTEXT",
-        "non_effects": [
-            "no proposition promotion",
-            "no doctrinal certification",
-            "no migration certification",
-            "no successor activation",
-            "no predecessor displacement",
-            "no Assembly authority",
-        ],
+        "non_effects": ["no proposition promotion", "no doctrinal certification", "no migration certification", "no successor activation", "no predecessor displacement", "no Assembly authority"],
     }
 
 
@@ -503,13 +434,9 @@ def main() -> int:
             print(f"ERROR: {error}")
         return 1
     if args.validate:
-        print(
-            "Typed findings registry validation passed for the current committed findings "
-            "record state; findings remain open, materially incomplete, and not certified."
-        )
+        print("Typed findings registry validation passed for the current committed findings record state; findings remain open, materially incomplete, and not certified.")
         return 0
-    context = build_registry_context(args.problem, args.source, args.record_class)
-    print(json.dumps(context, indent=2 if args.pretty else None, ensure_ascii=False))
+    print(json.dumps(build_registry_context(args.problem, args.source, args.record_class), indent=2 if args.pretty else None, ensure_ascii=False))
     return 0
 
 
