@@ -4,22 +4,22 @@ record_type: reviewed_witness_priority_schedule
 identity:
   id: TP-REVIEWED-WITNESS-PRIORITY-001
   title: Theologico-Political Reviewed-Witness Priority Schedule
-  version: 1.2.0
+  version: 1.3.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_SCHEDULE
   certification: NOT_CERTIFIED
   identity_registration: COMPLETE_19_OF_19
-  reviewed_witness_completion: INCOMPLETE_1_OF_19
-  independent_sequential_study_completion: INCOMPLETE_1_OF_19
+  reviewed_witness_completion: INCOMPLETE_2_OF_19
+  independent_sequential_study_completion: INCOMPLETE_2_OF_19
 
 revision_history:
-  predecessor_version: 1.1.0
-  predecessor_blob_sha: 2a17ed711ce1b1cb83ba321c7cb90d04b4af3fba
+  predecessor_version: 1.2.0
+  predecessor_blob_sha: 78b19e27db4b7cac18279e913b3b32811f8c7581
   reason: >
-    Record completion of JA-STUDY-001 after CORPUS-WIT-109 registration, preserve its
+    Record completion of COHEN-STUDY-001 after CORPUS-WIT-105 registration, preserve its
     provisional and noncorroborating status, and advance the next available reviewed-item
-    witness to CORPUS-SRC-105 without ranking truth or altering predecessor authority.
+    witness to CORPUS-SRC-111 without ranking truth or altering predecessor authority.
 
 purpose: >
   Order reviewed-witness and sequential-study production for the nineteen source identities
@@ -77,9 +77,11 @@ priority_groups:
         source_id: CORPUS-SRC-105
         status_id: CORPUS-STATUS-105
         title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
-        state: REVIEWED_CONTAINER_ITEM_LOCATED_WITNESS_NOT_REGISTERED
+        witness_id: CORPUS-WIT-105
+        study_id: COHEN-STUDY-001
+        state: REVIEWED_WITNESS_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDY
         witness_locator: {container_witness_id: CORPUS-WIT-001, printed_pages: 233-247, pdf_pages_one_based: 237-251}
-        next_action: REGISTER_REVIEWED_ITEM_WITNESS
+        next_action: ORIGINAL_EDITION_COMPARISON_AND_INDEPENDENT_WITNESS_EXPANSION
       - rank: 3
         source_id: CORPUS-SRC-111
         status_id: CORPUS-STATUS-111
@@ -116,33 +118,28 @@ priority_groups:
       - {rank: 18, source_id: CORPUS-SRC-119, title: "Restatement on Xenophon's Hiero", next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 19, source_id: CORPUS-SRC-106, title: Freud on Moses and Monotheism, next_action: ACQUIRE_AND_REGISTER_WITNESS}
 
-selection:
-  selected_first_source_id: CORPUS-SRC-109
-  selected_title: Jerusalem and Athens
-  reviewed_witness_id: CORPUS-WIT-109
-  study_id: JA-STUDY-001
-  selection_state: REVIEWED_ITEM_WITNESS_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDY
-  completed_unit:
-    - source status updated through complete provisional study
-    - CORPUS-WIT-109 and CORPUS-STUDY-008 registered
-    - FINDSET-008, FINDSET-111, and FINDSET-112 registered
-    - complete essay reconstructed before Part V isolation
-    - Theologico-Political and Athens-versus-Jerusalem jurisdictions preserved without absorption
-  limits:
-    - original 1967 edition comparison remains pending
-    - the study is not independent biblical or Greek corroboration
-    - no doctrine, migration, or successor certification
+completed_items:
+  - source_id: CORPUS-SRC-109
+    witness_id: CORPUS-WIT-109
+    study_id: JA-STUDY-001
+    state: COMPLETE_PROVISIONAL_FOR_REVIEWED_1983_COLLECTED_WITNESS
+    limits: [original_1967_comparison_pending, independent_biblical_and_Greek_witnesses_pending]
+  - source_id: CORPUS-SRC-105
+    witness_id: CORPUS-WIT-105
+    study_id: COHEN-STUDY-001
+    state: COMPLETE_PROVISIONAL_FOR_REVIEWED_1983_COLLECTED_WITNESS
+    limits: [original_1972_comparison_pending, independent_Cohen_biblical_medieval_Kantian_and_historical_witnesses_pending]
 
 next_item_witness_unit:
-  source_id: CORPUS-SRC-105
-  title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
-  action: REGISTER_REVIEWED_ITEM_WITNESS
+  source_id: CORPUS-SRC-111
+  title: Review of J. L. Talmon, The Nature of Jewish History
+  action: REGISTER_REVIEWED_ITEM_WITNESS_AND_RECONSTRUCT_COMPLETE_ONE_PAGE_ITEM
   required_preservations:
-    - original 1972 publication evidence from the item opening page
-    - complete-item printed and PDF locators
+    - original Journal of Modern History 1957 publication evidence from the item notice
+    - printed page 232 and PDF page 236 locators
     - SPPP container fingerprint and page-image authority
-    - distinction between Cohen's position, Strauss's account, and collection-level synthesis
-    - witness registration before independent sequential reconstruction
+    - distinction between Talmon's lecture, Strauss's review, Jewish historical self-understanding, and theological truth
+    - witness registration from sequential study and both from independent corroboration
 
 prohibitions:
   - Do not treat collection availability or a source-specific study as independent corroboration.
@@ -153,8 +150,8 @@ prohibitions:
 
 termination:
   schedule_state: ACTIVE
-  first_item_selected: CORPUS-SRC-109
-  reviewed_item_witness_registration: COMPLETE_FOR_CORPUS_WIT_109
-  independent_sequential_reconstruction: COMPLETE_PROVISIONAL_FOR_JA_STUDY_001
-  next_item_witness: CORPUS-SRC-105
+  reviewed_item_witness_registration: INCOMPLETE_2_OF_19
+  independent_sequential_reconstruction: INCOMPLETE_2_OF_19
+  completed_studies: [COHEN-STUDY-001, JA-STUDY-001]
+  next_item_witness: CORPUS-SRC-111
   certification: NOT_CERTIFIED
