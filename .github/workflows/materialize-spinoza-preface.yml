@@ -32,6 +32,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
+          import re
 
           def replace(path: str, old: str, new: str) -> None:
               target = Path(path)
@@ -46,29 +47,16 @@ jobs:
               'if study_record.get("termination", {}).get("successor_effect") not in (None, "NONE"):',
           )
 
+          witness_test = "tests/test_corpus_wit_102_platform_registration.py"
           replace(
-              "tests/test_corpus_wit_102_platform_registration.py",
+              witness_test,
               "def test_registration_does_not_complete_study_or_certify(self) -> None:",
               "def test_historical_registration_remains_noncertifying_after_forward_study(self) -> None:",
           )
-          replace(
-              "tests/test_corpus_wit_102_platform_registration.py",
-              '''        self.assertEqual(
-              status["status"]["independent_sequential_study"],
-              "NOT_YET_COMPLETED",
-          )''',
-              '''        self.assertEqual(
-              status["status"]["independent_sequential_study"],
-              "SPINOZA-PREFACE-STUDY-001",
-          )
-          self.assertEqual(status["status"]["certification"], "NOT_CERTIFIED")''',
-          )
-          replace(
-              "tests/test_corpus_wit_102_platform_registration.py",
-              '"INCOMPLETE_3_OF_19",',
-              '"INCOMPLETE_4_OF_19",',
-          )
+          replace(witness_test, '"NOT_YET_COMPLETED",', '"SPINOZA-PREFACE-STUDY-001",')
+          replace(witness_test, '"INCOMPLETE_3_OF_19",', '"INCOMPLETE_4_OF_19",')
 
+          talmon_test = "tests/test_pr21_talmon_completion.py"
           replacements = {
               'self.assertEqual(manifest["identity"]["version"], "1.5.0")': 'self.assertEqual(manifest["identity"]["version"], "1.6.0")',
               'self.assertEqual(audit["identity"]["version"], "2.3.0")': 'self.assertEqual(audit["identity"]["version"], "2.4.0")',
@@ -78,27 +66,24 @@ jobs:
               'self.assertEqual(corpus["identity"]["version"], "1.9.0")': 'self.assertEqual(corpus["identity"]["version"], "1.10.0")',
               'self.assertEqual(findings["identity"]["version"], "1.3.0")': 'self.assertEqual(findings["identity"]["version"], "1.4.0")',
               'self.assertEqual(state["independent_sequential_study_count"], 3)': 'self.assertEqual(state["independent_sequential_study_count"], 4)',
+              '["COHEN-STUDY-001", "JA-STUDY-001", "TALMON-STUDY-001"],': '["COHEN-STUDY-001", "JA-STUDY-001", "TALMON-STUDY-001", "SPINOZA-PREFACE-STUDY-001"],',
           }
           for old, new in replacements.items():
-              replace("tests/test_pr21_talmon_completion.py", old, new)
-          replace(
-              "tests/test_pr21_talmon_completion.py",
-              '''            ["COHEN-STUDY-001", "JA-STUDY-001", "TALMON-STUDY-001"],''',
-              '''            [
-                  "COHEN-STUDY-001",
-                  "JA-STUDY-001",
-                  "TALMON-STUDY-001",
-                  "SPINOZA-PREFACE-STUDY-001",
-              ],''',
-          )
+              replace(talmon_test, old, new)
 
-          replace(
-              "studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml",
-              '''      Reason can decisively exclude revelation only through a demonstrated comprehensive account
-              of the whole that leaves no possibility of miraculous intervention.''',
-              '''      Reason can decisively exclude revelation only through a clear and exhaustive account of the whole
-              that leaves no possibility of miraculous intervention.''',
+          study_path = Path(
+              "studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml"
           )
+          study_text = study_path.read_text(encoding="utf-8")
+          study_text, count = re.subn(
+              r"Reason can decisively exclude revelation only through a demonstrated comprehensive account\s+of the whole",
+              "Reason can decisively exclude revelation only through a clear and exhaustive account of the whole",
+              study_text,
+              count=1,
+          )
+          if count != 1:
+              raise SystemExit("expected permanent-finding wording was not found")
+          study_path.write_text(study_text, encoding="utf-8")
 
           for transient in (
               "materialization-validation.log",
