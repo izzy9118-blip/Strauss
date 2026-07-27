@@ -4,7 +4,7 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 1.2.0
+  version: 1.3.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
@@ -13,34 +13,36 @@ status:
   repository_completion: INCOMPLETE
 
 revision_history:
-  predecessor_version: 1.1.0
-  predecessor_blob_sha: dca48c90717141a45dfd7ce40d16ee6b2b2dcda4
+  predecessor_version: 1.2.0
+  predecessor_blob_sha: fc6e3557ba366d175d8152409fdcb0608dfa441e
   reason: >
-    Record substantive reconstruction of all four method contracts. Preserve
-    source-specific application, problem implementation, corpus, findings, independent
-    witness reconstruction, doctrinal certification, and activation as incomplete.
+    Record the validated read-only loading of complete foundational-problem bundles:
+    constitution, inquiry profile, witness registry, relations, and synthesis records.
+    Preserve source-specific application, incomplete witness reconstruction, migration
+    certification, doctrine, activation, corpus exhaustiveness, and findings exhaustiveness.
 
 basis:
   repository: izzy9118-blip/Strauss
-  prior_validated_interface_commit: 242b3c8ea1d4335353abb5ffa1c2f3878de56c49
-  current_revision_scope: production/reconstruct-method-contracts
+  prior_validated_interface_commit: a50d9924722a4eeb99e5cd249444f3319dc4117e
+  current_revision_scope: production/load-complete-problem-bundles
   manifest: manifest.yaml
+  problem_bundle_loader: problem_bundles.py
   mapping_record: migrations/lean-operational-interface.yaml
   governing_rule: >
-    Structural validity, path resolution, contract reconstruction, and passing tests do
+    Structural validity, complete path registration, bundle loading, and passing tests do
     not establish source-specific completion, doctrinal truth, claimant rank, migration
-    certification, or unrestricted ministerial readiness.
+    certification, successor activation, or unrestricted ministerial readiness.
 
 classification_vocabulary:
   SUBSTANTIVELY_RECONSTRUCTED:
     meaning: >
-      The object contains a governing question, typed inputs and outputs, evidence
-      requirements, application sequence, limits, failure recovery, termination, and
-      behavioral contract. This does not constitute doctrinal certification.
+      The object contains a developed governing contract or complete declared bundle with
+      identity, evidence or source relations, limits, valid operations, termination, and
+      behavioral validation. This does not constitute doctrinal certification.
   PARTIALLY_RECONSTRUCTED:
     meaning: >
       A substantial contract or implementation exists, but important execution,
-      evidence domains, or source-specific applications remain incomplete.
+      evidence domains, source-specific applications, or authoritative composition remain incomplete.
   MAPPED_TO_RICHER_RECORDS:
     meaning: >
       The object is principally an index or compact interface to richer records.
@@ -51,7 +53,7 @@ classification_vocabulary:
     meaning: No material implementation exists.
 
 summary:
-  structural_validation: REQUIRED_FOR_CURRENT_REVISION
+  structural_validation: PASSED_FOR_CURRENT_REVISION
   semantic_completion: INCOMPLETE
   doctrinal_certification: NOT_CERTIFIED
   runtime_readiness: LIMITED
@@ -60,17 +62,20 @@ summary:
     - speech request validation and candidate report structure
     - six hermeneutic contracts
     - four inquiry method contracts
+    - seven read-only foundational problem bundles
+    - problem-bundle identity, relation, non-certification, and path validation
   remaining_major_deficiencies:
-    - problem-specific operational profiles and source relations remain uneven
-    - corpus index is not an exhaustive typed corpus registry
-    - findings index is not an exhaustive typed findings registry
     - source-specific applications of method and hermeneutics remain incomplete
     - independent witness reconstruction remains materially incomplete
-    - doctrinal and migration certification remain separate and incomplete
+    - proposition-level migration and certification remain incomplete where recorded
+    - corpus index is not an exhaustive typed corpus registry
+    - findings index is not an exhaustive typed findings registry
+    - authoritative natural-language ministerial judgment remains a reasoning operation
+    - doctrinal certification and successor activation remain separately unauthorized
   central_finding: >
-    The repository now has substantive speech, hermeneutic, and method contracts. It is
-    still not a completed Strauss reasoner because the contracts have not been applied
-    exhaustively to the problem objects, corpus, findings, and independent witnesses.
+    The repository can now load each permanent problem together with its governing
+    constitution, inquiry operations, witnesses, relations, and syntheses. This completes
+    the operational bundle seam, not the documentary work that the bundle records as pending.
 
 records:
   - path: manifest.yaml
@@ -78,10 +83,11 @@ records:
     present_function:
       - canonical load order and seven-problem registration
       - honest structural, semantic, runtime, and certification states
+      - complete problem-bundle path declarations
       - speech, hermeneutic, and method contract registration
       - audit and Sanctum repinning rules
     remaining:
-      - completion states must advance with problem, corpus, findings, and source application work
+      - completion states must advance with corpus, findings, witnesses, and source applications
       - manifest does not itself perform reasoning
 
   - path: adapter.py
@@ -96,6 +102,21 @@ records:
       - no automatic execution of method contracts over source records
       - no exhaustive corpus or findings resolution
       - no authoritative natural-language ministerial judgment
+
+  - path: problem_bundles.py
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    present_function:
+      - canonical selection of one or all seven foundational problems
+      - read-only loading of constitution, inquiry profile, witness registry, relations, and syntheses
+      - identity and canonical-order validation
+      - controlled relation coverage and jurisdictional-boundary validation
+      - acceptance of documented witness-registry layout variants without rewriting source files
+      - explicit non-certification, non-activation, and predecessor-preservation effects
+    remaining:
+      - does not execute source interpretation
+      - does not complete missing witnesses or syntheses
+      - does not certify migrations or doctrine
+      - does not confer Assembly authority
 
   - path: speech/speech-mechanism.yaml
     classification: PARTIALLY_RECONSTRUCTED
@@ -128,51 +149,33 @@ records:
     remaining:
       - source-specific applications and certification
 
-  - path: method/recover-question.yaml
+  - path: method/
     classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-METHOD-RQ-1
+    contracts:
+      - STRAUSS-METHOD-RQ-1
+      - STRAUSS-METHOD-RA-1
+      - STRAUSS-METHOD-TO-1
+      - STRAUSS-METHOD-PP-1
     present_function:
-      - separates user, explicit, governing, topical, doctrinal, and routing questions
-      - selects governing questions through opening, sequence, alternatives, and ending
-      - supports multi-problem routing without absorption
-    remaining: source-specific applications and certification
-
-  - path: method/reconstruct-alternatives.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-METHOD-RA-1
-    present_function:
-      - typed independent claimant records
-      - comparison gate, burden, evidence asymmetry, and incommensurability controls
-      - victor withheld when reciprocal burdens remain
-    remaining: source-specific applications and certification
-
-  - path: method/textual-order.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-METHOD-TO-1
-    present_function:
-      - typed ordered units, transitions, formulation statuses, correction links, and endings
-      - reproducibility, gap, editorial-order, and thematic-grounding controls
-    remaining: source-specific ordered reading records and certification
-
-  - path: method/preserve-problem.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-METHOD-PP-1
-    present_function:
-      - jurisdiction, non-jurisdiction, burdens, dissent, seams, and settlement distinctions
-      - predecessor and migration preservation
-      - bounded resolution and affirmative nonresolution
-    remaining: problem-specific application and certification
+      - recovery and separation of user, source, governing, topical, doctrinal, and routing questions
+      - independent reconstruction, evidence asymmetry, comparison gates, and reciprocal burdens
+      - ordered units, transitions, correction links, endings, and reproducibility controls
+      - jurisdiction, dissent, seams, settlements, predecessor preservation, and affirmative nonresolution
+    remaining:
+      - source-specific applications and certification
 
   - path: problems/
-    classification: PARTIALLY_RECONSTRUCTED
+    classification: SUBSTANTIVELY_RECONSTRUCTED_AS_READ_ONLY_OPERATIONAL_BUNDLES
     present_function:
-      - seven successor constitutions and subordinate structures
-      - active predecessor preservation where applicable
-      - brother-problem and cross-problem relations
+      - seven successor constitutions and complete subordinate bundle paths
+      - inquiry profiles, witness registries, reciprocal controlled relations, and synthesis records
+      - active predecessor and accepted migration-source preservation where applicable
+      - reciprocal brother-problem designation with non-absorption
     remaining:
-      - uniform operational profiles governed by the new method and hermeneutic contracts
-      - exhaustive witness and source bindings
-      - complete proposition-level migration and certification
+      - source-specific witness and work reconstruction is uneven and often pending
+      - bundle completeness does not establish proposition-level migration completion
+      - successor certification and activation remain unauthorized
+      - no bundle may promote provisional synthesis to doctrine
 
   - path: corpus/index.yaml
     classification: MAPPED_TO_RICHER_RECORDS
@@ -190,29 +193,24 @@ records:
     classification: SUBSTANTIVELY_RECONSTRUCTED
     remaining: maintain completion states and preserved mappings through later revisions
 
-  - path: tests/test_adapter.py
-    classification: PARTIALLY_RECONSTRUCTED
-    present_function:
-      - structural and speech behavioral validation
-    remaining: real source and report fixtures
-
-  - path: tests/test_hermeneutics.py
+  - path: tests/test_problem_bundles.py
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
-      - contract shape, status, evidence-burden, behavior, and safeguard tests
-    remaining: source-specific application fixtures
-
-  - path: tests/test_methods.py
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - contract shape, question, independence, sequence, nonresolution, and speech integration tests
-    remaining: source-specific method execution fixtures
+      - validates all seven complete bundle declarations and read-only loads
+      - validates controlled six-neighbor relation coverage for each problem
+      - validates reciprocal brother-problem designation and non-absorption
+      - validates Theologico-Political predecessor and Wise-vs-Vulgar migration-source preservation
+    remaining:
+      - source-specific method and hermeneutic application fixtures
+      - actual candidate ministerial-report fixtures
 
   - path: .github/workflows/validate-lean-interface.yml
     classification: PARTIALLY_RECONSTRUCTED
     present_function:
-      - executes manifest, path, speech, hermeneutic, method, structural, and behavioral tests
-    remaining: problem, corpus, findings, and actual report-validation jobs
+      - validates manifest, speech contract, complete problem bundles, and all interface tests
+      - uploads structural and behavioral diagnostics
+    remaining:
+      - corpus, findings, source-application, and actual report-validation jobs
 
 production_order:
   completed:
@@ -221,9 +219,10 @@ production_order:
     - expose honest manifest completion states
     - reconstruct the six hermeneutic contracts
     - reconstruct the four method contracts
+    - register and validate complete read-only foundational problem bundles
   next:
-    - audit and complete problem-specific operational profiles and source relations
-    - replace corpus and findings indexes with typed exhaustive registries
+    - replace corpus/index.yaml with a typed exhaustive corpus registry
+    - replace findings/index.yaml with a typed exhaustive findings registry
     - create source-specific method and hermeneutic application fixtures
     - expand independent witness reconstruction
     - validate actual ministerial reports against the full contract stack
@@ -232,6 +231,7 @@ production_order:
 non_effects:
   - This audit does not certify any doctrine, claimant, successor problem, or migration.
   - This audit does not alter active predecessors or accepted migration sources.
-  - Substantive contract reconstruction does not complete source-specific application.
+  - Bundle loading does not complete source-specific application or witness reconstruction.
+  - Bundle loading does not authorize successor activation.
   - An incomplete classification is a production finding, not a reason to delete the record.
   - Later completion must proceed through forward revision with preserved provenance.
