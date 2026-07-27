@@ -1,0 +1,93 @@
+schema_version: 1.0
+document_type: reviewed_item_witness_record
+
+identity:
+  witness_id: CORPUS-WIT-105
+  source_id: CORPUS-SRC-105
+  title: Reviewed item witness — Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  version: 1.0.0
+
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
+  certification: NOT_CERTIFIED
+  independent_sequential_study: NOT_YET_COMPLETED
+  original_edition_comparison: PENDING
+  source_text_admission: NOT_REQUESTED
+  successor_effect: NONE
+
+source_identity:
+  author: Leo Strauss
+  canonical_title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  date: 1972
+  corpus_source_id: CORPUS-SRC-105
+  source_status_id: CORPUS-STATUS-105
+
+publication_provenance:
+  opening_page_notice: >
+    Reprinted from the English translation of Hermann Cohen, Religion of Reason out of
+    the Sources of Judaism, New York, Frederick Ungar, 1972.
+  original_item_occasion: INTRODUCTION_TO_ENGLISH_TRANSLATION
+  original_publisher: Frederick Ungar
+  original_place: New York
+  original_year: 1972
+  collected_reprint:
+    title: Studies in Platonic Political Philosophy
+    publisher: University of Chicago Press
+    year: 1983
+
+container_witness:
+  container_source_id: CORPUS-SRC-002
+  container_witness_id: CORPUS-WIT-001
+  local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  container_page_count: 263
+  container_file_size_bytes: 12551057
+  container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+
+item_locators:
+  printed_page_range: {start: 233, end: 247}
+  pdf_page_range_one_based: {start: 237, end: 251}
+  item_completeness: COMPLETE_COLLECTED_ITEM
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1983_COLLECTED_ITEM
+
+textual_condition:
+  searchable_text: true
+  page_images_available: true
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  original_1972_edition_compared: false
+
+jurisdiction_and_limits:
+  governing_problem: theologico-political
+  secondary_problem_bindings: [athens-vs-jerusalem, ancients-vs-moderns]
+  distinctions:
+    - Strauss's essay is distinct from Hermann Cohen's Religion of Reason.
+    - Cohen's doctrine is distinct from Strauss's report, reconstruction, and criticism.
+    - A rational transformation of revelation is not a demonstrated reconciliation of reason and revelation.
+    - The 1983 collected reprint is not the separately reviewed 1972 printing.
+    - Witness registration is not sequential reconstruction or independent corroboration.
+    - Pangle's Introduction is secondary and may not govern Strauss's essay.
+  non_effects:
+    - no source-level proposition promotion
+    - no predecessor synthesis confirmation
+    - no doctrinal certification
+    - no migration certification
+    - no successor activation
+    - no predecessor displacement
+
+next_required_action:
+  action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  range: printed pages 233 through 247
+  prerequisites_satisfied: REVIEWED_ITEM_WITNESS_REGISTERED
+  remaining_requirements:
+    - reconstruct the complete argument in textual order
+    - distinguish Strauss's voice from Cohen's positions and quoted formulations
+    - classify documented findings, supported inferences, uncertainties, and false resolutions with locators
+    - compare with the predecessor only after source-level reconstruction
+    - compare the original 1972 printing when available
+
+termination:
+  witness_state: REGISTERED
+  study_state: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
