@@ -1,0 +1,108 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVJ-COHEN-001
+  problem: athens-vs-jerusalem
+  source_study: COHEN-STUDY-001
+  title: Athens vs. Jerusalem — Hermann Cohen's Religion of Reason
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_id: CORPUS-SRC-105
+  witness_id: CORPUS-WIT-105
+  source_status: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
+  study_path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication_evidence: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism, Frederick Ungar, New York, 1972
+  printed_pages: 233-247
+  original_edition_comparison: PENDING
+
+strict_problem: >
+  Can Judaism as revealed law, historical people, prayer, study, fidelity, and gratitude be
+  reconciled with autonomous universal reason, modern culture, and progressive history without
+  transforming Jerusalem into an ethical source-material for Athens or subordinating reason
+  to inherited authority?
+
+reconstructed_reconciliation:
+  universal_reason:
+    - revelation as creation of reason
+    - God as idea securing moral progress
+    - autonomous ethics and scientific truth
+    - universal mankind, socialism, democracy, and indefinite progress
+  Jewish_sources:
+    - divine uniqueness and creation
+    - holiness, compassion, repentance, grace, and prayer
+    - Law, Torah study, fidelity, and Jewish communal continuity
+    - election, suffering witness, and messianic hope
+  transformation_mechanisms:
+    - idealization and spiritualization
+    - removal of historical miracle and absolute obedience
+    - reinterpretation of commandments as moral means and symbols
+    - conversion of immortality and resurrection into historical continuity and moral rebirth
+    - conversion of messianism into natural progressive world history
+
+principal_findings:
+  - Cohen refuses both simple identity and accidental association between Judaism and reason.
+  - Judaism is treated as the original source of a universal religion of reason.
+  - The reconciliation depends on Platonic and Kantian assistance said to actualize Judaism's own meaning.
+  - Absolute obedience, miraculous revelation, free creation, and political restoration are weakened or transformed.
+  - Law, prayer, fidelity, gratitude, and Jewish separation remain necessary and resist complete universal absorption.
+  - Strauss's essay ends with gratitude for Cohen without certifying the reconciliation as philosophically complete.
+
+jurisdiction_and_non_absorption:
+  owns:
+    - the modern harmony project between Jewish revelation and autonomous culture
+    - preservation or transformation of the two comprehensive orientations
+    - tension between universal mankind and particular Jewish fidelity
+  theologico_political_reference:
+    relation: COACTIVATED_STRUCTURAL_AUTHORITY_PROBLEM
+    receives: [revelation, divine law, autonomy, obedience, miracle, political jurisdiction]
+    non_absorption: Athens versus Jerusalem may not absorb the complete authority problem or migration jurisdiction.
+  ancients_vs_moderns_reference:
+    relation: INTERSECTS_WITH_MODERN_REORDERING
+    receives: [Kantian ethics, liberalism, socialism, Reform, historical progress, modern state]
+    non_absorption: Historical transformation does not itself decide the comprehensive alternatives.
+
+speech_and_deed_result:
+  explicit_speech: Strauss offers limited mediation and an account of a renewed reading.
+  textual_deed: >
+    He reconstructs Cohen sympathetically, tests idealization through neglected sources and
+    unresolved tensions, measures the political assumptions against later events, and closes
+    with gratitude rather than a declaration of harmony or defeat.
+  relation: CONFIRMATION_WITH_CRITICAL_QUALIFICATION
+
+unresolved_questions:
+  - whether a rationalized revelation remains revelation in the traditional sense
+  - whether Jewish fidelity can remain authoritative while every command is subject to autonomous moral review
+  - whether universal historical progress can preserve particular election, gratitude, and Law
+  - Strauss's final judgment of Cohen's harmony project
+  - differences between the original 1972 printing and the reviewed 1983 reprint
+
+source_limits:
+  - COHEN-STUDY-001 is a source-specific study of Strauss's essay, not Cohen's complete book.
+  - Biblical, medieval, Kantian, Platonic, Zionist, and historical witnesses require independent reconstruction.
+  - Pangle's Introduction is secondary and cannot govern this source.
+  - Collection-level and item-level records from the same witness are not independent corroboration.
+
+prohibitions:
+  - no transformed concept silently treated as unchanged traditional doctrine
+  - no shared moral aspiration treated as comprehensive reconciliation
+  - no historical outcome treated as self-interpreting proof
+  - no closing gratitude treated as doctrinal certification
+  - no migration or successor activation
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - original 1972 edition comparison
+    - independent Cohen, biblical, medieval, Kantian, Platonic, and historical witnesses
+    - later jurisdictional and migration validation
