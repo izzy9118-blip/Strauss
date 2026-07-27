@@ -7,7 +7,9 @@ on:
     paths:
       - "manifest.yaml"
       - "adapter.py"
+      - "problem_bundles.py"
       - "audits/**"
+      - "problems/**"
       - "hermeneutics/**"
       - "method/**"
       - "speech/**"
@@ -20,7 +22,9 @@ on:
     paths:
       - "manifest.yaml"
       - "adapter.py"
+      - "problem_bundles.py"
       - "audits/**"
+      - "problems/**"
       - "hermeneutics/**"
       - "method/**"
       - "speech/**"
@@ -53,7 +57,12 @@ jobs:
           set -o pipefail
           python adapter.py --validate 2>&1 | tee lean-validation.txt
 
-      - name: Run structural and behavioral adapter tests
+      - name: Validate complete foundational problem bundles
+        run: |
+          set -o pipefail
+          python problem_bundles.py --validate 2>&1 | tee problem-bundle-validation.txt
+
+      - name: Run structural and behavioral interface tests
         run: |
           set -o pipefail
           python -m unittest discover -s tests -p 'test_*.py' 2>&1 | tee lean-tests.txt
@@ -65,5 +74,6 @@ jobs:
           name: lean-strauss-interface-diagnostics
           path: |
             lean-validation.txt
+            problem-bundle-validation.txt
             lean-tests.txt
           if-no-files-found: ignore
