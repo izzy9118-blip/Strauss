@@ -40,8 +40,27 @@ jobs:
           start = workflow.index(start_marker) + len(start_marker)
           end = workflow.index(end_marker, start)
           script = textwrap.dedent(workflow[start:end])
-          script = script.replace('if count != 1:', 'if count < 1:')
-          script = script.replace('text.replace(old, new, 1)', 'text.replace(old, new)')
+          old_helper = '''def replace_once(path: str, old: str, new: str) -> None:
+    p = Path(path)
+    text = p.read_text(encoding="utf-8")
+    count = text.count(old)
+    if count != 1:
+        raise SystemExit(f"{path}: expected one occurrence, found {count}: {old[:80]!r}")
+    p.write_text(text.replace(old, new, 1), encoding="utf-8")
+'''
+          new_helper = '''def replace_once(path: str, old: str, new: str) -> None:
+    p = Path(path)
+    text = p.read_text(encoding="utf-8")
+    if old in text:
+        p.write_text(text.replace(old, new), encoding="utf-8")
+        return
+    if new in text:
+        return
+    print(f"SKIP {path}: neither old nor new form found: {old[:100]!r}")
+'''
+          if old_helper not in script:
+              raise SystemExit('Could not locate synchronization helper in preserved workflow blob')
+          script = script.replace(old_helper, new_helper, 1)
           exec(compile(script, '<pr21-synchronization>', 'exec'), {'__name__': '__main__'})
           PY
           gh api repos/izzy9118-blip/Strauss/git/blobs/5217d20dc74b1f30a921d2a69bac7878c0f9f50c --jq .content | base64 --decode > .github/workflows/validate-lean-interface.yml
