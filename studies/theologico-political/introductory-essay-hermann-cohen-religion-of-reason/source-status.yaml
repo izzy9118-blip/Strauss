@@ -1,64 +1,147 @@
 schema_version: 1.0
 document_type: source_status_record
+
 identity:
   status_id: CORPUS-STATUS-105
   corpus_source_id: CORPUS-SRC-105
   canonical_title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  full_collected_title: Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
   author: Leo Strauss
   date: 1972
-  version: 1.0.0
+  version: 1.1.0
+
 status:
-  lifecycle: REGISTERED_SOURCE_IDENTITY
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
   certification: NOT_CERTIFIED
   source_text_admission: NOT_REQUESTED
-  reviewed_witness: NOT_YET_REGISTERED
-  independent_sequential_study: NOT_YET_COMPLETED
+  reviewed_witness: CORPUS-WIT-105
+  independent_sequential_study: COHEN-STUDY-001
+  analytical_state: COMPLETE_PROVISIONAL_FOR_REVIEWED_1983_COLLECTED_WITNESS
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 5f5da4cbbf13ca5829f8cc61db712dd6f382b9d4
+  reason: >
+    Register the complete item within the reviewed 1983 SPPP container and record completion
+    of COHEN-STUDY-001. Preserve the 1972 printing comparison, independent reconstruction of
+    Cohen and the cited sources, doctrinal and migration noncertification, successor
+    nonactivation, and active predecessor authority.
+
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
   active_predecessor_source_sequence: 5
   corpus_registry: corpus/index.yaml
   corpus_source_id: CORPUS-SRC-105
   governing_problem: theologico-political
+  adjacent_problems: [athens-vs-jerusalem, ancients-vs-moderns]
   preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  witness_priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
+
 verified_documentary_facts:
-  - The active predecessor identifies this work, date, and sequence position.
-  - The SPPP collection registry places an essay of this title in the posthumous collection, but item-level witness verification remains pending.
+  - The active predecessor identifies this work, its 1972 date, and sequence position five.
+  - The complete collected item appears as chapter fifteen in Studies in Platonic Political Philosophy.
+  - The item occupies printed pages 233 through 247 and PDF pages 237 through 251, counted one-based.
+  - The opening-page notice states that the essay was reprinted from the English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism, Frederick Ungar, New York, 1972.
+  - The reviewed container is the University of Chicago Press 1983 posthumous collection.
+  - COHEN-STUDY-001 reconstructs the complete essay in twelve ordered units.
+
+reviewed_witness:
+  witness_id: CORPUS-WIT-105
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  container_source_id: CORPUS-SRC-002
+  container_witness_id: CORPUS-WIT-001
+  container_title: Studies in Platonic Political Philosophy
+  container_publication: {publisher: University of Chicago Press, year: 1983}
+  original_publication_evidence:
+    container: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism
+    publisher: Frederick Ungar
+    place: New York
+    year: 1972
+    evidence_location: opening-page reprint notice
+  printed_page_range: {start: 233, end: 247}
+  pdf_page_range_one_based: {start: 237, end: 251}
+  local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+  container_page_count: 263
+  container_file_size_bytes: 12551057
+  container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+  text_condition: SEARCHABLE_TEXT_WITH_LAYOUT_AND_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_CONTAINER
+  edition_limit: >
+    The witness is the 1983 collected reprint. The 1972 English-translation printing has not
+    been separately reviewed or compared for variant wording or pagination.
+
+independent_sequential_study:
+  study_id: COHEN-STUDY-001
+  corpus_study_id: CORPUS-STUDY-009
+  path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS
+  reconstruction_state: COMPLETE_PROVISIONAL
+  ordered_reading_units: 12
+  typed_findings: 30
+  certification: NOT_CERTIFIED
+  limits:
+    - The study is independent of the active predecessor and collection-level synthesis as governing interpretations.
+    - It is not independent corroboration because it uses the reviewed collected witness.
+    - Cohen's book and biblical, medieval, Kantian, Platonic, Zionist, and historical sources remain independently uncompleted.
+    - Original 1972 edition comparison remains pending.
+
 predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_ITEM_WITNESS
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_RETESTED_AND_PROVISIONALLY_QUALIFIED_BY_COHEN_STUDY_001
   statement: >
     Examines the strongest modern rational reconciliation of Judaism, revelation,
     morality, law, autonomy, and historical progress.
-  preservation_rule: This derivative statement is not independently confirmed or certified here.
-publication_and_witness_condition:
-  publication_venue: UNVERIFIED_AT_ITEM_LEVEL
-  edition: POSTHUMOUS_COLLECTION_ITEM_KNOWN_ITEM_LEVEL_WITNESS_NOT_REGISTERED
-  pagination: UNVERIFIED_AT_ITEM_LEVEL
-  local_file: NOT_REGISTERED_AS_ITEM_WITNESS
-  fingerprint: NOT_AVAILABLE
-  text_condition: NOT_ASSESSED_AT_ITEM_LEVEL
-  locator_reproducibility: INCOMPLETE
+  study_result: >
+    COHEN-STUDY-001 provisionally confirms the strength and scope of the reconciliation but
+    shows that it proceeds through transformation of revelation, creation, obedience, law,
+    messianism, and political history while retaining Jewish fidelity, prayer, gratitude,
+    and communal survival that reopen the conflict.
+  preservation_rule: >
+    Retesting does not certify, supersede, activate, migrate, or displace the active predecessor.
+
 source_classification:
   author_relation: PRIMARY_STRAUSS_WRITING
-  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_ITEM_WITNESS
-  analytical_use: ORIENTATION_ONLY_UNTIL_ITEM_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+  documentary_rank: QUALIFIED_PRIMARY_STRAUSS_ITEM_WITH_REVIEWED_COLLECTED_WITNESS
+  analytical_use: COMPLETE_PROVISIONAL_ITEM_RECONSTRUCTION_AVAILABLE
+  independence_limit: >
+    Strauss's essay is not an independent witness to Cohen's book, biblical revelation,
+    medieval Jewish philosophy, Kantian ethics, or the historical claims it examines.
+
 required_distinctions:
-  - Strauss's essay from Hermann Cohen's work
-  - rational reconciliation from demonstrated resolution
-  - collection witness from item-level reconstruction
-  - editorial placement from authorial doctrine
-  - predecessor synthesis from source-level documented finding
+  - Strauss's essay from Hermann Cohen's book
+  - Cohen's position from Strauss's reconstruction and judgment
+  - rationalized revelation from traditional historical and miraculous revelation
+  - reviewed 1983 collected reprint from the 1972 English-translation printing
+  - witness registration from sequential study and both from independent corroboration
+  - collection-level synthesis from item-level reconstruction
+  - reconciliation project from demonstrated resolution
+  - Theologico-Political jurisdiction from Athens-versus-Jerusalem and Ancients-versus-Moderns
+
 prohibitions:
-  - Do not treat the collection-level study as an independent item-level reconstruction.
-  - Do not treat the predecessor contribution as a source-level quotation.
-  - Do not certify reconciliation, doctrine, migration, or activation.
+  - Do not identify Cohen's claims with Strauss's doctrine.
+  - Do not treat common vocabulary as proof that traditional revelation and autonomous reason are reconciled.
+  - Do not let Pangle's Introduction govern Strauss's item argument.
+  - Do not infer original-edition wording where the 1972 printing has not been compared.
+  - Do not count collection-level and item-level records as independent corroboration.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
+
 next_required_actions:
-  - register the item within a reviewed witness with stable locators
-  - reconstruct the essay independently in its original and collected occasions
-  - compare source-level findings with the predecessor without silent harmonization
+  - compare the reviewed 1983 reprint with the 1972 printing where wording or pagination matters
+  - independently reconstruct Cohen's book and major cited biblical, medieval, Kantian, Platonic, and historical witnesses before comparative ranking
+  - preserve COHEN-STUDY-001 through corpus, findings, and problem-local synthesis registrations
+  - classify any later migration effect proposition by proposition without silent harmonization
+
 termination:
   source_identity_state: REGISTERED
-  reviewed_witness_state: MISSING
-  study_state: INCOMPLETE
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-105
+  locator_state: REPRODUCIBLE_FOR_REVIEWED_CONTAINER
+  original_edition_comparison: PENDING
+  study_state: COMPLETE_PROVISIONAL
+  study_id: COHEN-STUDY-001
+  study_path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+  independent_corroboration: INCOMPLETE
   certification: NOT_CERTIFIED
   successor_effect: NONE
