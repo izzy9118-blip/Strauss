@@ -6,19 +6,60 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 0.1.1
+  version: 0.2.0
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
-  certification: NOT_CERTIFIED
-  activation: AVAILABLE_FOR_VALIDATED_ADAPTER_USE
+  structural_validation: REQUIRED_ON_EACH_CHANGE
+  semantic_completion: INCOMPLETE
+  doctrinal_certification: NOT_CERTIFIED
+  runtime_readiness: LIMITED_READ_ONLY_CONTEXT_AND_CANDIDATE_REPORT_SUPPORT
+  activation: AVAILABLE_FOR_VALIDATED_LIMITED_ADAPTER_USE
   constitutional_effect: NONE_ON_EXISTING_PROBLEM_MIGRATION
+  governing_notice: >
+    A resolved path, valid YAML document, passing loader, or successful test does not
+    establish substantive completeness, doctrinal truth, claimant rank, migration
+    certification, or readiness for unrestricted ministerial reasoning.
+
+revision_history:
+  predecessor_version: 0.1.1
+  predecessor_blob_sha: 4ee5e22337a6646e277d6143829ab8995df724b1
+  reason: >
+    Record the first operational completeness audit, distinguish structural validation
+    from semantic completion, and register the reconstructed speech-mechanism contract
+    without claiming that the remaining hermeneutics, method, corpus, findings, or
+    problem-specific operations are complete.
 
 purpose: >
   Provide one compact, machine-readable entry point through which a runtime can load
   the Strauss repository's problems, hermeneutics, method, speech discipline, corpus
   index, and findings index without deleting, overwriting, or silently harmonizing the
   repository records from which the interface is derived.
+
+audit:
+  path: audits/operational-completeness.yaml
+  classification_vocabulary:
+    - SUBSTANTIVELY_RECONSTRUCTED
+    - PARTIALLY_RECONSTRUCTED
+    - MAPPED_TO_RICHER_RECORDS
+    - STRUCTURAL_PLACEHOLDER
+    - EMPTY_OR_UNIMPLEMENTED
+  repinning_rule: >
+    Sanctum must pin a new Strauss commit only after the revised interface passes its
+    declared structural and behavioral validation. A new pin does not constitute
+    doctrinal certification.
+
+component_completion:
+  manifest: PARTIALLY_RECONSTRUCTED
+  adapter: PARTIALLY_RECONSTRUCTED
+  speech_mechanism: PARTIALLY_RECONSTRUCTED
+  hermeneutics: MIXED_STRUCTURAL_PLACEHOLDERS_AND_MAPPINGS
+  method: PARTIALLY_RECONSTRUCTED
+  problem_objects: UNEVEN_FOUNDING_DRAFTS_AND_ACTIVE_PREDECESSORS
+  corpus_index: MAPPED_TO_RICHER_RECORDS
+  findings_index: MAPPED_TO_RICHER_RECORDS
+  migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
+  behavioral_tests: PARTIALLY_RECONSTRUCTED
 
 source_hierarchy:
   tiers:
@@ -99,18 +140,37 @@ method:
 
 speech:
   mechanism: speech/speech-mechanism.yaml
+  contract_version: STRAUSS-SPEECH-CONTRACT-1
+  completion: PARTIALLY_RECONSTRUCTED
   voice_status: subordinate_to_reasoning
+  limitation: >
+    The contract now governs inputs, evidence, audience, speech and deed, concealment,
+    irony, comedy, uncertainty, typed candidate output, and stopping conditions. Source
+    interpretation and final natural-language composition remain reasoning operations,
+    not automatic consequences of loading the contract.
 
 corpus:
   index: corpus/index.yaml
+  completion: MAPPED_TO_RICHER_RECORDS
 
 findings:
   index: findings/index.yaml
+  completion: MAPPED_TO_RICHER_RECORDS
 
 runtime:
   adapter: adapter.py
   validation_command: python adapter.py --validate
   test_command: python -m unittest discover -s tests -p 'test_*.py'
+  permitted_operations:
+    - validate declared paths and contracts
+    - load bounded operational context
+    - validate typed speech requests
+    - build non-authoritative candidate report structures
+  prohibited_operations:
+    - certify doctrine or wisdom
+    - activate successor problems
+    - rewrite source findings
+    - confer Assembly authority
 
 sanctum_contract:
   assembly_repository: izzy9118-blip/Sanctum
