@@ -1,0 +1,103 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: TP-COHEN-001
+  problem: theologico-political
+  source_study: COHEN-STUDY-001
+  title: The Theologico-Political Problem — Hermann Cohen's Religion of Reason
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_CERTIFIED_MIGRATION
+
+source:
+  source_id: CORPUS-SRC-105
+  witness_id: CORPUS-WIT-105
+  source_status: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
+  study_path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication_evidence: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism, Frederick Ungar, New York, 1972
+  printed_pages: 233-247
+  original_edition_comparison: PENDING
+
+relation_to_existing_problem:
+  active_predecessor: problems/theologico-political.yaml
+  successor_draft: problems/theologico-political/problem.yaml
+  predecessor_synthesis: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+  relation: RETESTS_QUALIFIES_AND_SUPPLIES_WITHOUT_REPLACING
+  governing_rule: >
+    The active predecessor remains authoritative and preserved. This source-local synthesis
+    may confirm, qualify, or challenge propositions but may not migrate, certify, activate,
+    or displace them.
+
+strict_problem_contribution:
+  governing_claim: >
+    Cohen's reconciliation of Judaism and autonomous reason proceeds by redefining revelation,
+    creation, obedience, law, and messianism through moral reason and historical progress.
+    Strauss's reconstruction shows that the reconciliation preserves Jewish fidelity and
+    religious forms only by tensions that prevent a demonstrated abolition of the conflict.
+  documented_findings:
+    - Revelation becomes the creation of reason rather than an historical miraculous act.
+    - Creation becomes necessary and continuous rather than a free unique act.
+    - Absolute obedience is displaced, and particular commandments become revisable means or symbols of moral education.
+    - Correlation, holiness, compassion, repentance, prayer, and fidelity supplement and transform autonomous ethics.
+    - Messianism becomes indefinite natural historical progress and stateless universal vocation.
+    - Jewish legal separation and communal study remain necessary despite universal rational aims.
+  supported_inferences:
+    - A reconciliation that changes the authority and content of revelation may rationalize rather than preserve it.
+    - Cohen's retained fidelity, gratitude, prayer, Law, and Jewish particularity reopen the conflict his system seeks to resolve.
+
+predecessor_reconciliation:
+  state: PROVISIONAL_NO_PROMOTION
+  confirmations:
+    - the essay examines a major modern reason-revelation reconciliation
+    - political emancipation and liberal culture do not by themselves settle revelation or law
+    - historical progress cannot be assumed to abolish permanent conflict
+  qualifications:
+    - Cohen's reconciliation is achieved through transformation rather than demonstrated harmony
+    - Strauss's closing gratitude is not unqualified doctrinal endorsement
+    - later historical catastrophe tests political assumptions but is not self-interpreting philosophical refutation
+  unresolved:
+    - Strauss's final comprehensive judgment of Cohen
+    - adequacy of Cohen's readings of biblical and medieval sources
+    - relation between autonomy and person-like divine forgiveness
+    - original 1972 edition comparison
+  migration_effect: NONE
+
+adjacent_problem_rules:
+  athens_vs_jerusalem:
+    relation: COACTIVATED_RECONCILIATION_ATTEMPT
+    supplied_finding: Universal autonomous culture and particular revealed tradition remain distinct even within Cohen's harmony project.
+    non_absorption: The concrete ways of life may not be reduced to the structural authority problem alone.
+  ancients_vs_moderns:
+    relation: SUPPLIES_FINDING_TO
+    supplied_finding: Kantian autonomy, liberalism, socialism, Reform, and historical progress transform biblical and medieval categories.
+    non_absorption: Modern transformation does not by itself decide the truth of revelation or philosophy.
+
+source_and_evidence_limits:
+  - COHEN-STUDY-001 analyzes Strauss's essay, not Cohen's complete book or the cited primary traditions.
+  - The 1983 reprint has not been compared with the 1972 printing.
+  - Pangle's Introduction is secondary and cannot govern Strauss's argument.
+  - Agreement with collection-level SPPP findings is not independent corroboration.
+
+prohibitions:
+  - no redefined revelation silently treated as traditional revelation
+  - no shared moral vocabulary treated as comprehensive reconciliation
+  - no historical catastrophe treated as automatic philosophical refutation
+  - no closing praise treated as doctrinal certification
+  - no predecessor displacement or successor activation
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  predecessor_status: UNCHANGED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - original 1972 edition comparison
+    - independent Cohen, biblical, medieval, Kantian, Platonic, and historical witness reconstruction
+    - proposition-level migration classification after adequate source coverage
