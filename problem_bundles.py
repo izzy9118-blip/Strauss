@@ -49,7 +49,6 @@ REQUIRED_PROFILE_SECTIONS = {
 }
 
 REQUIRED_WITNESS_SECTIONS = {
-    "registry_purpose",
     "source_status_rules",
     "witness_relation_rules",
 }
@@ -133,6 +132,19 @@ def _principal_witnesses(record: dict[str, Any]) -> list[Any] | None:
     return None
 
 
+def _witness_registry_purpose(record: dict[str, Any]) -> str | None:
+    """Resolve an explicit registry purpose without imposing one historical layout."""
+    purpose = record.get("registry_purpose")
+    if isinstance(purpose, str) and purpose.strip():
+        return purpose
+    authority = record.get("authority")
+    if isinstance(authority, dict):
+        governing_rule = authority.get("governing_rule")
+        if isinstance(governing_rule, str) and governing_rule.strip():
+            return governing_rule
+    return None
+
+
 def validate_problem_declaration(
     declaration: dict[str, Any],
     expected_key: str,
@@ -203,6 +215,11 @@ def validate_problem_bundle(bundle: dict[str, Any]) -> list[str]:
     )
     if missing_witness:
         errors.append(f"{key}: witness registry missing sections: {', '.join(missing_witness)}")
+    if not isinstance(witnesses, dict) or not _witness_registry_purpose(witnesses):
+        errors.append(
+            f"{key}: witness registry must state its purpose either as registry_purpose "
+            "or authority.governing_rule"
+        )
     principal_witnesses = _principal_witnesses(witnesses) if isinstance(witnesses, dict) else None
     if not principal_witnesses:
         accepted = " or ".join(WITNESS_LIST_KEYS)
