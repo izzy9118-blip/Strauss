@@ -602,8 +602,7 @@ permanent_source_level_findings:
     classification: documented_finding
   - id: SPINOZA-PREFACE-PF-007
     proposition: >
-      Reason can decisively exclude revelation only through a demonstrated comprehensive account
-      of the whole that leaves no possibility of miraculous intervention.
+      Reason can decisively exclude revelation only through a clear and exhaustive account of the whole that leaves no possibility of miraculous intervention.
     classification: documented_finding
   - id: SPINOZA-PREFACE-PF-008
     proposition: >

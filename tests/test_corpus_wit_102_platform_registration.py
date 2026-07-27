@@ -51,7 +51,7 @@ class CorpusWitness102PlatformRegistrationTests(unittest.TestCase):
             "REGISTERED_QUALIFIED_PLATFORM_REFERENCE",
         )
 
-    def test_registration_does_not_complete_study_or_certify(self) -> None:
+    def test_historical_registration_remains_noncertifying_after_forward_study(self) -> None:
         witness = load_yaml(
             "studies/theologico-political/preface-to-spinozas-critique-of-religion/reviewed-witness.yaml"
         )
@@ -65,7 +65,7 @@ class CorpusWitness102PlatformRegistrationTests(unittest.TestCase):
         self.assertEqual(witness["termination"]["successor_effect"], "NONE")
         self.assertEqual(
             status["status"]["independent_sequential_study"],
-            "NOT_YET_COMPLETED",
+            "SPINOZA-PREFACE-STUDY-001",
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_reviewed_witness_state"],
@@ -73,7 +73,7 @@ class CorpusWitness102PlatformRegistrationTests(unittest.TestCase):
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_independent_study_state"],
-            "INCOMPLETE_3_OF_19",
+            "INCOMPLETE_4_OF_19",
         )
 
     def test_acquisition_record_remains_historically_distinct(self) -> None:

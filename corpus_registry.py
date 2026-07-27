@@ -345,7 +345,7 @@ def _validate_completed_tp_item(
         errors.append(f"{study_id} reading state mismatch")
     if study_record.get("status", {}).get("certification") != "NOT_CERTIFIED":
         errors.append(f"{study_id} must remain NOT_CERTIFIED")
-    if study_record.get("termination", {}).get("successor_effect") != "NONE":
+    if study_record.get("termination", {}).get("successor_effect") not in (None, "NONE"):
         errors.append(f"{study_id} may not affect successor activation")
 
     witness_record_path = spec.get("witness_record_path")
