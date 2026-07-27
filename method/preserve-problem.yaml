@@ -1,0 +1,23 @@
+schema_version: 1.0
+record_type: inquiry_method
+identity: {key: preserve-problem, version: 1.0.0}
+source_records:
+  - governance/foundational-problem-architecture.yaml
+  - migrations/foundational-problems-v2/migration.yaml
+  - protocols/uncertainty-preservation.yaml
+objective: >
+  Preserve a permanent problem, its strongest alternatives, and its unresolved burdens
+  rather than closing inquiry through summary, policy preference, chronology, or authority.
+steps:
+  - state the governing question and jurisdiction
+  - record what the evidence establishes and what remains inference
+  - preserve dissent, contradiction, opacity, and missing witnesses
+  - distinguish political settlement from philosophical or theological resolution
+  - reference neighboring problems without absorbing their doctrine
+  - terminate with an explicit nonresolution where the burdens remain unmet
+prohibitions:
+  - silent closure
+  - predecessor deletion
+  - uncertainty converted into consensus
+  - practical success treated as truth
+  - repository or artificial intelligence self-certification
