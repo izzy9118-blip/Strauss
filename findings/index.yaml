@@ -22,7 +22,8 @@ revision_history:
     distinct Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns
     problem-local synthesis bridges. Preserve source-level classifications, derivation,
     jurisdiction, uncertainty, original-edition limits, nonduplication, noncertification,
-    and predecessor authority.
+    and predecessor authority. Index direct and aggregate records that bind CORPUS-SRC-105
+    while retaining the legacy nineteen-source predecessor bundle index.
 
 purpose: >
   Provide deterministic discovery and loading of current findings-bearing records by
@@ -211,7 +212,7 @@ indexes:
     CORPUS-SRC-001: [FINDSET-001, FINDSET-102]
     CORPUS-SRC-002: [FINDSET-002, FINDSET-003, FINDSET-004, FINDSET-005, FINDSET-006, FINDSET-101, FINDSET-103, FINDSET-104, FINDSET-106, FINDSET-107, FINDSET-109, FINDSET-110, FINDSET-202]
     CORPUS-SRC-003: [FINDSET-007, FINDSET-108]
-    CORPUS-SRC-105: [FINDSET-009, FINDSET-113, FINDSET-114, FINDSET-115]
+    CORPUS-SRC-105: [FINDSET-009, FINDSET-105, FINDSET-113, FINDSET-114, FINDSET-115, FINDSET-203, FINDSET-301]
     CORPUS-SRC-101-119: [FINDSET-008, FINDSET-105, FINDSET-111, FINDSET-112, FINDSET-203, FINDSET-301]
   by_record_class:
     SOURCE_SPECIFIC_STUDY: [FINDSET-001, FINDSET-002, FINDSET-003, FINDSET-004, FINDSET-007, FINDSET-008, FINDSET-009]
