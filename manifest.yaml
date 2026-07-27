@@ -6,7 +6,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 0.1.0
+  version: 0.1.1
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
@@ -21,10 +21,11 @@ purpose: >
   repository records from which the interface is derived.
 
 source_hierarchy:
-  - primary_external
-  - primary_contemporaneous
-  - secondary_about_own_primary_acts
-  - secondary_interpretive
+  tiers:
+    - primary_external
+    - primary_contemporaneous
+    - secondary_about_own_primary_acts
+    - secondary_interpretive
   rule: >
     Primary sources govern secondary sources where primary sources are available.
     Source type, edition, translation, editorial condition, and documentary limits
