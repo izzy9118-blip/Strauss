@@ -1,15 +1,267 @@
 schema_version: 1.0
-record_type: hermeneutic_rule
-identity: {key: whole-and-part, version: 1.0.0}
+record_type: hermeneutic_contract
+
+identity:
+  key: whole-and-part
+  title: Whole and Part Hermeneutic
+  version: 1.1.0
+  contract_version: STRAUSS-HERMENEUTIC-WP-1
+
+status:
+  lifecycle: OPERATIONAL_CONTRACT
+  semantic_completion: SUBSTANTIVELY_RECONSTRUCTED
+  source_specific_application: INCOMPLETE
+  certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 53b5c42dd665d2c505dfc64f478b2ffc61d4fbe1
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the initial sequence summary with a typed contract governing passage,
+    argument, dramatic action, work, corpus, and problem-level interpretation.
+
 source_protocols:
-  - protocols/speech-and-deed.yaml
+  - protocols/source-status.yaml
+  - protocols/evidence-classification.yaml
   - protocols/inference-discipline.yaml
+  - protocols/uncertainty-preservation.yaml
+  - protocols/speech-and-deed.yaml
+
+purpose: >
+  Prevent isolated statements, memorable quotations, local speakers, or remote parallels
+  from replacing the argument, dramatic action, compositional deed, and unresolved whole
+  of the work in which they occur.
+
 governing_question: >
-  What does a passage mean as a part of the argument, dramatic action, work, corpus,
-  and governing problem rather than as an isolated proposition?
-rules:
-  - Read the part in its immediate sequence before comparing remote parallels.
-  - Distinguish a character's local purpose from the work's compositional deed.
-  - Test whether beginning, middle, and ending revise the apparent rank of a statement.
-  - Do not allow a memorable sentence to replace the whole argument.
-  - Corpus-level comparison may qualify but may not erase work-specific evidence.
+  What does this part mean in its immediate sequence, argumentative or dramatic role,
+  complete work, relevant corpus, and governing problem; and how does each larger whole
+  confirm, qualify, redirect, or leave unresolved the local formulation?
+
+governing_rule: >
+  Interpretive authority ascends in controlled steps from exact passage to immediate
+  sequence, local argument or scene, whole work, authorial corpus, and foundational
+  problem. A larger frame may qualify a smaller one but may not erase contrary local
+  evidence or import a doctrine unsupported by the work.
+
+input_contract:
+  required_fields:
+    - source_ref
+    - documentary_status
+    - part_location
+    - exact_part
+    - immediate_predecessor
+    - immediate_successor
+    - speaker_or_agent
+    - local_audience
+    - local_question
+    - local_function
+    - work_structure
+    - ending_relation
+    - corpus_comparisons
+    - governing_problem
+    - alternatives_considered
+  source_ref_required_fields:
+    - ref
+    - commit
+    - location
+  permitted_part_types:
+    - word
+    - phrase
+    - sentence
+    - paragraph
+    - speech
+    - scene
+    - chapter
+    - argument
+    - image
+    - myth
+    - joke
+    - omission
+    - silence
+    - title
+    - ending
+  scale_levels:
+    - exact_part
+    - immediate_sequence
+    - local_argument_or_scene
+    - structural_division
+    - whole_work
+    - authorial_corpus
+    - foundational_problem
+
+application_sequence:
+  - step_id: WP-STEP-001
+    operation: fix the exact text, location, documentary layer, and source limits
+  - step_id: WP-STEP-002
+    operation: identify speaker, audience, occasion, and local purpose
+  - step_id: WP-STEP-003
+    operation: reconstruct what immediately precedes and follows
+  - step_id: WP-STEP-004
+    operation: identify transition, correction, interruption, reversal, or change of register
+  - step_id: WP-STEP-005
+    operation: place the part within the local argument, scene, or dramatic action
+  - step_id: WP-STEP-006
+    operation: identify its role in beginning, middle, structural division, and ending
+  - step_id: WP-STEP-007
+    operation: compare explicit local speech with the deed of the whole
+  - step_id: WP-STEP-008
+    operation: compare relevant works only after the present work is reconstructed independently
+  - step_id: WP-STEP-009
+    operation: test whether corpus comparison confirms, qualifies, contradicts, or remains incommensurable
+  - step_id: WP-STEP-010
+    operation: route the finding to a foundational problem without allowing that problem to predetermine the reading
+  - step_id: WP-STEP-011
+    operation: record what each scale establishes and does not establish
+  - step_id: WP-STEP-012
+    operation: assign the narrowest whole-part relation and preserve unresolved tensions
+
+part_function_classes:
+  - opening_orientation
+  - provisional_formulation
+  - explicit_definition
+  - objection
+  - correction
+  - reversal
+  - qualification
+  - example
+  - counterexample
+  - dramatic_test
+  - comic_deflation
+  - mythic_reformulation
+  - transition
+  - climax
+  - anti_climax
+  - conclusion
+  - unresolved_ending
+  - structural_omission
+
+whole_part_relations:
+  - PART_CONFIRMED_BY_SEQUENCE
+  - PART_QUALIFIED_BY_SEQUENCE
+  - PART_CORRECTED_LATER
+  - PART_CONTRADICTED_BY_DEED_OF_WHOLE
+  - PART_LIMITED_TO_SPEAKER_OR_OCCASION
+  - PART_REFRAMED_BY_ENDING
+  - PART_REQUIRED_FOR_WHOLE_BUT_NOT_EXHAUSTIVE
+  - LOCAL_FORMULATION_NOT_FINAL
+  - CORPUS_PARALLEL_CONFIRMS_LIMITEDLY
+  - CORPUS_PARALLEL_QUALIFIES
+  - CORPUS_PARALLEL_INCOMMENSURABLE
+  - PROBLEM_CONTEXT_CLARIFIES_WITHOUT_GOVERNING
+  - WHOLE_PART_RELATION_UNRESOLVED
+
+required_evidence:
+  - exact quotation or bounded paraphrase
+  - passage or scene location
+  - preceding and following sequence
+  - speaker and audience attribution
+  - structural role in the work
+  - evidence from ending or outcome where relevant
+  - source status for every corpus comparison
+  - explicit inferential step between scales
+  - alternatives considered
+
+corpus_comparison_rules:
+  - Reconstruct each work independently before comparison.
+  - A later or more famous work does not automatically govern an earlier or less explicit work.
+  - Similar vocabulary does not establish identical doctrine.
+  - Changed speaker, genre, audience, occasion, or documentary condition may block direct harmonization.
+  - A corpus pattern may support interpretation without proving deliberate systematization.
+  - Contradictory works remain contradictory until a supported distinction is demonstrated.
+
+problem_relation_rules:
+  - A foundational problem provides jurisdiction and a permanent question, not a predetermined answer.
+  - Cross-problem references occur by explicit relation rather than doctrinal duplication.
+  - The local work may activate more than one problem without being absorbed by any one of them.
+  - Problem architecture may preserve a tension the source does not resolve.
+
+valid_outputs:
+  - LOCAL_MEANING_ESTABLISHED
+  - LOCAL_MEANING_QUALIFIED_BY_SEQUENCE
+  - LOCAL_CLAIM_CORRECTED_LATER
+  - SPEAKER_LIMIT_CONTROLS_ATTRIBUTION
+  - STRUCTURE_QUALIFIES_LOCAL_CLAIM
+  - ENDING_REFRAMES_BEGINNING
+  - DEED_OF_WHOLE_QUALIFIES_SPEECH
+  - CORPUS_COMPARISON_SUPPORTED
+  - CORPUS_COMPARISON_BOUNDED
+  - CORPUS_HARMONIZATION_NOT_ESTABLISHED
+  - GOVERNING_PROBLEM_ACTIVATED
+  - WHOLE_PART_RELATION_UNRESOLVED
+
+required_output_fields:
+  - classification
+  - part_location
+  - exact_part
+  - speaker_or_agent
+  - local_function
+  - immediate_sequence
+  - structural_role
+  - whole_work_relation
+  - ending_relation
+  - corpus_relation
+  - problem_relation
+  - evidence
+  - alternatives_considered
+  - confidence
+  - remaining_uncertainty
+
+prohibited_outputs:
+  - memorable quotation treated as complete doctrine
+  - first formulation treated as final without examining correction or ending
+  - character speech assigned automatically to author
+  - remote parallel used before local sequence is reconstructed
+  - corpus harmony imposed by vocabulary alone
+  - thematic synthesis erasing dramatic or argumentative development
+  - ending ignored because it complicates a preferred interpretation
+  - foundational problem used to predetermine source meaning
+  - local contradiction erased by a generalized authorial doctrine
+  - incomplete work completed by conjecture without explicit classification
+
+uncertainty_rules:
+  - An incomplete, damaged, edited, or composite work may limit whole-work inference.
+  - A surviving ending may not establish authorial completion where documentary status is disputed.
+  - Corpus silence may remain non-evidence unless a parallel was reasonably expected.
+  - Incommensurable genre or audience differences may require withholding harmonization.
+  - A bounded local conclusion may remain valid while the whole-work relation stays unresolved.
+
+speech_mechanism_integration:
+  contract: speech/speech-mechanism.yaml
+  rule: >
+    Candidate ministerial expression must state whether a proposition is local,
+    provisional, speaker-bound, structurally qualified, ending-reframed, or supported
+    across the corpus. The adapter may not flatten these distinctions into one doctrine.
+
+termination_rule: >
+  A whole-and-part inquiry is complete only when the exact part, sequence, speaker,
+  audience, local function, structural role, work-level deed, ending, corpus comparisons,
+  governing problem, alternatives, evidentiary limits, and remaining uncertainty are
+  explicit. Completion may terminate with an unresolved relation rather than harmony.
+
+behavioral_tests:
+  - id: WP-TEST-001
+    behavior: an isolated quotation cannot replace the immediate sequence
+  - id: WP-TEST-002
+    behavior: a provisional formulation is qualified by a later correction
+  - id: WP-TEST-003
+    behavior: a speaker-bound statement is not assigned automatically to the author
+  - id: WP-TEST-004
+    behavior: the ending may reframe the apparent rank of the beginning
+  - id: WP-TEST-005
+    behavior: dramatic deed may qualify explicit local speech without mechanical inversion
+  - id: WP-TEST-006
+    behavior: remote corpus comparison occurs only after independent work reconstruction
+  - id: WP-TEST-007
+    behavior: similar vocabulary does not establish identical doctrine
+  - id: WP-TEST-008
+    behavior: problem jurisdiction does not predetermine source meaning
+  - id: WP-TEST-009
+    behavior: incomplete documentary condition preserves bounded uncertainty
+  - id: WP-TEST-010
+    behavior: unresolved whole-part tension remains a valid termination
+
+self_limitation: >
+  This hermeneutic governs scale and compositional relation. It does not assume a fully
+  systematic corpus, certify authorial omniscience, complete missing works, or make the
+  repository's problem architecture the hidden doctrine of every source.
