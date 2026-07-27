@@ -1,27 +1,25 @@
 schema_version: 1.0
 record_type: operational_completeness_audit
-
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 2.3.0
-
+  version: 2.4.0
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
   certification: NOT_CERTIFIED
   audit_scope_complete: true
   repository_completion: INCOMPLETE
-
 revision_history:
-  predecessor_version: 2.2.0
-  predecessor_blob_sha: c5d7375332c4a786a215e8ecc250250e8100c8ba
-  reason: Record CORPUS-WIT-102 as a qualified platform-reference witness. Preserve absent byte custody, pending sequential
-    reconstruction and edition comparisons, fifteen missing item witnesses, sixteen missing item studies, noncertification,
-    predecessor authority, and the completed-interface Sanctum repin block.
+  predecessor_version: 2.3.0
+  predecessor_blob_sha: a0d89cc3622b945448c9730036051641027b91cc
+  reason: Record complete provisional reconstruction and jurisdiction-preserving integration of CORPUS-SRC-102 through
+    SPINOZA-PREFACE-STUDY-001, CORPUS-STUDY-011, FINDSET-011, and FINDSET-119 through FINDSET-121. Preserve platform-reference
+    limits, pending edition comparison, incomplete independent corroboration, fifteen missing witnesses and studies,
+    noncertification, and the Sanctum repin block.
 basis:
   repository: izzy9118-blip/Strauss
-  prior_validated_interface_commit: 83c5106766fc7b048664c586eb46f925eb3cb04e
-  current_revision_scope: production/corpus-wit-102-platform-registration
+  prior_validated_interface_commit: a639c932aca7843fe12d78d7c9d7192bd10ee9a0
+  current_revision_scope: production/corpus-src-102-sequential-reconstruction
   manifest: manifest.yaml
   corpus_registry: corpus/index.yaml
   corpus_registry_loader: corpus_registry.py
@@ -30,322 +28,360 @@ basis:
   production_process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   witness_priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
   mapping_record: migrations/lean-operational-interface.yaml
-  governing_rule: >
-    A complete provisional source-specific reconstruction establishes a bounded analytical
-    record for one reviewed witness. It does not supply independent corroboration, original-
-    edition verification, final doctrine, certified migration, successor activation,
-    predecessor displacement, unrestricted runtime readiness, or repository completion.
+  governing_rule: 'A complete provisional source-specific reconstruction establishes a bounded analytical record
+    for one reviewed witness. It does not supply independent corroboration, original- edition verification, final
+    doctrine, certified migration, successor activation, predecessor displacement, unrestricted runtime readiness,
+    or repository completion.
 
+    '
 classification_vocabulary:
   SUBSTANTIVELY_RECONSTRUCTED:
-    meaning: >
-      A developed contract, registry, source-status, witness, study, or synthesis exists with
-      explicit identity, provenance, limits, valid operations, termination, and validation.
-      This does not constitute doctrinal certification.
+    meaning: 'A developed contract, registry, source-status, witness, study, or synthesis exists with explicit identity,
+      provenance, limits, valid operations, termination, and validation. This does not constitute doctrinal certification.
+
+      '
   PARTIALLY_RECONSTRUCTED:
-    meaning: >
-      A substantial implementation exists, but important evidence domains, source-specific
-      applications, independent witnesses, or authoritative composition remain incomplete.
+    meaning: 'A substantial implementation exists, but important evidence domains, source-specific applications,
+      independent witnesses, or authoritative composition remain incomplete.
+
+      '
   MAPPED_TO_RICHER_RECORDS:
     meaning: The object principally indexes or references richer repository records.
   STRUCTURAL_PLACEHOLDER:
     meaning: The object is loadable but insufficient to govern reliable inquiry by itself.
   EMPTY_OR_UNIMPLEMENTED:
     meaning: No material implementation exists.
-
 summary:
   structural_validation: REQUIRED_FOR_CURRENT_REVISION
   semantic_completion: INCOMPLETE
   doctrinal_certification: NOT_CERTIFIED
   runtime_readiness: LIMITED
   completed_operational_units:
-    - speech mechanism and candidate-report contract
-    - six hermeneutic contracts
-    - four inquiry method contracts
-    - seven read-only foundational problem bundles
-    - typed current-state corpus and findings registries
-    - bounded source identities for all nineteen active Theologico-Political predecessor writings
-    - JA-STUDY-001 complete provisional sequential reconstruction
-    - seven reviewed witnesses, including qualified platform-reference CORPUS-WIT-102
-    - COHEN-STUDY-001 complete provisional sequential reconstruction
-    - TALMON-STUDY-001 complete provisional sequential reconstruction
-    - CORPUS-STUDY-008 through CORPUS-STUDY-010 and FINDSET-008 through FINDSET-010 typed registrations
-    - FINDSET-111 through FINDSET-118 jurisdiction-preserving problem-local syntheses
+  - speech mechanism and candidate-report contract
+  - six hermeneutic contracts
+  - four inquiry method contracts
+  - seven read-only foundational problem bundles
+  - typed current-state corpus and findings registries
+  - bounded source identities for all nineteen active Theologico-Political predecessor writings
+  - JA-STUDY-001 complete provisional sequential reconstruction
+  - seven reviewed witnesses, including qualified platform-reference CORPUS-WIT-102
+  - COHEN-STUDY-001 complete provisional sequential reconstruction
+  - TALMON-STUDY-001 complete provisional sequential reconstruction
+  - CORPUS-STUDY-008 through CORPUS-STUDY-010 and FINDSET-008 through FINDSET-010 typed registrations
+  - FINDSET-111 through FINDSET-118 jurisdiction-preserving problem-local syntheses
+  - SPINOZA-PREFACE-STUDY-001 complete provisional sequential reconstruction
+  - CORPUS-STUDY-011 and FINDSET-011 typed registrations
+  - FINDSET-119 through FINDSET-121 jurisdiction-preserving problem-local syntheses
   theologico_political_item_level_status:
     active_predecessor_source_count: 19
     registered_source_identity_count: 19
     reviewed_item_witness_count: 4
     registered_without_reviewed_witness_count: 15
     remaining_without_item_level_status_count: 0
-    independently_reconstructed_count_within_this_sequence: 3
-    remaining_without_independent_sequential_study: 16
-    completed_source_ids: [CORPUS-SRC-105, CORPUS-SRC-109, CORPUS-SRC-111]
-    completed_witness_ids: [CORPUS-WIT-105, CORPUS-WIT-109, CORPUS-WIT-111]
-    completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001, TALMON-STUDY-001]
+    independently_reconstructed_count_within_this_sequence: 4
+    remaining_without_independent_sequential_study: 15
+    completed_source_ids:
+    - CORPUS-SRC-102
+    - CORPUS-SRC-105
+    - CORPUS-SRC-109
+    - CORPUS-SRC-111
+    completed_witness_ids:
+    - CORPUS-WIT-102
+    - CORPUS-WIT-105
+    - CORPUS-WIT-109
+    - CORPUS-WIT-111
+    completed_study_ids:
+    - SPINOZA-PREFACE-STUDY-001
+    - COHEN-STUDY-001
+    - JA-STUDY-001
+    - TALMON-STUDY-001
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     registry_root: studies/theologico-political/
-    interpretation_limit: >
-      The three studies are independent reconstructions relative to predecessor and collection-
-      level synthesis as governing interpretations, but they are not independent corroboration
-      of Cohen, biblical, Greek, prophetic, historical, theological, or political witnesses.
+    interpretation_limit: The four studies are independent reconstructions relative to predecessor and collection-level
+      synthesis as governing interpretations, but they are not independent corroboration of Spinoza, Cohen, biblical,
+      Greek, prophetic, historical, theological, or political witnesses.
     registered_witness_source_ids:
-      - CORPUS-SRC-102
-      - CORPUS-SRC-105
-      - CORPUS-SRC-109
-      - CORPUS-SRC-111
+    - CORPUS-SRC-102
+    - CORPUS-SRC-105
+    - CORPUS-SRC-109
+    - CORPUS-SRC-111
     registered_witness_ids:
-      - CORPUS-WIT-102
-      - CORPUS-WIT-105
-      - CORPUS-WIT-109
-      - CORPUS-WIT-111
+    - CORPUS-WIT-102
+    - CORPUS-WIT-105
+    - CORPUS-WIT-109
+    - CORPUS-WIT-111
   remaining_major_deficiencies:
-    - fifteen Theologico-Political item identities lack reviewed item witnesses
-    - sixteen Theologico-Political writings lack independent sequential item studies, including CORPUS-SRC-102
-    - the exact CORPUS-WIT-102 bytes, SHA256, file size, and PDF-page offset are unavailable to the repository
-    - the 1965 and 1968 Preface textual states have not been separately compared with the 1997 composite
-    - the original 1967 Jerusalem and Athens printing has not been compared with the reviewed 1983 reprint
-    - the original 1972 Cohen essay printing has not been compared with the reviewed 1983 reprint
-    - the original 1957 Talmon review printing has not been compared with the reviewed 1983 reprint
-    - Talmon's reviewed work remains independently unreconstructed
-    - independent Cohenian, biblical, Platonic, prophetic, historical, medieval, Kantian, and modern witnesses remain incomplete
-    - source-specific applications of method and hermeneutics remain incomplete beyond current studies
-    - most propositions are not normalized as separate queryable objects
-    - actual candidate ministerial reports have not been validated against the full contract stack
-    - doctrinal certification, migration certification, and successor activation remain unauthorized
+  - fifteen Theologico-Political item identities lack reviewed item witnesses
+  - fifteen Theologico-Political writings lack independent sequential item studies
+  - the exact CORPUS-WIT-102 bytes, SHA256, file size, and PDF-page offset are unavailable to the repository
+  - the 1965 and 1968 Preface textual states have not been separately compared with the 1997 composite
+  - the original 1967 Jerusalem and Athens printing has not been compared with the reviewed 1983 reprint
+  - the original 1972 Cohen essay printing has not been compared with the reviewed 1983 reprint
+  - the original 1957 Talmon review printing has not been compared with the reviewed 1983 reprint
+  - Talmon's reviewed work remains independently unreconstructed
+  - independent Cohenian, biblical, Platonic, prophetic, historical, medieval, Kantian, and modern witnesses remain
+    incomplete
+  - source-specific applications of method and hermeneutics remain incomplete beyond current studies
+  - most propositions are not normalized as separate queryable objects
+  - actual candidate ministerial reports have not been validated against the full contract stack
+  - doctrinal certification, migration certification, and successor activation remain unauthorized
 records:
-  - path: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    identity: JA-STUDY-001
-    present_function:
-      - reconstructs the complete essay in twelve ordered units before isolating Part V
-      - records documented findings and permanent source-level findings
-      - preserves Theologico-Political and Athens-versus-Jerusalem jurisdictions without absorption
-      - retests the predecessor without promotion, certification, or displacement
-    remaining:
-      - original 1967 edition comparison
-      - independent source-tradition reconstruction and corroboration
-      - later authorized proposition-level migration review
-
-  - path: studies/theologico-political/jerusalem-and-athens/source-status.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - registers CORPUS-WIT-109 and JA-STUDY-001 as distinct documentary layers
-      - records printed pages 147-173 and PDF pages 151-177
-      - preserves the SPPP container fingerprint and page-image authority
-    remaining:
-      - original printing comparison
-      - independent biblical, Greek, prophetic, and historical witnesses
-
-  - path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/reviewed-witness.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    identity: CORPUS-WIT-105
-    present_function:
-      - registers the complete 1983 collected item separately from source identity and study
-      - records printed pages 233-247 and PDF pages 237-251
-      - records the 1972 Frederick Ungar English-translation occasion
-      - preserves the SPPP container fingerprint and page-image authority
-    remaining:
-      - original 1972 printing comparison
-      - no independent Cohenian corroboration
-
-  - path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    identity: COHEN-STUDY-001
-    present_function:
-      - reconstructs the complete essay in eight ordered reading units
-      - distinguishes Strauss's account, Cohen's position, Jewish sources, and editorial layers
-      - records documented findings, supported inferences, unresolved uncertainties, and permanent source-level findings
-      - preserves Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns jurisdictions without absorption
-      - preserves the boundary between revelation and poetic construction
-      - retests the predecessor without promotion, certification, or displacement
-    remaining:
-      - original 1972 edition comparison
-      - independent Cohen, biblical, Maimonidean, Platonic, Kantian, and political witness reconstruction
-      - later authorized proposition-level migration review
-
-  - path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - registers CORPUS-WIT-105 and COHEN-STUDY-001 as distinct documentary layers
-      - records complete provisional reconstruction and incomplete independent corroboration
-      - preserves original-edition, doctrine, migration, and activation limits
-    remaining:
-      - original printing comparison
-      - independent source-tradition reconstruction
-
-  - path: studies/theologico-political/review-talmon-nature-of-jewish-history/reviewed-witness.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    identity: CORPUS-WIT-111
-    present_function:
-      - registers the complete one-page 1983 collected item separately from source identity and study
-      - records printed page 232 and PDF page 236
-      - records the 1957 Journal of Modern History occasion and SPPP container fingerprint
-      - preserves page-image authority and the distinction from Talmon's reviewed work
-    remaining:
-      - original 1957 journal comparison
-      - Talmon's reviewed work and independent historical corroboration
-
-  - path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    identity: TALMON-STUDY-001
-    present_function:
-      - reconstructs the complete one-page review in three ordered reading units
-      - distinguishes Strauss's review, Talmon's claims, historical constitution, and theological truth
-      - preserves Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns jurisdictions
-      - qualifies the predecessor's progress characterization without promotion or displacement
-    remaining:
-      - original 1957 edition comparison
-      - Talmon's book and independent Jewish, Greek, historical, theological, and political witnesses
-
-  - path: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - registers CORPUS-WIT-111 and TALMON-STUDY-001 as distinct documentary layers
-      - records complete provisional reconstruction and incomplete independent corroboration
-      - preserves reviewed-work, doctrine, migration, and activation limits
-    remaining:
-      - original printing comparison
-      - independent target-work and source-tradition reconstruction
-
-  - path: studies/theologico-political/preface-to-spinozas-critique-of-religion/reviewed-witness.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    identity: CORPUS-WIT-102
-    present_function:
-      - registers the complete 1997 SUNY collected item through a controlled platform reference
-      - records printed pages 137-180, platform object identity, searchable text, and page-image authority
-      - preserves missing byte custody, digest, file size, and exact PDF-page offset
-      - distinguishes the editorial composite from separately reviewed 1965 and 1968 versions
-    remaining:
-      - complete independent sequential reconstruction
-      - 1965 and 1968 edition comparison
-      - later forward materialization and fingerprinting if exact bytes become accessible
-  - path: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
-    classification: PARTIALLY_RECONSTRUCTED
-    present_function:
-      - registers CORPUS-WIT-102 separately from source identity and future study
-      - preserves active-predecessor contribution as untested at source level
-      - records platform-reference qualification and all noncertification limits
-    remaining:
-      - independent sequential reconstruction
-      - edition comparison
-      - independent corroboration
-  - path: corpus/index.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    registry_version: 1.9.0
-    completion: CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
-    present_function:
-      - 22 typed source entities
-      - 7 reviewed witnesses
-      - 22 source-status records
-      - 10 analytical and integration study records
-      - all 35 YAML records in the studies tree accounted for
-      - all 7 problem witness registries
-      - 19 Theologico-Political identities, 4 reviewed item witnesses, and 3 complete provisional item studies
-      - 7 positive corpus-gap records
-    remaining:
-      - fifteen reviewed item witnesses
-      - sixteen independent item studies
-      - complete Strauss bibliography and edition-specific source statuses
-      - broader independent classical, biblical, medieval, Spinozist, Cohenian, Kantian, and modern corpora
-      - source-text admission and runtime source access remain separate
-  - path: findings/index.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    registry_version: 1.3.0
-    completion: CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-    present_function:
-      - 33 typed finding sets
-      - 10 source-specific or integration records
-      - 18 problem-local syntheses
-      - 3 migration transaction ledgers
-      - 2 preserved finding bases
-      - explicit derivation from FINDSET-008 to FINDSET-111 and FINDSET-112
-      - explicit derivation from FINDSET-009 to FINDSET-113, FINDSET-114, and FINDSET-115
-      - explicit derivation from FINDSET-010 to FINDSET-116, FINDSET-117, and FINDSET-118
-    remaining:
-      - proposition-level normalization and source-asymmetry repair
-      - independent corroboration and authorized certification remain absent
-
-  - path: problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - supplies source-local reason-revelation findings
-      - records predecessor confirmations and qualifications without migration effect
-      - preserves poetry-revelation and adjacent-problem distinctions
-    remaining:
-      - independent source expansion and later certified migration review
-
-  - path: problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - reconstructs Judaism, culture, Torah, autonomy, fidelity, and universal mankind as a concrete alternative structure
-      - preserves reference to the broader authority and ancient-modern conflicts without absorption
-    remaining:
-      - independent Jewish, philosophic, and political witness reconstruction
-
-  - path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - reconstructs the transformation of revelation, law, messianism, and restoration through modern autonomy and progress
-      - preserves the Theologico-Political and Athens-versus-Jerusalem jurisdictions
-    remaining:
-      - independent Cohen, Kant, Plato, Maimonides, and biblical reconstruction
-
-  - path: corpus_registry.py
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - validates exact current studies-tree coverage and all typed counts
-      - validates nineteen predecessor identities, aliases, scopes, and preserved-copy equality
-      - validates CORPUS-WIT-102 as a witness-only qualified platform-reference state
-      - validates complete-study states for CORPUS-SRC-105, CORPUS-SRC-109, and CORPUS-SRC-111
-      - validates witness identity, locators, missing-byte safeguards, study binding, noncertification, and successor non-effect
-    remaining:
-      - no source retrieval, interpretation, certification, or activation
-
-  - path: findings_registry.py
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - validates thirty-three finding sets and eighteen exact synthesis records
-      - validates corpus-study exhaustiveness, derivations, indexes, source and problem bindings
-      - validates Cohen and Talmon source-local jurisdiction and noncorroboration
-      - preserves predecessor equality, noncertification, and no successor effect
-    remaining:
-      - no proposition promotion, doctrinal certification, or migration execution
-
-  - path: manifest.yaml
-    classification: PARTIALLY_RECONSTRUCTED
-    present_function:
-      - registers corpus v1.9.0, findings v1.3.0, 19 identities, 4 item witnesses, and 3 item studies
-      - preserves structural, semantic, runtime, migration, predecessor, and certification limits
-      - blocks completed-interface Sanctum repinning
-    remaining:
-      - manifest does not perform interpretation or authoritative report composition
-
+- path: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: JA-STUDY-001
+  present_function:
+  - reconstructs the complete essay in twelve ordered units before isolating Part V
+  - records documented findings and permanent source-level findings
+  - preserves Theologico-Political and Athens-versus-Jerusalem jurisdictions without absorption
+  - retests the predecessor without promotion, certification, or displacement
+  remaining:
+  - original 1967 edition comparison
+  - independent source-tradition reconstruction and corroboration
+  - later authorized proposition-level migration review
+- path: studies/theologico-political/jerusalem-and-athens/source-status.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - registers CORPUS-WIT-109 and JA-STUDY-001 as distinct documentary layers
+  - records printed pages 147-173 and PDF pages 151-177
+  - preserves the SPPP container fingerprint and page-image authority
+  remaining:
+  - original printing comparison
+  - independent biblical, Greek, prophetic, and historical witnesses
+- path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/reviewed-witness.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: CORPUS-WIT-105
+  present_function:
+  - registers the complete 1983 collected item separately from source identity and study
+  - records printed pages 233-247 and PDF pages 237-251
+  - records the 1972 Frederick Ungar English-translation occasion
+  - preserves the SPPP container fingerprint and page-image authority
+  remaining:
+  - original 1972 printing comparison
+  - no independent Cohenian corroboration
+- path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: COHEN-STUDY-001
+  present_function:
+  - reconstructs the complete essay in eight ordered reading units
+  - distinguishes Strauss's account, Cohen's position, Jewish sources, and editorial layers
+  - records documented findings, supported inferences, unresolved uncertainties, and permanent source-level findings
+  - preserves Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns jurisdictions without absorption
+  - preserves the boundary between revelation and poetic construction
+  - retests the predecessor without promotion, certification, or displacement
+  remaining:
+  - original 1972 edition comparison
+  - independent Cohen, biblical, Maimonidean, Platonic, Kantian, and political witness reconstruction
+  - later authorized proposition-level migration review
+- path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - registers CORPUS-WIT-105 and COHEN-STUDY-001 as distinct documentary layers
+  - records complete provisional reconstruction and incomplete independent corroboration
+  - preserves original-edition, doctrine, migration, and activation limits
+  remaining:
+  - original printing comparison
+  - independent source-tradition reconstruction
+- path: studies/theologico-political/review-talmon-nature-of-jewish-history/reviewed-witness.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: CORPUS-WIT-111
+  present_function:
+  - registers the complete one-page 1983 collected item separately from source identity and study
+  - records printed page 232 and PDF page 236
+  - records the 1957 Journal of Modern History occasion and SPPP container fingerprint
+  - preserves page-image authority and the distinction from Talmon's reviewed work
+  remaining:
+  - original 1957 journal comparison
+  - Talmon's reviewed work and independent historical corroboration
+- path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: TALMON-STUDY-001
+  present_function:
+  - reconstructs the complete one-page review in three ordered reading units
+  - distinguishes Strauss's review, Talmon's claims, historical constitution, and theological truth
+  - preserves Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns jurisdictions
+  - qualifies the predecessor's progress characterization without promotion or displacement
+  remaining:
+  - original 1957 edition comparison
+  - Talmon's book and independent Jewish, Greek, historical, theological, and political witnesses
+- path: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - registers CORPUS-WIT-111 and TALMON-STUDY-001 as distinct documentary layers
+  - records complete provisional reconstruction and incomplete independent corroboration
+  - preserves reviewed-work, doctrine, migration, and activation limits
+  remaining:
+  - original printing comparison
+  - independent target-work and source-tradition reconstruction
+- path: studies/theologico-political/preface-to-spinozas-critique-of-religion/reviewed-witness.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: CORPUS-WIT-102
+  present_function:
+  - registers the complete 1997 SUNY collected item through a controlled platform reference
+  - records printed pages 137-180, platform object identity, searchable text, and page-image authority
+  - preserves missing byte custody, digest, file size, and exact PDF-page offset
+  - distinguishes the editorial composite from separately reviewed 1965 and 1968 versions
+  remaining:
+  - 1965 and 1968 edition comparison
+  - later forward materialization and fingerprinting if exact bytes become accessible
+  - independent corroboration beyond the registered platform witness
+- path: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - registers CORPUS-WIT-102 and SPINOZA-PREFACE-STUDY-001 as distinct documentary layers
+  - records complete provisional reconstruction and incomplete independent corroboration
+  - preserves the 1997 editorial-composite, missing-byte, edition, doctrine, migration, and activation limits
+  remaining:
+  - 1965 and 1968 textual-state comparison
+  - exact byte materialization, fingerprinting, and PDF offset if later available
+  - independent source-tradition reconstruction and corroboration
+- path: corpus/index.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  registry_version: 1.10.0
+  completion: CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
+  present_function:
+  - 22 typed source entities
+  - 7 reviewed witnesses
+  - 22 source-status records
+  - 11 analytical and integration study records
+  - all 36 YAML records in the studies tree accounted for
+  - all 7 problem witness registries
+  - 19 Theologico-Political identities, 4 reviewed item witnesses, and 4 complete provisional item studies
+  - 7 positive corpus-gap records
+  remaining:
+  - fifteen reviewed item witnesses
+  - fifteen independent item studies
+  - complete Strauss bibliography and edition-specific source statuses
+  - broader independent classical, biblical, medieval, Spinozist, Cohenian, Kantian, and modern corpora
+  - source-text admission and runtime source access remain separate
+- path: findings/index.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  registry_version: 1.4.0
+  completion: CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
+  present_function:
+  - 37 typed finding sets
+  - 11 source-specific or integration records
+  - 21 problem-local syntheses
+  - 3 migration transaction ledgers
+  - 2 preserved finding bases
+  - explicit derivation from FINDSET-011 to FINDSET-119 through FINDSET-121
+  - source, problem, record-class, derivation, migration, and preservation indexes
+  remaining:
+  - proposition-level normalization and source-asymmetry repair
+  - independent corroboration and authorized certification remain absent
+- path: problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - supplies source-local reason-revelation findings
+  - records predecessor confirmations and qualifications without migration effect
+  - preserves poetry-revelation and adjacent-problem distinctions
+  remaining:
+  - independent source expansion and later certified migration review
+- path: problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - reconstructs Judaism, culture, Torah, autonomy, fidelity, and universal mankind as a concrete alternative structure
+  - preserves reference to the broader authority and ancient-modern conflicts without absorption
+  remaining:
+  - independent Jewish, philosophic, and political witness reconstruction
+- path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - reconstructs the transformation of revelation, law, messianism, and restoration through modern autonomy and
+    progress
+  - preserves the Theologico-Political and Athens-versus-Jerusalem jurisdictions
+  remaining:
+  - independent Cohen, Kant, Plato, Maimonides, and biblical reconstruction
+- path: corpus_registry.py
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - validates exact current studies-tree coverage and all typed counts
+  - validates nineteen predecessor identities, aliases, scopes, and preserved-copy equality
+  - validates CORPUS-WIT-102 as a witness-only qualified platform-reference state
+  - validates complete-study states for CORPUS-SRC-105, CORPUS-SRC-109, and CORPUS-SRC-111
+  - validates witness identity, locators, missing-byte safeguards, study binding, noncertification, and successor
+    non-effect
+  remaining:
+  - no source retrieval, interpretation, certification, or activation
+- path: findings_registry.py
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - validates thirty-three finding sets and eighteen exact synthesis records
+  - validates corpus-study exhaustiveness, derivations, indexes, source and problem bindings
+  - validates Cohen and Talmon source-local jurisdiction and noncorroboration
+  - preserves predecessor equality, noncertification, and no successor effect
+  remaining:
+  - no proposition promotion, doctrinal certification, or migration execution
+- path: manifest.yaml
+  classification: PARTIALLY_RECONSTRUCTED
+  present_function:
+  - registers corpus v1.9.0, findings v1.3.0, 19 identities, 4 item witnesses, and 3 item studies
+  - preserves structural, semantic, runtime, migration, predecessor, and certification limits
+  - blocks completed-interface Sanctum repinning
+  remaining:
+  - manifest does not perform interpretation or authoritative report composition
+- path: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: SPINOZA-PREFACE-STUDY-001
+  present_function:
+  - reconstructs printed pages 137-180 in ten ordered units
+  - distinguishes autobiographical narrative, historical report, reported positions, editorial layers, and Strauss's
+    judgments
+  - tests orthodoxy's historical defeat against rational refutation and preserves possibility from actuality
+  - preserves Theologico-Political primary jurisdiction and controlled Athens-versus-Jerusalem and Ancients-versus-Moderns
+    relations
+  - retests the predecessor without promotion, certification, migration, activation, or displacement
+  remaining:
+  - 1965 and 1968 textual-state comparison
+  - independent Spinozist, Jewish, biblical, medieval, modern, Zionist, and historical witnesses
+  - later authorized proposition-level migration review
+- path: problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: TP-SPINOZA-PREFACE-001
+  present_function:
+  - supplies the source-local Theologico-Political synthesis without predecessor displacement
+  remaining:
+  - independent witness expansion and any later certified proposition-level migration
+- path: problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: AVJ-SPINOZA-PREFACE-001
+  present_function:
+  - preserves the concrete reason-revelation alternatives without absorbing primary jurisdiction
+  remaining:
+  - independent Jewish, biblical, Greek, medieval, and Spinozist reconstruction
+- path: problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: AVM-SPINOZA-PREFACE-001
+  present_function:
+  - distinguishes modern rationalism's crisis from the reopened premodern alternatives
+  remaining:
+  - independent ancient, medieval, Spinozist, Nietzschean, and Heideggerian reconstruction
 production_order:
   governing_process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   completed_in_current_sequence:
-    - CORPUS-WIT-105 registration
-    - COHEN-STUDY-001 complete provisional sequential reconstruction
-    - TALMON-STUDY-001 complete provisional sequential reconstruction
-    - source-status, corpus, findings, and three problem-local synthesis registrations
-    - substantive validator and behavioral-test revision
-    - CORPUS-WIT-102 qualified platform-reference registration
+  - CORPUS-WIT-105 registration
+  - COHEN-STUDY-001 complete provisional sequential reconstruction
+  - TALMON-STUDY-001 complete provisional sequential reconstruction
+  - source-status, corpus, findings, and three problem-local synthesis registrations
+  - substantive validator and behavioral-test revision
+  - CORPUS-WIT-102 qualified platform-reference registration
   next:
-    - run complete structural and behavioral validation for this witness registration
-    - conduct CORPUS-SRC-102 independent sequential reconstruction from printed pages 137-180
-    - acquire CORPUS-SRC-103 and the remaining fourteen item witnesses after it
-    - expand independent Spinozist, biblical, Platonic, Xenophontic, medieval, Cohenian, Kantian, and modern witness studies
-    - validate actual ministerial reports against the full contract stack
+  - run complete structural and behavioral validation for this witness registration
+  - conduct CORPUS-SRC-102 independent sequential reconstruction from printed pages 137-180
+  - acquire CORPUS-SRC-103 and the remaining fourteen item witnesses after it
+  - expand independent Spinozist, biblical, Platonic, Xenophontic, medieval, Cohenian, Kantian, and modern witness
+    studies
+  - validate actual ministerial reports against the full contract stack
   final_repin:
     status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
-    rule: >
-      Do not repin Sanctum as a completed Strauss interface while repository_completion is
-      INCOMPLETE. Passing tests validates this bounded revision, not the completed project.
+    rule: 'Do not repin Sanctum as a completed Strauss interface while repository_completion is INCOMPLETE. Passing
+      tests validates this bounded revision, not the completed project.
 
+      '
 non_effects:
-  - This audit does not certify any doctrine, claimant, source, finding, successor problem, or migration.
-  - This audit does not admit or distribute source text.
-  - A source-specific study is not independent corroboration of the traditions it examines.
-  - This audit does not convert predecessor contributions into certified source-level doctrine.
-  - This audit does not alter active predecessors or accepted migration sources.
-  - This audit does not authorize successor activation or completed-interface Sanctum repinning.
-  - Later completion must proceed through forward revision with preserved provenance.
+- This audit does not certify any doctrine, claimant, source, finding, successor problem, or migration.
+- This audit does not admit or distribute source text.
+- A source-specific study is not independent corroboration of the traditions it examines.
+- This audit does not convert predecessor contributions into certified source-level doctrine.
+- This audit does not alter active predecessors or accepted migration sources.
+- This audit does not authorize successor activation or completed-interface Sanctum repinning.
+- Later completion must proceed through forward revision with preserved provenance.

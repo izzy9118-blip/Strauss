@@ -1,0 +1,97 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVJ-SPINOZA-PREFACE-001
+  problem: athens-vs-jerusalem
+  source_study: SPINOZA-PREFACE-STUDY-001
+  title: Athens and Jerusalem — Preface to Spinoza's Critique of Religion
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_CERTIFIED_MIGRATION
+
+source:
+  source_id: CORPUS-SRC-102
+  witness_id: CORPUS-WIT-102
+  corpus_study_id: CORPUS-STUDY-011
+  source_status: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
+  study_path: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
+  reviewed_textual_state: 1997_EDITORIAL_COMPOSITE
+  printed_pages: {start: 137, end: 180}
+  original_1965_edition_comparison: PENDING
+  authorial_1968_reprint_comparison: PENDING
+
+problem_relation:
+  theologico_political_reference: theologico-political
+  ancients_moderns_reference: ancients-vs-moderns
+  role: CONTROLLED_SECONDARY_CONCRETE_ALTERNATIVES
+  non_absorption: >
+    Athens and Jerusalem receives the concrete encounter among Jewish orthodoxy, revelation,
+    philosophy, and forms of rationalism. It may not absorb the primary structural question
+    whether philosophy can rationally exclude revelation.
+
+strict_problem_contribution:
+  governing_claim: >
+    The Preface presents the Jewish possibility of unqualified return as blocked not merely by
+    politics but by the alleged rational refutation of orthodoxy. When that refutation is shown
+    to depend on unproved premises, Jerusalem reappears as a live alternative to philosophy,
+    while Athens is differentiated into modern, medieval, Jewish, and classical forms rather
+    than treated as one settled rational doctrine.
+  documented_findings:
+    - Political Zionism and statehood restore dignity without proving redemption or revelation.
+    - Modern Jewish returns often preserve modern categories of history, experience, system, or individual selection.
+    - Spinoza is the decisive modern obstacle to an unqualified return because he claims to expose revelation and law to rational criticism.
+    - Strauss distinguishes modern rationalism from premodern Jewish, medieval, and classical rationalism.
+    - The possibility of revelation does not establish the truth of Judaism or any other orthodoxy.
+    - The reopened alternative requires renewed study rather than a decision already certified.
+  bounded_conclusion: >
+    The source restores Jerusalem as an intellectually live claimant without awarding it victory
+    and reopens Athens by questioning the modern form through which Strauss had first understood it.
+
+jurisdictional_boundaries:
+  belongs_here:
+    - Jewish orthodoxy, return, Torah, revelation, and miracle as concrete claims
+    - Spinoza's relation to Jewish law and emancipation
+    - Greek, medieval Jewish, classical, and modern forms of rationalism
+    - the distinction between political Jewish solutions and theological truth
+  remains_primary_elsewhere:
+    theologico_political:
+      - the comprehensive authority conflict between reason and revelation
+      - exhaustive knowledge of the whole as a condition for excluding miracle
+    ancients_vs_moderns:
+      - modern natural right, mastery, historicism, and the self-destruction of modern rationalism
+  boundary_only:
+    philosophy_vs_poetry:
+      - no independent poetic claimant is reconstructed
+      - revelation may not be reclassified as poetry
+
+source_and_evidence_limits:
+  - The 1997 witness is an editorial composite; separately reviewed 1965 and 1968 textual states remain pending.
+  - Exact bytes, digest, file size, and PDF-page offsets remain unavailable.
+  - The study does not independently reconstruct the Bible, Jewish orthodoxy, Spinoza, medieval Jewish philosophy, Greek philosophy, Zionism, or German-Jewish history.
+  - The source does not identify the true revelation or demonstrate that a miracle occurred.
+
+prohibitions:
+  - no Jerusalem victory inferred from philosophy's inability to refute revelation
+  - no Athens victory inferred from political or historical defeat of orthodoxy
+  - no Zionist dignity or statehood treated as redemption or providential proof
+  - no modern rationalism treated as identical with philosophy simply
+  - no historical sequence treated as doctrinal rank
+  - no source-local synthesis treated as certification, migration, or successor activation
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
+  certification: NOT_CERTIFIED
+  theologico_political_precedence: PRESERVED
+  ancients_moderns_jurisdiction: PRESERVED
+  predecessor_effect: NONE
+  successor_effect: NONE
+  remaining_work:
+    - independent biblical, Jewish, Spinozist, medieval, Greek, Zionist, and historical reconstruction
+    - comparison of the 1965, 1968, and 1997 textual states
+    - proposition-level comparative synthesis only after independent witness expansion

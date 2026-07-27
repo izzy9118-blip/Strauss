@@ -42,7 +42,7 @@ class InterfaceConsistencyTests(unittest.TestCase):
         self.assertEqual(step_one["current_version"], audit["identity"]["version"])
         self.assertEqual(step_two["current_version"], manifest["identity"]["version"])
 
-    def test_nineteen_identity_four_witness_three_study_language_matches(self) -> None:
+    def test_nineteen_identity_four_witness_four_study_language_matches(self) -> None:
         manifest = load_yaml("manifest.yaml")
         audit = load_yaml("audits/operational-completeness.yaml")
         mapping = load_yaml("migrations/lean-operational-interface.yaml")
@@ -64,11 +64,13 @@ class InterfaceConsistencyTests(unittest.TestCase):
         self.assertEqual(manifest_state["reviewed_witness_count"], 4)
         self.assertEqual(audit_state["reviewed_item_witness_count"], 4)
         self.assertEqual(mapping_state["reviewed_witness_count"], 4)
-        self.assertEqual(manifest_state["independent_sequential_study_count"], 3)
-        self.assertEqual(audit_state["independently_reconstructed_count_within_this_sequence"], 3)
-        self.assertEqual(mapping_state["independent_sequential_study_count"], 3)
+        self.assertEqual(manifest_state["independent_sequential_study_count"], 4)
+        self.assertEqual(audit_state["independently_reconstructed_count_within_this_sequence"], 4)
+        self.assertEqual(mapping_state["independent_sequential_study_count"], 4)
         self.assertEqual(manifest_state["remaining_without_reviewed_item_witness"], 15)
         self.assertEqual(mapping_state["remaining_without_reviewed_witness"], 15)
+        self.assertEqual(manifest_state["remaining_without_independent_sequential_study"], 15)
+        self.assertEqual(mapping_state["remaining_without_independent_sequential_study"], 15)
         self.assertEqual(
             corpus["termination"]["theologico_political_identity_registration_state"],
             "COMPLETE_19_OF_19",
@@ -79,10 +81,10 @@ class InterfaceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_independent_study_state"],
-            "INCOMPLETE_3_OF_19",
+            "INCOMPLETE_4_OF_19",
         )
 
-    def test_priority_schedule_advances_beyond_talmon_without_truth_ranking(self) -> None:
+    def test_priority_schedule_advances_beyond_spinoza_preface_without_truth_ranking(self) -> None:
         schedule = load_yaml(
             "history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml"
         )
@@ -92,7 +94,7 @@ class InterfaceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             schedule["selection"]["completed_study_ids"],
-            ["JA-STUDY-001", "COHEN-STUDY-001", "TALMON-STUDY-001"],
+            ["JA-STUDY-001", "COHEN-STUDY-001", "TALMON-STUDY-001", "SPINOZA-PREFACE-STUDY-001"],
         )
         self.assertEqual(
             schedule["termination"]["reviewed_item_witness_registration"],
@@ -100,46 +102,31 @@ class InterfaceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             schedule["termination"]["independent_sequential_reconstruction"],
-            "COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_JA_STUDY_001_AND_TALMON_STUDY_001",
+            "COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_JA_STUDY_001_TALMON_STUDY_001_AND_SPINOZA_PREFACE_STUDY_001",
         )
         self.assertEqual(schedule["termination"]["next_item_witness"], "CORPUS-SRC-103")
-        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-102")
+        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-103")
         self.assertEqual(schedule["status"]["certification"], "NOT_CERTIFIED")
 
     def test_source_derivations_preserve_problem_jurisdiction(self) -> None:
         findings = load_yaml("findings/index.yaml")
         by_id = {item["finding_set_id"]: item for item in findings["finding_sets"]}
 
-        self.assertEqual(
-            by_id["FINDSET-008"]["derived_local_syntheses"],
-            ["FINDSET-111", "FINDSET-112"],
-        )
-        self.assertEqual(by_id["FINDSET-111"]["problem_bindings"], ["theologico-political"])
-        self.assertEqual(by_id["FINDSET-112"]["problem_bindings"], ["athens-vs-jerusalem"])
-        self.assertEqual(by_id["FINDSET-111"]["successor_effect"], "NONE")
-        self.assertEqual(by_id["FINDSET-112"]["successor_effect"], "NONE")
-
-        self.assertEqual(
-            by_id["FINDSET-009"]["derived_local_syntheses"],
-            ["FINDSET-113", "FINDSET-114", "FINDSET-115"],
-        )
-        self.assertEqual(by_id["FINDSET-113"]["problem_bindings"], ["theologico-political"])
-        self.assertEqual(by_id["FINDSET-114"]["problem_bindings"], ["athens-vs-jerusalem"])
-        self.assertEqual(by_id["FINDSET-115"]["problem_bindings"], ["ancients-vs-moderns"])
-        for finding_id in ("FINDSET-113", "FINDSET-114", "FINDSET-115"):
-            self.assertEqual(by_id[finding_id]["successor_effect"], "NONE")
-            self.assertEqual(by_id[finding_id]["derived_from"], ["FINDSET-009"])
-
-        self.assertEqual(
-            by_id["FINDSET-010"]["derived_local_syntheses"],
-            ["FINDSET-116", "FINDSET-117", "FINDSET-118"],
-        )
-        self.assertEqual(by_id["FINDSET-116"]["problem_bindings"], ["theologico-political"])
-        self.assertEqual(by_id["FINDSET-117"]["problem_bindings"], ["athens-vs-jerusalem"])
-        self.assertEqual(by_id["FINDSET-118"]["problem_bindings"], ["ancients-vs-moderns"])
-        for finding_id in ("FINDSET-116", "FINDSET-117", "FINDSET-118"):
-            self.assertEqual(by_id[finding_id]["successor_effect"], "NONE")
-            self.assertEqual(by_id[finding_id]["derived_from"], ["FINDSET-010"])
+        expected = {
+            "FINDSET-008": [("FINDSET-111", "theologico-political"), ("FINDSET-112", "athens-vs-jerusalem")],
+            "FINDSET-009": [("FINDSET-113", "theologico-political"), ("FINDSET-114", "athens-vs-jerusalem"), ("FINDSET-115", "ancients-vs-moderns")],
+            "FINDSET-010": [("FINDSET-116", "theologico-political"), ("FINDSET-117", "athens-vs-jerusalem"), ("FINDSET-118", "ancients-vs-moderns")],
+            "FINDSET-011": [("FINDSET-119", "theologico-political"), ("FINDSET-120", "athens-vs-jerusalem"), ("FINDSET-121", "ancients-vs-moderns")],
+        }
+        for study_id, syntheses in expected.items():
+            self.assertEqual(
+                by_id[study_id]["derived_local_syntheses"],
+                [finding_id for finding_id, _ in syntheses],
+            )
+            for finding_id, problem in syntheses:
+                self.assertEqual(by_id[finding_id]["problem_bindings"], [problem])
+                self.assertEqual(by_id[finding_id]["derived_from"], [study_id])
+                self.assertEqual(by_id[finding_id]["successor_effect"], "NONE")
 
     def test_completion_and_repin_limits_remain_explicit(self) -> None:
         manifest = load_yaml("manifest.yaml")

@@ -1,0 +1,103 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVM-SPINOZA-PREFACE-001
+  problem: ancients-vs-moderns
+  source_study: SPINOZA-PREFACE-STUDY-001
+  title: Ancients and Moderns — Preface to Spinoza's Critique of Religion
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_CERTIFIED_MIGRATION
+
+source:
+  source_id: CORPUS-SRC-102
+  witness_id: CORPUS-WIT-102
+  corpus_study_id: CORPUS-STUDY-011
+  source_status: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
+  study_path: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
+  reviewed_textual_state: 1997_EDITORIAL_COMPOSITE
+  printed_pages: {start: 137, end: 180}
+  original_1965_edition_comparison: PENDING
+  authorial_1968_reprint_comparison: PENDING
+
+problem_relation:
+  theologico_political_reference: theologico-political
+  athens_jerusalem_reference: athens-vs-jerusalem
+  role: CONTROLLED_SECONDARY_HISTORICAL_AND_PHILOSOPHIC_RELATION
+  non_absorption: >
+    Ancients and Moderns receives the difference between modern rationalism and reopened
+    premodern rationalism. It may not convert historical sequence or modern crisis into
+    proof of either ancient doctrine or revelation.
+
+strict_problem_contribution:
+  governing_claim: >
+    Strauss's reconsideration shows that the alleged defeat of orthodoxy was bound to a
+    specifically modern rationalism: natural right reoriented toward mastery, confidence
+    in historical criticism, and atheism increasingly grounded in will or belief. The
+    self-destruction of that rationalism does not certify orthodoxy; it makes necessary a
+    return to premodern Jewish, medieval, and classical rationalism and to a more exact
+    manner of reading.
+  documented_findings:
+    - Spinoza combines inherited rational argument with a modern political project of natural right, emancipation, and mastery.
+    - Modern Jewish thought often interprets revelation through modern history, experience, autonomy, or system.
+    - Heidegger's questioning helped expose the inherited modern interpretation of Greek philosophy as questionable.
+    - Nietzsche's radical atheism becomes a project of overcoming biblical morality and can rest on will or belief rather than demonstrated knowledge.
+    - Modern rationalism cannot exclude revelation without comprehensive knowledge of the whole.
+    - Its self-destruction creates only an ambiguous opening for orthodoxy.
+    - Strauss closes by reopening medieval Jewish and classical rationalism.
+    - The hermeneutic correction—reading Spinoza more literally—belongs to the substantive return from modern assumptions.
+  bounded_conclusion: >
+    The source qualifies the ancient-modern problem by showing that the failure of a modern
+    settlement reopens premodern alternatives but does not establish their truth or unity.
+
+jurisdictional_boundaries:
+  belongs_here:
+    - modern natural right and mastery
+    - historical criticism and the modern interpretation of Greek philosophy
+    - modern atheism, will, belief, and intellectual probity
+    - classical and medieval rationalism as reopened alternatives
+    - modern versus premodern modes of reading and argument
+  remains_primary_elsewhere:
+    theologico_political:
+      - reason, revelation, miracle, and comprehensive knowledge of the whole
+    athens_vs_jerusalem:
+      - Jewish orthodoxy, unqualified return, and concrete claims of law and revelation
+  controlled_intersections:
+    nomos_vs_physis:
+      - natural right, liberal law, and divine law
+    theory_vs_practice:
+      - political mastery and practical remedy versus theoretical truth
+    wise_vs_vulgar:
+      - persecution, audience, and differentiated communication
+
+source_and_evidence_limits:
+  - The 1997 editorial composite may differ from the separately reviewed 1965 and 1968 textual states.
+  - The source reconstructs earlier thinkers and traditions without replacing independent study of them.
+  - Heidegger's role in reopening the question does not establish Strauss's adoption of Heidegger's doctrine or politics.
+  - Modern rationalism's crisis does not prove ancient, medieval, Jewish, or revealed teaching.
+
+prohibitions:
+  - no modern rationalism identified with philosophy simply
+  - no failure of modernity treated as proof of antiquity or revelation
+  - no historical succession treated as rational refutation
+  - no debt to Heidegger treated as doctrinal allegiance
+  - no premodern alternatives collapsed into one doctrine
+  - no source-local synthesis treated as certification, migration, or successor activation
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
+  certification: NOT_CERTIFIED
+  theologico_political_precedence: PRESERVED
+  athens_jerusalem_jurisdiction: PRESERVED
+  predecessor_effect: NONE
+  successor_effect: NONE
+  remaining_work:
+    - independent reconstruction of Spinoza, Nietzsche, Heidegger, medieval Jewish philosophy, and classical rationalism
+    - comparison of the 1965, 1968, and 1997 textual states
+    - proposition-level ancient-modern synthesis only after independent witness expansion

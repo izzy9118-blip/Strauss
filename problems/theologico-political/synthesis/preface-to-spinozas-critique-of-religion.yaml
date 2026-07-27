@@ -1,0 +1,150 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: TP-SPINOZA-PREFACE-001
+  problem: theologico-political
+  source_study: SPINOZA-PREFACE-STUDY-001
+  title: The Theologico-Political Problem — Preface to Spinoza's Critique of Religion
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_CERTIFIED_MIGRATION
+
+source:
+  source_id: CORPUS-SRC-102
+  witness_id: CORPUS-WIT-102
+  corpus_study_id: CORPUS-STUDY-011
+  source_status: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
+  witness_record: studies/theologico-political/preface-to-spinozas-critique-of-religion/reviewed-witness.yaml
+  study_path: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
+  reviewed_container: Jewish Philosophy and the Crisis of Modernity, State University of New York Press, 1997
+  textual_state: 1997_EDITORIAL_COMPOSITE_BASED_ESSENTIALLY_ON_1965_WITH_MOST_1968_CHANGES
+  printed_pages: {start: 137, end: 180}
+  pdf_page_range_one_based: PENDING_DIRECT_OFFSET_VERIFICATION
+  byte_identity: UNAVAILABLE_WITH_REASON_PRESERVED
+  original_1965_edition_comparison: PENDING
+  authorial_1968_reprint_comparison: PENDING
+
+relation_to_existing_problem:
+  active_predecessor: problems/theologico-political.yaml
+  successor_draft: problems/theologico-political/problem.yaml
+  predecessor_synthesis: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+  relation: RETESTS_QUALIFIES_AND_SUPPLIES_WITHOUT_REPLACING
+  governing_rule: >
+    The active predecessor remains authoritative and historically preserved. This source-local
+    synthesis may confirm or qualify predecessor propositions but does not migrate, certify,
+    activate, or displace them.
+
+strict_problem_contribution:
+  governing_claim: >
+    Strauss distinguishes the historical and political defeat of Jewish orthodoxy from its rational
+    refutation. Spinoza can exclude revelation only by beginning from premises that already deny
+    miracle or by supplying a demonstrated exhaustive account of the whole. Because the latter is
+    not supplied, revelation remains possible; that possibility is neither proof of revelation nor
+    evidence that a miracle occurred. The crisis of modern rationalism therefore reopens rather
+    than settles the alternative between revelation and philosophy and directs inquiry toward
+    premodern rationalism and a more literal reading of Spinoza.
+  documented_findings:
+    - The Preface arises from the theologico-political predicament of a young German Jew under Weimar.
+    - Liberal emancipation, Zionism, statehood, and personal return are distinct political or human responses rather than theoretical proofs.
+    - Historical or political defeat of orthodoxy does not establish rational refutation.
+    - Experience's comforting or terrifying character does not decide the truth of its theological or atheistic interpretation.
+    - Spinoza's critique must be read with attention to audience, persecution, voice, literary form, and political purpose.
+    - Rational exclusion of revelation requires a clear and exhaustive account of the whole.
+    - Strauss judges that Spinoza does not supply that completed account.
+    - The possibility of revelation does not establish its actuality.
+    - Modern rationalism's self-destruction produces only an ambiguous victory for orthodoxy in general.
+    - The conclusion reopens premodern Jewish, medieval, and classical rationalism.
+  bounded_conclusion: >
+    The source confirms the active predecessor's central formulation but materially qualifies it.
+    The reason-revelation conflict remains unresolved; neither orthodoxy nor philosophy is certified
+    as victorious, and the Preface does not identify a true revelation or establish an occurred miracle.
+
+predecessor_reconciliation:
+  state: PROVISIONAL_RETEST_COMPLETE_NO_PROMOTION
+  predecessor_statement: >
+    Reconsiders the alleged rational defeat of orthodoxy and asks whether reason can exclude
+    miracle or revelation without a demonstrated exhaustive account of the whole.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  confirmations:
+    - orthodoxy's alleged rational defeat is explicitly reconsidered
+    - historical defeat is distinguished from rational refutation
+    - exclusion of revelation is tied to an exhaustive account of the whole
+    - Spinoza is judged not to supply the required comprehensive demonstration
+  qualifications:
+    - orthodoxy claiming demonstrative knowledge differs from orthodoxy resting on belief
+    - inability to refute revelation is not proof of revelation
+    - the possibility of miracle is not evidence that a miracle occurred
+    - an ambiguous victory for orthodoxy in general is not a victory for Jewish orthodoxy
+    - the source reopens premodern rationalism rather than terminating inquiry
+  unresolved:
+    - the 1965 and 1968 textual states have not been separately compared
+    - Spinoza and the represented Jewish, biblical, medieval, modern, and historical sources remain independently incomplete
+    - the item does not certify Strauss's final resolution of the reason-revelation problem
+  migration_effect: NONE
+
+adjacent_problem_rules:
+  athens_vs_jerusalem:
+    relation: CONTROLLED_CONCRETE_ALTERNATIVES
+    supplied_findings:
+      - Jewish orthodoxy and unqualified return
+      - Greek, medieval Jewish, and modern rationalism
+      - revelation, law, philosophy, and the possibility of miracle
+    non_absorption: The concrete alternatives may not be reduced to a generic structural authority conflict.
+  ancients_vs_moderns:
+    relation: CONTROLLED_HISTORICAL_AND_PHILOSOPHIC_RELATION
+    supplied_findings:
+      - modern natural right, mastery, and secular emancipation
+      - modern rationalism's self-destruction
+      - reopening of classical and medieval rationalism
+    non_absorption: Modern crisis and historical sequence do not prove the truth of premodern doctrine.
+  nomos_vs_physis:
+    relation: CONTROLLED_INTERSECTION
+    supplied_findings:
+      - liberal law, private discrimination, natural right, and divine law
+  theory_vs_practice:
+    relation: CONTROLLED_INTERSECTION
+    supplied_findings:
+      - practical dignity and political necessity distinguished from theoretical truth
+  wise_vs_vulgar:
+    relation: CONTROLLED_HERMENEUTIC_INTERSECTION
+    supplied_findings:
+      - persecution, audience, differentiated communication, and claims to knowledge
+    non_absorption: Differentiated communication does not certify wisdom or unrestricted deception.
+  philosophy_vs_poetry:
+    relation: BOUNDARY_REFERENCE_ONLY
+    non_absorption: Revelation, prophecy, and miracle are not poetic constructions merely because they are interpreted.
+
+source_and_evidence_limits:
+  - SPINOZA-PREFACE-STUDY-001 reconstructs the 1997 editorial composite, not separately reviewed 1965 or 1968 textual states.
+  - The platform witness provides searchable text and page images but not repository byte custody, SHA256, file size, or exact PDF-page offsets.
+  - The source-local study is not independent corroboration of Spinoza, orthodoxy, revelation, miracle, Jewish history, Zionism, or modern philosophy.
+  - Agreement between the study, this synthesis, and the active predecessor is derivation, not independent corroboration.
+  - Pangle and Green remain secondary and cannot govern Strauss's argument.
+
+prohibitions:
+  - no historical or political defeat treated as rational refutation
+  - no inability to refute revelation treated as proof of revelation
+  - no possibility of miracle treated as proof of occurrence
+  - no political necessity, dignity, statehood, survival, or catastrophe treated as theoretical truth
+  - no platform identifier treated as a digest or platform reviewability treated as byte custody
+  - no 1997 composite equated with separately reviewed 1965 or 1968 textual states
+  - no persecution or audience analysis treated as mechanical reversal or unrestricted deception
+  - no source-local synthesis treated as doctrinal or migration certification
+  - no predecessor displacement or successor activation
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
+  certification: NOT_CERTIFIED
+  predecessor_status: UNCHANGED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - compare the 1997 composite with the original 1965 and authorial 1968 textual states
+    - materialize and fingerprint exact bytes only through a forward revision if available
+    - independently reconstruct Spinoza and the represented Jewish, biblical, medieval, modern, Zionist, and historical sources
+    - conduct proposition-level migration review only after adequate source coverage

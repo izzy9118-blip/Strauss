@@ -1,0 +1,74 @@
+Strauss operational manifest and speech-contract validation passed; semantic completion remains incomplete.
+Seven complete problem bundles validated for read-only loading; source application, migration certification, and activation remain incomplete.
+ERROR: CORPUS-STUDY-009 may not affect successor activation
+ERROR: CORPUS-STUDY-008 may not affect successor activation
+ERROR: CORPUS-STUDY-010 may not affect successor activation
+Typed findings registry validation passed for the current committed findings state; findings remain open, materially incomplete, and not certified.
+.................E.....F....F............................................F......................F.
+======================================================================
+ERROR: test_context_is_read_only_and_noncertifying (test_corpus_registry.CorpusRegistryTests.test_context_is_read_only_and_noncertifying)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/Strauss/Strauss/tests/test_corpus_registry.py", line 254, in test_context_is_read_only_and_noncertifying
+    context = corpus_registry.build_registry_context()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Strauss/Strauss/corpus_registry.py", line 614, in build_registry_context
+    raise CorpusRegistryError("Corpus registry validation failed:\n- " + "\n- ".join(errors))
+corpus_registry.CorpusRegistryError: Corpus registry validation failed:
+- CORPUS-STUDY-009 may not affect successor activation
+- CORPUS-STUDY-008 may not affect successor activation
+- CORPUS-STUDY-010 may not affect successor activation
+
+======================================================================
+FAIL: test_registry_validates_for_current_repository_state (test_corpus_registry.CorpusRegistryTests.test_registry_validates_for_current_repository_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/Strauss/Strauss/tests/test_corpus_registry.py", line 11, in test_registry_validates_for_current_repository_state
+    self.assertEqual(corpus_registry.validate_registry(registry), [])
+AssertionError: Lists differ: ['CORPUS-STUDY-009 may not affect successo[121 chars]ion'] != []
+
+First list contains 3 additional elements.
+First extra element 0:
+'CORPUS-STUDY-009 may not affect successor activation'
+
++ []
+- ['CORPUS-STUDY-009 may not affect successor activation',
+-  'CORPUS-STUDY-008 may not affect successor activation',
+-  'CORPUS-STUDY-010 may not affect successor activation']
+
+======================================================================
+FAIL: test_registration_does_not_complete_study_or_certify (test_corpus_wit_102_platform_registration.CorpusWitness102PlatformRegistrationTests.test_registration_does_not_complete_study_or_certify)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/Strauss/Strauss/tests/test_corpus_wit_102_platform_registration.py", line 66, in test_registration_does_not_complete_study_or_certify
+    self.assertEqual(
+AssertionError: 'SPINOZA-PREFACE-STUDY-001' != 'NOT_YET_COMPLETED'
+- SPINOZA-PREFACE-STUDY-001
++ NOT_YET_COMPLETED
+
+
+======================================================================
+FAIL: test_operational_records_are_synchronized (test_pr21_talmon_completion.TalmonIntegrationCompletionTests.test_operational_records_are_synchronized)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/Strauss/Strauss/tests/test_pr21_talmon_completion.py", line 29, in test_operational_records_are_synchronized
+    self.assertEqual(manifest["identity"]["version"], "1.5.0")
+AssertionError: '1.6.0' != '1.5.0'
+- 1.6.0
+?   ^
++ 1.5.0
+?   ^
+
+
+======================================================================
+FAIL: test_reason_revelation_distinctions_are_not_collapsed (test_spinoza_preface_sequential_reconstruction.SpinozaPrefaceSequentialReconstructionTests.test_reason_revelation_distinctions_are_not_collapsed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/Strauss/Strauss/tests/test_spinoza_preface_sequential_reconstruction.py", line 93, in test_reason_revelation_distinctions_are_not_collapsed
+    self.assertIn("clear and exhaustive account", findings["SPINOZA-PREFACE-PF-007"])
+AssertionError: 'clear and exhaustive account' not found in 'Reason can decisively exclude revelation only through a demonstrated comprehensive account of the whole that leaves no possibility of miraculous intervention.\n'
+
+----------------------------------------------------------------------
+Ran 98 tests in 22.069s
+
+FAILED (failures=4, errors=1)
