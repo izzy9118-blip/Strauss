@@ -38,6 +38,7 @@ CANONICAL_PROBLEMS = [
 ]
 
 EXPECTED_STUDY_TREE_PATHS = {
+    "studies/socrates-and-aristophanes/source-status.yaml",
     "studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml",
     "studies/studies-in-platonic-political-philosophy/source-status.yaml",
     "studies/studies-in-platonic-political-philosophy/sequential-reading.yaml",
@@ -123,7 +124,11 @@ def _unique_ids(
     return set(values)
 
 
-def _check_paths(records: Iterable[dict[str, Any]], fields: Iterable[str], errors: list[str]) -> None:
+def _check_paths(
+    records: Iterable[dict[str, Any]],
+    fields: Iterable[str],
+    errors: list[str],
+) -> None:
     for record in records:
         for field in fields:
             value = record.get(field)
@@ -160,6 +165,22 @@ def _actual_study_tree_paths() -> set[str]:
     }
 
 
+def _validate_witness_against_status(
+    registry_witness: dict[str, Any] | None,
+    source_status_path: Path,
+    label: str,
+    errors: list[str],
+) -> None:
+    status = load_yaml(source_status_path)
+    reviewed = status.get("reviewed_witness", {})
+    if not isinstance(registry_witness, dict):
+        errors.append(f"{label} reviewed witness is missing")
+        return
+    for field in ("page_count", "file_size_bytes", "sha256"):
+        if registry_witness.get(field) != reviewed.get(field):
+            errors.append(f"{label} reviewed witness {field} mismatch")
+
+
 def validate_registry(registry: dict[str, Any]) -> list[str]:
     errors: list[str] = []
 
@@ -170,11 +191,14 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.0.0":
-        errors.append("corpus registry identity.version must be 1.0.0")
+    if identity.get("version") != "1.1.0":
+        errors.append("corpus registry identity.version must be 1.1.0")
 
     status = registry.get("status", {})
-    if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
+    if (
+        status.get("registry_scope")
+        != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE"
+    ):
         errors.append("corpus registry must state bounded current-state exhaustiveness")
     if status.get("corpus_completion") != "INCOMPLETE_OPEN_CORPUS":
         errors.append("corpus registry must remain an incomplete open corpus")
@@ -189,17 +213,27 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gaps = registry.get("corpus_gaps", [])
 
     source_ids = _unique_ids(source_entities, "source_id", "source_entities", errors)
-    witness_ids = _unique_ids(witness_records, "witness_id", "reviewed_witnesses", errors)
-    status_ids = _unique_ids(status_records, "status_id", "source_status_records", errors)
+    witness_ids = _unique_ids(
+        witness_records,
+        "witness_id",
+        "reviewed_witnesses",
+        errors,
+    )
+    status_ids = _unique_ids(
+        status_records,
+        "status_id",
+        "source_status_records",
+        errors,
+    )
     study_ids = _unique_ids(study_records, "study_id", "study_records", errors)
     gap_ids = _unique_ids(gaps, "gap_id", "corpus_gaps", errors)
 
     if len(source_ids) != 22:
         errors.append(f"expected 22 source entities, found {len(source_ids)}")
-    if len(witness_ids) != 2:
-        errors.append(f"expected 2 reviewed witnesses, found {len(witness_ids)}")
-    if len(status_ids) != 2:
-        errors.append(f"expected 2 source-status records, found {len(status_ids)}")
+    if len(witness_ids) != 3:
+        errors.append(f"expected 3 reviewed witnesses, found {len(witness_ids)}")
+    if len(status_ids) != 3:
+        errors.append(f"expected 3 source-status records, found {len(status_ids)}")
     if len(study_ids) != 7:
         errors.append(f"expected 7 study records, found {len(study_ids)}")
     if len(gap_ids) != 7:
@@ -214,11 +248,25 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
             continue
         for item in records:
             if isinstance(item, dict) and item.get("source_id") not in source_ids:
-                errors.append(f"{label} references unknown source_id {item.get('source_id')!r}")
+                errors.append(
+                    f"{label} references unknown source_id {item.get('source_id')!r}"
+                )
 
-    _check_paths(status_records if isinstance(status_records, list) else [], ("path",), errors)
-    _check_paths(study_records if isinstance(study_records, list) else [], ("path",), errors)
-    _check_paths(problem_registries if isinstance(problem_registries, list) else [], ("path",), errors)
+    _check_paths(
+        status_records if isinstance(status_records, list) else [],
+        ("path",),
+        errors,
+    )
+    _check_paths(
+        study_records if isinstance(study_records, list) else [],
+        ("path",),
+        errors,
+    )
+    _check_paths(
+        problem_registries if isinstance(problem_registries, list) else [],
+        ("path",),
+        errors,
+    )
 
     actual_studies = _actual_study_tree_paths()
     registered_studies = _registered_study_paths(registry)
@@ -238,7 +286,11 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     if not isinstance(problem_registries, list) or len(problem_registries) != 7:
         errors.append("exactly seven problem witness registries must be registered")
     else:
-        problems = [item.get("problem") for item in problem_registries if isinstance(item, dict)]
+        problems = [
+            item.get("problem")
+            for item in problem_registries
+            if isinstance(item, dict)
+        ]
         if problems != CANONICAL_PROBLEMS:
             errors.append(f"problem witness registry order mismatch: {problems!r}")
 
@@ -246,9 +298,14 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     preserved = TP_PRESERVED_PATH.read_bytes() if TP_PRESERVED_PATH.exists() else b""
     active = TP_PREDECESSOR_PATH.read_bytes()
     if not preserved or active != preserved:
-        errors.append("Theologico-Political active predecessor does not match preserved copy")
+        errors.append(
+            "Theologico-Political active predecessor does not match preserved copy"
+        )
 
-    predecessor_sources = predecessor.get("documentary_source_basis", {}).get("sources", [])
+    predecessor_sources = predecessor.get("documentary_source_basis", {}).get(
+        "sources",
+        [],
+    )
     if not isinstance(predecessor_sources, list) or len(predecessor_sources) != 19:
         errors.append("Theologico-Political predecessor must contain 19 source records")
     tp_entities = [
@@ -257,11 +314,14 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         if isinstance(item, dict)
         and isinstance(item.get("source_id"), str)
         and item["source_id"].startswith("CORPUS-SRC-1")
-        and item["source_id"] not in {"CORPUS-SRC-001", "CORPUS-SRC-002", "CORPUS-SRC-003"}
+        and item["source_id"]
+        not in {"CORPUS-SRC-001", "CORPUS-SRC-002", "CORPUS-SRC-003"}
     ]
     tp_entities.sort(key=lambda item: item["source_id"])
     if len(tp_entities) != 19:
-        errors.append(f"expected 19 registered predecessor source entities, found {len(tp_entities)}")
+        errors.append(
+            f"expected 19 registered predecessor source entities, found {len(tp_entities)}"
+        )
     else:
         for position, (registered, original) in enumerate(
             zip(tp_entities, predecessor_sources),
@@ -272,25 +332,56 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
             if registered.get("canonical_title") != original.get("title"):
                 errors.append(
                     f"predecessor source title mismatch at {position}: "
-                    f"registry={registered.get('canonical_title')!r}, original={original.get('title')!r}"
+                    f"registry={registered.get('canonical_title')!r}, "
+                    f"original={original.get('title')!r}"
                 )
             if registered.get("date") != original.get("date"):
                 errors.append(f"predecessor source date mismatch at {position}")
 
-    sppp_status = load_yaml(
-        ROOT / "studies" / "studies-in-platonic-political-philosophy" / "source-status.yaml"
-    )
     sppp_witness = next(
-        (item for item in witness_records if item.get("witness_id") == "CORPUS-WIT-001"),
+        (
+            item
+            for item in witness_records
+            if item.get("witness_id") == "CORPUS-WIT-001"
+        ),
         None,
     )
-    reviewed = sppp_status.get("reviewed_witness", {})
-    if not isinstance(sppp_witness, dict):
-        errors.append("SPPP reviewed witness is missing")
-    else:
-        for field in ("page_count", "file_size_bytes", "sha256"):
-            if sppp_witness.get(field) != reviewed.get(field):
-                errors.append(f"SPPP reviewed witness {field} mismatch")
+    _validate_witness_against_status(
+        sppp_witness,
+        ROOT
+        / "studies"
+        / "studies-in-platonic-political-philosophy"
+        / "source-status.yaml",
+        "SPPP",
+        errors,
+    )
+
+    sa_witness = next(
+        (
+            item
+            for item in witness_records
+            if item.get("witness_id") == "CORPUS-WIT-003"
+        ),
+        None,
+    )
+    _validate_witness_against_status(
+        sa_witness,
+        ROOT / "studies" / "socrates-and-aristophanes" / "source-status.yaml",
+        "Socrates and Aristophanes",
+        errors,
+    )
+    if isinstance(sa_witness, dict):
+        if (
+            sa_witness.get("filename_year_status")
+            != "NONAUTHORITATIVE_AND_CONTRADICTED_BY_TITLE_AND_COPYRIGHT_PAGES"
+        ):
+            errors.append(
+                "Socrates and Aristophanes filename-year caution must remain explicit"
+            )
+        if sa_witness.get("ocr_rule") != "PAGE_IMAGES_GOVERN_WORDING_WHERE_OCR_IS_UNCERTAIN":
+            errors.append(
+                "Socrates and Aristophanes page-image authority rule must remain explicit"
+            )
 
     coverage = registry.get("coverage", {})
     expected_coverage = {
@@ -298,7 +389,9 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "reviewed_witnesses_registered": len(witness_ids),
         "source_status_records_registered": len(status_ids),
         "study_records_registered": len(study_ids),
-        "problem_witness_registries_registered": len(problem_registries) if isinstance(problem_registries, list) else 0,
+        "problem_witness_registries_registered": (
+            len(problem_registries) if isinstance(problem_registries, list) else 0
+        ),
         "theologico_political_predecessor_sources_registered": len(tp_entities),
         "current_studies_tree_yaml_records_accounted_for": len(actual_studies),
         "exhaustive_within_declared_scope": True,
@@ -306,12 +399,18 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     for field, expected in expected_coverage.items():
         if coverage.get(field) != expected:
             errors.append(
-                f"coverage.{field} mismatch: expected {expected!r}, found {coverage.get(field)!r}"
+                f"coverage.{field} mismatch: expected {expected!r}, "
+                f"found {coverage.get(field)!r}"
             )
 
     termination = registry.get("termination", {})
-    if termination.get("registry_state") != "COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
-        errors.append("registry termination state must preserve bounded current-state completion")
+    if (
+        termination.get("registry_state")
+        != "COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE"
+    ):
+        errors.append(
+            "registry termination state must preserve bounded current-state completion"
+        )
     if termination.get("corpus_state") != "OPEN_AND_MATERIALLY_INCOMPLETE":
         errors.append("registry termination must preserve an open, incomplete corpus")
     if termination.get("certification") != "NOT_CERTIFIED":
@@ -324,7 +423,9 @@ def build_registry_context() -> dict[str, Any]:
     registry = load_registry()
     errors = validate_registry(registry)
     if errors:
-        raise CorpusRegistryError("Corpus registry validation failed:\n- " + "\n- ".join(errors))
+        raise CorpusRegistryError(
+            "Corpus registry validation failed:\n- " + "\n- ".join(errors)
+        )
     return {
         "identity": registry["identity"],
         "status": registry["status"],

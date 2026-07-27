@@ -1,0 +1,141 @@
+schema_version: 1.0
+document_type: source_status_record
+
+identity:
+  source_id: SA-SOURCE-001
+  canonical_title: Socrates and Aristophanes
+  author: Leo Strauss
+  original_publication_year: 1966
+  reviewed_edition_year: 1980
+  original_publisher: Basic Books
+  reviewed_edition_publisher: University of Chicago Press
+  version: 1.0.0
+
+status:
+  lifecycle: REGISTERED_SOURCE
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  study_relation: studies/socrates-and-aristophanes/
+
+publication_condition:
+  class: AUTHOR_PUBLISHED_PRIMARY_STRAUSS_BOOK_REVIEWED_IN_LATER_PAPERBACK_EDITION
+  original_condition: >
+    The copyright and cataloging page identifies the work as published in 1966 and the
+    reviewed University of Chicago Press paperback as a 1980 reprint of the Basic Books,
+    New York edition.
+  reviewed_edition:
+    publisher: University of Chicago Press
+    place: Chicago and London
+    edition: Paperback edition
+    year: 1980
+    isbn_13: 978-0-226-77719-1
+    isbn_10: 0-226-77719-7
+  filename_caution: >
+    The local filename contains the year 1970. The reviewed title and copyright pages
+    instead establish original publication in 1966 and the reviewed paperback edition in
+    1980. The filename may not govern bibliographic identity.
+  authorial_status: >
+    This is an author-published Strauss book and therefore a primary source for Strauss's
+    argument. The reviewed witness is a later paperback presentation of that work, not a
+    posthumous editorial collection.
+
+reviewed_witness:
+  local_filename: Leo Strauss = ''Socrates & Aristophanes'' [1970].pdf
+  format: PDF
+  page_count: 321
+  file_size_bytes: 25818895
+  sha256: 1b74826f62bbc70d887e0f224b553c3bb521c55688ae9ba28c455ee080df9fa6
+  metadata_title: Socrates and Aristophanes
+  metadata_author: Leo Strauss
+  metadata_producer: Adobe Acrobat 9.55 Paper Capture Plug-in
+  metadata_modification_date: 2019-05-12T05:14:44Z
+  pdf_version: '1.4'
+  encrypted: false
+  tagged: false
+  source_condition: SEARCHABLE_OCR_WITH_AUTHORITATIVE_PAGE_IMAGES
+  text_condition: >
+    The PDF contains searchable text, but OCR errors occur in names and titles. Page
+    images, not OCR transcription alone, govern wording, spelling, punctuation, and layout.
+  repository_copy_rule: >
+    This record identifies the reviewed witness but does not reproduce or distribute the
+    source PDF. The study preserves locators, findings, classifications, limits, and
+    unresolved questions.
+
+registered_scope:
+  structural_units:
+    - Introduction
+    - The Clouds
+    - The Acharnians
+    - The Knights
+    - The Wasps
+    - The Peace
+    - The Birds
+    - The Lysistrata
+    - The Thesmophoriazusai
+    - The Frogs
+    - The Assembly of Women
+    - The Plutos
+    - Conclusion
+    - Notes
+    - Index
+  completed_study:
+    path: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
+    sequence_status: COMPLETE
+    constitutional_status: PROVISIONAL_NOT_CERTIFIED
+  excluded_or_deferred:
+    - independent edition comparison with the 1966 Basic Books printing
+    - direct Greek-text reconstruction of Aristophanes' plays
+    - independent Plato and Xenophon witness completion
+    - historical reconstruction of the historical Socrates beyond conflicting witnesses
+
+source_classes:
+  strauss_argument:
+    class: AUTHOR_PUBLISHED_PRIMARY_STRAUSS_SOURCE
+    permitted_use:
+      - reconstruct Strauss's explicit argument and compositional deed
+      - identify Strauss's ordering, distinctions, questions, and conclusions
+      - support source-specific findings with reproducible page or unit locators
+    prohibited_use:
+      - replace Aristophanes' surviving plays as independent poetic witnesses
+      - replace Plato or Xenophon as independent Socratic witnesses
+      - convert Strauss's interpretation into direct historical evidence about Socrates
+  aristophanes_material:
+    class: STRAUSS_MEDIATED_PRESENTATION_REQUIRING_INDEPENDENT_PRIMARY_RECONSTRUCTION
+  socrates_material:
+    class: DISPUTED_SUBJECT_PRESENTED_THROUGH_STRAUSS_AND_CONFLICTING_ANCIENT_WITNESSES
+
+independent_witness_rule: >
+  Strauss's reconstruction governs claims about Strauss's argument. It does not replace
+  the independent surviving works, textual traditions, editions, translations, or
+  documentary limits of Aristophanes, Plato, Xenophon, or other witnesses. Later
+  comparisons must reconstruct those witnesses independently before ranking or synthesis.
+
+evidence_rules:
+  - rule_id: SA-SR-001
+    rule: Distinguish Strauss's explicit statement from supported inference and unresolved question.
+  - rule_id: SA-SR-002
+    rule: Distinguish Strauss's account of Aristophanes from Aristophanes' own dramatic deed.
+  - rule_id: SA-SR-003
+    rule: Distinguish the young Socrates, mature Socrates, historical Socrates, Aristophanic Socrates, Platonic Socrates, and Xenophontic Socrates.
+  - rule_id: SA-SR-004
+    rule: Distinguish a character's speech, chorus judgment, dramatic victory, poetic action, and authorial teaching.
+  - rule_id: SA-SR-005
+    rule: Compare explicit doctrine with dramatic or textual deed; irony is not mechanical inversion.
+  - rule_id: SA-SR-006
+    rule: Treat comedy as potentially substantive evidence without treating ridicule or laughter as refutation or certification.
+  - rule_id: SA-SR-007
+    rule: Preserve the distinction between poetic theology, civic gods, prophecy, revelation, and divine law.
+  - rule_id: SA-SR-008
+    rule: Preserve the brother-problem relation between Philosophy vs. Poetry and The Theologico-Political Problem without absorption.
+  - rule_id: SA-SR-009
+    rule: OCR text must be checked against page images where wording or names affect a finding.
+
+termination:
+  source_state: REGISTERED_FOR_COMPLETED_PROVISIONAL_STUDY
+  study_completion: SEQUENTIAL_READING_COMPLETE
+  certification: NOT_CERTIFIED
+  remaining_requirements:
+    - independent direct studies of Aristophanes, Plato, and Xenophon
+    - edition comparison where wording or pagination affects later certification
+    - problem-specific migration transactions before constitutional activation
+    - no successor activation or doctrinal certification from source registration alone

@@ -4,7 +4,7 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 1.5.0
+  version: 1.6.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
@@ -13,45 +13,42 @@ status:
   repository_completion: INCOMPLETE
 
 revision_history:
-  predecessor_version: 1.4.0
-  predecessor_blob_sha: ab2eb811a40cfcfa150b2d05ec1d361962c3cd8b
+  predecessor_version: 1.5.0
+  predecessor_blob_sha: 68d50f0b947d0e9451d3187e47c99abbd3c23e7f
   reason: >
-    Record replacement of the reference-only findings index with a typed registry
-    exhaustive for the repository's current committed findings-record state. Preserve
-    proposition-level evidence and qualifications in their governing records, findings
-    as open and materially incomplete, and all certification, migration, activation,
-    predecessor-displacement, and Assembly authority as unauthorized.
+    Record bibliographic, file-level, OCR, page-image, and source-status registration of
+    the reviewed Socrates and Aristophanes witness. Preserve the 1966 work, 1980 reviewed
+    paperback, inaccurate local filename year, source PDF, OCR layer, page images,
+    completed provisional study, and independent ancient witnesses as distinct records.
 
 basis:
   repository: izzy9118-blip/Strauss
-  prior_validated_interface_commit: d1bcbed5a01ab6fa8615c30a3d3d2fa5cb26aee9
-  current_revision_scope: production/typed-findings-registry
+  prior_validated_interface_commit: cc978f6afc0de8d31a2b7c27697d08b7f1914182
+  current_revision_scope: production/register-socrates-aristophanes-witness
   manifest: manifest.yaml
-  problem_bundle_loader: problem_bundles.py
+  corpus_registry: corpus/index.yaml
   corpus_registry_loader: corpus_registry.py
-  findings_registry_loader: findings_registry.py
+  source_status_record: studies/socrates-and-aristophanes/source-status.yaml
   mapping_record: migrations/lean-operational-interface.yaml
   governing_rule: >
-    Exhaustive registration of the repository's present findings-bearing records does
-    not establish proposition-level completion, independent corroboration, doctrinal
-    truth, migration certification, successor activation, or unrestricted ministerial readiness.
+    A reviewed witness and reproducible file fingerprint improve source identity and
+    locator reliability. They do not certify the study, replace independent witnesses,
+    settle doctrine, execute migration, activate successors, or admit the source text.
 
 classification_vocabulary:
   SUBSTANTIVELY_RECONSTRUCTED:
     meaning: >
-      The object contains a developed governing contract or registry, explicit scope,
-      identity, provenance, limits, valid operations, termination, and behavioral validation.
-      This classification does not constitute doctrinal certification.
+      The object contains a developed governing contract, registry, or source-status
+      record with explicit identity, provenance, limits, valid operations, termination,
+      and behavioral validation. This does not constitute doctrinal certification.
   PARTIALLY_RECONSTRUCTED:
     meaning: >
       A substantial contract or implementation exists, but important execution,
       evidence domains, source-specific applications, or authoritative composition remain incomplete.
   MAPPED_TO_RICHER_RECORDS:
-    meaning: >
-      The object is principally an index or compact interface to richer records.
+    meaning: The object is principally an index or compact interface to richer records.
   STRUCTURAL_PLACEHOLDER:
-    meaning: >
-      The object is loadable but insufficient to govern reliable inquiry by itself.
+    meaning: The object is loadable but insufficient to govern reliable inquiry by itself.
   EMPTY_OR_UNIMPLEMENTED:
     meaning: No material implementation exists.
 
@@ -61,77 +58,69 @@ summary:
   doctrinal_certification: NOT_CERTIFIED
   runtime_readiness: LIMITED
   completed_operational_units:
-    - speech mechanism contract
-    - speech request validation and candidate report structure
+    - speech mechanism and candidate-report contract
     - six hermeneutic contracts
     - four inquiry method contracts
     - seven read-only foundational problem bundles
-    - typed corpus registry exhaustive for current committed source and study state
-    - typed findings registry exhaustive for current committed findings-record state
-    - findings path, source, problem, derivation, migration, predecessor, index, and gap validation
+    - typed current-state corpus registry
+    - typed current-state findings registry
+    - reviewed Studies in Platonic Political Philosophy PDF witness
+    - reviewed Plato Apology translation witness
+    - reviewed Socrates and Aristophanes PDF witness and source-status record
+  current_witness_registration:
+    source: Socrates and Aristophanes
+    source_id: CORPUS-SRC-001
+    witness_id: CORPUS-WIT-003
+    source_status_id: CORPUS-STATUS-003
+    original_publication: Basic Books 1966
+    reviewed_edition: University of Chicago Press paperback 1980
+    page_count: 321
+    file_size_bytes: 25818895
+    sha256: 1b74826f62bbc70d887e0f224b553c3bb521c55688ae9ba28c455ee080df9fa6
+    source_condition: SEARCHABLE_OCR_WITH_AUTHORITATIVE_PAGE_IMAGES
+    filename_limit: >
+      The local filename contains 1970, but the title and copyright pages establish
+      original publication in 1966 and the reviewed paperback in 1980.
   remaining_major_deficiencies:
-    - individual propositions are not yet normalized as separate queryable objects
+    - comparison with the original 1966 Basic Books printing remains pending where edition differences matter
+    - direct independent Aristophanes, Xenophon, biblical, medieval, and most Platonic witness studies remain incomplete
     - source-specific applications of method and hermeneutics remain incomplete
     - most of the nineteen Theologico-Political writings lack item-level source-status records and independent studies
-    - Socrates and Aristophanes lacks a separately registered reviewed edition and fingerprint
-    - direct Aristophanes, Xenophon, biblical, medieval, and most Platonic witness studies remain incomplete
+    - individual propositions are not yet normalized as separate queryable objects
     - actual candidate ministerial reports have not been validated against the full contract stack
-    - authoritative natural-language ministerial judgment remains a reasoning operation
     - doctrinal certification and successor activation remain separately unauthorized
-  central_finding: >
-    Every current studies-based finding set, problem synthesis, foundational migration
-    transaction, active predecessor basis, and accepted migration source is now typed and
-    discoverable without detaching propositions from their governing evidence, sequence,
-    uncertainty, dissent, or migration status. Current-state exhaustiveness and completed
-    doctrine remain explicitly distinct.
 
 records:
-  - path: manifest.yaml
-    classification: PARTIALLY_RECONSTRUCTED
-    present_function:
-      - canonical load order and seven-problem registration
-      - honest structural, semantic, runtime, and certification states
-      - speech, hermeneutic, method, problem-bundle, corpus, and findings registration
-      - audit and Sanctum repinning rules
-    remaining:
-      - completion states must advance with item-level sources, witnesses, applications, and report fixtures
-      - manifest does not itself perform reasoning
-
-  - path: adapter.py
-    classification: PARTIALLY_RECONSTRUCTED
-    present_function:
-      - path-safe YAML loading and manifest validation
-      - speech-contract and typed request validation
-      - candidate ministerial-report construction
-      - evidence, irony, comedy, concealment, uncertainty, and pinning controls
-    remaining:
-      - no automatic execution of method contracts over source records
-      - no authoritative natural-language ministerial judgment
-
-  - path: problem_bundles.py
+  - path: studies/socrates-and-aristophanes/source-status.yaml
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
-      - complete read-only loading of seven foundational problem bundles
-      - identity, relation, non-certification, and predecessor-preservation validation
+      - distinguishes original publication, reviewed edition, and local filename
+      - records title-page and copyright-page bibliographic evidence
+      - records PDF page count, file size, hash, metadata, and OCR condition
+      - establishes page images as authoritative where OCR is uncertain
+      - distinguishes Strauss's book from independent Aristophanes, Plato, Xenophon, and historical-Socrates witnesses
+      - binds the completed provisional study without certifying it
     remaining:
-      - no source interpretation, migration certification, doctrine, or activation
+      - comparison with the 1966 Basic Books printing
+      - source-text admission remains separate and unrequested
+      - independent ancient witness reconstruction remains incomplete
 
   - path: corpus/index.yaml
     classification: SUBSTANTIVELY_RECONSTRUCTED
-    registry_version: 1.0.0
+    registry_version: 1.1.0
     completion: CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
     present_function:
       - 22 typed source entities
-      - 2 reviewed witnesses
-      - 2 source-status records
+      - 3 reviewed witnesses
+      - 3 source-status records
       - 7 analytical and integration study records
-      - all 9 YAML records in the studies tree accounted for
+      - all 10 YAML records in the studies tree accounted for
       - all 7 problem witness registries
       - all 19 Theologico-Political predecessor source identities and dates
-      - explicit repository documentary artifacts and 7 positive corpus-gap records
+      - 7 positive corpus-gap records
     remaining:
       - complete Strauss bibliography and item-level source-status records
-      - reviewed Socrates and Aristophanes edition identity and fingerprint
+      - edition comparison for Socrates and Aristophanes
       - Greek alignment for Plato's Apology
       - broader classical, biblical, medieval, and modern independent witness corpora
       - source-text admission and runtime source access remain separate
@@ -140,9 +129,10 @@ records:
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
       - validates unique source, witness, status, study, and gap identifiers
-      - validates all registered repository paths and exact studies-tree coverage
+      - validates exact studies-tree and problem-witness-registry coverage
       - validates nineteen predecessor titles and dates and preserved-copy equality
-      - validates the SPPP reviewed-witness fingerprint
+      - validates SPPP and Socrates and Aristophanes witness fingerprints against source-status records
+      - enforces filename-year and page-image authority safeguards for Socrates and Aristophanes
       - loads a read-only discovery and provenance context
     remaining:
       - no source retrieval, source-text admission, interpretation, ranking, certification, or activation
@@ -151,107 +141,45 @@ records:
     classification: SUBSTANTIVELY_RECONSTRUCTED
     registry_version: 1.0.0
     completion: CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-    present_function:
-      - 22 typed finding sets
-      - 7 source-specific and integration study records
-      - all 10 problem-local synthesis records
-      - all 3 foundational migration transaction ledgers
-      - 2 preserved finding bases
-      - exact indexes by canonical problem, source, and record class
-      - explicit derivation, migration, brother-problem, and preservation relations
-      - 6 positive findings-gap records
-      - proposition-kind and nonduplication rules
     remaining:
-      - proposition-level normalized identifiers and evidence bindings
-      - independent studies for many registered sources and witnesses
-      - source-asymmetry repair before comparative ranking
-      - actual ministerial-report validation
-      - authorized certification and successor activation remain absent
+      - proposition-level normalization and source-asymmetry repair
+      - actual report validation and authorized certification remain absent
 
-  - path: findings_registry.py
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - validates unique finding-set and gap identifiers
-      - validates exact study, synthesis, and transaction-tree coverage
-      - validates source bindings against the typed corpus registry
-      - validates problem bindings against the canonical problem registry
-      - validates derivation, migration, classification-ledger, and preserved-basis references
-      - validates declared indexes against finding-set bindings
-      - validates active-predecessor equality with its preserved historical copy
-      - supports read-only filtering by problem, source, and record class
-    remaining:
-      - no proposition promotion, independent corroboration inference, certification, migration execution, or activation
-
-  - path: speech/speech-mechanism.yaml
-    classification: PARTIALLY_RECONSTRUCTED
-    contract_version: STRAUSS-SPEECH-CONTRACT-1
-    remaining:
-      - source-grounded reasoning and final composition are not automatic
-      - actual report applications remain to be tested
-
-  - path: hermeneutics/
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    remaining:
-      - source-specific applications and certification
-
-  - path: method/
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    remaining:
-      - source-specific applications and certification
-
-  - path: problems/
-    classification: SUBSTANTIVELY_RECONSTRUCTED_AS_READ_ONLY_OPERATIONAL_BUNDLES
-    remaining:
-      - independent witness and work reconstruction is uneven
-      - proposition-level migration and successor certification remain incomplete
-
-  - path: migrations/lean-operational-interface.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    remaining: maintain completion states and preserved mappings through later revisions
-
-  - path: tests/test_findings_registry.py
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    present_function:
-      - current-state findings validation and unique identifier tests
-      - exact synthesis, transaction, and corpus-study coverage tests
-      - derived index validation
-      - active predecessor preservation
-      - source derivation and brother-problem jurisdiction tests
-      - filter failure and noncertification tests
-    remaining:
-      - proposition-level fixtures, source-specific applications, and actual report fixtures
-
-  - path: .github/workflows/validate-lean-interface.yml
+  - path: manifest.yaml
     classification: PARTIALLY_RECONSTRUCTED
     present_function:
-      - validates manifest, speech, problem bundles, typed corpus, typed findings, and all interface tests
-      - uploads structural and behavioral diagnostics
+      - registers the reviewed witness and corpus registry v1.1.0
+      - preserves all structural, semantic, runtime, and certification limits
     remaining:
-      - source-specific application and actual report-validation jobs
+      - manifest does not itself perform source interpretation or report composition
+
+  - path: tests/test_corpus_registry.py
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    present_function:
+      - validates source-status, fingerprint, edition, filename, OCR, and page-image rules
+      - validates exact current studies-tree coverage
+      - preserves predecessor and open-corpus safeguards
+    remaining:
+      - edition-comparison fixtures and independent witness application fixtures
 
 production_order:
   completed:
-    - reconstruct speech/speech-mechanism.yaml
-    - extend adapter.py with speech validation and candidate report construction
-    - reconstruct the six hermeneutic contracts
-    - reconstruct the four method contracts
-    - register and validate complete read-only foundational problem bundles
-    - replace the reference-only corpus index with a typed current-state exhaustive registry
-    - replace the reference-only findings index with a typed current-state exhaustive registry
+    - typed current-state corpus and findings registries
+    - reviewed Socrates and Aristophanes witness registration
   next:
     - create item-level source-status records for the nineteen Theologico-Political writings
-    - register a reviewed Socrates and Aristophanes witness
+    - compare the reviewed Socrates and Aristophanes witness with the 1966 Basic Books printing where needed
     - create source-specific method and hermeneutic application fixtures
-    - expand independent witness reconstruction
+    - expand independent Aristophanes, Plato, Xenophon, biblical, medieval, and modern witness studies
     - validate actual ministerial reports against the full contract stack
     - repin Sanctum after each validated interface revision
 
 non_effects:
   - This audit does not certify any doctrine, claimant, source, finding, successor problem, or migration.
-  - This audit does not admit or distribute source texts.
+  - This audit does not admit or distribute the reviewed PDF.
+  - This audit does not treat OCR as authoritative over page images.
+  - This audit does not allow a local filename to override bibliographic evidence.
   - This audit does not alter active predecessors or accepted migration sources.
-  - Current-state exhaustive indexing does not close or complete the corpus or findings store.
-  - Registry inclusion does not promote a provisional study, synthesis, or proposition.
-  - Multiple records derived from one source do not constitute independent corroboration.
-  - Registry loading does not authorize successor activation.
+  - Witness registration does not promote a provisional study or synthesis.
+  - Witness registration does not replace independent Aristophanes, Plato, or Xenophon reconstruction.
   - Later completion must proceed through forward revision with preserved provenance.
