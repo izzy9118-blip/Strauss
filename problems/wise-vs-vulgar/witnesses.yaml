@@ -4,12 +4,21 @@ document_type: foundational_problem_witness_registry
 identity:
   problem: wise-vs-vulgar
   title: The Wise vs. The Vulgar — Witness Registry
-  version: 0.1.0
+  version: 0.2.0
 
 status:
-  lifecycle: FOUNDING_DRAFT
+  lifecycle: STRUCTURAL_REGISTRATION_COMPLETE_EXPANDED_PARTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: 6f03279b448bfa092c04c221ea25a6b8d6fd2575
+  reason: >
+    Register the completed independent Plato Apology reconstruction and its local
+    synthesis, add supporting witnesses preserved in the accepted predecessor, and
+    align migration status with completed proposition-level classification. No witness
+    is certified as wise, and no predecessor or accepted source is altered.
 
 authority:
   problem_reference: problems/wise-vs-vulgar/problem.yaml
@@ -18,25 +27,33 @@ authority:
   registry_reference: problems/registry.yaml
   migration_reference: migrations/foundational-problems-v2/migration.yaml
   predecessor_index_reference: migrations/foundational-problems-v2/predecessor-index.yaml
+  transaction_reference: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   source_status_protocol: protocols/source-status.yaml
   governing_rule: >
-    This registry records witnesses, claimant classes, source conditions, and local
-    limits without certifying wisdom or replacing proposition-level redistribution of
-    accepted predecessor material.
+    This registry records witnesses, claimant classes, source conditions, completed
+    and pending reconstructions, and local limits without certifying wisdom or
+    converting structural registration into substantive proof.
 
 predecessor_source_basis:
   active_predecessor:
     path: problems/wise-and-vulgar.yaml
     version: 0.1-discussion
     blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+    status: ACTIVE_PREDECESSOR_UNTOUCHED
   accepted_migration_source:
     identifier: WVG-RECONSTRUCTION-0.2
     path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
-    status: ACCEPTED_FOR_REDISTRIBUTION_NOT_YET_CANONICAL
+    status: ACCEPTED_MIGRATION_SOURCE_CLASSIFIED_NOT_SUPERSEDED
+  classification:
+    path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
+    version: 0.2.0
+    top_level_units_classified: 18
+    constitutive_propositions_classified: 49
+    total_transactions: 67
   rule: >
-    The accepted source orients witness registration but remains immutable and requires
-    proposition-level dispositions before successor activation.
+    The accepted source remains immutable. Completed classification does not certify
+    the successor, authorize deletion, or eliminate independent witness requirements.
 
 source_status_rules:
   - rule_id: WVG-WSR-001
@@ -67,6 +84,11 @@ source_status_rules:
       Ordinary citizens, believers, soldiers, workers, parents, and political actors
       must not be reduced to stupidity or moral worthlessness merely because their
       orientation rests partly on opinion.
+  - rule_id: WVG-WSR-007
+    rule: >
+      Registration as a principal, supporting, contextual, political, institutional,
+      or emergent witness records relevance and documentary burdens; it does not record
+      a completed study unless a source-specific reconstruction is explicitly cited.
 
 principal_witnesses:
   - witness_id: WVG-WIT-001
@@ -134,13 +156,29 @@ principal_witnesses:
       - Symposium
       - Laws
       - other relevant dialogues
+    registered_sources:
+      - source_id: WVG-PLATO-SRC-001
+        title: Apology of Socrates
+        source_class: INDEPENDENT_PLATONIC_DRAMATIC_AND_PHILOSOPHIC_WITNESS
+        source_status: studies/plato/apology/source-status.yaml
+        reconstruction: studies/plato/apology/philosophy-poetry-divine-authority-reconstruction.yaml
+        local_synthesis: problems/wise-vs-vulgar/synthesis/plato-apology.yaml
+        study_id: PLATO-APOLOGY-PVP-TP-001
+        study_status: COMPLETE_FOR_REGISTERED_TRANSLATION_PROVISIONAL_NOT_CERTIFIED
+        local_contribution: >
+          Reconstructs politicians, poets, artisans, accusers, jury, city, and Socrates
+          as distinct claimant and recognition problems; compares public speech with
+          represented deed; and preserves divine mission as a separate authority question.
+        limit: >
+          The registered Jowett translation requires Greek-text and alternate-translation
+          comparison. The Apology does not complete Plato or certify the historical Socrates.
     documentary_limit: >
       Socratic speech is not automatically Plato's final doctrine. Dramatic action,
       interlocutors, audience, silence, and compositional deed must be reconstructed.
     independence_rule: >
       Reconstruct Plato before allowing Strauss, Xenophon, Aristophanes, or later
       philosophical institutions to govern the result.
-    study_status: INDEPENDENT_PLATONIC_RECONSTRUCTION_REQUIRED
+    study_status: PARTIAL_INDEPENDENT_PLATONIC_RECONSTRUCTION_COMPLETE_MORE_DIALOGUES_REQUIRED
 
   - witness_id: WVG-WIT-003
     name: Xenophon
@@ -195,7 +233,7 @@ principal_witnesses:
     documentary_limit: >
       Historical Socrates, young Aristophanic Socrates, and mature Platonic-Xenophontic
       Socrates may not be silently identified or separated.
-    study_status: COMPARATIVE_WITNESS_RECONSTRUCTION_REQUIRED
+    study_status: COMPARATIVE_WITNESS_RECONSTRUCTION_REQUIRED_AFTER_INDEPENDENT_CHANNELS
 
   - witness_id: WVG-WIT-006
     name: Biblical and prophetic claimants
@@ -295,6 +333,72 @@ principal_witnesses:
       corrigible, and prohibited from self-certification as wise.
     study_status: CONTINUING_GOVERNANCE_AND_EMPIRICAL_EVALUATION_REQUIRED
 
+supporting_witnesses:
+  - witness_id: WVG-SUP-001
+    name: Thucydides
+    witness_class: INDEPENDENT_CLASSICAL_HISTORICAL_AND_POLITICAL_WITNESS
+    local_role: >
+      Presents understanding as a historical and literary deed that may preserve
+      political life, expose judgment under necessity, and remain distinct from direct rule.
+    documentary_limit: >
+      Narrative arrangement, speeches, silence, outcome, and authorial distance require
+      independent reconstruction. Historical insight does not certify political wisdom simply.
+    study_status: INDEPENDENT_THUCYDIDEAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-SUP-002
+    name: Alfarabi
+    alternate_name: Farabi
+    witness_class: INDEPENDENT_MEDIEVAL_PHILOSOPHIC_AND_POLITICAL_WITNESS
+    local_role: >
+      Examines philosophy, prophecy, legislation, religion, political order, and
+      differentiated instruction as distinct but related authorities and activities.
+    documentary_limit: >
+      Strauss's presentation does not replace independent reconstruction of Alfarabi's texts.
+    study_status: INDEPENDENT_ALFARABIAN_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-SUP-003
+    name: Averroes
+    witness_class: INDEPENDENT_MEDIEVAL_PHILOSOPHIC_JURISPRUDENTIAL_WITNESS
+    local_role: >
+      Makes explicit the question whether philosophic inquiry is forbidden, permitted,
+      or commanded under revealed law and how differentiated demonstrations and audiences are ranked.
+    documentary_limit: >
+      Legal authorization, philosophic demonstration, theological dialectic, and
+      revelatory truth must not be conflated.
+    study_status: INDEPENDENT_AVERROIST_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-SUP-004
+    name: Gotthold Ephraim Lessing
+    witness_class: INDEPENDENT_MODERN_PHILOSOPHIC_AND_SCHOLARLY_WITNESS
+    local_role: >
+      Tests the possible unity of philosopher and scholar, recovery of exoteric writing,
+      and the relation between an interpreted mode of writing and its literary practice.
+    documentary_limit: >
+      Scholarly recovery, indirect writing, and influence do not certify philosophic rank.
+    study_status: INDEPENDENT_LESSING_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-SUP-005
+    name: Friedrich Schleiermacher
+    witness_class: INDEPENDENT_MODERN_HERMENEUTIC_AND_SCHOLARLY_WITNESS
+    local_role: >
+      Represents exceptional scholarly and hermeneutic subtlety whose methods must be
+      tested against conversion, philosophic vocation, dramatic form, and differences in kind.
+    documentary_limit: >
+      Methodological refinement and scholarly comprehensiveness do not automatically
+      establish philosophic understanding of an author's governing question.
+    study_status: INDEPENDENT_SCHLEIERMACHER_RECONSTRUCTION_REQUIRED
+
+  - witness_id: WVG-SUP-006
+    name: Martin Heidegger
+    witness_class: INDEPENDENT_MODERN_PHILOSOPHIC_AND_POLITICAL_CLAIMANT
+    local_role: >
+      Tests the difference among intellectual greatness, originality, philosophic depth,
+      self-knowledge, practical wisdom, political judgment, and responsibility.
+    documentary_limit: >
+      Greatness, influence, resoluteness, or historical importance does not certify wisdom
+      or excuse political and moral failure.
+    study_status: INDEPENDENT_HEIDEGGER_RECONSTRUCTION_REQUIRED
+
 contextual_and_editorial_witnesses:
   - witness_id: WVG-CXT-001
     name: Thomas L. Pangle
@@ -322,6 +426,9 @@ witness_relation_rules:
   no_capture_rule: >
     Control of evidence, credentials, interpretation, admission, secrecy, or repository
     access must not immunize a claimant from correction.
+  partial_completion_rule: >
+    Completion of one work, translation, claimant domain, or source study does not
+    certify the witness as a whole or authorize premature comparative synthesis.
   jurisdiction_rule: >
     Substantive poetic rivalry remains Philosophy vs. Poetry; practical rule remains
     Theory vs. Practice; revelation remains Theologico-Political; comprehensive ways
@@ -341,51 +448,61 @@ source_specific_study_index:
       source: Socrates and Aristophanes
       path: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
       local_status: COFOUNDATIONAL_RELEVANCE_COMPLETE_NOT_CERTIFIED
+    - study_id: PLATO-APOLOGY-PVP-TP-001
+      witness: Plato
+      source: Apology of Socrates
+      path: studies/plato/apology/philosophy-poetry-divine-authority-reconstruction.yaml
+      local_synthesis: problems/wise-vs-vulgar/synthesis/plato-apology.yaml
+      completion: COMPLETE_FOR_REGISTERED_TRANSLATION
+      certification: NOT_CERTIFIED
   accepted_predecessor:
     - identifier: WVG-RECONSTRUCTION-0.2
       path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
-      status: ACCEPTED_FOR_REDISTRIBUTION_NOT_YET_CANONICAL
+      status: ACCEPTED_MIGRATION_SOURCE_CLASSIFIED_NOT_SUPERSEDED
   pending:
-    - proposition-level redistribution of accepted predecessor material
-    - complete Strauss source-specific reconstruction
-    - independent Plato reconstruction
+    - complete Strauss source-specific reconstruction beyond registered completed studies
+    - independent Plato reconstruction beyond the Apology
+    - Greek-text and alternate-translation review of the Apology
     - independent Xenophon reconstruction
     - independent Aristophanes reconstruction
-    - comparative Socrates reconstruction
+    - comparative Socrates reconstruction after independent channels
     - independent Biblical and prophetic reconstruction
-    - independent Maimonides reconstruction
-    - independent Machiavelli reconstruction
-    - independent Nietzsche reconstruction
+    - independent Maimonides, Alfarabi, and Averroes reconstruction
+    - independent Machiavelli and Nietzsche reconstruction
+    - independent Thucydides, Lessing, Schleiermacher, and Heidegger reconstruction
     - political, scholarly, expert, institutional, and AI case studies
 
 migration_safeguards:
   migration_status:
-    lifecycle: CLASSIFICATION_AND_REDISTRIBUTION_PENDING
+    lifecycle: PROPOSITION_CLASSIFICATION_COMPLETE_WITNESS_RECONSTRUCTION_INCOMPLETE
     certification: NOT_CERTIFIED
     activation: NOT_ACTIVE
   predecessor_effect: NONE
+  accepted_source_effect: NONE
   rule: >
-    This registry is a subordinate successor record. It does not replace or classify
+    This registry is a subordinate successor record. It does not replace or modify
     predecessor material, certify any claimant, convert pending studies into evidence,
-    or authorize deletion, retrospective revision, or activation.
+    or authorize deletion, retrospective revision, migration certification, or activation.
   prohibitions:
     - no silent deletion of a witness or claimant class
     - no title, office, success, suffering, secrecy, or expertise treated as certification
     - no ordinary citizen reduced to moral worthlessness
     - no differentiated education presumed innocent or manipulative without evidence
     - no AI or repository self-certification
-    - no predecessor redistribution bypassed
-    - no certification from registry validity alone
+    - no completed single-source study converted into comprehensive witness certification
+    - no certification from registry validity or automated validation alone
 
 termination:
-  registry_state: FOUNDING_WITNESS_REGISTRY_CREATED
+  registry_state: EXPANDED_WITNESS_REGISTRY_PARTIAL_INDEPENDENT_RECONSTRUCTION_COMPLETE
   certification: NOT_CERTIFIED
   completion_conditions:
     - principal philosophical, poetic, revelatory, political, scholarly, and emergent claimants are distinct
-    - completed, accepted, and pending study states are distinguished
+    - supporting witnesses from the accepted predecessor remain visible
+    - completed, accepted, partial, and pending study states are distinguished
     - title, office, persecution, success, and secrecy cannot certify wisdom
     - ordinary decency and human heterogeneity remain jointly visible
-    - predecessor redistribution remains explicit
+    - completed classification remains explicit without claiming activation
   current_limit: >
-    Structural witness registration is complete for founding production. Proposition-level
-    redistribution and independent witness reconstruction remain pending.
+    Founding structural registration and one independent Platonic work reconstruction
+    are complete. The Platonic corpus, other principal and supporting witnesses,
+    comparative Socrates reconstruction, and migration certification remain incomplete.

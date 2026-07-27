@@ -4,7 +4,7 @@ registry_type: foundational_problem_registry
 identity:
   canonical_key: foundational-problem-registry
   title: Foundational Problem Registry
-  version: 1.6.0
+  version: 1.7.0
 
 status:
   lifecycle: FOUNDING_DRAFT
@@ -12,12 +12,12 @@ status:
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
 revision_history:
-  predecessor_version: 1.5.0
-  predecessor_blob_sha: 1b16996749e64bf3bec0812885f84b828d52a0be
+  predecessor_version: 1.6.0
+  predecessor_blob_sha: 0fa856273aaf220068303800d80c399803f44704
   reason: >
-    Register the normalized proposition-level classification and substantial
-    implementation of accepted Wise vs. Vulgar material while preserving automated
-    validation, duplicate-doctrine review, and migration certification as blockers.
+    Register the expanded Wise vs. Vulgar witness registry and the completed
+    independent Plato Apology source synthesis while preserving the incompleteness of
+    the remaining witness corpus, migration certification, and activation.
 
 authority:
   purpose: >
@@ -160,6 +160,7 @@ canonical_problems:
       relations: problems/wise-vs-vulgar/relations.yaml
       synthesis_directory: problems/wise-vs-vulgar/synthesis/
       founding_source_bridge: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+      plato_apology_synthesis: problems/wise-vs-vulgar/synthesis/plato-apology.yaml
       migration_transactions: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
     classification_coverage:
       accepted_top_level_units: 18
@@ -167,11 +168,20 @@ canonical_problems:
       constitutive_propositions: 49
       constitutive_propositions_classified: 49
       rejected_with_reason: 0
+    witness_reconstruction:
+      registry_version: 0.2.0
+      completed_independent_works: 1
+      completed_work_ids:
+        - PLATO-APOLOGY-PVP-TP-001
+      supporting_witness_lines_registered: 6
+      completion_limit: >
+        One independent Platonic work does not complete Plato, Socrates, or the
+        wider principal and supporting witness corpus.
     jurisdiction: >
       The recognition of wisdom, the distinction among genuine and counterfeit
       claimants to superior understanding, human heterogeneity, differentiated
       education, audience, mediation, and the political responsibility of philosophy.
-    migration_status: PROPOSITION_CLASSIFICATION_COMPLETE_IMPLEMENTATION_SUBSTANTIAL_VALIDATION_PENDING_NOT_CERTIFIED
+    migration_status: PROPOSITION_CLASSIFICATION_AND_INITIAL_WITNESS_EXPANSION_COMPLETE_VALIDATION_PENDING_NOT_CERTIFIED
 
   - canonical_key: ancients-vs-moderns
     canonical_order: 7
@@ -201,4 +211,5 @@ reference_rule: >
 activation_rule: >
   A successor problem becomes active only after its predecessor is preserved,
   displaced material is classified, references validate, and the migration is
-  certified. Classification and founding-structure completion do not authorize activation.
+  certified. Classification, witness registration, and founding-structure completion
+  do not authorize activation.

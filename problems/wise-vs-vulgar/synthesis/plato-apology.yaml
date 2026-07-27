@@ -1,0 +1,189 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: WVG-PLATO-APOLOGY-001
+  problem: wise-vs-vulgar
+  source_study: PLATO-APOLOGY-PVP-TP-001
+  title: The Wise vs. The Vulgar — Plato's Apology
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SOURCE_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_CERTIFICATION
+
+source:
+  reconstruction: studies/plato/apology/philosophy-poetry-divine-authority-reconstruction.yaml
+  source_status: studies/plato/apology/source-status.yaml
+  author: Plato
+  work: Apology of Socrates
+  registered_translation: Benjamin Jowett
+  translation_limit: >
+    Findings remain revisable through Greek-text and alternate-translation comparison.
+    Jowett's introduction is excluded from primary evidence.
+  independence_status: >
+    Plato was reconstructed without treating Strauss, Aristophanes, Xenophon, Jowett,
+    Pangle, the historical Socrates, or the completed Socrates and Aristophanes
+    synthesis as governing Plato's meaning.
+
+local_question: >
+  What does Plato's public representation of Socrates establish and leave unresolved
+  concerning the recognition of wisdom, counterfeit claimants, political judgment,
+  education, divine mission, and the authority of the city?
+
+principal_findings:
+  - finding_id: WVG-APO-001
+    classification: DOCUMENTED_OR_EXPLICIT_AS_SOCRATIC_CLAIM
+    proposition: >
+      Socratic superiority is presented as awareness of ignorance rather than
+      possession of the comprehensive knowledge claimed by politicians, poets, or artisans.
+    recognition_effect: >
+      Reputation, poetic achievement, technical competence, and political office are
+      exposed as domains in which real or apparent excellence may be overextended into
+      unsupported claims of general wisdom.
+
+  - finding_id: WVG-APO-002
+    classification: DOCUMENTED_OR_EXPLICIT_WITH_PLATONIC_REPRESENTATION_LIMIT
+    proposition: >
+      Politicians, poets, and artisans are tested as distinct claimant classes rather
+      than treated as a single vulgar opposition to philosophy.
+    recognition_effect: >
+      The inquiry must distinguish absence of knowledge, inspired production, genuine
+      technical knowledge, reputation, and overextension rather than ranking claimants
+      through title alone.
+
+  - finding_id: WVG-APO-003
+    classification: DOCUMENTED_OR_EXPLICIT
+    proposition: >
+      The old poetic accusation forms the political audience before the formal legal
+      trial and cannot be answered solely by cross-examining a named accuser.
+    recognition_effect: >
+      Public recognition of philosophy is mediated by childhood education, theatre,
+      memory, inherited images, and diffuse opinion rather than neutral examination.
+
+  - finding_id: WVG-APO-004
+    classification: DOCUMENTED_OR_EXPLICIT
+    proposition: >
+      Meletus identifies laws, judges, senators, assembly, and the city generally as
+      educators while failing to identify a differentiated account of who improves youth.
+    recognition_effect: >
+      Political society possesses educative authority without thereby demonstrating
+      knowledge sufficient to identify the best educator or the unique corrupter.
+
+  - finding_id: WVG-APO-005
+    classification: SPEECH_AND_DEED_FINDING
+    proposition: >
+      Socrates supports his public claims through represented deeds under democracy and
+      oligarchy, including resistance to an unlawful collective trial and refusal to
+      arrest Leon.
+    recognition_effect: >
+      Claimant evaluation must compare speech with conduct under danger, while preserving
+      that these deeds are known through Plato's literary representation.
+
+  - finding_id: WVG-APO-006
+    classification: DOCUMENTED_OR_EXPLICIT_AS_SOCRATIC_CLAIM
+    proposition: >
+      Socrates denies being a conventional teacher with a private doctrine and permits
+      rich and poor, young and old to listen and participate.
+    recognition_effect: >
+      Openness does not settle whether education is equally suitable for every listener,
+      while absence of fees or formal discipleship does not certify harmlessness or wisdom.
+
+  - finding_id: WVG-APO-007
+    classification: DOCUMENTED_OR_EXPLICIT_WITH_AUTHORITY_CLAIM_LIMIT
+    proposition: >
+      The Delphic oracle, divine mission, and divine sign supply authoritative claims
+      that Socrates interprets through examination rather than passive acceptance.
+    recognition_effect: >
+      Divine election, mission, or sign cannot be classified solely as philosophic
+      knowledge, political office, poetic inspiration, or self-authenticating revelation.
+    jurisdictional_routing: >
+      The substantive truth and authority of oracle, mission, and divine command remain
+      under The Theologico-Political Problem.
+
+  - finding_id: WVG-APO-008
+    classification: DOCUMENTED_OR_EXPLICIT
+    proposition: >
+      The jury condemns Socrates despite the defence's examination of accusers and
+      claimant classes.
+    recognition_effect: >
+      Political judgment is authoritative in law but does not interpret itself as a
+      reliable recognition of wisdom, corruption, piety, or philosophic rank.
+
+  - finding_id: WVG-APO-009
+    classification: SELF_RANKING_REQUIRING_TEST
+    proposition: >
+      Socrates presents his private philosophic service as conferring real benefit and
+      happiness and proposes public maintenance before accepting a fine.
+    recognition_effect: >
+      Awareness of ignorance does not remove self-ranking from examination. The claim
+      must be tested through the whole speech, represented deeds, audience, outcome, and
+      comparison with independent witnesses.
+
+  - finding_id: WVG-APO-010
+    classification: AFFIRMATIVE_NON_RESOLUTION
+    proposition: >
+      The Apology supplies evidence for a serious Socratic claimant and for the city's
+      recognition failure but does not independently certify Socrates as wise, establish
+      Plato's complete doctrine, or reconstruct the historical Socrates.
+
+claimant_matrix:
+  Socrates:
+    demonstrated_or_presented:
+      - awareness of ignorance
+      - examination of rival claimants
+      - poverty and neglect of private advantage
+      - represented resistance to unlawful commands
+      - differentiated speech to condemners and acquitters
+    not_certified:
+      - completed wisdom
+      - harmlessness of every educative effect
+      - transparent identity with Plato
+      - transparent identity with the historical Socrates
+      - complete theology or prophetic authority
+  politicians:
+    documented_issue: reputation and public authority may exceed demonstrated knowledge
+  poets:
+    documented_issue: fine production and inspiration may exceed the poet's ability to explain or generalize
+    jurisdictional_routing: substantive poetic wisdom remains Philosophy vs. Poetry
+  artisans:
+    documented_issue: genuine technical knowledge may be overextended into comprehensive wisdom
+  accusers_and_jury:
+    documented_issue: legal and political authority do not guarantee correct recognition
+  political_audience:
+    documented_issue: prior formation, memory, rhetoric, and inherited images shape judgment
+
+jurisdiction_limits:
+  - The substantive contest between poetic and philosophic wisdom remains Philosophy vs. Poetry.
+  - The truth of oracle, divine mission, sign, command, and impiety remains The Theologico-Political Problem.
+  - The movement from philosophic understanding to public defence and political action remains Theory vs. Practice.
+  - The comprehensive way of life beginning from autonomous examination remains distinct from Athens vs. Jerusalem's complete alternative.
+  - The historical transformation of philosopher, expert, and institutional recognition remains Ancients vs. Moderns.
+
+preserved_uncertainties:
+  - whether the old accusation is wholly false, partly true of an earlier Socrates, or transformed by Plato
+  - whether Socrates' public defence discloses or strategically limits his complete activity
+  - whether awareness of ignorance is sufficient evidence of superior wisdom
+  - whether the jury's failure arises from poetic formation, civic necessity, Socratic rhetoric, actual danger, or several causes
+  - how Plato's presentation compares with independent Xenophontic and Aristophanic witnesses
+  - what the oracle, divine mission, and divine sign establish concerning genuine divine authority
+
+non_absorption_rules:
+  - Recognition analysis must not replace reconstruction of Plato's dramatic and philosophic argument.
+  - The jury's error must not be treated as proof that every city is wholly irrational.
+  - Socrates' persecution must not certify his wisdom or the truth of his divine claim.
+  - Poetic formation of opinion must not reduce poetry to propaganda.
+  - Technical limitation must not become contempt for genuine craft knowledge.
+  - Awareness of ignorance must not become an automatic external certificate of wisdom.
+
+termination:
+  synthesis_state: COMPLETE_FOR_REGISTERED_APOLOGY_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  remaining_work:
+    - Greek-text and alternate-translation comparison
+    - independent reconstruction of additional Platonic dialogues
+    - independent Xenophon reconstruction
+    - independent Aristophanes reconstruction
+    - comparative Socrates reconstruction only after independent witnesses are complete
