@@ -1,14 +1,248 @@
 schema_version: 1.0
-record_type: hermeneutic_rule
-identity: {key: speaker-and-author, version: 1.0.0}
+record_type: hermeneutic_contract
+
+identity:
+  key: speaker-and-author
+  title: Speaker and Author Hermeneutic
+  version: 1.1.0
+  contract_version: STRAUSS-HERMENEUTIC-SA-1
+
+status:
+  lifecycle: OPERATIONAL_CONTRACT
+  semantic_completion: SUBSTANTIVELY_RECONSTRUCTED
+  source_specific_application: INCOMPLETE
+  certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 5624e8efe5d8b5d514848b29c0f5934d25054334
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the initial attribution summary with a complete contract governing speaker,
+    narrator, character, chorus, editor, translator, quoted authority, represented deed,
+    compositional action, and authorial attribution.
+
 source_protocols:
-  - protocols/speech-and-deed.yaml
+  - protocols/source-status.yaml
+  - protocols/evidence-classification.yaml
+  - protocols/inference-discipline.yaml
+  - protocols/uncertainty-preservation.yaml
   - protocols/audience-and-rhetoric.yaml
+  - protocols/speech-and-deed.yaml
+
+purpose: >
+  Attribute propositions and deeds to the correct documentary agent before evaluating
+  their meaning, authority, rank, or relation to the work's compositional whole.
+
 governing_question: >
-  Who speaks, to whom, under what conditions, and with what demonstrated authority?
-rules:
-  - Character, narrator, chorus, editor, translator, and author remain distinct.
-  - A speaker's statement is not automatically the author's doctrine.
-  - Attribute every proposition before evaluating it.
-  - Compare a speaker's claim with conduct, consequence, correction, and dramatic rank.
-  - Authorial teaching requires evidence from the work's compositional deed, not quotation alone.
+  Who speaks or acts, to whom, under what conditions, through which documentary layer,
+  with what demonstrated authority, and what evidence permits or forbids attribution of
+  that local speech or deed to the author?
+
+governing_rule: >
+  Character, narrator, chorus, interlocutor, editor, translator, compiler, quoted
+  authority, historical agent, and author remain distinct until evidence establishes a
+  relation. Authorial teaching is inferred from compositional deed, not quotation alone.
+
+input_contract:
+  required_fields:
+    - source_ref
+    - documentary_status
+    - documentary_layer
+    - local_statement_or_deed
+    - local_agent
+    - represented_role
+    - immediate_audience
+    - wider_audience
+    - occasion
+    - local_function
+    - authorial_distance_evidence
+    - correction_or_consequence
+    - structural_relation
+    - alternatives_considered
+  source_ref_required_fields:
+    - ref
+    - commit
+    - location
+  agent_classes:
+    - author
+    - narrator
+    - dramatic_character
+    - interlocutor
+    - chorus
+    - quoted_authority
+    - historical_agent
+    - editor
+    - compiler
+    - translator
+    - reviewer
+    - institutional_voice
+    - anonymous_reporter
+    - disputed_agent
+  documentary_layers:
+    - author_published_text
+    - manuscript
+    - transcript
+    - edited_collection
+    - posthumous_collection
+    - translation
+    - reported_speech
+    - dramatic_representation
+    - historical_narrative
+    - secondary_interpretation
+    - composite_or_disputed
+
+application_sequence:
+  - step_id: SA-STEP-001
+    operation: classify source and documentary layer
+  - step_id: SA-STEP-002
+    operation: identify the exact local speaker or acting agent
+  - step_id: SA-STEP-003
+    operation: identify immediate audience, wider audience, occasion, and local end
+  - step_id: SA-STEP-004
+    operation: distinguish spoken proposition from represented action and outcome
+  - step_id: SA-STEP-005
+    operation: identify narrator, editor, translator, compiler, or reporter mediation
+  - step_id: SA-STEP-006
+    operation: test whether the work corrects, undermines, confirms, or leaves the local agent unjudged
+  - step_id: SA-STEP-007
+    operation: examine title, placement, repetition, omission, dramatic consequence, and ending
+  - step_id: SA-STEP-008
+    operation: compare related presentations without forcing identity of speaker or doctrine
+  - step_id: SA-STEP-009
+    operation: state the narrowest supported author relation
+  - step_id: SA-STEP-010
+    operation: preserve disputed or layered attribution where evidence remains incomplete
+
+attribution_relations:
+  - DIRECT_AUTHORIAL_STATEMENT
+  - AUTHORIAL_PREFACE_OR_SIGNATURE
+  - AUTHORIAL_REPORT_OF_OTHER
+  - NARRATOR_STATEMENT_NOT_YET_AUTHORIAL
+  - CHARACTER_STATEMENT_NOT_YET_AUTHORIAL
+  - CHARACTER_DEED_QUALIFIES_CHARACTER_SPEECH
+  - COMPOSITIONAL_DEED_SUPPORTS_AUTHORIAL_QUALIFICATION
+  - COMPOSITIONAL_DEED_SUPPORTS_LIMITED_AUTHORIAL_ENDORSEMENT
+  - COMPOSITIONAL_DEED_WITHHOLDS_AUTHORIAL_ENDORSEMENT
+  - EDITORIAL_LAYER_CONTROLS_ATTRIBUTION
+  - TRANSLATION_LAYER_LIMITS_WORDING_INFERENCE
+  - REPORTED_SPEECH_LIMITS_HISTORICAL_ATTRIBUTION
+  - MULTIPLE_AGENT_ATTRIBUTION
+  - AUTHORIAL_RELATION_UNRESOLVED
+
+required_evidence:
+  - exact statement or bounded deed
+  - identified agent and represented role
+  - immediate and wider audience
+  - occasion and local purpose
+  - documentary layer and mediation
+  - correction, response, outcome, or silence where relevant
+  - structural placement and ending relation
+  - comparison with alternate presentations where used
+  - alternatives considered
+
+compositional_deed_tests:
+  - Does the work grant the speaker success, failure, correction, ridicule, silence, or transformation?
+  - Does another speaker expose a limitation without being certified as superior?
+  - Does arrangement place the statement as opening, provisional claim, objection, correction, or ending?
+  - Does the author repeatedly stage the claim under different audiences or consequences?
+  - Does the work preserve contradiction rather than resolve it?
+  - Does the title or ending qualify the local speaker's self-understanding?
+  - Is the apparent authorial act actually editorial, translational, or posthumous?
+
+historical_attribution_rules:
+  - Reported speech is evidence of the reporter's presentation before it is evidence of verbatim historical speech.
+  - A transcript may preserve speech while remaining subject to transcription, editing, and occasion limits.
+  - A later self-account may be primary for voice and secondary about earlier acts.
+  - A posthumous editor's arrangement is not automatically the author's compositional deed.
+  - A translator's wording cannot bear a decisive interpretive burden without source-language review where the distinction depends on wording.
+
+valid_outputs:
+  - LOCAL_AGENT_SECURELY_IDENTIFIED
+  - DIRECT_AUTHORIAL_ATTRIBUTION_SUPPORTED
+  - LIMITED_AUTHORIAL_ENDORSEMENT_SUPPORTED
+  - AUTHORIAL_QUALIFICATION_SUPPORTED_BY_COMPOSITION
+  - AUTHORIAL_DISTANCE_SUPPORTED
+  - CHARACTER_OR_NARRATOR_ONLY
+  - EDITORIAL_LAYER_CONTROLS_ATTRIBUTION
+  - TRANSLATION_LIMIT_RECORDED
+  - REPORTED_SPEECH_LIMIT_RECORDED
+  - MULTIPLE_AGENT_RELATION_PRESERVED
+  - AUTHORIAL_RELATION_UNRESOLVED
+
+required_output_fields:
+  - classification
+  - local_agent
+  - represented_role
+  - statement_or_deed
+  - audience
+  - occasion
+  - documentary_layer
+  - mediation
+  - local_function
+  - correction_or_consequence
+  - compositional_relation
+  - authorial_relation
+  - evidence
+  - alternatives_considered
+  - confidence
+  - remaining_uncertainty
+
+prohibited_outputs:
+  - character statement automatically assigned to author
+  - narrator automatically equated with author
+  - chorus judgment treated as final authorial doctrine
+  - editor or translator choice assigned to author without evidence
+  - historical reported speech treated as verbatim by default
+  - local success treated as authorial endorsement
+  - local defeat treated as complete authorial refutation
+  - quoted authority treated as governing authorial belief
+  - self-description treated as demonstrated rank
+  - composite documentary layers silently harmonized
+
+uncertainty_rules:
+  - Authorial distance may be supported without determinate authorial doctrine.
+  - Compositional qualification may be established while final endorsement remains unresolved.
+  - Multiple agents may jointly determine meaning without collapsing into one voice.
+  - Translation or editorial limits may require a bounded conclusion rather than attribution.
+  - Historical Socrates, Platonic Socrates, Xenophontic Socrates, and Aristophanic Socrates must not be silently identified or separated.
+
+speech_mechanism_integration:
+  contract: speech/speech-mechanism.yaml
+  rule: >
+    Every candidate proposition must retain its agent, documentary layer, and authorial
+    relation. The speech mechanism may not express a character's or editor's statement
+    as the author's doctrine unless the compositional-evidence burden is met.
+
+termination_rule: >
+  A speaker-and-author inquiry is complete only when local agent, represented role,
+  audiences, occasion, documentary layer, mediation, statement or deed, correction or
+  consequence, structural relation, compositional evidence, authorial relation,
+  alternatives, confidence, and uncertainty are explicit.
+
+behavioral_tests:
+  - id: SA-TEST-001
+    behavior: a character statement remains distinct from authorial doctrine
+  - id: SA-TEST-002
+    behavior: compositional consequence may support qualification without opposite doctrine
+  - id: SA-TEST-003
+    behavior: narrator and author are not equated automatically
+  - id: SA-TEST-004
+    behavior: chorus or quoted authority does not become final authorial judgment by title alone
+  - id: SA-TEST-005
+    behavior: editorial arrangement cannot be assigned to the author without provenance
+  - id: SA-TEST-006
+    behavior: translation limits are preserved when wording carries interpretive weight
+  - id: SA-TEST-007
+    behavior: reported speech remains mediated historical evidence
+  - id: SA-TEST-008
+    behavior: local dramatic success does not certify authorial endorsement
+  - id: SA-TEST-009
+    behavior: multiple-agent attribution may remain affirmative and unresolved
+  - id: SA-TEST-010
+    behavior: authorial distance can be established without inventing authorial doctrine
+
+self_limitation: >
+  This hermeneutic governs attribution. It does not guarantee recovery of authorial
+  intention, certify the author or speaker as wise, or convert compositional complexity
+  into unrestricted permission to invent hidden teaching.
