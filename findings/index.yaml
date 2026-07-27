@@ -4,7 +4,7 @@ record_type: typed_findings_registry
 identity:
   id: STRAUSS-FINDINGS-INDEX-001
   title: Strauss Repository Typed Findings Registry
-  version: 1.2.0
+  version: 1.3.0
 
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
@@ -14,16 +14,15 @@ status:
   authority: DISCOVERY_PROVENANCE_JURISDICTION_AND_REVISION_ONLY
 
 revision_history:
-  predecessor_version: 1.1.0
-  predecessor_blob_sha: 86a99e81f6d62be21ef803e0b6561fab56c0c154
+  predecessor_version: 1.2.0
+  predecessor_blob_sha: fef69878269e79d56d95b309a90fb67cef2b2ceb
   transformation: SUBSTANTIVE_FORWARD_REVISION
   reason: >
-    Register COHEN-STUDY-001 as a source-specific finding set and register its
-    distinct Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns
-    problem-local synthesis bridges. Preserve source-level classifications, derivation,
-    jurisdiction, uncertainty, original-edition limits, nonduplication, noncertification,
-    and predecessor authority. Index direct and aggregate records that bind CORPUS-SRC-105
-    while retaining the legacy nineteen-source predecessor bundle index.
+    Register TALMON-STUDY-001 as a source-specific finding set and register its distinct
+    Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns problem-local
+    synthesis bridges. Preserve the item's qualification of the active predecessor's progress
+    characterization, source-level classifications, review-target distinction, jurisdiction,
+    uncertainty, original-edition limits, nonduplication, noncertification, and predecessor authority.
 
 purpose: >
   Provide deterministic discovery and loading of current findings-bearing records by
@@ -96,6 +95,20 @@ finding_sets:
     original_edition_comparison: PENDING
     independent_corroboration: INCOMPLETE
     derived_local_syntheses: [FINDSET-113, FINDSET-114, FINDSET-115]
+  - finding_set_id: FINDSET-010
+    path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
+    record_class: SOURCE_SPECIFIC_STUDY
+    record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+    source_bindings: [CORPUS-SRC-111]
+    problem_bindings: [theologico-political, athens-vs-jerusalem, ancients-vs-moderns]
+    secondary_problem_intersections: [nomos-vs-physis, theory-vs-practice]
+    boundary_problem_reference: philosophy-vs-poetry
+    status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1983_COLLECTED_WITNESS
+    certification: NOT_CERTIFIED
+    original_edition_comparison: PENDING
+    reviewed_work_reconstruction: INCOMPLETE
+    independent_corroboration: INCOMPLETE
+    derived_local_syntheses: [FINDSET-116, FINDSET-117, FINDSET-118]
 
   - {finding_set_id: FINDSET-101, path: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-002], problem_bindings: [nomos-vs-physis], derived_from: [FINDSET-003], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED}
   - {finding_set_id: FINDSET-102, path: problems/philosophy-vs-poetry/synthesis/socrates-and-aristophanes.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-001], problem_bindings: [philosophy-vs-poetry], brother_problem_reference: theologico-political, derived_from: [FINDSET-001], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED}
@@ -128,42 +141,12 @@ finding_sets:
   - {finding_set_id: FINDSET-110, path: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-002], problem_bindings: [ancients-vs-moderns], derived_from: [FINDSET-003], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED}
   - {finding_set_id: FINDSET-111, path: problems/theologico-political/synthesis/jerusalem-and-athens.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-109], problem_bindings: [theologico-political], brother_problem_reference: philosophy-vs-poetry, adjacent_problem_reference: athens-vs-jerusalem, derived_from: [FINDSET-008], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED, successor_effect: NONE}
   - {finding_set_id: FINDSET-112, path: problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-109], problem_bindings: [athens-vs-jerusalem], theologico_political_reference: theologico-political, derived_from: [FINDSET-008], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED, successor_effect: NONE}
-  - finding_set_id: FINDSET-113
-    path: problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml
-    record_class: PROBLEM_LOCAL_SYNTHESIS
-    record_role: SOURCE_TO_PROBLEM_SYNTHESIS
-    source_bindings: [CORPUS-SRC-105]
-    problem_bindings: [theologico-political]
-    brother_problem_reference: philosophy-vs-poetry
-    adjacent_problem_references: [athens-vs-jerusalem, ancients-vs-moderns]
-    derived_from: [FINDSET-009]
-    status: PROVISIONAL_NOT_CERTIFIED
-    certification: NOT_CERTIFIED
-    successor_effect: NONE
-  - finding_set_id: FINDSET-114
-    path: problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml
-    record_class: PROBLEM_LOCAL_SYNTHESIS
-    record_role: SOURCE_TO_PROBLEM_SYNTHESIS
-    source_bindings: [CORPUS-SRC-105]
-    problem_bindings: [athens-vs-jerusalem]
-    theologico_political_reference: theologico-political
-    ancients_moderns_reference: ancients-vs-moderns
-    derived_from: [FINDSET-009]
-    status: PROVISIONAL_NOT_CERTIFIED
-    certification: NOT_CERTIFIED
-    successor_effect: NONE
-  - finding_set_id: FINDSET-115
-    path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml
-    record_class: PROBLEM_LOCAL_SYNTHESIS
-    record_role: SOURCE_TO_PROBLEM_SYNTHESIS
-    source_bindings: [CORPUS-SRC-105]
-    problem_bindings: [ancients-vs-moderns]
-    theologico_political_reference: theologico-political
-    athens_jerusalem_reference: athens-vs-jerusalem
-    derived_from: [FINDSET-009]
-    status: PROVISIONAL_NOT_CERTIFIED
-    certification: NOT_CERTIFIED
-    successor_effect: NONE
+  - {finding_set_id: FINDSET-113, path: problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-105], problem_bindings: [theologico-political], brother_problem_reference: philosophy-vs-poetry, adjacent_problem_references: [athens-vs-jerusalem, ancients-vs-moderns], derived_from: [FINDSET-009], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - {finding_set_id: FINDSET-114, path: problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-105], problem_bindings: [athens-vs-jerusalem], theologico_political_reference: theologico-political, ancients_moderns_reference: ancients-vs-moderns, derived_from: [FINDSET-009], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - {finding_set_id: FINDSET-115, path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-105], problem_bindings: [ancients-vs-moderns], theologico_political_reference: theologico-political, athens_jerusalem_reference: athens-vs-jerusalem, derived_from: [FINDSET-009], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - {finding_set_id: FINDSET-116, path: problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-111], problem_bindings: [theologico-political], adjacent_problem_references: [athens-vs-jerusalem, ancients-vs-moderns], derived_from: [FINDSET-010], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - {finding_set_id: FINDSET-117, path: problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-111], problem_bindings: [athens-vs-jerusalem], theologico_political_reference: theologico-political, ancients_moderns_reference: ancients-vs-moderns, derived_from: [FINDSET-010], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - {finding_set_id: FINDSET-118, path: problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml, record_class: PROBLEM_LOCAL_SYNTHESIS, record_role: SOURCE_TO_PROBLEM_SYNTHESIS, source_bindings: [CORPUS-SRC-111], problem_bindings: [ancients-vs-moderns], theologico_political_reference: theologico-political, athens_jerusalem_reference: athens-vs-jerusalem, derived_from: [FINDSET-010], status: PROVISIONAL_NOT_CERTIFIED, certification: NOT_CERTIFIED, successor_effect: NONE}
 
   - {finding_set_id: FINDSET-201, path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml, record_class: MIGRATION_TRANSACTION_LEDGER, record_role: ACCEPTED_SOURCE_PROPOSITION_CLASSIFICATION, source_bindings: [], repository_artifact_bindings: [FINDSET-302], problem_bindings: [wise-vs-vulgar], status: CLASSIFICATION_COMPLETE_NOT_CERTIFIED_NOT_ACTIVATED, certification: NOT_CERTIFIED}
   - {finding_set_id: FINDSET-202, path: migrations/foundational-problems-v2/transactions/theologico-political-sppp-study-001.yaml, record_class: MIGRATION_TRANSACTION_LEDGER, record_role: SOURCE_STUDY_TO_SUCCESSOR_CLASSIFICATION, source_bindings: [CORPUS-SRC-002], problem_bindings: [theologico-political], derived_from: [FINDSET-004, FINDSET-106], status: CLASSIFIED_NOT_CERTIFIED_NOT_ACTIVATED, certification: NOT_CERTIFIED}
@@ -204,32 +187,33 @@ indexes:
     nomos-vs-physis: [FINDSET-002, FINDSET-003, FINDSET-005, FINDSET-006, FINDSET-101]
     philosophy-vs-poetry: [FINDSET-001, FINDSET-002, FINDSET-003, FINDSET-005, FINDSET-006, FINDSET-007, FINDSET-102, FINDSET-103]
     theory-vs-practice: [FINDSET-002, FINDSET-003, FINDSET-005, FINDSET-006, FINDSET-104]
-    theologico-political: [FINDSET-001, FINDSET-002, FINDSET-003, FINDSET-004, FINDSET-005, FINDSET-006, FINDSET-007, FINDSET-008, FINDSET-009, FINDSET-105, FINDSET-106, FINDSET-111, FINDSET-113, FINDSET-202, FINDSET-203, FINDSET-301]
-    athens-vs-jerusalem: [FINDSET-002, FINDSET-003, FINDSET-005, FINDSET-006, FINDSET-008, FINDSET-009, FINDSET-107, FINDSET-112, FINDSET-114]
+    theologico-political: [FINDSET-001, FINDSET-002, FINDSET-003, FINDSET-004, FINDSET-005, FINDSET-006, FINDSET-007, FINDSET-008, FINDSET-009, FINDSET-010, FINDSET-105, FINDSET-106, FINDSET-111, FINDSET-113, FINDSET-116, FINDSET-202, FINDSET-203, FINDSET-301]
+    athens-vs-jerusalem: [FINDSET-002, FINDSET-003, FINDSET-005, FINDSET-006, FINDSET-008, FINDSET-009, FINDSET-010, FINDSET-107, FINDSET-112, FINDSET-114, FINDSET-117]
     wise-vs-vulgar: [FINDSET-002, FINDSET-003, FINDSET-005, FINDSET-006, FINDSET-007, FINDSET-108, FINDSET-109, FINDSET-201, FINDSET-302]
-    ancients-vs-moderns: [FINDSET-002, FINDSET-003, FINDSET-005, FINDSET-006, FINDSET-009, FINDSET-110, FINDSET-115]
+    ancients-vs-moderns: [FINDSET-002, FINDSET-003, FINDSET-005, FINDSET-006, FINDSET-009, FINDSET-010, FINDSET-110, FINDSET-115, FINDSET-118]
   by_source:
     CORPUS-SRC-001: [FINDSET-001, FINDSET-102]
     CORPUS-SRC-002: [FINDSET-002, FINDSET-003, FINDSET-004, FINDSET-005, FINDSET-006, FINDSET-101, FINDSET-103, FINDSET-104, FINDSET-106, FINDSET-107, FINDSET-109, FINDSET-110, FINDSET-202]
     CORPUS-SRC-003: [FINDSET-007, FINDSET-108]
     CORPUS-SRC-105: [FINDSET-009, FINDSET-105, FINDSET-113, FINDSET-114, FINDSET-115, FINDSET-203, FINDSET-301]
+    CORPUS-SRC-111: [FINDSET-010, FINDSET-105, FINDSET-116, FINDSET-117, FINDSET-118, FINDSET-203, FINDSET-301]
     CORPUS-SRC-101-119: [FINDSET-008, FINDSET-105, FINDSET-111, FINDSET-112, FINDSET-203, FINDSET-301]
   by_record_class:
-    SOURCE_SPECIFIC_STUDY: [FINDSET-001, FINDSET-002, FINDSET-003, FINDSET-004, FINDSET-007, FINDSET-008, FINDSET-009]
+    SOURCE_SPECIFIC_STUDY: [FINDSET-001, FINDSET-002, FINDSET-003, FINDSET-004, FINDSET-007, FINDSET-008, FINDSET-009, FINDSET-010]
     INTEGRATION_GOVERNANCE_RECORD: [FINDSET-005, FINDSET-006]
-    PROBLEM_LOCAL_SYNTHESIS: [FINDSET-101, FINDSET-102, FINDSET-103, FINDSET-104, FINDSET-105, FINDSET-106, FINDSET-107, FINDSET-108, FINDSET-109, FINDSET-110, FINDSET-111, FINDSET-112, FINDSET-113, FINDSET-114, FINDSET-115]
+    PROBLEM_LOCAL_SYNTHESIS: [FINDSET-101, FINDSET-102, FINDSET-103, FINDSET-104, FINDSET-105, FINDSET-106, FINDSET-107, FINDSET-108, FINDSET-109, FINDSET-110, FINDSET-111, FINDSET-112, FINDSET-113, FINDSET-114, FINDSET-115, FINDSET-116, FINDSET-117, FINDSET-118]
     MIGRATION_TRANSACTION_LEDGER: [FINDSET-201, FINDSET-202, FINDSET-203]
     PRESERVED_FINDING_BASIS: [FINDSET-301, FINDSET-302]
 
 coverage:
-  finding_sets_registered: 29
-  source_specific_and_integration_records_registered: 9
-  problem_syntheses_registered: 15
+  finding_sets_registered: 33
+  source_specific_and_integration_records_registered: 10
+  problem_syntheses_registered: 18
   migration_transaction_ledgers_registered: 3
   preserved_finding_bases_registered: 2
-  current_problem_synthesis_tree_yaml_records_accounted_for: 15
+  current_problem_synthesis_tree_yaml_records_accounted_for: 18
   current_foundational_transaction_tree_yaml_records_accounted_for: 3
-  corpus_study_records_accounted_for: 9
+  corpus_study_records_accounted_for: 10
   canonical_problem_indexes_registered: 7
   exhaustive_within_declared_scope: true
 
@@ -259,8 +243,8 @@ preservation_rules:
 findings_gaps:
   - {gap_id: FINDINGS-GAP-001, statement: 'The registry does not yet index every proposition as a separate normalized object.', effect: PROPOSITION_LEVEL_QUERY_REQUIRES_LOADING_REFERENCED_RECORD}
   - {gap_id: FINDINGS-GAP-002, statement: 'Many registered source entities lack independent source-specific study records.', effect: FINDINGS_COVERAGE_REMAINS_SOURCE_ASYMMETRICAL}
-  - {gap_id: FINDINGS-GAP-003, statement: 'Two of the nineteen Theologico-Political writings now have complete provisional item studies; the remaining seventeen lack individual sequential studies.', effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE}
-  - {gap_id: FINDINGS-GAP-004, statement: 'Independent Aristophanes, Xenophon, biblical, medieval, Cohenian, Kantian, and most Platonic findings remain incomplete.', effect: COMPARATIVE_AND_DOCTRINAL_RANKING_BLOCKED}
+  - {gap_id: FINDINGS-GAP-003, statement: 'Three of the nineteen Theologico-Political writings now have complete provisional item studies; the remaining sixteen lack individual sequential studies.', effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE}
+  - {gap_id: FINDINGS-GAP-004, statement: 'Independent Aristophanes, Xenophon, biblical, medieval, Cohenian, Kantian, Talmonian, and most Platonic findings remain incomplete.', effect: COMPARATIVE_AND_DOCTRINAL_RANKING_BLOCKED}
   - {gap_id: FINDINGS-GAP-005, statement: 'Actual candidate ministerial reports have not yet been validated against the complete contract stack.', effect: RUNTIME_REPORT_READINESS_REMAINS_LIMITED}
   - {gap_id: FINDINGS-GAP-006, statement: 'No authorized certification record promotes the indexed findings to final doctrine or successor activation.', effect: ALL_FINDING_SETS_REMAIN_NONCERTIFYING}
 
@@ -284,7 +268,9 @@ termination:
   next_required_units:
     - compare Jerusalem and Athens with the original 1967 printing where required
     - compare the Cohen essay with the original 1972 printing where required
-    - register and reconstruct the Talmon review already locatable in the SPPP container
+    - compare the Talmon review with the original 1957 journal printing where required
+    - acquire and reconstruct Talmon's reviewed work
+    - acquire and reconstruct the remaining sixteen Strauss item witnesses
     - expand source-specific and independent witness studies
     - normalize proposition-level identifiers only where source records support reproducible extraction
     - validate actual ministerial reports against source, method, hermeneutic, problem, corpus, and speech contracts
