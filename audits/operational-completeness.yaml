@@ -4,7 +4,7 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 1.4.0
+  version: 1.5.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
@@ -13,28 +13,28 @@ status:
   repository_completion: INCOMPLETE
 
 revision_history:
-  predecessor_version: 1.3.0
-  predecessor_blob_sha: 50583195e3dc317e64941869a3676dbadc357bde
+  predecessor_version: 1.4.0
+  predecessor_blob_sha: ab2eb811a40cfcfa150b2d05ec1d361962c3cd8b
   reason: >
-    Record replacement of the reference-only corpus index with a typed registry that is
-    exhaustive for the repository's current committed source and study state. Preserve
-    the wider corpus as open, source-text admission as separate, item-level statuses and
-    independent witnesses as incomplete, and all doctrine, migration, activation, and
-    Assembly authority as unauthorized.
+    Record replacement of the reference-only findings index with a typed registry
+    exhaustive for the repository's current committed findings-record state. Preserve
+    proposition-level evidence and qualifications in their governing records, findings
+    as open and materially incomplete, and all certification, migration, activation,
+    predecessor-displacement, and Assembly authority as unauthorized.
 
 basis:
   repository: izzy9118-blip/Strauss
-  prior_validated_interface_commit: 58fb3c53885188780bb22193b8371609f77dda16
-  current_revision_scope: production/typed-corpus-registry
+  prior_validated_interface_commit: d1bcbed5a01ab6fa8615c30a3d3d2fa5cb26aee9
+  current_revision_scope: production/typed-findings-registry
   manifest: manifest.yaml
   problem_bundle_loader: problem_bundles.py
   corpus_registry_loader: corpus_registry.py
+  findings_registry_loader: findings_registry.py
   mapping_record: migrations/lean-operational-interface.yaml
   governing_rule: >
-    Exhaustive registration of the repository's present source and study state does not
-    make the corpus closed or complete. Path resolution, fingerprints, source identity,
-    study coverage, and passing tests do not certify claims, authors, witnesses, doctrine,
-    migration, successor activation, or unrestricted ministerial readiness.
+    Exhaustive registration of the repository's present findings-bearing records does
+    not establish proposition-level completion, independent corroboration, doctrinal
+    truth, migration certification, successor activation, or unrestricted ministerial readiness.
 
 classification_vocabulary:
   SUBSTANTIVELY_RECONSTRUCTED:
@@ -67,20 +67,23 @@ summary:
     - four inquiry method contracts
     - seven read-only foundational problem bundles
     - typed corpus registry exhaustive for current committed source and study state
-    - corpus identity, path, coverage, predecessor, witness, and gap validation
+    - typed findings registry exhaustive for current committed findings-record state
+    - findings path, source, problem, derivation, migration, predecessor, index, and gap validation
   remaining_major_deficiencies:
-    - findings index remains a reference-only mapping rather than an exhaustive typed registry
+    - individual propositions are not yet normalized as separate queryable objects
     - source-specific applications of method and hermeneutics remain incomplete
     - most of the nineteen Theologico-Political writings lack item-level source-status records and independent studies
     - Socrates and Aristophanes lacks a separately registered reviewed edition and fingerprint
     - direct Aristophanes, Xenophon, biblical, medieval, and most Platonic witness studies remain incomplete
+    - actual candidate ministerial reports have not been validated against the full contract stack
     - authoritative natural-language ministerial judgment remains a reasoning operation
     - doctrinal certification and successor activation remain separately unauthorized
   central_finding: >
-    The corpus seam is now operationally honest: every source identity and studies-tree
-    record presently committed is typed and accounted for, while every known absence is
-    preserved as a positive gap. Current-state exhaustiveness and corpus completeness are
-    explicitly distinct.
+    Every current studies-based finding set, problem synthesis, foundational migration
+    transaction, active predecessor basis, and accepted migration source is now typed and
+    discoverable without detaching propositions from their governing evidence, sequence,
+    uncertainty, dissent, or migration status. Current-state exhaustiveness and completed
+    doctrine remain explicitly distinct.
 
 records:
   - path: manifest.yaml
@@ -88,10 +91,10 @@ records:
     present_function:
       - canonical load order and seven-problem registration
       - honest structural, semantic, runtime, and certification states
-      - speech, hermeneutic, method, problem-bundle, and corpus registration
+      - speech, hermeneutic, method, problem-bundle, corpus, and findings registration
       - audit and Sanctum repinning rules
     remaining:
-      - completion states must advance with findings, witnesses, and source applications
+      - completion states must advance with item-level sources, witnesses, applications, and report fixtures
       - manifest does not itself perform reasoning
 
   - path: adapter.py
@@ -137,15 +140,47 @@ records:
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
       - validates unique source, witness, status, study, and gap identifiers
-      - validates all registered repository paths
-      - validates exact current studies-tree coverage
-      - validates the nineteen predecessor titles and dates against the active predecessor
-      - validates active-predecessor equality with the preserved historical copy
-      - validates the SPPP reviewed-witness fingerprint against its source-status record
+      - validates all registered repository paths and exact studies-tree coverage
+      - validates nineteen predecessor titles and dates and preserved-copy equality
+      - validates the SPPP reviewed-witness fingerprint
       - loads a read-only discovery and provenance context
     remaining:
-      - no source retrieval or source-text admission
-      - no interpretation, ranking, certification, migration, activation, or Assembly authority
+      - no source retrieval, source-text admission, interpretation, ranking, certification, or activation
+
+  - path: findings/index.yaml
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    registry_version: 1.0.0
+    completion: CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
+    present_function:
+      - 22 typed finding sets
+      - 7 source-specific and integration study records
+      - all 10 problem-local synthesis records
+      - all 3 foundational migration transaction ledgers
+      - 2 preserved finding bases
+      - exact indexes by canonical problem, source, and record class
+      - explicit derivation, migration, brother-problem, and preservation relations
+      - 6 positive findings-gap records
+      - proposition-kind and nonduplication rules
+    remaining:
+      - proposition-level normalized identifiers and evidence bindings
+      - independent studies for many registered sources and witnesses
+      - source-asymmetry repair before comparative ranking
+      - actual ministerial-report validation
+      - authorized certification and successor activation remain absent
+
+  - path: findings_registry.py
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    present_function:
+      - validates unique finding-set and gap identifiers
+      - validates exact study, synthesis, and transaction-tree coverage
+      - validates source bindings against the typed corpus registry
+      - validates problem bindings against the canonical problem registry
+      - validates derivation, migration, classification-ledger, and preserved-basis references
+      - validates declared indexes against finding-set bindings
+      - validates active-predecessor equality with its preserved historical copy
+      - supports read-only filtering by problem, source, and record class
+    remaining:
+      - no proposition promotion, independent corroboration inference, certification, migration execution, or activation
 
   - path: speech/speech-mechanism.yaml
     classification: PARTIALLY_RECONSTRUCTED
@@ -170,35 +205,29 @@ records:
       - independent witness and work reconstruction is uneven
       - proposition-level migration and successor certification remain incomplete
 
-  - path: findings/index.yaml
-    classification: MAPPED_TO_RICHER_RECORDS
-    remaining:
-      - exhaustive typed findings, evidence, revisions, dissent, and supersession relations
-      - queryable problem, source, study, and witness bindings
-
   - path: migrations/lean-operational-interface.yaml
     classification: SUBSTANTIVELY_RECONSTRUCTED
     remaining: maintain completion states and preserved mappings through later revisions
 
-  - path: tests/test_corpus_registry.py
+  - path: tests/test_findings_registry.py
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
-      - current-state corpus validation
-      - unique identifier and exact studies-tree coverage tests
-      - nineteen-source predecessor identity preservation
-      - SPPP editorial limits and Plato translation limits
-      - seven-problem witness-registry coverage
-      - read-only and non-certifying context tests
+      - current-state findings validation and unique identifier tests
+      - exact synthesis, transaction, and corpus-study coverage tests
+      - derived index validation
+      - active predecessor preservation
+      - source derivation and brother-problem jurisdiction tests
+      - filter failure and noncertification tests
     remaining:
-      - source-specific application fixtures and actual report fixtures
+      - proposition-level fixtures, source-specific applications, and actual report fixtures
 
   - path: .github/workflows/validate-lean-interface.yml
     classification: PARTIALLY_RECONSTRUCTED
     present_function:
-      - validates manifest, speech, problem bundles, typed corpus, and all interface tests
+      - validates manifest, speech, problem bundles, typed corpus, typed findings, and all interface tests
       - uploads structural and behavioral diagnostics
     remaining:
-      - typed findings and actual report-validation jobs
+      - source-specific application and actual report-validation jobs
 
 production_order:
   completed:
@@ -208,8 +237,8 @@ production_order:
     - reconstruct the four method contracts
     - register and validate complete read-only foundational problem bundles
     - replace the reference-only corpus index with a typed current-state exhaustive registry
+    - replace the reference-only findings index with a typed current-state exhaustive registry
   next:
-    - replace findings/index.yaml with a typed exhaustive current-state findings registry
     - create item-level source-status records for the nineteen Theologico-Political writings
     - register a reviewed Socrates and Aristophanes witness
     - create source-specific method and hermeneutic application fixtures
@@ -218,10 +247,11 @@ production_order:
     - repin Sanctum after each validated interface revision
 
 non_effects:
-  - This audit does not certify any doctrine, claimant, source, successor problem, or migration.
+  - This audit does not certify any doctrine, claimant, source, finding, successor problem, or migration.
   - This audit does not admit or distribute source texts.
   - This audit does not alter active predecessors or accepted migration sources.
-  - Current-state exhaustive indexing does not close or complete the corpus.
-  - Registry inclusion does not promote a provisional study or synthesis.
+  - Current-state exhaustive indexing does not close or complete the corpus or findings store.
+  - Registry inclusion does not promote a provisional study, synthesis, or proposition.
+  - Multiple records derived from one source do not constitute independent corroboration.
   - Registry loading does not authorize successor activation.
   - Later completion must proceed through forward revision with preserved provenance.
