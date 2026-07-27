@@ -64,6 +64,7 @@ jobs:
           exec(compile(script, '<pr21-synchronization>', 'exec'), {'__name__': '__main__'})
           PY
           gh api repos/izzy9118-blip/Strauss/git/blobs/5217d20dc74b1f30a921d2a69bac7878c0f9f50c --jq .content | base64 --decode > .github/workflows/validate-lean-interface.yml
+          rm -f tests/.trigger-pr21
 
       - name: Validate synchronized repository state
         run: |
