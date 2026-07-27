@@ -1,0 +1,265 @@
+name: Complete PR 21
+
+on:
+  push:
+    branches:
+      - production/talmon-reviewed-witness-reconstruction
+    paths:
+      - ".github/workflows/complete-pr21.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  synchronize-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/talmon-reviewed-witness-reconstruction
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependency
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
+
+      - name: Synchronize Talmon integration records and tests
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(path: str, old: str, new: str) -> None:
+              p = Path(path)
+              text = p.read_text(encoding="utf-8")
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f"{path}: expected one occurrence, found {count}: {old[:80]!r}")
+              p.write_text(text.replace(old, new, 1), encoding="utf-8")
+
+          def replace_many(path: str, replacements: list[tuple[str, str]]) -> None:
+              for old, new in replacements:
+                  replace_once(path, old, new)
+
+          # Findings tests: advance exact live counts and add Talmon derivation coverage.
+          replace_many("tests/test_findings_registry.py", [
+              ('registry["identity"]["version"], "1.2.0"', 'registry["identity"]["version"], "1.3.0"'),
+              ('self.assertEqual(len(finding_ids), 29)', 'self.assertEqual(len(finding_ids), 33)'),
+              ('self.assertEqual(len(registered), 15)', 'self.assertEqual(len(registered), 18)'),
+              ('self.assertEqual(len(registered), 9)', 'self.assertEqual(len(registered), 10)'),
+          ])
+          replace_once(
+              "tests/test_findings_registry.py",
+              '    def test_indexes_are_derived_from_finding_set_bindings(self) -> None:\n',
+              '''    def test_talmon_study_and_three_local_syntheses_are_explicitly_derived(self) -> None:\n        registry = findings_registry.load_registry()\n        by_id = {item["finding_set_id"]: item for item in registry["finding_sets"]}\n        study = by_id["FINDSET-010"]\n        tp = by_id["FINDSET-116"]\n        avj = by_id["FINDSET-117"]\n        avm = by_id["FINDSET-118"]\n\n        self.assertEqual(study["source_bindings"], ["CORPUS-SRC-111"])\n        self.assertEqual(\n            study["problem_bindings"],\n            ["theologico-political", "athens-vs-jerusalem", "ancients-vs-moderns"],\n        )\n        self.assertEqual(\n            study["derived_local_syntheses"],\n            ["FINDSET-116", "FINDSET-117", "FINDSET-118"],\n        )\n        self.assertEqual(study["independent_corroboration"], "INCOMPLETE")\n        self.assertEqual(study["original_edition_comparison"], "PENDING")\n        self.assertEqual(study["reviewed_work_reconstruction"], "INCOMPLETE")\n        self.assertEqual(study["certification"], "NOT_CERTIFIED")\n\n        for synthesis, expected_problem in (\n            (tp, "theologico-political"),\n            (avj, "athens-vs-jerusalem"),\n            (avm, "ancients-vs-moderns"),\n        ):\n            self.assertEqual(synthesis["source_bindings"], ["CORPUS-SRC-111"])\n            self.assertEqual(synthesis["derived_from"], ["FINDSET-010"])\n            self.assertEqual(synthesis["problem_bindings"], [expected_problem])\n            self.assertEqual(synthesis["successor_effect"], "NONE")\n            self.assertEqual(synthesis["certification"], "NOT_CERTIFIED")\n\n    def test_indexes_are_derived_from_finding_set_bindings(self) -> None:\n''',
+          )
+
+          # Cross-record consistency tests: advance from two to three completed item units.
+          replace_many("tests/test_interface_consistency.py", [
+              ('def test_nineteen_identity_two_witness_two_study_language_matches', 'def test_nineteen_identity_three_witness_three_study_language_matches'),
+              ('self.assertEqual(manifest_state["reviewed_witness_count"], 2)', 'self.assertEqual(manifest_state["reviewed_witness_count"], 3)'),
+              ('self.assertEqual(audit_state["reviewed_item_witness_count"], 2)', 'self.assertEqual(audit_state["reviewed_item_witness_count"], 3)'),
+              ('self.assertEqual(mapping_state["reviewed_witness_count"], 2)', 'self.assertEqual(mapping_state["reviewed_witness_count"], 3)'),
+              ('self.assertEqual(manifest_state["independent_sequential_study_count"], 2)', 'self.assertEqual(manifest_state["independent_sequential_study_count"], 3)'),
+              ('self.assertEqual(audit_state["independently_reconstructed_count_within_this_sequence"], 2)', 'self.assertEqual(audit_state["independently_reconstructed_count_within_this_sequence"], 3)'),
+              ('self.assertEqual(mapping_state["independent_sequential_study_count"], 2)', 'self.assertEqual(mapping_state["independent_sequential_study_count"], 3)'),
+              ('self.assertEqual(manifest_state["remaining_without_reviewed_item_witness"], 17)', 'self.assertEqual(manifest_state["remaining_without_reviewed_item_witness"], 16)'),
+              ('self.assertEqual(mapping_state["remaining_without_reviewed_witness"], 17)', 'self.assertEqual(mapping_state["remaining_without_reviewed_witness"], 16)'),
+              ('"INCOMPLETE_2_OF_19",', '"INCOMPLETE_3_OF_19",'),
+              ('def test_priority_schedule_advances_to_talmon_without_truth_ranking', 'def test_priority_schedule_advances_beyond_talmon_without_truth_ranking'),
+              ('["CORPUS-SRC-109", "CORPUS-SRC-105"]', '["CORPUS-SRC-109", "CORPUS-SRC-105", "CORPUS-SRC-111"]'),
+              ('["JA-STUDY-001", "COHEN-STUDY-001"]', '["JA-STUDY-001", "COHEN-STUDY-001", "TALMON-STUDY-001"]'),
+              ('"COMPLETE_FOR_CORPUS_WIT_105_AND_CORPUS_WIT_109",', '"COMPLETE_FOR_CORPUS_WIT_105_CORPUS_WIT_109_AND_CORPUS_WIT_111",'),
+              ('"COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_AND_JA_STUDY_001",', '"COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_JA_STUDY_001_AND_TALMON_STUDY_001",'),
+              ('self.assertEqual(schedule["termination"]["next_item_witness"], "CORPUS-SRC-111")', 'self.assertEqual(schedule["termination"]["next_item_witness"], "CORPUS-SRC-102")'),
+          ])
+          replace_once(
+              "tests/test_interface_consistency.py",
+              '        for finding_id in ("FINDSET-113", "FINDSET-114", "FINDSET-115"):\n            self.assertEqual(by_id[finding_id]["successor_effect"], "NONE")\n            self.assertEqual(by_id[finding_id]["derived_from"], ["FINDSET-009"])\n',
+              '''        for finding_id in ("FINDSET-113", "FINDSET-114", "FINDSET-115"):\n            self.assertEqual(by_id[finding_id]["successor_effect"], "NONE")\n            self.assertEqual(by_id[finding_id]["derived_from"], ["FINDSET-009"])\n\n        self.assertEqual(\n            by_id["FINDSET-010"]["derived_local_syntheses"],\n            ["FINDSET-116", "FINDSET-117", "FINDSET-118"],\n        )\n        self.assertEqual(by_id["FINDSET-116"]["problem_bindings"], ["theologico-political"])\n        self.assertEqual(by_id["FINDSET-117"]["problem_bindings"], ["athens-vs-jerusalem"])\n        self.assertEqual(by_id["FINDSET-118"]["problem_bindings"], ["ancients-vs-moderns"])\n        for finding_id in ("FINDSET-116", "FINDSET-117", "FINDSET-118"):\n            self.assertEqual(by_id[finding_id]["successor_effect"], "NONE")\n            self.assertEqual(by_id[finding_id]["derived_from"], ["FINDSET-010"])\n''',
+          )
+
+          # Manifest forward revision.
+          replace_many("manifest.yaml", [
+              ('  version: 1.3.0\n', '  version: 1.4.0\n'),
+              ('  predecessor_version: 1.2.0\n  predecessor_blob_sha: 38a730f5abff4066869badd13cd1ddef076ec4f3\n', '  predecessor_version: 1.3.0\n  predecessor_blob_sha: 2f196ff5564adbe1390cd1dcff1acbf27d1a73a2\n'),
+              ('''  reason: >\n    Register CORPUS-WIT-105, COHEN-STUDY-001, CORPUS-STUDY-009, FINDSET-009,\n    and three jurisdiction-preserving problem-local syntheses. Synchronize corpus registry\n    v1.7.0 and findings registry v1.2.0 while preserving the original 1972 edition gap,\n    seventeen missing Theologico-Political item witnesses and studies, independent-witness\n    gaps, predecessor authority, noncertification, nonactivation, and the Sanctum repin block.\n''', '''  reason: >\n    Register CORPUS-WIT-111, TALMON-STUDY-001, CORPUS-STUDY-010, FINDSET-010,\n    and three jurisdiction-preserving problem-local syntheses. Synchronize corpus registry\n    v1.8.0 and findings registry v1.3.0 while preserving the original 1957 edition gap,\n    Talmon-work reconstruction gap, sixteen missing Theologico-Political item witnesses and\n    studies, predecessor authority, noncertification, nonactivation, and the Sanctum repin block.\n'''),
+              ('  version: 2.1.0\n', '  version: 2.2.0\n'),
+              ('SPPP_SA_PLATO_APOLOGY_JERUSALEM_ATHENS_AND_COHEN_ITEM_REGISTERED_WITH_RECORDED_LIMITS', 'SPPP_SA_PLATO_APOLOGY_JERUSALEM_ATHENS_COHEN_AND_TALMON_ITEMS_REGISTERED_WITH_RECORDED_LIMITS'),
+              ('19_OF_19_IDENTITIES_2_OF_19_REVIEWED_ITEM_WITNESSES_2_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES', '19_OF_19_IDENTITIES_3_OF_19_REVIEWED_ITEM_WITNESSES_3_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES'),
+              ('SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_JA_AND_COHEN_SOURCE_STUDY_CONTRACTS_REQUIRE_VALIDATION', 'SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_JA_COHEN_AND_TALMON_SOURCE_STUDY_CONTRACTS_REQUIRE_VALIDATION'),
+              ('  registry_version: 1.7.0\n', '  registry_version: 1.8.0\n'),
+              ('    reviewed_witness_count: 2\n', '    reviewed_witness_count: 3\n'),
+              ('    remaining_without_reviewed_item_witness: 17\n', '    remaining_without_reviewed_item_witness: 16\n'),
+              ('    independent_sequential_study_count: 2\n', '    independent_sequential_study_count: 3\n'),
+              ('    remaining_without_independent_sequential_study: 17\n', '    remaining_without_independent_sequential_study: 16\n'),
+              ('    completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001]\n', '    completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001, TALMON-STUDY-001]\n'),
+              ('      Two complete provisional source studies are not independent corroboration, doctrinal\n', '      Three complete provisional source studies are not independent corroboration, doctrinal\n'),
+              ('''    All nineteen predecessor writings have bounded identities, but only Jerusalem and Athens\n    and the Hermann Cohen introductory essay have reviewed item witnesses and complete\n    provisional item studies. The wider corpus, original-edition comparisons, independent\n''', '''    All nineteen predecessor writings have bounded identities, but only Jerusalem and Athens,\n    the Hermann Cohen introductory essay, and the Talmon review have reviewed item witnesses\n    and complete provisional item studies. The wider corpus, original-edition comparisons, independent\n'''),
+              ('  registry_version: 1.2.0\n', '  registry_version: 1.3.0\n'),
+              ('  newly_registered: [FINDSET-009, FINDSET-113, FINDSET-114, FINDSET-115]\n', '  newly_registered: [FINDSET-010, FINDSET-116, FINDSET-117, FINDSET-118]\n'),
+          ])
+          replace_once(
+              "manifest.yaml",
+              "    - {source: Jerusalem and Athens, witness_id: CORPUS-WIT-109, container_witness_id: CORPUS-WIT-001, printed_pages: 147-173, pdf_pages_one_based: 151-177, original_publication: 'The City College Papers, no. 6, The City College of New York, 1967', item_status: studies/theologico-political/jerusalem-and-athens/source-status.yaml}\n",
+              "    - {source: Jerusalem and Athens, witness_id: CORPUS-WIT-109, container_witness_id: CORPUS-WIT-001, printed_pages: 147-173, pdf_pages_one_based: 151-177, original_publication: 'The City College Papers, no. 6, The City College of New York, 1967', item_status: studies/theologico-political/jerusalem-and-athens/source-status.yaml}\n    - {source: Review of J. L. Talmon, witness_id: CORPUS-WIT-111, container_witness_id: CORPUS-WIT-001, printed_pages: 232, pdf_pages_one_based: 236, original_publication: 'Journal of Modern History 29, no. 3, 1957', item_status: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml}\n",
+          )
+
+          # Audit forward revision and current-state accounting.
+          replace_many("audits/operational-completeness.yaml", [
+              ('  version: 2.1.0\n', '  version: 2.2.0\n'),
+              ('  predecessor_version: 2.0.0\n  predecessor_blob_sha: 432381b75dc086d0e3dee6bead60d501688e0413\n', '  predecessor_version: 2.1.0\n  predecessor_blob_sha: 0cd1529f590c21cd3881f7def50994b88e293031\n'),
+              ('''  reason: >\n    Record CORPUS-WIT-105, COHEN-STUDY-001, CORPUS-STUDY-009, FINDSET-009,\n    and the three jurisdiction-preserving local syntheses. Preserve original-edition\n    comparison, independent corroboration, seventeen missing witnesses and studies,\n    doctrinal and migration noncertification, successor nonactivation, active predecessor\n    authority, and the completed-interface Sanctum repin block.\n''', '''  reason: >\n    Record CORPUS-WIT-111, TALMON-STUDY-001, CORPUS-STUDY-010, FINDSET-010,\n    and three jurisdiction-preserving local syntheses. Preserve original-edition and reviewed-work\n    comparison gaps, independent corroboration, sixteen missing witnesses and studies, doctrinal\n    and migration noncertification, successor nonactivation, active predecessor authority,\n    and the completed-interface Sanctum repin block.\n'''),
+              ('  prior_validated_interface_commit: 853dd7de13d7bf4abc881fc7671a5833b822b6cb\n  current_revision_scope: production/cohen-reviewed-witness-registration\n', '  prior_validated_interface_commit: 2d8cdafbb1ec694c9f54109c4708f86de49379fa\n  current_revision_scope: production/talmon-reviewed-witness-reconstruction\n'),
+              ('    - five reviewed witnesses, including CORPUS-WIT-105 and CORPUS-WIT-109\n', '    - six reviewed witnesses, including CORPUS-WIT-105, CORPUS-WIT-109, and CORPUS-WIT-111\n'),
+              ('    - COHEN-STUDY-001 complete provisional sequential reconstruction\n', '    - COHEN-STUDY-001 complete provisional sequential reconstruction\n    - TALMON-STUDY-001 complete provisional sequential reconstruction\n'),
+              ('    - CORPUS-STUDY-008, CORPUS-STUDY-009, FINDSET-008, and FINDSET-009 typed registrations\n', '    - CORPUS-STUDY-008 through CORPUS-STUDY-010 and FINDSET-008 through FINDSET-010 typed registrations\n'),
+              ('    - FINDSET-111 through FINDSET-115 jurisdiction-preserving problem-local syntheses\n', '    - FINDSET-111 through FINDSET-118 jurisdiction-preserving problem-local syntheses\n'),
+              ('    reviewed_item_witness_count: 2\n', '    reviewed_item_witness_count: 3\n'),
+              ('    registered_without_reviewed_witness_count: 17\n', '    registered_without_reviewed_witness_count: 16\n'),
+              ('    independently_reconstructed_count_within_this_sequence: 2\n', '    independently_reconstructed_count_within_this_sequence: 3\n'),
+              ('    remaining_without_independent_sequential_study: 17\n', '    remaining_without_independent_sequential_study: 16\n'),
+              ('    completed_source_ids: [CORPUS-SRC-105, CORPUS-SRC-109]\n', '    completed_source_ids: [CORPUS-SRC-105, CORPUS-SRC-109, CORPUS-SRC-111]\n'),
+              ('    completed_witness_ids: [CORPUS-WIT-105, CORPUS-WIT-109]\n', '    completed_witness_ids: [CORPUS-WIT-105, CORPUS-WIT-109, CORPUS-WIT-111]\n'),
+              ('    completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001]\n', '    completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001, TALMON-STUDY-001]\n'),
+              ('      The two studies are independent reconstructions relative to predecessor and collection-\n', '      The three studies are independent reconstructions relative to predecessor and collection-\n'),
+              ('    - seventeen Theologico-Political item identities lack reviewed item witnesses\n', '    - sixteen Theologico-Political item identities lack reviewed item witnesses\n'),
+              ('    - seventeen Theologico-Political writings lack independent sequential item studies\n', '    - sixteen Theologico-Political writings lack independent sequential item studies\n'),
+              ('    - the original 1972 Cohen essay printing has not been compared with the reviewed 1983 reprint\n', '    - the original 1972 Cohen essay printing has not been compared with the reviewed 1983 reprint\n    - the original 1957 Talmon review printing has not been compared with the reviewed 1983 reprint\n    - Talmon\'s reviewed work remains independently unreconstructed\n'),
+              ('    registry_version: 1.7.0\n', '    registry_version: 1.8.0\n'),
+              ('      - 5 reviewed witnesses\n', '      - 6 reviewed witnesses\n'),
+              ('      - 9 analytical and integration study records\n', '      - 10 analytical and integration study records\n'),
+              ('      - all 32 YAML records in the studies tree accounted for\n', '      - all 34 YAML records in the studies tree accounted for\n'),
+              ('      - 19 Theologico-Political identities, 2 reviewed item witnesses, and 2 complete provisional item studies\n', '      - 19 Theologico-Political identities, 3 reviewed item witnesses, and 3 complete provisional item studies\n'),
+              ('      - seventeen reviewed item witnesses and studies\n', '      - sixteen reviewed item witnesses and studies\n'),
+              ('    registry_version: 1.2.0\n', '    registry_version: 1.3.0\n'),
+              ('      - 29 typed finding sets\n', '      - 33 typed finding sets\n'),
+              ('      - 9 source-specific or integration records\n', '      - 10 source-specific or integration records\n'),
+              ('      - 15 problem-local syntheses\n', '      - 18 problem-local syntheses\n'),
+              ('      - explicit derivation from FINDSET-009 to FINDSET-113, FINDSET-114, and FINDSET-115\n', '      - explicit derivation from FINDSET-009 to FINDSET-113, FINDSET-114, and FINDSET-115\n      - explicit derivation from FINDSET-010 to FINDSET-116, FINDSET-117, and FINDSET-118\n'),
+              ('      - validates nineteen predecessor identities, aliases, scopes, and preserved-copy equality\n      - validates complete-study states for CORPUS-SRC-105 and CORPUS-SRC-109 and missing states for the other seventeen\n', '      - validates nineteen predecessor identities, aliases, scopes, and preserved-copy equality\n      - validates complete-study states for CORPUS-SRC-105, CORPUS-SRC-109, and CORPUS-SRC-111 and missing states for the other sixteen\n'),
+              ('      - validates CORPUS-WIT-105 and CORPUS-WIT-109 fingerprints and locators and their study bindings\n', '      - validates CORPUS-WIT-105, CORPUS-WIT-109, and CORPUS-WIT-111 fingerprints, locators, and study bindings\n'),
+              ('      - validates twenty-nine finding sets and fifteen exact synthesis records\n', '      - validates thirty-three finding sets and eighteen exact synthesis records\n'),
+              ('      - validates Cohen source-local jurisdiction and noncorroboration\n', '      - validates Cohen and Talmon source-local jurisdiction and noncorroboration\n'),
+              ('      - registers corpus v1.7.0, findings v1.2.0, 19 identities, 2 witnesses, and 2 studies\n', '      - registers corpus v1.8.0, findings v1.3.0, 19 identities, 3 witnesses, and 3 studies\n'),
+              ('    - CORPUS-WIT-105 registration\n    - COHEN-STUDY-001 complete provisional sequential reconstruction\n    - source-status, corpus, findings, and three problem-local synthesis registrations\n', '    - CORPUS-WIT-111 registration\n    - TALMON-STUDY-001 complete provisional sequential reconstruction\n    - source-status, corpus, findings, and three problem-local synthesis registrations\n'),
+              ('    - register and reconstruct the Talmon review already locatable in SPPP\n    - acquire the remaining sixteen item witnesses\n', '    - acquire and reconstruct CORPUS-SRC-102, the Preface to Spinoza\'s Critique of Religion\n    - acquire the remaining fifteen item witnesses after CORPUS-SRC-102\n'),
+          ])
+          replace_once(
+              "audits/operational-completeness.yaml",
+              '  - path: corpus/index.yaml\n',
+              '''  - path: studies/theologico-political/review-talmon-nature-of-jewish-history/reviewed-witness.yaml\n    classification: SUBSTANTIVELY_RECONSTRUCTED\n    identity: CORPUS-WIT-111\n    present_function:\n      - registers the complete one-page 1983 collected item separately from source identity and study\n      - records printed page 232 and PDF page 236\n      - records the 1957 Journal of Modern History occasion and SPPP container fingerprint\n      - preserves page-image authority and the distinction from Talmon's reviewed work\n    remaining:\n      - original 1957 journal comparison\n      - Talmon's reviewed work and independent historical corroboration\n\n  - path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml\n    classification: SUBSTANTIVELY_RECONSTRUCTED\n    identity: TALMON-STUDY-001\n    present_function:\n      - reconstructs the complete one-page review in three ordered reading units\n      - distinguishes Strauss's review, Talmon's claims, historical constitution, and theological truth\n      - preserves Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns jurisdictions\n      - qualifies the predecessor's progress characterization without promotion or displacement\n    remaining:\n      - original 1957 edition comparison\n      - Talmon's book and independent Jewish, Greek, historical, theological, and political witnesses\n\n  - path: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml\n    classification: SUBSTANTIVELY_RECONSTRUCTED\n    present_function:\n      - registers CORPUS-WIT-111 and TALMON-STUDY-001 as distinct documentary layers\n      - records complete provisional reconstruction and incomplete independent corroboration\n      - preserves reviewed-work, doctrine, migration, and activation limits\n    remaining:\n      - original printing comparison\n      - independent target-work and source-tradition reconstruction\n\n  - path: corpus/index.yaml\n''',
+          )
+
+          # Lean mapping forward revision.
+          replace_many("migrations/lean-operational-interface.yaml", [
+              ('  version: 1.3.0\n', '  version: 1.4.0\n'),
+              ('  predecessor_version: 1.2.0\n  predecessor_blob_sha: 4412c017f7a5ec77cc0efa320b3abd12be4a06d4\n', '  predecessor_version: 1.3.0\n  predecessor_blob_sha: c02c3c2f3b6dc0e0d3070e81da2f7e2378f81f34\n'),
+              ('''  reason: >\n    Synchronize the mapping with corpus registry v1.7.0, findings registry v1.2.0,\n    CORPUS-WIT-105, and COHEN-STUDY-001. Preserve two-of-nineteen study completion\n    as bounded and provisional, not independent corroboration, doctrine, certified migration,\n    successor activation, predecessor displacement, or repository completion.\n''', '''  reason: >\n    Synchronize the mapping with corpus registry v1.8.0, findings registry v1.3.0,\n    CORPUS-WIT-111, and TALMON-STUDY-001. Preserve three-of-nineteen study completion\n    as bounded and provisional, not independent corroboration, doctrine, certified migration,\n    successor activation, predecessor displacement, or repository completion.\n'''),
+              ('  version: 2.1.0\n', '  version: 2.2.0\n'),
+              ('  completed_witness_subunit: JERUSALEM_ATHENS_AND_COHEN_2_OF_19\n', '  completed_witness_subunit: JERUSALEM_ATHENS_COHEN_AND_TALMON_3_OF_19\n'),
+              ('  completed_study_subunit: JERUSALEM_ATHENS_AND_COHEN_2_OF_19_COMPLETE_PROVISIONAL\n', '  completed_study_subunit: JERUSALEM_ATHENS_COHEN_AND_TALMON_3_OF_19_COMPLETE_PROVISIONAL\n'),
+              ('      - {record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}\n', '      - {record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}\n      - {record: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}\n'),
+              ('      - {record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml, reading_units: 8, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}\n', '      - {record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml, reading_units: 8, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}\n      - {record: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml, reading_units: 3, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}\n'),
+              ('      registry_version: 1.7.0\n', '      registry_version: 1.8.0\n'),
+              ('    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COHEN_SOURCE_STUDY\n', '    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_TALMON_SOURCE_STUDY\n'),
+              ('      count: 5\n', '      count: 6\n'),
+              ('      source_ids: [CORPUS-SRC-001, CORPUS-SRC-002, CORPUS-SRC-003, CORPUS-SRC-105, CORPUS-SRC-109]\n', '      source_ids: [CORPUS-SRC-001, CORPUS-SRC-002, CORPUS-SRC-003, CORPUS-SRC-105, CORPUS-SRC-109, CORPUS-SRC-111]\n'),
+              ('      reviewed_witness_count: 2\n', '      reviewed_witness_count: 3\n'),
+              ('      remaining_without_reviewed_witness: 17\n', '      remaining_without_reviewed_witness: 16\n'),
+              ('      independent_sequential_study_count: 2\n', '      independent_sequential_study_count: 3\n'),
+              ('      remaining_without_independent_sequential_study: 17\n', '      remaining_without_independent_sequential_study: 16\n'),
+              ('      completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001]\n', '      completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001, TALMON-STUDY-001]\n'),
+              ('      - account for all 32 YAML records in the current studies tree\n', '      - account for all 34 YAML records in the current studies tree\n'),
+              ('      - validate CORPUS-WIT-105 and CORPUS-WIT-109 fingerprints and locators and their study bindings\n', '      - validate CORPUS-WIT-105, CORPUS-WIT-109, and CORPUS-WIT-111 fingerprints, locators, and study bindings\n'),
+              ('      Current-state exhaustiveness and two complete provisional item studies do not create a\n', '      Current-state exhaustiveness and three complete provisional item studies do not create a\n'),
+              ('      registry_version: 1.2.0\n', '      registry_version: 1.3.0\n'),
+              ('      - {finding_set_id: FINDSET-009, path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml}\n      - {finding_set_id: FINDSET-113, path: problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml, derived_from: FINDSET-009}\n      - {finding_set_id: FINDSET-114, path: problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml, derived_from: FINDSET-009}\n      - {finding_set_id: FINDSET-115, path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml, derived_from: FINDSET-009}\n', '      - {finding_set_id: FINDSET-010, path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml}\n      - {finding_set_id: FINDSET-116, path: problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml, derived_from: FINDSET-010}\n      - {finding_set_id: FINDSET-117, path: problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml, derived_from: FINDSET-010}\n      - {finding_set_id: FINDSET-118, path: problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml, derived_from: FINDSET-010}\n'),
+              ('  - Two source studies are not independent corroboration or repository completion.\n', '  - Three source studies are not independent corroboration or repository completion.\n'),
+              ('    - problem_bundles validates all seven complete bundles and fifteen synthesis records\n', '    - problem_bundles validates all seven complete bundles and eighteen synthesis records\n'),
+              ('    - findings_registry validates twenty-nine finding sets, exact record coverage, derivations, bindings, indexes, and gaps\n', '    - findings_registry validates thirty-three finding sets, exact record coverage, derivations, bindings, indexes, and gaps\n'),
+              ('  - CORPUS-WIT-109 and CORPUS-WIT-105 reviewed item witnesses\n', '  - CORPUS-WIT-109, CORPUS-WIT-105, and CORPUS-WIT-111 reviewed item witnesses\n'),
+              ('  - JA-STUDY-001 and COHEN-STUDY-001 complete provisional source-specific reconstructions\n', '  - JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 complete provisional source-specific reconstructions\n'),
+              ('  - five jurisdiction-preserving local synthesis bridges derived from the two item studies\n', '  - eight jurisdiction-preserving local synthesis bridges derived from the three item studies\n'),
+              ('  - register and reconstruct the Talmon review already locatable in SPPP\n', '  - acquire and reconstruct CORPUS-SRC-102, the Preface to Spinoza\'s Critique of Religion\n'),
+          ])
+          replace_once(
+              "migrations/lean-operational-interface.yaml",
+              '''      - path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml\n        source: CORPUS-SRC-105\n        derivation: FINDSET-009_TO_FINDSET-115\n''',
+              '''      - path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml\n        source: CORPUS-SRC-105\n        derivation: FINDSET-009_TO_FINDSET-115\n      - path: problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml\n        source: CORPUS-SRC-111\n        derivation: FINDSET-010_TO_FINDSET-116\n      - path: problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml\n        source: CORPUS-SRC-111\n        derivation: FINDSET-010_TO_FINDSET-117\n      - path: problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml\n        source: CORPUS-SRC-111\n        derivation: FINDSET-010_TO_FINDSET-118\n''',
+          )
+
+          # Ten-step process forward revision.
+          replace_many("history/production-plans/2026-07-27-ten-step-completion-process.yaml", [
+              ('  version: 1.5.0\n', '  version: 1.6.0\n'),
+              ('  predecessor_version: 1.4.0\n  predecessor_blob_sha: 7431f7e07a2d90812415086bc610622094311552\n', '  predecessor_version: 1.5.0\n  predecessor_blob_sha: a5bfabce5c0b47dcca0c5501b20be2246ad68cf4\n'),
+              ('''  reason: >\n    Advance Step 8 after registering CORPUS-WIT-105 and completing COHEN-STUDY-001\n    with typed corpus, findings, and three jurisdiction-preserving problem-local synthesis\n    registrations. Preserve seventeen missing item witnesses and studies and the Step 10 repin blocker.\n''', '''  reason: >\n    Advance Step 8 after registering CORPUS-WIT-111 and completing TALMON-STUDY-001\n    with typed corpus, findings, and three jurisdiction-preserving problem-local synthesis\n    registrations. Preserve sixteen missing item witnesses and studies and the Step 10 repin blocker.\n'''),
+              ('    current_version: 2.1.0\n', '    current_version: 2.2.0\n'),
+              ('    current_version: 1.3.0\n', '    current_version: 1.4.0\n'),
+              ('      - the Cohen essay supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns\n', '      - the Cohen essay supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns\n      - the Talmon review supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns\n'),
+              ('      - CORPUS-WIT-109 and CORPUS-WIT-105 are registered with provenance, fingerprints, and locators\n', '      - CORPUS-WIT-109, CORPUS-WIT-105, and CORPUS-WIT-111 are registered with provenance, fingerprints, and locators\n'),
+              ('      - JA-STUDY-001 and COHEN-STUDY-001 are complete provisional for their reviewed 1983 collected witnesses\n', '      - JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 are complete provisional for their reviewed 1983 collected witnesses\n'),
+              ('      - CORPUS-STUDY-008, CORPUS-STUDY-009, FINDSET-008, FINDSET-009, and FINDSET-111 through FINDSET-115 are registered\n', '      - CORPUS-STUDY-008 through CORPUS-STUDY-010, FINDSET-008 through FINDSET-010, and FINDSET-111 through FINDSET-118 are registered\n'),
+              ('      - establish reviewed witnesses for seventeen item identities\n', '      - establish reviewed witnesses for sixteen item identities\n'),
+              ('      - conduct seventeen independent sequential item studies\n', '      - conduct sixteen independent sequential item studies\n'),
+              ('      - compare the original 1972 Cohen essay printing where wording matters\n', '      - compare the original 1972 Cohen essay printing where wording matters\n      - compare the original 1957 Talmon review printing where wording matters\n      - reconstruct Talmon\'s reviewed work independently\n'),
+              ('      - tests drafted for two completed provisional TP item studies and seventeen incomplete states\n', '      - tests drafted for three completed provisional TP item studies and sixteen incomplete states\n'),
+              ('      - Cohen witness, study, source-filter, and three-problem jurisdiction tests drafted\n', '      - Cohen and Talmon witness, study, source-filter, and three-problem jurisdiction tests drafted\n'),
+              ('    title: Hermann Cohen introductory essay reviewed witness and complete provisional item reconstruction\n', '    title: Review of J. L. Talmon reviewed witness and complete provisional item reconstruction\n'),
+              ('    source_id: CORPUS-SRC-105\n', '    source_id: CORPUS-SRC-111\n'),
+              ('    witness_id: CORPUS-WIT-105\n', '    witness_id: CORPUS-WIT-111\n'),
+              ('    study_id: COHEN-STUDY-001\n', '    study_id: TALMON-STUDY-001\n'),
+              ('    corpus_study_id: CORPUS-STUDY-009\n', '    corpus_study_id: CORPUS-STUDY-010\n'),
+              ('    finding_sets: [FINDSET-009, FINDSET-113, FINDSET-114, FINDSET-115]\n', '    finding_sets: [FINDSET-010, FINDSET-116, FINDSET-117, FINDSET-118]\n'),
+              ('    title: Review of J. L. Talmon reviewed item witness and sequential reconstruction\n    source_id: CORPUS-SRC-111\n    first_action: >\n      Register the complete one-page item in the reviewed SPPP container with publication\n      provenance, printed and PDF locators, container fingerprint, text condition, and explicit\n      distinction between witness registration and independent sequential study.\n    following_source: CORPUS-SRC-102\n', '    title: Preface to Spinoza\'s Critique of Religion reviewed witness acquisition and reconstruction\n    source_id: CORPUS-SRC-102\n    first_action: >\n      Acquire a lawful reviewed witness with stable bibliographic evidence and locators before\n      beginning independent sequential reconstruction or promoting predecessor claims.\n    following_source: CORPUS-SRC-103\n'),
+          ])
+
+          # Priority schedule forward revision.
+          replace_many("history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml", [
+              ('  version: 1.3.0\n', '  version: 1.4.0\n'),
+              ('  reviewed_witness_completion: INCOMPLETE_2_OF_19\n', '  reviewed_witness_completion: INCOMPLETE_3_OF_19\n'),
+              ('  independent_sequential_study_completion: INCOMPLETE_2_OF_19\n', '  independent_sequential_study_completion: INCOMPLETE_3_OF_19\n'),
+              ('  predecessor_version: 1.2.0\n  predecessor_blob_sha: 78b19e27db4b7cac18279e913b3b32811f8c7581\n', '  predecessor_version: 1.3.0\n  predecessor_blob_sha: 14a4149011becc9a3fa12f95ba804ab7b3ea6c7e\n'),
+              ('''  reason: >\n    Record completion of COHEN-STUDY-001 after CORPUS-WIT-105 registration, preserve its\n    provisional and noncorroborating status, and advance the next available reviewed-item\n    witness to CORPUS-SRC-111 without ranking truth or altering predecessor authority.\n''', '''  reason: >\n    Record completion of TALMON-STUDY-001 after CORPUS-WIT-111 registration, preserve its\n    provisional and noncorroborating status, and advance the next acquisition target to\n    CORPUS-SRC-102 without ranking truth or altering predecessor authority.\n'''),
+              ('        state: REVIEWED_CONTAINER_ITEM_LOCATED_WITNESS_NOT_REGISTERED\n        witness_locator: {container_witness_id: CORPUS-WIT-001, printed_pages: 232, pdf_pages_one_based: 236}\n        next_action: REGISTER_REVIEWED_ITEM_WITNESS\n', '        witness_id: CORPUS-WIT-111\n        study_id: TALMON-STUDY-001\n        state: REVIEWED_WITNESS_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDY\n        witness_locator: {container_witness_id: CORPUS-WIT-001, printed_pages: 232, pdf_pages_one_based: 236}\n        next_action: ORIGINAL_EDITION_COMPARISON_AND_INDEPENDENT_TALMON_WORK_RECONSTRUCTION\n'),
+              ('  completed_source_ids: [CORPUS-SRC-109, CORPUS-SRC-105]\n', '  completed_source_ids: [CORPUS-SRC-109, CORPUS-SRC-105, CORPUS-SRC-111]\n'),
+              ('  completed_witness_ids: [CORPUS-WIT-109, CORPUS-WIT-105]\n', '  completed_witness_ids: [CORPUS-WIT-109, CORPUS-WIT-105, CORPUS-WIT-111]\n'),
+              ('  completed_study_ids: [JA-STUDY-001, COHEN-STUDY-001]\n', '  completed_study_ids: [JA-STUDY-001, COHEN-STUDY-001, TALMON-STUDY-001]\n'),
+              ('  selection_state: TWO_REVIEWED_ITEM_WITNESSES_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES\n', '  selection_state: THREE_REVIEWED_ITEM_WITNESSES_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES\n'),
+              ('    - source status updated through complete provisional study for both items\n', '    - source status updated through complete provisional study for all three items\n'),
+              ('    - CORPUS-WIT-109, CORPUS-WIT-105, CORPUS-STUDY-008, and CORPUS-STUDY-009 registered\n', '    - CORPUS-WIT-109, CORPUS-WIT-105, CORPUS-WIT-111, and CORPUS-STUDY-008 through CORPUS-STUDY-010 registered\n'),
+              ('    - FINDSET-008, FINDSET-009, and FINDSET-111 through FINDSET-115 registered\n', '    - FINDSET-008 through FINDSET-010 and FINDSET-111 through FINDSET-118 registered\n'),
+              ('    - original 1967 and 1972 edition comparisons remain pending\n', '    - original 1967, 1972, and 1957 edition comparisons remain pending\n'),
+              ('    - the studies are not independent biblical, Greek, Cohenian, or Kantian corroboration\n', '    - the studies are not independent biblical, Greek, Cohenian, Talmonian, or Kantian corroboration\n'),
+              ('  source_id: CORPUS-SRC-111\n  title: Review of J. L. Talmon, The Nature of Jewish History\n  action: REGISTER_REVIEWED_ITEM_WITNESS\n  required_preservations:\n    - original 1957 Journal of Modern History publication evidence from the item footnote\n    - complete-item printed and PDF locators\n    - SPPP container fingerprint and page-image authority\n    - distinction between Talmon\'s claims, Strauss\'s review, and predecessor synthesis\n    - witness registration before independent sequential reconstruction\n', '  source_id: CORPUS-SRC-102\n  title: Preface to Spinoza\'s Critique of Religion\n  action: ACQUIRE_AND_REGISTER_REVIEWED_WITNESS\n  required_preservations:\n    - lawful source acquisition and stable publication provenance\n    - complete-item locators and witness fingerprint\n    - distinction between source identity, reviewed witness, study, and predecessor synthesis\n    - witness registration before independent sequential reconstruction\n'),
+              ('  reviewed_item_witness_registration: COMPLETE_FOR_CORPUS_WIT_105_AND_CORPUS_WIT_109\n', '  reviewed_item_witness_registration: COMPLETE_FOR_CORPUS_WIT_105_CORPUS_WIT_109_AND_CORPUS_WIT_111\n'),
+              ('  independent_sequential_reconstruction: COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_AND_JA_STUDY_001\n', '  independent_sequential_reconstruction: COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_JA_STUDY_001_AND_TALMON_STUDY_001\n'),
+              ('  next_item_witness: CORPUS-SRC-111\n', '  next_item_witness: CORPUS-SRC-102\n'),
+          ])
+
+          # Remove this one-shot workflow before committing the synchronized state.
+          Path(".github/workflows/complete-pr21.yml").unlink()
+          PY
+
+      - name: Validate synchronized repository state
+        run: |
+          set -euo pipefail
+          python adapter.py --validate
+          python problem_bundles.py --validate
+          python corpus_registry.py --validate
+          python findings_registry.py --validate
+          python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Commit synchronized PR state
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Complete PR 21 synchronization and validation"
+          git push origin HEAD:production/talmon-reviewed-witness-reconstruction
