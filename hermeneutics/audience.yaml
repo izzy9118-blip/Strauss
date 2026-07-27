@@ -1,15 +1,268 @@
 schema_version: 1.0
-record_type: hermeneutic_rule
-identity: {key: audience, version: 1.0.0}
+record_type: hermeneutic_contract
+
+identity:
+  key: audience
+  title: Audience Hermeneutic
+  version: 1.1.0
+  contract_version: STRAUSS-HERMENEUTIC-AUD-1
+
+status:
+  lifecycle: OPERATIONAL_CONTRACT
+  semantic_completion: SUBSTANTIVELY_RECONSTRUCTED
+  source_specific_application: INCOMPLETE
+  certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 6d30ef2495f0a7e8db759dae6ee23c315f43bdf8
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the initial audience summary with a full contract governing audience types,
+    capacities, motives, attachments, communication forms, responsibility, misuse,
+    partial enlightenment, capture risks, valid outputs, and termination.
+
 source_protocols:
+  - protocols/source-status.yaml
+  - protocols/evidence-classification.yaml
+  - protocols/inference-discipline.yaml
+  - protocols/uncertainty-preservation.yaml
   - protocols/audience-and-rhetoric.yaml
   - protocols/claimant-to-wisdom.yaml
+  - protocols/speech-and-deed.yaml
+
+purpose: >
+  Reconstruct which audiences a text or speaker addresses, forms, excludes, tests,
+  protects, persuades, entertains, disciplines, or endangers, while preventing audience
+  differentiation from becoming an unexamined license for manipulation or caste rule.
+
 governing_question: >
-  Which audiences are addressed, formed, excluded, tested, protected, persuaded,
-  entertained, or endangered by the text?
-rules:
-  - Distinguish intended, immediate, represented, institutional, and later audiences.
-  - Audience differentiation requires evidence of capacity, motive, risk, or purpose.
-  - Popularity, obscurity, initiation, or exclusion does not certify rank.
-  - Examine what each audience can see, misunderstand, imitate, or do after hearing.
-  - Preserve uncertainty where the audience cannot be securely identified.
+  Which audiences are addressed, represented, formed, excluded, tested, protected,
+  persuaded, entertained, or endangered; what can they understand and desire; what may
+  they do with the teaching; and what responsibility follows for the speaker or author?
+
+governing_rule: >
+  Communication must be interpreted in relation to audience capacity, motive,
+  attachments, character, political circumstances, likely use, and vulnerability to
+  corruption. Differentiation may be prudent, but neither openness nor concealment
+  certifies honesty, philosophy, or wisdom.
+
+input_contract:
+  required_fields:
+    - source_ref
+    - documentary_status
+    - speaker_or_author_relation
+    - communication_form
+    - immediate_audience
+    - wider_audience
+    - represented_audiences
+    - institutional_audience
+    - later_audience
+    - occasion
+    - speaker_end
+    - audience_evidence
+    - likely_effects
+    - actual_effects
+    - alternatives_to_present_form
+    - responsibility_assessment
+    - capture_risks
+    - remaining_uncertainty
+  audience_record_required_fields:
+    - identity_or_description
+    - intellectual_capacity
+    - moral_character_or_limit
+    - motive_for_inquiry
+    - prior_opinions_and_attachments
+    - desires_or_ambitions
+    - political_or_social_position
+    - vulnerability_to_corruption
+    - capacity_to_misuse
+    - capacity_for_transformation
+  communication_forms:
+    - demonstration
+    - dialectic
+    - persuasion
+    - protreptic
+    - provisional_teaching
+    - selection_and_sequence
+    - myth
+    - narrative
+    - poetry
+    - comedy
+    - irony
+    - omission
+    - silence
+    - reserve
+    - concealment
+    - public_defense
+    - private_conversation
+    - legal_presumption
+    - practical_dogma
+
+application_sequence:
+  - step_id: AUD-STEP-001
+    operation: identify speaker, author relation, documentary layer, and occasion
+  - step_id: AUD-STEP-002
+    operation: distinguish immediate, wider, represented, institutional, and later audiences
+  - step_id: AUD-STEP-003
+    operation: reconstruct each audience from positive textual or historical evidence
+  - step_id: AUD-STEP-004
+    operation: identify communication form, sequence, framing, and speaker's supported end
+  - step_id: AUD-STEP-005
+    operation: examine capacity, motive, attachments, desire, ambition, spiritedness, and erotic orientation
+  - step_id: AUD-STEP-006
+    operation: identify what each audience can understand, misunderstand, imitate, misuse, or transform
+  - step_id: AUD-STEP-007
+    operation: compare equal access with unequal rhetorical force, preparation, or consequence
+  - step_id: AUD-STEP-008
+    operation: test whether apparent neutrality is shaped by selection, prestige, framing, or sequence
+  - step_id: AUD-STEP-009
+    operation: assess alternatives to concealment, indiscriminate disclosure, or presentational form
+  - step_id: AUD-STEP-010
+    operation: assign responsibility for foreseeable effects without attributing every outcome to the teacher
+  - step_id: AUD-STEP-011
+    operation: test whether the learner's good, truth, political necessity, or elite interest governs the communication
+  - step_id: AUD-STEP-012
+    operation: assign the narrowest valid output and preserve unresolved audience effects
+
+required_questions:
+  - What can this audience understand?
+  - What does this audience desire?
+  - What opinions and attachments organize this audience?
+  - What will the teaching do to this audience?
+  - Is liberation accompanied by transformation of desire?
+  - Does the speaker seek education, protection, persuasion, provocation, rule, or manipulation?
+  - Is differentiated speech justified by positive evidence?
+  - What alternatives to concealment or indiscriminate disclosure existed?
+  - What foreseeable consequences follow?
+  - Who controls the audience classification, and how can it be corrected?
+  - Does the communication serve the learner's good, truth, political necessity, or elite interest?
+  - Is apparently neutral exposure shaped by selection, sequence, framing, prestige, or unequal rhetorical force?
+
+responsibility_tests:
+  - identify who selected the material, examples, and alternatives
+  - identify who framed the question and sequence
+  - distinguish exposure from education
+  - determine whether the teacher knows the student's governing desire
+  - examine whether teaching redirects, transforms, intensifies, or rationalizes desire
+  - record effects on distinct audience types
+  - examine the speaker's motive and institutional interest
+  - preserve responsibility for foreseeable misuse without making the teacher cause of every deed
+  - test whether secrecy or openness protects the speaker while shifting risk to the audience
+  - test whether audience classification can be challenged or corrected
+
+partial_enlightenment_contract:
+  rule: >
+    Release from one authoritative opinion is not identical with ascent toward wisdom.
+    Partial enlightenment may preserve appetite, resentment, ambition, vanity, or
+    domination and must be judged through the transformed or untransformed soul.
+  valid_outputs:
+    - LIBERATION_WITH_TRANSFORMATION
+    - PARTIAL_ENLIGHTENMENT
+    - CORRUPTING_LIBERATION
+    - DESIRE_REDIRECTED_NOT_TRANSFORMED
+    - EFFECT_UNRESOLVED
+
+capture_risk_classes:
+  - speaker_self_certification
+  - permanent_exclusion
+  - caste_or_credential_capture
+  - institutional_control_of_evidence
+  - obscurity_as_status_marker
+  - secrecy_as_immunity
+  - learner_risk_shifted_to_audience
+  - neutral_exposure_claim
+  - manipulation_relabelled_education
+  - audience_stereotype_by_class_or_office
+
+valid_outputs:
+  - AUDIENCE_SECURELY_IDENTIFIED
+  - AUDIENCE_IDENTIFICATION_BOUNDED
+  - AUDIENCE_APPROPRIATE_INSTRUCTION
+  - AUDIENCE_MISMATCH
+  - PEDAGOGICAL_RESTRAINT
+  - RESPONSIBLE_DIFFERENTIATION
+  - SUPPORTED_EXOTERIC_FUNCTION
+  - EXOTERIC_CLAIM_NOT_ESTABLISHED
+  - MANIPULATIVE_RHETORIC
+  - ELITE_CAPTURE_RISK
+  - CORRUPTING_LIBERATION
+  - PARTIAL_ENLIGHTENMENT
+  - NEUTRALITY_CLAIM_QUALIFIED
+  - AUDIENCE_EFFECT_UNRESOLVED
+
+required_output_fields:
+  - classification
+  - audience_types
+  - evidence_for_each_audience
+  - communication_form
+  - speaker_end
+  - capacities_and_motives
+  - attachments_and_desires
+  - likely_and_actual_effects
+  - alternatives
+  - responsibility
+  - capture_risks
+  - learner_good_assessment
+  - confidence
+  - remaining_uncertainty
+
+prohibited_outputs:
+  - universal enlightenment assumed from equal civic dignity
+  - audience incapacity inferred from class, wealth, profession, office, or disagreement alone
+  - claimed wisdom used to authorize deception
+  - secrecy or obscurity used as proof of membership among the few
+  - openness used as proof of honesty or philosophy
+  - manipulation relabelled education without examining the learner's good
+  - neutral exposure used to deny responsibility for framing and consequence
+  - audience differentiation used to immunize speaker or institution from correction
+  - exotericism inferred without positive textual or historical evidence
+  - inability to understand treated as moral worthlessness
+  - popularity treated as proof of truth
+
+uncertainty_rules:
+  - Intended audience may remain uncertain even when represented audience is clear.
+  - Later audience effects may exceed or depart from authorial intention.
+  - Capacity and moral fitness are distinct and may not be inferred from one another.
+  - A successful communication may still be irresponsible or untrue.
+  - Failure to persuade may reflect audience, speaker, occasion, truth, or form and must not be assigned automatically.
+
+speech_mechanism_integration:
+  contract: speech/speech-mechanism.yaml
+  rule: >
+    Audience adaptation may change order, vocabulary, examples, and level of detail only
+    after evidence and proposition kinds are fixed. It may not alter evidentiary status,
+    erase dissent, or conceal uncertainty from Sanctum's record.
+
+termination_rule: >
+  An audience inquiry is complete only when audience types, evidence, capacities,
+  motives, attachments, communication form, speaker end, likely and actual effects,
+  alternatives, responsibility, capture risks, learner-good assessment, confidence,
+  and remaining uncertainty are explicit.
+
+behavioral_tests:
+  - id: AUD-TEST-001
+    behavior: immediate and wider audiences remain distinct
+  - id: AUD-TEST-002
+    behavior: class or profession alone cannot establish incapacity
+  - id: AUD-TEST-003
+    behavior: equal access does not prove equal preparation or effect
+  - id: AUD-TEST-004
+    behavior: openness does not certify honesty or responsibility
+  - id: AUD-TEST-005
+    behavior: concealment requires positive audience and function evidence
+  - id: AUD-TEST-006
+    behavior: neutral exposure is qualified by selection, framing, and sequence
+  - id: AUD-TEST-007
+    behavior: liberation without transformed desire is classified as partial enlightenment
+  - id: AUD-TEST-008
+    behavior: foreseeable misuse is assessed without attributing every consequence to the teacher
+  - id: AUD-TEST-009
+    behavior: audience classification remains corrigible and subject to capture review
+  - id: AUD-TEST-010
+    behavior: unresolved audience effect remains a valid termination
+
+self_limitation: >
+  This hermeneutic reconstructs audience and responsibility. It does not certify a
+  speaker's superiority, establish fixed human castes, make equal dignity imply equal
+  capacity, or authorize deception without evidence and correction.
