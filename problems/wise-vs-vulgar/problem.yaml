@@ -13,18 +13,19 @@ identity:
 
 status:
   lifecycle: FOUNDING_DRAFT
-  version: 0.3.0
+  version: 0.4.0
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
 revision_history:
-  predecessor_version: 0.2.0
-  predecessor_blob_sha: 4c927aac3b857642d5b82fcc19f422e588308cbc
+  predecessor_version: 0.3.0
+  predecessor_blob_sha: 737dd4b39fe7dfaa7baa134ee676ab5cae22f8d4
   transformation: REVISED_WITHOUT_PREDECESSOR_EFFECT
   reason: >
-    Record completion of proposition-level classification, normalized migration
-    transactions, and reconciliation of elevated irony, comedy, audience, rhetoric,
-    exotericism, and speech-deed material with shared protocols.
+    Register the expanded witness registry, the completed independent Plato Apology
+    reconstruction and local synthesis, and supporting witness lines preserved from
+    the accepted predecessor. No claimant is certified, no predecessor is displaced,
+    and broader independent reconstruction remains incomplete.
 
 authority:
   registry_reference: problems/registry.yaml
@@ -49,8 +50,8 @@ predecessor_provenance:
     status: ACCEPTED_MIGRATION_SOURCE_CLASSIFIED_NOT_SUPERSEDED
   governing_rule: >
     Neither predecessor is replaced or retrospectively rewritten. Every accepted
-    top-level classification unit and constitutive proposition now has a controlled
-    disposition, but the successor remains inactive until automated validation,
+    top-level classification unit and constitutive proposition has a controlled
+    disposition, but the successor remains inactive until independent witness work,
     destination review, migration certification, and activation.
 
 migration_classification:
@@ -59,7 +60,7 @@ migration_classification:
   version: 0.2.0
   transaction_blob_sha: 9b1041a6ec14772ef4a910f6777a369d7fbb6050
   implementing_commit: 383a04734533b3a326df52ac9cd05eee37a53a29
-  state: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_IMPLEMENTATION_SUBSTANTIAL_VALIDATION_PENDING
+  state: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_IMPLEMENTATION_SUBSTANTIAL_VALIDATION_PASSED
   coverage:
     accepted_top_level_units: 18
     accepted_top_level_units_classified: 18
@@ -76,16 +77,41 @@ migration_classification:
     certification: NONE
     activation: NONE
 
+witness_expansion:
+  registry_path: problems/wise-vs-vulgar/witnesses.yaml
+  registry_version: 0.2.0
+  completed_independent_source:
+    study_id: PLATO-APOLOGY-PVP-TP-001
+    witness: Plato
+    work: Apology of Socrates
+    reconstruction: studies/plato/apology/philosophy-poetry-divine-authority-reconstruction.yaml
+    local_synthesis: problems/wise-vs-vulgar/synthesis/plato-apology.yaml
+    status: COMPLETE_FOR_REGISTERED_TRANSLATION_PROVISIONAL_NOT_CERTIFIED
+  supporting_witnesses_registered:
+    - Thucydides
+    - Alfarabi
+    - Averroes
+    - Gotthold Ephraim Lessing
+    - Friedrich Schleiermacher
+    - Martin Heidegger
+  effect:
+    claimant_certification: NONE
+    comparative_synthesis: NONE
+    predecessor_effect: NONE
+    activation: NONE
+
 source_basis:
   study_id: SPPP-STUDY-001
   study_path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
   source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
   problem_synthesis: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
-  constitutional_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+  plato_apology_synthesis: problems/wise-vs-vulgar/synthesis/plato-apology.yaml
+  constitutional_effect: NONE_WITHOUT_MIGRATION_CERTIFICATION
   source_limit: >
-    The completed collection study and accepted predecessor are provisional sources
-    and do not replace independent reconstruction of claimants, texts, institutions,
-    audiences, or historical deeds.
+    The completed collection study, accepted predecessor, and independent Apology
+    reconstruction remain provisional sources. They do not replace independent
+    reconstruction of remaining Platonic works, Xenophon, Aristophanes, Biblical and
+    prophetic texts, medieval and modern witnesses, institutions, audiences, or deeds.
 
 governing_question: >
   How can superior understanding guide political society when wisdom cannot certify
@@ -191,7 +217,7 @@ non_absorption_clause: >
   sources and findings are referenced through subordinate records.
 
 termination:
-  state: PROPOSITION_LEVEL_CLASSIFICATION_COMPLETE_IMPLEMENTATION_SUBSTANTIAL_VALIDATION_PENDING_NOT_CERTIFIED
+  state: WITNESS_REGISTRY_EXPANDED_ONE_INDEPENDENT_PLATONIC_WORK_INTEGRATED_VALIDATION_PENDING_NOT_CERTIFIED
   certification: NOT_CERTIFIED
   activation: PENDING_FOUNDATIONAL_MIGRATION
   completed_records:
@@ -200,6 +226,7 @@ termination:
     - problems/wise-vs-vulgar/witnesses.yaml
     - problems/wise-vs-vulgar/relations.yaml
     - problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+    - problems/wise-vs-vulgar/synthesis/plato-apology.yaml
     - migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   completed_protocol_reconciliations:
     - protocols/speech-and-deed.yaml
@@ -207,8 +234,11 @@ termination:
     - protocols/comedy.yaml
     - protocols/audience-and-rhetoric.yaml
   remaining_requirements:
-    - automated YAML, transaction-value, and path validation
-    - review and expansion of supporting witness registrations
-    - cross-problem duplicate-doctrine review
-    - resolution of validator findings
+    - automated validation of this revision
+    - Greek-text and alternate-translation review of Plato's Apology
+    - independent reconstruction of additional Platonic dialogues
+    - independent Xenophon and Aristophanes reconstruction
+    - comparative Socrates reconstruction after independent channels
+    - independent Biblical, prophetic, medieval, modern, political, institutional, and emergent witness studies
+    - resolution or preservation of open cross-problem jurisdictional seams
     - migration certification before activation
