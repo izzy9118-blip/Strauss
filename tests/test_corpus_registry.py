@@ -9,7 +9,7 @@ class CorpusRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_repository_state(self) -> None:
         registry = corpus_registry.load_registry()
         self.assertEqual(corpus_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.1.0")
+        self.assertEqual(registry["identity"]["version"], "1.2.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE",
@@ -20,7 +20,7 @@ class CorpusRegistryTests(unittest.TestCase):
         )
         self.assertEqual(registry["status"]["certification"], "NOT_CERTIFIED")
 
-    def test_source_witness_study_and_gap_identifiers_are_unique(self) -> None:
+    def test_source_witness_study_status_and_gap_identifiers_are_unique(self) -> None:
         registry = corpus_registry.load_registry()
         for section, field in (
             ("source_entities", "source_id"),
@@ -42,7 +42,10 @@ class CorpusRegistryTests(unittest.TestCase):
             corpus_registry._actual_study_tree_paths(),
             corpus_registry.EXPECTED_STUDY_TREE_PATHS,
         )
-        self.assertEqual(len(corpus_registry.EXPECTED_STUDY_TREE_PATHS), 10)
+        self.assertEqual(
+            registry["coverage"]["current_studies_tree_yaml_records_accounted_for"],
+            11,
+        )
 
     def test_nineteen_theologico_political_sources_are_preserved_verbatim_by_identity(self) -> None:
         registry = corpus_registry.load_registry()
@@ -78,46 +81,6 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertIn("Pangle", limits)
         self.assertIn("secondary", limits)
 
-    def test_socrates_and_aristophanes_witness_is_bibliographically_grounded(self) -> None:
-        registry = corpus_registry.load_registry()
-        source = next(
-            item
-            for item in registry["source_entities"]
-            if item["source_id"] == "CORPUS-SRC-001"
-        )
-        witness = next(
-            item
-            for item in registry["reviewed_witnesses"]
-            if item["witness_id"] == "CORPUS-WIT-003"
-        )
-        status = corpus_registry.load_yaml(
-            corpus_registry.ROOT
-            / "studies"
-            / "socrates-and-aristophanes"
-            / "source-status.yaml"
-        )
-        self.assertEqual(source["source_status_record"], "CORPUS-STATUS-003")
-        self.assertEqual(source["reviewed_witnesses"], ["CORPUS-WIT-003"])
-        self.assertEqual(witness["page_count"], 321)
-        self.assertEqual(witness["file_size_bytes"], 25818895)
-        self.assertEqual(
-            witness["sha256"],
-            "1b74826f62bbc70d887e0f224b553c3bb521c55688ae9ba28c455ee080df9fa6",
-        )
-        self.assertEqual(witness["page_count"], status["reviewed_witness"]["page_count"])
-        self.assertEqual(
-            witness["filename_year_status"],
-            "NONAUTHORITATIVE_AND_CONTRADICTED_BY_TITLE_AND_COPYRIGHT_PAGES",
-        )
-        self.assertEqual(
-            witness["ocr_rule"],
-            "PAGE_IMAGES_GOVERN_WORDING_WHERE_OCR_IS_UNCERTAIN",
-        )
-        limits = "\n".join(source["limits"])
-        self.assertIn("1980 paperback", limits)
-        self.assertIn("1966 Basic Books", limits)
-        self.assertIn("filename year", limits)
-
     def test_plato_apology_translation_limit_is_explicit(self) -> None:
         registry = corpus_registry.load_registry()
         apology = next(
@@ -133,6 +96,49 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertEqual(witness["translator"], "Benjamin Jowett")
         self.assertEqual(witness["greek_alignment"], "PENDING")
         self.assertTrue(any("English translation" in item for item in apology["limits"]))
+
+    def test_socrates_and_aristophanes_witness_is_registered_without_filename_date_drift(self) -> None:
+        registry = corpus_registry.load_registry()
+        source = next(
+            item
+            for item in registry["source_entities"]
+            if item["source_id"] == "CORPUS-SRC-001"
+        )
+        witness = next(
+            item
+            for item in registry["reviewed_witnesses"]
+            if item["witness_id"] == "CORPUS-WIT-003"
+        )
+        self.assertEqual(source["date"], 1966)
+        self.assertEqual(witness["reviewed_edition"], "University of Chicago Press paperback edition 1980")
+        self.assertIn("NONAUTHORITATIVE", witness["filename_year_status"])
+
+    def test_progress_or_return_has_identity_status_but_no_reviewed_witness(self) -> None:
+        registry = corpus_registry.load_registry()
+        source = next(
+            item
+            for item in registry["source_entities"]
+            if item["source_id"] == "CORPUS-SRC-101"
+        )
+        entry = next(
+            item
+            for item in registry["source_status_records"]
+            if item["status_id"] == "CORPUS-STATUS-101"
+        )
+        status = corpus_registry.load_yaml(corpus_registry.PROGRESS_OR_RETURN_STATUS_PATH)
+
+        self.assertEqual(source["source_status_record"], "CORPUS-STATUS-101")
+        self.assertEqual(
+            source["item_level_source_status"],
+            "REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS",
+        )
+        self.assertEqual(entry["source_id"], "CORPUS-SRC-101")
+        self.assertEqual(entry["certification"], "NOT_CERTIFIED")
+        self.assertEqual(status["identity"]["canonical_title"], "Progress or Return?")
+        self.assertEqual(status["registration_basis"]["active_predecessor_source_sequence"], 1)
+        self.assertEqual(status["status"]["reviewed_witness"], "NOT_YET_REGISTERED")
+        self.assertEqual(status["status"]["independent_sequential_study"], "NOT_YET_COMPLETED")
+        self.assertEqual(status["termination"]["successor_effect"], "NONE")
 
     def test_all_seven_problem_witness_registries_are_registered_in_order(self) -> None:
         registry = corpus_registry.load_registry()

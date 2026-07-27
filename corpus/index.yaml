@@ -4,7 +4,7 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.1.0
+  version: 1.2.0
 
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
@@ -14,15 +14,16 @@ status:
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 
 revision_history:
-  predecessor_version: 1.0.0
-  predecessor_blob_sha: 41d13685f5390f89e33049a58345c2e50baf1954
+  predecessor_version: 1.1.0
+  predecessor_blob_sha: 4a29da6ddf088fe5c5cfea2b02b30a305d53acd8
   transformation: SUBSTANTIVE_FORWARD_REVISION
   reason: >
-    Register a reviewed University of Chicago Press paperback witness for Socrates and
-    Aristophanes, including edition identity, file fingerprint, searchable-OCR condition,
-    authoritative page-image rule, and a source-status record. Preserve the distinction
-    between original 1966 publication, reviewed 1980 edition, local filename, source text,
-    source-status record, and completed provisional study.
+    Register the first item-level source-status record for the active nineteen-source
+    Theologico-Political predecessor basis. The record establishes only the source identity,
+    date, predecessor sequence, derivative contribution statement, missing-witness condition,
+    and required next actions for Progress or Return?. It does not admit source text, complete
+    an independent reading, promote the predecessor synthesis, certify doctrine or migration,
+    activate a successor, or displace an active predecessor.
 
 purpose: >
   Provide deterministic discovery, source identity, documentary status, provenance,
@@ -110,7 +111,20 @@ source_entities:
       - Socrates' speech is not automatically Plato's final doctrine
       - historical accuracy and relation to the historical Socrates remain disputed
 
-  - {source_id: CORPUS-SRC-101, creator: Leo Strauss, canonical_title: 'Progress or Return?', date: 1952, entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[1]', item_level_source_status: INCOMPLETE, study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, athens-vs-jerusalem, ancients-vs-moderns]}
+  - source_id: CORPUS-SRC-101
+    creator: Leo Strauss
+    canonical_title: Progress or Return?
+    date: 1952
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[1]
+    source_status_record: CORPUS-STATUS-101
+    item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem, ancients-vs-moderns]
+    limits:
+      - publication venue, edition, pagination, file, fingerprint, and textual condition remain unverified
+      - the predecessor contribution statement is derivative and has not been retested against a reviewed witness
+      - this registration is not an independent sequential reconstruction
   - {source_id: CORPUS-SRC-102, creator: Leo Strauss, canonical_title: "Preface to Spinoza's Critique of Religion", canonical_aliases: ["Autobiographical Preface to Spinoza's Critique of Religion"], date: 1965, entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[2]', item_level_source_status: INCOMPLETE, study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, athens-vs-jerusalem, ancients-vs-moderns]}
   - {source_id: CORPUS-SRC-103, creator: Leo Strauss, canonical_title: "How to Study Spinoza's Theologico-Political Treatise", date: 1948, entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[3]', item_level_source_status: INCOMPLETE, study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, wise-vs-vulgar]}
   - {source_id: CORPUS-SRC-104, creator: Leo Strauss, canonical_title: 'Preface to Isaac Husik, Philosophical Essays', date: 1952, entity_type: REGISTERED_STRAUSS_WRITING, registration_basis: 'problems/theologico-political.yaml#documentary_source_basis.sources[4]', item_level_source_status: INCOMPLETE, study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED, problem_bindings: [theologico-political, athens-vs-jerusalem]}
@@ -168,6 +182,7 @@ source_status_records:
   - {status_id: CORPUS-STATUS-001, source_id: CORPUS-SRC-002, path: studies/studies-in-platonic-political-philosophy/source-status.yaml, document_type: source_status_record, completion: REGISTERED_FOR_COMPLETED_PROVISIONAL_STUDY, certification: NOT_CERTIFIED}
   - {status_id: CORPUS-STATUS-002, source_id: CORPUS-SRC-003, path: studies/plato/apology/source-status.yaml, document_type: source_status_record, completion: COMPLETE_FOR_JOWETT_PROJECT_GUTENBERG_WITNESS, certification: NOT_CERTIFIED}
   - {status_id: CORPUS-STATUS-003, source_id: CORPUS-SRC-001, path: studies/socrates-and-aristophanes/source-status.yaml, document_type: source_status_record, completion: REGISTERED_FOR_REVIEWED_1980_PAPERBACK_AND_COMPLETED_PROVISIONAL_STUDY, certification: NOT_CERTIFIED}
+  - {status_id: CORPUS-STATUS-101, source_id: CORPUS-SRC-101, path: studies/theologico-political/progress-or-return/source-status.yaml, document_type: source_status_record, completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS, certification: NOT_CERTIFIED}
 
 study_records:
   - {study_id: CORPUS-STUDY-001, source_id: CORPUS-SRC-001, path: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml, record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION, completion: SEQUENTIAL_READING_COMPLETE, certification: NOT_CERTIFIED}
@@ -202,17 +217,17 @@ repository_documentary_artifacts:
 coverage:
   source_entities_registered: 22
   reviewed_witnesses_registered: 3
-  source_status_records_registered: 3
+  source_status_records_registered: 4
   study_records_registered: 7
   problem_witness_registries_registered: 7
   theologico_political_predecessor_sources_registered: 19
-  current_studies_tree_yaml_records_accounted_for: 10
+  current_studies_tree_yaml_records_accounted_for: 11
   exhaustive_within_declared_scope: true
 
 corpus_gaps:
   - {gap_id: CORPUS-GAP-001, category: STRAUSS_BIBLIOGRAPHY, statement: 'The registry does not yet contain an item-level record for every work by Leo Strauss.', effect: CORPUS_REMAINS_OPEN}
   - {gap_id: CORPUS-GAP-002, category: EDITION_COMPARISON, statement: 'The reviewed 1980 University of Chicago Press paperback of Socrates and Aristophanes is registered, but comparison with the 1966 Basic Books printing remains pending.', effect: EDITION_SPECIFIC_DIFFERENCES_NOT_YET_TESTED}
-  - {gap_id: CORPUS-GAP-003, category: ITEM_LEVEL_SOURCE_STATUS, statement: 'Most of the nineteen Theologico-Political predecessor writings lack separate source-status records and independent sequential studies.', effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL}
+  - {gap_id: CORPUS-GAP-003, category: ITEM_LEVEL_SOURCE_STATUS, statement: 'Progress or Return? now has a source-identity status record without a reviewed witness; the remaining eighteen Theologico-Political predecessor writings still lack separate source-status records, and all nineteen require independent sequential studies unless otherwise documented.', effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL}
   - {gap_id: CORPUS-GAP-004, category: INDEPENDENT_CLASSICAL_WITNESSES, statement: 'Direct Aristophanes and Xenophon studies and most Platonic dialogue studies remain pending.', effect: FINAL_COMPARATIVE_RANKING_BLOCKED}
   - {gap_id: CORPUS-GAP-005, category: BIBLICAL_AND_MEDIEVAL_WITNESSES, statement: 'Biblical, Maimonidean, Farabian, Spinozist, Hobbesian, and other independent primary-text corpora remain incomplete.', effect: THEOLOGICO_POLITICAL_AND_ATHENS_JERUSALEM_COMPLETION_BLOCKED}
   - {gap_id: CORPUS-GAP-006, category: TRANSLATION_AND_ORIGINAL_LANGUAGE, statement: "Plato's Apology requires verified Greek-text and translation alignment.", effect: WORDING_DEPENDENT_FINDINGS_REMAIN_REVISABLE}
@@ -226,6 +241,7 @@ validation_rules:
   - the active Theologico-Political predecessor must match its preserved copy
   - every canonical problem must have one registered witness registry
   - the SPPP and Socrates and Aristophanes witness fingerprints must match their source-status records
+  - the Progress or Return? source-status identity, title, date, predecessor sequence, missing-witness condition, and noncertification state must match its registry entry
   - counts in coverage must match registry contents
   - source inclusion may not change certification, migration, or activation status
   - complete current-state indexing may not be described as a complete corpus
@@ -235,7 +251,8 @@ termination:
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
   certification: NOT_CERTIFIED
   next_required_units:
-    - create item-level source-status records for the nineteen Theologico-Political writings
+    - create item-level source-status records for the remaining eighteen Theologico-Political writings
+    - identify and register a reviewed Progress or Return? witness before source-level reconstruction
     - compare the reviewed Socrates and Aristophanes paperback with the 1966 Basic Books printing where later precision requires it
     - expand independent Aristophanes, Plato, Xenophon, biblical, medieval, and modern witness studies
     - preserve all later additions through forward registry revision
