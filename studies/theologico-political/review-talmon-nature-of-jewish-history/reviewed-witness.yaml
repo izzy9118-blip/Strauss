@@ -1,0 +1,110 @@
+schema_version: 1.0
+document_type: reviewed_item_witness_record
+
+identity:
+  witness_id: CORPUS-WIT-111
+  source_id: CORPUS-SRC-111
+  title: Reviewed item witness — Review of J. L. Talmon, The Nature of Jewish History
+  version: 1.0.0
+
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
+  certification: NOT_CERTIFIED
+  independent_sequential_study: NOT_YET_COMPLETED
+  original_1957_edition_comparison: PENDING
+  source_text_admission: NOT_REQUESTED
+  successor_effect: NONE
+
+source_identity:
+  author: Leo Strauss
+  canonical_title: Review of J. L. Talmon, The Nature of Jewish History
+  collected_title: Review of J. L. Talmon, The Nature of Jewish History—Its Universal Significance
+  date: 1957
+  corpus_source_id: CORPUS-SRC-111
+  source_status_id: CORPUS-STATUS-111
+
+reviewed_work_identity:
+  author: J. L. Talmon
+  title: The Nature of Jewish History—Its Universal Significance
+  publisher: Hillel Foundation
+  publication_place: London
+  publication_year: 1957
+  reviewed_work_witness_state: NOT_REGISTERED
+  rule: >
+    The bibliographic identity of Talmon's book is recorded from Strauss's item footnote.
+    The book itself is not a reviewed witness in this repository, and Strauss's report of
+    Talmon's argument may not substitute for independent reconstruction of Talmon's work.
+
+publication_provenance:
+  original_review_publication:
+    journal: Journal of Modern History
+    volume: 29
+    issue: 3
+    year: 1957
+    copyright_holder: University of Chicago
+  collected_reprint:
+    title: Studies in Platonic Political Philosophy
+    publisher: University of Chicago Press
+    year: 1983
+  evidence: Item footnote on printed page 232 of the reviewed collected witness.
+
+container_witness:
+  container_source_id: CORPUS-SRC-002
+  container_witness_id: CORPUS-WIT-001
+  local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  container_page_count: 263
+  container_file_size_bytes: 12551057
+  container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+
+item_locators:
+  printed_page_range: {start: 232, end: 232}
+  pdf_page_range_one_based: {start: 236, end: 236}
+  item_completeness: COMPLETE_ONE_PAGE_COLLECTED_ITEM
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1983_COLLECTED_ITEM
+
+textual_condition:
+  searchable_text: true
+  page_images_available: true
+  wording_rule: PAGE_IMAGE_GOVERNS_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  original_1957_journal_printing_compared: false
+
+jurisdiction_and_limits:
+  governing_problem: theologico-political
+  additional_problem_bindings: [athens-vs-jerusalem, ancients-vs-moderns]
+  distinctions:
+    - Strauss's review is distinct from Talmon's reviewed work.
+    - Talmon's reported claims are distinct from Strauss's judgment and concluding request.
+    - Historical constitution by belief is distinct from theological proof of election.
+    - Inadequacy of economic and psychological reduction is distinct from acceptance of providence.
+    - Jewish particularity is distinct from ethnic pride.
+    - Political statehood is distinct from resolution of Jewish existence.
+    - Review occasion is distinct from posthumous collection placement.
+    - Witness registration is distinct from sequential reconstruction and independent corroboration.
+  non_effects:
+    - no source-level proposition promotion
+    - no independent Talmon reconstruction
+    - no predecessor synthesis confirmation
+    - no doctrinal certification
+    - no migration certification
+    - no successor activation
+    - no predecessor displacement
+
+next_required_action:
+  action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  range: printed page 232
+  prerequisites_satisfied: REVIEWED_ITEM_WITNESS_REGISTERED
+  remaining_requirements:
+    - distinguish Talmon's reported argument from Strauss's explicit judgments
+    - reconstruct the complete one-page review in textual order
+    - classify documented findings, supported inferences, uncertainty, and predecessor qualifications with locators
+    - compare with the active predecessor only after source-level reconstruction
+    - compare the original 1957 Journal of Modern History printing when available
+    - independently reconstruct Talmon's book before treating the reported thesis as Talmon's complete doctrine
+
+termination:
+  witness_state: REGISTERED
+  study_state: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
