@@ -1,0 +1,119 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: TP-COHEN-001
+  problem: theologico-political
+  source_study: COHEN-STUDY-001
+  title: The Theologico-Political Problem — Hermann Cohen, Religion of Reason
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_CERTIFIED_MIGRATION
+
+source:
+  source_id: CORPUS-SRC-105
+  witness_id: CORPUS-WIT-105
+  source_status: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
+  witness_record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/reviewed-witness.yaml
+  study_path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication_evidence: Introduction to the Frederick Ungar English translation, New York, 1972
+  printed_pages: 233-247
+  original_edition_comparison: PENDING
+
+relation_to_existing_problem:
+  active_predecessor: problems/theologico-political.yaml
+  successor_draft: problems/theologico-political/problem.yaml
+  predecessor_synthesis: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+  relation: RETESTS_QUALIFIES_AND_SUPPLIES_WITHOUT_REPLACING
+  governing_rule: >
+    The active predecessor remains authoritative and historically preserved. This source-local
+    synthesis may confirm, qualify, or challenge predecessor propositions, but no proposition
+    is migrated, certified, activated, or used to displace the predecessor by this record.
+
+strict_problem_contribution:
+  governing_claim: >
+    Strauss presents Cohen's religion of reason as a powerful modern attempt to reconcile Judaism
+    with autonomous philosophy and culture. The attempt preserves religious functions and Jewish
+    fidelity, but transforms historical revelation, absolute obedience, sacred law, messianism,
+    resurrection, and political restoration through ethical idealization and progress.
+  documented_findings:
+    - Cohen excludes revealed truths and laws in their precise traditional sense by redefining revelation as the creation of reason.
+    - Creation and revelation are spiritualized into continuous rational and moral development rather than unique free divine acts.
+    - Strauss identifies the disappearance of absolute obedience as a decisive limit of the religion of reason.
+    - Sacred law remains educational and sanctifying but becomes examinable and symbolic under the method of ethics.
+    - Religion supplies individuality, guilt, repentance, forgiveness, love, fidelity, and sanctification without being permitted to overturn autonomy.
+    - Israel's election and suffering are universalized through witness, martyrdom, mankind, and historical progress.
+    - Strauss concludes with gratitude for Cohen's Jewish fidelity and practical service without certifying Cohen's reconciliation.
+  supported_inferences:
+    - Rational reconciliation preserves religious vocabulary partly by transforming the authority those terms traditionally claim.
+    - The final praise qualifies but does not erase the critique; dignity and doctrinal adequacy are distinct judgments.
+    - Catastrophe tests the modern belief in progress without proving revelation or providence.
+
+predecessor_reconciliation:
+  state: PROVISIONAL_NO_PROMOTION
+  confirmations:
+    - reason and revelation remain rival authorities even where modern theology uses philosophic language
+    - absolute obedience cannot be silently identified with autonomous ethics
+    - divine law and political circumstance belong to the reason-revelation conflict
+    - historical progress cannot certify comprehensive truth
+  qualifications:
+    - Cohen's project cannot be reduced to simple secularization because religion retains functions not supplied by ethics alone
+    - Athens versus Jerusalem and Ancients versus Moderns retain irreducible jurisdictions
+    - final gratitude prevents criticism from becoming dismissal of Cohen's fidelity or service
+  unresolved:
+    - Cohen's own primary texts remain independently unreconstructed
+    - the 1972 printing has not been compared with the reviewed 1983 reprint
+    - Strauss's final judgment on every possible reconciliation is not established by this item alone
+  migration_effect: NONE
+
+brother_and_adjacent_problem_rules:
+  philosophy_vs_poetry:
+    relation: BOUNDARY_REFERENCE_ONLY
+    supplied_finding: Torah, prophecy, and revelation may not be reclassified as poetic construction.
+    non_absorption: Poetry is not revelation; poetic theology is not divine command.
+  athens_vs_jerusalem:
+    relation: COACTIVATED_CONCRETE_ALTERNATIVES
+    supplied_findings:
+      - Judaism and culture
+      - Torah and derekh eretz
+      - Jewish fidelity and universal mankind
+    non_absorption: The concrete alternatives may not be reduced to the abstract authority conflict alone.
+  ancients_vs_moderns:
+    relation: COACTIVATED_TRANSFORMATION_PROBLEM
+    supplied_findings:
+      - Kantian autonomy and historical progress transform inherited Jewish categories
+      - Cohen's readings of Maimonides and biblical law require ancient-modern comparison
+    non_absorption: The modern transformation problem does not settle revelation's truth.
+
+source_and_evidence_limits:
+  - COHEN-STUDY-001 reconstructs Strauss's essay, not Cohen's complete doctrine.
+  - The reviewed witness is the 1983 collected reprint, not a separately compared 1972 printing.
+  - Pangle's Introduction is secondary and cannot govern Strauss's argument.
+  - Agreement among records derived from this witness is not independent corroboration.
+  - No historical catastrophe establishes revelation, providence, or philosophic victory.
+
+prohibitions:
+  - no rational transformation treated as demonstrated reconciliation
+  - no moral overlap treated as identity of reason and revelation
+  - no praise treated as cancellation of criticism
+  - no suffering, martyrdom, survival, statehood, or catastrophe treated as proof of providence
+  - no poetic theology treated as revelation
+  - no source-specific synthesis treated as doctrinal certification
+  - no predecessor displacement or successor activation
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  predecessor_status: UNCHANGED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - independent reconstruction of Cohen's Religion of Reason, Ethics, and System of Philosophy
+    - independent biblical, Maimonidean, Platonic, Kantian, and political witness studies
+    - original 1972 edition comparison
+    - proposition-level migration classification only after adequate source coverage

@@ -1,0 +1,118 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVJ-COHEN-001
+  problem: athens-vs-jerusalem
+  source_study: COHEN-STUDY-001
+  title: Athens vs. Jerusalem — Hermann Cohen, Religion of Reason
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_id: CORPUS-SRC-105
+  witness_id: CORPUS-WIT-105
+  source_status: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
+  study_path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication_evidence: Introduction to the Frederick Ungar English translation, New York, 1972
+  printed_pages: 233-247
+  original_edition_comparison: PENDING
+
+strict_problem: >
+  Can Judaism remain a concrete life of revelation, Torah, obedience, election, prayer,
+  suffering, and fidelity while being harmonized with autonomous reason, modern culture,
+  ethical universalism, liberal politics, and historical progress?
+
+reconstructed_alternatives:
+  jerusalem:
+    claims:
+      - historical revelation and divine command
+      - absolute obedience and sacred law
+      - election, covenant, prayer, martyrdom, and fidelity to a particular people
+      - messianic fulfillment, resurrection, and political restoration as inherited possibilities
+  modern_philosophic_culture:
+    claims:
+      - autonomous morality and scientific philosophy
+      - revelation as creation of reason rather than historical act
+      - universal mankind and indefinite ethical progress
+      - liberal participation, socialism, secular scholarship, and art
+  cohenian_mediation:
+    method: idealization or spiritualization of Judaism through ethical reason
+    aim: harmony between Judaism and culture, Torah and derekh eretz
+    unresolved_cost: traditional claims are preserved morally while their historical, miraculous, obedient, legal, and political meanings are transformed
+
+principal_findings:
+  - Cohen refuses both the claim that Judaism merely happens to contain religion of reason and the claim that Judaism is the absolute religion.
+  - Judaism becomes the source and original teacher of a universal religion of reason.
+  - Platonic and especially Kantian philosophy are said to help Judaism actualize what it fundamentally meant from the beginning.
+  - Absolute obedience, unique historical revelation, literal resurrection, miraculous messianism, and unqualified sacred-law authority do not survive unchanged.
+  - Jewish particularity remains through prayer, Torah study, congregation, self-isolation, suffering, martyrdom, fidelity, and gratitude.
+  - Israel is universalized as witness and servant of mankind rather than simply restored as a political nation.
+  - Strauss honors Cohen's Jewish fidelity while exposing the dependence of his practical settlement on liberal political conditions.
+
+jurisdiction_and_non_absorption:
+  owns:
+    - Judaism and modern culture as concrete comprehensive orientations
+    - Torah and derekh eretz
+    - Jewish particularity and universal mankind
+    - election, exile, restoration, assimilation, Zionism, and fidelity
+    - obedient response and autonomous ethical self-legislation
+  theologico_political_reference:
+    relation: COACTIVATED_STRUCTURAL_AUTHORITY_PROBLEM
+    receives:
+      - historical revelation versus religion of reason
+      - divine law and absolute obedience versus autonomy
+    non_absorption: Athens versus Jerusalem may not absorb the complete jurisdiction of revelation, prophecy, theology, or political sovereignty.
+  ancients_vs_moderns_reference:
+    relation: COACTIVATED_TRANSFORMATION_PROBLEM
+    receives:
+      - Platonic, Maimonidean, and Kantian mediations
+      - progress, liberalism, modern culture, and catastrophe
+    non_absorption: The ancient-modern conflict may not replace the concrete Jewish question.
+  philosophy_vs_poetry_reference:
+    relation: BOUNDARY_REFERENCE_ONLY
+    non_absorption: Torah, prophecy, and revelation are not poetic constructions.
+
+speech_and_deed_result:
+  explicit_speech: Strauss presents himself as a limited mediator offering reflections from a renewed reading.
+  textual_deed: He follows Cohen's attempt through the whole range of Jewish doctrine, practice, history, and modern political existence.
+  relation: MODEST_SELF_DESCRIPTION_QUALIFIED_BY_SUBSTANTIVE_DEED
+  conclusion: >
+    Strauss's final gratitude confirms Cohen's dignity and Jewish service while leaving open
+    whether Cohen preserved Jerusalem or transformed it under the standards of modern Athens.
+
+unresolved_questions:
+  - whether ethical idealization preserves the essence of Judaism or replaces revelation with rational idealism
+  - whether Jewish fidelity can endure when sacred law and historical revelation lose their traditional authority
+  - whether participation in modern culture can be secured outside a liberal or liberalizing state
+  - whether Cohen's own primary texts qualify Strauss's reconstruction
+  - whether wording or emphasis changes in the original 1972 printing
+
+source_limits:
+  - COHEN-STUDY-001 is a source-specific reconstruction of Strauss's essay, not independent Cohen corroboration.
+  - Pangle's Introduction is secondary and cannot govern Strauss's essay.
+  - The reviewed witness is the 1983 collected reprint; original 1972 comparison remains pending.
+  - Source-level findings remain provisional pending independent Jewish, philosophic, and historical witness expansion.
+
+prohibitions:
+  - no ethical overlap treated as comprehensive identity
+  - no universalism treated as cancellation of Jewish particularity
+  - no suffering, survival, statehood, or catastrophe treated as proof of providence
+  - no inability to preserve traditional revelation treated as proof that revelation is false
+  - no poetry identified with revelation
+  - no doctrine, migration, or successor certification
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - independent reconstruction of Cohen and the Jewish sources he interprets
+    - original 1972 edition comparison
+    - later migration validation with the broader Theologico-Political and Ancients-versus-Moderns problems

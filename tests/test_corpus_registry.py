@@ -9,7 +9,7 @@ class CorpusRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_repository_state(self) -> None:
         registry = corpus_registry.load_registry()
         self.assertEqual(corpus_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.6.0")
+        self.assertEqual(registry["identity"]["version"], "1.7.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE",
@@ -37,9 +37,10 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertTrue(corpus_registry.BASE_REQUIRED_STUDY_PATHS.issubset(actual))
         self.assertEqual(
             registry["coverage"]["current_studies_tree_yaml_records_accounted_for"],
-            30,
+            32,
         )
-        self.assertEqual(registry["coverage"]["study_records_registered"], 8)
+        self.assertEqual(registry["coverage"]["study_records_registered"], 9)
+        self.assertEqual(registry["coverage"]["reviewed_witnesses_registered"], 5)
 
     def test_nineteen_tp_sources_preserve_predecessor_identity(self) -> None:
         registry = corpus_registry.load_registry()
@@ -61,7 +62,7 @@ class CorpusRegistryTests(unittest.TestCase):
             19,
         )
 
-    def test_eighteen_tp_sources_remain_without_witness_or_study(self) -> None:
+    def test_seventeen_tp_sources_remain_without_witness_or_study(self) -> None:
         registry = corpus_registry.load_registry()
         entries = {
             item["source_id"]: item
@@ -72,9 +73,9 @@ class CorpusRegistryTests(unittest.TestCase):
             item
             for item in registry["source_entities"]
             if corpus_registry._tp_sequence_from_source_id(item["source_id"]) is not None
-            and item["source_id"] != "CORPUS-SRC-109"
+            and item["source_id"] not in corpus_registry.COMPLETE_TP_ITEMS
         ]
-        self.assertEqual(len(sources), 18)
+        self.assertEqual(len(sources), 17)
         for source in sources:
             status = corpus_registry.load_yaml(
                 corpus_registry._resolve(entries[source["source_id"]]["path"])
@@ -92,48 +93,93 @@ class CorpusRegistryTests(unittest.TestCase):
             self.assertEqual(status["termination"]["certification"], "NOT_CERTIFIED")
             self.assertEqual(status["termination"]["successor_effect"], "NONE")
 
-    def test_jerusalem_and_athens_witness_and_study_are_distinct_and_registered(self) -> None:
+    def _assert_complete_item(
+        self,
+        *,
+        source_id: str,
+        witness_id: str,
+        corpus_study_id: str,
+        internal_study_id: str,
+        printed_range: dict[str, int],
+        pdf_range: dict[str, int],
+    ) -> None:
         registry = corpus_registry.load_registry()
         source = next(
-            item for item in registry["source_entities"]
-            if item["source_id"] == "CORPUS-SRC-109"
+            item for item in registry["source_entities"] if item["source_id"] == source_id
         )
         entry = next(
-            item for item in registry["source_status_records"]
-            if item["status_id"] == "CORPUS-STATUS-109"
+            item
+            for item in registry["source_status_records"]
+            if item["source_id"] == source_id
         )
         witness = next(
-            item for item in registry["reviewed_witnesses"]
-            if item["witness_id"] == "CORPUS-WIT-109"
+            item
+            for item in registry["reviewed_witnesses"]
+            if item["witness_id"] == witness_id
         )
         study = next(
-            item for item in registry["study_records"]
-            if item["study_id"] == "CORPUS-STUDY-008"
+            item
+            for item in registry["study_records"]
+            if item["study_id"] == corpus_study_id
         )
         status = corpus_registry.load_yaml(corpus_registry._resolve(entry["path"]))
         study_record = corpus_registry.load_yaml(corpus_registry._resolve(study["path"]))
 
-        self.assertEqual(source["reviewed_witnesses"], ["CORPUS-WIT-109"])
-        self.assertEqual(source["study_records"], ["CORPUS-STUDY-008"])
-        self.assertEqual(witness["printed_page_range"], {"start": 147, "end": 173})
-        self.assertEqual(witness["pdf_page_range_one_based"], {"start": 151, "end": 177})
+        self.assertEqual(source["reviewed_witnesses"], [witness_id])
+        self.assertEqual(source["study_records"], [corpus_study_id])
+        self.assertEqual(witness["printed_page_range"], printed_range)
+        self.assertEqual(witness["pdf_page_range_one_based"], pdf_range)
         self.assertEqual(
             witness["container_sha256"],
             "8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6",
         )
-        self.assertEqual(status["status"]["reviewed_witness"], "CORPUS-WIT-109")
-        self.assertEqual(status["status"]["independent_sequential_study"], "JA-STUDY-001")
+        self.assertEqual(status["status"]["reviewed_witness"], witness_id)
+        self.assertEqual(
+            status["status"]["independent_sequential_study"], internal_study_id
+        )
         self.assertEqual(status["termination"]["study_state"], "COMPLETE_PROVISIONAL")
-        self.assertEqual(status["termination"]["study_id"], "JA-STUDY-001")
+        self.assertEqual(status["termination"]["study_id"], internal_study_id)
         self.assertEqual(status["termination"]["independent_corroboration"], "INCOMPLETE")
         self.assertEqual(status["termination"]["certification"], "NOT_CERTIFIED")
         self.assertEqual(status["termination"]["successor_effect"], "NONE")
-        self.assertEqual(study_record["identity"]["id"], "JA-STUDY-001")
+        self.assertEqual(study_record["identity"]["id"], internal_study_id)
         self.assertEqual(
             study_record["termination"]["reading_state"],
             "COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS",
         )
-        self.assertTrue(study_record["termination"]["original_edition_comparison_required"])
+        self.assertEqual(study_record["status"]["certification"], "NOT_CERTIFIED")
+
+    def test_jerusalem_and_athens_witness_and_study_are_distinct_and_registered(self) -> None:
+        self._assert_complete_item(
+            source_id="CORPUS-SRC-109",
+            witness_id="CORPUS-WIT-109",
+            corpus_study_id="CORPUS-STUDY-008",
+            internal_study_id="JA-STUDY-001",
+            printed_range={"start": 147, "end": 173},
+            pdf_range={"start": 151, "end": 177},
+        )
+
+    def test_cohen_witness_and_study_are_distinct_and_registered(self) -> None:
+        self._assert_complete_item(
+            source_id="CORPUS-SRC-105",
+            witness_id="CORPUS-WIT-105",
+            corpus_study_id="CORPUS-STUDY-009",
+            internal_study_id="COHEN-STUDY-001",
+            printed_range={"start": 233, "end": 247},
+            pdf_range={"start": 237, "end": 251},
+        )
+        registry = corpus_registry.load_registry()
+        witness = next(
+            item
+            for item in registry["reviewed_witnesses"]
+            if item["witness_id"] == "CORPUS-WIT-105"
+        )
+        witness_record = corpus_registry.load_yaml(
+            corpus_registry._resolve(witness["witness_record_path"])
+        )
+        self.assertEqual(witness_record["identity"]["witness_id"], "CORPUS-WIT-105")
+        self.assertEqual(witness_record["status"]["certification"], "NOT_CERTIFIED")
+        self.assertEqual(witness_record["status"]["successor_effect"], "NONE")
 
     def test_tp_aliases_and_registered_scopes_remain_attached(self) -> None:
         registry = corpus_registry.load_registry()
@@ -143,10 +189,16 @@ class CorpusRegistryTests(unittest.TestCase):
             for item in registry["source_status_records"]
             if corpus_registry._tp_sequence_from_source_id(item["source_id"]) is not None
         }
-        for sequence, original in enumerate(predecessor["documentary_source_basis"]["sources"], start=1):
+        for sequence, original in enumerate(
+            predecessor["documentary_source_basis"]["sources"], start=1
+        ):
             source_id = f"CORPUS-SRC-{100 + sequence:03d}"
-            source = next(item for item in registry["source_entities"] if item["source_id"] == source_id)
-            status = corpus_registry.load_yaml(corpus_registry._resolve(entries[source_id]["path"]))
+            source = next(
+                item for item in registry["source_entities"] if item["source_id"] == source_id
+            )
+            status = corpus_registry.load_yaml(
+                corpus_registry._resolve(entries[source_id]["path"])
+            )
             if original.get("canonical_alias"):
                 self.assertIn(original["canonical_alias"], source["canonical_aliases"])
                 self.assertIn(original["canonical_alias"], status["identity"]["canonical_aliases"])
@@ -156,7 +208,9 @@ class CorpusRegistryTests(unittest.TestCase):
 
     def test_posthumous_collection_editorial_limits_are_preserved(self) -> None:
         registry = corpus_registry.load_registry()
-        sppp = next(item for item in registry["source_entities"] if item["source_id"] == "CORPUS-SRC-002")
+        sppp = next(
+            item for item in registry["source_entities"] if item["source_id"] == "CORPUS-SRC-002"
+        )
         limits = "\n".join(sppp["limits"])
         self.assertIn("intended introduction", limits)
         self.assertIn("projected essay on Plato's Gorgias", limits)

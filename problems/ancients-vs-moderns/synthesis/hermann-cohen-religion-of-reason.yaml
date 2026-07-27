@@ -1,0 +1,110 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVM-COHEN-001
+  problem: ancients-vs-moderns
+  source_study: COHEN-STUDY-001
+  title: Ancients vs. Moderns — Hermann Cohen, Religion of Reason
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_id: CORPUS-SRC-105
+  witness_id: CORPUS-WIT-105
+  source_status: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
+  study_path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication_evidence: Introduction to the Frederick Ungar English translation, New York, 1972
+  printed_pages: 233-247
+  original_edition_comparison: PENDING
+
+strict_problem: >
+  Does modern ethical idealism complete the rational and moral intention of Judaism, or does
+  it reinterpret ancient revelation, law, obedience, messianism, resurrection, and political
+  restoration according to modern autonomy, culture, universal history, and progress?
+
+principal_findings:
+  - Cohen presents Platonic and above all Kantian philosophy as enabling Judaism to actualize what it fundamentally meant.
+  - Modern autonomy governs the permissible interpretation of revelation, law, grace, suffering, and redemption.
+  - Strauss contrasts Cohen with medieval authorities where absolute obedience and divine command retain irreducible rank.
+  - Cohen's messianism becomes an indefinitely open historical future and natural ethical progress.
+  - Resurrection and immortality are interpreted through collective historical continuity and moral renewal.
+  - Political restoration and literal prophetic expectations are idealized away in favor of universal mankind and stateless witness.
+  - Plato's Statesman supplies an ancient question about law that Strauss says Cohen does not fully confront.
+  - Twentieth-century catastrophe exposes the political and historical limits of confidence in liberal progress without proving an ancient or revealed alternative.
+
+ancient_modern_articulations:
+  ancient_and_medieval:
+    - Platonic questioning of law
+    - Maimonidean creation, prophecy, command, punishment, messianism, and political restoration
+    - Abrahamic obedience as a limit case for autonomous ethics
+  modern:
+    - Kantian autonomy and ethical idealism
+    - culture as science, secular scholarship, morality, democratic-socialist politics, and art
+    - universal history and indefinite progress
+    - liberal participation and emancipation
+  governing_tension: >
+    The modern account claims to release the rational essence of Judaism from myth and
+    irrelevance, but the release may alter the authority and content of the inherited teaching.
+
+jurisdiction_and_non_absorption:
+  owns:
+    - ancient and medieval standards versus modern ethical idealism
+    - autonomy, culture, progress, liberalism, socialism, and catastrophe
+    - transformations of law, messianism, resurrection, and political restoration
+  theologico_political_reference:
+    relation: COACTIVATED_AUTHORITY_PROBLEM
+    receives:
+      - reason, revelation, command, and sacred law
+    non_absorption: Ancients versus Moderns may not decide revelation's truth by chronology or historical success.
+  athens_vs_jerusalem_reference:
+    relation: COACTIVATED_CONCRETE_ALTERNATIVES
+    receives:
+      - Judaism and culture
+      - Torah and derekh eretz
+      - fidelity and universal mankind
+    non_absorption: The concrete alternatives may not be reduced to a periodization dispute.
+
+speech_and_deed_result:
+  explicit_speech: Strauss limits himself to reflections from renewed reading and does not claim exhaustive mediation.
+  textual_deed: He tests modern rational transformation through ancient, medieval, biblical, ethical, political, and catastrophic counterpoints.
+  relation: MODEST_SELF_DESCRIPTION_QUALIFIED_BY_COMPARATIVE_DEED
+  conclusion: >
+    Cohen's modernity is neither dismissed nor certified. Strauss preserves its speculative
+    power, Jewish dignity, and practical service while exposing unresolved losses and historical limits.
+
+unresolved_questions:
+  - whether Cohen's idealization continues an authentic inner development of Judaism or imposes modern standards upon it
+  - whether autonomous ethics can preserve divine action, command, grace, and sacred law without contradiction
+  - whether catastrophe refutes progress philosophically or only exposes its political fragility
+  - how Cohen's own texts and the ancient sources qualify Strauss's account
+  - whether wording or emphasis changes in the original 1972 printing
+
+source_limits:
+  - COHEN-STUDY-001 reconstructs Strauss's essay rather than independently establishing Cohen, Kant, Plato, or Maimonides.
+  - The reviewed witness is the 1983 collected reprint; original 1972 comparison remains pending.
+  - Pangle's Introduction is secondary and cannot govern Strauss's argument.
+  - Historical outcome does not itself establish philosophical superiority.
+
+prohibitions:
+  - no chronological priority treated as truth
+  - no modern success or catastrophe treated as sufficient philosophical proof
+  - no Kantian transformation treated as demonstrated preservation of revelation
+  - no ancient authority treated as self-certifying
+  - no poetry identified with revelation
+  - no doctrine, migration, or successor certification
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - independent reconstruction of Cohen, Kant, Plato, Maimonides, and the biblical sources
+    - original 1972 edition comparison
+    - later migration validation with Theologico-Political and Athens-versus-Jerusalem jurisdictions preserved
