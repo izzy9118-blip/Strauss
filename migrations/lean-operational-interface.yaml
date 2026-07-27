@@ -4,7 +4,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 0.2.0
+  version: 0.3.0
 
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
@@ -14,12 +14,12 @@ status:
   destructive_actions_authorized: false
 
 revision_history:
-  predecessor_version: 0.1.0
-  predecessor_blob_sha: 3f43ecb5a70c47a8e294f4944324b86540bcf581
+  predecessor_version: 0.2.0
+  predecessor_blob_sha: e9b026259503f759134c3e00219195dbbfcfd630
   reason: >
-    Correct the earlier completion language so that path resolution and passing loader
-    tests establish a valid interface skeleton only. Register the operational
-    completeness audit and the substantive forward revision of the speech mechanism.
+    Register all six hermeneutic interface records as substantive operational contracts
+    while preserving source-specific application, method, problem, corpus, findings,
+    doctrinal certification, and activation as incomplete.
 
 source_state:
   repository: izzy9118-blip/Strauss
@@ -35,6 +35,7 @@ source_state:
 
 completion_audit:
   path: audits/operational-completeness.yaml
+  version: 1.1.0
   rule: >
     Every lean operational object must expose whether it is substantively reconstructed,
     partially reconstructed, mapped to richer records, a structural placeholder, or
@@ -48,6 +49,7 @@ mapping_rules:
   - Duplicate doctrine is prohibited; interface records point to governing sources instead of copying complete problem constitutions.
   - Interface validity and semantic completeness are distinct states.
   - Forward revision must preserve predecessor blob identity and explain the substantive change.
+  - Contract reconstruction does not complete source-specific application.
 
 mappings:
   problems:
@@ -69,21 +71,34 @@ mappings:
   hermeneutics:
     target_role: interpretive_reading_disciplines
     source:
+      - protocols/source-status.yaml
+      - protocols/evidence-classification.yaml
+      - protocols/inference-discipline.yaml
+      - protocols/uncertainty-preservation.yaml
       - protocols/speech-and-deed.yaml
       - protocols/irony.yaml
       - protocols/comedy.yaml
       - protocols/audience-and-rhetoric.yaml
-      - protocols/inference-discipline.yaml
-      - protocols/uncertainty-preservation.yaml
+      - protocols/claimant-to-wisdom.yaml
     interface:
-      - hermeneutics/literary-concealment.yaml
-      - hermeneutics/whole-and-part.yaml
-      - hermeneutics/speaker-and-author.yaml
-      - hermeneutics/audience.yaml
-      - hermeneutics/contradiction.yaml
-      - hermeneutics/historical-and-philosophical-understanding.yaml
-    transformation: CONSOLIDATED_REFERENCE_LAYER
-    completion: MIXED_STRUCTURAL_PLACEHOLDERS_AND_MAPPINGS
+      - path: hermeneutics/literary-concealment.yaml
+        contract_version: STRAUSS-HERMENEUTIC-LC-1
+      - path: hermeneutics/whole-and-part.yaml
+        contract_version: STRAUSS-HERMENEUTIC-WP-1
+      - path: hermeneutics/speaker-and-author.yaml
+        contract_version: STRAUSS-HERMENEUTIC-SA-1
+      - path: hermeneutics/audience.yaml
+        contract_version: STRAUSS-HERMENEUTIC-AUD-1
+      - path: hermeneutics/contradiction.yaml
+        contract_version: STRAUSS-HERMENEUTIC-CON-1
+      - path: hermeneutics/historical-and-philosophical-understanding.yaml
+        contract_version: STRAUSS-HERMENEUTIC-HPU-1
+    transformation: SUBSTANTIVE_FORWARD_REVISION_OF_CONSOLIDATED_LAYER
+    completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
+    limit: >
+      The six contracts now govern inputs, evidence, application sequence, valid outputs,
+      prohibitions, uncertainty, termination, speech integration, and behavioral tests.
+      They do not complete interpretation of every registered source or work.
 
   method:
     target_role: inquiry_sequence
@@ -117,7 +132,7 @@ mappings:
     completion: PARTIALLY_RECONSTRUCTED
     contract_version: STRAUSS-SPEECH-CONTRACT-1
     limit: >
-      The contract now governs typed inputs, evidence, audience, speech and deed,
+      The contract governs typed inputs, evidence, audience, speech and deed,
       concealment, irony, comedy, uncertainty, output, failure, and termination. It does
       not automatically interpret sources or generate a completed natural-language answer.
 
@@ -149,12 +164,14 @@ mappings:
     interface:
       - adapter.py
       - tests/test_adapter.py
+      - tests/test_hermeneutics.py
       - .github/workflows/validate-lean-interface.yml
     transformation: NEW_OPERATIONAL_LAYER
     completion: PARTIALLY_RECONSTRUCTED
     limit: >
-      The adapter validates and structures candidate reports but does not perform
-      source interpretation, doctrinal certification, or authoritative Assembly admission.
+      The adapter validates and structures candidate reports, and tests validate speech
+      and hermeneutic contracts. The runtime does not perform source interpretation,
+      doctrinal certification, or authoritative Assembly admission.
 
 path_conflicts:
   - requested_path: problems/theologico-political.yaml
@@ -170,35 +187,41 @@ non_effects:
   - No source-specific finding is promoted beyond its recorded evidence status.
   - No Assembly authority is conferred; Sanctum validation remains separate.
   - Passing tests does not certify semantic completion or doctrine.
+  - Substantive hermeneutic contracts do not certify their source-specific applications.
 
 validation_states:
   structural_interface_valid_when:
     - manifest paths resolve
     - all declared YAML records parse
     - adapter validates manifest and speech contract
-    - unit and behavioral tests pass
+    - speech and hermeneutic contract tests pass
     - GitHub Actions passes on the implementing commit
   semantic_completion_requires:
-    - reconstruct the six hermeneutic objects as full operational contracts
     - reconstruct the four method objects as full operational contracts
     - complete problem-specific operational profiles and source relations
     - replace reference-only corpus and findings indexes with typed exhaustive registries
     - expand source-specific and independent-witness reconstructions
-    - validate actual candidate reports against the speech contract and Sanctum boundary
+    - validate actual candidate reports against method, hermeneutic, speech, and Sanctum boundaries
   doctrinal_certification_requires:
     - separate source-grounded and migration-specific certification records
     - preservation of dissent, contradiction, and uncertainty
     - no self-certification by repository, adapter, minister, or artificial intelligence
 
+completed_production_units:
+  - validated lean interface skeleton
+  - operational completeness audit v1.0.0
+  - substantive speech-mechanism contract
+  - semantic speech-request validation and candidate report structure
+  - speech behavioral tests
+  - all six substantive hermeneutic contracts
+  - hermeneutic contract behavioral tests
+
 next_production_units:
-  - validate and merge the speech-mechanism reconstruction and completeness audit
-  - reconstruct hermeneutics/literary-concealment.yaml
-  - reconstruct hermeneutics/audience.yaml
-  - reconstruct hermeneutics/whole-and-part.yaml
-  - reconstruct hermeneutics/speaker-and-author.yaml
-  - reconstruct hermeneutics/contradiction.yaml
-  - reconstruct hermeneutics/historical-and-philosophical-understanding.yaml
-  - reconstruct the four method objects
+  - reconstruct method/recover-question.yaml
+  - reconstruct method/reconstruct-alternatives.yaml
+  - reconstruct method/textual-order.yaml
+  - reconstruct method/preserve-problem.yaml
+  - complete problem-specific operational profiles and source relations
   - complete corpus and findings registries
 
 repinning_rule: >

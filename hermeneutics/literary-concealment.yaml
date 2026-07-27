@@ -1,20 +1,269 @@
 schema_version: 1.0
-record_type: hermeneutic_rule
-identity: {key: literary-concealment, version: 1.0.0}
+record_type: hermeneutic_contract
+
+identity:
+  key: literary-concealment
+  title: Literary Concealment Hermeneutic
+  version: 1.1.0
+  contract_version: STRAUSS-HERMENEUTIC-LC-1
+
+status:
+  lifecycle: OPERATIONAL_CONTRACT
+  semantic_completion: SUBSTANTIVELY_RECONSTRUCTED
+  source_specific_application: INCOMPLETE
+  certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: b9e648b03b804cc5f672e2a32f432f879ede977a
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the initial rule summary with a complete evidentiary contract governing
+    reserve, audience differentiation, omission, silence, indirection, irony, dramatic
+    action, persecution claims, valid findings, prohibitions, and termination.
+
 source_protocols:
+  - protocols/source-status.yaml
+  - protocols/evidence-classification.yaml
+  - protocols/inference-discipline.yaml
+  - protocols/uncertainty-preservation.yaml
   - protocols/irony.yaml
   - protocols/audience-and-rhetoric.yaml
   - protocols/speech-and-deed.yaml
+
+purpose: >
+  Determine whether and how a text qualifies, redirects, restrains, or conceals a
+  teaching through literary form while preventing obscurity, danger, contradiction,
+  or interpreter confidence from becoming automatic proof of an esoteric doctrine.
+
 governing_question: >
   Does the text qualify, redirect, or conceal its teaching through form, audience,
-  indirection, omission, irony, or dramatic action?
-rules:
-  - Concealment is an earned finding, never a default presumption.
-  - Irony is not mechanical inversion of an explicit statement.
-  - Danger, persecution, obscurity, or contradiction alone does not prove an esoteric teaching.
-  - Compare title, explicit claim, textual deed, audience, occasion, omission, and consequence.
-  - Preserve more than one plausible reading where the evidence does not decide.
+  indirection, omission, irony, dramatic action, or differentiated presentation; and
+  what is actually established about the content, function, and limits of that concealment?
+
+governing_rule: >
+  Concealment is an earned finding. It requires positive textual, dramatic,
+  structural, comparative, or historical evidence identifying the affected claim,
+  audience, function, and documentary layer. Where hidden content is not established,
+  preserve opacity rather than inventing the missing teaching.
+
+input_contract:
+  required_fields:
+    - source_ref
+    - documentary_status
+    - documentary_layer
+    - affected_claim
+    - exact_wording_or_action
+    - speaker_or_agent
+    - author_relation
+    - immediate_audience
+    - wider_audience
+    - occasion
+    - candidate_evidence
+    - alternatives_considered
+  source_ref_required_fields:
+    - ref
+    - commit
+    - location
+  candidate_evidence_required_fields:
+    - evidence_type
+    - description
+    - source_location
+    - relevance_to_concealment
+  allowed_evidence_types:
+    - audience_difference
+    - public_private_comparison
+    - restricted_open_comparison
+    - title_or_structural_placement
+    - omission_where_presence_expected
+    - silence_where_response_expected
+    - dramatic_action
+    - speech_and_deed_disparity
+    - supported_ironic_qualification
+    - explicit_statement_of_reserve
+    - persecution_or_censorship_context
+    - pedagogical_sequence
+    - foreseeable_misuse_or_corruption
+    - transformed_vocabulary
+  required_alternative_classes:
+    - literal_meaning
+    - ordinary_ambiguity
+    - error_or_inconsistency
+    - development_or_change
+    - audience_adaptation_without_hidden_doctrine
+    - editorial_or_documentary_layer_effect
+
+application_sequence:
+  - step_id: LC-STEP-001
+    operation: classify source status, edition, translation, editorial condition, and documentary layer
+  - step_id: LC-STEP-002
+    operation: identify the exact speaker, author relation, immediate audience, wider audience, and occasion
+  - step_id: LC-STEP-003
+    operation: reconstruct the literal wording or represented action before proposing concealment
+  - step_id: LC-STEP-004
+    operation: identify the precise claim allegedly qualified, redirected, restrained, or concealed
+  - step_id: LC-STEP-005
+    operation: record positive evidence rather than generalized suspicion
+  - step_id: LC-STEP-006
+    operation: compare title, order, structure, omission, silence, dramatic deed, and consequence
+  - step_id: LC-STEP-007
+    operation: compare public and restricted presentations where both exist
+  - step_id: LC-STEP-008
+    operation: reconstruct plausible literal, contextual, developmental, and documentary-layer alternatives
+  - step_id: LC-STEP-009
+    operation: determine whether the evidence establishes function without establishing hidden content
+  - step_id: LC-STEP-010
+    operation: assign the narrowest valid output and evidentiary class
+  - step_id: LC-STEP-011
+    operation: state what the finding does not establish
+  - step_id: LC-STEP-012
+    operation: preserve opacity, contradiction, or insufficient documentation where burdens remain unmet
+
+positive_evidence_threshold:
+  required: true
+  sufficient_pattern: >
+    At least one specific textual, dramatic, structural, comparative, or historical
+    datum must support concealment, and the interpretation must explain how that datum
+    bears on audience, function, or content. Multiple mutually reinforcing evidence
+    types are required for any claim of a determinate hidden teaching.
+  stronger_claim_requires:
+    concealed_function:
+      - affected claim identified
+      - audience difference or prudential function supported
+      - textual or historical evidence of restraint
+    concealed_content:
+      - determinate content supported by more than absence or ambiguity
+      - comparison with an alternate presentation or explicit structural evidence
+      - plausible literal and contextual alternatives answered
+      - documentary layer and author attribution secured
+  insufficient_by_itself:
+    - obscurity
+    - contradiction
+    - persecution
+    - danger
+    - censorship context
+    - authorial reputation for esotericism
+    - reader difficulty
+    - apparent modesty
+    - silence where no response was reasonably expected
+    - omission where the matter was not structurally due
+
+function_classes:
+  - pedagogical_restraint
+  - gradual_instruction
+  - audience_differentiation
+  - protection_of_inquiry
+  - protection_of_community
+  - avoidance_of_persecution
+  - prevention_of_foreseeable_misuse
+  - testing_of_reader
+  - preservation_of_literal_and_nonliteral_meaning
+  - dramatic_exposure_without_direct_assertion
+  - unresolved_function
+
+content_statuses:
+  - CONTENT_EXPLICITLY_RECOVERED
+  - CONTENT_SUPPORTED_BY_COMPARATIVE_PRESENTATION
+  - CONTENT_PARTIALLY_BOUNDED
+  - FUNCTION_SUPPORTED_CONTENT_OPAQUE
+  - CONTENT_NOT_ESTABLISHED
+
+valid_outputs:
+  - CONCEALMENT_EXPLICITLY_DOCUMENTED
+  - SUPPORTED_DIFFERENTIATED_ADDRESS
+  - SUPPORTED_PEDAGOGICAL_RESTRAINT
+  - SUPPORTED_PROTECTIVE_RESERVE
+  - SUPPORTED_EXOTERIC_FUNCTION
+  - CONCEALED_CONTENT_PARTIALLY_BOUNDED
+  - FUNCTION_SUPPORTED_CONTENT_OPAQUE
+  - POSSIBLE_CONCEALMENT
+  - CONCEALMENT_NOT_ESTABLISHED
+  - OPACITY_PRESERVED
+  - DOCUMENTARY_LAYER_CONTROLS_ATTRIBUTION
+  - ALTERNATIVE_EXPLANATION_REQUIRED
+
+required_output_fields:
+  - classification
+  - affected_claim
+  - literal_reading
+  - speaker_or_agent
+  - audiences
+  - occasion
+  - evidence
+  - proposed_function
+  - content_status
+  - alternatives_considered
+  - what_is_not_established
+  - confidence
+  - remaining_uncertainty
+
+inference_controls:
+  - A supported function does not automatically reveal determinate hidden content.
+  - A public statement conditioned by audience does not prove a complete opposite private doctrine.
+  - Persecution may explain restraint without proving the restrained proposition true.
+  - Obscurity may arise from difficulty, translation, corruption, editorial condition, or conceptual complexity.
+  - Contradiction may indicate error, development, changed occasion, different speaker, tension, or irony.
+  - Omission is evidence only where the omitted matter was reasonably expected.
+  - The interpreter remains subject to the same speech-and-deed and claimant-to-wisdom tests.
+
 prohibited_outputs:
-  - hidden doctrine asserted without positive textual evidence
-  - authorial intention inferred solely from danger
-  - explicit speech automatically reversed
+  - hidden doctrine asserted without positive textual, dramatic, structural, comparative, or historical evidence
+  - explicit speech mechanically reversed
+  - opposite doctrine inferred solely from audience difference
+  - authorial intention inferred solely from danger or persecution
+  - obscurity treated as proof of depth or esotericism
+  - contradiction treated as proof of concealment without alternatives
+  - silence treated as evidence where no response was structurally expected
+  - editorial arrangement assigned to the author without documentary evidence
+  - concealment used to immunize speaker or interpreter from correction
+  - opacity silently filled for narrative convenience
+
+uncertainty_outputs:
+  - OPACITY_PRESERVED
+  - AFFIRMATIVE_NON_RESOLUTION
+  - UNRESOLVED_CONTRADICTION
+  - INSUFFICIENT_DOCUMENTATION
+  - BOUNDED_CONCLUSION
+
+speech_mechanism_integration:
+  contract: speech/speech-mechanism.yaml
+  rule: >
+    A concealment finding may enter a candidate ministerial report only if the speech
+    request records positive evidence, preserves plausible literal meaning, identifies
+    function and alternatives, and states whether hidden content is established,
+    bounded, or opaque.
+
+termination_rule: >
+  A literary-concealment inquiry is complete only when source status, documentary
+  layer, affected claim, literal reading, speaker, audiences, occasion, positive
+  evidence, function, content status, serious alternatives, confidence, what remains
+  unestablished, and remaining uncertainty are explicit. If determinate content cannot
+  be supported, termination must preserve opacity rather than invent it.
+
+behavioral_tests:
+  - id: LC-TEST-001
+    behavior: explicit reserve with identified audience and function may support concealment
+  - id: LC-TEST-002
+    behavior: obscurity alone cannot support concealment
+  - id: LC-TEST-003
+    behavior: persecution alone cannot establish hidden content or truth
+  - id: LC-TEST-004
+    behavior: contradiction requires contextual and documentary alternatives before concealment
+  - id: LC-TEST-005
+    behavior: public and restricted comparison can support differentiated address without opposite doctrine
+  - id: LC-TEST-006
+    behavior: omission is evidence only where presence was reasonably expected
+  - id: LC-TEST-007
+    behavior: supported function may coexist with opaque content
+  - id: LC-TEST-008
+    behavior: literal meaning remains preserved unless evidence eliminates it
+  - id: LC-TEST-009
+    behavior: editorial or translation effects prevent premature authorial attribution
+  - id: LC-TEST-010
+    behavior: unresolved concealment terminates as opacity rather than invented doctrine
+
+self_limitation: >
+  This hermeneutic governs the burden of proof for literary concealment. It does not
+  certify hidden teachings, authorial wisdom, interpreter rank, or the truth of the
+  proposition allegedly concealed. Source-specific applications remain independently
+  reconstructive and revisable.

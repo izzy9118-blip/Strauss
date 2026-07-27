@@ -6,7 +6,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 0.2.0
+  version: 0.3.0
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
@@ -22,13 +22,13 @@ status:
     certification, or readiness for unrestricted ministerial reasoning.
 
 revision_history:
-  predecessor_version: 0.1.1
-  predecessor_blob_sha: 4ee5e22337a6646e277d6143829ab8995df724b1
+  predecessor_version: 0.2.0
+  predecessor_blob_sha: 2c49e44363d9fdfbda29cd878f2473279045f5c3
   reason: >
-    Record the first operational completeness audit, distinguish structural validation
-    from semantic completion, and register the reconstructed speech-mechanism contract
-    without claiming that the remaining hermeneutics, method, corpus, findings, or
-    problem-specific operations are complete.
+    Register all six hermeneutic interfaces as substantive operational contracts with
+    evidence burdens, application sequences, valid outputs, prohibitions, termination,
+    and behavioral tests. Preserve method, problem, corpus, findings, source-specific
+    application, doctrinal certification, and migration activation as incomplete.
 
 purpose: >
   Provide one compact, machine-readable entry point through which a runtime can load
@@ -38,6 +38,7 @@ purpose: >
 
 audit:
   path: audits/operational-completeness.yaml
+  version: 1.1.0
   classification_vocabulary:
     - SUBSTANTIVELY_RECONSTRUCTED
     - PARTIALLY_RECONSTRUCTED
@@ -53,13 +54,13 @@ component_completion:
   manifest: PARTIALLY_RECONSTRUCTED
   adapter: PARTIALLY_RECONSTRUCTED
   speech_mechanism: PARTIALLY_RECONSTRUCTED
-  hermeneutics: MIXED_STRUCTURAL_PLACEHOLDERS_AND_MAPPINGS
+  hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: PARTIALLY_RECONSTRUCTED
   problem_objects: UNEVEN_FOUNDING_DRAFTS_AND_ACTIVE_PREDECESSORS
   corpus_index: MAPPED_TO_RICHER_RECORDS
   findings_index: MAPPED_TO_RICHER_RECORDS
   migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: PARTIALLY_RECONSTRUCTED
+  behavioral_tests: SPEECH_AND_HERMENEUTIC_CONTRACTS_VALIDATED_METHOD_AND_SOURCE_FIXTURES_INCOMPLETE
 
 source_hierarchy:
   tiers:
@@ -114,19 +115,31 @@ problems:
     canonical_order: 7
     source: problems/ancients-vs-moderns/problem.yaml
 
+hermeneutic_completion:
+  state: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
+  limitation: >
+    Contract reconstruction establishes evidentiary and procedural rules. It does not
+    complete their application to every source, work, author, or finding in the corpus.
+
 hermeneutics:
   - key: literary-concealment
     path: hermeneutics/literary-concealment.yaml
+    contract_version: STRAUSS-HERMENEUTIC-LC-1
   - key: whole-and-part
     path: hermeneutics/whole-and-part.yaml
+    contract_version: STRAUSS-HERMENEUTIC-WP-1
   - key: speaker-and-author
     path: hermeneutics/speaker-and-author.yaml
+    contract_version: STRAUSS-HERMENEUTIC-SA-1
   - key: audience
     path: hermeneutics/audience.yaml
+    contract_version: STRAUSS-HERMENEUTIC-AUD-1
   - key: contradiction
     path: hermeneutics/contradiction.yaml
+    contract_version: STRAUSS-HERMENEUTIC-CON-1
   - key: historical-and-philosophical-understanding
     path: hermeneutics/historical-and-philosophical-understanding.yaml
+    contract_version: STRAUSS-HERMENEUTIC-HPU-1
 
 method:
   - key: recover-question
@@ -144,7 +157,7 @@ speech:
   completion: PARTIALLY_RECONSTRUCTED
   voice_status: subordinate_to_reasoning
   limitation: >
-    The contract now governs inputs, evidence, audience, speech and deed, concealment,
+    The contract governs inputs, evidence, audience, speech and deed, concealment,
     irony, comedy, uncertainty, typed candidate output, and stopping conditions. Source
     interpretation and final natural-language composition remain reasoning operations,
     not automatic consequences of loading the contract.
@@ -187,7 +200,7 @@ migration:
   mode: ADDITIVE_NON_DESTRUCTIVE
   flat_problem_projection_deferred: true
   reason: >
-    The requested lean interface is established through explicit mappings while active
+    The lean interface is established through explicit mappings while active
     predecessors, successor directories, studies, protocols, governance records,
     migration ledgers, and historical copies remain intact. The existing path
     problems/theologico-political.yaml is an active predecessor and cannot be silently
