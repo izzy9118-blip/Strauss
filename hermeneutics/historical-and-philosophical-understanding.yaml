@@ -1,0 +1,17 @@
+schema_version: 1.0
+record_type: hermeneutic_rule
+identity: {key: historical-and-philosophical-understanding, version: 1.0.0}
+source_protocols:
+  - protocols/source-status.yaml
+  - protocols/inference-discipline.yaml
+  - protocols/uncertainty-preservation.yaml
+governing_question: >
+  What belongs to the author's historical situation, and what claim or question is
+  presented as exceeding that situation?
+rules:
+  - Reconstruct the historical vocabulary, controversy, institutions, and available alternatives.
+  - Do not reduce a philosophical argument to its causal or social origin.
+  - Do not detach an argument from the circumstances that shaped its formulation and reception.
+  - Historical influence does not establish philosophical agreement or rank.
+  - Causal explanation is not refutation; transhistorical assertion is not demonstration.
+  - Preserve the relation between historical recovery and philosophical testing as an open question where necessary.
