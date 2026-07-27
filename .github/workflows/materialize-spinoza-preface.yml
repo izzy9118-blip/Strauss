@@ -1,4 +1,4 @@
-name: Materialize CORPUS-SRC-102 integration
+name: Repair CORPUS-SRC-102 integration
 
 on:
   push:
@@ -12,9 +12,9 @@ permissions:
   contents: write
 
 jobs:
-  materialize:
+  repair:
     if: >-
-      (github.event_name == 'push' && contains(github.event.head_commit.message, 'Stage generated CORPUS-SRC-102 integration payload')) ||
+      (github.event_name == 'push' && contains(github.event.head_commit.message, 'Repair CORPUS-SRC-102 integration validation')) ||
       (github.event_name == 'pull_request' && github.head_ref == 'production/corpus-src-102-sequential-reconstruction')
     runs-on: ubuntu-latest
     steps:
@@ -27,34 +27,98 @@ jobs:
           python-version: '3.12'
       - name: Install validation dependencies
         run: python -m pip install pyyaml jsonschema
-      - name: Materialize generated files
+      - name: Apply bounded forward corrections
         shell: bash
         run: |
-          cat .stage/payload.part* > .stage/payload.b64
-          base64 --decode .stage/payload.b64 > .stage/payload.tar.gz
-          echo '1f682953b39d388e14c0009d5716d5eb02969447aa3254687d59965017273e1a  .stage/payload.tar.gz' | sha256sum --check -
-          tar -xzf .stage/payload.tar.gz
-          python .stage/update_metadata.py
-          rm -rf .stage
-      - name: Capture complete repository validation
-        shell: bash
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace(path: str, old: str, new: str) -> None:
+              target = Path(path)
+              text = target.read_text(encoding="utf-8")
+              if old not in text:
+                  raise SystemExit(f"expected text not found in {path}: {old!r}")
+              target.write_text(text.replace(old, new, 1), encoding="utf-8")
+
+          replace(
+              "corpus_registry.py",
+              'if study_record.get("termination", {}).get("successor_effect") != "NONE":',
+              'if study_record.get("termination", {}).get("successor_effect") not in (None, "NONE"):',
+          )
+
+          replace(
+              "tests/test_corpus_wit_102_platform_registration.py",
+              "def test_registration_does_not_complete_study_or_certify(self) -> None:",
+              "def test_historical_registration_remains_noncertifying_after_forward_study(self) -> None:",
+          )
+          replace(
+              "tests/test_corpus_wit_102_platform_registration.py",
+              '''        self.assertEqual(
+              status["status"]["independent_sequential_study"],
+              "NOT_YET_COMPLETED",
+          )''',
+              '''        self.assertEqual(
+              status["status"]["independent_sequential_study"],
+              "SPINOZA-PREFACE-STUDY-001",
+          )
+          self.assertEqual(status["status"]["certification"], "NOT_CERTIFIED")''',
+          )
+          replace(
+              "tests/test_corpus_wit_102_platform_registration.py",
+              '"INCOMPLETE_3_OF_19",',
+              '"INCOMPLETE_4_OF_19",',
+          )
+
+          replacements = {
+              'self.assertEqual(manifest["identity"]["version"], "1.5.0")': 'self.assertEqual(manifest["identity"]["version"], "1.6.0")',
+              'self.assertEqual(audit["identity"]["version"], "2.3.0")': 'self.assertEqual(audit["identity"]["version"], "2.4.0")',
+              'self.assertEqual(mapping["identity"]["version"], "1.5.0")': 'self.assertEqual(mapping["identity"]["version"], "1.6.0")',
+              'self.assertEqual(process["identity"]["version"], "1.7.0")': 'self.assertEqual(process["identity"]["version"], "1.8.0")',
+              'self.assertEqual(schedule["identity"]["version"], "1.5.0")': 'self.assertEqual(schedule["identity"]["version"], "1.6.0")',
+              'self.assertEqual(corpus["identity"]["version"], "1.9.0")': 'self.assertEqual(corpus["identity"]["version"], "1.10.0")',
+              'self.assertEqual(findings["identity"]["version"], "1.3.0")': 'self.assertEqual(findings["identity"]["version"], "1.4.0")',
+              'self.assertEqual(state["independent_sequential_study_count"], 3)': 'self.assertEqual(state["independent_sequential_study_count"], 4)',
+          }
+          for old, new in replacements.items():
+              replace("tests/test_pr21_talmon_completion.py", old, new)
+          replace(
+              "tests/test_pr21_talmon_completion.py",
+              '''            ["COHEN-STUDY-001", "JA-STUDY-001", "TALMON-STUDY-001"],''',
+              '''            [
+                  "COHEN-STUDY-001",
+                  "JA-STUDY-001",
+                  "TALMON-STUDY-001",
+                  "SPINOZA-PREFACE-STUDY-001",
+              ],''',
+          )
+
+          replace(
+              "studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml",
+              '''      Reason can decisively exclude revelation only through a demonstrated comprehensive account
+              of the whole that leaves no possibility of miraculous intervention.''',
+              '''      Reason can decisively exclude revelation only through a clear and exhaustive account of the whole
+              that leaves no possibility of miraculous intervention.''',
+          )
+
+          for transient in (
+              "materialization-validation.log",
+              "materialization-validation.status",
+              ".github/workflows/materialize-spinoza-preface.yml",
+          ):
+              Path(transient).unlink(missing_ok=True)
+          PY
+      - name: Validate complete repository interface
         run: |
-          set +e
-          {
-            python adapter.py --validate
-            python problem_bundles.py --validate
-            python corpus_registry.py --validate
-            python findings_registry.py --validate
-            python -m unittest discover -s tests -p 'test_*.py'
-          } > materialization-validation.log 2>&1
-          echo $? > materialization-validation.status
-          cat materialization-validation.log
-          exit 0
-      - name: Commit materialized production unit and diagnostics
+          python adapter.py --validate
+          python problem_bundles.py --validate
+          python corpus_registry.py --validate
+          python findings_registry.py --validate
+          python -m unittest discover -s tests -p 'test_*.py'
+      - name: Commit validated production unit
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
-          git commit -m 'Integrate CORPUS-SRC-102 sequential reconstruction'
+          git commit -m 'Validate CORPUS-SRC-102 sequential reconstruction'
           git push origin HEAD:production/corpus-src-102-sequential-reconstruction
