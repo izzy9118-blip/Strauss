@@ -40,5 +40,22 @@ jobs:
       - name: Install validator dependency
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
 
-      - name: Validate YAML, paths, identities, and predecessor preservation
-        run: python scripts/validate_foundational_architecture.py
+      - name: Validate foundational architecture
+        id: foundational_validation
+        shell: bash
+        run: |
+          set +e
+          python scripts/validate_foundational_architecture.py > validation-output.txt 2>&1
+          status=$?
+          cat validation-output.txt
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          exit "$status"
+
+      - name: Upload validator output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: foundational-architecture-validation-output
+          path: validation-output.txt
+          if-no-files-found: error
+          retention-days: 30
