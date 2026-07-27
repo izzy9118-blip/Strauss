@@ -1,0 +1,142 @@
+schema_version: 1.0
+record_type: architecture_mapping
+
+identity:
+  id: STRAUSS-LEAN-MAP-001
+  title: Existing Strauss Repository to Lean Operational Interface
+  version: 0.1.0
+
+status:
+  lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
+  certification: NOT_CERTIFIED
+  destructive_actions_authorized: false
+
+source_state:
+  repository: izzy9118-blip/Strauss
+  governing_commit_before_mapping: c3493bd721efa53e813e7bff4e79f3968517996c
+  preserved_roots:
+    - governance/
+    - problems/
+    - protocols/
+    - studies/
+    - migrations/foundational-problems-v2/
+    - history/
+    - scripts/
+
+mapping_rules:
+  - No source record is deleted, moved, or edited merely to satisfy the lean interface.
+  - The lean interface references current canonical or provisional records by path.
+  - Existing migration and certification states remain governing for the records they describe.
+  - A later physical flattening requires a new migration record, path validation, predecessor preservation, and explicit certification.
+  - Duplicate doctrine is prohibited; interface records point to governing sources instead of copying complete problem constitutions.
+
+mappings:
+  problems:
+    target_role: permanent_questions
+    source:
+      registry: problems/registry.yaml
+      successor_directories: problems/*/problem.yaml
+      active_predecessors:
+        - problems/theologico-political.yaml
+        - problems/wise-and-vulgar.yaml
+    interface:
+      manifest_section: problems
+    note: >
+      The manifest loads all seven successor constitutions in canonical order while
+      preserving the authority and migration status of active predecessors.
+
+  hermeneutics:
+    target_role: interpretive_reading_disciplines
+    source:
+      - protocols/speech-and-deed.yaml
+      - protocols/irony.yaml
+      - protocols/comedy.yaml
+      - protocols/audience-and-rhetoric.yaml
+      - protocols/inference-discipline.yaml
+      - protocols/uncertainty-preservation.yaml
+    interface:
+      - hermeneutics/literary-concealment.yaml
+      - hermeneutics/whole-and-part.yaml
+      - hermeneutics/speaker-and-author.yaml
+      - hermeneutics/audience.yaml
+      - hermeneutics/contradiction.yaml
+      - hermeneutics/historical-and-philosophical-understanding.yaml
+    transformation: CONSOLIDATED_REFERENCE_LAYER
+
+  method:
+    target_role: inquiry_sequence
+    source:
+      - protocols/source-status.yaml
+      - protocols/evidence-classification.yaml
+      - protocols/inference-discipline.yaml
+      - protocols/uncertainty-preservation.yaml
+      - governance/foundational-problem-architecture.yaml
+    interface:
+      - method/recover-question.yaml
+      - method/reconstruct-alternatives.yaml
+      - method/textual-order.yaml
+      - method/preserve-problem.yaml
+    transformation: CONSOLIDATED_REFERENCE_LAYER
+
+  speech:
+    target_role: ministerial_expression_and_output_discipline
+    source:
+      - protocols/audience-and-rhetoric.yaml
+      - protocols/speech-and-deed.yaml
+      - protocols/evidence-classification.yaml
+      - protocols/uncertainty-preservation.yaml
+    interface: speech/speech-mechanism.yaml
+    transformation: CONSOLIDATED_REFERENCE_LAYER
+
+  corpus:
+    target_role: source_discovery_and_status_index
+    source:
+      - studies/
+      - history/
+      - problem witness registries
+    interface: corpus/index.yaml
+    transformation: REFERENCE_ONLY
+
+  findings:
+    target_role: completed_and_provisional_inquiry_results
+    source:
+      - studies/
+      - problems/*/synthesis/
+      - migrations/foundational-problems-v2/transactions/
+    interface: findings/index.yaml
+    transformation: REFERENCE_ONLY
+
+  runtime:
+    target_role: deterministic_loader_and_validator
+    source:
+      - scripts/validate_foundational_architecture.py
+      - .github/workflows/validate-foundational-architecture.yml
+    interface:
+      - adapter.py
+      - tests/test_adapter.py
+      - .github/workflows/validate-lean-interface.yml
+    transformation: NEW_OPERATIONAL_LAYER
+
+path_conflicts:
+  - requested_path: problems/theologico-political.yaml
+    existing_role: ACTIVE_PREDECESSOR
+    resolution: PRESERVE_EXISTING_PATH_AND_LOAD_SUCCESSOR_FROM_MANIFEST
+    successor_path: problems/theologico-political/problem.yaml
+    prohibition: DO_NOT_OVERWRITE_OR_REPURPOSE_WITHOUT_CERTIFIED_MIGRATION
+
+non_effects:
+  - No successor problem is certified or activated by this mapping.
+  - No active predecessor is displaced.
+  - No accepted migration source is superseded.
+  - No source-specific finding is promoted beyond its recorded evidence status.
+  - No Assembly authority is conferred; Sanctum validation remains separate.
+
+completion:
+  interface_ready_when:
+    - manifest paths resolve
+    - adapter validates all declared records
+    - unit tests pass
+    - GitHub Actions passes on the implementing commit
+  later_work:
+    - decide whether physical flattening adds value after the active foundational migration is certified
+    - update Sanctum to pin the validated Strauss manifest and adapter commit
