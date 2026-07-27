@@ -1,0 +1,122 @@
+schema_version: 1.0
+record_type: production_process_state
+
+identity:
+  id: STRAUSS-PRODUCTION-PROCESS-001
+  title: Ten-Step Strauss Operational Completion Process
+  version: 1.0.0
+
+status:
+  lifecycle: ACTIVE_PRODUCTION_SEQUENCE
+  certification: NOT_CERTIFIED
+  completion: IN_PROGRESS
+  governing_rule: >
+    Structural validity, typed registration, and passing tests do not establish
+    substantive completion. Each completed step must preserve source hierarchy,
+    independent reconstruction, uncertainty, predecessor authority, and the
+    prohibition on repository or artificial-intelligence self-certification.
+
+steps:
+  - sequence: 1
+    action: Create a complete repository audit.
+    state: IMPLEMENTED_AND_ACTIVE
+    governing_record: audits/operational-completeness.yaml
+    limit: The audit records incompleteness; it does not cure it.
+  - sequence: 2
+    action: Correct the manifest completion language.
+    state: IMPLEMENTED_AND_ACTIVE
+    governing_record: manifest.yaml
+    limit: The manifest remains semantically incomplete and not doctrinally certified.
+  - sequence: 3
+    action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
+    state: IMPLEMENTED_CONTRACT_SOURCE_APPLICATION_INCOMPLETE
+    governing_record: speech/speech-mechanism.yaml
+    limit: The speech contract is subordinate to source-grounded reasoning and requires continuing behavioral application.
+  - sequence: 4
+    action: Strengthen adapter.py to validate substantive contracts.
+    state: IMPLEMENTED_LIMITED_READ_ONLY
+    governing_record: adapter.py
+    limit: The adapter cannot certify doctrine, witnesses, migrations, or Assembly authority.
+  - sequence: 5
+    action: Reconstruct the six hermeneutic objects.
+    state: IMPLEMENTED_CONTRACTS_SOURCE_APPLICATION_INCOMPLETE
+    governing_records:
+      - hermeneutics/literary-concealment.yaml
+      - hermeneutics/whole-and-part.yaml
+      - hermeneutics/speaker-and-author.yaml
+      - hermeneutics/audience.yaml
+      - hermeneutics/contradiction.yaml
+      - hermeneutics/historical-and-philosophical-understanding.yaml
+  - sequence: 6
+    action: Reconstruct the four method objects.
+    state: IMPLEMENTED_CONTRACTS_SOURCE_APPLICATION_INCOMPLETE
+    governing_records:
+      - method/recover-question.yaml
+      - method/reconstruct-alternatives.yaml
+      - method/textual-order.yaml
+      - method/preserve-problem.yaml
+  - sequence: 7
+    action: Complete the seven problem objects and their source relations.
+    state: ACTIVE_INCOMPLETE
+    governing_record: problems/registry.yaml
+    completed:
+      - seven subordinate bundles exist and load in canonical order
+      - controlled relation records exist
+      - active predecessors and accepted migration sources remain preserved
+    remaining:
+      - complete source-specific application to each problem
+      - complete independent witness reconstruction
+      - complete proposition-level migration where required
+      - resolve or preserve jurisdictional seams without absorption
+  - sequence: 8
+    action: Populate corpus and findings with real typed registrations.
+    state: ACTIVE_INCOMPLETE
+    governing_records:
+      - corpus/index.yaml
+      - findings/index.yaml
+    completed:
+      - current committed source and study state is typed and bounded
+      - current committed findings-bearing records are typed and bounded
+    remaining:
+      - item-level source-status records for the nineteen Theologico-Political writings
+      - independent primary witness expansion
+      - proposition-level extraction where governing records remain aggregate
+      - later additions through forward revision
+  - sequence: 9
+    action: Run behavioral tests.
+    state: ACTIVE_CONTINUOUS
+    governing_records:
+      - tests/
+      - .github/workflows/validate-lean-interface.yml
+    limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
+  - sequence: 10
+    action: Repin the completed Strauss interface in Sanctum.
+    state: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
+    governing_record: izzy9118-blip/Sanctum/registry/ministers.yaml
+    prohibition: >
+      Do not describe a limited or structurally valid Strauss interface as completed.
+      A later Sanctum pin may occur only after the revised Strauss commit passes its
+      declared validation and its remaining completion blockers are accurately stated.
+
+current_production_unit:
+  step: 8
+  title: Item-level source-status expansion for the active Theologico-Political source basis
+  first_record: studies/theologico-political/progress-or-return/source-status.yaml
+  next_action: >
+    Register the first item-level source-status record in corpus/index.yaml,
+    extend corpus_registry.py and tests without weakening bounded-completion language,
+    validate, merge, and continue to the second source-status record.
+  non_effects:
+    - no source-text admission
+    - no independent study completion
+    - no doctrinal certification
+    - no migration certification
+    - no successor activation
+    - no predecessor displacement
+    - no Sanctum repin as a completed interface
+
+termination:
+  state: CONTINUE_UNTIL_GENUINE_BLOCKER
+  blocker_rule: >
+    A blocker must identify the exact missing source, authority, path, validation
+    failure, or jurisdictional conflict and the precise cure required.
