@@ -6,7 +6,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 0.4.0
+  version: 0.5.0
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
@@ -22,13 +22,13 @@ status:
     certification, or readiness for unrestricted ministerial reasoning.
 
 revision_history:
-  predecessor_version: 0.3.0
-  predecessor_blob_sha: 4992bf843901f9a335ce00a0fef16e524c0a9aa2
+  predecessor_version: 0.4.0
+  predecessor_blob_sha: 2e2226d716a2e25abbb5f8b807f0c3c2efcfba2c
   reason: >
-    Register all four method interfaces as substantive operational contracts for
-    question recovery, independent alternative reconstruction, textual order, and
-    preservation of permanent problems. Preserve source-specific applications, problem
-    implementation, corpus, findings, doctrine, and activation as incomplete.
+    Register the constitution, inquiry profile, witness registry, relations, and
+    synthesis directory of every foundational problem as a complete read-only runtime
+    bundle. Preserve source-specific application, independent witness reconstruction,
+    migration certification, doctrine, and activation as incomplete.
 
 purpose: >
   Provide one compact, machine-readable entry point through which a runtime can load
@@ -53,14 +53,15 @@ audit:
 component_completion:
   manifest: PARTIALLY_RECONSTRUCTED
   adapter: PARTIALLY_RECONSTRUCTED
+  problem_bundle_loader: PARTIALLY_RECONSTRUCTED_READ_ONLY_BUNDLE_SUPPORT
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
-  problem_objects: UNEVEN_FOUNDING_DRAFTS_AND_ACTIVE_PREDECESSORS
+  problem_objects: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
   corpus_index: MAPPED_TO_RICHER_RECORDS
   findings_index: MAPPED_TO_RICHER_RECORDS
   migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: SPEECH_HERMENEUTIC_AND_METHOD_CONTRACTS_VALIDATED_SOURCE_AND_PROBLEM_FIXTURES_INCOMPLETE
+  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_AND_PROBLEM_BUNDLE_CONTRACTS_VALIDATED_SOURCE_FIXTURES_INCOMPLETE
 
 source_hierarchy:
   tiers:
@@ -92,28 +93,70 @@ problems:
   - canonical_key: nomos-vs-physis
     canonical_order: 1
     source: problems/nomos-vs-physis/problem.yaml
+    inquiry_profile: problems/nomos-vs-physis/inquiry-profile.yaml
+    witnesses: problems/nomos-vs-physis/witnesses.yaml
+    relations: problems/nomos-vs-physis/relations.yaml
+    synthesis_directory: problems/nomos-vs-physis/synthesis/
   - canonical_key: philosophy-vs-poetry
     canonical_order: 2
     source: problems/philosophy-vs-poetry/problem.yaml
+    inquiry_profile: problems/philosophy-vs-poetry/inquiry-profile.yaml
+    witnesses: problems/philosophy-vs-poetry/witnesses.yaml
+    relations: problems/philosophy-vs-poetry/relations.yaml
+    synthesis_directory: problems/philosophy-vs-poetry/synthesis/
   - canonical_key: theory-vs-practice
     canonical_order: 3
     source: problems/theory-vs-practice/problem.yaml
+    inquiry_profile: problems/theory-vs-practice/inquiry-profile.yaml
+    witnesses: problems/theory-vs-practice/witnesses.yaml
+    relations: problems/theory-vs-practice/relations.yaml
+    synthesis_directory: problems/theory-vs-practice/synthesis/
   - canonical_key: theologico-political
     canonical_order: 4
     source: problems/theologico-political/problem.yaml
+    inquiry_profile: problems/theologico-political/inquiry-profile.yaml
+    witnesses: problems/theologico-political/witnesses.yaml
+    relations: problems/theologico-political/relations.yaml
+    synthesis_directory: problems/theologico-political/synthesis/
     active_predecessor: problems/theologico-political.yaml
     historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
   - canonical_key: athens-vs-jerusalem
     canonical_order: 5
     source: problems/athens-vs-jerusalem/problem.yaml
+    inquiry_profile: problems/athens-vs-jerusalem/inquiry-profile.yaml
+    witnesses: problems/athens-vs-jerusalem/witnesses.yaml
+    relations: problems/athens-vs-jerusalem/relations.yaml
+    synthesis_directory: problems/athens-vs-jerusalem/synthesis/
   - canonical_key: wise-vs-vulgar
     canonical_order: 6
     source: problems/wise-vs-vulgar/problem.yaml
+    inquiry_profile: problems/wise-vs-vulgar/inquiry-profile.yaml
+    witnesses: problems/wise-vs-vulgar/witnesses.yaml
+    relations: problems/wise-vs-vulgar/relations.yaml
+    synthesis_directory: problems/wise-vs-vulgar/synthesis/
     active_predecessor: problems/wise-and-vulgar.yaml
     accepted_migration_source: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
   - canonical_key: ancients-vs-moderns
     canonical_order: 7
     source: problems/ancients-vs-moderns/problem.yaml
+    inquiry_profile: problems/ancients-vs-moderns/inquiry-profile.yaml
+    witnesses: problems/ancients-vs-moderns/witnesses.yaml
+    relations: problems/ancients-vs-moderns/relations.yaml
+    synthesis_directory: problems/ancients-vs-moderns/synthesis/
+
+problem_bundle_completion:
+  state: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
+  loader: problem_bundles.py
+  bundle_members:
+    - constitution
+    - inquiry_profile
+    - witness_registry
+    - relation_record
+    - synthesis_records
+  limitation: >
+    Bundle loading makes the governing records available together and validates identity,
+    relation coverage, non-certification, and path integrity. It does not complete missing
+    witnesses, settle doctrine, certify migrations, activate successors, or confer Assembly authority.
 
 hermeneutic_completion:
   state: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
@@ -183,16 +226,20 @@ findings:
 
 runtime:
   adapter: adapter.py
+  problem_bundle_loader: problem_bundles.py
   validation_command: python adapter.py --validate
+  problem_bundle_validation_command: python problem_bundles.py --validate
   test_command: python -m unittest discover -s tests -p 'test_*.py'
   permitted_operations:
     - validate declared paths and contracts
     - load bounded operational context
+    - load complete read-only foundational problem bundles
     - validate typed speech requests
     - build non-authoritative candidate report structures
   prohibited_operations:
     - certify doctrine or wisdom
     - activate successor problems
+    - displace active predecessors
     - rewrite source findings
     - confer Assembly authority
 
