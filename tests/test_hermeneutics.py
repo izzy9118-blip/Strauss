@@ -19,7 +19,6 @@ HERMENEUTIC_PATHS = {
 COMMON_REQUIRED_SECTIONS = {
     "input_contract",
     "application_sequence",
-    "required_evidence",
     "valid_outputs",
     "required_output_fields",
     "prohibited_outputs",
@@ -56,6 +55,21 @@ class HermeneuticContractTests(unittest.TestCase):
                 self.assertTrue(record["valid_outputs"])
                 self.assertTrue(record["required_output_fields"])
                 self.assertTrue(record["prohibited_outputs"])
+
+    def test_each_contract_has_an_evidence_burden(self) -> None:
+        evidence_sections = {
+            "literary-concealment": "positive_evidence_threshold",
+            "whole-and-part": "required_evidence",
+            "speaker-and-author": "required_evidence",
+            "audience": "responsibility_tests",
+            "contradiction": "resolution_burdens",
+            "historical-and-philosophical-understanding": "required_evidence",
+        }
+        for key, section in evidence_sections.items():
+            with self.subTest(key=key):
+                record = self.load_contract(key)
+                self.assertIn(section, record)
+                self.assertTrue(record[section])
 
     def test_behavioral_test_ids_are_unique(self) -> None:
         all_ids: list[str] = []
