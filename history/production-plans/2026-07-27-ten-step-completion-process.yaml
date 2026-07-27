@@ -4,7 +4,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.1.0
+  version: 1.2.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
@@ -17,26 +17,26 @@ status:
     prohibition on repository or artificial-intelligence self-certification.
 
 revision_history:
-  predecessor_version: 1.0.0
-  predecessor_blob_sha: a2e3216c2a809b01c1e40dbc70a4d0a447878e21
+  predecessor_version: 1.1.0
+  predecessor_blob_sha: 5b7e14aec64f95c2a7d286b70c3ec56c2aa42d3b
   reason: >
-    Record completion of the first two bounded Theologico-Political item-level source
-    identities, generic status validation, and synchronization of the manifest, audit,
-    and architecture mapping with corpus registry v1.3.0. Preserve the process as
-    incomplete and continue to the third source-status record.
+    Record completion of bounded item-level source-identity registration for all nineteen
+    writings in the active Theologico-Political predecessor basis. Advance Step 8 from
+    identity registration to reviewed-witness prioritization and independent source study,
+    while preserving semantic incompleteness and the Step 10 completed-interface repin blocker.
 
 steps:
   - sequence: 1
     action: Create a complete repository audit.
     state: IMPLEMENTED_AND_ACTIVE
     governing_record: audits/operational-completeness.yaml
-    current_version: 1.7.0
+    current_version: 1.8.0
     limit: The audit records incompleteness; it does not cure it.
   - sequence: 2
     action: Correct the manifest completion language.
     state: IMPLEMENTED_AND_ACTIVE
     governing_record: manifest.yaml
-    current_version: 0.9.0
+    current_version: 1.0.0
     limit: The manifest remains semantically incomplete and not doctrinally certified.
   - sequence: 3
     action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -88,14 +88,15 @@ steps:
     completed:
       - current committed source and study state is typed and bounded
       - current committed findings-bearing records are typed and bounded
-      - 2 of 19 active Theologico-Political predecessor writings have bounded item-level source identities
-      - generic validation preserves identity, alias, sequence, missing-witness, incomplete-study, and noncertification states
+      - all 19 active Theologico-Political predecessor writings have bounded item-level source identities
+      - all 19 identity records preserve title, date, sequence, aliases or registered scope, missing witness, incomplete study, and noncertification
+      - generic validation and behavioral tests cover the complete status range
     remaining:
-      - item-level source-status records for the remaining seventeen Theologico-Political writings
-      - reviewed witnesses and independent sequential studies for registered item-level sources
-      - independent primary witness expansion
-      - proposition-level extraction where governing records remain aggregate
-      - later additions through forward revision
+      - establish reviewed witnesses and publication provenance for the nineteen item-level identities
+      - conduct independent sequential studies after witness status is explicit
+      - expand independent primary witnesses beyond Strauss's own writings
+      - normalize propositions where governing records remain aggregate
+      - preserve later additions through forward revision
   - sequence: 9
     action: Run behavioral tests.
     state: ACTIVE_CONTINUOUS
@@ -103,8 +104,9 @@ steps:
       - tests/
       - .github/workflows/validate-lean-interface.yml
     completed_in_current_sequence:
-      - first item-level source-status validation passed
-      - second item-level source-status and generalized-validator validation passed
+      - complete 19-of-19 item-level source-identity coverage tests
+      - manifest, audit, mapping, registry, and process consistency tests
+      - missing-witness, incomplete-study, noncertification, and successor non-effect tests
     limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
   - sequence: 10
     action: Repin the completed Strauss interface in Sanctum.
@@ -117,25 +119,32 @@ steps:
 
 current_production_unit:
   step: 8
-  title: Item-level source-status expansion for the active Theologico-Political source basis
-  completed_records:
-    - studies/theologico-political/progress-or-return/source-status.yaml
-    - studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
-  synchronized_records:
-    - manifest.yaml
-    - audits/operational-completeness.yaml
-    - migrations/lean-operational-interface.yaml
-  next_record:
-    source_sequence: 3
-    source_id: CORPUS-SRC-103
-    title: How to Study Spinoza's Theologico-Political Treatise
-    target_path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml
-  next_action: >
-    Create the third bounded source-status record from the active predecessor, register it
-    in corpus/index.yaml, validate it through the generalized corpus validator, run all
-    structural and behavioral tests, merge, and continue through the remaining sequence.
+  completed_subunit:
+    title: Theologico-Political item-level source-identity registration
+    state: COMPLETE_19_OF_19
+    status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
+    root: studies/theologico-political/
+    non_effect: >
+      Identity completion does not supply reviewed witnesses, stable locators, fingerprints,
+      independent reconstruction, source-level findings, doctrine, migration, or activation.
+  next_subunit:
+    title: Reviewed-witness priority and first item-level witness registration
+    first_action: >
+      Create a controlled priority record for the nineteen writings based on foundational
+      relevance, source availability, documentary condition, and nonduplication. Select the
+      first source only through documented criteria, then register a lawful reviewed witness
+      before beginning independent sequential reconstruction.
+    required_fields:
+      - source identity and priority basis
+      - publication provenance
+      - edition or textual witness identity
+      - file or stable external locator where lawful
+      - fingerprint where a local witness is reviewed
+      - textual condition and locator reliability
+      - relation to existing predecessor and collection-level records
+      - explicit noncertification and independent-witness limits
   non_effects:
-    - no source-text admission
+    - no source-text admission through identity records
     - no independent study completion
     - no doctrinal certification
     - no migration certification
