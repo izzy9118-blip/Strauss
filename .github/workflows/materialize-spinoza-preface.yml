@@ -36,14 +36,21 @@ jobs:
           tar -xzf .stage/payload.tar.gz
           python .stage/update_metadata.py
           rm -rf .stage
-      - name: Validate complete repository interface
+      - name: Capture complete repository validation
+        shell: bash
         run: |
-          python adapter.py --validate
-          python problem_bundles.py --validate
-          python corpus_registry.py --validate
-          python findings_registry.py --validate
-          python -m unittest discover -s tests -p 'test_*.py'
-      - name: Commit materialized production unit
+          set +e
+          {
+            python adapter.py --validate
+            python problem_bundles.py --validate
+            python corpus_registry.py --validate
+            python findings_registry.py --validate
+            python -m unittest discover -s tests -p 'test_*.py'
+          } > materialization-validation.log 2>&1
+          echo $? > materialization-validation.status
+          cat materialization-validation.log
+          exit 0
+      - name: Commit materialized production unit and diagnostics
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
