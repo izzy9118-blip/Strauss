@@ -47,7 +47,21 @@ jobs:
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
 
       - name: Validate manifest and mapped paths
-        run: python adapter.py --validate
+        run: |
+          set -o pipefail
+          python adapter.py --validate 2>&1 | tee lean-validation.txt
 
       - name: Run adapter tests
-        run: python -m unittest discover -s tests -p 'test_*.py'
+        run: |
+          set -o pipefail
+          python -m unittest discover -s tests -p 'test_*.py' 2>&1 | tee lean-tests.txt
+
+      - name: Upload validation diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lean-strauss-interface-diagnostics
+          path: |
+            lean-validation.txt
+            lean-tests.txt
+          if-no-files-found: ignore
