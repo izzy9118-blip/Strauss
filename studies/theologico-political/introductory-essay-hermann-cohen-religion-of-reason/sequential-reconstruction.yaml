@@ -1,0 +1,331 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: COHEN-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1972_edition_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-105
+  source_status_id: CORPUS-STATUS-105
+  reviewed_witness_id: CORPUS-WIT-105
+  author: Leo Strauss
+  canonical_title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  collected_title: Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
+  original_publication:
+    container: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism
+    publisher: Frederick Ungar
+    place: New York
+    year: 1972
+    evidence: opening-page reprint notice
+  reviewed_container:
+    title: Studies in Platonic Political Philosophy
+    publisher: University of Chicago Press
+    year: 1983
+    container_witness_id: CORPUS-WIT-001
+    printed_pages: {start: 233, end: 247}
+    pdf_pages_one_based: {start: 237, end: 251}
+    container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+    text_condition: SEARCHABLE_TEXT_WITH_AUTHORITATIVE_PAGE_IMAGES
+  source_limit: >
+    The reviewed witness is the 1983 collected reprint. The 1972 English-translation
+    printing has not been separately compared. Page images govern wording where extracted
+    text is uncertain. Cohen's book, biblical texts, Maimonides, Ibn Daud, Kant, Plato,
+    and later historical events remain distinct sources not independently reconstructed here.
+
+independence_rule: >
+  Reconstruct Strauss's essay from beginning to end without treating the active predecessor,
+  Pangle's Introduction, the collection-level SPPP synthesis, or Cohen's own claims as
+  governing Strauss's judgment. Comparison follows only after the item reconstruction.
+
+activated_problems:
+  - canonical_key: theologico-political
+    reason: >
+      The essay tests a modern rational reconciliation of revelation, reason, divine law,
+      moral autonomy, messianism, and Jewish fidelity.
+  - canonical_key: athens-vs-jerusalem
+    reason: >
+      Cohen seeks harmony between Judaism and autonomous culture while preserving Judaism
+      as the source of the religion of reason.
+  - canonical_key: ancients-vs-moderns
+    reason: >
+      Kantian ethics, modern liberal culture, historical progress, Reform, Zionism, and the
+      modern state reorganize inherited Jewish law and theology.
+
+secondary_intersections:
+  - nomos-vs-physis
+  - theory-vs-practice
+  - wise-vs-vulgar
+
+activated_protocols:
+  - source-status
+  - evidence-classification
+  - inference-discipline
+  - uncertainty-preservation
+  - speech-and-deed
+  - whole-and-part
+  - speaker-and-author
+  - audience
+  - contradiction
+  - historical-and-philosophical-understanding
+
+method_application:
+  textual_order: Read printed pages 233-247 without beginning from the collection synthesis.
+  alternative_reconstruction: Reconstruct Cohen's strongest reconciliation before evaluating Strauss's qualifications.
+  speaker_rule: Distinguish Strauss's description, Cohen's position, quoted Jewish sources, medieval authorities, and Strauss's explicit judgments.
+  whole_and_part_rule: Interpret individual doctrines through the essay's movement from revelation and reason to law, prayer, fidelity, and the closing judgment.
+  uncertainty_rule: Preserve where Strauss raises a question, notes a silence, or identifies an unresolved difficulty without supplying a final answer.
+
+reading_units:
+  - unit_id: COHEN-SEQ-001
+    printed_pages: 233-234
+    phase: OCCASION_AND_INITIAL_PROBLEM
+    reconstruction: >
+      Strauss presents himself as a historically close but no longer continuously engaged
+      mediator. He offers thoughts occasioned by renewed reading rather than a substitute
+      system. The work appears both philosophic and Jewish, yet that appearance immediately
+      raises the question of how revealed religion can be reconciled with philosophy.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    finding_ids: [COHEN-F-001, COHEN-F-002]
+
+  - unit_id: COHEN-SEQ-002
+    printed_pages: 233-235
+    phase: REVELATION_AS_REASON_AND_JUDAISM_AS_SOURCE
+    reconstruction: >
+      Cohen excludes traditional revelation as an historical divine act commanding the
+      philosopher. Revelation becomes God's creation of reason. Judaism is neither simply
+      identical with universal reason nor merely one accidental bearer; it is treated as the
+      original source whose rational core is purified with Platonic and especially Kantian aid.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT_WITH_CRITICAL_QUALIFICATION
+    finding_ids: [COHEN-F-003, COHEN-F-004, COHEN-F-005]
+
+  - unit_id: COHEN-SEQ-003
+    printed_pages: 234-235
+    phase: RELIGION_PHILOSOPHY_SYSTEM_AND_CULTURE
+    reconstruction: >
+      Cohen distinguishes scientific philosophy from religion, yet reason itself requires
+      religion to enter and crown the philosophical system. The full title also suggests that
+      the Jewish sources exceed a closed system. Strauss locates the remaining obscurity in
+      Cohen's dual devotion to Judaism and modern culture, especially autonomous morality,
+      science, art, socialism, democracy, and the methodical priority of ethics.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    finding_ids: [COHEN-F-006, COHEN-F-007]
+
+  - unit_id: COHEN-SEQ-004
+    printed_pages: 235-237
+    phase: GOD_CREATION_AND_REVELATION
+    reconstruction: >
+      Cohen idealizes Judaism through the uniqueness of God, God as idea rather than person,
+      necessary continuous creation, and revelation as the rational constitution of humanity
+      and Israel. Strauss repeatedly notes transformations: free creation becomes logical
+      necessity, historical miracle disappears, and medieval authorities are selectively
+      aligned with the rationalized account.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT_WITH_STRAUSSIAN_QUALIFICATION
+    finding_ids: [COHEN-F-008, COHEN-F-009, COHEN-F-010]
+
+  - unit_id: COHEN-SEQ-005
+    printed_pages: 237-238
+    phase: OBEDIENCE_CORRELATION_AND_HOLINESS
+    reconstruction: >
+      Strauss exposes the decisive absence of absolute obedience by comparing Cohen's use
+      of Ibn Daud with the binding command to Abraham. Cohen instead develops correlation:
+      God and rational humanity are reciprocally related through reason; holiness becomes an
+      infinite moral task modeled on divine love and justice.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    finding_ids: [COHEN-F-011, COHEN-F-012]
+
+  - unit_id: COHEN-SEQ-006
+    printed_pages: 238-240
+    phase: FELLOWMAN_POOR_COMPASSION_PEACE_AND_LOVE
+    reconstruction: >
+      The correlation with God becomes actual through relations among human beings. The
+      command to love discloses the fellowman; Noahide law supports a qualified toleration;
+      prophetic concern for poverty makes compassion central; religion supplements and
+      profoundly transforms ethics; and love of God becomes longing for moral nearness rather
+      than union with a divine person.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    finding_ids: [COHEN-F-013, COHEN-F-014, COHEN-F-015]
+
+  - unit_id: COHEN-SEQ-007
+    printed_pages: 240-241
+    phase: INDIVIDUAL_GUILT_REPENTANCE_AND_GRACE
+    reconstruction: >
+      Religion discovers the absolute individual standing before God beyond state and society.
+      Self-judgment, guilt, repentance, confession, reconciliation, and divine forgiveness
+      constitute the I. Strauss notes that Cohen preserves autonomy even while describing
+      God's redemptive action in person-like terms.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT_WITH_TENSION_PRESERVED
+    finding_ids: [COHEN-F-016, COHEN-F-017]
+
+  - unit_id: COHEN-SEQ-008
+    printed_pages: 241-243
+    phase: MESSIANISM_MANKIND_ISRAEL_AND_PROGRESS
+    reconstruction: >
+      Cohen locates universal mankind and world history in prophetic monotheism. Israel's
+      election becomes a stateless vocation of witness, suffering, and universal service;
+      political restoration and territorial return are subordinated to an indefinitely future,
+      natural, progressive unity of mankind. Strauss marks scriptural elements that resist this
+      idealizing interpretation.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT_WITH_COUNTEREVIDENCE
+    finding_ids: [COHEN-F-018, COHEN-F-019, COHEN-F-020]
+
+  - unit_id: COHEN-SEQ-009
+    printed_pages: 243-244
+    phase: IMMORTALITY_RESURRECTION_PUNISHMENT_AND_FATHERS
+    reconstruction: >
+      Traditional immortality and resurrection are translated into historical continuity,
+      moral rebirth, and the future of the human race. Reward and hell are rejected as
+      eudemonistic; divine punitive justice becomes mystery. Yet the merit of the fathers
+      introduces gratitude and inherited authority into a system committed to individual
+      autonomy and future progress.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT_WITH_CONTRADICTION_PRESERVED
+    finding_ids: [COHEN-F-021, COHEN-F-022]
+
+  - unit_id: COHEN-SEQ-010
+    printed_pages: 244-245
+    phase: REVELATION_LAW_REFORM_ZIONISM_AND_ISOLATION
+    reconstruction: >
+      Cohen identifies revelation and law but treats particular commandments as revisable
+      means of moral education and ultimately as symbols. Strauss notes that Cohen did not
+      confront the strongest Platonic questioning of law. Modern culture weakens the Law,
+      yet Jewish survival requires modified legal separation until religious opposition ends;
+      Cohen's critique of Zionism and confidence in liberal progress are historically limited.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT_WITH_HISTORICAL_LIMIT
+    finding_ids: [COHEN-F-023, COHEN-F-024, COHEN-F-025]
+
+  - unit_id: COHEN-SEQ-011
+    printed_pages: 245-246
+    phase: PRAYER_STUDY_TRUTH_MODESTY_AND_FIDELITY
+    reconstruction: >
+      Prayer animates Law as the language of correlation and is joined to communal study.
+      Religion makes God the ground of virtue while preserving scientific knowledge as the
+      basis of truth. Intellectual probity requires modesty because knowledge is incomplete.
+      Fidelity to Torah and people is limited only by that probity and is sustained by gratitude.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT
+    finding_ids: [COHEN-F-026, COHEN-F-027, COHEN-F-028]
+
+  - unit_id: COHEN-SEQ-012
+    printed_pages: 246-247
+    phase: FINAL_DEED_AND_JUDGMENT
+    reconstruction: >
+      Strauss ends neither by certifying Cohen's synthesis nor by dismissing it. He emphasizes
+      Cohen's practical service to Jews living with dignity in a non-Jewish world, identifies
+      the liberal-state assumption and limits exposed by later persecution, and closes with
+      gratitude for Cohen's life and writing. The essay's deed preserves admiration for
+      fidelity and intellectual probity while leaving the reconciliation philosophically open.
+    evidence_classification: DOCUMENTED_OR_EXPLICIT_WITH_SUPPORTED_INFERENCE
+    finding_ids: [COHEN-F-029, COHEN-F-030]
+
+findings:
+  - {id: COHEN-F-001, kind: documented_finding, statement: Strauss presents the essay as an account arising from renewed reading, not as a comprehensive substitute for Cohen's system., source_location: printed_page_233, confidence: HIGH}
+  - {id: COHEN-F-002, kind: documented_finding, statement: The apparent union of a philosophic and Jewish book is the opening problem rather than a settled classification., source_location: printed_page_233, confidence: HIGH}
+  - {id: COHEN-F-003, kind: documented_finding, statement: Cohen denies revealed truths and laws in the traditional historical sense by redefining revelation as the creation of reason., source_location: printed_pages_233_234, confidence: HIGH}
+  - {id: COHEN-F-004, kind: documented_finding, statement: Judaism is presented as the source of the religion of reason without being called the absolute religion., source_location: printed_page_234, confidence: HIGH}
+  - {id: COHEN-F-005, kind: supported_inference, statement: Cohen's purification of Judaism transforms inherited revelation while claiming to actualize Judaism's original meaning., source_location: printed_pages_234_235, confidence: HIGH, alternatives_considered: [mere_identity_of_Judaism_and_reason, accidental_historical_contribution]}
+  - {id: COHEN-F-006, kind: documented_finding, statement: Religion is distinguished from scientific philosophy but is also required to enter and crown the system., source_location: printed_pages_234_235, confidence: HIGH}
+  - {id: COHEN-F-007, kind: documented_finding, statement: Cohen's reconciliation is driven by dual devotion to Judaism and autonomous modern culture., source_location: printed_page_235, confidence: HIGH}
+  - {id: COHEN-F-008, kind: documented_finding, statement: God is treated as unique being and idea required to secure ethical progress rather than as a demonstrated existing person., source_location: printed_page_236, confidence: HIGH}
+  - {id: COHEN-F-009, kind: documented_finding, statement: Creation becomes necessary continuous creation and revelation becomes nonmiraculous rational constitution., source_location: printed_pages_236_237, confidence: HIGH}
+  - {id: COHEN-F-010, kind: supported_inference, statement: Strauss's selective comparisons with Maimonides and Ibn Daud show that Cohen's medieval support is incomplete and contested., source_location: printed_pages_236_237, confidence: HIGH, alternatives_considered: [full_medieval_consensus, merely_bibliographic_disagreement]}
+  - {id: COHEN-F-011, kind: documented_finding, statement: The religion of reason leaves no place for absolute obedience exemplified by Abraham's sacrifice of Isaac., source_location: printed_page_237, confidence: HIGH}
+  - {id: COHEN-F-012, kind: documented_finding, statement: Correlation makes reason common to God and man and holiness an infinite moral task., source_location: printed_pages_238_239, confidence: HIGH}
+  - {id: COHEN-F-013, kind: documented_finding, statement: The fellowman is disclosed through command and social love rather than experience alone., source_location: printed_page_239, confidence: HIGH}
+  - {id: COHEN-F-014, kind: documented_finding, statement: Compassion for poverty and the peace of shalom supplement and transform Cohen's prior ethics., source_location: printed_pages_239_240, confidence: HIGH}
+  - {id: COHEN-F-015, kind: documented_finding, statement: Love of God is love of the moral ideal and longing for nearness through infinite sanctification., source_location: printed_page_240, confidence: HIGH}
+  - {id: COHEN-F-016, kind: documented_finding, statement: Religion discovers the individual as an I through guilt, repentance, divine forgiveness, and reconciliation., source_location: printed_pages_240_241, confidence: HIGH}
+  - {id: COHEN-F-017, kind: unresolved_uncertainty, statement: Cohen's preservation of autonomy remains in tension with person-like divine redemptive action., source_location: printed_page_241, confidence: MODERATE}
+  - {id: COHEN-F-018, kind: documented_finding, statement: Prophetic monotheism becomes the source of universal mankind and future-oriented world history., source_location: printed_pages_241_242, confidence: HIGH}
+  - {id: COHEN-F-019, kind: documented_finding, statement: Israel's election is interpreted as stateless suffering witness and universal vocation rather than political restoration., source_location: printed_page_242, confidence: HIGH}
+  - {id: COHEN-F-020, kind: supported_inference, statement: Strauss's recovery of prophetic restoration passages limits Cohen's idealized nonpolitical messianism., source_location: printed_pages_242_243, confidence: HIGH, alternatives_considered: [complete_scriptural_support_for_Cohen, simple_rejection_of_messianism]}
+  - {id: COHEN-F-021, kind: documented_finding, statement: Immortality and resurrection are translated into historical continuity and moral rebirth., source_location: printed_pages_243_244, confidence: HIGH}
+  - {id: COHEN-F-022, kind: unresolved_uncertainty, statement: Gratitude for the fathers and inherited merit remain in tension with uncompromised individual autonomy and future progress., source_location: printed_page_244, confidence: MODERATE}
+  - {id: COHEN-F-023, kind: documented_finding, statement: Revelation and Law are identified while particular commandments become revisable means and symbols of moral education., source_location: printed_page_244, confidence: HIGH}
+  - {id: COHEN-F-024, kind: documented_finding, statement: Modified legal separation remains necessary for Jewish survival until opposition among monotheistic religions ends., source_location: printed_pages_244_245, confidence: HIGH}
+  - {id: COHEN-F-025, kind: documented_finding, statement: Cohen's critique of Zionism and confidence in liberal development are exposed to later historical limits., source_location: printed_page_245, confidence: HIGH}
+  - {id: COHEN-F-026, kind: documented_finding, statement: Prayer is the inward life of Law and remains inseparable from communal study., source_location: printed_page_245, confidence: HIGH}
+  - {id: COHEN-F-027, kind: documented_finding, statement: Religion grounds virtue in God while truth still requires rational knowledge and modest awareness of incomplete knowledge., source_location: printed_page_246, confidence: HIGH}
+  - {id: COHEN-F-028, kind: documented_finding, statement: Fidelity to Torah and Jewish people is joined to gratitude and limited only by intellectual probity., source_location: printed_pages_246_247, confidence: HIGH}
+  - {id: COHEN-F-029, kind: documented_finding, statement: Strauss praises Cohen's practical service to Jewish dignity while identifying the liberal-state assumption and its limits., source_location: printed_page_247, confidence: HIGH}
+  - {id: COHEN-F-030, kind: supported_inference, statement: The closing blessing honors Cohen's fidelity without certifying his rational reconciliation as demonstrated or complete., source_location: printed_page_247_and_whole_essay, confidence: HIGH, alternatives_considered: [unqualified_endorsement, simple_rejection]}
+
+strongest_reconstructed_position:
+  cohen: >
+    Judaism is the original source of a universal religion of reason. Revelation is the
+    creation of reason; God secures moral progress; creation and revelation are continuous
+    and nonmiraculous; correlation joins God and autonomous humanity; divine law educates
+    toward holiness; prophetic compassion and messianism orient mankind toward indefinite
+    ethical progress; and Jewish fidelity preserves this vocation within modern culture.
+  straussian_qualification: >
+    The reconciliation achieves its power through idealization and transformation. It removes
+    historical miracle and absolute obedience, rationalizes creation and revelation, subjects
+    commandments to moral review, turns messianism toward indefinite progress, and depends
+    on liberal modern conditions while retaining inherited fidelity, Law, prayer, gratitude,
+    and particular Jewish survival. These retained elements repeatedly reopen the tension
+    between Judaism and autonomous reason.
+
+problem_contributions:
+  theologico_political:
+    - A rationalized revelation may dissolve the authority it claims to reconcile.
+    - Divine law remains politically and communally indispensable even after commandments become moral symbols.
+    - Autonomy, obedience, miracle, law, and revelation must be compared by transformed meaning, not shared vocabulary alone.
+  athens_vs_jerusalem:
+    - Cohen's harmony project does not erase the distinct beginnings of autonomous ethics and revealed tradition.
+    - Jewish fidelity and gratitude resist complete absorption into universal historical progress.
+  ancients_vs_moderns:
+    - Kantian autonomy, socialism, democracy, liberalism, Reform, historical progress, and modern statehood reorganize biblical and medieval categories.
+    - Modern reconciliation depends on transformations that ancient or traditional claimants need not accept.
+
+speech_and_deed_result:
+  explicit_speech: Strauss claims limited mediation and offers an account of thoughts from renewed reading.
+  textual_deed: >
+    He reconstructs Cohen with exceptional care, tests the synthesis through neglected texts,
+    silences, historical consequences, and conceptual tensions, and ends in gratitude rather
+    than doctrinal certification.
+  relation: CONFIRMATION_WITH_CRITICAL_QUALIFICATION
+
+predecessor_comparison:
+  active_predecessor: problems/theologico-political.yaml
+  predecessor_claim: >
+    The essay examines the strongest modern rational reconciliation of Judaism, revelation,
+    morality, law, autonomy, and historical progress.
+  result: >
+    Provisionally confirmed and qualified. The essay does reconstruct a powerful rational
+    reconciliation, but Strauss shows that it operates by transforming revelation, creation,
+    obedience, law, messianism, and political history while retaining forms of fidelity that
+    reopen the conflict.
+  migration_effect: NONE
+
+uncertainties_and_limits:
+  - Strauss's final comprehensive judgment of Cohen is not certified by the closing praise.
+  - The original 1972 printing has not been compared with the reviewed 1983 reprint.
+  - Cohen's own book and the biblical, medieval, Kantian, Platonic, Zionist, and historical sources require independent reconstruction.
+  - Later events may test Cohen's political assumptions but do not by themselves refute every philosophical claim.
+  - Agreement between this study and collection-level SPPP records is not independent corroboration.
+
+prohibitions:
+  - Do not identify Cohen's claims with Strauss's doctrine.
+  - Do not treat rationalized revelation as traditional revelation without qualification.
+  - Do not treat common moral language as demonstrated harmony.
+  - Do not treat historical catastrophe as self-interpreting philosophical refutation.
+  - Do not let Pangle's Introduction govern this item.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
+
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS
+  reconstruction_state: COMPLETE_PROVISIONAL
+  independent_corroboration: INCOMPLETE
+  original_edition_comparison_required: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
