@@ -17,7 +17,6 @@ COMMON_REQUIRED_SECTIONS = {
     "application_sequence",
     "valid_outputs",
     "required_output_fields",
-    "failure_conditions",
     "failure_recovery",
     "termination_rule",
     "behavioral_tests",
@@ -47,6 +46,10 @@ class MethodContractTests(unittest.TestCase):
                     "INCOMPLETE",
                 )
                 self.assertTrue(COMMON_REQUIRED_SECTIONS.issubset(record))
+                self.assertTrue(
+                    "failure_conditions" in record or "prohibitions" in record,
+                    f"{key} must declare failure conditions or explicit prohibitions",
+                )
                 self.assertGreaterEqual(len(record["application_sequence"]), 12)
                 self.assertGreaterEqual(len(record["behavioral_tests"]), 10)
 
@@ -97,6 +100,7 @@ class MethodContractTests(unittest.TestCase):
         self.assertIn("PRACTICAL_SETTLEMENT_ONLY", record["resolution_states"])
         self.assertIn("TRANSFER", record["migration_preservation"]["dispositions"])
         self.assertIn("ELEVATE", record["migration_preservation"]["dispositions"])
+        self.assertIn("silent closure", record["prohibitions"])
 
     def test_all_methods_feed_speech_without_certifying(self) -> None:
         for key in METHOD_PATHS:
