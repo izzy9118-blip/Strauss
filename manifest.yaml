@@ -115,30 +115,31 @@ problems:
     canonical_order: 7
     source: problems/ancients-vs-moderns/problem.yaml
 
-hermeneutics:
-  completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
-  contracts:
-    - key: literary-concealment
-      path: hermeneutics/literary-concealment.yaml
-      contract_version: STRAUSS-HERMENEUTIC-LC-1
-    - key: whole-and-part
-      path: hermeneutics/whole-and-part.yaml
-      contract_version: STRAUSS-HERMENEUTIC-WP-1
-    - key: speaker-and-author
-      path: hermeneutics/speaker-and-author.yaml
-      contract_version: STRAUSS-HERMENEUTIC-SA-1
-    - key: audience
-      path: hermeneutics/audience.yaml
-      contract_version: STRAUSS-HERMENEUTIC-AUD-1
-    - key: contradiction
-      path: hermeneutics/contradiction.yaml
-      contract_version: STRAUSS-HERMENEUTIC-CON-1
-    - key: historical-and-philosophical-understanding
-      path: hermeneutics/historical-and-philosophical-understanding.yaml
-      contract_version: STRAUSS-HERMENEUTIC-HPU-1
+hermeneutic_completion:
+  state: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   limitation: >
     Contract reconstruction establishes evidentiary and procedural rules. It does not
     complete their application to every source, work, author, or finding in the corpus.
+
+hermeneutics:
+  - key: literary-concealment
+    path: hermeneutics/literary-concealment.yaml
+    contract_version: STRAUSS-HERMENEUTIC-LC-1
+  - key: whole-and-part
+    path: hermeneutics/whole-and-part.yaml
+    contract_version: STRAUSS-HERMENEUTIC-WP-1
+  - key: speaker-and-author
+    path: hermeneutics/speaker-and-author.yaml
+    contract_version: STRAUSS-HERMENEUTIC-SA-1
+  - key: audience
+    path: hermeneutics/audience.yaml
+    contract_version: STRAUSS-HERMENEUTIC-AUD-1
+  - key: contradiction
+    path: hermeneutics/contradiction.yaml
+    contract_version: STRAUSS-HERMENEUTIC-CON-1
+  - key: historical-and-philosophical-understanding
+    path: hermeneutics/historical-and-philosophical-understanding.yaml
+    contract_version: STRAUSS-HERMENEUTIC-HPU-1
 
 method:
   - key: recover-question
