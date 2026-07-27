@@ -10,7 +10,7 @@ identity:
     - Preface to the English Translation of Spinoza's Critique of Religion
   author: Leo Strauss
   date: 1965
-  version: 1.2.0
+  version: 1.3.0
 
 status:
   lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
@@ -23,15 +23,17 @@ status:
   successor_effect: NONE
 
 revision_history:
-  predecessor_version: 1.1.0
-  predecessor_blob_sha: 98ce0327ec8b730a203c86e0666f443e0e554d1e
-  transformation: FORWARD_REVISION_AFTER_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  predecessor_version: 1.2.0
+  predecessor_blob_sha: 4b5cad3108980dc80fb87bbd5ee9a3dd624976ca
+  transformation: FORWARD_REVISION_AFTER_TYPED_REGISTRATION_AND_SYNTHESIS_INTEGRATION
   reason: >
-    Record completion of SPINOZA-PREFACE-STUDY-001 after qualified platform-reference
-    registration of CORPUS-WIT-102. Preserve the 1997 editorial-composite condition,
-    absent byte custody, unavailable SHA256 and file size, unresolved PDF-page offset,
-    pending 1965 and 1968 edition comparisons, incomplete independent corroboration,
-    noncertification, predecessor authority, and no successor effect.
+    Record completion of CORPUS-STUDY-011, FINDSET-011, and the distinct
+    Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns
+    synthesis bridges. Remove those completed operations from the next-action list
+    while preserving the 1997 editorial-composite condition, absent byte custody,
+    unavailable SHA256 and file size, unresolved PDF-page offset, pending 1965 and
+    1968 edition comparisons, incomplete independent corroboration, noncertification,
+    predecessor authority, and no successor effect.
 
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
@@ -49,6 +51,8 @@ verified_documentary_facts:
   - The 1997 collection identifies the original 1965 Schocken publication and Elsa M. Sinclair translation.
   - The reviewed text is an editorial composite based essentially on the 1965 version and incorporating almost all slight 1968 changes.
   - SPINOZA-PREFACE-STUDY-001 reconstructs the item in ten ordered reading units, including its note apparatus.
+  - CORPUS-STUDY-011 and FINDSET-011 register the completed provisional source study.
+  - FINDSET-119 through FINDSET-121 preserve distinct Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns jurisdictions.
   - Exact bytes, digest, file size, and one-based PDF-page offset remain unavailable to the repository.
 
 predecessor_contribution_record:
@@ -96,6 +100,11 @@ reviewed_witness:
 independent_sequential_study:
   study_id: SPINOZA-PREFACE-STUDY-001
   corpus_study_id: CORPUS-STUDY-011
+  findings_set_id: FINDSET-011
+  problem_synthesis_findings:
+    theologico_political: FINDSET-119
+    athens_vs_jerusalem: FINDSET-120
+    ancients_vs_moderns: FINDSET-121
   path: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
   reading_state: COMPLETE_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
   reconstruction_state: COMPLETE_PROVISIONAL
@@ -147,8 +156,6 @@ prohibitions:
   - Do not certify doctrine, migration, successor activation, or predecessor displacement.
 
 next_required_actions:
-  - register CORPUS-STUDY-011 and FINDSET-011 in the typed corpus and findings registries
-  - create distinct Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns synthesis bridges
   - compare the 1997 composite with separately reviewed 1965 and 1968 textual states
   - materialize and fingerprint exact bytes only through later forward revision if they become available
   - independently reconstruct Spinoza and the represented Jewish, biblical, medieval, modern, Zionist, and historical sources
