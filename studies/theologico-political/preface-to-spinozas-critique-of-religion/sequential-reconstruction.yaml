@@ -1,0 +1,784 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: SPINOZA-PREFACE-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Preface to Spinoza's Critique of Religion
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1965_edition_comparison: PENDING
+  authorial_1968_reprint_comparison: PENDING
+  byte_materialization: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-102
+  source_status_id: CORPUS-STATUS-102
+  reviewed_witness_id: CORPUS-WIT-102
+  author: Leo Strauss
+  canonical_title: Preface to Spinoza's Critique of Religion
+  canonical_aliases:
+    - Autobiographical Preface to Spinoza's Critique of Religion
+    - Preface to the English Translation of Spinoza's Critique of Religion
+  date: 1965
+  reviewed_container:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  platform_reference:
+    platform_name: ChatGPT File Library
+    platform_object_identifier: file_0000000073c081fd9fb65f9ea7552cde
+    displayed_filename: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress.pdf
+    byte_custody_state: NOT_EXPOSED_TO_REPOSITORY
+    sha256_state: UNAVAILABLE_WITH_REASON_PRESERVED
+    file_size_state: NOT_AVAILABLE
+  locators:
+    printed_pages: {start: 137, end: 180}
+    argumentative_body: {start: 137, end: 173}
+    notes: {start: 173, end: 180}
+    pdf_pages_one_based: PENDING_DIRECT_OFFSET_VERIFICATION
+  textual_state: 1997_EDITORIAL_COMPOSITE_BASED_ESSENTIALLY_ON_1965_WITH_MOST_1968_CHANGES
+  text_condition: SEARCHABLE_TEXT_WITH_RENDERED_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The reviewed witness is a qualified platform-reference witness; its exact bytes, digest, file size, and one-based PDF-page offset are unavailable to the repository.
+  - The reviewed text is the 1997 editorial composite, not a separately reviewed 1965 Schocken printing or 1968 Liberalism Ancient and Modern reprint.
+  - Kenneth Hart Green's editorial introduction, notes, selection, and assumptions provide secondary documentary context and do not govern Strauss's argument.
+  - Thomas L. Pangle's Introduction to Studies in Platonic Political Philosophy is secondary and explicitly provisional; it did not govern this reconstruction.
+  - Spinoza, Cohen, Rosenzweig, Buber, Heidegger, Nietzsche, Zionist writers, Jewish orthodoxy, and the represented historical events remain independently unreconstructed unless separately registered.
+  - Sequential reconstruction establishes a source-local account of Strauss's argument; it does not establish the truth or falsity of revelation, miracle, orthodoxy, atheism, Zionism, liberal democracy, or any represented doctrine.
+
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+
+method_application:
+  governing_question: >
+    Did modern rationalism rationally refute Jewish orthodoxy, or did the historical and
+    political defeat of orthodoxy rest on premises, projects, and acts of will that leave the
+    possibility of revelation unrefuted and therefore require a reconsideration of premodern
+    rationalism?
+  recovered_source_question: >
+    How did Strauss's youthful attempt to understand the German-Jewish predicament through
+    Spinoza lead him from liberalism, Zionism, modern Jewish thought, historicism, and modern
+    atheism to the question whether Spinoza had actually refuted orthodoxy, and how did that
+    question alter his manner of reading Spinoza and the history of philosophy?
+  reconstruction_rule: >
+    Read the Preface as an ordered autobiographical and philosophic reconsideration. Distinguish
+    historical narrative, reported positions, Strauss's explicit judgments, structural relations,
+    and supported inference. Do not begin from the active predecessor, Pangle, or later repository
+    formulations as though they were Strauss's conclusion.
+  locator_rule: >
+    The reading units use stable printed-page spans in the reviewed 1997 witness. A unit boundary
+    marks a controlled argumentative transition within the printed span; it does not assert an
+    unavailable byte offset or exact PDF-page number.
+  comparison_rule: >
+    Compare the completed source reconstruction with the active predecessor only after the source
+    has been reconstructed in order. Agreement may qualify but does not certify, migrate, activate,
+    or displace the predecessor.
+
+speaker_and_documentary_layers:
+  strauss_1965_preface:
+    role: authorial retrospective voice
+    rule: >
+      Strauss's explicit retrospective judgments and autobiographical statements belong to the
+      Preface's authorial voice, subject to the 1997 composite condition.
+  youthful_strauss_1925_1928:
+    role: historical object of Strauss's self-reconstruction
+    rule: >
+      Positions attributed to the young author are not automatically identical with Strauss's
+      later judgment; the Preface repeatedly corrects the earlier orientation.
+  reported_thinkers_and_movements:
+    role: positions reconstructed, criticized, or used as stages of the argument
+    examples:
+      - liberal democracy
+      - political and cultural Zionism
+      - Franz Rosenzweig
+      - Martin Buber
+      - Martin Heidegger
+      - Friedrich Nietzsche
+      - Baruch Spinoza
+      - Hermann Cohen
+      - Jewish orthodoxy
+    rule: >
+      Reported positions remain distinct from Strauss's endorsement and require independent
+      source review for claims about their complete doctrines.
+  editor:
+    role: publication provenance and composite-text disclosure
+    rule: Green's editorial decisions may identify the witness condition but may not decide Strauss's argument.
+  active_predecessor:
+    role: prior nineteen-source synthesis
+    rule: Its contribution remains a comparison target, not a premise or quotation from Strauss.
+
+sequential_reading:
+  - unit: SPINOZA-PREFACE-RU-001
+    printed_pages: 137-140
+    function: Establish the autobiographical standpoint and the Weimar theologico-political predicament.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-001
+        proposition: >
+          Strauss identifies the original German book as written between 1925 and 1928 by a young
+          German Jew caught in a theologico-political predicament.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-002
+        proposition: >
+          The Weimar Republic is presented as a liberal democracy whose weakness became visible
+          through its inability to unite justice with effective political force.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-003
+        proposition: >
+          Strauss interprets the republic's low political condition in light of higher German
+          intellectual and moral traditions rather than treating constitutional weakness as an
+          isolated institutional failure.
+        classification: documented_finding
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-001
+        proposition: >
+          The Preface begins with dated self-location before turning to doctrine; the political
+          situation is therefore part of the source's argument about the origin of the investigation.
+        classification: structural_evidence
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-001
+        proposition: >
+          The theologico-political problem first appears here as lived political and Jewish
+          disorientation before it is restated as a conflict between reason and revelation.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-001
+        proposition: >
+          The Preface does not reduce the fall of Weimar to one cause, and its retrospective
+          hierarchy of low and high does not by itself establish a complete political history.
+
+  - unit: SPINOZA-PREFACE-RU-002
+    printed_pages: 140-144
+    function: Reconstruct emancipation, German Jewry, modern scholarship, and the unresolved Jewish problem.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-004
+        proposition: >
+          Jewish emancipation depended on liberal democratic principles that dissolved the legal
+          structure of medieval society without eliminating social precariousness or dependence.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-005
+        proposition: >
+          Modern Jewish scholarship achieved intellectual seriousness while remaining deeply
+          dependent on German philosophical and historical thought.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-006
+        proposition: >
+          Strauss distinguishes solving the German-Jewish problem from its later annihilation;
+          catastrophe does not retroactively prove that liberal emancipation had solved it.
+        classification: documented_finding
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-002
+        proposition: >
+          The historical narrative moves from constitutional form to the condition of German Jews
+          and then to Jewish intellectual life, joining politics, society, and interpretation.
+        classification: structural_evidence
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-002
+        proposition: >
+          Political equality, social acceptance, and intellectual independence are treated as
+          distinct conditions; success in one does not establish completion in the others.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-002
+        proposition: >
+          The source does not provide an exhaustive social history of German Jewry or independently
+          establish every historical judgment reported in this span.
+
+  - unit: SPINOZA-PREFACE-RU-003
+    printed_pages: 144-148
+    function: Test liberal, Zionist, statist, and individual forms of solution or return.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-007
+        proposition: >
+          Political Zionism is described as a human and political response that restores dignity
+          and statehood without claiming to settle every theological or diasporic question.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-008
+        proposition: >
+          The establishment of Israel modifies the condition of exile but does not simply terminate
+          the Jewish problem or the condition of Jews outside the state.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-009
+        proposition: >
+          A liberal state cannot prohibit every private act of discrimination without abolishing
+          the private sphere that liberalism also protects.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-010
+        proposition: >
+          Strauss identifies the return of an assimilated individual to the Jewish community as a
+          humanly soluble problem while leaving collective and doctrinal questions open.
+        classification: documented_finding
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-003
+        proposition: >
+          The argument narrows from national and constitutional remedies to the possibility of
+          personal return, thereby preparing the question of what intellectually blocks that return.
+        classification: structural_evidence
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-003
+        proposition: >
+          Political necessity and practical dignity are granted their own weight without being
+          converted into proof of theological truth or a complete solution.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-003
+        proposition: >
+          The source does not certify one political program as the final Jewish solution and does
+          not infer providence from the founding or survival of Israel.
+
+  - unit: SPINOZA-PREFACE-RU-004
+    printed_pages: 148-152
+    function: Examine the alleged rational defeat of orthodoxy through modern Jewish thought and new philosophy.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-011
+        proposition: >
+          Return appears intellectually blocked because modern reason is believed to have refuted
+          the truth claims on which orthodoxy rests.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-012
+        proposition: >
+          Modern Jewish reinterpretations preserve religion by translating it into reason,
+          historical consciousness, or present experience rather than simply restoring traditional
+          authority.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-013
+        proposition: >
+          Rosenzweig's new thinking presents itself as overcoming Greek or old philosophy, but its
+          claim depends on the collapse of modern systematic philosophy and therefore requires
+          examination rather than acceptance.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-014
+        proposition: >
+          Heidegger's more radical questioning of inherited philosophy helped Strauss question the
+          modern interpretation of Greek philosophy that his youthful work had presupposed.
+        classification: documented_finding
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-004
+        proposition: >
+          The source does not move directly from orthodoxy to atheism; it reconstructs intermediate
+          attempts to preserve Jewish faith through modern categories.
+        classification: structural_evidence
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-004
+        proposition: >
+          The authority of revelation cannot be settled merely by the historical prestige or collapse
+          of a philosophic system, because historical succession is not rational refutation.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-004
+        proposition: >
+          Strauss's debt to Heidegger in reopening the question does not establish acceptance of
+          Heidegger's doctrine, politics, or final account of Greek philosophy.
+
+  - unit: SPINOZA-PREFACE-RU-005
+    printed_pages: 152-156
+    function: Distinguish experience, interpretation, will, and the possibility of an unqualified return.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-015
+        proposition: >
+          The comforting or terrifying character of an experience does not decide whether its
+          theological or atheistic interpretation is true.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-016
+        proposition: >
+          Nietzsche's denial of the biblical God requires a corresponding critique of secularized
+          biblical morality and culminates in a project of self-overcoming rather than a simple
+          continuation of Enlightenment unbelief.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-017
+        proposition: >
+          Strauss treats important forms of new thinking and radical atheism as rooted in decision,
+          will, or belief, even when they present themselves as having escaped traditional faith.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-018
+        proposition: >
+          Rosenzweig's return remains qualified by philosophical system, historical interpretation,
+          individual selection, and difficulty concerning miracles; the possibility of an unqualified
+          return therefore reappears as a question.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-019
+        proposition: >
+          Spinoza becomes the decisive obstacle because an unqualified return is possible only if
+          his supposed refutation of orthodoxy fails in the relevant respects.
+        classification: documented_finding
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-005
+        proposition: >
+          The argument passes from the insufficiency of experiential interpretation to the need for
+          a rational examination of Spinoza's claim against orthodoxy.
+        classification: structural_evidence
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-005
+        proposition: >
+          A return governed by modern selection and historicization is not identical with return to
+          the authority of traditional law and miracle.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-005
+        proposition: >
+          Reopening the possibility of unqualified return does not establish that Strauss returned
+          to orthodoxy or that any reported revelation occurred.
+
+  - unit: SPINOZA-PREFACE-RU-006
+    printed_pages: 156-161
+    function: Reconstruct Spinoza's modern project, Jewish reception, and Cohen's indictment.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-020
+        proposition: >
+          Spinoza joins premodern rational argument to a modern political project grounded in
+          natural right, liberal emancipation, and deliberate human mastery rather than natural ends.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-021
+        proposition: >
+          Spinoza could therefore become a symbol of secular emancipation and universal culture,
+          including for Jewish readers who reinterpreted him as a prophetic or biblical rebel.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-022
+        proposition: >
+          Cohen's indictment rejects romantic Jewish canonization and charges Spinoza with using
+          inherited Christian anti-Jewish judgments while advancing assimilation under a liberal state.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-023
+        proposition: >
+          Cohen interprets Spinoza's seven universal dogmas and treatment of Mosaic law as serving
+          a political order in which Judaism loses binding public authority.
+        classification: documented_finding
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-006
+        proposition: >
+          Strauss reconstructs both admiring and condemning Jewish receptions before judging their
+          adequacy, preventing either communal canonization or moral indictment from governing the reading.
+        classification: structural_evidence
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-006
+        proposition: >
+          Spinoza's Jewish significance cannot be separated from the political purpose and audience
+          of his critique of revelation.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-006
+        proposition: >
+          Independent reconstruction of Spinoza and Cohen is required before the repository can
+          certify the full accuracy of Strauss's presentation of either thinker.
+
+  - unit: SPINOZA-PREFACE-RU-007
+    printed_pages: 161-166
+    function: Contrast Cohen's moral state with Spinoza's political means and expose the limits of idealizing interpretation.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-024
+        proposition: >
+          Cohen's moral state, infinite progress, and conception of God oppose Spinoza's political
+          realism, but Strauss judges Cohen insufficiently attentive to coercion, power, revolution,
+          and the conditions of political founding.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-025
+        proposition: >
+          The disagreement turns not only on historical facts but on fidelity, detachment, living
+          tradition, and the difference between idealizing and historical interpretation.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-026
+        proposition: >
+          Cohen's moral criticism does not reach the deepest issue because he also relies on modern
+          historical criticism and does not defend the possibility of miracle in the orthodox sense.
+        classification: documented_finding
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-007
+        proposition: >
+          Strauss first strengthens Cohen's case and then identifies its limit, separating moral
+          seriousness from adequacy to the theologico-political question.
+        classification: structural_evidence
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-007
+        proposition: >
+          Moral superiority, communal fidelity, or humane political intention cannot substitute for
+          a demonstration concerning revelation's possibility.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-007
+        proposition: >
+          The source does not resolve whether Cohen's idealizing interpretation is theologically
+          faithful; it establishes that Cohen does not confront the strongest orthodox claim.
+
+  - unit: SPINOZA-PREFACE-RU-008
+    printed_pages: 166-170
+    function: Recover literary form, persecution, audience, and the need to read Spinoza more literally.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-027
+        proposition: >
+          Cohen neglects persecution, audience, and Spinoza's manner of writing, and therefore reads
+          surface contradictions and rhetorical choices without sufficient attention to literary form.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-028
+        proposition: >
+          Strauss's corrective is not less literal reading but a more exact literal reading that asks
+          who speaks, to whom, under what danger, and with what political purpose.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-029
+        proposition: >
+          Apparent contradictions may cease to be contradictions when statements are assigned to
+          their proper audience, argumentative role, or voice.
+        classification: documented_finding
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-008
+        proposition: >
+          The hermeneutic correction precedes the final doctrinal reconsideration; the question of
+          orthodoxy is reopened through a revised account of how Spinoza must be read.
+        classification: structural_evidence
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-008
+        proposition: >
+          Persecution and differentiated communication authorize disciplined contextual reading,
+          not mechanical reversal or unrestricted attribution of secret doctrines.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-008
+        proposition: >
+          The Preface does not provide a complete line-by-line reconstruction of Spinoza's
+          Theologico-Political Treatise; that work remains a separate source-specific task.
+
+  - unit: SPINOZA-PREFACE-RU-009
+    printed_pages: 170-173
+    function: Test whether Spinoza refuted orthodoxy and distinguish possibility, proof, and comprehensive knowledge.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-030
+        proposition: >
+          Strauss distinguishes orthodoxy understood as demonstrative knowledge from orthodoxy
+          understood as belief in an omnipotent and unfathomable God whose revelation remains possible.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-031
+        proposition: >
+          Spinoza can refute an orthodox claim that presents itself as knowledge on premises open to
+          rational contradiction, but he does not refute belief merely by beginning from premises
+          that already exclude miracle or revelation.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-032
+        proposition: >
+          A decisive rational exclusion of revelation would require a clear and exhaustive account
+          of the whole and of human life that leaves no room for divine intervention.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-033
+        proposition: >
+          Strauss judges that Spinoza's Ethics does not supply this completed account and therefore
+          does not legitimately eliminate the possibility of revelation.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-034
+        proposition: >
+          Admitting the possibility of revelation is not proof that revelation occurred; it removes
+          the evident necessity of the philosophic way and returns the conflict to a moral choice
+          between ways of life.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-035
+        proposition: >
+          Modern unbelief becomes an active project of mastery, and its crisis can culminate in an
+          atheism grounded in intellectual probity, terror, forsakenness, will, or belief rather than
+          demonstrated knowledge.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-036
+        proposition: >
+          The resulting victory of orthodoxy through the self-destruction of modern rationalism is
+          not an unqualified victory and would favor any orthodoxy, not specifically Jewish orthodoxy.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-037
+        proposition: >
+          Strauss closes by asking whether the self-destruction belongs specifically to modern
+          rationalism and by reopening premodern Jewish, medieval, and classical rationalism.
+        classification: documented_finding
+      - id: SPINOZA-PREFACE-DS-038
+        proposition: >
+          Strauss's final autobiographical correction is that the youthful study read Spinoza too
+          literally because it had not read him literally enough.
+        classification: documented_finding
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-009
+        proposition: >
+          The final argument moves from Spinoza's premises to the conditions of decisive refutation,
+          then from modern atheism's moral basis to the reopened historical alternative of premodern rationalism.
+        classification: structural_evidence
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-009
+        proposition: >
+          The source neither resolves the reason-revelation conflict nor suspends rational inquiry;
+          it transforms the alleged modern settlement into a permanent problem requiring renewed reading.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-009
+        proposition: >
+          The source does not establish the actuality of miracle, identify a true revelation, or
+          certify that premodern rationalism resolves the conflict.
+      - id: SPINOZA-PREFACE-UU-010
+        proposition: >
+          Whether Strauss's moral-choice formulation is his final position or a stage toward a more
+          adequate premodern formulation remains open within this item alone.
+
+  - unit: SPINOZA-PREFACE-RU-010
+    printed_pages: 173-180
+    function: Preserve the note apparatus, source dependencies, and edition-sensitive limits.
+    direct_statements:
+      - id: SPINOZA-PREFACE-DS-039
+        proposition: >
+          The notes document the Preface's dependence on historical, Jewish, philosophic, and
+          Spinozist sources and specify references supporting the argumentative body.
+        classification: documentary_observation
+    documentary_observations:
+      - id: SPINOZA-PREFACE-DO-010
+        proposition: >
+          The notes are part of the complete registered item but do not independently certify the
+          correctness of Strauss's summaries or eliminate the need to reconstruct the cited works.
+        classification: structural_evidence
+      - id: SPINOZA-PREFACE-DO-011
+        proposition: >
+          Wording-dependent use remains revisable because the 1997 witness incorporates editorially
+          selected 1968 changes into a text based essentially on the 1965 version.
+        classification: documentary_observation
+    supported_inferences:
+      - id: SPINOZA-PREFACE-SI-010
+        proposition: >
+          The apparatus strengthens provenance and recoverability while preserving the hierarchy
+          between Strauss's argument and the independent sources it interprets.
+        classification: supported_inference
+    uncertainties:
+      - id: SPINOZA-PREFACE-UU-011
+        proposition: >
+          Exact differences among the 1965, 1968, and 1997 textual states remain unknown pending
+          separate witness acquisition and comparison.
+      - id: SPINOZA-PREFACE-UU-012
+        proposition: >
+          Exact one-based PDF locators and byte identity remain unavailable and may be added only by
+          forward revision if the platform exposes or materializes the exact file.
+
+permanent_source_level_findings:
+  - id: SPINOZA-PREFACE-PF-001
+    proposition: >
+      Strauss presents his early Spinoza study as arising from the theologico-political predicament
+      of a young German Jew under the Weimar Republic.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-002
+    proposition: >
+      Liberal emancipation, political Zionism, cultural renewal, statehood, and personal return are
+      distinct responses; none is treated as proof of revelation or as a complete solution of the Jewish problem.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-003
+    proposition: >
+      The historical and political defeat of orthodoxy is distinct from its rational refutation.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-004
+    proposition: >
+      Modern Jewish and philosophic attempts to return often preserve modern categories of history,
+      experience, individual selection, will, or system and therefore do not simply restore orthodoxy.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-005
+    proposition: >
+      Neither the emotional character of experience nor the rise and collapse of a philosophic
+      system decides the truth of revelation.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-006
+    proposition: >
+      Spinoza's political and theological project must be read with attention to audience,
+      persecution, voice, and literary form; literal reading requires more than surface extraction.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-007
+    proposition: >
+      Reason can decisively exclude revelation only through a demonstrated comprehensive account
+      of the whole that leaves no possibility of miraculous intervention.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-008
+    proposition: >
+      Strauss judges that Spinoza does not provide that completed account and therefore does not
+      refute revelation understood as a possibility grounded in an omnipotent and unfathomable God.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-009
+    proposition: >
+      Inability to refute revelation is not proof of revelation, and the possibility of miracle is
+      not evidence that a miracle occurred.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-010
+    proposition: >
+      The self-destruction of modern rationalism would yield at most an ambiguous victory for
+      orthodoxy in general and reopens rather than settles the alternative of premodern rationalism.
+    classification: supported_inference
+  - id: SPINOZA-PREFACE-PF-011
+    proposition: >
+      Strauss's retrospective correction joins doctrinal reconsideration to hermeneutic reform:
+      his youthful reading was too literal because it was not literal enough.
+    classification: documented_finding
+  - id: SPINOZA-PREFACE-PF-012
+    proposition: >
+      The Preface preserves the conflict between reason and revelation as a live problem while
+      refusing to abandon rational inquiry or certify orthodoxy.
+    classification: supported_inference
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss describes the original book as the work of a young German Jew and repeatedly marks the
+    prejudices, assumptions, and limitations of its orientation.
+  textual_deed: >
+    The Preface reconstructs the political, Jewish, philosophic, and hermeneutic path from Weimar,
+    emancipation, Zionism, Rosenzweig, Heidegger, Nietzsche, Spinoza, and Cohen to a renewed test of
+    orthodoxy's alleged refutation and the reopening of premodern rationalism.
+  relation: AUTOBIOGRAPHICAL_SELF_LIMITATION_CONFIRMED_AND_EXCEEDED_BY_ORDERED_RECONSTRUCTION
+  finding: >
+    The self-critical opening is not ceremonial modesty. The essay's deed specifies what the youthful
+    study failed to see and shows how a change in reading practice altered the governing question,
+    without converting retrospective authority into doctrinal self-certification.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - reason and revelation
+      - orthodoxy's historical defeat versus rational refutation
+      - miracle as possibility versus miracle as occurrence
+      - comprehensive knowledge of the whole as a condition of exclusion
+      - philosophy as a way of life confronted by divine law
+      - Spinoza's theological and political project
+      - modern atheism, will, belief, and the reopening of premodern rationalism
+    non_absorption: >
+      The primary problem structures the source but does not absorb concrete Jewish history,
+      modern political remedies, literary interpretation, or the ancient-modern distinction.
+  athens_vs_jerusalem:
+    role: CONTROLLED_SECONDARY_CONCRETE_ALTERNATIVES
+    receives:
+      - Jewish return and orthodoxy
+      - Greek, medieval Jewish, and modern rationalism
+      - revelation, law, philosophy, and the conditions of faithful interpretation
+    non_absorption: >
+      The concrete alternatives may not be reduced to generic religion and reason, and the source
+      does not certify either Jerusalem or Athens as finally victorious.
+  ancients_vs_moderns:
+    role: CONTROLLED_SECONDARY_HISTORICAL_AND_PHILOSOPHIC_RELATION
+    receives:
+      - modern natural right and mastery
+      - modern rationalism's self-destruction
+      - the reopened possibility of classical and medieval rationalism
+      - historicism and the inherited modern interpretation of Greek philosophy
+    non_absorption: Historical sequence and modern crisis do not prove the truth of ancient or medieval doctrine.
+  nomos_vs_physis:
+    role: CONTROLLED_INTERSECTION
+    receives:
+      - natural right, liberal law, private discrimination, and the limits of political remedy
+      - divine law and the question whether modern criticism establishes convention alone
+  theory_vs_practice:
+    role: CONTROLLED_INTERSECTION
+    receives:
+      - liberal democracy, Zionism, statehood, coercion, power, and political dignity
+      - distinction between practical necessity and theoretical truth
+  wise_vs_vulgar:
+    role: CONTROLLED_HERMENEUTIC_INTERSECTION
+    receives:
+      - persecution, audience, differentiated communication, and claims to knowledge
+    non_absorption: Audience differentiation does not certify wisdom, rank, or unrestricted deception.
+  philosophy_vs_poetry:
+    role: BOUNDARY_REFERENCE_ONLY
+    receives:
+      - no independent poetic claimant reconstruction
+    non_absorption: Revelation, prophecy, and miracle may not be reclassified as poetic construction.
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  predecessor_statement: >
+    Reconsiders the alleged rational defeat of orthodoxy and asks whether reason can exclude
+    miracle or revelation without a demonstrated exhaustive account of the whole.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  state: PROVISIONAL_RETEST_COMPLETE_NO_PROMOTION
+  confirmations:
+    - The source explicitly distinguishes orthodoxy's apparent historical defeat from rational refutation.
+    - The source asks whether Spinoza excludes revelation without a comprehensive account of the whole.
+    - The source concludes that Spinoza does not demonstrate the impossibility of revelation understood as possibility.
+  qualifications:
+    - The source distinguishes orthodoxy claiming knowledge from orthodoxy resting on belief in an omnipotent and unfathomable God.
+    - The inability to refute revelation does not prove revelation or the occurrence of miracle.
+    - The crisis of modern rationalism yields an ambiguous victory for orthodoxy in general, not a certified victory for Jewish orthodoxy.
+    - The conclusion reopens premodern rationalism and hermeneutic reform rather than terminating inquiry in a choice already settled.
+  unresolved:
+    - The original 1965 and authorial 1968 textual states have not been separately compared with the 1997 composite.
+    - Spinoza's works and the represented Jewish, biblical, medieval, and modern sources remain independently incomplete.
+    - This item alone does not certify Strauss's final resolution of the reason-revelation problem.
+  predecessor_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+uncertainties:
+  - id: SPINOZA-PREFACE-U-001
+    statement: >
+      The study reconstructs the 1997 editorial composite and remains revisable where the 1965,
+      1968, and 1997 textual states differ.
+  - id: SPINOZA-PREFACE-U-002
+    statement: >
+      Platform reviewability supplies stable printed locators but not repository byte custody,
+      cryptographic identity, exact file size, or verified one-based PDF offsets.
+  - id: SPINOZA-PREFACE-U-003
+    statement: >
+      Strauss's reconstructions of Spinoza, Cohen, Rosenzweig, Heidegger, Nietzsche, Zionism,
+      Jewish orthodoxy, and German-Jewish history require independent source review.
+  - id: SPINOZA-PREFACE-U-004
+    statement: >
+      The source does not determine which revelation, if any, is true or whether any miracle occurred.
+  - id: SPINOZA-PREFACE-U-005
+    statement: >
+      The exact relation between the moral-choice formulation and Strauss's reopened account of
+      premodern rationalism remains unresolved within this item alone.
+  - id: SPINOZA-PREFACE-U-006
+    statement: >
+      The final formula concerning literal reading is explicit, but its complete application to
+      Spinoza requires the separate sequential reconstruction of the relevant Spinozist texts.
+
+prohibitions:
+  - Do not let the active predecessor or Pangle govern the source reconstruction.
+  - Do not treat the predecessor statement as a quotation from Strauss.
+  - Do not identify historical or political defeat with rational refutation.
+  - Do not infer the actuality of revelation from reason's inability to exclude it.
+  - Do not infer that a miracle occurred from the possibility of miracle.
+  - Do not treat political dignity, statehood, survival, catastrophe, persecution, or moral seriousness as theoretical proof.
+  - Do not identify the 1997 editorial composite with separately reviewed 1965 or 1968 textual states.
+  - Do not treat a platform object identifier as a digest or reviewability as repository custody.
+  - Do not treat attention to persecution and audience as mechanical reversal or unrestricted deception.
+  - Do not identify Strauss's reconstruction of another thinker with that thinker's independently established doctrine.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+
+termination:
+  reading_state: COMPLETE_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  witness_state: QUALIFIED_PLATFORM_REFERENCE_WITHOUT_BYTE_CUSTODY
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  original_1965_edition_comparison_required: true
+  authorial_1968_reprint_comparison_required: true
+  byte_materialization_required_if_later_available: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
+  next_units:
+    - update CORPUS-STATUS-102 to record SPINOZA-PREFACE-STUDY-001
+    - register CORPUS-STUDY-011 and FINDSET-011
+    - create jurisdiction-preserving Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns synthesis bridges
+    - validate source, witness, study, findings, jurisdiction, noncorroboration, and completion language
+    - preserve the active predecessor and every edition, byte-custody, certification, migration, activation, and Sanctum-repin blocker
