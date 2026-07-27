@@ -4,17 +4,23 @@ on:
   push:
     branches:
       - production/corpus-src-102-sequential-reconstruction
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
   materialize:
-    if: contains(github.event.head_commit.message, 'Stage generated CORPUS-SRC-102 integration payload')
+    if: >-
+      (github.event_name == 'push' && contains(github.event.head_commit.message, 'Stage generated CORPUS-SRC-102 integration payload')) ||
+      (github.event_name == 'pull_request' && github.head_ref == 'production/corpus-src-102-sequential-reconstruction')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: production/corpus-src-102-sequential-reconstruction
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -44,4 +50,4 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
           git commit -m 'Integrate CORPUS-SRC-102 sequential reconstruction'
-          git push
+          git push origin HEAD:production/corpus-src-102-sequential-reconstruction
