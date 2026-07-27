@@ -96,7 +96,7 @@ priority_groups:
       - {rank: 6, source_id: CORPUS-SRC-108, title: On the Interpretation of Genesis, next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 7, source_id: CORPUS-SRC-113, title: Introduction to Persecution and the Art of Writing, next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 8, source_id: CORPUS-SRC-116, title: Preface to Hobbes Politische Wissenschaft, next_action: ACQUIRE_AND_REGISTER_WITNESS}
-      - {rank: 9, source_id: CORPUS-SRC-101, title: Progress or Return?, next_action: ACQUIRE_AND_REGISTER_WITNESS}
+      - {rank: 9, source_id: CORPUS-SRC-101, title: "Progress or Return?", next_action: ACQUIRE_AND_REGISTER_WITNESS}
 
   - priority: 3
     designation: POLITICAL_AND_HISTORICAL_MEDIATIONS
@@ -111,7 +111,7 @@ priority_groups:
   - priority: 4
     designation: ARCHITECTURAL_AND_COMPARATIVE_DEEPENING
     items:
-      - {rank: 16, source_id: CORPUS-SRC-110, title: What Is Political Philosophy?, next_action: ACQUIRE_AND_REGISTER_WITNESS}
+      - {rank: 16, source_id: CORPUS-SRC-110, title: "What Is Political Philosophy?", next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 17, source_id: CORPUS-SRC-118, title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays, next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 18, source_id: CORPUS-SRC-119, title: "Restatement on Xenophon's Hiero", next_action: ACQUIRE_AND_REGISTER_WITNESS}
       - {rank: 19, source_id: CORPUS-SRC-106, title: Freud on Moses and Monotheism, next_action: ACQUIRE_AND_REGISTER_WITNESS}
