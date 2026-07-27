@@ -1,17 +1,282 @@
 schema_version: 1.0
-record_type: hermeneutic_rule
-identity: {key: historical-and-philosophical-understanding, version: 1.0.0}
+record_type: hermeneutic_contract
+
+identity:
+  key: historical-and-philosophical-understanding
+  title: Historical and Philosophical Understanding Hermeneutic
+  version: 1.1.0
+  contract_version: STRAUSS-HERMENEUTIC-HPU-1
+
+status:
+  lifecycle: OPERATIONAL_CONTRACT
+  semantic_completion: SUBSTANTIVELY_RECONSTRUCTED
+  source_specific_application: INCOMPLETE
+  certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 28f42a92d55800b3bd8a3170f835457e949ead42
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the initial distinction summary with a full contract governing historical
+    reconstruction, causal explanation, authorial alternatives, transhistorical claims,
+    philosophical testing, anachronism, reduction, and nonresolution.
+
 source_protocols:
   - protocols/source-status.yaml
+  - protocols/evidence-classification.yaml
   - protocols/inference-discipline.yaml
   - protocols/uncertainty-preservation.yaml
+  - protocols/speech-and-deed.yaml
+
+purpose: >
+  Hold historical and philosophical understanding together without reducing argument to
+  context or detaching claims from the vocabulary, institutions, controversies,
+  audiences, and alternatives that made their formulation possible.
+
 governing_question: >
-  What belongs to the author's historical situation, and what claim or question is
-  presented as exceeding that situation?
-rules:
-  - Reconstruct the historical vocabulary, controversy, institutions, and available alternatives.
-  - Do not reduce a philosophical argument to its causal or social origin.
-  - Do not detach an argument from the circumstances that shaped its formulation and reception.
-  - Historical influence does not establish philosophical agreement or rank.
-  - Causal explanation is not refutation; transhistorical assertion is not demonstration.
-  - Preserve the relation between historical recovery and philosophical testing as an open question where necessary.
+  What belongs to the author's historical situation, vocabulary, controversy,
+  institutions, available alternatives, and intended intervention; what claim or
+  question is presented as exceeding that situation; and how should each be tested
+  without confusing causal explanation with philosophical refutation or assertion with demonstration?
+
+governing_rule: >
+  Historical reconstruction precedes philosophical comparison but does not terminate it.
+  A claim must first be understood as the author and original audience could understand
+  it; only then may its truth, adequacy, or transhistorical burden be tested. Context
+  explains formulation and reception without automatically refuting or validating content.
+
+input_contract:
+  required_fields:
+    - source_ref
+    - documentary_status
+    - author_or_agent
+    - date_and_place
+    - political_and_institutional_context
+    - vocabulary_and_terms
+    - governing_controversy
+    - available_alternatives
+    - original_audiences
+    - authorial_intervention
+    - causal_explanations_considered
+    - philosophical_claim_or_question
+    - transhistorical_burden
+    - later_reception
+    - alternatives_considered
+    - remaining_uncertainty
+  source_ref_required_fields:
+    - ref
+    - commit
+    - location
+  historical_dimensions:
+    - chronology
+    - place
+    - regime_and_law
+    - religion_and_theology
+    - institutions
+    - education
+    - genre_and_rhetoric
+    - controversies
+    - available_texts_and_sources
+    - inherited_vocabulary
+    - censorship_or_persecution
+    - intended_and_actual_audiences
+    - material_and_social_conditions
+    - reception_and_transmission
+  philosophical_dimensions:
+    - governing_question
+    - strongest_alternatives
+    - explicit_argument
+    - demonstrated_deed
+    - standard_of_judgment
+    - claimed_scope
+    - unresolved_burden
+    - relation_to_human_good
+    - relation_to_whole
+    - relation_to_revelation_or_authority
+
+application_sequence:
+  - step_id: HPU-STEP-001
+    operation: classify source, edition, translation, documentary layer, and limits
+  - step_id: HPU-STEP-002
+    operation: establish chronology, place, regime, institutions, and relevant events
+  - step_id: HPU-STEP-003
+    operation: reconstruct original vocabulary before translating it into later categories
+  - step_id: HPU-STEP-004
+    operation: identify governing controversy, interlocutors, and historically available alternatives
+  - step_id: HPU-STEP-005
+    operation: identify original audiences, occasion, rhetorical constraints, and intended intervention
+  - step_id: HPU-STEP-006
+    operation: distinguish documentary fact, causal explanation, authorial self-understanding, and later reception
+  - step_id: HPU-STEP-007
+    operation: recover the philosophical question or claim in its historically available form
+  - step_id: HPU-STEP-008
+    operation: state the claim's asserted scope and transhistorical burden without granting it automatically
+  - step_id: HPU-STEP-009
+    operation: test causal and contextual explanations without treating them as refutations
+  - step_id: HPU-STEP-010
+    operation: compare later alternatives only after independent historical reconstruction
+  - step_id: HPU-STEP-011
+    operation: assign bounded historical and philosophical findings separately
+  - step_id: HPU-STEP-012
+    operation: preserve open relation where historical recovery and philosophical testing do not yield one conclusion
+
+historical_finding_classes:
+  - HISTORICAL_CONTEXT_DOCUMENTED
+  - VOCABULARY_RECONSTRUCTED
+  - CONTROVERSY_RECONSTRUCTED
+  - AVAILABLE_ALTERNATIVES_BOUNDED
+  - ORIGINAL_AUDIENCE_BOUNDED
+  - AUTHORIAL_INTERVENTION_SUPPORTED
+  - CAUSAL_EXPLANATION_SUPPORTED
+  - CAUSAL_EXPLANATION_BOUNDED
+  - RECEPTION_HISTORY_DOCUMENTED
+  - HISTORICAL_RECONSTRUCTION_INCOMPLETE
+
+philosophical_finding_classes:
+  - PHILOSOPHICAL_QUESTION_RECOVERED
+  - EXPLICIT_ARGUMENT_RECONSTRUCTED
+  - CLAIMED_SCOPE_DOCUMENTED
+  - TRANSHISTORICAL_BURDEN_IDENTIFIED
+  - PHILOSOPHICAL_STANDARD_SUPPORTED
+  - CLAIM_BOUNDED_BY_HISTORICAL_FORMULATION
+  - CLAIM_EXCEEDS_HISTORICAL_OR_DOCUMENTARY_EVIDENCE
+  - PHILOSOPHICAL_ALTERNATIVES_REMAIN_LIVE
+  - PHILOSOPHICAL_JUDGMENT_WITHHELD
+
+relation_classes:
+  - HISTORICAL_CONTEXT_CLARIFIES_ARGUMENT
+  - HISTORICAL_CONTEXT_QUALIFIES_SCOPE
+  - HISTORICAL_CONTEXT_EXPLAINS_FORM_NOT_TRUTH
+  - CAUSAL_EXPLANATION_DOES_NOT_REFUTE
+  - PHILOSOPHICAL_CLAIM_EXCEEDS_CONTEXT_AS_ASSERTION
+  - TRANSHISTORICAL_CLAIM_REQUIRES_INDEPENDENT_TEST
+  - LATER_RECEPTION_TRANSFORMS_REFERENT
+  - HISTORICAL_AND_PHILOSOPHICAL_RELATION_UNRESOLVED
+
+required_evidence:
+  - primary or contemporaneous evidence for historical circumstances where available
+  - source-language or terminological evidence where vocabulary bears the conclusion
+  - evidence of available alternatives rather than retrospectively invented options
+  - evidence for audience, occasion, and intended intervention
+  - explicit separation of causal inference from source statement
+  - exact argument or bounded paraphrase for philosophical claims
+  - later reception sources classified separately from original meaning
+  - alternatives considered and confidence stated
+
+anachronism_controls:
+  - Later concepts may be used comparatively only after the original vocabulary is reconstructed.
+  - Modern categories must not be treated as self-evident equivalents of ancient or medieval terms.
+  - Absence of a later distinction does not prove conceptual incapacity.
+  - Chronological lateness does not establish superiority.
+  - A later author's use of inherited vocabulary may transform the referent while preserving the term.
+
+reduction_controls:
+  - Social, economic, psychological, institutional, or political origin is not philosophical refutation.
+  - Interest and motive may qualify authority without deciding truth.
+  - Persecution may shape form without proving hidden truth.
+  - Influence and reception do not establish agreement or rank.
+  - Historical uniqueness does not establish philosophical adequacy.
+  - Transhistorical assertion does not establish demonstration.
+
+comparison_rules:
+  - Reconstruct each author and historical horizon independently before comparison.
+  - Compare problems and alternatives, not merely vocabulary or influence.
+  - Preserve asymmetries in source status, available evidence, and claimed scope.
+  - Distinguish historical predecessor, influence, transformation, critique, and independent recurrence.
+  - Do not make Strauss's later reconstruction the original author's self-understanding without evidence.
+  - Later philosophical testing must state its own standard and burden.
+
+valid_outputs:
+  - HISTORICAL_RECONSTRUCTION_SUPPORTED
+  - HISTORICAL_RECONSTRUCTION_BOUNDED
+  - PHILOSOPHICAL_QUESTION_RECOVERED
+  - PHILOSOPHICAL_CLAIM_BOUNDED
+  - CONTEXT_CLARIFIES_WITHOUT_REFUTING
+  - CAUSAL_EXPLANATION_SUPPORTED_NOT_DECISIVE
+  - ANACHRONISTIC_READING_REJECTED
+  - TRANSHISTORICAL_BURDEN_PRESERVED
+  - RECEPTION_TRANSFORMATION_DOCUMENTED
+  - HISTORICAL_AND_PHILOSOPHICAL_RELATION_UNRESOLVED
+  - INSUFFICIENT_DOCUMENTATION
+
+required_output_fields:
+  - classification
+  - historical_context
+  - vocabulary_and_terms
+  - governing_controversy
+  - available_alternatives
+  - original_audiences
+  - authorial_intervention
+  - causal_explanations
+  - philosophical_question_or_claim
+  - claimed_scope
+  - transhistorical_burden
+  - later_reception
+  - relation_between_history_and_philosophy
+  - evidence
+  - alternatives_considered
+  - confidence
+  - remaining_uncertainty
+
+prohibited_outputs:
+  - philosophical argument reduced to social or causal origin
+  - historical context ignored because a claim appears universally true
+  - modern vocabulary silently substituted for historical terms
+  - later reception treated as original meaning
+  - influence treated as agreement or rank
+  - causal explanation treated as refutation
+  - transhistorical assertion treated as demonstration
+  - chronological lateness treated as superiority
+  - author's historical self-understanding treated as final philosophical truth
+  - Strauss's reconstruction substituted for independent primary-source recovery
+
+uncertainty_rules:
+  - Historical evidence may be insufficient to reconstruct every available alternative.
+  - Philosophical scope may remain disputed after historical meaning is secure.
+  - Original audience and intended intervention may remain bounded rather than fully known.
+  - Causal explanation may be supported while its explanatory sufficiency remains unresolved.
+  - A claim may exceed context as a question without being established as true.
+  - Historical and philosophical understanding may remain permanently related but nonidentical.
+
+speech_mechanism_integration:
+  contract: speech/speech-mechanism.yaml
+  rule: >
+    Candidate reports must distinguish historical findings, causal inferences,
+    philosophical claims, later reception, and transhistorical burdens. They may not use
+    context as silent refutation or universal language as silent demonstration.
+
+termination_rule: >
+  A historical-and-philosophical inquiry is complete only when source status,
+  chronology, place, institutions, vocabulary, controversy, available alternatives,
+  audiences, authorial intervention, causal explanations, philosophical claim,
+  transhistorical burden, later reception, relation classification, confidence, and
+  remaining uncertainty are explicit.
+
+behavioral_tests:
+  - id: HPU-TEST-001
+    behavior: original vocabulary is reconstructed before later categories are applied
+  - id: HPU-TEST-002
+    behavior: causal explanation does not function as philosophical refutation
+  - id: HPU-TEST-003
+    behavior: historical context may qualify scope without deciding truth
+  - id: HPU-TEST-004
+    behavior: later reception remains distinct from original meaning
+  - id: HPU-TEST-005
+    behavior: influence does not establish agreement or rank
+  - id: HPU-TEST-006
+    behavior: transhistorical assertion requires an independent standard and burden
+  - id: HPU-TEST-007
+    behavior: modern vocabulary cannot silently replace historical terms
+  - id: HPU-TEST-008
+    behavior: independent author reconstruction precedes Straussian comparison
+  - id: HPU-TEST-009
+    behavior: secure historical meaning may coexist with unresolved philosophical judgment
+  - id: HPU-TEST-010
+    behavior: insufficient historical evidence terminates as a bounded finding
+
+self_limitation: >
+  This hermeneutic governs the relation between historical recovery and philosophical
+  testing. It does not guarantee complete contextual knowledge, reduce truth to history,
+  certify transhistorical claims, or authorize the repository to escape its own
+  historical and documentary conditions.
