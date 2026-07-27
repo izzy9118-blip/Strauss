@@ -51,9 +51,13 @@ REQUIRED_PROFILE_SECTIONS = {
 REQUIRED_WITNESS_SECTIONS = {
     "registry_purpose",
     "source_status_rules",
-    "witnesses",
     "witness_relation_rules",
 }
+
+WITNESS_LIST_KEYS = (
+    "witnesses",
+    "principal_witnesses",
+)
 
 CONTROLLED_RELATION_TYPES = {
     "DEPENDS_ON",
@@ -120,6 +124,15 @@ def _status_is_noncertifying(record: dict[str, Any]) -> bool:
     return True
 
 
+def _principal_witnesses(record: dict[str, Any]) -> list[Any] | None:
+    """Return the declared principal witness list without rewriting its source key."""
+    for key in WITNESS_LIST_KEYS:
+        value = record.get(key)
+        if isinstance(value, list):
+            return value
+    return None
+
+
 def validate_problem_declaration(
     declaration: dict[str, Any],
     expected_key: str,
@@ -169,7 +182,11 @@ def validate_problem_bundle(bundle: dict[str, Any]) -> list[str]:
     profile_identity = profile.get("identity", {}) if isinstance(profile, dict) else {}
     if profile_identity.get("problem") != key:
         errors.append(f"{key}: inquiry-profile identity mismatch")
-    missing_profile = sorted(REQUIRED_PROFILE_SECTIONS - set(profile)) if isinstance(profile, dict) else sorted(REQUIRED_PROFILE_SECTIONS)
+    missing_profile = (
+        sorted(REQUIRED_PROFILE_SECTIONS - set(profile))
+        if isinstance(profile, dict)
+        else sorted(REQUIRED_PROFILE_SECTIONS)
+    )
     if missing_profile:
         errors.append(f"{key}: inquiry profile missing sections: {', '.join(missing_profile)}")
     if not _status_is_noncertifying(profile):
@@ -179,11 +196,19 @@ def validate_problem_bundle(bundle: dict[str, Any]) -> list[str]:
     witness_identity = witnesses.get("identity", {}) if isinstance(witnesses, dict) else {}
     if witness_identity.get("problem") != key:
         errors.append(f"{key}: witness-registry identity mismatch")
-    missing_witness = sorted(REQUIRED_WITNESS_SECTIONS - set(witnesses)) if isinstance(witnesses, dict) else sorted(REQUIRED_WITNESS_SECTIONS)
+    missing_witness = (
+        sorted(REQUIRED_WITNESS_SECTIONS - set(witnesses))
+        if isinstance(witnesses, dict)
+        else sorted(REQUIRED_WITNESS_SECTIONS)
+    )
     if missing_witness:
         errors.append(f"{key}: witness registry missing sections: {', '.join(missing_witness)}")
-    if not isinstance(witnesses.get("witnesses"), list) or not witnesses.get("witnesses"):
-        errors.append(f"{key}: witness registry must contain at least one witness")
+    principal_witnesses = _principal_witnesses(witnesses) if isinstance(witnesses, dict) else None
+    if not principal_witnesses:
+        accepted = " or ".join(WITNESS_LIST_KEYS)
+        errors.append(
+            f"{key}: witness registry must contain at least one witness under {accepted}"
+        )
     if not _status_is_noncertifying(witnesses):
         errors.append(f"{key}: witness registry may not be certified or activated")
 
@@ -209,7 +234,11 @@ def validate_problem_bundle(bundle: dict[str, Any]) -> list[str]:
             seen.add(other)
         if relation_type not in CONTROLLED_RELATION_TYPES:
             errors.append(f"{key}: uncontrolled relation type {relation_type!r}")
-        boundary_fields = [name for name in relation if name == "boundary" or name.endswith("_jurisdiction")]
+        boundary_fields = [
+            name
+            for name in relation
+            if name == "boundary" or name.endswith("_jurisdiction")
+        ]
         if not boundary_fields:
             errors.append(f"{key}: relation to {other!r} lacks a jurisdictional boundary")
     if seen != expected_neighbors:
@@ -231,13 +260,23 @@ def validate_problem_bundle(bundle: dict[str, Any]) -> list[str]:
     return errors
 
 
-def build_problem_bundle(canonical_key: str, manifest: dict[str, Any] | None = None) -> dict[str, Any]:
+def build_problem_bundle(
+    canonical_key: str,
+    manifest: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     manifest = manifest or load_manifest()
     declaration = _select_declaration(manifest, canonical_key)
     expected_order = CANONICAL_KEYS.index(canonical_key) + 1
-    declaration_errors = validate_problem_declaration(declaration, canonical_key, expected_order)
+    declaration_errors = validate_problem_declaration(
+        declaration,
+        canonical_key,
+        expected_order,
+    )
     if declaration_errors:
-        raise ProblemBundleError("Problem declaration validation failed:\n- " + "\n- ".join(declaration_errors))
+        raise ProblemBundleError(
+            "Problem declaration validation failed:\n- "
+            + "\n- ".join(declaration_errors)
+        )
 
     synthesis_dir = _resolve(declaration["synthesis_directory"])
     syntheses = [
@@ -256,7 +295,9 @@ def build_problem_bundle(canonical_key: str, manifest: dict[str, Any] | None = N
     }
     errors = validate_problem_bundle(bundle)
     if errors:
-        raise ProblemBundleError("Problem bundle validation failed:\n- " + "\n- ".join(errors))
+        raise ProblemBundleError(
+            "Problem bundle validation failed:\n- " + "\n- ".join(errors)
+        )
     return bundle
 
 
@@ -280,7 +321,9 @@ def build_problem_bundle_context(problem_keys: list[str] | None = None) -> dict[
     }
 
 
-def validate_manifest_problem_bundles(manifest: dict[str, Any] | None = None) -> list[str]:
+def validate_manifest_problem_bundles(
+    manifest: dict[str, Any] | None = None,
+) -> list[str]:
     manifest = manifest or load_manifest()
     errors: list[str] = []
     problems = manifest.get("problems", [])
@@ -291,8 +334,9 @@ def validate_manifest_problem_bundles(manifest: dict[str, Any] | None = None) ->
 
     for order, key in enumerate(CANONICAL_KEYS, start=1):
         declaration = _select_declaration(manifest, key)
-        errors.extend(validate_problem_declaration(declaration, key, order))
-        if errors:
+        declaration_errors = validate_problem_declaration(declaration, key, order)
+        errors.extend(declaration_errors)
+        if declaration_errors:
             continue
         try:
             build_problem_bundle(key, manifest)
