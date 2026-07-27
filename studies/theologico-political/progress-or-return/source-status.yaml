@@ -1,0 +1,90 @@
+schema_version: 1.0
+document_type: source_status_record
+
+identity:
+  status_id: TP-SOURCE-STATUS-001
+  corpus_source_id: CORPUS-SRC-101
+  canonical_title: Progress or Return?
+  author: Leo Strauss
+  date: 1952
+  version: 1.0.0
+
+status:
+  lifecycle: REGISTERED_SOURCE_IDENTITY
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: NOT_YET_REGISTERED
+  independent_sequential_study: NOT_YET_COMPLETED
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 1
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-101
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+
+verified_documentary_facts:
+  - The active predecessor identifies the work as Progress or Return?.
+  - The active predecessor records the date as 1952.
+  - The active predecessor treats the work as the first of nineteen writings in its documentary source basis.
+  - The current corpus registry identifies the work as CORPUS-SRC-101.
+
+predecessor_contribution_record:
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_WITNESS
+  statement: >
+    Establishes progress and return as rival orientations and presents the unresolved
+    conflict between the biblical and philosophic accounts of the good life as a living
+    foundation of Western civilization.
+  preservation_rule: >
+    This statement remains attributable to the active predecessor. Registration here does
+    not independently confirm, promote, revise, or certify it.
+
+publication_and_witness_condition:
+  publication_venue: UNVERIFIED_IN_THIS_RECORD
+  edition: UNVERIFIED_IN_THIS_RECORD
+  pagination: UNVERIFIED_IN_THIS_RECORD
+  local_file: NOT_REGISTERED
+  fingerprint: NOT_AVAILABLE
+  text_condition: NOT_ASSESSED
+  locator_reproducibility: INCOMPLETE
+
+source_classification:
+  author_relation: PRIMARY_STRAUSS_WRITING
+  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  analytical_use: ORIENTATION_ONLY_UNTIL_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+  independence_limit: >
+    The active predecessor and later repository records are derivative from this source and
+    do not constitute independent corroboration of its argument.
+
+required_distinctions:
+  - progress from return
+  - biblical account of the good life from philosophic account of the good life
+  - historical influence from philosophical or theological truth
+  - political settlement from resolution of the comprehensive alternatives
+  - predecessor synthesis from source-level documented finding
+  - source identity from reviewed edition or textual witness
+
+prohibitions:
+  - Do not treat the predecessor contribution statement as a source-level quotation.
+  - Do not assign page locators before a reviewed witness is registered.
+  - Do not infer publication venue, edition, translator, pagination, or textual condition.
+  - Do not count this registration as an independent sequential reconstruction.
+  - Do not use this record to certify doctrine, migration, or successor activation.
+  - Do not displace or revise the active predecessor through this record.
+
+next_required_actions:
+  - identify and register a reviewed edition or textual witness
+  - record publication provenance and stable locators
+  - compute a file fingerprint when a lawful local witness is reviewed
+  - conduct an independent sequential reading
+  - classify source-level findings by evidence status
+  - compare the source-level reconstruction with the active predecessor without silent harmonization
+
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: MISSING
+  study_state: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
