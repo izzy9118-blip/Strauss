@@ -4,7 +4,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 0.5.0
+  version: 0.6.0
 
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
@@ -14,13 +14,13 @@ status:
   destructive_actions_authorized: false
 
 revision_history:
-  predecessor_version: 0.4.0
-  predecessor_blob_sha: 7f5d1ce6363f00da8c444c91647771c42b6ae411
+  predecessor_version: 0.5.0
+  predecessor_blob_sha: cb81ed68e1954b2ad63633786a7546e49952d089
   reason: >
-    Register all seven foundational problems as complete read-only operational bundles
-    containing constitution, inquiry profile, witness registry, relations, and synthesis
-    records. Preserve source-specific application, incomplete witnesses, migration
-    certification, doctrine, activation, corpus, and findings as incomplete.
+    Replace the reference-only corpus index mapping with a typed corpus registry and
+    validator exhaustive for the current committed source and study state. Preserve the
+    wider corpus as open, source-text admission as separate, item-level source status and
+    independent witness reconstruction as incomplete, and all certification and activation limits.
 
 source_state:
   repository: izzy9118-blip/Strauss
@@ -36,12 +36,12 @@ source_state:
 
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 1.3.0
+  version: 1.4.0
   rule: >
     Every lean operational object must expose whether it is substantively reconstructed,
     partially reconstructed, mapped to richer records, a structural placeholder, or
-    unimplemented. Structural and bundle validation must never be reported as doctrinal,
-    source-specific, migration, or repository completion.
+    unimplemented. Structural, bundle, and current-state registry validation must never
+    be reported as doctrinal, source-specific, migration, or repository completion.
 
 mapping_rules:
   - No source record is deleted, moved, or edited merely to satisfy the lean interface.
@@ -54,6 +54,9 @@ mapping_rules:
   - Contract reconstruction does not complete source-specific application.
   - Bundle loading does not certify a problem, synthesis, witness, claimant, predecessor displacement, or successor activation.
   - Legitimate historical record-layout variants may be normalized for loading without silently rewriting source files.
+  - Current-state corpus exhaustiveness must remain distinct from a closed or complete corpus.
+  - Source entity, reviewed witness, source-status record, and analytical study identities may not be collapsed.
+  - Registry inclusion does not admit or distribute source text.
 
 mappings:
   problems:
@@ -170,14 +173,33 @@ mappings:
       not automatically interpret sources or generate a completed natural-language answer.
 
   corpus:
-    target_role: source_discovery_and_status_index
+    target_role: typed_source_identity_status_study_provenance_and_gap_registry
     source:
-      - studies/
-      - history/
-      - problem witness registries
-    interface: corpus/index.yaml
-    transformation: REFERENCE_ONLY
-    completion: MAPPED_TO_RICHER_RECORDS
+      - studies/**/*.yaml
+      - problems/*/witnesses.yaml
+      - problems/theologico-political.yaml
+      - history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+      - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+      - migrations/foundational-problems-v2/predecessor-index.yaml
+    interface:
+      registry: corpus/index.yaml
+      loader: corpus_registry.py
+      validation_command: python corpus_registry.py --validate
+    transformation: SUBSTANTIVE_FORWARD_REVISION_FROM_REFERENCE_INDEX
+    completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
+    present_function:
+      - register source entities separately from reviewed witnesses and analytical studies
+      - account for every YAML record in the current studies tree
+      - register all seven problem witness registries
+      - preserve all nineteen Theologico-Political predecessor source identities and dates
+      - validate the active predecessor against its preserved historical copy
+      - bind the SPPP reviewed-witness fingerprint to its source-status record
+      - preserve explicit gaps for absent editions, item statuses, and independent witnesses
+      - expose read-only discovery and provenance context
+    limit: >
+      The registry is exhaustive only for the present committed source and study state.
+      It does not contain every Strauss work, edition, translation, classical or biblical
+      witness, source text, item-level source status, or independent reconstruction.
 
   findings:
     target_role: completed_and_provisional_inquiry_results
@@ -197,17 +219,20 @@ mappings:
     interface:
       - adapter.py
       - problem_bundles.py
+      - corpus_registry.py
       - tests/test_adapter.py
       - tests/test_hermeneutics.py
       - tests/test_methods.py
       - tests/test_problem_bundles.py
+      - tests/test_corpus_registry.py
       - .github/workflows/validate-lean-interface.yml
     transformation: NEW_OPERATIONAL_LAYER
     completion: PARTIALLY_RECONSTRUCTED
     limit: >
-      The runtime validates and loads speech, hermeneutic, method, and complete problem
-      bundle contracts and structures candidate reports. It does not perform source
-      interpretation, doctrinal certification, successor activation, or Assembly admission.
+      The runtime validates and loads speech, hermeneutic, method, problem-bundle, and
+      corpus-registry contracts and structures candidate reports. It does not perform
+      source interpretation, source-text admission, doctrinal certification, successor
+      activation, or authoritative Assembly admission.
 
 path_conflicts:
   - requested_path: problems/theologico-political.yaml
@@ -221,11 +246,11 @@ non_effects:
   - No active predecessor is displaced.
   - No accepted migration source is superseded.
   - No source-specific finding is promoted beyond its recorded evidence status.
-  - No synthesis is promoted to doctrine by being included in a bundle.
+  - No synthesis is promoted to doctrine by being included in a bundle or corpus registry.
+  - No source text is admitted or distributed by corpus registration.
   - No Assembly authority is conferred; Sanctum validation remains separate.
   - Passing tests does not certify semantic completion or doctrine.
-  - Substantive hermeneutic and method contracts do not certify their source-specific applications.
-  - Complete bundle loading does not mean complete witness reconstruction or migration.
+  - Complete current-state indexing does not mean a closed or complete corpus.
 
 validation_states:
   structural_interface_valid_when:
@@ -233,13 +258,15 @@ validation_states:
     - all declared YAML records parse
     - adapter validates manifest and speech contract
     - problem_bundles validates all seven complete bundle declarations and records
-    - speech, hermeneutic, method, and problem-bundle tests pass
+    - corpus_registry validates source identities, witnesses, studies, predecessor sources, paths, counts, and gaps
+    - speech, hermeneutic, method, problem-bundle, and corpus-registry tests pass
     - GitHub Actions passes on the implementing commit
   semantic_completion_requires:
-    - replace reference-only corpus and findings indexes with typed exhaustive registries
+    - replace the reference-only findings index with a typed exhaustive current-state registry
+    - create item-level source-status and source-specific study records for registered writings
     - expand source-specific and independent-witness reconstructions
     - complete recorded proposition-level migrations and their validation
-    - validate actual candidate reports against method, hermeneutic, speech, problem, and Sanctum boundaries
+    - validate actual candidate reports against method, hermeneutic, speech, problem, corpus, and Sanctum boundaries
   doctrinal_certification_requires:
     - separate source-grounded and migration-specific certification records
     - preservation of dissent, contradiction, and uncertainty
@@ -249,24 +276,22 @@ validation_states:
     - complete classified migration coverage
     - reference and schema validation
     - explicit authorized certification
-    - no activation merely from bundle readiness
+    - no activation merely from bundle or corpus-registry readiness
 
 completed_production_units:
   - validated lean interface skeleton
-  - operational completeness audit v1.0.0 through v1.3.0
+  - operational completeness audit v1.0.0 through v1.4.0
   - substantive speech-mechanism contract
   - semantic speech-request validation and candidate report structure
-  - speech behavioral tests
-  - all six substantive hermeneutic contracts
-  - hermeneutic contract behavioral tests
-  - all four substantive inquiry method contracts
-  - method contract behavioral tests
-  - complete read-only foundational problem bundle loader
-  - problem-bundle behavioral and preservation tests
+  - all six substantive hermeneutic contracts and tests
+  - all four substantive inquiry method contracts and tests
+  - complete read-only foundational problem bundle loader and tests
+  - typed current-state exhaustive open corpus registry, loader, and tests
 
 next_production_units:
-  - complete the typed corpus registry
   - complete the typed findings registry
+  - create item-level source-status records for registered writings
+  - register a reviewed Socrates and Aristophanes witness
   - expand independent source-specific witness reconstruction
   - create source-specific method and hermeneutic application fixtures
   - validate actual candidate ministerial reports
