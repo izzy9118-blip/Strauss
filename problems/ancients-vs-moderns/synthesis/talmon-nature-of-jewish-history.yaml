@@ -1,0 +1,110 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVM-TALMON-001
+  problem: ancients-vs-moderns
+  source_study: TALMON-STUDY-001
+  title: Ancients vs. Moderns — Talmon, The Nature of Jewish History
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_id: CORPUS-SRC-111
+  witness_id: CORPUS-WIT-111
+  source_status: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml
+  study_path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication: Journal of Modern History 29, no. 3, 1957
+  printed_page: 232
+  original_edition_comparison: PENDING
+
+strict_problem: >
+  What can modern historical inquiry know about a people constituted by belief in election,
+  and can modern political statehood or reductive social explanation resolve a problem whose
+  universal significance arises from an ancient sacred self-understanding?
+
+principal_findings:
+  - Modern historical inquiry can treat election as historically constitutive without affirming its theological truth.
+  - Economic and psychological reductions are judged inadequate to Jewish history.
+  - The modern State of Israel does not remove the ambiguity attached to Jewish existence.
+  - An ancient sacred distinction—chosen people, holy nation, people of priests—is connected to the Western political distinction between Church and State.
+  - The review does not explicitly advance or reject a general philosophy of historical progress.
+  - The relation between universal right acting and its peculiar national bearer remains insufficiently explained.
+
+ancient_modern_articulations:
+  inherited_sacred_horizon:
+    - election
+    - chosen people
+    - holy nation
+    - people of priests
+    - exile and precarious existence
+  modern_historical_and_political_horizon:
+    - historian as historian
+    - economic and psychological explanation
+    - State of Israel
+    - Church-State differentiation as a feature of Western civilization
+  governing_tension: >
+    Modern history can describe the effects of sacred belief and reject reduction without
+    deciding divine truth or dissolving the peculiar people into universal history.
+
+jurisdiction_and_non_absorption:
+  owns:
+    - modern historical method and its limits before ancient sacred claims
+    - political statehood and unresolved inherited identity
+    - historical use of Western civilization and Oriental despotism categories
+  theologico_political_reference:
+    relation: COACTIVATED_AUTHORITY_PROBLEM
+    receives:
+      - theological election versus historical explanation
+      - Church and State
+    non_absorption: Ancients versus Moderns may not decide election's truth by historical method or political outcome.
+  athens_vs_jerusalem_reference:
+    relation: COACTIVATED_CONCRETE_ALTERNATIVES
+    receives:
+      - Jewish right acting and Greek right seeing and thinking
+      - peculiar nation and universal significance
+    non_absorption: The concrete alternatives may not be reduced to periodization.
+
+speech_and_deed_result:
+  explicit_speech: Strauss praises Talmon's earnestness and a specific critique while requesting further development.
+  textual_deed: He uses modern historiography to preserve rather than erase the ancient sacred problem and its political consequences.
+  relation: MODERN_HISTORICAL_RESTRAINT_PRESERVES_ANCIENT_PROBLEM
+  conclusion: >
+    The review shows a limit of modern historical explanation without converting that limit
+    into proof of ancient revelation or a rejection of modern inquiry.
+
+unresolved_questions:
+  - whether a nonhistorical standpoint can establish the truth or falsity of election
+  - whether modern statehood transforms or merely relocates the inherited Jewish problem
+  - how the Church-State relation depends on Jewish particularity
+  - whether Talmon's full work contains an argument about progress absent from Strauss's one-page review
+  - whether the original 1957 printing differs materially from the collected reprint
+
+source_limits:
+  - TALMON-STUDY-001 reconstructs Strauss's review rather than independently establishing Talmon or the traditions discussed.
+  - The reviewed witness is the 1983 collected reprint; original journal comparison remains pending.
+  - Pangle's Introduction is secondary and cannot govern Strauss's argument.
+  - Historical outcome does not itself establish philosophical or theological superiority.
+
+prohibitions:
+  - no historical reduction treated as adequate merely because it is modern
+  - no statehood or survival treated as philosophical proof
+  - no ancient sacred authority treated as self-certifying
+  - no absence of an explicit progress argument replaced by the predecessor's derivative characterization
+  - no poetry identified with revelation
+  - no doctrine, migration, or successor certification
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - independent reconstruction of Talmon and the ancient sacred sources
+    - original 1957 journal comparison
+    - later migration validation with Theologico-Political and Athens-versus-Jerusalem jurisdictions preserved

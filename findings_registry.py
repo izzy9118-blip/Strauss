@@ -39,13 +39,16 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/theologico-political/synthesis/jerusalem-and-athens.yaml",
     "problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml",
+    "problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml",
     "problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml",
     "problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml",
+    "problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml",
     "problems/wise-vs-vulgar/synthesis/plato-apology.yaml",
     "problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml",
+    "problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml",
 }
 
 EXPECTED_TRANSACTION_PATHS = {
@@ -79,13 +82,37 @@ REFERENCE_FIELDS = {
     "repository_artifact_bindings",
 }
 
-COHEN_FINDING_SET_ID = "FINDSET-009"
-COHEN_SOURCE_ID = "CORPUS-SRC-105"
-COHEN_LOCAL_SYNTHESIS_IDS = ["FINDSET-113", "FINDSET-114", "FINDSET-115"]
-COHEN_EXPECTED_LOCAL_BINDINGS = {
-    "FINDSET-113": "theologico-political",
-    "FINDSET-114": "athens-vs-jerusalem",
-    "FINDSET-115": "ancients-vs-moderns",
+DIRECT_SOURCE_KEYS = [
+    "CORPUS-SRC-001",
+    "CORPUS-SRC-002",
+    "CORPUS-SRC-003",
+    "CORPUS-SRC-105",
+    "CORPUS-SRC-111",
+]
+
+SOURCE_STUDY_CONTRACTS = {
+    "FINDSET-009": {
+        "source_id": "CORPUS-SRC-105",
+        "local_syntheses": ["FINDSET-113", "FINDSET-114", "FINDSET-115"],
+        "problem_bindings": {
+            "FINDSET-113": "theologico-political",
+            "FINDSET-114": "athens-vs-jerusalem",
+            "FINDSET-115": "ancients-vs-moderns",
+        },
+        "extra_limit_field": "original_edition_comparison",
+        "extra_limit_value": "PENDING",
+    },
+    "FINDSET-010": {
+        "source_id": "CORPUS-SRC-111",
+        "local_syntheses": ["FINDSET-116", "FINDSET-117", "FINDSET-118"],
+        "problem_bindings": {
+            "FINDSET-116": "theologico-political",
+            "FINDSET-117": "athens-vs-jerusalem",
+            "FINDSET-118": "ancients-vs-moderns",
+        },
+        "extra_limit_field": "reviewed_work_reconstruction",
+        "extra_limit_value": "INCOMPLETE",
+    },
 }
 
 
@@ -220,23 +247,19 @@ def _derived_record_class_index(finding_sets: list[dict[str, Any]]) -> dict[str,
 
 
 def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[str]]:
-    result = {
-        "CORPUS-SRC-001": [],
-        "CORPUS-SRC-002": [],
-        "CORPUS-SRC-003": [],
-        "CORPUS-SRC-105": [],
-        "CORPUS-SRC-101-119": [],
-    }
+    result = {key: [] for key in DIRECT_SOURCE_KEYS}
+    result["CORPUS-SRC-101-119"] = []
     predecessor_sources = {f"CORPUS-SRC-{number:03d}" for number in range(101, 120)}
+    separately_indexed = {"CORPUS-SRC-105", "CORPUS-SRC-111"}
     for item in finding_sets:
         bindings = set(item.get("source_bindings", []))
         finding_id = item["finding_set_id"]
-        for key in ("CORPUS-SRC-001", "CORPUS-SRC-002", "CORPUS-SRC-003", "CORPUS-SRC-105"):
+        for key in DIRECT_SOURCE_KEYS:
             if key in bindings:
                 result[key].append(finding_id)
-        # Preserve the legacy predecessor-bundle filter for multi-source predecessor records
-        # and for predecessor items other than the now independently indexable Cohen source.
-        if bindings & predecessor_sources and bindings != {COHEN_SOURCE_ID}:
+        if bindings & predecessor_sources and not (
+            len(bindings) == 1 and next(iter(bindings)) in separately_indexed
+        ):
             result["CORPUS-SRC-101-119"].append(finding_id)
     return result
 
@@ -264,40 +287,41 @@ def _validate_reference_fields(
             )
 
 
-def _validate_cohen_derivation(
+def _validate_source_study_derivations(
     finding_sets: list[dict[str, Any]], errors: list[str]
 ) -> None:
     by_id = {item.get("finding_set_id"): item for item in finding_sets}
-    study = by_id.get(COHEN_FINDING_SET_ID)
-    if not isinstance(study, dict):
-        errors.append(f"{COHEN_FINDING_SET_ID} is missing")
-        return
-    if study.get("source_bindings") != [COHEN_SOURCE_ID]:
-        errors.append(f"{COHEN_FINDING_SET_ID} source binding mismatch")
-    if study.get("derived_local_syntheses") != COHEN_LOCAL_SYNTHESIS_IDS:
-        errors.append(f"{COHEN_FINDING_SET_ID} local synthesis derivation mismatch")
-    if study.get("independent_corroboration") != "INCOMPLETE":
-        errors.append(f"{COHEN_FINDING_SET_ID} must preserve incomplete corroboration")
-    if study.get("original_edition_comparison") != "PENDING":
-        errors.append(f"{COHEN_FINDING_SET_ID} must preserve pending 1972 comparison")
-    if study.get("certification") != "NOT_CERTIFIED":
-        errors.append(f"{COHEN_FINDING_SET_ID} must remain NOT_CERTIFIED")
-
-    for finding_id, expected_problem in COHEN_EXPECTED_LOCAL_BINDINGS.items():
-        synthesis = by_id.get(finding_id)
-        if not isinstance(synthesis, dict):
-            errors.append(f"{finding_id} is missing")
+    for study_id, contract in SOURCE_STUDY_CONTRACTS.items():
+        study = by_id.get(study_id)
+        if not isinstance(study, dict):
+            errors.append(f"{study_id} is missing")
             continue
-        if synthesis.get("source_bindings") != [COHEN_SOURCE_ID]:
-            errors.append(f"{finding_id} source binding mismatch")
-        if synthesis.get("problem_bindings") != [expected_problem]:
-            errors.append(f"{finding_id} problem binding mismatch")
-        if synthesis.get("derived_from") != [COHEN_FINDING_SET_ID]:
-            errors.append(f"{finding_id} must derive only from {COHEN_FINDING_SET_ID}")
-        if synthesis.get("successor_effect") != "NONE":
-            errors.append(f"{finding_id} must preserve successor_effect NONE")
-        if synthesis.get("certification") != "NOT_CERTIFIED":
-            errors.append(f"{finding_id} must remain NOT_CERTIFIED")
+        if study.get("source_bindings") != [contract["source_id"]]:
+            errors.append(f"{study_id} source binding mismatch")
+        if study.get("derived_local_syntheses") != contract["local_syntheses"]:
+            errors.append(f"{study_id} local synthesis derivation mismatch")
+        if study.get("independent_corroboration") != "INCOMPLETE":
+            errors.append(f"{study_id} must preserve incomplete corroboration")
+        if study.get("certification") != "NOT_CERTIFIED":
+            errors.append(f"{study_id} must remain NOT_CERTIFIED")
+        if study.get(contract["extra_limit_field"]) != contract["extra_limit_value"]:
+            errors.append(f"{study_id} must preserve {contract['extra_limit_field']}")
+
+        for finding_id, expected_problem in contract["problem_bindings"].items():
+            synthesis = by_id.get(finding_id)
+            if not isinstance(synthesis, dict):
+                errors.append(f"{finding_id} is missing")
+                continue
+            if synthesis.get("source_bindings") != [contract["source_id"]]:
+                errors.append(f"{finding_id} source binding mismatch")
+            if synthesis.get("problem_bindings") != [expected_problem]:
+                errors.append(f"{finding_id} problem binding mismatch")
+            if synthesis.get("derived_from") != [study_id]:
+                errors.append(f"{finding_id} must derive only from {study_id}")
+            if synthesis.get("successor_effect") != "NONE":
+                errors.append(f"{finding_id} must preserve successor_effect NONE")
+            if synthesis.get("certification") != "NOT_CERTIFIED":
+                errors.append(f"{finding_id} must remain NOT_CERTIFIED")
 
 
 def validate_registry(registry: dict[str, Any]) -> list[str]:
@@ -309,8 +333,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.2.0":
-        errors.append("findings registry identity.version must be 1.2.0")
+    if identity.get("version") != "1.3.0":
+        errors.append("findings registry identity.version must be 1.3.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -322,12 +346,11 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
 
     finding_sets_raw = registry.get("finding_sets", [])
     finding_ids = _unique_ids(finding_sets_raw, "finding_set_id", "finding_sets", errors)
-    gaps = registry.get("findings_gaps", [])
-    gap_ids = _unique_ids(gaps, "gap_id", "findings_gaps", errors)
+    gap_ids = _unique_ids(registry.get("findings_gaps", []), "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 29:
-        errors.append(f"expected 29 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 33:
+        errors.append(f"expected 33 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 
@@ -383,7 +406,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
             errors.append(f"{finding_id} may not produce successor effect")
 
     _validate_reference_fields(finding_sets, finding_ids, errors)
-    _validate_cohen_derivation(finding_sets, errors)
+    _validate_source_study_derivations(finding_sets, errors)
 
     actual_syntheses = _actual_synthesis_paths()
     if actual_syntheses != EXPECTED_SYNTHESIS_PATHS:
@@ -427,8 +450,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     registered_studies = {
         item["path"]
         for item in finding_sets
-        if item.get("record_class")
-        in {"SOURCE_SPECIFIC_STUDY", "INTEGRATION_GOVERNANCE_RECORD"}
+        if item.get("record_class") in {"SOURCE_SPECIFIC_STUDY", "INTEGRATION_GOVERNANCE_RECORD"}
     }
     if registered_studies != corpus_studies:
         errors.append(
@@ -437,10 +459,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
             f"stale={sorted(registered_studies - corpus_studies)!r}"
         )
 
-    if (
-        not TP_PRESERVED_PATH.is_file()
-        or TP_ACTIVE_PATH.read_bytes() != TP_PRESERVED_PATH.read_bytes()
-    ):
+    if not TP_PRESERVED_PATH.is_file() or TP_ACTIVE_PATH.read_bytes() != TP_PRESERVED_PATH.read_bytes():
         errors.append("Theologico-Political active predecessor does not match preserved copy")
 
     indexes = registry.get("indexes", {})
@@ -464,10 +483,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
             1
             for item in finding_sets
             if item.get("record_class")
-            in {
-                "ACTIVE_PREDECESSOR_FINDING_BASIS",
-                "ACCEPTED_MIGRATION_SOURCE_FINDING_BASIS",
-            }
+            in {"ACTIVE_PREDECESSOR_FINDING_BASIS", "ACCEPTED_MIGRATION_SOURCE_FINDING_BASIS"}
         ),
         "current_problem_synthesis_tree_yaml_records_accounted_for": len(actual_syntheses),
         "current_foundational_transaction_tree_yaml_records_accounted_for": len(actual_transactions),
@@ -482,10 +498,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
             )
 
     termination = registry.get("termination", {})
-    if (
-        termination.get("registry_state")
-        != "COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE"
-    ):
+    if termination.get("registry_state") != "COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
         errors.append("termination.registry_state must preserve bounded current-state completion")
     if termination.get("findings_state") != "OPEN_MATERIALLY_INCOMPLETE_AND_NONCERTIFIED":
         errors.append("termination.findings_state must remain open, incomplete, and noncertified")

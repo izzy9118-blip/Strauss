@@ -1,0 +1,116 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: TP-TALMON-001
+  problem: theologico-political
+  source_study: TALMON-STUDY-001
+  title: The Theologico-Political Problem — Talmon, The Nature of Jewish History
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_CERTIFIED_MIGRATION
+
+source:
+  source_id: CORPUS-SRC-111
+  witness_id: CORPUS-WIT-111
+  source_status: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml
+  witness_record: studies/theologico-political/review-talmon-nature-of-jewish-history/reviewed-witness.yaml
+  study_path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication: Journal of Modern History 29, no. 3, 1957
+  printed_page: 232
+  original_edition_comparison: PENDING
+
+relation_to_existing_problem:
+  active_predecessor: problems/theologico-political.yaml
+  successor_draft: problems/theologico-political/problem.yaml
+  predecessor_synthesis: problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml
+  relation: RETESTS_QUALIFIES_AND_SUPPLIES_WITHOUT_REPLACING
+  governing_rule: >
+    The active predecessor remains authoritative and historically preserved. This source-local
+    synthesis may confirm or qualify predecessor propositions but does not migrate, certify,
+    activate, or displace them.
+
+strict_problem_contribution:
+  governing_claim: >
+    Strauss presents Talmon's review subject as showing how belief in election can be historically
+    constitutive and politically consequential without requiring the historian to affirm its
+    theological truth. The review resists economic, psychological, and ethnic-pride reduction,
+    connects Jewish particularity to Church-State differentiation, and leaves unexplained why
+    the passion for right acting requires a peculiar nation.
+  documented_findings:
+    - The Jewish people is reported as historically constituted by belief in election.
+    - The historian as historian neither reduces election to economics or psychology nor accepts its theological truth.
+    - Statehood has not removed the problematic ambiguity of Jewish existence.
+    - The Jewish passion for right acting is presented as a basic element of Western civilization.
+    - Church-State differentiation is connected to the universal political significance of Jewish history.
+    - Strauss explicitly asks for a fuller explanation of why right acting requires a peculiar nation.
+  bounded_conclusion: >
+    The review does not explicitly reject a philosophy of historical progress. That active-predecessor
+    characterization is therefore not confirmed by this item and may not be promoted as a source-level finding.
+
+predecessor_reconciliation:
+  state: PROVISIONAL_NO_PROMOTION
+  confirmations:
+    - Jewish history cannot be reduced to economic or psychological causation
+    - religious belief may be historically effective without historical proof of theology
+    - political statehood does not dissolve the deeper Jewish problem
+    - Church and State belong to the political form of the problem
+  qualifications:
+    - no explicit item-level rejection of historical progress appears
+    - Jewish particularity is not reduced to a generic social problem
+    - the peculiar nation remains insufficiently explained
+  unresolved:
+    - Talmon's complete argument is unavailable without his book
+    - election's theological truth remains unresolved
+    - original 1957 journal comparison remains pending
+  migration_effect: NONE
+
+adjacent_problem_rules:
+  athens_vs_jerusalem:
+    relation: COACTIVATED_CONCRETE_ALTERNATIVES
+    supplied_findings:
+      - Jewish passion for right acting
+      - Greek passion for right seeing and thinking
+      - peculiar nation as bearer of universal significance
+    non_absorption: The concrete Jewish-Greek distinction may not be reduced to the structural authority problem alone.
+  ancients_vs_moderns:
+    relation: SECONDARY_HISTORICAL_INTERSECTION
+    supplied_findings:
+      - modern historical method and its limits
+      - State of Israel and unresolved Jewish existence
+      - Western Church-State differentiation
+    non_absorption: Historical sequence does not decide election's truth.
+  philosophy_vs_poetry:
+    relation: BOUNDARY_REFERENCE_ONLY
+    non_absorption: Election and sacred history are not poetic constructions merely because historians study them as beliefs.
+
+source_and_evidence_limits:
+  - TALMON-STUDY-001 reconstructs Strauss's one-page review, not Talmon's book.
+  - The reviewed witness is the 1983 collected reprint, not the separately compared 1957 journal printing.
+  - Pangle's Introduction is secondary and cannot govern the review.
+  - Agreement among records derived from this witness is not independent corroboration.
+
+prohibitions:
+  - no historical efficacy treated as theological proof
+  - no historical nonaffirmation treated as theological refutation
+  - no predecessor progress claim promoted without item evidence
+  - no Jewish particularity reduced to ethnic pride or generic identity
+  - no source-specific synthesis treated as doctrinal certification
+  - no predecessor displacement or successor activation
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  predecessor_status: UNCHANGED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - independent reconstruction of Talmon's reviewed work
+    - original 1957 journal comparison
+    - independent Jewish, historical, theological, and political witness studies
+    - proposition-level migration review only after adequate source coverage

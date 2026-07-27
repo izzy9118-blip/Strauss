@@ -6,7 +6,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 1.3.0
+  version: 1.4.0
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
@@ -23,14 +23,14 @@ status:
     successor activation, or readiness for unrestricted ministerial reasoning.
 
 revision_history:
-  predecessor_version: 1.2.0
-  predecessor_blob_sha: 38a730f5abff4066869badd13cd1ddef076ec4f3
+  predecessor_version: 1.3.0
+  predecessor_blob_sha: 2f196ff5564adbe1390cd1dcff1acbf27d1a73a2
   reason: >
-    Register CORPUS-WIT-105, COHEN-STUDY-001, CORPUS-STUDY-009, FINDSET-009,
+    Register CORPUS-WIT-111, TALMON-STUDY-001, CORPUS-STUDY-010, FINDSET-010,
     and three jurisdiction-preserving problem-local syntheses. Synchronize corpus registry
-    v1.7.0 and findings registry v1.2.0 while preserving the original 1972 edition gap,
-    seventeen missing Theologico-Political item witnesses and studies, independent-witness
-    gaps, predecessor authority, noncertification, nonactivation, and the Sanctum repin block.
+    v1.8.0 and findings registry v1.3.0 while preserving the original 1957 edition gap,
+    Talmon-work reconstruction gap, sixteen missing Theologico-Political item witnesses and
+    studies, predecessor authority, noncertification, nonactivation, and the Sanctum repin block.
 
 purpose: >
   Provide one compact, machine-readable entry point through which a runtime can load
@@ -40,7 +40,7 @@ purpose: >
 
 audit:
   path: audits/operational-completeness.yaml
-  version: 2.1.0
+  version: 2.2.0
   classification_vocabulary:
     - SUBSTANTIVELY_RECONSTRUCTED
     - PARTIALLY_RECONSTRUCTED
@@ -58,8 +58,8 @@ component_completion:
   problem_bundle_loader: PARTIALLY_RECONSTRUCTED_READ_ONLY_BUNDLE_SUPPORT
   corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-  reviewed_source_witnesses: SPPP_SA_PLATO_APOLOGY_JERUSALEM_ATHENS_AND_COHEN_ITEM_REGISTERED_WITH_RECORDED_LIMITS
-  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_2_OF_19_REVIEWED_ITEM_WITNESSES_2_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES
+  reviewed_source_witnesses: SPPP_SA_PLATO_APOLOGY_JERUSALEM_ATHENS_COHEN_AND_TALMON_ITEMS_REGISTERED_WITH_RECORDED_LIMITS
+  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_3_OF_19_REVIEWED_ITEM_WITNESSES_3_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
@@ -67,7 +67,7 @@ component_completion:
   corpus_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_JA_AND_COHEN_SOURCE_STUDY_CONTRACTS_REQUIRE_VALIDATION
+  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_JA_COHEN_AND_TALMON_SOURCE_STUDY_CONTRACTS_REQUIRE_VALIDATION
 
 source_hierarchy:
   tiers: [primary_external, primary_contemporaneous, secondary_about_own_primary_acts, secondary_interpretive]
@@ -156,7 +156,7 @@ speech:
 corpus:
   index: corpus/index.yaml
   loader: corpus_registry.py
-  registry_version: 1.7.0
+  registry_version: 1.8.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   reviewed_witnesses:
@@ -165,34 +165,35 @@ corpus:
     - {source: Socrates and Aristophanes, witness_id: CORPUS-WIT-003}
     - {source: Introductory Essay for Hermann Cohen, witness_id: CORPUS-WIT-105, container_witness_id: CORPUS-WIT-001, printed_pages: 233-247, pdf_pages_one_based: 237-251, original_publication: 'English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism, Frederick Ungar, New York, 1972', item_status: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml}
     - {source: Jerusalem and Athens, witness_id: CORPUS-WIT-109, container_witness_id: CORPUS-WIT-001, printed_pages: 147-173, pdf_pages_one_based: 151-177, original_publication: 'The City College Papers, no. 6, The City College of New York, 1967', item_status: studies/theologico-political/jerusalem-and-athens/source-status.yaml}
+    - {source: Review of J. L. Talmon, witness_id: CORPUS-WIT-111, container_witness_id: CORPUS-WIT-001, printed_pages: 232, pdf_pages_one_based: 236, original_publication: 'Journal of Modern History 29, no. 3, 1957', item_status: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml}
   theologico_political_item_level_statuses:
     registered_count: 19
     total_predecessor_sources: 19
     remaining_without_item_level_status: 0
-    reviewed_witness_count: 2
-    remaining_without_reviewed_item_witness: 17
-    independent_sequential_study_count: 2
-    remaining_without_independent_sequential_study: 17
-    completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001]
+    reviewed_witness_count: 3
+    remaining_without_reviewed_item_witness: 16
+    independent_sequential_study_count: 3
+    remaining_without_independent_sequential_study: 16
+    completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001, TALMON-STUDY-001]
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     root: studies/theologico-political/
     priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
     rule: >
-      Two complete provisional source studies are not independent corroboration, doctrinal
+      Three complete provisional source studies are not independent corroboration, doctrinal
       certification, migration completion, successor activation, or repository completion.
   limitation: >
-    All nineteen predecessor writings have bounded identities, but only Jerusalem and Athens
-    and the Hermann Cohen introductory essay have reviewed item witnesses and complete
-    provisional item studies. The wider corpus, original-edition comparisons, independent
+    All nineteen predecessor writings have bounded identities, but only Jerusalem and Athens,
+    the Hermann Cohen introductory essay, and the Talmon review have reviewed item witnesses
+    and complete provisional item studies. The wider corpus, original-edition comparisons, independent
     witnesses, and source-text access remain incomplete.
 
 findings:
   index: findings/index.yaml
   loader: findings_registry.py
-  registry_version: 1.2.0
+  registry_version: 1.3.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
-  newly_registered: [FINDSET-009, FINDSET-113, FINDSET-114, FINDSET-115]
+  newly_registered: [FINDSET-010, FINDSET-116, FINDSET-117, FINDSET-118]
   limitation: >
     Proposition-level normalization, source-asymmetry repair, independent witness expansion,
     doctrinal certification, migration certification, and successor activation remain incomplete.
