@@ -1,35 +1,526 @@
 schema_version: 1.0
-record_type: corpus_index
-identity: {id: STRAUSS-CORPUS-INDEX-001, version: 0.1.0}
+record_type: typed_corpus_registry
+
+identity:
+  id: STRAUSS-CORPUS-INDEX-001
+  title: Strauss Repository Typed Corpus Registry
+  version: 1.0.0
+
 status:
-  lifecycle: REFERENCE_INDEX
+  lifecycle: ACTIVE_OPERATIONAL_REGISTRY
+  registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
+  corpus_completion: INCOMPLETE_OPEN_CORPUS
   certification: NOT_CERTIFIED
+  authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: fa99a281bca02787008faad3f991fdd8d74fd474
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the small discovery index with a typed registry of every external source
+    identity, source-status record, source-specific study, problem witness registry,
+    predecessor source basis, and known corpus gap currently committed or explicitly
+    registered in the repository. Exhaustiveness is bounded to current repository state
+    and does not claim a complete Leo Strauss bibliography or complete primary-witness corpus.
+
 purpose: >
-  Provide discovery paths for registered sources without moving source records or
-  representing the present corpus as complete.
-source_status_protocol: protocols/source-status.yaml
-collections:
-  strauss_primary_and_qualified_primary:
-    - title: Socrates and Aristophanes
-      study: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
-      status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
-    - title: Studies in Platonic Political Philosophy
-      source_status: studies/studies-in-platonic-political-philosophy/source-status.yaml
-      study: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
-      status: COMPLETE_FOR_REGISTERED_COLLECTION_PROVISIONAL_NOT_CERTIFIED
-  independent_primary_witnesses:
-    - author: Plato
-      work: Apology of Socrates
-      source_status: studies/plato/apology/source-status.yaml
-      study: studies/plato/apology/philosophy-poetry-divine-authority-reconstruction.yaml
-      status: COMPLETE_FOR_REGISTERED_TRANSLATION_PROVISIONAL_NOT_CERTIFIED
-  historical_and_migration_sources:
-    - history/foundational-problems/
-    - migrations/foundational-problems-v2/predecessor-index.yaml
-witness_registries:
-  pattern: problems/*/witnesses.yaml
-limits:
-  - The index is not an exhaustive bibliography.
-  - A completed study of one translation or collection does not complete an author or problem.
-  - Editorial introductions and translations retain their recorded documentary limits.
-  - Corpus inclusion does not certify truth, rank, or canonical activation.
+  Provide deterministic discovery, source identity, documentary status, provenance,
+  problem binding, study binding, witness condition, and gap records without moving
+  source records, distributing source texts, certifying doctrine, or treating a registered
+  corpus as complete merely because every current record is indexed.
+
+governing_protocols:
+  source_status: protocols/source-status.yaml
+  evidence_classification: protocols/evidence-classification.yaml
+  inference_discipline: protocols/inference-discipline.yaml
+  uncertainty_preservation: protocols/uncertainty-preservation.yaml
+  textual_order: method/textual-order.yaml
+  independent_reconstruction: method/reconstruct-alternatives.yaml
+
+scope_rule: >
+  This registry is exhaustive for source and study identities presently committed or
+  explicitly enumerated by a governing repository record. It is not exhaustive of all
+  works by Strauss, all editions or translations, all classical and biblical witnesses,
+  or all sources required to complete the seven foundational problems.
+
+identifier_rules:
+  source_entity_prefix: CORPUS-SRC
+  reviewed_witness_prefix: CORPUS-WIT
+  study_record_prefix: CORPUS-STUDY
+  source_status_prefix: CORPUS-STATUS
+  gap_prefix: CORPUS-GAP
+  identity_rule: >
+    A source entity identifies a work or collection. A reviewed witness identifies a
+    particular edition, translation, file, or textual presentation. A study record
+    identifies repository analysis. These identities may not be collapsed.
+
+source_entities:
+  - source_id: CORPUS-SRC-001
+    creator: Leo Strauss
+    canonical_title: Socrates and Aristophanes
+    date: 1966
+    entity_type: AUTHORED_BOOK
+    source_class: AUTHOR_PUBLISHED_PRIMARY_STRAUSS_SOURCE
+    registration_basis: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
+    source_status_record: NOT_SEPARATELY_REGISTERED
+    study_records:
+      - CORPUS-STUDY-001
+    primary_problem_bindings:
+      - philosophy-vs-poetry
+      - theologico-political
+    secondary_problem_bindings:
+      - nomos-vs-physis
+      - theory-vs-practice
+      - athens-vs-jerusalem
+      - wise-vs-vulgar
+      - ancients-vs-moderns
+    completion: SEQUENTIAL_READING_COMPLETE_PROVISIONAL_NOT_CERTIFIED
+    limits:
+      - no reviewed edition or file fingerprint is separately registered in the repository
+      - the study does not reproduce the source text
+      - Strauss does not replace independent Aristophanes, Plato, Xenophon, or Socrates witnesses
+
+  - source_id: CORPUS-SRC-002
+    creator: Leo Strauss
+    canonical_title: Studies in Platonic Political Philosophy
+    date: 1983
+    entity_type: POSTHUMOUS_COLLECTION
+    source_class: POSTHUMOUS_COLLECTION_ARRANGED_AND_TITLED_BY_STRAUSS
+    source_status_record: CORPUS-STATUS-001
+    reviewed_witnesses:
+      - CORPUS-WIT-001
+    study_records:
+      - CORPUS-STUDY-002
+      - CORPUS-STUDY-003
+      - CORPUS-STUDY-004
+      - CORPUS-STUDY-005
+      - CORPUS-STUDY-006
+    problem_bindings:
+      - nomos-vs-physis
+      - philosophy-vs-poetry
+      - theory-vs-practice
+      - theologico-political
+      - athens-vs-jerusalem
+      - wise-vs-vulgar
+      - ancients-vs-moderns
+    completion: COMPLETE_FOR_REGISTERED_COLLECTION_PROVISIONAL_NOT_CERTIFIED
+    limits:
+      - Strauss did not complete the intended introduction
+      - Strauss did not complete the projected essay on Plato's Gorgias
+      - Joseph Cropsey's Foreword is editorial provenance
+      - Thomas L. Pangle's Introduction is secondary interpretive context
+      - collection arrangement does not prove a complete hidden authorial design
+
+  - source_id: CORPUS-SRC-003
+    creator: Plato
+    canonical_title: Apology of Socrates
+    original_language: Ancient Greek
+    entity_type: CLASSICAL_DIALOGUE
+    source_class: INDEPENDENT_PRIMARY_PLATONIC_WITNESS
+    source_status_record: CORPUS-STATUS-002
+    reviewed_witnesses:
+      - CORPUS-WIT-002
+    study_records:
+      - CORPUS-STUDY-007
+    problem_bindings:
+      - philosophy-vs-poetry
+      - theologico-political
+      - wise-vs-vulgar
+    completion: COMPLETE_FOR_REGISTERED_JOWETT_TRANSLATION_PROVISIONAL_NOT_CERTIFIED
+    limits:
+      - the registered witness is an English translation rather than the Greek text
+      - verified Stephanus alignment remains pending
+      - Socrates' speech is not automatically Plato's final doctrine
+      - historical accuracy and relation to the historical Socrates remain disputed
+
+  - source_id: CORPUS-SRC-101
+    creator: Leo Strauss
+    canonical_title: Progress or Return?
+    date: 1952
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[1]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem, ancients-vs-moderns]
+
+  - source_id: CORPUS-SRC-102
+    creator: Leo Strauss
+    canonical_title: Preface to Spinoza's Critique of Religion
+    canonical_aliases:
+      - Autobiographical Preface to Spinoza's Critique of Religion
+    date: 1965
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[2]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem, ancients-vs-moderns]
+
+  - source_id: CORPUS-SRC-103
+    creator: Leo Strauss
+    canonical_title: How to Study Spinoza's Theologico-Political Treatise
+    date: 1948
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[3]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, wise-vs-vulgar]
+
+  - source_id: CORPUS-SRC-104
+    creator: Leo Strauss
+    canonical_title: Preface to Isaac Husik, Philosophical Essays
+    date: 1952
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[4]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem]
+
+  - source_id: CORPUS-SRC-105
+    creator: Leo Strauss
+    canonical_title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
+    date: 1972
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[5]
+    collection_witness:
+      source_id: CORPUS-SRC-002
+      collection_position: chapter_15
+    item_level_source_status: QUALIFIED_PRIMARY_STRAUSS_ITEM_WITHIN_POSTHUMOUS_COLLECTION
+    study_status: COLLECTION_LEVEL_READING_COMPLETE_ITEM_LEVEL_RECONSTRUCTION_INCOMPLETE
+    problem_bindings: [theologico-political, athens-vs-jerusalem, ancients-vs-moderns]
+
+  - source_id: CORPUS-SRC-106
+    creator: Leo Strauss
+    canonical_title: Freud on Moses and Monotheism
+    date: 1958
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[6]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, ancients-vs-moderns]
+
+  - source_id: CORPUS-SRC-107
+    creator: Leo Strauss
+    canonical_title: Why We Remain Jews
+    date: 1962
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[7]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem]
+
+  - source_id: CORPUS-SRC-108
+    creator: Leo Strauss
+    canonical_title: On the Interpretation of Genesis
+    date: 1957
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[8]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem, nomos-vs-physis]
+
+  - source_id: CORPUS-SRC-109
+    creator: Leo Strauss
+    canonical_title: Jerusalem and Athens
+    date: 1967
+    registered_scope: Part V — Comments on Jewish History within the complete argument
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[9]
+    collection_witness:
+      source_id: CORPUS-SRC-002
+      collection_position: chapter_7
+    item_level_source_status: QUALIFIED_PRIMARY_STRAUSS_ITEM_WITHIN_POSTHUMOUS_COLLECTION
+    study_status: COLLECTION_LEVEL_READING_COMPLETE_ITEM_LEVEL_RECONSTRUCTION_INCOMPLETE
+    problem_bindings: [theologico-political, athens-vs-jerusalem]
+
+  - source_id: CORPUS-SRC-110
+    creator: Leo Strauss
+    canonical_title: What Is Political Philosophy?
+    date: 1954
+    registered_scope: first paragraph
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[10]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, theory-vs-practice, athens-vs-jerusalem]
+
+  - source_id: CORPUS-SRC-111
+    creator: Leo Strauss
+    canonical_title: Review of J. L. Talmon, The Nature of Jewish History
+    date: 1957
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[11]
+    collection_witness:
+      source_id: CORPUS-SRC-002
+      collection_position: chapter_14
+    item_level_source_status: QUALIFIED_PRIMARY_STRAUSS_ITEM_WITHIN_POSTHUMOUS_COLLECTION
+    study_status: COLLECTION_LEVEL_READING_COMPLETE_ITEM_LEVEL_RECONSTRUCTION_INCOMPLETE
+    problem_bindings: [theologico-political, ancients-vs-moderns]
+
+  - source_id: CORPUS-SRC-112
+    creator: Leo Strauss
+    canonical_title: Letter to the Editor — The State of Israel
+    date: 1957
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[12]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem, theory-vs-practice]
+
+  - source_id: CORPUS-SRC-113
+    creator: Leo Strauss
+    canonical_title: Introduction to Persecution and the Art of Writing
+    date: 1952
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[13]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, wise-vs-vulgar]
+
+  - source_id: CORPUS-SRC-114
+    creator: Leo Strauss
+    canonical_title: Perspectives on the Good Society
+    date: 1963
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[14]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, theory-vs-practice, ancients-vs-moderns]
+
+  - source_id: CORPUS-SRC-115
+    creator: Leo Strauss
+    canonical_title: An Unspoken Prologue
+    date: 1959
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[15]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem, wise-vs-vulgar]
+
+  - source_id: CORPUS-SRC-116
+    creator: Leo Strauss
+    canonical_title: Preface to Hobbes Politische Wissenschaft
+    date: 1965
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[16]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, ancients-vs-moderns]
+
+  - source_id: CORPUS-SRC-117
+    creator: Leo Strauss
+    canonical_title: A Giving of Accounts
+    date: 1970
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[17]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, wise-vs-vulgar]
+
+  - source_id: CORPUS-SRC-118
+    creator: Leo Strauss
+    canonical_title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
+    date: 1946
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[18]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, athens-vs-jerusalem]
+
+  - source_id: CORPUS-SRC-119
+    creator: Leo Strauss
+    canonical_title: Restatement on Xenophon's Hiero
+    date: 1950
+    entity_type: REGISTERED_STRAUSS_WRITING
+    registration_basis: problems/theologico-political.yaml#documentary_source_basis.sources[19]
+    item_level_source_status: INCOMPLETE
+    study_status: INCLUDED_IN_ACTIVE_PREDECESSOR_SYNTHESIS_INDEPENDENT_RECONSTRUCTION_REQUIRED
+    problem_bindings: [theologico-political, theory-vs-practice, ancients-vs-moderns]
+
+reviewed_witnesses:
+  - witness_id: CORPUS-WIT-001
+    source_id: CORPUS-SRC-002
+    witness_type: SEARCHABLE_PDF_WITH_PAGE_IMAGES
+    local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+    page_count: 263
+    file_size_bytes: 12551057
+    sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+    source_status_path: studies/studies-in-platonic-political-philosophy/source-status.yaml
+    repository_copy_status: NOT_DISTRIBUTED_BY_REGISTRY
+
+  - witness_id: CORPUS-WIT-002
+    source_id: CORPUS-SRC-003
+    witness_type: PUBLIC_DOMAIN_ENGLISH_TRANSLATION_HTML
+    translator: Benjamin Jowett
+    provider: Project Gutenberg
+    ebook_number: 1656
+    language: English
+    source_scope: APOLOGY_BODY_ONLY
+    source_status_path: studies/plato/apology/source-status.yaml
+    greek_alignment: PENDING
+
+source_status_records:
+  - status_id: CORPUS-STATUS-001
+    source_id: CORPUS-SRC-002
+    path: studies/studies-in-platonic-political-philosophy/source-status.yaml
+    document_type: source_status_record
+    completion: REGISTERED_FOR_COMPLETED_PROVISIONAL_STUDY
+    certification: NOT_CERTIFIED
+  - status_id: CORPUS-STATUS-002
+    source_id: CORPUS-SRC-003
+    path: studies/plato/apology/source-status.yaml
+    document_type: source_status_record
+    completion: COMPLETE_FOR_JOWETT_PROJECT_GUTENBERG_WITNESS
+    certification: NOT_CERTIFIED
+
+study_records:
+  - study_id: CORPUS-STUDY-001
+    source_id: CORPUS-SRC-001
+    path: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
+    record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+    completion: SEQUENTIAL_READING_COMPLETE
+    certification: NOT_CERTIFIED
+  - study_id: CORPUS-STUDY-002
+    source_id: CORPUS-SRC-002
+    path: studies/studies-in-platonic-political-philosophy/sequential-reading.yaml
+    record_role: COLLECTION_SEQUENTIAL_READING
+    completion: COMPLETE_PROVISIONAL
+    certification: NOT_CERTIFIED
+  - study_id: CORPUS-STUDY-003
+    source_id: CORPUS-SRC-002
+    path: studies/studies-in-platonic-political-philosophy/foundational-problems-synthesis.yaml
+    record_role: COLLECTION_TO_SEVEN_PROBLEMS_SYNTHESIS
+    completion: COMPLETE_PROVISIONAL
+    certification: NOT_CERTIFIED
+  - study_id: CORPUS-STUDY-004
+    source_id: CORPUS-SRC-002
+    path: studies/studies-in-platonic-political-philosophy/theologico-political-reconstruction.yaml
+    record_role: SOURCE_SPECIFIC_THEOLOGICO_POLITICAL_RECONSTRUCTION
+    completion: COMPLETE_PROVISIONAL
+    certification: NOT_CERTIFIED
+  - study_id: CORPUS-STUDY-005
+    source_id: CORPUS-SRC-002
+    path: studies/studies-in-platonic-political-philosophy/repository-integration.yaml
+    record_role: REPOSITORY_INTEGRATION_RECORD
+    completion: IMPLEMENTED_NOT_CERTIFIED
+    certification: NOT_CERTIFIED
+  - study_id: CORPUS-STUDY-006
+    source_id: CORPUS-SRC-002
+    path: studies/studies-in-platonic-political-philosophy/integration-completion.yaml
+    record_role: INTEGRATION_COMPLETION_RECORD
+    completion: COMPLETE_WITH_RECORDED_LIMITS
+    certification: NOT_CERTIFIED
+  - study_id: CORPUS-STUDY-007
+    source_id: CORPUS-SRC-003
+    path: studies/plato/apology/philosophy-poetry-divine-authority-reconstruction.yaml
+    record_role: INDEPENDENT_PRIMARY_WITNESS_RECONSTRUCTION
+    completion: COMPLETE_FOR_REGISTERED_TRANSLATION
+    certification: NOT_CERTIFIED
+
+problem_witness_registries:
+  - problem: nomos-vs-physis
+    path: problems/nomos-vs-physis/witnesses.yaml
+  - problem: philosophy-vs-poetry
+    path: problems/philosophy-vs-poetry/witnesses.yaml
+  - problem: theory-vs-practice
+    path: problems/theory-vs-practice/witnesses.yaml
+  - problem: theologico-political
+    path: problems/theologico-political/witnesses.yaml
+  - problem: athens-vs-jerusalem
+    path: problems/athens-vs-jerusalem/witnesses.yaml
+  - problem: wise-vs-vulgar
+    path: problems/wise-vs-vulgar/witnesses.yaml
+  - problem: ancients-vs-moderns
+    path: problems/ancients-vs-moderns/witnesses.yaml
+
+repository_documentary_artifacts:
+  - artifact_type: ACTIVE_PREDECESSOR_SOURCE_BASIS
+    path: problems/theologico-political.yaml
+    preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+    source_entities_registered:
+      - CORPUS-SRC-101
+      - CORPUS-SRC-102
+      - CORPUS-SRC-103
+      - CORPUS-SRC-104
+      - CORPUS-SRC-105
+      - CORPUS-SRC-106
+      - CORPUS-SRC-107
+      - CORPUS-SRC-108
+      - CORPUS-SRC-109
+      - CORPUS-SRC-110
+      - CORPUS-SRC-111
+      - CORPUS-SRC-112
+      - CORPUS-SRC-113
+      - CORPUS-SRC-114
+      - CORPUS-SRC-115
+      - CORPUS-SRC-116
+      - CORPUS-SRC-117
+      - CORPUS-SRC-118
+      - CORPUS-SRC-119
+  - artifact_type: ACCEPTED_MIGRATION_SOURCE
+    path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    active_predecessor: problems/wise-and-vulgar.yaml
+    transaction_ledger: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
+  - artifact_type: PREDECESSOR_INDEX
+    path: migrations/foundational-problems-v2/predecessor-index.yaml
+
+coverage:
+  source_entities_registered: 22
+  reviewed_witnesses_registered: 2
+  source_status_records_registered: 2
+  study_records_registered: 7
+  problem_witness_registries_registered: 7
+  theologico_political_predecessor_sources_registered: 19
+  current_studies_tree_yaml_records_accounted_for: 9
+  exhaustive_within_declared_scope: true
+
+corpus_gaps:
+  - gap_id: CORPUS-GAP-001
+    category: STRAUSS_BIBLIOGRAPHY
+    statement: The registry does not yet contain an item-level record for every work by Leo Strauss.
+    effect: CORPUS_REMAINS_OPEN
+  - gap_id: CORPUS-GAP-002
+    category: EDITION_AND_WITNESS_IDENTITY
+    statement: Socrates and Aristophanes lacks a separately registered reviewed edition or file fingerprint.
+    effect: SOURCE_SPECIFIC_LOCATOR_REPRODUCIBILITY_PARTIAL
+  - gap_id: CORPUS-GAP-003
+    category: ITEM_LEVEL_SOURCE_STATUS
+    statement: Most of the nineteen Theologico-Political predecessor writings lack separate source-status records and independent sequential studies.
+    effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL
+  - gap_id: CORPUS-GAP-004
+    category: INDEPENDENT_CLASSICAL_WITNESSES
+    statement: Direct Aristophanes and Xenophon studies and most Platonic dialogue studies remain pending.
+    effect: FINAL_COMPARATIVE_RANKING_BLOCKED
+  - gap_id: CORPUS-GAP-005
+    category: BIBLICAL_AND_MEDIEVAL_WITNESSES
+    statement: Biblical, Maimonidean, Farabian, Spinozist, Hobbesian, and other independent primary-text corpora remain incomplete.
+    effect: THEOLOGICO_POLITICAL_AND_ATHENS_JERUSALEM_COMPLETION_BLOCKED
+  - gap_id: CORPUS-GAP-006
+    category: TRANSLATION_AND_ORIGINAL_LANGUAGE
+    statement: Plato's Apology requires verified Greek-text and translation alignment.
+    effect: WORDING_DEPENDENT_FINDINGS_REMAIN_REVISABLE
+  - gap_id: CORPUS-GAP-007
+    category: SOURCE_TEXT_ADMISSION
+    statement: The registry describes reviewed witnesses but does not admit or distribute copyrighted source texts.
+    effect: RUNTIME_DEPENDS_ON_SEPARATE_SOURCE_ACCESS
+
+validation_rules:
+  - source, witness, status, study, and gap identifiers must be unique
+  - every registered path must resolve within the repository
+  - every study must bind to a registered source entity
+  - all nineteen predecessor source titles and dates must match the active predecessor record
+  - the active Theologico-Political predecessor must match its preserved copy
+  - every canonical problem must have one registered witness registry
+  - counts in coverage must match registry contents
+  - source inclusion may not change certification, migration, or activation status
+  - complete current-state indexing may not be described as a complete corpus
+
+termination:
+  registry_state: COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
+  corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
+  certification: NOT_CERTIFIED
+  next_required_units:
+    - create item-level source-status records for the nineteen Theologico-Political writings
+    - register a reviewed Socrates and Aristophanes witness with edition and fingerprint
+    - expand independent Aristophanes, Plato, Xenophon, biblical, medieval, and modern witness studies
+    - preserve all later additions through forward registry revision
