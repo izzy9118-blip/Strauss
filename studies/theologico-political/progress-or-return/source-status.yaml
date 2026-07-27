@@ -2,7 +2,7 @@ schema_version: 1.0
 document_type: source_status_record
 
 identity:
-  status_id: TP-SOURCE-STATUS-001
+  status_id: CORPUS-STATUS-101
   corpus_source_id: CORPUS-SRC-101
   canonical_title: Progress or Return?
   author: Leo Strauss
