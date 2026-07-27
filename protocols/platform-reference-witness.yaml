@@ -1,0 +1,155 @@
+schema_version: 1.0
+document_type: shared_documentary_protocol
+
+identity:
+  canonical_key: platform-reference-witness
+  title: Platform-Reference Witness Protocol
+  protocol_version: 1.0.0
+
+status:
+  lifecycle: FOUNDING_DRAFT
+  certification: NOT_CERTIFIED
+  activation: AVAILABLE_FOR_QUALIFIED_DOCUMENTARY_REGISTRATION
+  doctrinal_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+purpose: >
+  Permit bounded documentary registration of a complete source or item that is
+  reviewable through a controlled platform reference when the underlying bytes are
+  not exposed to the repository, while preserving the difference between textual
+  reviewability, locator reproducibility, platform identity, byte custody,
+  cryptographic identity, independent corroboration, and doctrinal authority.
+
+depends_on:
+  - source-status
+  - evidence-classification
+  - uncertainty-preservation
+
+governing_rule: >
+  A platform-reference witness may be registered only as a qualified reviewed
+  witness. Its record must state exactly what the platform exposes, what remains
+  unavailable, how the item can be relocated, and why the platform identifier is
+  not equivalent to a cryptographic fingerprint or repository custody.
+
+witness_classes:
+  FINGERPRINTED_REPOSITORY_OR_LOCAL_WITNESS:
+    byte_custody: AVAILABLE
+    cryptographic_identity: REQUIRED
+    locator_rule: RECORD_STABLE_PAGE_OR_SECTION_LOCATORS_WHERE_AVAILABLE
+  PUBLIC_NETWORK_WITNESS:
+    byte_custody: MAY_BE_AVAILABLE_OR_RETRIEVABLE
+    cryptographic_identity: REQUIRED_WHEN_BYTES_ARE_RETRIEVED_AND_STABLE
+    locator_rule: RECORD_PROVIDER_IDENTIFIER_URL_VERSION_AND_CONTENT_SCOPE
+  PLATFORM_REFERENCE_WITNESS:
+    byte_custody: NOT_EXPOSED_TO_REPOSITORY
+    cryptographic_identity: UNAVAILABLE_WITH_REASON_PRESERVED
+    locator_rule: RECORD_PLATFORM_OBJECT_IDENTIFIER_DISPLAYED_FILENAME_PAGE_COUNT_AND_STABLE_ITEM_LOCATORS
+    authority: QUALIFIED_REVIEWED_WITNESS
+    equivalence_rule: >
+      A platform-reference witness is not equivalent to a fingerprinted witness and
+      may not be described as repository-custodied, byte-reproducible, or independently
+      corroborative merely because its text and page images are reviewable.
+
+minimum_registration_requirements:
+  source_identity:
+    - corpus_source_id
+    - canonical_title
+    - author_or_creator
+    - source_date_or_date_status
+  platform_reference:
+    - platform_name
+    - platform_object_identifier
+    - displayed_filename_or_title
+    - access_date
+    - access_scope
+  documentary_condition:
+    - container_bibliography
+    - item_title
+    - item_completeness
+    - stable_printed_or_section_locators
+    - searchable_text_state
+    - page_image_state
+    - editorial_condition
+  missing_byte_identity:
+    - byte_custody_state
+    - sha256_state
+    - file_size_state
+    - explicit_reason_for_unavailability
+  safeguards:
+    - source_text_distribution_state
+    - original_edition_comparison_state
+    - independent_corroboration_state
+    - certification_state
+    - successor_effect
+
+registration_eligibility:
+  required:
+    - The complete source or bounded item is available for direct review.
+    - Stable printed, section, or provider locators permit repeatable relocation within the platform witness.
+    - The platform object identifier and displayed filename or title are recorded exactly.
+    - Searchable text and page-image conditions are recorded separately.
+    - Editorial layers, translations, revisions, and composite conditions are explicit.
+    - Missing byte custody, digest, and file size are represented as missing rather than guessed.
+    - The witness record remains qualified, provisional, noncertifying, and nonactivating.
+  disqualifying_conditions:
+    - partial snippet without the complete registered scope
+    - unstable item identity without a controlled platform identifier
+    - missing locators that prevent repeatable relocation
+    - concealed editorial alteration or unidentified translation
+    - fabricated or inferred cryptographic fingerprint
+    - claim of repository custody when bytes are not present
+
+controlled_states:
+  ACQUISITION_CANDIDATE:
+    meaning: A possible witness has been located but registration requirements remain incomplete.
+  QUALIFIED_PLATFORM_REFERENCE_WITNESS_REGISTERED:
+    meaning: >
+      The source or item is completely reviewable and relocatable through the recorded
+      platform reference, with missing byte identity and all editorial qualifications preserved.
+  MATERIALIZED_AND_FINGERPRINTED:
+    meaning: >
+      The exact referenced bytes were later placed in a tool-accessible workspace,
+      fingerprinted, and linked through a forward revision without rewriting the earlier record.
+
+required_operations:
+  - inspect title, copyright, contents, item opening, item ending, and editorial notes where present
+  - record the complete registered scope and stable locators
+  - distinguish parsed text from authoritative page images
+  - record platform identity without calling it a digest
+  - preserve missing byte-level identity as an explicit uncertainty
+  - distinguish collected reprint from original publication and later authorial revision
+  - conduct sequential reconstruction only in a separate study record
+  - forward-revise the witness if exact bytes are later materialized and fingerprinted
+
+prohibited_inferences:
+  - platform object identifier equals SHA256
+  - reviewable text equals repository custody
+  - stable printed pagination equals byte-level reproducibility
+  - same title proves same textual state across editions
+  - a collected composite is identical to every source edition it incorporates
+  - witness registration completes sequential reconstruction
+  - a platform-reference witness independently corroborates another witness derived from the same text
+  - source accessibility certifies doctrine, migration, successor activation, claimant rank, or repository completion
+
+citation_and_locator_rule: >
+  Repository findings may cite the recorded printed or section locator and the
+  platform-reference witness identifier. They must also preserve the witness class
+  whenever byte identity, edition identity, or textual variance is material to the claim.
+
+materialization_rule: >
+  Later acquisition of the exact bytes must be recorded by forward revision. The
+  earlier platform-reference state remains historically true and may not be rewritten
+  as though byte custody and a digest existed at the earlier date.
+
+invoked_by:
+  - corpus-registry
+  - source-status-records
+  - reviewed-witness-records
+  - source-specific-sequential-reconstructions
+
+termination:
+  protocol_state: FOUNDING_DRAFT_AVAILABLE_FOR_QUALIFIED_USE
+  certification: NOT_CERTIFIED
+  doctrinal_effect: NONE
+  successor_effect: NONE
