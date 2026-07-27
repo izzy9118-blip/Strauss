@@ -1,19 +1,296 @@
 schema_version: 1.0
-record_type: inquiry_method
-identity: {key: textual-order, version: 1.0.0}
+record_type: inquiry_method_contract
+
+identity:
+  key: textual-order
+  title: Preserve Textual and Dramatic Order
+  version: 1.1.0
+  contract_version: STRAUSS-METHOD-TO-1
+
+status:
+  lifecycle: OPERATIONAL_CONTRACT
+  semantic_completion: SUBSTANTIVELY_RECONSTRUCTED
+  source_specific_application: INCOMPLETE
+  certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 32804b5455ff65ca465a60a4d2dca2e1f18328fe
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the initial sequence summary with a typed reading-order, transition,
+    formulation-status, interruption, omission, ending, completeness, and reproducibility contract.
+
 source_records:
-  - protocols/speech-and-deed.yaml
+  - protocols/source-status.yaml
+  - protocols/evidence-classification.yaml
   - protocols/inference-discipline.yaml
+  - protocols/uncertainty-preservation.yaml
+  - protocols/speech-and-deed.yaml
+  - hermeneutics/whole-and-part.yaml
+  - hermeneutics/speaker-and-author.yaml
+  - hermeneutics/contradiction.yaml
+
 objective: >
-  Preserve the order in which a work presents its claims, examples, corrections,
-  reversals, silences, and ending.
-steps:
-  - read sequentially before thematic rearrangement
-  - record transitions and changes of speaker, audience, or register
-  - distinguish preliminary, provisional, corrected, and final formulations
-  - compare explicit conclusion with the deed of the whole
-  - retain page, section, or passage references sufficient for reproducibility
+  Preserve the order in which a work presents questions, claims, speakers, examples,
+  objections, corrections, reversals, silences, dramatic actions, and endings before
+  thematic rearrangement or corpus-level synthesis.
+
+governing_rule: >
+  Sequence is evidence. Every thematic finding must remain recoverable to an ordered
+  reading record showing where the formulation appears, what precedes and follows it,
+  its speaker and audience, its provisional or corrected status, and its relation to the ending.
+
+input_contract:
+  required_fields:
+    - source_ref
+    - documentary_status
+    - bounded_scope
+    - ordered_units
+    - title_and_opening
+    - structural_divisions
+    - ending_or_incompletion
+    - pagination_or_location_system
+    - omissions_and_silences
+    - uncertainties
+  source_ref_required_fields:
+    - ref
+    - commit
+    - edition_or_translation
+  ordered_unit_required_fields:
+    - unit_id
+    - ordinal
+    - source_location
+    - speaker_or_agent
+    - audience
+    - unit_type
+    - summary
+    - explicit_questions
+    - propositions
+    - deeds_or_events
+    - transition_from_prior
+    - transition_to_next
+    - formulation_status
+    - contradictions_or_corrections
+    - omissions_or_silences
+    - evidentiary_notes
+  unit_types:
+    - title
+    - preface
+    - introduction
+    - argument
+    - objection
+    - reply
+    - speech
+    - dialogue_exchange
+    - scene
+    - narrative_event
+    - example
+    - myth
+    - joke
+    - digression
+    - chapter
+    - structural_division
+    - conclusion
+    - fragment
+    - incomplete_ending
+  formulation_statuses:
+    - OPENING_ORIENTATION
+    - PRELIMINARY
+    - PROVISIONAL
+    - HYPOTHETICAL
+    - INTERLOCUTOR_BOUND
+    - AUTHORIALLY_UNRESOLVED
+    - CORRECTED_LATER
+    - QUALIFIED_LATER
+    - REPEATED_WITH_CHANGE
+    - FINAL_WITHIN_REGISTERED_SCOPE
+    - ENDING_NONRESOLUTION
+
+application_sequence:
+  - step_id: TO-STEP-001
+    operation: fix source, edition, translation, scope, and location system
+  - step_id: TO-STEP-002
+    operation: record title, opening, first speaker, audience, and initial difficulty
+  - step_id: TO-STEP-003
+    operation: divide the scope into ordered, nonoverlapping or explicitly overlapping units
+  - step_id: TO-STEP-004
+    operation: assign stable unit identifiers and exact locations
+  - step_id: TO-STEP-005
+    operation: identify speaker, audience, unit type, explicit questions, claims, and deeds in each unit
+  - step_id: TO-STEP-006
+    operation: record transitions, interruptions, register changes, and changes of authority
+  - step_id: TO-STEP-007
+    operation: classify formulations as opening, provisional, hypothetical, corrected, qualified, or final within scope
+  - step_id: TO-STEP-008
+    operation: link objections, replies, contradictions, repetitions, and corrections across units
+  - step_id: TO-STEP-009
+    operation: record omissions and silences only where presence or response was reasonably expected
+  - step_id: TO-STEP-010
+    operation: reconstruct structural divisions without erasing local sequence
+  - step_id: TO-STEP-011
+    operation: compare explicit conclusions with the deed and outcome of the whole scope
+  - step_id: TO-STEP-012
+    operation: classify the ending as resolution, transformation, deferral, contradiction, or incompletion
+  - step_id: TO-STEP-013
+    operation: verify every thematic finding against ordered units and locations
+  - step_id: TO-STEP-014
+    operation: record gaps, damaged text, missing pages, uncertain order, or editorial rearrangement
+  - step_id: TO-STEP-015
+    operation: certify only sequence-record completeness within scope, not doctrinal truth
+
+transition_classes:
+  - CONTINUATION
+  - EXPLICIT_INFERENCE
+  - OBJECTION
+  - REPLY
+  - CORRECTION
+  - QUALIFICATION
+  - REVERSAL
+  - CHANGE_OF_SPEAKER
+  - CHANGE_OF_AUDIENCE
+  - CHANGE_OF_OCCASION
+  - CHANGE_OF_REGISTER
+  - DIGRESSION
+  - COMIC_INTERRUPTION
+  - DRAMATIC_EVENT
+  - RETURN_TO_PRIOR_QUESTION
+  - UNMARKED_TRANSITION
+  - TRANSITION_UNRESOLVED
+
+ending_classes:
+  - EXPLICIT_RESOLUTION
+  - BOUNDED_RESOLUTION
+  - PRACTICAL_SETTLEMENT_PHILOSOPHICALLY_OPEN
+  - QUESTION_TRANSFORMED
+  - ALTERNATIVES_PRESERVED
+  - CONTRADICTION_PRESERVED
+  - COMIC_OR_DRAMATIC_QUALIFICATION
+  - ABRUPT_OR_INCOMPLETE
+  - EDITORIALLY_DETERMINED
+  - ENDING_STATUS_UNRESOLVED
+
+completeness_contract:
+  complete_within_scope_when:
+    - every unit has stable identity, ordinal, and source location
+    - unit order covers the declared scope without silent gaps
+    - speakers, audiences, questions, propositions, and deeds are recorded where present
+    - transitions and changes of register are explicit
+    - provisional, corrected, and final statuses are linked
+    - ending and documentary incompletion are classified
+    - every thematic finding can cite one or more ordered units
+  incomplete_if:
+    - pages or sections are missing without a gap record
+    - thematic notes cannot be located in sequence
+    - corrections or endings are omitted
+    - editorial rearrangement is unclassified
+    - speaker changes are silently flattened
+
+reproducibility_requirements:
+  - edition or translation identified
+  - stable source reference and commit
+  - page, line, section, Stephanus, Bekker, chapter, scene, or equivalent locations
+  - ordered unit identifiers
+  - explicit gap and OCR-limit records
+  - quotations distinguished from paraphrases
+  - later correction links
+  - source hashes where registered
+
+valid_outputs:
+  - ORDERED_READING_RECORD_COMPLETE_WITHIN_SCOPE
+  - ORDERED_READING_RECORD_PARTIAL
+  - FORMULATION_PRELIMINARY
+  - FORMULATION_PROVISIONAL
+  - FORMULATION_CORRECTED_LATER
+  - FORMULATION_QUALIFIED_BY_ENDING
+  - TRANSITION_DOCUMENTED
+  - CHANGE_OF_SPEAKER_OR_AUDIENCE_DOCUMENTED
+  - STRUCTURAL_DIVISION_SUPPORTED
+  - OMISSION_SUPPORTS_LIMITED_INFERENCE
+  - ENDING_RESOLVES_BOUNDEDLY
+  - ENDING_PRESERVES_PROBLEM
+  - DOCUMENTARY_ORDER_UNCERTAIN
+  - THEMATIC_FINDING_NOT_SEQUENCE_GROUNDED
+
+required_output_fields:
+  - classification
+  - source_and_scope
+  - ordered_units
+  - title_and_opening
+  - transition_map
+  - formulation_status_map
+  - contradiction_and_correction_links
+  - structural_divisions
+  - omissions_and_silences
+  - ending_classification
+  - documentary_gaps
+  - reproducibility_fields
+  - confidence
+  - remaining_uncertainty
+
 failure_conditions:
   - extracting propositions without sequence
-  - treating the first formulation as the final teaching
-  - allowing thematic synthesis to erase dramatic or argumentative development
+  - treating first formulation as final teaching
+  - thematic synthesis erasing dramatic or argumentative development
+  - speaker changes flattened into one authorial voice
+  - remote parallels inserted before local order is reconstructed
+  - ending omitted because it complicates the preferred reading
+  - omission inferred where presence was not reasonably expected
+  - editorial sequence assigned automatically to author
+  - incomplete text silently completed
+  - source locations too vague for reproduction
+
+failure_recovery:
+  missing_sequence:
+    action: suspend thematic conclusion and create ordered units
+  uncertain_order:
+    action: preserve competing orders and documentary basis
+  missing_pages_or_text:
+    action: create explicit gap records and bound conclusions
+  editorial_rearrangement:
+    action: distinguish received order, editor's order, and recoverable authorial order
+  thematic_erasure:
+    action: restore transition, correction, speaker, and ending links
+  location_failure:
+    action: withhold reproducibility claim until stable locations are supplied
+
+termination_rule: >
+  Textual-order reconstruction is complete only when source and scope, ordered units,
+  speakers, audiences, questions, propositions, deeds, transitions, formulation statuses,
+  corrections, omissions, structural divisions, ending, gaps, location system,
+  reproducibility, confidence, and uncertainty are explicit.
+
+behavioral_tests:
+  - id: TO-TEST-001
+    behavior: every thematic finding resolves to ordered source units
+  - id: TO-TEST-002
+    behavior: first formulation cannot be treated as final without sequence review
+  - id: TO-TEST-003
+    behavior: corrected and qualified formulations retain links to earlier statements
+  - id: TO-TEST-004
+    behavior: changes of speaker, audience, and register remain visible
+  - id: TO-TEST-005
+    behavior: ending may qualify or preserve rather than resolve the governing question
+  - id: TO-TEST-006
+    behavior: omissions require a reasonable expectation of presence
+  - id: TO-TEST-007
+    behavior: editorial order remains distinct from secure authorial order
+  - id: TO-TEST-008
+    behavior: missing text creates a gap record rather than conjectural completion
+  - id: TO-TEST-009
+    behavior: remote comparison waits until local order is complete within scope
+  - id: TO-TEST-010
+    behavior: vague source locations block reproducibility completion
+
+speech_mechanism_integration:
+  contract: speech/speech-mechanism.yaml
+  rule: >
+    Candidate reports must preserve whether claims are preliminary, provisional,
+    corrected, speaker-bound, ending-qualified, or final within registered scope. The
+    speech mechanism may reorder presentation for clarity but must preserve sequence
+    status and source locations.
+
+self_limitation: >
+  This method reconstructs received and supported textual order. It does not certify
+  that every surviving order is authorial, complete missing texts, or convert structural
+  arrangement into proof of determinate hidden intention.

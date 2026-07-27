@@ -4,7 +4,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 0.3.0
+  version: 0.4.0
 
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
@@ -14,12 +14,12 @@ status:
   destructive_actions_authorized: false
 
 revision_history:
-  predecessor_version: 0.2.0
-  predecessor_blob_sha: e9b026259503f759134c3e00219195dbbfcfd630
+  predecessor_version: 0.3.0
+  predecessor_blob_sha: 15591074881f39d7196c137db1d87422307f30b8
   reason: >
-    Register all six hermeneutic interface records as substantive operational contracts
-    while preserving source-specific application, method, problem, corpus, findings,
-    doctrinal certification, and activation as incomplete.
+    Register all four method interfaces as substantive operational contracts while
+    preserving source-specific application, problem implementation, corpus, findings,
+    independent witness reconstruction, doctrinal certification, and activation as incomplete.
 
 source_state:
   repository: izzy9118-blip/Strauss
@@ -35,7 +35,7 @@ source_state:
 
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 1.1.0
+  version: 1.2.0
   rule: >
     Every lean operational object must expose whether it is substantively reconstructed,
     partially reconstructed, mapped to richer records, a structural placeholder, or
@@ -96,7 +96,7 @@ mappings:
     transformation: SUBSTANTIVE_FORWARD_REVISION_OF_CONSOLIDATED_LAYER
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
     limit: >
-      The six contracts now govern inputs, evidence, application sequence, valid outputs,
+      The six contracts govern inputs, evidence, application sequence, valid outputs,
       prohibitions, uncertainty, termination, speech integration, and behavioral tests.
       They do not complete interpretation of every registered source or work.
 
@@ -108,13 +108,24 @@ mappings:
       - protocols/inference-discipline.yaml
       - protocols/uncertainty-preservation.yaml
       - governance/foundational-problem-architecture.yaml
+      - hermeneutics/whole-and-part.yaml
+      - hermeneutics/speaker-and-author.yaml
+      - hermeneutics/historical-and-philosophical-understanding.yaml
     interface:
-      - method/recover-question.yaml
-      - method/reconstruct-alternatives.yaml
-      - method/textual-order.yaml
-      - method/preserve-problem.yaml
-    transformation: CONSOLIDATED_REFERENCE_LAYER
-    completion: PARTIALLY_RECONSTRUCTED
+      - path: method/recover-question.yaml
+        contract_version: STRAUSS-METHOD-RQ-1
+      - path: method/reconstruct-alternatives.yaml
+        contract_version: STRAUSS-METHOD-RA-1
+      - path: method/textual-order.yaml
+        contract_version: STRAUSS-METHOD-TO-1
+      - path: method/preserve-problem.yaml
+        contract_version: STRAUSS-METHOD-PP-1
+    transformation: SUBSTANTIVE_FORWARD_REVISION_OF_CONSOLIDATED_LAYER
+    completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
+    limit: >
+      The four contracts govern recovery of the governing question, independent
+      reconstruction of alternatives, ordered reading, and preservation of permanent
+      problems. They do not execute interpretation or complete source-specific records.
 
   speech:
     target_role: ministerial_expression_and_output_discipline
@@ -165,12 +176,13 @@ mappings:
       - adapter.py
       - tests/test_adapter.py
       - tests/test_hermeneutics.py
+      - tests/test_methods.py
       - .github/workflows/validate-lean-interface.yml
     transformation: NEW_OPERATIONAL_LAYER
     completion: PARTIALLY_RECONSTRUCTED
     limit: >
-      The adapter validates and structures candidate reports, and tests validate speech
-      and hermeneutic contracts. The runtime does not perform source interpretation,
+      The adapter validates and structures candidate reports, and tests validate speech,
+      hermeneutic, and method contracts. The runtime does not perform source interpretation,
       doctrinal certification, or authoritative Assembly admission.
 
 path_conflicts:
@@ -187,21 +199,20 @@ non_effects:
   - No source-specific finding is promoted beyond its recorded evidence status.
   - No Assembly authority is conferred; Sanctum validation remains separate.
   - Passing tests does not certify semantic completion or doctrine.
-  - Substantive hermeneutic contracts do not certify their source-specific applications.
+  - Substantive hermeneutic and method contracts do not certify their source-specific applications.
 
 validation_states:
   structural_interface_valid_when:
     - manifest paths resolve
     - all declared YAML records parse
     - adapter validates manifest and speech contract
-    - speech and hermeneutic contract tests pass
+    - speech, hermeneutic, and method contract tests pass
     - GitHub Actions passes on the implementing commit
   semantic_completion_requires:
-    - reconstruct the four method objects as full operational contracts
     - complete problem-specific operational profiles and source relations
     - replace reference-only corpus and findings indexes with typed exhaustive registries
     - expand source-specific and independent-witness reconstructions
-    - validate actual candidate reports against method, hermeneutic, speech, and Sanctum boundaries
+    - validate actual candidate reports against method, hermeneutic, speech, problem, and Sanctum boundaries
   doctrinal_certification_requires:
     - separate source-grounded and migration-specific certification records
     - preservation of dissent, contradiction, and uncertainty
@@ -209,20 +220,20 @@ validation_states:
 
 completed_production_units:
   - validated lean interface skeleton
-  - operational completeness audit v1.0.0
+  - operational completeness audit v1.0.0 through v1.2.0
   - substantive speech-mechanism contract
   - semantic speech-request validation and candidate report structure
   - speech behavioral tests
   - all six substantive hermeneutic contracts
   - hermeneutic contract behavioral tests
+  - all four substantive inquiry method contracts
+  - method contract behavioral tests
 
 next_production_units:
-  - reconstruct method/recover-question.yaml
-  - reconstruct method/reconstruct-alternatives.yaml
-  - reconstruct method/textual-order.yaml
-  - reconstruct method/preserve-problem.yaml
   - complete problem-specific operational profiles and source relations
   - complete corpus and findings registries
+  - expand independent source-specific witness reconstruction
+  - validate actual candidate ministerial reports
 
 repinning_rule: >
   Sanctum may pin a new Strauss interface commit after structural and behavioral

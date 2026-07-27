@@ -4,7 +4,7 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 1.1.0
+  version: 1.2.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
@@ -13,45 +13,42 @@ status:
   repository_completion: INCOMPLETE
 
 revision_history:
-  predecessor_version: 1.0.0
-  predecessor_blob_sha: 2c770acc81ffcacaac3c3a5c9774a5f2eed10038
+  predecessor_version: 1.1.0
+  predecessor_blob_sha: dca48c90717141a45dfd7ce40d16ee6b2b2dcda4
   reason: >
-    Record the completed speech-contract production unit and the substantive
-    reconstruction of all six lean hermeneutic contracts. Preserve source-specific
-    application, method, problem, corpus, findings, and doctrinal completion as open.
+    Record substantive reconstruction of all four method contracts. Preserve
+    source-specific application, problem implementation, corpus, findings, independent
+    witness reconstruction, doctrinal certification, and activation as incomplete.
 
 basis:
   repository: izzy9118-blip/Strauss
-  prior_validated_interface_commit: 70028fa054eb1e6b93e5fb255358045bb3ffde3f
-  current_revision_scope: production/reconstruct-hermeneutic-contracts
+  prior_validated_interface_commit: 242b3c8ea1d4335353abb5ffa1c2f3878de56c49
+  current_revision_scope: production/reconstruct-method-contracts
   manifest: manifest.yaml
   mapping_record: migrations/lean-operational-interface.yaml
   governing_rule: >
-    Structural validity, path resolution, and successful loading do not establish
-    substantive reconstruction, behavioral adequacy, doctrinal truth, or ministerial
-    readiness. Every operational object must state its own level of completion.
+    Structural validity, path resolution, contract reconstruction, and passing tests do
+    not establish source-specific completion, doctrinal truth, claimant rank, migration
+    certification, or unrestricted ministerial readiness.
 
 classification_vocabulary:
   SUBSTANTIVELY_RECONSTRUCTED:
     meaning: >
-      The object contains a developed governing question, evidence requirements,
-      operations, limits, valid outputs, failure conditions, termination rule, and
-      behavioral contract. This classification does not constitute doctrinal certification.
+      The object contains a governing question, typed inputs and outputs, evidence
+      requirements, application sequence, limits, failure recovery, termination, and
+      behavioral contract. This does not constitute doctrinal certification.
   PARTIALLY_RECONSTRUCTED:
     meaning: >
-      A substantial contract or implementation exists, but important operations,
-      evidence domains, behavioral execution, or source-specific applications remain incomplete.
+      A substantial contract or implementation exists, but important execution,
+      evidence domains, or source-specific applications remain incomplete.
   MAPPED_TO_RICHER_RECORDS:
     meaning: >
-      The object is principally a compact interface to richer governing records and
-      must not be mistaken for a self-sufficient reconstruction.
+      The object is principally an index or compact interface to richer records.
   STRUCTURAL_PLACEHOLDER:
     meaning: >
-      The object supplies headings, brief rules, or loadable structure but is not yet
-      sufficient to govern reliable inquiry or expression by itself.
+      The object is loadable but insufficient to govern reliable inquiry by itself.
   EMPTY_OR_UNIMPLEMENTED:
-    meaning: >
-      The promised operation has no material implementation or usable governing record.
+    meaning: No material implementation exists.
 
 summary:
   structural_validation: REQUIRED_FOR_CURRENT_REVISION
@@ -60,20 +57,20 @@ summary:
   runtime_readiness: LIMITED
   completed_operational_units:
     - speech mechanism contract
-    - speech request validator and candidate report structure
+    - speech request validation and candidate report structure
     - six hermeneutic contracts
+    - four inquiry method contracts
   remaining_major_deficiencies:
-    - four method contracts remain partial
     - problem-specific operational profiles and source relations remain uneven
     - corpus index is not an exhaustive typed corpus registry
     - findings index is not an exhaustive typed findings registry
-    - source-specific applications of hermeneutics remain incomplete
+    - source-specific applications of method and hermeneutics remain incomplete
+    - independent witness reconstruction remains materially incomplete
     - doctrinal and migration certification remain separate and incomplete
   central_finding: >
-    The repository now has a substantive speech contract and six developed
-    hermeneutic contracts. It is still not a completed Strauss reasoner because method,
-    problem implementation, corpus, findings, and independent source reconstruction
-    remain materially incomplete.
+    The repository now has substantive speech, hermeneutic, and method contracts. It is
+    still not a completed Strauss reasoner because the contracts have not been applied
+    exhaustively to the problem objects, corpus, findings, and independent witnesses.
 
 records:
   - path: manifest.yaml
@@ -81,138 +78,113 @@ records:
     present_function:
       - canonical load order and seven-problem registration
       - honest structural, semantic, runtime, and certification states
-      - per-component completion declarations
+      - speech, hermeneutic, and method contract registration
       - audit and Sanctum repinning rules
     remaining:
-      - completion states must advance with later method, problem, corpus, and findings work
+      - completion states must advance with problem, corpus, findings, and source application work
       - manifest does not itself perform reasoning
 
   - path: adapter.py
     classification: PARTIALLY_RECONSTRUCTED
     present_function:
       - path-safe YAML loading and manifest validation
-      - speech-contract validation
-      - typed speech-request validation
+      - speech-contract and typed request validation
       - candidate ministerial-report construction
       - evidence, irony, comedy, concealment, uncertainty, and pinning controls
+      - loading of method and hermeneutic contracts
     remaining:
-      - no automatic source interpretation
-      - no full method-contract execution
+      - no automatic execution of method contracts over source records
       - no exhaustive corpus or findings resolution
       - no authoritative natural-language ministerial judgment
 
   - path: speech/speech-mechanism.yaml
     classification: PARTIALLY_RECONSTRUCTED
+    contract_version: STRAUSS-SPEECH-CONTRACT-1
     present_function:
       - typed input and output contracts
-      - ten-stage reasoning-to-expression pipeline
+      - reasoning-to-expression pipeline
       - evidence, audience, speech-and-deed, concealment, irony, comedy, and uncertainty controls
-      - failure, stopping, termination, and Sanctum interoperability rules
-      - behavioral test requirements
+      - failure, termination, and Sanctum interoperability
     remaining:
       - source-grounded reasoning and final composition are not automatic
-      - source-specific report applications remain to be tested
+      - real report applications remain to be tested
 
-  - path: hermeneutics/literary-concealment.yaml
+  - path: hermeneutics/
     classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-HERMENEUTIC-LC-1
+    contracts:
+      - STRAUSS-HERMENEUTIC-LC-1
+      - STRAUSS-HERMENEUTIC-WP-1
+      - STRAUSS-HERMENEUTIC-SA-1
+      - STRAUSS-HERMENEUTIC-AUD-1
+      - STRAUSS-HERMENEUTIC-CON-1
+      - STRAUSS-HERMENEUTIC-HPU-1
     present_function:
-      - positive-evidence threshold
-      - function and content-status distinction
-      - literal-reading preservation
-      - opacity and nonresolution outputs
-    remaining: source-specific applications and certification
-
-  - path: hermeneutics/whole-and-part.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-HERMENEUTIC-WP-1
-    present_function:
-      - controlled scale from passage through work, corpus, and problem
-      - sequence, ending, compositional deed, and independent-comparison rules
-      - bounded and unresolved whole-part outputs
-    remaining: source-specific applications and certification
-
-  - path: hermeneutics/speaker-and-author.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-HERMENEUTIC-SA-1
-    present_function:
-      - agent and documentary-layer attribution
-      - compositional-deed tests
-      - editor, translator, narrator, character, chorus, and author distinctions
-      - unresolved authorial-relation output
-    remaining: source-specific applications and certification
-
-  - path: hermeneutics/audience.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-HERMENEUTIC-AUD-1
-    present_function:
-      - audience types, capacities, motives, attachments, and risks
-      - communication forms, responsibility, partial enlightenment, and capture controls
-      - corrigible audience classification
-    remaining: source-specific applications and certification
-
-  - path: hermeneutics/contradiction.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-HERMENEUTIC-CON-1
-    present_function:
-      - two-sided contradiction record
-      - contextual, terminological, sequential, documentary, and compositional burdens
-      - genuine contradiction and nonresolution outputs
-    remaining: source-specific applications and certification
-
-  - path: hermeneutics/historical-and-philosophical-understanding.yaml
-    classification: SUBSTANTIVELY_RECONSTRUCTED
-    contract_version: STRAUSS-HERMENEUTIC-HPU-1
-    present_function:
-      - historical vocabulary, controversy, institution, audience, and alternative reconstruction
-      - causal-explanation and anachronism controls
-      - independent transhistorical burden and philosophical testing
-    remaining: source-specific applications and certification
+      - positive-evidence concealment threshold and opacity preservation
+      - whole-part, sequence, corpus, and ending discipline
+      - speaker, author, editor, translator, and documentary-layer attribution
+      - audience, responsibility, partial enlightenment, and capture controls
+      - contradiction burdens and affirmative nonresolution
+      - historical reconstruction without causal reduction of philosophy
+    remaining:
+      - source-specific applications and certification
 
   - path: method/recover-question.yaml
-    classification: PARTIALLY_RECONSTRUCTED
-    remaining:
-      - required inputs and typed outputs
-      - failure recovery and termination
-      - behavioral tests against topic substitution
-    priority: NEXT_PRODUCTION_STAGE
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    contract_version: STRAUSS-METHOD-RQ-1
+    present_function:
+      - separates user, explicit, governing, topical, doctrinal, and routing questions
+      - selects governing questions through opening, sequence, alternatives, and ending
+      - supports multi-problem routing without absorption
+    remaining: source-specific applications and certification
 
   - path: method/reconstruct-alternatives.yaml
-    classification: PARTIALLY_RECONSTRUCTED
-    remaining:
-      - typed claimant records and comparison gate
-      - evidence-asymmetry handling
-      - burden and termination contract
-    priority: NEXT_PRODUCTION_STAGE
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    contract_version: STRAUSS-METHOD-RA-1
+    present_function:
+      - typed independent claimant records
+      - comparison gate, burden, evidence asymmetry, and incommensurability controls
+      - victor withheld when reciprocal burdens remain
+    remaining: source-specific applications and certification
 
   - path: method/textual-order.yaml
-    classification: PARTIALLY_RECONSTRUCTED
-    remaining:
-      - typed sequence and transition records
-      - completeness test and enforcement
-      - behavioral tests against thematic erasure
-    priority: NEXT_PRODUCTION_STAGE
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    contract_version: STRAUSS-METHOD-TO-1
+    present_function:
+      - typed ordered units, transitions, formulation statuses, correction links, and endings
+      - reproducibility, gap, editorial-order, and thematic-grounding controls
+    remaining: source-specific ordered reading records and certification
 
   - path: method/preserve-problem.yaml
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    contract_version: STRAUSS-METHOD-PP-1
+    present_function:
+      - jurisdiction, non-jurisdiction, burdens, dissent, seams, and settlement distinctions
+      - predecessor and migration preservation
+      - bounded resolution and affirmative nonresolution
+    remaining: problem-specific application and certification
+
+  - path: problems/
     classification: PARTIALLY_RECONSTRUCTED
+    present_function:
+      - seven successor constitutions and subordinate structures
+      - active predecessor preservation where applicable
+      - brother-problem and cross-problem relations
     remaining:
-      - typed burden, seam, dissent, and nonresolution outputs
-      - explicit termination and preservation contract
-    priority: NEXT_PRODUCTION_STAGE
+      - uniform operational profiles governed by the new method and hermeneutic contracts
+      - exhaustive witness and source bindings
+      - complete proposition-level migration and certification
 
   - path: corpus/index.yaml
     classification: MAPPED_TO_RICHER_RECORDS
     remaining:
       - exhaustive work, edition, witness, hash, location, and source-status registrations
       - corpus completeness and gap records
-    priority: LATER_FOUNDATIONAL_PRODUCTION
 
   - path: findings/index.yaml
     classification: MAPPED_TO_RICHER_RECORDS
     remaining:
       - exhaustive typed findings, evidence, revisions, dissent, and supersession relations
       - queryable problem and witness bindings
-    priority: LATER_FOUNDATIONAL_PRODUCTION
 
   - path: migrations/lean-operational-interface.yaml
     classification: SUBSTANTIVELY_RECONSTRUCTED
@@ -222,36 +194,39 @@ records:
     classification: PARTIALLY_RECONSTRUCTED
     present_function:
       - structural and speech behavioral validation
-      - evidence, irony, concealment, comedy, uncertainty, and outside-my-ground tests
-    remaining: method, problem, corpus, findings, and real report fixtures
+    remaining: real source and report fixtures
 
   - path: tests/test_hermeneutics.py
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
-      - validates all six contract shapes, statuses, behavior sets, and key safeguards
+      - contract shape, status, evidence-burden, behavior, and safeguard tests
     remaining: source-specific application fixtures
+
+  - path: tests/test_methods.py
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    present_function:
+      - contract shape, question, independence, sequence, nonresolution, and speech integration tests
+    remaining: source-specific method execution fixtures
 
   - path: .github/workflows/validate-lean-interface.yml
     classification: PARTIALLY_RECONSTRUCTED
     present_function:
-      - executes manifest, path, contract, structural, and behavioral tests
-    remaining: later method, problem, corpus, findings, and report-validation jobs
+      - executes manifest, path, speech, hermeneutic, method, structural, and behavioral tests
+    remaining: problem, corpus, findings, and actual report-validation jobs
 
 production_order:
   completed:
     - reconstruct speech/speech-mechanism.yaml
     - extend adapter.py with speech validation and candidate report construction
-    - add behavioral speech tests
     - expose honest manifest completion states
     - reconstruct the six hermeneutic contracts
+    - reconstruct the four method contracts
   next:
-    - reconstruct method/recover-question.yaml
-    - reconstruct method/reconstruct-alternatives.yaml
-    - reconstruct method/textual-order.yaml
-    - reconstruct method/preserve-problem.yaml
-    - complete problem-specific operational profiles and source relations
+    - audit and complete problem-specific operational profiles and source relations
     - replace corpus and findings indexes with typed exhaustive registries
-    - expand independent source-specific witness reconstruction
+    - create source-specific method and hermeneutic application fixtures
+    - expand independent witness reconstruction
+    - validate actual ministerial reports against the full contract stack
     - repin Sanctum after each validated interface revision
 
 non_effects:

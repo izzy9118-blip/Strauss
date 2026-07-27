@@ -6,7 +6,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 0.3.0
+  version: 0.4.0
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
@@ -22,13 +22,13 @@ status:
     certification, or readiness for unrestricted ministerial reasoning.
 
 revision_history:
-  predecessor_version: 0.2.0
-  predecessor_blob_sha: 2c49e44363d9fdfbda29cd878f2473279045f5c3
+  predecessor_version: 0.3.0
+  predecessor_blob_sha: 4992bf843901f9a335ce00a0fef16e524c0a9aa2
   reason: >
-    Register all six hermeneutic interfaces as substantive operational contracts with
-    evidence burdens, application sequences, valid outputs, prohibitions, termination,
-    and behavioral tests. Preserve method, problem, corpus, findings, source-specific
-    application, doctrinal certification, and migration activation as incomplete.
+    Register all four method interfaces as substantive operational contracts for
+    question recovery, independent alternative reconstruction, textual order, and
+    preservation of permanent problems. Preserve source-specific applications, problem
+    implementation, corpus, findings, doctrine, and activation as incomplete.
 
 purpose: >
   Provide one compact, machine-readable entry point through which a runtime can load
@@ -38,7 +38,7 @@ purpose: >
 
 audit:
   path: audits/operational-completeness.yaml
-  version: 1.1.0
+  version: 1.2.0
   classification_vocabulary:
     - SUBSTANTIVELY_RECONSTRUCTED
     - PARTIALLY_RECONSTRUCTED
@@ -55,12 +55,12 @@ component_completion:
   adapter: PARTIALLY_RECONSTRUCTED
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
-  method: PARTIALLY_RECONSTRUCTED
+  method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   problem_objects: UNEVEN_FOUNDING_DRAFTS_AND_ACTIVE_PREDECESSORS
   corpus_index: MAPPED_TO_RICHER_RECORDS
   findings_index: MAPPED_TO_RICHER_RECORDS
   migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: SPEECH_AND_HERMENEUTIC_CONTRACTS_VALIDATED_METHOD_AND_SOURCE_FIXTURES_INCOMPLETE
+  behavioral_tests: SPEECH_HERMENEUTIC_AND_METHOD_CONTRACTS_VALIDATED_SOURCE_AND_PROBLEM_FIXTURES_INCOMPLETE
 
 source_hierarchy:
   tiers:
@@ -141,15 +141,26 @@ hermeneutics:
     path: hermeneutics/historical-and-philosophical-understanding.yaml
     contract_version: STRAUSS-HERMENEUTIC-HPU-1
 
+method_completion:
+  state: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
+  limitation: >
+    The method contracts govern question recovery, independent reconstruction, ordered
+    reading, and problem preservation. They do not execute source interpretation by
+    themselves or complete every source-specific method record.
+
 method:
   - key: recover-question
     path: method/recover-question.yaml
+    contract_version: STRAUSS-METHOD-RQ-1
   - key: reconstruct-alternatives
     path: method/reconstruct-alternatives.yaml
+    contract_version: STRAUSS-METHOD-RA-1
   - key: textual-order
     path: method/textual-order.yaml
+    contract_version: STRAUSS-METHOD-TO-1
   - key: preserve-problem
     path: method/preserve-problem.yaml
+    contract_version: STRAUSS-METHOD-PP-1
 
 speech:
   mechanism: speech/speech-mechanism.yaml

@@ -1,20 +1,235 @@
 schema_version: 1.0
-record_type: inquiry_method
-identity: {key: recover-question, version: 1.0.0}
+record_type: inquiry_method_contract
+
+identity:
+  key: recover-question
+  title: Recover the Governing Question
+  version: 1.1.0
+  contract_version: STRAUSS-METHOD-RQ-1
+
+status:
+  lifecycle: OPERATIONAL_CONTRACT
+  semantic_completion: SUBSTANTIVELY_RECONSTRUCTED
+  source_specific_application: INCOMPLETE
+  certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: ecb5b57233b17b8c3da80049feea2e7d49293c63
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the initial step list with a typed contract governing the distinction
+    between user inquiry, source question, topic, doctrine, occasion, alternatives,
+    sequence, ending, problem routing, failure recovery, and termination.
+
 source_records:
   - governance/foundational-problem-architecture.yaml
   - protocols/source-status.yaml
   - protocols/evidence-classification.yaml
+  - protocols/inference-discipline.yaml
+  - protocols/uncertainty-preservation.yaml
+  - hermeneutics/whole-and-part.yaml
+  - hermeneutics/speaker-and-author.yaml
+  - hermeneutics/historical-and-philosophical-understanding.yaml
+
 objective: >
-  Recover the question that organizes the work before extracting a doctrine or applying
-  a later category.
-steps:
-  - preserve the user's inquiry and the source's stated problem separately
-  - identify the work's opening difficulty, title, occasion, and explicit questions
-  - trace which alternatives the work treats as serious
-  - identify what the ending resolves, transforms, or leaves open
-  - route the recovered question to one or more foundational problems without absorption
+  Recover the question that organizes a work or bounded inquiry before extracting a
+  doctrine, imposing a later category, ranking alternatives, or converting a topic into
+  an answer.
+
+governing_rule: >
+  The user's question, the source's explicit questions, the work's governing question,
+  and the repository problem to which the result is routed are distinct records. They
+  may overlap, but none may silently replace the others.
+
+input_contract:
+  required_fields:
+    - inquiry_ref
+    - user_question
+    - source_refs
+    - source_statuses
+    - title_and_form
+    - opening_difficulty
+    - explicit_questions
+    - occasion
+    - speakers_and_audiences
+    - sequence_summary
+    - serious_alternatives
+    - ending_or_termination
+    - candidate_problem_routes
+    - alternatives_considered
+  inquiry_ref_required_fields:
+    - ref
+    - commit
+  source_ref_required_fields:
+    - ref
+    - commit
+    - location_or_scope
+  candidate_problem_keys:
+    - nomos-vs-physis
+    - philosophy-vs-poetry
+    - theory-vs-practice
+    - theologico-political
+    - athens-vs-jerusalem
+    - wise-vs-vulgar
+    - ancients-vs-moderns
+
+question_distinctions:
+  user_question:
+    meaning: The inquiry submitted by the human or Assembly.
+  source_explicit_question:
+    meaning: A question stated by a speaker, narrator, title, preface, or argument.
+  governing_question:
+    meaning: >
+      The difficulty that orders the work's sequence, alternatives, corrections,
+      dramatic action, and ending.
+  topical_label:
+    meaning: A subject heading that may be relevant but does not yet state the problem.
+  doctrinal_proposition:
+    meaning: A proposed answer that must not be substituted for the governing question.
+  repository_problem_route:
+    meaning: A jurisdictional destination that preserves the question without predetermining its answer.
+
+application_sequence:
+  - step_id: RQ-STEP-001
+    operation: preserve the user question verbatim with inquiry reference and commit
+  - step_id: RQ-STEP-002
+    operation: classify every source, edition, translation, editorial condition, and scope
+  - step_id: RQ-STEP-003
+    operation: identify title, genre, opening difficulty, occasion, speakers, and audiences
+  - step_id: RQ-STEP-004
+    operation: record every explicit question before selecting a governing one
+  - step_id: RQ-STEP-005
+    operation: reconstruct the sequence of alternatives, objections, corrections, reversals, and silences
+  - step_id: RQ-STEP-006
+    operation: distinguish topic from problem and problem from proposed doctrine
+  - step_id: RQ-STEP-007
+    operation: test which question best explains the beginning, middle, and ending
+  - step_id: RQ-STEP-008
+    operation: test whether dramatic or textual deed qualifies the explicit formulation
+  - step_id: RQ-STEP-009
+    operation: preserve subsidiary questions rather than forcing them into one formula
+  - step_id: RQ-STEP-010
+    operation: state alternative candidate governing questions and their evidentiary burdens
+  - step_id: RQ-STEP-011
+    operation: assign the narrowest supported governing question and confidence
+  - step_id: RQ-STEP-012
+    operation: route to one or more foundational problems without absorption
+  - step_id: RQ-STEP-013
+    operation: identify what the ending resolves, transforms, defers, or leaves open
+  - step_id: RQ-STEP-014
+    operation: state what evidence could change the recovered question
+
+selection_tests:
+  - Does the candidate question explain why the work begins where it does?
+  - Does it organize the serious alternatives rather than merely name the subject?
+  - Does it explain major transitions, changes of speaker, and corrections?
+  - Does it account for the ending or unresolved termination?
+  - Does it preserve the work's own vocabulary before importing later categories?
+  - Does it distinguish the speaker's local question from the work's compositional question?
+  - Does it avoid presuming a Straussian answer or repository doctrine?
+  - Does it preserve subsidiary questions that remain independently active?
+
+problem_routing_rules:
+  - Routing follows the recovered question, not keyword frequency.
+  - More than one problem may be activated where jurisdictions genuinely intersect.
+  - Philosophy vs. Poetry and The Theologico-Political Problem are coactivated where rival forms of wisdom and divine authority are joined.
+  - A route may reference a neighboring problem without reproducing its doctrine.
+  - Poetry is not revelation; Athens vs. Jerusalem is not identical with the abstract Theologico-Political Problem.
+  - Problem order does not imply causal or doctrinal subordination.
+
+valid_outputs:
+  - GOVERNING_QUESTION_DOCUMENTED
+  - GOVERNING_QUESTION_SUPPORTED
+  - GOVERNING_QUESTION_BOUNDED
+  - MULTIPLE_GOVERNING_QUESTIONS_PRESERVED
+  - SUBSIDIARY_QUESTION_RECORDED
+  - TOPIC_NOT_YET_PROBLEM
+  - DOCTRINAL_SUBSTITUTION_REJECTED
+  - PROBLEM_ROUTE_SUPPORTED
+  - MULTI_PROBLEM_ROUTE_SUPPORTED
+  - GOVERNING_QUESTION_UNRESOLVED
+  - INSUFFICIENT_DOCUMENTATION
+
+required_output_fields:
+  - classification
+  - user_question
+  - source_explicit_questions
+  - governing_question
+  - opening_difficulty
+  - serious_alternatives
+  - sequence_basis
+  - ending_relation
+  - subsidiary_questions
+  - candidate_questions_considered
+  - problem_routes
+  - evidence
+  - source_locations
+  - confidence
+  - what_is_not_established
+  - remaining_uncertainty
+
 failure_conditions:
   - beginning from a presumed Straussian answer
   - substituting a summary topic for the governing question
-  - allowing a secondary introduction to govern a primary work
+  - extracting doctrine before reconstructing alternatives and sequence
+  - allowing a secondary introduction to govern an available primary work
+  - treating a character's question as automatically authorial
+  - selecting a question that does not account for the ending
+  - routing by vocabulary alone
+  - collapsing multiple active questions for convenience
+  - treating repository architecture as the hidden doctrine of the source
+
+failure_recovery:
+  topic_substituted_for_question:
+    action: return to opening difficulty, explicit questions, alternatives, and ending
+  doctrine_substituted_for_question:
+    action: restate the proposition as one possible answer and recover the question it answers
+  secondary_source_dominance:
+    action: demote secondary framing and reconstruct from primary evidence
+  sequence_missing:
+    action: suspend governing-question assignment until ordered reading is recorded
+  multiple_candidates_tied:
+    action: preserve multiple governing questions with separate burdens
+  documentary_gap:
+    action: issue a bounded or insufficient-documentation finding
+
+termination_rule: >
+  Recovery is complete only when the user question, explicit source questions, title,
+  opening difficulty, occasion, speakers, audiences, sequence, serious alternatives,
+  ending, candidate governing questions, selected or unresolved question, problem routes,
+  evidence, confidence, and remaining uncertainty are explicit.
+
+behavioral_tests:
+  - id: RQ-TEST-001
+    behavior: user question and source governing question remain distinct
+  - id: RQ-TEST-002
+    behavior: topic labels cannot substitute for a governing question
+  - id: RQ-TEST-003
+    behavior: proposed doctrine is returned to the status of a possible answer
+  - id: RQ-TEST-004
+    behavior: opening, sequence, and ending must jointly support selection
+  - id: RQ-TEST-005
+    behavior: a secondary introduction cannot govern an available primary source
+  - id: RQ-TEST-006
+    behavior: character question does not automatically become authorial question
+  - id: RQ-TEST-007
+    behavior: multiple serious governing questions may remain active
+  - id: RQ-TEST-008
+    behavior: problem routing follows jurisdiction rather than keyword frequency
+  - id: RQ-TEST-009
+    behavior: brother problems coactivate without absorption where required
+  - id: RQ-TEST-010
+    behavior: missing sequence or ending produces bounded nonresolution
+
+speech_mechanism_integration:
+  contract: speech/speech-mechanism.yaml
+  rule: >
+    The recovered governing question must appear in the candidate report separately
+    from the direct answer and activated problems. Expression may shorten its wording
+    but may not replace it with a doctrine or topical label.
+
+self_limitation: >
+  This method recovers the question supported by a bounded documentary record. It does
+  not certify that the recovered question is the author's only concern, establish the
+  final answer, or make repository problem architecture govern the source in advance.
