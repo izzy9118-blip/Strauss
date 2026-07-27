@@ -4,7 +4,7 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 1.3.0
+  version: 1.4.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
@@ -13,32 +13,35 @@ status:
   repository_completion: INCOMPLETE
 
 revision_history:
-  predecessor_version: 1.2.0
-  predecessor_blob_sha: fc6e3557ba366d175d8152409fdcb0608dfa441e
+  predecessor_version: 1.3.0
+  predecessor_blob_sha: 50583195e3dc317e64941869a3676dbadc357bde
   reason: >
-    Record the validated read-only loading of complete foundational-problem bundles:
-    constitution, inquiry profile, witness registry, relations, and synthesis records.
-    Preserve source-specific application, incomplete witness reconstruction, migration
-    certification, doctrine, activation, corpus exhaustiveness, and findings exhaustiveness.
+    Record replacement of the reference-only corpus index with a typed registry that is
+    exhaustive for the repository's current committed source and study state. Preserve
+    the wider corpus as open, source-text admission as separate, item-level statuses and
+    independent witnesses as incomplete, and all doctrine, migration, activation, and
+    Assembly authority as unauthorized.
 
 basis:
   repository: izzy9118-blip/Strauss
-  prior_validated_interface_commit: a50d9924722a4eeb99e5cd249444f3319dc4117e
-  current_revision_scope: production/load-complete-problem-bundles
+  prior_validated_interface_commit: 58fb3c53885188780bb22193b8371609f77dda16
+  current_revision_scope: production/typed-corpus-registry
   manifest: manifest.yaml
   problem_bundle_loader: problem_bundles.py
+  corpus_registry_loader: corpus_registry.py
   mapping_record: migrations/lean-operational-interface.yaml
   governing_rule: >
-    Structural validity, complete path registration, bundle loading, and passing tests do
-    not establish source-specific completion, doctrinal truth, claimant rank, migration
-    certification, successor activation, or unrestricted ministerial readiness.
+    Exhaustive registration of the repository's present source and study state does not
+    make the corpus closed or complete. Path resolution, fingerprints, source identity,
+    study coverage, and passing tests do not certify claims, authors, witnesses, doctrine,
+    migration, successor activation, or unrestricted ministerial readiness.
 
 classification_vocabulary:
   SUBSTANTIVELY_RECONSTRUCTED:
     meaning: >
-      The object contains a developed governing contract or complete declared bundle with
-      identity, evidence or source relations, limits, valid operations, termination, and
-      behavioral validation. This does not constitute doctrinal certification.
+      The object contains a developed governing contract or registry, explicit scope,
+      identity, provenance, limits, valid operations, termination, and behavioral validation.
+      This classification does not constitute doctrinal certification.
   PARTIALLY_RECONSTRUCTED:
     meaning: >
       A substantial contract or implementation exists, but important execution,
@@ -53,7 +56,7 @@ classification_vocabulary:
     meaning: No material implementation exists.
 
 summary:
-  structural_validation: PASSED_FOR_CURRENT_REVISION
+  structural_validation: REQUIRED_FOR_CURRENT_REVISION
   semantic_completion: INCOMPLETE
   doctrinal_certification: NOT_CERTIFIED
   runtime_readiness: LIMITED
@@ -63,19 +66,21 @@ summary:
     - six hermeneutic contracts
     - four inquiry method contracts
     - seven read-only foundational problem bundles
-    - problem-bundle identity, relation, non-certification, and path validation
+    - typed corpus registry exhaustive for current committed source and study state
+    - corpus identity, path, coverage, predecessor, witness, and gap validation
   remaining_major_deficiencies:
+    - findings index remains a reference-only mapping rather than an exhaustive typed registry
     - source-specific applications of method and hermeneutics remain incomplete
-    - independent witness reconstruction remains materially incomplete
-    - proposition-level migration and certification remain incomplete where recorded
-    - corpus index is not an exhaustive typed corpus registry
-    - findings index is not an exhaustive typed findings registry
+    - most of the nineteen Theologico-Political writings lack item-level source-status records and independent studies
+    - Socrates and Aristophanes lacks a separately registered reviewed edition and fingerprint
+    - direct Aristophanes, Xenophon, biblical, medieval, and most Platonic witness studies remain incomplete
     - authoritative natural-language ministerial judgment remains a reasoning operation
     - doctrinal certification and successor activation remain separately unauthorized
   central_finding: >
-    The repository can now load each permanent problem together with its governing
-    constitution, inquiry operations, witnesses, relations, and syntheses. This completes
-    the operational bundle seam, not the documentary work that the bundle records as pending.
+    The corpus seam is now operationally honest: every source identity and studies-tree
+    record presently committed is typed and accounted for, while every known absence is
+    preserved as a positive gap. Current-state exhaustiveness and corpus completeness are
+    explicitly distinct.
 
 records:
   - path: manifest.yaml
@@ -83,11 +88,10 @@ records:
     present_function:
       - canonical load order and seven-problem registration
       - honest structural, semantic, runtime, and certification states
-      - complete problem-bundle path declarations
-      - speech, hermeneutic, and method contract registration
+      - speech, hermeneutic, method, problem-bundle, and corpus registration
       - audit and Sanctum repinning rules
     remaining:
-      - completion states must advance with corpus, findings, witnesses, and source applications
+      - completion states must advance with findings, witnesses, and source applications
       - manifest does not itself perform reasoning
 
   - path: adapter.py
@@ -97,141 +101,127 @@ records:
       - speech-contract and typed request validation
       - candidate ministerial-report construction
       - evidence, irony, comedy, concealment, uncertainty, and pinning controls
-      - loading of method and hermeneutic contracts
     remaining:
       - no automatic execution of method contracts over source records
-      - no exhaustive corpus or findings resolution
       - no authoritative natural-language ministerial judgment
 
   - path: problem_bundles.py
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
-      - canonical selection of one or all seven foundational problems
-      - read-only loading of constitution, inquiry profile, witness registry, relations, and syntheses
-      - identity and canonical-order validation
-      - controlled relation coverage and jurisdictional-boundary validation
-      - acceptance of documented witness-registry layout variants without rewriting source files
-      - explicit non-certification, non-activation, and predecessor-preservation effects
+      - complete read-only loading of seven foundational problem bundles
+      - identity, relation, non-certification, and predecessor-preservation validation
     remaining:
-      - does not execute source interpretation
-      - does not complete missing witnesses or syntheses
-      - does not certify migrations or doctrine
-      - does not confer Assembly authority
+      - no source interpretation, migration certification, doctrine, or activation
+
+  - path: corpus/index.yaml
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    registry_version: 1.0.0
+    completion: CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
+    present_function:
+      - 22 typed source entities
+      - 2 reviewed witnesses
+      - 2 source-status records
+      - 7 analytical and integration study records
+      - all 9 YAML records in the studies tree accounted for
+      - all 7 problem witness registries
+      - all 19 Theologico-Political predecessor source identities and dates
+      - explicit repository documentary artifacts and 7 positive corpus-gap records
+    remaining:
+      - complete Strauss bibliography and item-level source-status records
+      - reviewed Socrates and Aristophanes edition identity and fingerprint
+      - Greek alignment for Plato's Apology
+      - broader classical, biblical, medieval, and modern independent witness corpora
+      - source-text admission and runtime source access remain separate
+
+  - path: corpus_registry.py
+    classification: SUBSTANTIVELY_RECONSTRUCTED
+    present_function:
+      - validates unique source, witness, status, study, and gap identifiers
+      - validates all registered repository paths
+      - validates exact current studies-tree coverage
+      - validates the nineteen predecessor titles and dates against the active predecessor
+      - validates active-predecessor equality with the preserved historical copy
+      - validates the SPPP reviewed-witness fingerprint against its source-status record
+      - loads a read-only discovery and provenance context
+    remaining:
+      - no source retrieval or source-text admission
+      - no interpretation, ranking, certification, migration, activation, or Assembly authority
 
   - path: speech/speech-mechanism.yaml
     classification: PARTIALLY_RECONSTRUCTED
     contract_version: STRAUSS-SPEECH-CONTRACT-1
-    present_function:
-      - typed input and output contracts
-      - reasoning-to-expression pipeline
-      - evidence, audience, speech-and-deed, concealment, irony, comedy, and uncertainty controls
-      - failure, termination, and Sanctum interoperability
     remaining:
       - source-grounded reasoning and final composition are not automatic
-      - real report applications remain to be tested
+      - actual report applications remain to be tested
 
   - path: hermeneutics/
     classification: SUBSTANTIVELY_RECONSTRUCTED
-    contracts:
-      - STRAUSS-HERMENEUTIC-LC-1
-      - STRAUSS-HERMENEUTIC-WP-1
-      - STRAUSS-HERMENEUTIC-SA-1
-      - STRAUSS-HERMENEUTIC-AUD-1
-      - STRAUSS-HERMENEUTIC-CON-1
-      - STRAUSS-HERMENEUTIC-HPU-1
-    present_function:
-      - positive-evidence concealment threshold and opacity preservation
-      - whole-part, sequence, corpus, and ending discipline
-      - speaker, author, editor, translator, and documentary-layer attribution
-      - audience, responsibility, partial enlightenment, and capture controls
-      - contradiction burdens and affirmative nonresolution
-      - historical reconstruction without causal reduction of philosophy
     remaining:
       - source-specific applications and certification
 
   - path: method/
     classification: SUBSTANTIVELY_RECONSTRUCTED
-    contracts:
-      - STRAUSS-METHOD-RQ-1
-      - STRAUSS-METHOD-RA-1
-      - STRAUSS-METHOD-TO-1
-      - STRAUSS-METHOD-PP-1
-    present_function:
-      - recovery and separation of user, source, governing, topical, doctrinal, and routing questions
-      - independent reconstruction, evidence asymmetry, comparison gates, and reciprocal burdens
-      - ordered units, transitions, correction links, endings, and reproducibility controls
-      - jurisdiction, dissent, seams, settlements, predecessor preservation, and affirmative nonresolution
     remaining:
       - source-specific applications and certification
 
   - path: problems/
     classification: SUBSTANTIVELY_RECONSTRUCTED_AS_READ_ONLY_OPERATIONAL_BUNDLES
-    present_function:
-      - seven successor constitutions and complete subordinate bundle paths
-      - inquiry profiles, witness registries, reciprocal controlled relations, and synthesis records
-      - active predecessor and accepted migration-source preservation where applicable
-      - reciprocal brother-problem designation with non-absorption
     remaining:
-      - source-specific witness and work reconstruction is uneven and often pending
-      - bundle completeness does not establish proposition-level migration completion
-      - successor certification and activation remain unauthorized
-      - no bundle may promote provisional synthesis to doctrine
-
-  - path: corpus/index.yaml
-    classification: MAPPED_TO_RICHER_RECORDS
-    remaining:
-      - exhaustive work, edition, witness, hash, location, and source-status registrations
-      - corpus completeness and gap records
+      - independent witness and work reconstruction is uneven
+      - proposition-level migration and successor certification remain incomplete
 
   - path: findings/index.yaml
     classification: MAPPED_TO_RICHER_RECORDS
     remaining:
       - exhaustive typed findings, evidence, revisions, dissent, and supersession relations
-      - queryable problem and witness bindings
+      - queryable problem, source, study, and witness bindings
 
   - path: migrations/lean-operational-interface.yaml
     classification: SUBSTANTIVELY_RECONSTRUCTED
     remaining: maintain completion states and preserved mappings through later revisions
 
-  - path: tests/test_problem_bundles.py
+  - path: tests/test_corpus_registry.py
     classification: SUBSTANTIVELY_RECONSTRUCTED
     present_function:
-      - validates all seven complete bundle declarations and read-only loads
-      - validates controlled six-neighbor relation coverage for each problem
-      - validates reciprocal brother-problem designation and non-absorption
-      - validates Theologico-Political predecessor and Wise-vs-Vulgar migration-source preservation
+      - current-state corpus validation
+      - unique identifier and exact studies-tree coverage tests
+      - nineteen-source predecessor identity preservation
+      - SPPP editorial limits and Plato translation limits
+      - seven-problem witness-registry coverage
+      - read-only and non-certifying context tests
     remaining:
-      - source-specific method and hermeneutic application fixtures
-      - actual candidate ministerial-report fixtures
+      - source-specific application fixtures and actual report fixtures
 
   - path: .github/workflows/validate-lean-interface.yml
     classification: PARTIALLY_RECONSTRUCTED
     present_function:
-      - validates manifest, speech contract, complete problem bundles, and all interface tests
+      - validates manifest, speech, problem bundles, typed corpus, and all interface tests
       - uploads structural and behavioral diagnostics
     remaining:
-      - corpus, findings, source-application, and actual report-validation jobs
+      - typed findings and actual report-validation jobs
 
 production_order:
   completed:
     - reconstruct speech/speech-mechanism.yaml
     - extend adapter.py with speech validation and candidate report construction
-    - expose honest manifest completion states
     - reconstruct the six hermeneutic contracts
     - reconstruct the four method contracts
     - register and validate complete read-only foundational problem bundles
+    - replace the reference-only corpus index with a typed current-state exhaustive registry
   next:
-    - replace corpus/index.yaml with a typed exhaustive corpus registry
-    - replace findings/index.yaml with a typed exhaustive findings registry
+    - replace findings/index.yaml with a typed exhaustive current-state findings registry
+    - create item-level source-status records for the nineteen Theologico-Political writings
+    - register a reviewed Socrates and Aristophanes witness
     - create source-specific method and hermeneutic application fixtures
     - expand independent witness reconstruction
     - validate actual ministerial reports against the full contract stack
     - repin Sanctum after each validated interface revision
 
 non_effects:
-  - This audit does not certify any doctrine, claimant, successor problem, or migration.
+  - This audit does not certify any doctrine, claimant, source, successor problem, or migration.
+  - This audit does not admit or distribute source texts.
   - This audit does not alter active predecessors or accepted migration sources.
-  - Bundle loading does not complete source-specific application or witness reconstruction.
-  - Bundle loading does not authorize successor activation.
-  - An incomplete classification is a production finding, not a reason to delete the record.
+  - Current-state exhaustive indexing does not close or complete the corpus.
+  - Registry inclusion does not promote a provisional study or synthesis.
+  - Registry loading does not authorize successor activation.
   - Later completion must proceed through forward revision with preserved provenance.

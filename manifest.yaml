@@ -6,7 +6,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 0.5.0
+  version: 0.6.0
 
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
@@ -17,28 +17,28 @@ status:
   activation: AVAILABLE_FOR_VALIDATED_LIMITED_ADAPTER_USE
   constitutional_effect: NONE_ON_EXISTING_PROBLEM_MIGRATION
   governing_notice: >
-    A resolved path, valid YAML document, passing loader, or successful test does not
-    establish substantive completeness, doctrinal truth, claimant rank, migration
-    certification, or readiness for unrestricted ministerial reasoning.
+    A resolved path, valid YAML document, passing loader, complete current-state index,
+    or successful test does not establish substantive completeness, doctrinal truth,
+    claimant rank, migration certification, or readiness for unrestricted ministerial reasoning.
 
 revision_history:
-  predecessor_version: 0.4.0
-  predecessor_blob_sha: 2e2226d716a2e25abbb5f8b807f0c3c2efcfba2c
+  predecessor_version: 0.5.0
+  predecessor_blob_sha: 45f9656b190b456d3ccdf16290e3ffa96de969d2
   reason: >
-    Register the constitution, inquiry profile, witness registry, relations, and
-    synthesis directory of every foundational problem as a complete read-only runtime
-    bundle. Preserve source-specific application, independent witness reconstruction,
-    migration certification, doctrine, and activation as incomplete.
+    Register a typed corpus registry exhaustive for the repository's current committed
+    source and study state. Preserve the corpus as open and materially incomplete,
+    source-text admission as separate, independent witnesses as incomplete, and all
+    doctrinal, migration, activation, and Assembly authority as unauthorized.
 
 purpose: >
   Provide one compact, machine-readable entry point through which a runtime can load
   the Strauss repository's problems, hermeneutics, method, speech discipline, corpus
-  index, and findings index without deleting, overwriting, or silently harmonizing the
-  repository records from which the interface is derived.
+  registry, and findings index without deleting, overwriting, or silently harmonizing
+  the repository records from which the interface is derived.
 
 audit:
   path: audits/operational-completeness.yaml
-  version: 1.3.0
+  version: 1.4.0
   classification_vocabulary:
     - SUBSTANTIVELY_RECONSTRUCTED
     - PARTIALLY_RECONSTRUCTED
@@ -54,14 +54,15 @@ component_completion:
   manifest: PARTIALLY_RECONSTRUCTED
   adapter: PARTIALLY_RECONSTRUCTED
   problem_bundle_loader: PARTIALLY_RECONSTRUCTED_READ_ONLY_BUNDLE_SUPPORT
+  corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   problem_objects: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
-  corpus_index: MAPPED_TO_RICHER_RECORDS
+  corpus_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_index: MAPPED_TO_RICHER_RECORDS
   migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_AND_PROBLEM_BUNDLE_CONTRACTS_VALIDATED_SOURCE_FIXTURES_INCOMPLETE
+  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_AND_CORPUS_CONTRACTS_VALIDATED_SOURCE_FIXTURES_INCOMPLETE
 
 source_hierarchy:
   tiers:
@@ -218,7 +219,14 @@ speech:
 
 corpus:
   index: corpus/index.yaml
-  completion: MAPPED_TO_RICHER_RECORDS
+  loader: corpus_registry.py
+  registry_version: 1.0.0
+  completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
+  scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
+  limitation: >
+    The registry accounts for every current source identity and studies-tree YAML record,
+    but the wider Strauss corpus, item-level source statuses, editions, translations,
+    independent witnesses, and source-text access remain incomplete.
 
 findings:
   index: findings/index.yaml
@@ -227,16 +235,20 @@ findings:
 runtime:
   adapter: adapter.py
   problem_bundle_loader: problem_bundles.py
+  corpus_registry_loader: corpus_registry.py
   validation_command: python adapter.py --validate
   problem_bundle_validation_command: python problem_bundles.py --validate
+  corpus_registry_validation_command: python corpus_registry.py --validate
   test_command: python -m unittest discover -s tests -p 'test_*.py'
   permitted_operations:
     - validate declared paths and contracts
     - load bounded operational context
     - load complete read-only foundational problem bundles
+    - load the typed current-state corpus registry
     - validate typed speech requests
     - build non-authoritative candidate report structures
   prohibited_operations:
+    - admit or distribute source texts through the registry
     - certify doctrine or wisdom
     - activate successor problems
     - displace active predecessors
