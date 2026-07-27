@@ -1,0 +1,68 @@
+name: Execute CORPUS-WIT-102 Registration
+
+on:
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  execute-register-and-validate:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/corpus-wit-102-platform-registration
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 ruamel.yaml==0.18.10
+
+      - name: Recover and execute registration script
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api repos/izzy9118-blip/Strauss/git/blobs/c20ae414e22ebca4c0ed29e9f2e8778b08176f8b --jq .content | base64 --decode > /tmp/register-corpus-wit-102.yml
+          python - <<'PY'
+          from pathlib import Path
+          import textwrap
+
+          workflow = Path('/tmp/register-corpus-wit-102.yml').read_text(encoding='utf-8')
+          start_marker = "          python - <<'PY'\n"
+          end_marker = "\n          PY\n"
+          start = workflow.index(start_marker) + len(start_marker)
+          end = workflow.index(end_marker, start)
+          script = textwrap.dedent(workflow[start:end])
+          exec(compile(script, '<corpus-wit-102-registration>', 'exec'), {'__name__': '__main__'})
+          PY
+          rm -f .github/workflows/register-corpus-wit-102.yml
+          rm -f .github/workflows/execute-corpus-wit-102-registration.yml
+
+      - name: Validate complete repository state
+        run: |
+          set -euo pipefail
+          python adapter.py --validate
+          python problem_bundles.py --validate
+          python corpus_registry.py --validate
+          python findings_registry.py --validate
+          python scripts/validate_foundational_architecture.py
+          python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Commit synchronized witness registration
+        run: |
+          set -euo pipefail
+          rm -rf __pycache__ tests/__pycache__ scripts/__pycache__
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Synchronize CORPUS-WIT-102 platform registration"
+          git push origin HEAD:production/corpus-wit-102-platform-registration
