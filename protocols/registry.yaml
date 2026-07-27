@@ -8,8 +8,10 @@ status:
 
 revision_history:
   reason: >
-    Align registry metadata with the reconciled protocol files. This metadata update
-    does not certify, activate, or alter the governing substance of any protocol.
+    Register the controlled platform-reference witness protocol while preserving
+    the distinction between textual reviewability, platform identity, byte custody,
+    cryptographic identity, doctrinal certification, migration, and activation.
+    This registry update does not certify or activate any protocol or witness.
 
 governed_by:
   path: governance/shared-protocol-constitution.yaml
@@ -57,6 +59,20 @@ protocols:
     function: >
       Preserve opacity, alternatives, unresolved contradictions, and
       affirmative non-resolution.
+
+  - canonical_key: platform-reference-witness
+    title: Platform-Reference Witness Protocol
+    path: protocols/platform-reference-witness.yaml
+    protocol_version: 1.0.0
+    category: DOCUMENTARY
+    depends_on:
+      - source-status
+      - evidence-classification
+      - uncertainty-preservation
+    function: >
+      Permit qualified registration of complete, relocatable platform-accessible
+      witnesses without misrepresenting platform identity as byte custody or a
+      cryptographic fingerprint.
 
   - canonical_key: speech-and-deed
     title: Speech and Deed Protocol
