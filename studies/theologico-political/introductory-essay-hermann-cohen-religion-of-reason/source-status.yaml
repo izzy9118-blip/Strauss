@@ -6,14 +6,22 @@ identity:
   canonical_title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
   author: Leo Strauss
   date: 1972
-  version: 1.0.0
+  version: 1.1.0
 status:
-  lifecycle: REGISTERED_SOURCE_IDENTITY
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
   certification: NOT_CERTIFIED
   source_text_admission: NOT_REQUESTED
-  reviewed_witness: NOT_YET_REGISTERED
+  reviewed_witness: CORPUS-WIT-105
   independent_sequential_study: NOT_YET_COMPLETED
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: 5f5da4cbbf13ca5829f8cc61db712dd6f382b9d4
+  reason: >
+    Register the complete collected item as CORPUS-WIT-105 within the reviewed 1983
+    Studies in Platonic Political Philosophy container. Preserve the distinction among
+    witness registration, independent sequential reconstruction, original 1972 edition
+    comparison, source-level findings, doctrine, migration, and successor activation.
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
   active_predecessor_source_sequence: 5
@@ -23,42 +31,69 @@ registration_basis:
   preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
   - The active predecessor identifies this work, date, and sequence position.
-  - The SPPP collection registry places an essay of this title in the posthumous collection, but item-level witness verification remains pending.
+  - The item appears in Studies in Platonic Political Philosophy at printed pages 233 through 247.
+  - The opening-page reprint notice identifies the English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism, published by Frederick Ungar in New York in 1972.
+  - The reviewed item is complete within the registered 1983 collected witness.
 predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_ITEM_WITNESS
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_BY_INDEPENDENT_SEQUENTIAL_ITEM_STUDY
   statement: >
     Examines the strongest modern rational reconciliation of Judaism, revelation,
     morality, law, autonomy, and historical progress.
-  preservation_rule: This derivative statement is not independently confirmed or certified here.
+  preservation_rule: This derivative statement is not independently confirmed or certified by witness registration.
 publication_and_witness_condition:
-  publication_venue: UNVERIFIED_AT_ITEM_LEVEL
-  edition: POSTHUMOUS_COLLECTION_ITEM_KNOWN_ITEM_LEVEL_WITNESS_NOT_REGISTERED
-  pagination: UNVERIFIED_AT_ITEM_LEVEL
-  local_file: NOT_REGISTERED_AS_ITEM_WITNESS
-  fingerprint: NOT_AVAILABLE
-  text_condition: NOT_ASSESSED_AT_ITEM_LEVEL
-  locator_reproducibility: INCOMPLETE
+  publication_venue: >
+    Reprinted from the English translation of Hermann Cohen, Religion of Reason out of
+    the Sources of Judaism, New York, Frederick Ungar, 1972.
+  reviewed_collected_edition: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  complete_item_printed_page_range: {start: 233, end: 247}
+  complete_item_pdf_page_range_one_based: {start: 237, end: 251}
+  container_source_id: CORPUS-SRC-002
+  container_witness_id: CORPUS-WIT-001
+  local_filename_recorded: studies-in-platonic-political-philosophy_compress(1).pdf
+  container_page_count: 263
+  container_file_size_bytes: 12551057
+  container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  text_condition: SEARCHABLE_TEXT_WITH_LAYOUT_AND_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1983_COLLECTED_ITEM
+  original_1972_edition_comparison: PENDING
+reviewed_witness:
+  witness_id: CORPUS-WIT-105
+  source_id: CORPUS-SRC-105
+  container_witness_id: CORPUS-WIT-001
+  printed_page_range: {start: 233, end: 247}
+  pdf_page_range_one_based: {start: 237, end: 251}
+  container_sha256: 8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6
 source_classification:
   author_relation: PRIMARY_STRAUSS_WRITING
-  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_ITEM_WITNESS
-  analytical_use: ORIENTATION_ONLY_UNTIL_ITEM_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+  documentary_rank: QUALIFIED_PRIMARY_STRAUSS_ITEM_WITH_REVIEWED_COLLECTED_WITNESS
+  analytical_use: DOCUMENTARY_READING_AUTHORIZED_SEQUENTIAL_STUDY_REQUIRED_BEFORE_SOURCE_LEVEL_SYNTHESIS
 required_distinctions:
   - Strauss's essay from Hermann Cohen's work
+  - Cohen's position from Strauss's reconstruction and criticism
   - rational reconciliation from demonstrated resolution
-  - collection witness from item-level reconstruction
+  - collected witness from original 1972 edition
+  - witness registration from independent sequential reconstruction
   - editorial placement from authorial doctrine
   - predecessor synthesis from source-level documented finding
 prohibitions:
   - Do not treat the collection-level study as an independent item-level reconstruction.
   - Do not treat the predecessor contribution as a source-level quotation.
+  - Do not let Pangle's Introduction govern Strauss's item argument.
+  - Do not treat witness registration as proof that Cohen resolves reason and revelation.
   - Do not certify reconciliation, doctrine, migration, or activation.
 next_required_actions:
-  - register the item within a reviewed witness with stable locators
-  - reconstruct the essay independently in its original and collected occasions
+  - reconstruct the complete essay independently and sequentially from printed pages 233 through 247
+  - distinguish Strauss's account from Cohen's statements at every material proposition
+  - compare the collected witness with the original 1972 edition when available
   - compare source-level findings with the predecessor without silent harmonization
 termination:
   source_identity_state: REGISTERED
-  reviewed_witness_state: MISSING
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-105
   study_state: INCOMPLETE
+  original_edition_comparison: PENDING
   certification: NOT_CERTIFIED
   successor_effect: NONE
