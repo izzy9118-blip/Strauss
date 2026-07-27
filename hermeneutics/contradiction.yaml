@@ -1,21 +1,241 @@
 schema_version: 1.0
-record_type: hermeneutic_rule
-identity: {key: contradiction, version: 1.0.0}
+record_type: hermeneutic_contract
+
+identity:
+  key: contradiction
+  title: Contradiction Hermeneutic
+  version: 1.1.0
+  contract_version: STRAUSS-HERMENEUTIC-CON-1
+
+status:
+  lifecycle: OPERATIONAL_CONTRACT
+  semantic_completion: SUBSTANTIVELY_RECONSTRUCTED
+  source_specific_application: INCOMPLETE
+  certification: NOT_CERTIFIED
+
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: ba39461a445db4cbe9590eddb8d7a33de925c069
+  transformation: SUBSTANTIVE_FORWARD_REVISION
+  reason: >
+    Replace the initial contradiction summary with a complete contract for identifying,
+    classifying, testing, preserving, and where warranted resolving apparent conflicts.
+
 source_protocols:
+  - protocols/source-status.yaml
+  - protocols/evidence-classification.yaml
   - protocols/inference-discipline.yaml
   - protocols/uncertainty-preservation.yaml
   - protocols/speech-and-deed.yaml
+  - protocols/irony.yaml
+
+purpose: >
+  Preserve apparent and genuine contradictions as evidence requiring explanation rather
+  than treating them as automatic errors, automatic irony, or occasions for silent harmony.
+
 governing_question: >
-  Is an apparent contradiction an error, a change of speaker or circumstance, a
-  distinction, an unresolved tension, or a deliberate compositional fact?
-rules:
-  - Record both sides before proposing reconciliation.
-  - Check speaker, audience, occasion, terminology, sequence, and level of argument.
-  - Do not harmonize merely to preserve a preferred doctrine.
-  - Do not infer irony merely because propositions conflict.
-  - Preserve contradiction affirmatively when the text does not resolve it.
+  Is the apparent contradiction produced by wording, translation, speaker, audience,
+  occasion, sequence, level of argument, changed terminology, development, error,
+  documentary layer, dramatic action, or deliberate compositional tension; and what
+  evidence supports resolution or continued nonresolution?
+
+governing_rule: >
+  Record both sides exactly before proposing resolution. A contradiction may be
+  resolved only by a supported distinction or contextual explanation that accounts for
+  both propositions without erasing their force. Where the burden remains unmet,
+  preserve the contradiction affirmatively.
+
+input_contract:
+  required_fields:
+    - source_ref_a
+    - source_ref_b
+    - proposition_a
+    - proposition_b
+    - speaker_a
+    - speaker_b
+    - audience_a
+    - audience_b
+    - occasion_a
+    - occasion_b
+    - documentary_layer_a
+    - documentary_layer_b
+    - sequence_relation
+    - terminology_comparison
+    - level_of_argument_comparison
+    - speech_and_deed_evidence
+    - alternatives_considered
+  source_ref_required_fields:
+    - ref
+    - commit
+    - location
+  contradiction_scopes:
+    - within_sentence
+    - within_speech
+    - within_scene
+    - within_work
+    - between_works
+    - between_speech_and_deed
+    - between_title_and_demonstrated_activity
+    - between authorial_and_editorial_layers
+    - between_translation_and_source_language
+    - between_historical_and_philosophical_claims
+
+application_sequence:
+  - step_id: CON-STEP-001
+    operation: record both propositions exactly and separately
+  - step_id: CON-STEP-002
+    operation: classify source status and documentary layer for each side
+  - step_id: CON-STEP-003
+    operation: identify speaker, audience, occasion, local purpose, and sequence
+  - step_id: CON-STEP-004
+    operation: compare key terms for stable, equivocal, transformed, or translated usage
+  - step_id: CON-STEP-005
+    operation: distinguish local, provisional, hypothetical, practical, legal, theological, and philosophic levels
+  - step_id: CON-STEP-006
+    operation: examine whether deed, outcome, title, arrangement, omission, or silence supplies a further relation
+  - step_id: CON-STEP-007
+    operation: test contextual, terminological, developmental, documentary, and compositional explanations
+  - step_id: CON-STEP-008
+    operation: test irony only after a specific disparity and function are supported
+  - step_id: CON-STEP-009
+    operation: state the burden each proposed resolution must meet
+  - step_id: CON-STEP-010
+    operation: assign the narrowest valid output
+  - step_id: CON-STEP-011
+    operation: preserve the force of both sides after any bounded resolution
+  - step_id: CON-STEP-012
+    operation: identify evidence that could alter the classification
+
+alternative_explanations:
+  - scribal_or_textual_error
+  - translation_difference
+  - editorial_or_composite_layer
+  - different_speaker
+  - different_audience
+  - different_occasion
+  - different_question
+  - different_level_of_argument
+  - changed_or_equivocal_terminology
+  - provisional_then_corrected_formulation
+  - historical_development
+  - practical_exception
+  - legal_presumption_vs_philosophic_judgment
+  - dramatic_or_compositional_tension
+  - supported_irony
+  - genuine_unresolved_contradiction
+
+resolution_burdens:
+  resolved_by_distinction:
+    - distinction is textually or historically supported
+    - both propositions retain an intelligible scope
+    - distinction is not invented solely to save a preferred doctrine
+  resolved_by_context:
+    - audience, occasion, or question difference is documented
+    - contextual explanation accounts for wording and consequence
+    - context does not erase a remaining substantive conflict
+  resolved_by_sequence:
+    - earlier formulation is demonstrably provisional or corrected
+    - later formulation directly addresses or transforms the earlier one
+    - ending or outcome supports the sequence claim
+  supported_compositional_tension:
+    - contradiction is deliberately preserved in the work's structure or deed
+    - attribution to authorial composition is documentary secure
+    - tension's function is supported without inventing hidden content
+  supported_irony:
+    - specific disparity, audience, function, consequence, and evidence are explicit
+    - literal meaning remains preserved where possible
+    - opposite doctrine is not assumed automatically
+
 valid_outputs:
-  - resolved_by_distinction
-  - resolved_by_context
-  - supported_compositional_tension
-  - unresolved_contradiction
+  - CONTRADICTION_DOCUMENTED
+  - RESOLVED_BY_TERMINOLOGICAL_DISTINCTION
+  - RESOLVED_BY_SPEAKER_DIFFERENCE
+  - RESOLVED_BY_AUDIENCE_OR_OCCASION
+  - RESOLVED_BY_LEVEL_OF_ARGUMENT
+  - RESOLVED_BY_SEQUENCE_OR_CORRECTION
+  - TRANSLATION_OR_EDITORIAL_LAYER_CONTROLS
+  - PRACTICAL_EXCEPTION_BOUNDED
+  - SUPPORTED_COMPOSITIONAL_TENSION
+  - POSSIBLE_IRONIC_DIMENSION
+  - SUPPORTED_IRONIC_QUALIFICATION
+  - GENUINE_CONTRADICTION_PRESERVED
+  - CONTRADICTION_UNRESOLVED
+  - INSUFFICIENT_DOCUMENTATION
+
+required_output_fields:
+  - classification
+  - proposition_a
+  - proposition_b
+  - sources_and_locations
+  - speakers
+  - audiences
+  - occasions
+  - documentary_layers
+  - sequence_relation
+  - terminology_relation
+  - level_of_argument_relation
+  - speech_and_deed_relation
+  - alternatives_considered
+  - resolution_burden_assessment
+  - confidence
+  - remaining_force_of_each_side
+  - remaining_uncertainty
+
+prohibited_outputs:
+  - contradiction silently harmonized
+  - contradiction treated as proof of irony without further evidence
+  - one side discarded because it conflicts with a preferred doctrine
+  - later statement treated as automatically superior
+  - speaker or audience difference invented without evidence
+  - translation difference ignored where wording bears the conclusion
+  - practical exception expanded into general doctrine
+  - compositional tension treated as determinate hidden teaching
+  - error assumed merely because resolution is difficult
+  - contradiction used to certify interpreter superiority
+
+uncertainty_rules:
+  - A bounded contextual resolution may leave a deeper tension active.
+  - Different speakers may disagree without revealing the author's final judgment.
+  - A deliberate compositional tension may be supported while its purpose remains opaque.
+  - Translation and textual uncertainty may prevent resolution without invalidating both propositions.
+  - Genuine contradiction is a valid positive finding, not a repository failure.
+
+speech_mechanism_integration:
+  contract: speech/speech-mechanism.yaml
+  rule: >
+    Candidate reports must present both sides before any resolution, identify the
+    supported distinction or context, preserve remaining force and dissent, and classify
+    unresolved contradiction as a positive output rather than hiding it in prose.
+
+termination_rule: >
+  A contradiction inquiry is complete only when both propositions, source locations,
+  speakers, audiences, occasions, documentary layers, sequence, terminology, levels of
+  argument, speech-and-deed evidence, alternatives, resolution burdens, confidence,
+  remaining force, and uncertainty are explicit.
+
+behavioral_tests:
+  - id: CON-TEST-001
+    behavior: both sides are recorded before resolution
+  - id: CON-TEST-002
+    behavior: a supported speaker difference may resolve attribution without authorial harmonization
+  - id: CON-TEST-003
+    behavior: audience or occasion difference requires documentary evidence
+  - id: CON-TEST-004
+    behavior: changed terminology may bound rather than erase contradiction
+  - id: CON-TEST-005
+    behavior: provisional formulation may be corrected by sequence and ending
+  - id: CON-TEST-006
+    behavior: contradiction alone cannot establish irony
+  - id: CON-TEST-007
+    behavior: translation or editorial uncertainty may require withholding resolution
+  - id: CON-TEST-008
+    behavior: compositional tension may be supported without determinate hidden content
+  - id: CON-TEST-009
+    behavior: genuine contradiction remains a valid positive finding
+  - id: CON-TEST-010
+    behavior: resolution preserves the remaining force and limits of both sides
+
+self_limitation: >
+  This hermeneutic governs contradiction. It does not guarantee harmony, certify
+  systematic authorial consistency, treat every conflict as intentional, or authorize
+  the interpreter to invent distinctions unsupported by the sources.
