@@ -8,6 +8,7 @@ on:
       - "manifest.yaml"
       - "adapter.py"
       - "problem_bundles.py"
+      - "corpus_registry.py"
       - "audits/**"
       - "problems/**"
       - "hermeneutics/**"
@@ -23,6 +24,7 @@ on:
       - "manifest.yaml"
       - "adapter.py"
       - "problem_bundles.py"
+      - "corpus_registry.py"
       - "audits/**"
       - "problems/**"
       - "hermeneutics/**"
@@ -62,6 +64,11 @@ jobs:
           set -o pipefail
           python problem_bundles.py --validate 2>&1 | tee problem-bundle-validation.txt
 
+      - name: Validate typed corpus registry
+        run: |
+          set -o pipefail
+          python corpus_registry.py --validate 2>&1 | tee corpus-registry-validation.txt
+
       - name: Run structural and behavioral interface tests
         run: |
           set -o pipefail
@@ -75,5 +82,6 @@ jobs:
           path: |
             lean-validation.txt
             problem-bundle-validation.txt
+            corpus-registry-validation.txt
             lean-tests.txt
           if-no-files-found: ignore
