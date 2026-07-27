@@ -1,0 +1,137 @@
+schema_version: 1.0
+document_type: reviewed_item_witness_record
+
+identity:
+  witness_id: CORPUS-WIT-102
+  source_id: CORPUS-SRC-102
+  title: Reviewed platform-reference witness — Preface to Spinoza's Critique of Religion
+  version: 1.0.0
+
+status:
+  lifecycle: QUALIFIED_PLATFORM_REFERENCE_WITNESS_REGISTERED
+  certification: NOT_CERTIFIED
+  independent_sequential_study: NOT_YET_COMPLETED
+  original_1965_edition_comparison: PENDING
+  final_1968_reprint_comparison: PENDING
+  source_text_admission: NOT_REQUESTED
+  successor_effect: NONE
+
+source_identity:
+  author: Leo Strauss
+  canonical_title: Preface to Spinoza's Critique of Religion
+  canonical_aliases:
+    - Autobiographical Preface to Spinoza's Critique of Religion
+    - Preface to the English Translation of Spinoza's Critique of Religion
+  date: 1965
+  corpus_source_id: CORPUS-SRC-102
+  source_status_id: CORPUS-STATUS-102
+
+invoked_protocols:
+  source_status: protocols/source-status.yaml
+  platform_reference_witness: protocols/platform-reference-witness.yaml
+  uncertainty_preservation: protocols/uncertainty-preservation.yaml
+
+publication_provenance:
+  original_publication:
+    container_title: Spinoza's Critique of Religion
+    publisher: Schocken Books
+    year: 1965
+    translator: Elsa M. Sinclair
+    item_title: Preface to the English Translation of Spinoza's Critique of Religion
+    evidence: Acknowledgments in the reviewed 1997 collected witness.
+  later_authorial_reprint:
+    container_title: Liberalism Ancient and Modern
+    year: 1968
+    comparison_state: NOT_SEPARATELY_REVIEWED
+  collected_witness:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    author: Leo Strauss
+    editor: Kenneth Hart Green
+    series: SUNY Series in the Jewish Writings of Leo Strauss
+    publisher: State University of New York Press
+    publication_place: Albany
+    year: 1997
+    isbn:
+      cloth: 0-7914-2773-0
+      paperback: 0-7914-2774-9
+  editorial_composite_condition: >
+    The editor states that the collected text is based essentially on the 1965
+    version and incorporates almost all slight editorial changes made by Strauss
+    in the 1968 Liberalism Ancient and Modern version, on the editor's assumption
+    that the 1968 version is Strauss's final statement.
+
+platform_reference:
+  platform_name: ChatGPT File Library
+  platform_object_identifier: file_0000000073c081fd9fb65f9ea7552cde
+  displayed_filename: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress.pdf
+  access_date: 2026-07-27
+  access_scope: COMPLETE_525_PAGE_SEARCHABLE_PDF_WITH_RENDERED_PAGE_IMAGES
+  byte_custody_state: NOT_EXPOSED_TO_REPOSITORY
+  repository_copy_status: NOT_DISTRIBUTED_BY_THIS_RECORD
+  acquisition_record: history/reviewed-witness-acquisitions/2026-07-27-preface-spinoza-file-library-witness.yaml
+
+item_locators:
+  collected_title: Preface to Spinoza's Critique of Religion
+  printed_page_range: {start: 137, end: 180}
+  pdf_page_range_one_based: PENDING_DIRECT_PAGE_IMAGE_SPOT_CHECK
+  item_completeness: COMPLETE_BY_TABLE_OF_CONTENTS_BOUNDARY
+  locator_reproducibility: COMPLETE_FOR_PRINTED_PAGINATION_WITHIN_RECORDED_PLATFORM_WITNESS
+
+textual_condition:
+  searchable_text: true
+  page_images_available: true
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  editorial_notes_present: true
+  authorial_argument_and_editorial_notes_must_remain_distinct: true
+  original_1965_printing_compared: false
+  final_1968_reprint_compared: false
+
+byte_identity:
+  sha256: NOT_AVAILABLE
+  file_size_bytes: NOT_AVAILABLE
+  reason: >
+    The platform exposes parsed text and rendered page images but does not expose
+    the underlying file bytes or a trusted digest to the repository write interface.
+  equivalence_prohibition: >
+    The platform object identifier may not be represented as a cryptographic
+    fingerprint or as evidence of repository custody.
+
+jurisdiction_and_limits:
+  governing_problem: theologico-political
+  additional_problem_bindings: [athens-vs-jerusalem, ancients-vs-moderns]
+  distinctions:
+    - political and historical defeat of orthodoxy from rational refutation
+    - inability to refute revelation from proof of revelation
+    - 1965 authorial text from 1968 revisions and 1997 editorial composition
+    - Strauss's autobiographical report from a complete philosophical demonstration
+    - mockery as practical or rhetorical defeat from theoretical refutation
+    - platform access from byte custody and cryptographic identity
+    - witness registration from sequential reconstruction
+  non_effects:
+    - no source-level proposition promotion
+    - no independent reconstruction of Spinoza, Rosenzweig, Cohen, Nietzsche, or Jewish orthodoxy
+    - no predecessor synthesis confirmation
+    - no doctrinal certification
+    - no migration certification
+    - no successor activation
+    - no predecessor displacement
+
+next_required_action:
+  action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  range: printed pages 137-180
+  prerequisites_satisfied: QUALIFIED_PLATFORM_REFERENCE_WITNESS_REGISTERED
+  remaining_requirements:
+    - reconstruct the argument in textual order and separate autobiographical narrative from philosophical conclusion
+    - distinguish Strauss's explicit statements from source-supported inference
+    - separate the authorial body from Kenneth Hart Green's editorial notes
+    - classify findings, uncertainty, speech and deed, irony, and comedy with stable printed locators
+    - compare with the active predecessor only after source-level reconstruction
+    - compare the 1965 and 1968 textual states when separately reviewed witnesses become available
+
+termination:
+  witness_state: QUALIFIED_PLATFORM_REFERENCE_REGISTERED
+  byte_identity_state: UNAVAILABLE_WITH_REASON_PRESERVED
+  study_state: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
