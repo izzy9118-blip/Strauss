@@ -4,12 +4,22 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 0.1.0
+  version: 0.2.0
 
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
+  structural_interface: IMPLEMENTED
+  semantic_completion: INCOMPLETE
   certification: NOT_CERTIFIED
   destructive_actions_authorized: false
+
+revision_history:
+  predecessor_version: 0.1.0
+  predecessor_blob_sha: 3f43ecb5a70c47a8e294f4944324b86540bcf581
+  reason: >
+    Correct the earlier completion language so that path resolution and passing loader
+    tests establish a valid interface skeleton only. Register the operational
+    completeness audit and the substantive forward revision of the speech mechanism.
 
 source_state:
   repository: izzy9118-blip/Strauss
@@ -23,12 +33,21 @@ source_state:
     - history/
     - scripts/
 
+completion_audit:
+  path: audits/operational-completeness.yaml
+  rule: >
+    Every lean operational object must expose whether it is substantively reconstructed,
+    partially reconstructed, mapped to richer records, a structural placeholder, or
+    unimplemented. Structural validation must never be reported as semantic completion.
+
 mapping_rules:
   - No source record is deleted, moved, or edited merely to satisfy the lean interface.
   - The lean interface references current canonical or provisional records by path.
   - Existing migration and certification states remain governing for the records they describe.
   - A later physical flattening requires a new migration record, path validation, predecessor preservation, and explicit certification.
   - Duplicate doctrine is prohibited; interface records point to governing sources instead of copying complete problem constitutions.
+  - Interface validity and semantic completeness are distinct states.
+  - Forward revision must preserve predecessor blob identity and explain the substantive change.
 
 mappings:
   problems:
@@ -41,6 +60,8 @@ mappings:
         - problems/wise-and-vulgar.yaml
     interface:
       manifest_section: problems
+    transformation: REFERENCE_WITH_STATUS_PRESERVATION
+    completion: UNEVEN_FOUNDING_DRAFTS_AND_ACTIVE_PREDECESSORS
     note: >
       The manifest loads all seven successor constitutions in canonical order while
       preserving the authority and migration status of active predecessors.
@@ -62,6 +83,7 @@ mappings:
       - hermeneutics/contradiction.yaml
       - hermeneutics/historical-and-philosophical-understanding.yaml
     transformation: CONSOLIDATED_REFERENCE_LAYER
+    completion: MIXED_STRUCTURAL_PLACEHOLDERS_AND_MAPPINGS
 
   method:
     target_role: inquiry_sequence
@@ -77,16 +99,27 @@ mappings:
       - method/textual-order.yaml
       - method/preserve-problem.yaml
     transformation: CONSOLIDATED_REFERENCE_LAYER
+    completion: PARTIALLY_RECONSTRUCTED
 
   speech:
     target_role: ministerial_expression_and_output_discipline
     source:
+      - protocols/source-status.yaml
       - protocols/audience-and-rhetoric.yaml
       - protocols/speech-and-deed.yaml
       - protocols/evidence-classification.yaml
+      - protocols/inference-discipline.yaml
       - protocols/uncertainty-preservation.yaml
+      - protocols/irony.yaml
+      - protocols/comedy.yaml
     interface: speech/speech-mechanism.yaml
-    transformation: CONSOLIDATED_REFERENCE_LAYER
+    transformation: SUBSTANTIVE_FORWARD_REVISION_OF_CONSOLIDATED_LAYER
+    completion: PARTIALLY_RECONSTRUCTED
+    contract_version: STRAUSS-SPEECH-CONTRACT-1
+    limit: >
+      The contract now governs typed inputs, evidence, audience, speech and deed,
+      concealment, irony, comedy, uncertainty, output, failure, and termination. It does
+      not automatically interpret sources or generate a completed natural-language answer.
 
   corpus:
     target_role: source_discovery_and_status_index
@@ -96,6 +129,7 @@ mappings:
       - problem witness registries
     interface: corpus/index.yaml
     transformation: REFERENCE_ONLY
+    completion: MAPPED_TO_RICHER_RECORDS
 
   findings:
     target_role: completed_and_provisional_inquiry_results
@@ -105,9 +139,10 @@ mappings:
       - migrations/foundational-problems-v2/transactions/
     interface: findings/index.yaml
     transformation: REFERENCE_ONLY
+    completion: MAPPED_TO_RICHER_RECORDS
 
   runtime:
-    target_role: deterministic_loader_and_validator
+    target_role: deterministic_loader_contract_validator_and_candidate_report_builder
     source:
       - scripts/validate_foundational_architecture.py
       - .github/workflows/validate-foundational-architecture.yml
@@ -116,6 +151,10 @@ mappings:
       - tests/test_adapter.py
       - .github/workflows/validate-lean-interface.yml
     transformation: NEW_OPERATIONAL_LAYER
+    completion: PARTIALLY_RECONSTRUCTED
+    limit: >
+      The adapter validates and structures candidate reports but does not perform
+      source interpretation, doctrinal certification, or authoritative Assembly admission.
 
 path_conflicts:
   - requested_path: problems/theologico-political.yaml
@@ -130,13 +169,39 @@ non_effects:
   - No accepted migration source is superseded.
   - No source-specific finding is promoted beyond its recorded evidence status.
   - No Assembly authority is conferred; Sanctum validation remains separate.
+  - Passing tests does not certify semantic completion or doctrine.
 
-completion:
-  interface_ready_when:
+validation_states:
+  structural_interface_valid_when:
     - manifest paths resolve
-    - adapter validates all declared records
-    - unit tests pass
+    - all declared YAML records parse
+    - adapter validates manifest and speech contract
+    - unit and behavioral tests pass
     - GitHub Actions passes on the implementing commit
-  later_work:
-    - decide whether physical flattening adds value after the active foundational migration is certified
-    - update Sanctum to pin the validated Strauss manifest and adapter commit
+  semantic_completion_requires:
+    - reconstruct the six hermeneutic objects as full operational contracts
+    - reconstruct the four method objects as full operational contracts
+    - complete problem-specific operational profiles and source relations
+    - replace reference-only corpus and findings indexes with typed exhaustive registries
+    - expand source-specific and independent-witness reconstructions
+    - validate actual candidate reports against the speech contract and Sanctum boundary
+  doctrinal_certification_requires:
+    - separate source-grounded and migration-specific certification records
+    - preservation of dissent, contradiction, and uncertainty
+    - no self-certification by repository, adapter, minister, or artificial intelligence
+
+next_production_units:
+  - validate and merge the speech-mechanism reconstruction and completeness audit
+  - reconstruct hermeneutics/literary-concealment.yaml
+  - reconstruct hermeneutics/audience.yaml
+  - reconstruct hermeneutics/whole-and-part.yaml
+  - reconstruct hermeneutics/speaker-and-author.yaml
+  - reconstruct hermeneutics/contradiction.yaml
+  - reconstruct hermeneutics/historical-and-philosophical-understanding.yaml
+  - reconstruct the four method objects
+  - complete corpus and findings registries
+
+repinning_rule: >
+  Sanctum may pin a new Strauss interface commit after structural and behavioral
+  validation passes. The pin must preserve the interface's declared incompleteness and
+  must not describe a validated interface as doctrinally certified or complete.
