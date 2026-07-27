@@ -4,7 +4,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.0.0
+  version: 1.1.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
@@ -16,16 +16,27 @@ status:
     independent reconstruction, uncertainty, predecessor authority, and the
     prohibition on repository or artificial-intelligence self-certification.
 
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: a2e3216c2a809b01c1e40dbc70a4d0a447878e21
+  reason: >
+    Record completion of the first two bounded Theologico-Political item-level source
+    identities, generic status validation, and synchronization of the manifest, audit,
+    and architecture mapping with corpus registry v1.3.0. Preserve the process as
+    incomplete and continue to the third source-status record.
+
 steps:
   - sequence: 1
     action: Create a complete repository audit.
     state: IMPLEMENTED_AND_ACTIVE
     governing_record: audits/operational-completeness.yaml
+    current_version: 1.7.0
     limit: The audit records incompleteness; it does not cure it.
   - sequence: 2
     action: Correct the manifest completion language.
     state: IMPLEMENTED_AND_ACTIVE
     governing_record: manifest.yaml
+    current_version: 0.9.0
     limit: The manifest remains semantically incomplete and not doctrinally certified.
   - sequence: 3
     action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -77,8 +88,11 @@ steps:
     completed:
       - current committed source and study state is typed and bounded
       - current committed findings-bearing records are typed and bounded
+      - 2 of 19 active Theologico-Political predecessor writings have bounded item-level source identities
+      - generic validation preserves identity, alias, sequence, missing-witness, incomplete-study, and noncertification states
     remaining:
-      - item-level source-status records for the nineteen Theologico-Political writings
+      - item-level source-status records for the remaining seventeen Theologico-Political writings
+      - reviewed witnesses and independent sequential studies for registered item-level sources
       - independent primary witness expansion
       - proposition-level extraction where governing records remain aggregate
       - later additions through forward revision
@@ -88,6 +102,9 @@ steps:
     governing_records:
       - tests/
       - .github/workflows/validate-lean-interface.yml
+    completed_in_current_sequence:
+      - first item-level source-status validation passed
+      - second item-level source-status and generalized-validator validation passed
     limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
   - sequence: 10
     action: Repin the completed Strauss interface in Sanctum.
@@ -95,17 +112,28 @@ steps:
     governing_record: izzy9118-blip/Sanctum/registry/ministers.yaml
     prohibition: >
       Do not describe a limited or structurally valid Strauss interface as completed.
-      A later Sanctum pin may occur only after the revised Strauss commit passes its
-      declared validation and its remaining completion blockers are accurately stated.
+      A later completed-interface Sanctum pin may occur only after substantive completion,
+      declared validation, and accurate resolution or preservation of all remaining blockers.
 
 current_production_unit:
   step: 8
   title: Item-level source-status expansion for the active Theologico-Political source basis
-  first_record: studies/theologico-political/progress-or-return/source-status.yaml
+  completed_records:
+    - studies/theologico-political/progress-or-return/source-status.yaml
+    - studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
+  synchronized_records:
+    - manifest.yaml
+    - audits/operational-completeness.yaml
+    - migrations/lean-operational-interface.yaml
+  next_record:
+    source_sequence: 3
+    source_id: CORPUS-SRC-103
+    title: How to Study Spinoza's Theologico-Political Treatise
+    target_path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml
   next_action: >
-    Register the first item-level source-status record in corpus/index.yaml,
-    extend corpus_registry.py and tests without weakening bounded-completion language,
-    validate, merge, and continue to the second source-status record.
+    Create the third bounded source-status record from the active predecessor, register it
+    in corpus/index.yaml, validate it through the generalized corpus validator, run all
+    structural and behavioral tests, merge, and continue through the remaining sequence.
   non_effects:
     - no source-text admission
     - no independent study completion
