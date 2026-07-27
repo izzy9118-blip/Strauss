@@ -64,7 +64,7 @@ class InterfaceConsistencyTests(unittest.TestCase):
             "COMPLETE_19_OF_19",
         )
 
-    def test_identity_completion_does_not_claim_witness_or_study_completion(self) -> None:
+    def test_first_reviewed_item_witness_does_not_claim_study_completion(self) -> None:
         manifest = load_yaml("manifest.yaml")
         audit = load_yaml("audits/operational-completeness.yaml")
         mapping = load_yaml("migrations/lean-operational-interface.yaml")
@@ -72,7 +72,7 @@ class InterfaceConsistencyTests(unittest.TestCase):
 
         self.assertEqual(
             corpus["termination"]["theologico_political_reviewed_witness_state"],
-            "INCOMPLETE",
+            "INCOMPLETE_1_OF_19",
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_independent_study_state"],
@@ -80,16 +80,39 @@ class InterfaceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             manifest["corpus"]["theologico_political_item_level_statuses"]["reviewed_witness_count"],
-            0,
+            1,
+        )
+        self.assertEqual(
+            audit["summary"]["theologico_political_item_level_status"]["reviewed_item_witness_count"],
+            1,
         )
         self.assertEqual(
             audit["summary"]["theologico_political_item_level_status"]["independently_reconstructed_count_within_this_sequence"],
             0,
         )
         self.assertEqual(
+            mapping["mappings"]["corpus"]["theologico_political_item_level_statuses"]["reviewed_witness_count"],
+            1,
+        )
+        self.assertEqual(
             mapping["mappings"]["corpus"]["theologico_political_item_level_statuses"]["independent_sequential_study_count"],
             0,
         )
+
+    def test_priority_schedule_selects_reviewed_item_without_truth_ranking(self) -> None:
+        schedule = load_yaml(
+            "history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml"
+        )
+        self.assertEqual(schedule["selection"]["selected_first_source_id"], "CORPUS-SRC-109")
+        self.assertEqual(
+            schedule["termination"]["reviewed_item_witness_registration"],
+            "COMPLETE_FOR_CORPUS_WIT_109",
+        )
+        self.assertEqual(
+            schedule["termination"]["independent_sequential_reconstruction"],
+            "PENDING",
+        )
+        self.assertEqual(schedule["status"]["certification"], "NOT_CERTIFIED")
 
     def test_completion_and_repin_limits_remain_explicit(self) -> None:
         manifest = load_yaml("manifest.yaml")
