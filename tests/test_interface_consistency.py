@@ -42,7 +42,7 @@ class InterfaceConsistencyTests(unittest.TestCase):
         self.assertEqual(step_one["current_version"], audit["identity"]["version"])
         self.assertEqual(step_two["current_version"], manifest["identity"]["version"])
 
-    def test_nineteen_identity_two_witness_two_study_language_matches(self) -> None:
+    def test_nineteen_identity_three_witness_three_study_language_matches(self) -> None:
         manifest = load_yaml("manifest.yaml")
         audit = load_yaml("audits/operational-completeness.yaml")
         mapping = load_yaml("migrations/lean-operational-interface.yaml")
@@ -61,48 +61,48 @@ class InterfaceConsistencyTests(unittest.TestCase):
         self.assertEqual(manifest_state["registered_count"], 19)
         self.assertEqual(audit_state["registered_source_identity_count"], 19)
         self.assertEqual(mapping_state["registered_count"], 19)
-        self.assertEqual(manifest_state["reviewed_witness_count"], 2)
-        self.assertEqual(audit_state["reviewed_item_witness_count"], 2)
-        self.assertEqual(mapping_state["reviewed_witness_count"], 2)
-        self.assertEqual(manifest_state["independent_sequential_study_count"], 2)
-        self.assertEqual(audit_state["independently_reconstructed_count_within_this_sequence"], 2)
-        self.assertEqual(mapping_state["independent_sequential_study_count"], 2)
-        self.assertEqual(manifest_state["remaining_without_reviewed_item_witness"], 17)
-        self.assertEqual(mapping_state["remaining_without_reviewed_witness"], 17)
+        self.assertEqual(manifest_state["reviewed_witness_count"], 3)
+        self.assertEqual(audit_state["reviewed_item_witness_count"], 3)
+        self.assertEqual(mapping_state["reviewed_witness_count"], 3)
+        self.assertEqual(manifest_state["independent_sequential_study_count"], 3)
+        self.assertEqual(audit_state["independently_reconstructed_count_within_this_sequence"], 3)
+        self.assertEqual(mapping_state["independent_sequential_study_count"], 3)
+        self.assertEqual(manifest_state["remaining_without_reviewed_item_witness"], 16)
+        self.assertEqual(mapping_state["remaining_without_reviewed_witness"], 16)
         self.assertEqual(
             corpus["termination"]["theologico_political_identity_registration_state"],
             "COMPLETE_19_OF_19",
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_reviewed_witness_state"],
-            "INCOMPLETE_2_OF_19",
+            "INCOMPLETE_3_OF_19",
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_independent_study_state"],
-            "INCOMPLETE_2_OF_19",
+            "INCOMPLETE_3_OF_19",
         )
 
-    def test_priority_schedule_advances_to_talmon_without_truth_ranking(self) -> None:
+    def test_priority_schedule_advances_beyond_talmon_without_truth_ranking(self) -> None:
         schedule = load_yaml(
             "history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml"
         )
         self.assertEqual(
             schedule["selection"]["completed_source_ids"],
-            ["CORPUS-SRC-109", "CORPUS-SRC-105"],
+            ["CORPUS-SRC-109", "CORPUS-SRC-105", "CORPUS-SRC-111"],
         )
         self.assertEqual(
             schedule["selection"]["completed_study_ids"],
-            ["JA-STUDY-001", "COHEN-STUDY-001"],
+            ["JA-STUDY-001", "COHEN-STUDY-001", "TALMON-STUDY-001"],
         )
         self.assertEqual(
             schedule["termination"]["reviewed_item_witness_registration"],
-            "COMPLETE_FOR_CORPUS_WIT_105_AND_CORPUS_WIT_109",
+            "COMPLETE_FOR_CORPUS_WIT_105_CORPUS_WIT_109_AND_CORPUS_WIT_111",
         )
         self.assertEqual(
             schedule["termination"]["independent_sequential_reconstruction"],
-            "COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_AND_JA_STUDY_001",
+            "COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_JA_STUDY_001_AND_TALMON_STUDY_001",
         )
-        self.assertEqual(schedule["termination"]["next_item_witness"], "CORPUS-SRC-111")
+        self.assertEqual(schedule["termination"]["next_item_witness"], "CORPUS-SRC-102")
         self.assertEqual(schedule["status"]["certification"], "NOT_CERTIFIED")
 
     def test_source_derivations_preserve_problem_jurisdiction(self) -> None:
@@ -128,6 +128,17 @@ class InterfaceConsistencyTests(unittest.TestCase):
         for finding_id in ("FINDSET-113", "FINDSET-114", "FINDSET-115"):
             self.assertEqual(by_id[finding_id]["successor_effect"], "NONE")
             self.assertEqual(by_id[finding_id]["derived_from"], ["FINDSET-009"])
+
+        self.assertEqual(
+            by_id["FINDSET-010"]["derived_local_syntheses"],
+            ["FINDSET-116", "FINDSET-117", "FINDSET-118"],
+        )
+        self.assertEqual(by_id["FINDSET-116"]["problem_bindings"], ["theologico-political"])
+        self.assertEqual(by_id["FINDSET-117"]["problem_bindings"], ["athens-vs-jerusalem"])
+        self.assertEqual(by_id["FINDSET-118"]["problem_bindings"], ["ancients-vs-moderns"])
+        for finding_id in ("FINDSET-116", "FINDSET-117", "FINDSET-118"):
+            self.assertEqual(by_id[finding_id]["successor_effect"], "NONE")
+            self.assertEqual(by_id[finding_id]["derived_from"], ["FINDSET-010"])
 
     def test_completion_and_repin_limits_remain_explicit(self) -> None:
         manifest = load_yaml("manifest.yaml")

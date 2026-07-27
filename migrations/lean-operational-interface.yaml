@@ -4,7 +4,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.3.0
+  version: 1.4.0
 
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
@@ -14,11 +14,11 @@ status:
   destructive_actions_authorized: false
 
 revision_history:
-  predecessor_version: 1.2.0
-  predecessor_blob_sha: 4412c017f7a5ec77cc0efa320b3abd12be4a06d4
+  predecessor_version: 1.3.0
+  predecessor_blob_sha: c02c3c2f3b6dc0e0d3070e81da2f7e2378f81f34
   reason: >
-    Synchronize the mapping with corpus registry v1.7.0, findings registry v1.2.0,
-    CORPUS-WIT-105, and COHEN-STUDY-001. Preserve two-of-nineteen study completion
+    Synchronize the mapping with corpus registry v1.8.0, findings registry v1.3.0,
+    CORPUS-WIT-111, and TALMON-STUDY-001. Preserve three-of-nineteen study completion
     as bounded and provisional, not independent corroboration, doctrine, certified migration,
     successor activation, predecessor displacement, or repository completion.
 
@@ -29,7 +29,7 @@ source_state:
 
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 2.1.0
+  version: 2.2.0
   rule: >
     Structural, bundle, corpus, findings, witness, source-status, and source-study validation
     must never be reported as doctrinal, migration, successor, or repository completion.
@@ -39,8 +39,8 @@ production_process:
   state: IN_PROGRESS
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
-  completed_witness_subunit: JERUSALEM_ATHENS_AND_COHEN_2_OF_19
-  completed_study_subunit: JERUSALEM_ATHENS_AND_COHEN_2_OF_19_COMPLETE_PROVISIONAL
+  completed_witness_subunit: JERUSALEM_ATHENS_COHEN_AND_TALMON_3_OF_19
+  completed_study_subunit: JERUSALEM_ATHENS_COHEN_AND_TALMON_3_OF_19_COMPLETE_PROVISIONAL
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 
@@ -85,6 +85,15 @@ mappings:
       - path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml
         source: CORPUS-SRC-105
         derivation: FINDSET-009_TO_FINDSET-115
+      - path: problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml
+        source: CORPUS-SRC-111
+        derivation: FINDSET-010_TO_FINDSET-116
+      - path: problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml
+        source: CORPUS-SRC-111
+        derivation: FINDSET-010_TO_FINDSET-117
+      - path: problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml
+        source: CORPUS-SRC-111
+        derivation: FINDSET-010_TO_FINDSET-118
     limit: >
       Problem-local integration does not finish independent witnesses, proposition-level
       migration, doctrinal certification, predecessor transition, or successor activation.
@@ -102,6 +111,7 @@ mappings:
     source_applications:
       - {record: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}
       - {record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}
+      - {record: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
 
   method:
@@ -115,6 +125,7 @@ mappings:
     source_applications:
       - {record: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml, reading_units: 12, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}
       - {record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml, reading_units: 8, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}
+      - {record: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml, reading_units: 3, state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM}
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
 
   speech:
@@ -128,33 +139,33 @@ mappings:
     source: [studies/**/*.yaml, problems/*/witnesses.yaml, problems/theologico-political.yaml, history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml, history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml]
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.7.0
+      registry_version: 1.8.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
-    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COHEN_SOURCE_STUDY
+    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_TALMON_SOURCE_STUDY
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
     reviewed_witnesses:
-      count: 5
-      source_ids: [CORPUS-SRC-001, CORPUS-SRC-002, CORPUS-SRC-003, CORPUS-SRC-105, CORPUS-SRC-109]
+      count: 6
+      source_ids: [CORPUS-SRC-001, CORPUS-SRC-002, CORPUS-SRC-003, CORPUS-SRC-105, CORPUS-SRC-109, CORPUS-SRC-111]
     theologico_political_item_level_statuses:
       active_predecessor_source_count: 19
       registered_count: 19
       remaining_count: 0
-      reviewed_witness_count: 2
-      remaining_without_reviewed_witness: 17
-      independent_sequential_study_count: 2
-      remaining_without_independent_sequential_study: 17
-      completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001]
+      reviewed_witness_count: 3
+      remaining_without_reviewed_witness: 16
+      independent_sequential_study_count: 3
+      remaining_without_independent_sequential_study: 16
+      completed_study_ids: [COHEN-STUDY-001, JA-STUDY-001, TALMON-STUDY-001]
       status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
       root: studies/theologico-political/
     present_function:
       - register source entities separately from witnesses and studies
-      - account for all 32 YAML records in the current studies tree
+      - account for all 34 YAML records in the current studies tree
       - validate all nineteen identities, aliases, scopes, witness states, study states, and noncertification
-      - validate CORPUS-WIT-105 and CORPUS-WIT-109 fingerprints and locators and their study bindings
+      - validate CORPUS-WIT-105, CORPUS-WIT-109, and CORPUS-WIT-111 fingerprints, locators, and study bindings
       - preserve corpus gaps and original-edition comparison limits
     limit: >
-      Current-state exhaustiveness and two complete provisional item studies do not create a
+      Current-state exhaustiveness and three complete provisional item studies do not create a
       complete corpus, admit source text, supply independent corroboration, certify findings,
       or authorize migration and activation.
 
@@ -162,14 +173,14 @@ mappings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.2.0
+      registry_version: 1.3.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
-      - {finding_set_id: FINDSET-009, path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml}
-      - {finding_set_id: FINDSET-113, path: problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml, derived_from: FINDSET-009}
-      - {finding_set_id: FINDSET-114, path: problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml, derived_from: FINDSET-009}
-      - {finding_set_id: FINDSET-115, path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml, derived_from: FINDSET-009}
+      - {finding_set_id: FINDSET-010, path: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml}
+      - {finding_set_id: FINDSET-116, path: problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml, derived_from: FINDSET-010}
+      - {finding_set_id: FINDSET-117, path: problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml, derived_from: FINDSET-010}
+      - {finding_set_id: FINDSET-118, path: problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml, derived_from: FINDSET-010}
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
     limit: >
       Findings registration does not normalize every proposition, establish independent
@@ -196,7 +207,7 @@ non_effects:
   - No active predecessor is displaced and no accepted migration source is superseded.
   - No source-specific finding is promoted beyond its record-local status.
   - No source text is admitted or distributed.
-  - Two source studies are not independent corroboration or repository completion.
+  - Three source studies are not independent corroboration or repository completion.
   - No Assembly authority is conferred; Sanctum validation remains separate.
 
 validation_states:
@@ -204,9 +215,9 @@ validation_states:
     - manifest paths and declared YAML records resolve
     - manifest, audit, mapping, corpus, findings, process, and schedule versions and counts agree
     - adapter validates manifest and speech contract
-    - problem_bundles validates all seven complete bundles and fifteen synthesis records
+    - problem_bundles validates all seven complete bundles and eighteen synthesis records
     - corpus_registry validates identities, witnesses, statuses, studies, predecessor equality, paths, counts, fingerprints, locators, and gaps
-    - findings_registry validates twenty-nine finding sets, exact record coverage, derivations, bindings, indexes, and gaps
+    - findings_registry validates thirty-three finding sets, exact record coverage, derivations, bindings, indexes, and gaps
     - all structural and behavioral tests pass
     - GitHub Actions passes on the implementing commit
   semantic_completion_requires:
@@ -230,13 +241,13 @@ completed_production_units:
   - complete read-only foundational problem bundles
   - typed current-state corpus and findings registries
   - complete 19-of-19 Theologico-Political source-identity range
-  - CORPUS-WIT-109 and CORPUS-WIT-105 reviewed item witnesses
-  - JA-STUDY-001 and COHEN-STUDY-001 complete provisional source-specific reconstructions
-  - five jurisdiction-preserving local synthesis bridges derived from the two item studies
+  - CORPUS-WIT-109, CORPUS-WIT-105, and CORPUS-WIT-111 reviewed item witnesses
+  - JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 complete provisional source-specific reconstructions
+  - eight jurisdiction-preserving local synthesis bridges derived from the three item studies
 
 next_production_units:
   - validate and merge this bounded integration
-  - register and reconstruct the Talmon review already locatable in SPPP
+  - acquire and reconstruct CORPUS-SRC-102, the Preface to Spinoza's Critique of Religion
   - acquire and reconstruct the remaining sixteen item witnesses
   - expand independent witness reconstruction
   - validate actual candidate ministerial reports

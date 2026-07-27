@@ -4,22 +4,22 @@ record_type: reviewed_witness_priority_schedule
 identity:
   id: TP-REVIEWED-WITNESS-PRIORITY-001
   title: Theologico-Political Reviewed-Witness Priority Schedule
-  version: 1.3.0
+  version: 1.4.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_SCHEDULE
   certification: NOT_CERTIFIED
   identity_registration: COMPLETE_19_OF_19
-  reviewed_witness_completion: INCOMPLETE_2_OF_19
-  independent_sequential_study_completion: INCOMPLETE_2_OF_19
+  reviewed_witness_completion: INCOMPLETE_3_OF_19
+  independent_sequential_study_completion: INCOMPLETE_3_OF_19
 
 revision_history:
-  predecessor_version: 1.2.0
-  predecessor_blob_sha: 78b19e27db4b7cac18279e913b3b32811f8c7581
+  predecessor_version: 1.3.0
+  predecessor_blob_sha: 14a4149011becc9a3fa12f95ba804ab7b3ea6c7e
   reason: >
-    Record completion of COHEN-STUDY-001 after CORPUS-WIT-105 registration, preserve its
-    provisional and noncorroborating status, and advance the next available reviewed-item
-    witness to CORPUS-SRC-111 without ranking truth or altering predecessor authority.
+    Record completion of TALMON-STUDY-001 after CORPUS-WIT-111 registration, preserve its
+    provisional and noncorroborating status, and advance the next acquisition target to
+    CORPUS-SRC-102 without ranking truth or altering predecessor authority.
 
 purpose: >
   Order reviewed-witness and sequential-study production for the nineteen source identities
@@ -86,9 +86,11 @@ priority_groups:
         source_id: CORPUS-SRC-111
         status_id: CORPUS-STATUS-111
         title: Review of J. L. Talmon, The Nature of Jewish History
-        state: REVIEWED_CONTAINER_ITEM_LOCATED_WITNESS_NOT_REGISTERED
+        witness_id: CORPUS-WIT-111
+        study_id: TALMON-STUDY-001
+        state: REVIEWED_WITNESS_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDY
         witness_locator: {container_witness_id: CORPUS-WIT-001, printed_pages: 232, pdf_pages_one_based: 236}
-        next_action: REGISTER_REVIEWED_ITEM_WITNESS
+        next_action: ORIGINAL_EDITION_COMPARISON_AND_INDEPENDENT_TALMON_WORK_RECONSTRUCTION
 
   - priority: 2
     designation: FOUNDATIONAL_ACQUISITION_TARGETS
@@ -119,30 +121,29 @@ priority_groups:
       - {rank: 19, source_id: CORPUS-SRC-106, title: Freud on Moses and Monotheism, next_action: ACQUIRE_AND_REGISTER_WITNESS}
 
 selection:
-  completed_source_ids: [CORPUS-SRC-109, CORPUS-SRC-105]
-  completed_witness_ids: [CORPUS-WIT-109, CORPUS-WIT-105]
-  completed_study_ids: [JA-STUDY-001, COHEN-STUDY-001]
-  selection_state: TWO_REVIEWED_ITEM_WITNESSES_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
+  completed_source_ids: [CORPUS-SRC-109, CORPUS-SRC-105, CORPUS-SRC-111]
+  completed_witness_ids: [CORPUS-WIT-109, CORPUS-WIT-105, CORPUS-WIT-111]
+  completed_study_ids: [JA-STUDY-001, COHEN-STUDY-001, TALMON-STUDY-001]
+  selection_state: THREE_REVIEWED_ITEM_WITNESSES_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
   completed_units:
-    - source status updated through complete provisional study for both items
-    - CORPUS-WIT-109, CORPUS-WIT-105, CORPUS-STUDY-008, and CORPUS-STUDY-009 registered
-    - FINDSET-008, FINDSET-009, and FINDSET-111 through FINDSET-115 registered
+    - source status updated through complete provisional study for all three items
+    - CORPUS-WIT-109, CORPUS-WIT-105, CORPUS-WIT-111, and CORPUS-STUDY-008 through CORPUS-STUDY-010 registered
+    - FINDSET-008 through FINDSET-010 and FINDSET-111 through FINDSET-118 registered
     - complete essays reconstructed before problem-local isolation
     - Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns jurisdictions preserved without absorption
   limits:
-    - original 1967 and 1972 edition comparisons remain pending
-    - the studies are not independent biblical, Greek, Cohenian, or Kantian corroboration
+    - original 1967, 1972, and 1957 edition comparisons remain pending
+    - the studies are not independent biblical, Greek, Cohenian, Talmonian, or Kantian corroboration
     - no doctrine, migration, or successor certification
 
 next_item_witness_unit:
-  source_id: CORPUS-SRC-111
-  title: Review of J. L. Talmon, The Nature of Jewish History
-  action: REGISTER_REVIEWED_ITEM_WITNESS
+  source_id: CORPUS-SRC-102
+  title: Preface to Spinoza's Critique of Religion
+  action: ACQUIRE_AND_REGISTER_REVIEWED_WITNESS
   required_preservations:
-    - original 1957 Journal of Modern History publication evidence from the item footnote
-    - complete-item printed and PDF locators
-    - SPPP container fingerprint and page-image authority
-    - distinction between Talmon's claims, Strauss's review, and predecessor synthesis
+    - lawful source acquisition and stable publication provenance
+    - complete-item locators and witness fingerprint
+    - distinction between source identity, reviewed witness, study, and predecessor synthesis
     - witness registration before independent sequential reconstruction
 
 prohibitions:
@@ -154,7 +155,7 @@ prohibitions:
 
 termination:
   schedule_state: ACTIVE
-  reviewed_item_witness_registration: COMPLETE_FOR_CORPUS_WIT_105_AND_CORPUS_WIT_109
-  independent_sequential_reconstruction: COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_AND_JA_STUDY_001
-  next_item_witness: CORPUS-SRC-111
+  reviewed_item_witness_registration: COMPLETE_FOR_CORPUS_WIT_105_CORPUS_WIT_109_AND_CORPUS_WIT_111
+  independent_sequential_reconstruction: COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_JA_STUDY_001_AND_TALMON_STUDY_001
+  next_item_witness: CORPUS-SRC-102
   certification: NOT_CERTIFIED

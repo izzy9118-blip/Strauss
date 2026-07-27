@@ -4,7 +4,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.5.0
+  version: 1.6.0
 
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
@@ -17,25 +17,25 @@ status:
     and the prohibition on repository or artificial-intelligence self-certification.
 
 revision_history:
-  predecessor_version: 1.4.0
-  predecessor_blob_sha: 7431f7e07a2d90812415086bc610622094311552
+  predecessor_version: 1.5.0
+  predecessor_blob_sha: a5bfabce5c0b47dcca0c5501b20be2246ad68cf4
   reason: >
-    Advance Step 8 after registering CORPUS-WIT-105 and completing COHEN-STUDY-001
+    Advance Step 8 after registering CORPUS-WIT-111 and completing TALMON-STUDY-001
     with typed corpus, findings, and three jurisdiction-preserving problem-local synthesis
-    registrations. Preserve seventeen missing item witnesses and studies and the Step 10 repin blocker.
+    registrations. Preserve sixteen missing item witnesses and studies and the Step 10 repin blocker.
 
 steps:
   - sequence: 1
     action: Create a complete repository audit.
     state: IMPLEMENTED_AND_ACTIVE
     governing_record: audits/operational-completeness.yaml
-    current_version: 2.1.0
+    current_version: 2.2.0
     limit: The audit records incompleteness; it does not cure or certify it.
   - sequence: 2
     action: Correct the manifest completion language.
     state: IMPLEMENTED_AND_ACTIVE
     governing_record: manifest.yaml
-    current_version: 1.3.0
+    current_version: 1.4.0
     limit: The manifest remains semantically incomplete and not doctrinally certified.
   - sequence: 3
     action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -65,6 +65,7 @@ steps:
       - active predecessors and accepted migration sources remain preserved
       - Jerusalem and Athens supplies distinct provisional syntheses to Theologico-Political and Athens-versus-Jerusalem
       - the Cohen essay supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns
+      - the Talmon review supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns
     remaining:
       - complete source-specific application to each problem
       - complete independent witness reconstruction
@@ -76,15 +77,17 @@ steps:
     governing_records: [corpus/index.yaml, findings/index.yaml]
     completed:
       - all 19 Theologico-Political predecessor writings have bounded item identities
-      - CORPUS-WIT-109 and CORPUS-WIT-105 are registered with provenance, fingerprints, and locators
-      - JA-STUDY-001 and COHEN-STUDY-001 are complete provisional for their reviewed 1983 collected witnesses
-      - CORPUS-STUDY-008, CORPUS-STUDY-009, FINDSET-008, FINDSET-009, and FINDSET-111 through FINDSET-115 are registered
+      - CORPUS-WIT-109, CORPUS-WIT-105, and CORPUS-WIT-111 are registered with provenance, fingerprints, and locators
+      - JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 are complete provisional for their reviewed 1983 collected witnesses
+      - CORPUS-STUDY-008 through CORPUS-STUDY-010, FINDSET-008 through FINDSET-010, and FINDSET-111 through FINDSET-118 are registered
       - corpus and findings registries preserve derivation, jurisdiction, gaps, and noncertification
     remaining:
-      - establish reviewed witnesses for seventeen item identities
-      - conduct seventeen independent sequential item studies
+      - establish reviewed witnesses for sixteen item identities
+      - conduct sixteen independent sequential item studies
       - compare the original 1967 Jerusalem and Athens printing where wording matters
       - compare the original 1972 Cohen essay printing where wording matters
+      - compare the original 1957 Talmon review printing where wording matters
+      - reconstruct Talmon's reviewed work independently
       - expand independent primary witnesses beyond Strauss's writings
       - normalize propositions where warranted by reproducible extraction
       - preserve later additions through forward revision
@@ -93,9 +96,9 @@ steps:
     state: ACTIVE_CONTINUOUS
     governing_records: [tests/, .github/workflows/validate-lean-interface.yml]
     completed_in_current_sequence:
-      - tests drafted for two completed provisional TP item studies and seventeen incomplete states
+      - tests drafted for three completed provisional TP item studies and sixteen incomplete states
       - tests drafted for corpus and findings coverage, derivation, jurisdiction, and completion-language consistency
-      - Cohen witness, study, source-filter, and three-problem jurisdiction tests drafted
+      - Cohen and Talmon witness, study, source-filter, and three-problem jurisdiction tests drafted
     current_requirement: Run the complete GitHub Actions validation before merge.
     limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
   - sequence: 10
@@ -110,25 +113,24 @@ steps:
 current_production_unit:
   step: 8
   completed_subunit:
-    title: Hermann Cohen introductory essay reviewed witness and complete provisional item reconstruction
+    title: Review of J. L. Talmon reviewed witness and complete provisional item reconstruction
     state: COMPLETE_PENDING_BRANCH_VALIDATION_AND_MERGE
-    source_id: CORPUS-SRC-105
-    witness_id: CORPUS-WIT-105
-    study_id: COHEN-STUDY-001
-    corpus_study_id: CORPUS-STUDY-009
-    finding_sets: [FINDSET-009, FINDSET-113, FINDSET-114, FINDSET-115]
+    source_id: CORPUS-SRC-111
+    witness_id: CORPUS-WIT-111
+    study_id: TALMON-STUDY-001
+    corpus_study_id: CORPUS-STUDY-010
+    finding_sets: [FINDSET-010, FINDSET-116, FINDSET-117, FINDSET-118]
     non_effect: >
       Completion of this bounded source unit does not supply independent corroboration,
       doctrine, certified migration, successor activation, predecessor displacement, or
       completed-interface readiness.
   next_subunit:
-    title: Review of J. L. Talmon reviewed item witness and sequential reconstruction
-    source_id: CORPUS-SRC-111
+    title: Preface to Spinoza's Critique of Religion reviewed witness acquisition and reconstruction
+    source_id: CORPUS-SRC-102
     first_action: >
-      Register the complete one-page item in the reviewed SPPP container with publication
-      provenance, printed and PDF locators, container fingerprint, text condition, and explicit
-      distinction between witness registration and independent sequential study.
-    following_source: CORPUS-SRC-102
+      Acquire a lawful reviewed witness with stable bibliographic evidence and locators before
+      beginning independent sequential reconstruction or promoting predecessor claims.
+    following_source: CORPUS-SRC-103
   non_effects:
     - no source-text admission through registries
     - no doctrinal or migration certification
