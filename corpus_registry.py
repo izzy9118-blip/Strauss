@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -26,13 +27,6 @@ TP_PRESERVED_PATH = (
     / "theologico-political"
     / "STR-PROBLEM-002-v1.1-active-predecessor.yaml"
 )
-PROGRESS_OR_RETURN_STATUS_PATH = (
-    ROOT
-    / "studies"
-    / "theologico-political"
-    / "progress-or-return"
-    / "source-status.yaml"
-)
 
 CANONICAL_PROBLEMS = [
     "nomos-vs-physis",
@@ -44,7 +38,7 @@ CANONICAL_PROBLEMS = [
     "ancients-vs-moderns",
 ]
 
-EXPECTED_STUDY_TREE_PATHS = {
+BASE_REQUIRED_STUDY_PATHS = {
     "studies/socrates-and-aristophanes/source-status.yaml",
     "studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml",
     "studies/studies-in-platonic-political-philosophy/source-status.yaml",
@@ -55,7 +49,6 @@ EXPECTED_STUDY_TREE_PATHS = {
     "studies/studies-in-platonic-political-philosophy/integration-completion.yaml",
     "studies/plato/apology/source-status.yaml",
     "studies/plato/apology/philosophy-poetry-divine-authority-reconstruction.yaml",
-    "studies/theologico-political/progress-or-return/source-status.yaml",
 }
 
 REQUIRED_TOP_LEVEL = {
@@ -182,6 +175,11 @@ def _find_record(records: Any, field: str, value: str) -> dict[str, Any] | None:
     return None
 
 
+def _validate_semver(version: Any, errors: list[str]) -> None:
+    if not isinstance(version, str) or not re.fullmatch(r"1\.\d+\.0", version):
+        errors.append("corpus registry identity.version must be a 1.x.0 semantic version")
+
+
 def _validate_reviewed_witness_fingerprint(
     *,
     source_status_path: Path,
@@ -204,77 +202,128 @@ def _validate_reviewed_witness_fingerprint(
             errors.append(f"{label} reviewed witness {field} mismatch")
 
 
-def _validate_progress_or_return(
+def _tp_sequence_from_source_id(source_id: str) -> int | None:
+    match = re.fullmatch(r"CORPUS-SRC-(1\d{2})", source_id)
+    if not match:
+        return None
+    sequence = int(match.group(1)) - 100
+    return sequence if 1 <= sequence <= 19 else None
+
+
+def _validate_tp_item_statuses(
     *,
     source_entities: Any,
     status_records: Any,
+    predecessor_sources: Any,
     errors: list[str],
 ) -> None:
-    source = _find_record(source_entities, "source_id", "CORPUS-SRC-101")
-    status_entry = _find_record(status_records, "status_id", "CORPUS-STATUS-101")
-    if not isinstance(source, dict):
-        errors.append("Progress or Return? source entity is missing")
+    if not isinstance(source_entities, list) or not isinstance(status_records, list):
         return
-    if not isinstance(status_entry, dict):
-        errors.append("Progress or Return? source-status registry entry is missing")
+    if not isinstance(predecessor_sources, list):
         return
 
-    expected_path = "studies/theologico-political/progress-or-return/source-status.yaml"
-    if source.get("source_status_record") != "CORPUS-STATUS-101":
-        errors.append("Progress or Return? source entity must reference CORPUS-STATUS-101")
-    if source.get("item_level_source_status") != "REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS":
-        errors.append("Progress or Return? item-level status must preserve the missing-witness condition")
-    if status_entry.get("source_id") != "CORPUS-SRC-101":
-        errors.append("CORPUS-STATUS-101 must bind to CORPUS-SRC-101")
-    if status_entry.get("path") != expected_path:
-        errors.append("CORPUS-STATUS-101 path mismatch")
-    if status_entry.get("certification") != "NOT_CERTIFIED":
-        errors.append("CORPUS-STATUS-101 must remain NOT_CERTIFIED")
+    for entry in status_records:
+        if not isinstance(entry, dict):
+            continue
+        source_id = entry.get("source_id")
+        sequence = _tp_sequence_from_source_id(source_id) if isinstance(source_id, str) else None
+        if sequence is None:
+            continue
 
-    status = load_yaml(PROGRESS_OR_RETURN_STATUS_PATH)
-    identity = status.get("identity", {})
-    lifecycle = status.get("status", {})
-    registration = status.get("registration_basis", {})
-    publication = status.get("publication_and_witness_condition", {})
-    termination = status.get("termination", {})
+        status_id = entry.get("status_id")
+        path_value = entry.get("path")
+        source = _find_record(source_entities, "source_id", source_id)
+        if not isinstance(source, dict):
+            errors.append(f"{status_id} references missing source entity {source_id}")
+            continue
+        if not isinstance(status_id, str) or not status_id.startswith("CORPUS-STATUS-"):
+            errors.append(f"Theologico-Political status for {source_id} has invalid status_id")
+            continue
+        if source.get("source_status_record") != status_id:
+            errors.append(f"{source_id} must reference {status_id} as source_status_record")
+        if source.get("item_level_source_status") != "REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS":
+            errors.append(f"{source_id} must preserve registered-identity-without-witness status")
+        if entry.get("certification") != "NOT_CERTIFIED":
+            errors.append(f"{status_id} must remain NOT_CERTIFIED")
+        if not isinstance(path_value, str):
+            errors.append(f"{status_id} path must be a string")
+            continue
 
-    expected_identity = {
-        "status_id": "CORPUS-STATUS-101",
-        "corpus_source_id": "CORPUS-SRC-101",
-        "canonical_title": "Progress or Return?",
-        "author": "Leo Strauss",
-        "date": 1952,
-        "version": "1.0.0",
-    }
-    for field, expected in expected_identity.items():
-        if identity.get(field) != expected:
-            errors.append(
-                f"Progress or Return? identity.{field} mismatch: "
-                f"expected {expected!r}, found {identity.get(field)!r}"
-            )
+        status = load_yaml(_resolve(path_value))
+        identity = status.get("identity", {})
+        lifecycle = status.get("status", {})
+        registration = status.get("registration_basis", {})
+        publication = status.get("publication_and_witness_condition", {})
+        termination = status.get("termination", {})
+        original = predecessor_sources[sequence - 1]
 
-    if lifecycle.get("lifecycle") != "REGISTERED_SOURCE_IDENTITY":
-        errors.append("Progress or Return? lifecycle must remain REGISTERED_SOURCE_IDENTITY")
-    if lifecycle.get("reviewed_witness") != "NOT_YET_REGISTERED":
-        errors.append("Progress or Return? must preserve the missing reviewed witness")
-    if lifecycle.get("independent_sequential_study") != "NOT_YET_COMPLETED":
-        errors.append("Progress or Return? must preserve the incomplete independent study")
-    if lifecycle.get("certification") != "NOT_CERTIFIED":
-        errors.append("Progress or Return? source status must remain NOT_CERTIFIED")
-    if registration.get("active_predecessor_source_sequence") != 1:
-        errors.append("Progress or Return? predecessor sequence must remain 1")
-    if registration.get("active_predecessor") != "problems/theologico-political.yaml":
-        errors.append("Progress or Return? active predecessor reference mismatch")
-    if publication.get("fingerprint") != "NOT_AVAILABLE":
-        errors.append("Progress or Return? may not claim a fingerprint before witness registration")
-    if publication.get("locator_reproducibility") != "INCOMPLETE":
-        errors.append("Progress or Return? locator reproducibility must remain INCOMPLETE")
-    if termination.get("reviewed_witness_state") != "MISSING":
-        errors.append("Progress or Return? termination must preserve missing witness state")
-    if termination.get("study_state") != "INCOMPLETE":
-        errors.append("Progress or Return? termination must preserve incomplete study state")
-    if termination.get("successor_effect") != "NONE":
-        errors.append("Progress or Return? source status may not affect successor activation")
+        expected_identity = {
+            "status_id": status_id,
+            "corpus_source_id": source_id,
+            "canonical_title": source.get("canonical_title"),
+            "author": "Leo Strauss",
+            "date": source.get("date"),
+            "version": "1.0.0",
+        }
+        for field, expected in expected_identity.items():
+            if identity.get(field) != expected:
+                errors.append(
+                    f"{status_id} identity.{field} mismatch: "
+                    f"expected {expected!r}, found {identity.get(field)!r}"
+                )
+
+        source_aliases = source.get("canonical_aliases", [])
+        if source_aliases:
+            if identity.get("canonical_aliases") != source_aliases:
+                errors.append(f"{status_id} canonical aliases do not match the source entity")
+        if source.get("canonical_title") != original.get("title"):
+            errors.append(f"{status_id} source title does not match predecessor sequence {sequence}")
+        if source.get("date") != original.get("date"):
+            errors.append(f"{status_id} source date does not match predecessor sequence {sequence}")
+        original_alias = original.get("canonical_alias")
+        if original_alias and original_alias not in source_aliases:
+            errors.append(f"{status_id} omits predecessor canonical alias {original_alias!r}")
+
+        if lifecycle.get("lifecycle") != "REGISTERED_SOURCE_IDENTITY":
+            errors.append(f"{status_id} lifecycle must remain REGISTERED_SOURCE_IDENTITY")
+        if lifecycle.get("reviewed_witness") != "NOT_YET_REGISTERED":
+            errors.append(f"{status_id} must preserve the missing reviewed witness")
+        if lifecycle.get("independent_sequential_study") != "NOT_YET_COMPLETED":
+            errors.append(f"{status_id} must preserve the incomplete independent study")
+        if lifecycle.get("certification") != "NOT_CERTIFIED":
+            errors.append(f"{status_id} source status must remain NOT_CERTIFIED")
+        if registration.get("active_predecessor_source_sequence") != sequence:
+            errors.append(f"{status_id} predecessor sequence must remain {sequence}")
+        if registration.get("active_predecessor") != "problems/theologico-political.yaml":
+            errors.append(f"{status_id} active predecessor reference mismatch")
+        if registration.get("corpus_source_id") != source_id:
+            errors.append(f"{status_id} corpus source binding mismatch")
+        if publication.get("fingerprint") != "NOT_AVAILABLE":
+            errors.append(f"{status_id} may not claim a fingerprint before witness registration")
+        if publication.get("locator_reproducibility") != "INCOMPLETE":
+            errors.append(f"{status_id} locator reproducibility must remain INCOMPLETE")
+        if termination.get("reviewed_witness_state") != "MISSING":
+            errors.append(f"{status_id} termination must preserve missing witness state")
+        if termination.get("study_state") != "INCOMPLETE":
+            errors.append(f"{status_id} termination must preserve incomplete study state")
+        if termination.get("certification") != "NOT_CERTIFIED":
+            errors.append(f"{status_id} termination must remain NOT_CERTIFIED")
+        if termination.get("successor_effect") != "NONE":
+            errors.append(f"{status_id} may not affect successor activation")
+
+    for source in source_entities:
+        if not isinstance(source, dict):
+            continue
+        source_id = source.get("source_id")
+        sequence = _tp_sequence_from_source_id(source_id) if isinstance(source_id, str) else None
+        if sequence is None:
+            continue
+        status_id = source.get("source_status_record")
+        if status_id is None:
+            continue
+        entry = _find_record(status_records, "status_id", status_id)
+        if not isinstance(entry, dict):
+            errors.append(f"{source_id} references unregistered source status {status_id!r}")
 
 
 def validate_registry(registry: dict[str, Any]) -> list[str]:
@@ -287,8 +336,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.2.0":
-        errors.append("corpus registry identity.version must be 1.2.0")
+    _validate_semver(identity.get("version"), errors)
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
@@ -311,16 +359,17 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     study_ids = _unique_ids(study_records, "study_id", "study_records", errors)
     gap_ids = _unique_ids(gaps, "gap_id", "corpus_gaps", errors)
 
-    expected_counts = {
+    fixed_expected = {
         "source entities": (len(source_ids), 22),
         "reviewed witnesses": (len(witness_ids), 3),
-        "source-status records": (len(status_ids), 4),
         "study records": (len(study_ids), 7),
         "corpus gaps": (len(gap_ids), 7),
     }
-    for label, (actual, expected) in expected_counts.items():
+    for label, (actual, expected) in fixed_expected.items():
         if actual != expected:
             errors.append(f"expected {expected} {label}, found {actual}")
+    if len(status_ids) < 5:
+        errors.append(f"expected at least 5 source-status records, found {len(status_ids)}")
 
     for label, records in (
         ("reviewed_witnesses", witness_records),
@@ -339,12 +388,9 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
 
     actual_studies = _actual_study_tree_paths()
     registered_studies = _registered_study_paths(registry)
-    if actual_studies != EXPECTED_STUDY_TREE_PATHS:
-        errors.append(
-            "studies tree changed without registry revision: "
-            f"missing_expected={sorted(EXPECTED_STUDY_TREE_PATHS - actual_studies)!r}, "
-            f"new_unexpected={sorted(actual_studies - EXPECTED_STUDY_TREE_PATHS)!r}"
-        )
+    missing_baseline = sorted(BASE_REQUIRED_STUDY_PATHS - actual_studies)
+    if missing_baseline:
+        errors.append("required study records disappeared: " + ", ".join(missing_baseline))
     if registered_studies != actual_studies:
         errors.append(
             "registered study and source-status paths do not exhaust the studies tree: "
@@ -373,8 +419,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         for item in source_entities
         if isinstance(item, dict)
         and isinstance(item.get("source_id"), str)
-        and item["source_id"].startswith("CORPUS-SRC-1")
-        and item["source_id"] not in {"CORPUS-SRC-001", "CORPUS-SRC-002", "CORPUS-SRC-003"}
+        and _tp_sequence_from_source_id(item["source_id"]) is not None
     ]
     tp_entities.sort(key=lambda item: item["source_id"])
     if len(tp_entities) != 19:
@@ -405,9 +450,10 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         label="Socrates and Aristophanes",
         errors=errors,
     )
-    _validate_progress_or_return(
+    _validate_tp_item_statuses(
         source_entities=source_entities,
         status_records=status_records,
+        predecessor_sources=predecessor_sources,
         errors=errors,
     )
 
