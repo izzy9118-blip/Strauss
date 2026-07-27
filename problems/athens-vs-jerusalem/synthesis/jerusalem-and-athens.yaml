@@ -1,0 +1,118 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+
+identity:
+  synthesis_id: AVJ-JA-001
+  problem: athens-vs-jerusalem
+  source_study: JA-STUDY-001
+  title: Athens vs. Jerusalem — Jerusalem and Athens
+  version: 1.0.0
+
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  problem_object_effect: NONE_WITHOUT_MIGRATION_VALIDATION
+
+source:
+  source_id: CORPUS-SRC-109
+  witness_id: CORPUS-WIT-109
+  source_status: studies/theologico-political/jerusalem-and-athens/source-status.yaml
+  study_path: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+  reviewed_container: Studies in Platonic Political Philosophy, University of Chicago Press, 1983
+  original_publication_evidence: The City College Papers, no. 6, The City College of New York, 1967
+  printed_pages: 147-173
+  original_edition_comparison: PENDING
+
+strict_problem: >
+  Can the comprehensive orientation beginning from hearing, creation, command, covenant,
+  miracle, humility, and obedient love be reconciled with the comprehensive orientation
+  beginning from seeing, wonder, nature, questioning, rational account, and autonomous
+  understanding without transforming one into the other?
+
+reconstructed_alternatives:
+  jerusalem:
+    beginning: revealed creation and divine speech
+    way_of_knowing: hearing, trust, authorized report, prophecy, remembrance, and obedience
+    human_perfection: righteousness, humility, repentance, mercy, fidelity, and love
+    political_form: divine law addressed to a particular people while making a universal claim
+    wisdom: divine gift ordered by fear of the Lord and obedience to command
+  athens:
+    beginning: the question of the beginning and discovery of nature
+    way_of_knowing: wonder, contradiction, dialectic, rational account, and awareness of ignorance
+    human_perfection: philosophic inquiry, intellectual virtue, and freedom through understanding
+    political_form: natural right and political philosophy judging laws by the human good
+    wisdom: continued inquiry into the whole under acknowledged human limitation
+
+principal_findings:
+  - Jerusalem and Athens are rival comprehensive orientations rather than complementary cultural themes.
+  - The disagreement concerns how the beginning and the whole are known, not only isolated moral propositions.
+  - Biblical creation and Greek nature order human life through different accounts of authority and intelligibility.
+  - Humility and magnanimity, obedience and autonomy, mercy and rational justice require comparison by ground, rank, and final end.
+  - Miracle and prophetic report are constitutive of Jerusalem's claim but are not established by ordinary experience in the essay.
+  - Socratic ignorance is not biblical submission, and biblical wisdom is not autonomous philosophy.
+  - Jewish political history makes the confrontation concrete without deciding providence or philosophic truth.
+  - The essay's deed preserves the conflict after ordered examination rather than dissolving it through neutral synthesis.
+
+jurisdiction_and_non_absorption:
+  owns:
+    - the two comprehensive ways of life
+    - hearing versus seeing and questioning
+    - obedient love versus autonomous understanding
+    - creation and command versus nature and rational account
+    - the two-root structure of Western civilization
+  theologico_political_reference:
+    relation: COACTIVATED_STRUCTURAL_AUTHORITY_PROBLEM
+    receives:
+      - reason and revelation as rival authorities
+      - prophecy, miracle, covenant, command, and divine law
+    non_absorption: Athens versus Jerusalem may not absorb the complete jurisdiction of revelation, theology, prophecy, or political sovereignty.
+  philosophy_vs_poetry_reference:
+    relation: INTERSECTS_WITHOUT_IDENTIFICATION
+    receives:
+      - Homeric poetic authority is distinct from Torah as binding divine law
+    non_absorption: Poetry is not revelation, and revelation is not poetic construction.
+  nomos_vs_physis_reference:
+    relation: SUPPLIES_FINDING_TO
+    receives:
+      - the philosophic discovery of nature challenges ancestral and revealed-law claims
+    non_absorption: Nomos versus physis does not exhaust either comprehensive orientation.
+
+speech_and_deed_result:
+  explicit_speech: Strauss calls the reflections preliminary and denies the adequacy of a neutral presentation.
+  textual_deed: He begins from the roots, reconstructs both orientations through law, justice, wisdom, and history, and ends without certified reconciliation or victory.
+  relation: CONFIRMATION_WITH_QUALIFICATION
+  conclusion: >
+    The source supports affirmative preservation of the conflict. This does not establish
+    that permanent inquiry is Strauss's final doctrine or a third comprehensive alternative.
+
+unresolved_questions:
+  - whether the alternatives can be reconciled without transforming the authority of one
+  - whether awareness of philosophic limitation strengthens openness to revelation or remains governed by intelligibility
+  - whether Strauss finally chooses philosophy, revelation, or an unresolved life between the alternatives
+  - whether wording or emphasis changes in the original 1967 printing
+  - how independent biblical, Platonic, prophetic, and historical witnesses qualify the source reconstruction
+
+source_limits:
+  - JA-STUDY-001 uses the reviewed 1983 collected reprint and is not independent corroboration.
+  - The registered Part V scope may not stand for the complete essay.
+  - Pangle's Introduction is secondary and cannot govern Strauss's argument.
+  - Original 1967 edition comparison remains pending.
+  - Source-level findings remain provisional until independent witness expansion and later authorized review.
+
+prohibitions:
+  - no moral overlap treated as comprehensive synthesis
+  - no inability to refute revelation treated as proof of revelation
+  - no miracle claim treated as historically verified by this source study
+  - no Jewish persistence or statehood treated as proof of providence
+  - no poetry identified with revelation
+  - no doctrine, migration, or successor certification
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_1983_ITEM_WITNESS
+  certification: NOT_CERTIFIED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+    - independent biblical and Greek witness reconstruction
+    - original 1967 edition comparison
+    - later migration validation with the broader Theologico-Political problem
