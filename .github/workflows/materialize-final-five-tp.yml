@@ -50,12 +50,22 @@ jobs:
           rm -f .github/workflows/materialize-final-five-tp.yml
 
       - name: Validate generated repository state
+        shell: bash
         run: |
-          python adapter.py --validate
-          python problem_bundles.py --validate
-          python corpus_registry.py --validate
-          python findings_registry.py --validate
-          python -m unittest discover -s tests -p 'test_*.py'
+          {
+            python adapter.py --validate
+            python problem_bundles.py --validate
+            python corpus_registry.py --validate
+            python findings_registry.py --validate
+            python -m unittest discover -s tests -p 'test_*.py'
+          } > /tmp/final5-validation.log 2>&1 || { cat /tmp/final5-validation.log; exit 1; }
+
+      - name: Upload validation diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: final5-validation-diagnostics
+          path: /tmp/final5-validation.log
 
       - name: Commit generated final-five integration
         shell: bash
