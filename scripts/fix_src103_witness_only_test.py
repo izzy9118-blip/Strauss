@@ -8,6 +8,9 @@ end = text.index('    def test_spinoza_treatise_witness_and_study_are_registered
 section = text[start:end].replace(
     'self.assertEqual(status["status"]["independent_sequential_study"], "SPINOZA-TREATISE-STUDY-001")',
     'self.assertEqual(status["status"]["independent_sequential_study"], "NOT_YET_COMPLETED")',
+).replace(
+    'self.assertEqual(status["termination"]["study_state"], "COMPLETE_PROVISIONAL")',
+    'self.assertEqual(status["termination"]["study_state"], "INCOMPLETE")',
 )
 p.write_text(text[:start] + section + text[end:], encoding='utf-8')
-print('Fixed witness-only study expectation.')
+print('Fixed witness-only study expectations.')
