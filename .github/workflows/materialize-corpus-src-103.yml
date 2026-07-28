@@ -75,6 +75,12 @@ jobs:
               "sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
               "file_size_bytes": 39287307,
           }
+          witness["item_identity_and_locators"] = {
+              "printed_page_range": {"start": 181, "end": 233},
+              "pdf_page_range_one_based": {"start": 200, "end": 252},
+              "argumentative_body_printed_range": {"start": 181, "end": 224},
+              "notes_printed_range": {"start": 224, "end": 233},
+          }
           witness_path.write_text(
               yaml.safe_dump(witness, sort_keys=False, allow_unicode=True, width=120),
               encoding="utf-8",
