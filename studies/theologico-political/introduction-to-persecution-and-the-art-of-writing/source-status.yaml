@@ -1,16 +1,119 @@
 schema_version: 1.0
 document_type: source_status_record
-identity: {status_id: CORPUS-STATUS-113, corpus_source_id: CORPUS-SRC-113, canonical_title: "Introduction to Persecution and the Art of Writing", author: Leo Strauss, date: 1952, version: 1.1.0}
-status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-113, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
-revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, pending 1952 printing comparison, predecessor authority, noncertification, and no successor effect."}
-registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 13, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-113, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
+identity:
+  status_id: CORPUS-STATUS-113
+  corpus_source_id: CORPUS-SRC-113
+  canonical_title: Introduction to Persecution and the Art of Writing
+  author: Leo Strauss
+  date: 1952
+  version: 1.2.0
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: CORPUS-WIT-113
+  independent_sequential_study: PERSECUTION-INTRO-STUDY-001
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+revision_history:
+  predecessor_version: 1.1.0
+  transformation: FORWARD_SOURCE_STUDY_COMPLETION
+  reason: >
+    Record the independent sequential reconstruction of the complete reviewed 1997 collected item while preserving
+    pending comparison with the 1952 Free Press printing, incomplete independent corroboration, predecessor authority,
+    noncertification, and no migration or successor effect.
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 13
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-113
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
   - The reviewed 1997 SUNY collected witness occupies printed pages 417-429 and one-based PDF pages 436-448.
+  - Strauss's argumentative body occupies printed pages 417-428; notes begin on printed page 428 and continue through page 429.
   - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
-  - The collection states that the introduction first appeared in Leo Strauss, Persecution and the Art of Writing (Glencoe, Illinois: Free Press, 1952), 7-21.
-predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Establishes the political conditions of philosophic communication and the criteria and limits governing inquiry into exoteric and esoteric writing.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
-publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 417, end: 429}, pdf_page_range_one_based: {start: 436, end: 448}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
-reviewed_witness: {witness_id: CORPUS-WIT-113, witness_record_path: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/reviewed-witness.yaml, printed_page_range: {start: 417, end: 429}, pdf_page_range_one_based: {start: 436, end: 448}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
-source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to the source, not proof of exoteric interpretation in any other work."}
-next_required_actions: [conduct an independent sequential reading of printed pages 417-429, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization, compare the 1952 printing when separately reviewed]
-termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - The collection states that the introduction first appeared in Leo Strauss, Persecution and the Art of Writing (Glencoe, Illinois: Free Press, 1952), pages 7-21.
+  - PERSECUTION-INTRO-STUDY-001 reconstructs the reviewed item sequentially in eight bounded reading units before comparison with the active predecessor.
+predecessor_contribution_record:
+  evidence_status: PROVISIONALLY_RETESTED_BY_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  statement: >
+    Establishes the political conditions of philosophic communication and the criteria and limits governing inquiry into exoteric and esoteric writing.
+  retest_result: >
+    The study confirms that danger, legal nonrecognition, audience, exposure, silence, cross-work differences, and
+    conformity to accepted opinion are central to the political conditions and source-local criteria of exoteric
+    communication. It qualifies the predecessor by rejecting any universal mechanical test and by showing that Strauss's
+    sociology of philosophy concerns a danger coeval with philosophy rather than one historical religious setting alone.
+  preservation_rule: >
+    Provisional confirmation and qualification do not certify, migrate, activate, displace, or silently rewrite the active predecessor.
+publication_and_witness_condition:
+  original_publication: "Leo Strauss, Persecution and the Art of Writing (Glencoe, Illinois: Free Press, 1952), 7-21"
+  edition: 1997 SUNY collected reprint in Jewish Philosophy and the Crisis of Modernity
+  pagination:
+    printed_page_range: {start: 417, end: 429}
+    argumentative_body: {start: 417, end: 428}
+    notes: {start: 428, end: 429}
+    pdf_page_range_one_based: {start: 436, end: 448}
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  fingerprint:
+    algorithm: SHA256
+    value: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  file_size_bytes: 39287307
+  container_page_count: 526
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+  original_1952_printing_comparison: PENDING
+reviewed_witness:
+  witness_id: CORPUS-WIT-113
+  witness_record_path: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/reviewed-witness.yaml
+  collected_reprint_year: 1997
+  original_publication_year: 1952
+  printed_page_range: {start: 417, end: 429}
+  pdf_page_range_one_based: {start: 436, end: 448}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_file_size_bytes: 39287307
+  original_edition_comparison: PENDING
+study_record:
+  internal_study_id: PERSECUTION-INTRO-STUDY-001
+  corpus_study_id: CORPUS-STUDY-014
+  path: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  independent_corroboration: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_WRITING
+  documentary_rank: REVIEWED_PRIMARY_STRAUSS_ITEM_WITHIN_FINGERPRINTED_COLLECTED_WITNESS
+  analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+required_distinctions:
+  - sociology of philosophy from sociology of knowledge
+  - philosophy as such from socially defined intellectual classes
+  - revealed Law from revealed Faith in Strauss's comparative reconstruction
+  - serious teaching from frequent or conspicuous public teaching
+  - meaningful silence from silence without a source-local expectation
+  - exoteric protection from unrestricted deception
+  - philosopher from certified claimant to wisdom
+  - reviewed 1997 collected reprint from separately reviewed 1952 printing
+  - source-specific reconstruction from independent corroboration
+prohibitions:
+  - Do not treat the predecessor contribution as a source-level quotation.
+  - Do not treat source-specific reconstruction as independent corroboration of Farabi, Maimonides, Plato, religious traditions, or institutional history.
+  - Do not identify philosophers with a socially certified elite or infer wisdom from philosophic status.
+  - Do not infer serious teaching from frequency, rarity, silence, contradiction, orthodoxy, or heterodoxy in isolation.
+  - Do not treat provisional conformity as unrestricted deception or private advantage.
+  - Do not treat the 1997 collected reprint as a separately reviewed 1952 Free Press printing.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
+next_required_actions:
+  - compare the 1952 Free Press printing when separately available
+  - reconstruct Farabi and represented medieval, classical, legal, theological, and historical witnesses independently where required
+  - preserve source-level findings and problem jurisdictions in the typed findings registry
+  - proceed to the next scheduled independent Theologico-Political item study without revisiting completed witness acquisition
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-113
+  study_state: COMPLETE_PROVISIONAL
+  study_id: PERSECUTION-INTRO-STUDY-001
+  independent_corroboration: INCOMPLETE
+  original_edition_comparison: PENDING
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
