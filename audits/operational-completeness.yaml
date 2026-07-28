@@ -3,21 +3,21 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 3.5.0
+  version: 3.6.0
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
   certification: NOT_CERTIFIED
   audit_scope_complete: true
   repository_completion: INCOMPLETE
 revision_history:
-  predecessor_version: 3.4.0
+  predecessor_version: 3.5.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete STATE-ISRAEL-LETTER-STUDY-001, advance study coverage to thirteen of nineteen, preserve six pending studies,
-    National Review comparison, and the material predecessor qualification.
+  reason: Complete WIPP-FIRST-PARAGRAPH-STUDY-001, advance study coverage to fourteen of nineteen, preserve five pending studies,
+    first-paragraph scope, 1959 comparison, and predecessor qualification.
 basis:
   repository: izzy9118-blip/Strauss
   prior_validated_interface_commit: ea193b51b6664f69c90b3982c32d81cdbb6921b7
-  current_revision_scope: production/corpus-src-112-sequential-reconstruction
+  current_revision_scope: production/corpus-src-110-first-paragraph-reconstruction
   manifest: manifest.yaml
   corpus_registry: corpus/index.yaml
   corpus_registry_loader: corpus_registry.py
@@ -105,8 +105,8 @@ summary:
     reviewed_item_witness_count: 19
     registered_without_reviewed_witness_count: 0
     remaining_without_item_level_status_count: 0
-    independently_reconstructed_count_within_this_sequence: 13
-    remaining_without_independent_sequential_study: 6
+    independently_reconstructed_count_within_this_sequence: 14
+    remaining_without_independent_sequential_study: 5
     completed_source_ids:
     - CORPUS-SRC-102
     - CORPUS-SRC-105
@@ -121,6 +121,7 @@ summary:
     - CORPUS-SRC-106
     - CORPUS-SRC-107
     - CORPUS-SRC-112
+    - CORPUS-SRC-110
     completed_witness_ids:
     - CORPUS-WIT-102
     - CORPUS-WIT-105
@@ -135,6 +136,7 @@ summary:
     - CORPUS-WIT-106
     - CORPUS-WIT-107
     - CORPUS-WIT-112
+    - CORPUS-WIT-110
     completed_study_ids:
     - SPINOZA-PREFACE-STUDY-001
     - COHEN-STUDY-001
@@ -149,15 +151,14 @@ summary:
     - FREUD-MOSES-STUDY-001
     - WHY-REMAIN-JEWS-STUDY-001
     - STATE-ISRAEL-LETTER-STUDY-001
+    - WIPP-FIRST-PARAGRAPH-STUDY-001
     witness_only_source_ids:
-    - CORPUS-SRC-110
     - CORPUS-SRC-114
     - CORPUS-SRC-115
     - CORPUS-SRC-117
     - CORPUS-SRC-118
     - CORPUS-SRC-119
     witness_only_witness_ids:
-    - CORPUS-WIT-110
     - CORPUS-WIT-114
     - CORPUS-WIT-115
     - CORPUS-WIT-117
@@ -210,7 +211,7 @@ summary:
     - CORPUS-WIT-118
     - CORPUS-WIT-119
   remaining_major_deficiencies:
-  - six Theologico-Political writings still require independent sequential item studies
+  - five Theologico-Political writings still require independent sequential item studies
   - the original 1948 journal printing of How to Study Spinoza's Theologico-Political Treatise has not been compared with
     the reviewed 1997 collected reprint
   - the exact CORPUS-WIT-102 bytes, SHA256, file size, and PDF-page offset are unavailable to the repository
@@ -673,11 +674,12 @@ production_order:
   - FREUD-MOSES-STUDY-001 with FINDSET-018, FINDSET-136, and FINDSET-137
   - WHY-REMAIN-JEWS-STUDY-001 with FINDSET-019, FINDSET-138, and FINDSET-139
   - STATE-ISRAEL-LETTER-STUDY-001 with FINDSET-020, FINDSET-140, and FINDSET-141
+  - WIPP-FIRST-PARAGRAPH-STUDY-001 with FINDSET-021, FINDSET-142, and FINDSET-143
   next:
-  - run complete structural and behavioral validation for the thirteenth Theologico-Political item study
-  - conduct CORPUS-SRC-110 independent sequential reconstruction from its registered witness
-  - continue the remaining five independent sequential reconstructions after CORPUS-SRC-110
-  - expand independent source-tradition witnesses and textual-state comparisons
+  - run complete structural and behavioral validation for the fourteenth Theologico-Political item study
+  - conduct CORPUS-SRC-114 independent sequential reconstruction
+  - continue the remaining four independent sequential reconstructions after CORPUS-SRC-114
+  - expand independent witnesses and textual-state comparisons
   - validate actual ministerial reports against the full contract stack
   final_repin:
     status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION

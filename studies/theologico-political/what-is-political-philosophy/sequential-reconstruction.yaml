@@ -1,0 +1,261 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: WIPP-FIRST-PARAGRAPH-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, What Is Political Philosophy? — Registered First Paragraph
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  registered_scope: FIRST_PARAGRAPH_ONLY
+  source_reading: COMPLETE_FOR_REGISTERED_FIRST_PARAGRAPH_OF_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_REGISTERED_SCOPE
+  independent_corroboration: INCOMPLETE
+  original_1959_printing_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-110
+  source_status_id: CORPUS-STATUS-110
+  reviewed_witness_id: CORPUS-WIT-110
+  author: Leo Strauss
+  canonical_title: What Is Political Philosophy?
+  source_date: 1954
+  registered_scope: first paragraph only
+  reviewed_container:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  editorial_provenance:
+    original_appearance_of_registered_scope: "Leo Strauss, What Is Political Philosophy? (New York: Free Press, 1959), 9-10"
+    separately_reviewed_1959_printing: false
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  locators:
+    printed_pages: {start: 409, end: 409}
+    pdf_pages_one_based: {start: 428, end: 428}
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The registered source scope is only the first paragraph of What Is Political Philosophy? and may not stand for the complete essay.
+  - The reviewed witness is the 1997 SUNY collected reprint of that paragraph, not a separately reviewed copy of the 1959 Free Press printing.
+  - The paragraph juxtaposes political philosophy in Jerusalem with the prophetic vision, the Kingdom of God, and regions in which that vision vanishes or never illuminated; it does not itself formulate the philosophic best regime.
+  - The active predecessor's phrase philosophic best regime therefore exceeds what this registered paragraph explicitly states and must remain a predecessor-level inference unless supported by separately reconstructed text.
+  - The source invokes Jerusalem, the prophets, sacred soil, sacred heritage, and the Kingdom of God but does not name Athens or Greek philosophy in the registered paragraph.
+  - The study is not independent corroboration of biblical prophecy, Jerusalem's history, political philosophy as a whole, or the complete essay.
+
+method_application:
+  governing_question: >
+    What problem does Strauss create by accepting the task of speaking about political philosophy in Jerusalem, where the
+    longing for righteousness and the just city is identified with the prophetic vision?
+  recovered_source_question: >
+    How can political philosophy speak from Jerusalem while moving into regions progressively distant from the prophets'
+    vision and the Kingdom of God, without forgetting what Jerusalem stands for?
+  reconstruction_rule: >
+    Read the registered paragraph in its own order, preserving the movement from honor and difficulty, to Jerusalem's
+    prophetic seriousness, to Strauss's confessed incapacity to reproduce the prophets' vision, to the compelled movement
+    away from sacred heritage, and finally to the explicit promise not to forget Jerusalem.
+  alternative_preservation_rule: >
+    Preserve prophetic vision versus philosophic inquiry, Jerusalem remembered versus regions in which its vision vanishes,
+    and sacred heritage versus deliberate silence or distance without supplying the complete essay's later teaching.
+
+sequential_reading:
+  - unit: WIPP-FP-RU-001
+    clause_scope: opening task and Jerusalem
+    function: Establish the honor and peculiar difficulty of speaking about political philosophy in Jerusalem.
+    findings:
+      - id: WIPP-FP-DF-001
+        classification: documented_finding
+        proposition: >
+          Strauss presents the invitation to speak on political philosophy in Jerusalem as simultaneously a great honor and a task of particular difficulty.
+      - id: WIPP-FP-DF-002
+        classification: documented_finding
+        proposition: >
+          The difficulty is not accidental to the location: Jerusalem and the land are described as places where the theme of political philosophy, expressed through the city of righteousness and faithful city, has been taken with unmatched seriousness.
+      - id: WIPP-FP-DF-003
+        classification: documented_finding
+        proposition: >
+          The defining seriousness of Jerusalem is the longing for justice and the just city that filled the purest and loftiest souls with extraordinary zeal.
+
+  - unit: WIPP-FP-RU-002
+    clause_scope: prophetic vision and incapacity
+    function: Distinguish the prophetic standard from Strauss's own capacity to reproduce it.
+    findings:
+      - id: WIPP-FP-DF-004
+        classification: documented_finding
+        proposition: >
+          Strauss identifies the highest Jerusalemite political image with the prophets' vision and says even the best human reproduction of that vision would be faint or weak.
+      - id: WIPP-FP-DF-005
+        classification: documented_finding
+        proposition: >
+          He explicitly denies his own ability to convey that vision adequately, placing his coming discourse below rather than on a level with prophetic speech.
+      - id: WIPP-FP-DF-006
+        classification: bounded_conclusion
+        proposition: >
+          Political philosophy is thus introduced under a prophetic standard it does not simply appropriate or claim to equal.
+
+  - unit: WIPP-FP-RU-003
+    clause_scope: movement away from the prophetic horizon
+    function: Mark the progressive distance between the prophetic vision and the region Strauss says he must enter.
+    findings:
+      - id: WIPP-FP-DF-007
+        classification: documented_finding
+        proposition: >
+          Strauss says he will be compelled to lead his audience toward a region where even the dimmest recollection of the prophetic vision is nearly lost.
+      - id: WIPP-FP-DF-008
+        classification: documented_finding
+        proposition: >
+          One marker of that distance is a region in which the Kingdom of God is derisively reduced to an imagined principality.
+      - id: WIPP-FP-DF-009
+        classification: documented_finding
+        proposition: >
+          He then points beyond even that region toward one never illuminated by the prophetic vision, establishing degrees of distance rather than one simple opposition.
+      - id: WIPP-FP-DF-010
+        classification: supported_inference
+        proposition: >
+          The paragraph therefore prepares a movement through intellectual regions whose relation to Jerusalem ranges from fading recollection to nonillumination; it does not yet identify those regions exhaustively.
+
+  - unit: WIPP-FP-RU-004
+    clause_scope: sacred heritage and remembrance
+    function: Close the paragraph with deliberate distance from Jerusalem joined to an explicit refusal to forget it.
+    findings:
+      - id: WIPP-FP-DF-011
+        classification: documented_finding
+        proposition: >
+          Strauss describes his coming path as wandering far from sacred heritage or being silent about it, and he accepts responsibility for the movement by saying he may be compelling himself as well as being compelled.
+      - id: WIPP-FP-DF-012
+        classification: documented_finding
+        proposition: >
+          The paragraph nevertheless ends with an unconditional promise that he will not for a moment forget what Jerusalem stands for.
+      - id: WIPP-FP-DF-013
+        classification: bounded_conclusion
+        proposition: >
+          Forgetting Jerusalem and moving away from explicit sacred discourse are therefore distinct acts: the paragraph authorizes distance or silence without authorizing oblivion.
+
+permanent_findings:
+  - id: WIPP-FP-PF-001
+    classification: documented_finding
+    proposition: >
+      Political philosophy is introduced in Jerusalem under the extraordinary seriousness of the prophetic longing for righteousness and the just city.
+  - id: WIPP-FP-PF-002
+    classification: documented_finding
+    proposition: >
+      Strauss subordinates his own speech to the prophets' vision rather than presenting philosophical discourse as an adequate reproduction of it.
+  - id: WIPP-FP-PF-003
+    classification: documented_finding
+    proposition: >
+      The paragraph maps increasing distance from Jerusalem's prophetic horizon: fading recollection, derision of the Kingdom of God as an imagined principality, and a region never illuminated by that vision.
+  - id: WIPP-FP-PF-004
+    classification: documented_finding
+    proposition: >
+      Strauss says his argument must wander far from sacred heritage or remain silent about it while simultaneously promising never to forget what Jerusalem stands for.
+  - id: WIPP-FP-PF-005
+    classification: bounded_conclusion
+    proposition: >
+      The registered paragraph establishes a remembered Jerusalem as the horizon against which the coming movement of political philosophy is measured, but it does not itself define the philosophic best regime.
+  - id: WIPP-FP-PF-006
+    classification: documentary_limit
+    proposition: >
+      The study covers only the predecessor-registered first paragraph on printed page 409; the complete essay remains outside this source identity's present study jurisdiction.
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss honors Jerusalem as the place where the longing for righteousness and the just city was taken with unsurpassed
+    seriousness, confesses his inability to reproduce the prophets' vision, warns that his discourse must move toward regions
+    remote from that vision, and promises never to forget Jerusalem.
+  textual_deed: >
+    The paragraph simultaneously establishes and withdraws from a standard. Jerusalem and prophecy supply the highest
+    political horizon; Strauss then marks his discourse as inadequate to it and prepares movement away from its explicit
+    language. The final promise of remembrance keeps that withdrawn standard present while allowing the inquiry to proceed.
+  relation: PROPHETIC_JERUSALEM_ESTABLISHED_AS_REMEMBERED_HORIZON_FOR_A_PHILOSOPHIC_MOVEMENT_THAT_MUST_DISTANCE_ITSELF_FROM_EXPLICIT_PROPHECY
+  finding: >
+    The first paragraph does not simply compare two doctrines. It stages the problem of how political philosophy can proceed
+    after acknowledging a prophetic standard it cannot reproduce and from which it must in some respects wander away.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - political philosophy speaking under the horizon of prophetic Jerusalem
+      - the city of righteousness and just city as prophetic-political themes
+      - the Kingdom of God and regions that deride or were never illuminated by it
+      - sacred heritage, philosophical distance or silence, and continued remembrance
+      - the distinction between prophetic vision and Strauss's philosophic discourse
+    non_absorption: >
+      The paragraph does not resolve prophecy and philosophy, define the complete philosophic alternative, or certify either
+      Jerusalem or political philosophy as true.
+  athens_vs_jerusalem:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives:
+      - Jerusalem as an explicit horizon that remains remembered while the inquiry moves into regions remote from prophetic revelation
+      - the structural contrast between sacred heritage and a philosophical discourse that must wander away from or remain silent about it
+    non_absorption: >
+      Athens is not named in the registered paragraph. The secondary jurisdiction records the Jerusalem-versus-philosophic-distance structure only and may not attribute a developed Athens doctrine to this paragraph.
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  predecessor_statement: >
+    Places political philosophy beside the prophetic image of Jerusalem while distinguishing the philosophic best regime from the Kingdom of God.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  state: PROVISIONAL_RETEST_PARTIAL_CONFIRMATION_WITH_MATERIAL_QUALIFICATION_NO_PROMOTION
+  confirmations:
+    - The paragraph explicitly places the task of speaking about political philosophy in Jerusalem under the prophetic image of the city of righteousness, the faithful city, justice, and the just city.
+    - It explicitly distinguishes Strauss's coming discourse from adequate reproduction of the prophets' vision and marks a movement into regions where the Kingdom of God is derided or its vision absent.
+    - The promise never to forget Jerusalem confirms that the prophetic horizon remains active even while the discourse moves away from sacred heritage.
+  qualifications:
+    - The registered first paragraph does not itself use the phrase philosophic best regime or define such a regime.
+    - The contrast explicitly available here is between prophetic Jerusalem or the Kingdom of God and regions of philosophical or intellectual distance from that vision; identifying one of those regions with the philosophic best regime requires evidence outside this registered paragraph.
+    - Because the registered source identity is intentionally limited to the first paragraph, later statements in the complete essay may not be silently imported to cure this gap.
+  unresolved:
+    - The 1959 Free Press printing has not been separately compared with the reviewed 1997 collected paragraph.
+    - The complete What Is Political Philosophy? essay remains outside this predecessor-bounded source identity's present study scope.
+    - The relation between the Kingdom of God and a philosophic best regime cannot be independently settled from this paragraph alone.
+  predecessor_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+uncertainties:
+  - id: WIPP-FP-U-001
+    statement: The study is deliberately restricted to the registered first paragraph and cannot adjudicate claims requiring later parts of the complete essay.
+  - id: WIPP-FP-U-002
+    statement: The 1959 Free Press printing has not been separately reviewed for wording or pagination differences.
+  - id: WIPP-FP-U-003
+    statement: The intellectual regions toward which Strauss says he must move are not exhaustively identified in this paragraph.
+  - id: WIPP-FP-U-004
+    statement: Athens is not named in the registered paragraph; the Athens-versus-Jerusalem binding is therefore structural and secondary rather than a source-local developed comparison.
+
+prohibitions:
+  - Do not treat the registered first paragraph as a reconstruction of the complete What Is Political Philosophy? essay.
+  - Do not claim that the phrase philosophic best regime is stated or defined in the registered paragraph.
+  - Do not import later portions of the essay to make the predecessor statement appear fully confirmed.
+  - Do not identify every region distant from prophetic vision with Athens or philosophy without further textual evidence.
+  - Do not turn Strauss's promise to remember Jerusalem into certification of prophetic revelation.
+  - Do not treat source-specific reconstruction as independent corroboration of Jerusalem, prophecy, the Kingdom of God, or political philosophy.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+
+termination:
+  registered_scope: FIRST_PARAGRAPH_ONLY
+  reading_state: COMPLETE_FOR_REGISTERED_FIRST_PARAGRAPH_OF_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  original_1959_printing_comparison_required: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE

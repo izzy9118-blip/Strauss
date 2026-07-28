@@ -1,0 +1,37 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: TP-WIPP-FIRST-PARAGRAPH-001, version: 1.0.0, title: "Theologico-Political Synthesis — What Is Political Philosophy? First Paragraph"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-110
+  reviewed_witness_id: CORPUS-WIT-110
+  study_id: WIPP-FIRST-PARAGRAPH-STUDY-001
+  study_path: studies/theologico-political/what-is-political-philosophy/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-021
+  derived_finding_set_id: FINDSET-142
+problem: {canonical_key: theologico-political, role: PRIMARY_JURISDICTION, adjacent_problem_references: [athens-vs-jerusalem]}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Political philosophy is introduced in Jerusalem under the prophetic longing for the city of righteousness, justice, and the just city."}
+  - {classification: documented_finding, proposition: "Strauss explicitly places his own discourse below the prophets' vision and says even the best human reproduction of that vision would be faint or weak."}
+  - {classification: documented_finding, proposition: "The coming inquiry must move toward regions where recollection of the prophetic vision fades, where the Kingdom of God is derided as an imagined principality, and even where the vision never illuminated."}
+  - {classification: documented_finding, proposition: "Distance or silence concerning sacred heritage is joined to an explicit promise never to forget what Jerusalem stands for."}
+  - {classification: bounded_conclusion, proposition: "The registered paragraph supports a prophetic-Jerusalem versus philosophic-distance structure but does not itself define the philosophic best regime; that part of the predecessor formulation remains unconfirmed within this bounded scope."}
+predecessor_retest:
+  active_predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  state: PROVISIONAL_RETEST_PARTIAL_CONFIRMATION_WITH_MATERIAL_QUALIFICATION_NO_PROMOTION
+  confirms:
+    - political philosophy is explicitly placed beside the prophetic image of Jerusalem
+    - the prophets' vision and the Kingdom of God are explicitly distinguished from regions into which Strauss's discourse must move
+    - Jerusalem remains a remembered horizon even when sacred heritage is not spoken of directly
+  qualifies:
+    - the phrase philosophic best regime is not stated or defined in the registered first paragraph
+    - identifying the regions distant from prophecy with the philosophic best regime requires evidence outside this bounded scope
+    - later parts of the complete essay cannot be silently imported into this source identity
+  predecessor_effect: NONE
+limits:
+  - The registered source identity covers only the first paragraph on printed p. 409 / PDF p. 428.
+  - The 1959 Free Press printing remains separately unreviewed.
+  - The source does not certify prophecy, Jerusalem, the Kingdom of God, or political philosophy as true.
+  - No migration, successor activation, predecessor displacement, or repository completion is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, original_1959_printing_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}

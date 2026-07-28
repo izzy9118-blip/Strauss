@@ -1,17 +1,112 @@
 schema_version: 1.0
 document_type: source_status_record
-identity: {status_id: CORPUS-STATUS-110, corpus_source_id: CORPUS-SRC-110, canonical_title: "What Is Political Philosophy?", author: Leo Strauss, date: 1954, version: 1.1.0, registered_scope: first paragraph}
-status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-110, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
-revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected first-paragraph witness with exact locators while preserving incomplete independent sequential reconstruction, pending 1959 printing comparison, predecessor authority, noncertification, and no successor effect."}
-registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 10, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-110, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
+identity:
+  status_id: CORPUS-STATUS-110
+  corpus_source_id: CORPUS-SRC-110
+  canonical_title: What Is Political Philosophy?
+  author: Leo Strauss
+  date: 1954
+  version: 1.2.1
+  registered_scope: first paragraph
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: CORPUS-WIT-110
+  independent_sequential_study: WIPP-FIRST-PARAGRAPH-STUDY-001
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+revision_history:
+  predecessor_version: 1.2.0
+  transformation: VALIDATOR_ALIGNMENT_WITHOUT_SCOPE_EXPANSION
+  reason: >
+    Normalize the termination study_state to the repository-wide COMPLETE_PROVISIONAL contract while preserving the separately
+    explicit first-paragraph-only scope, pending 1959 printing comparison, incomplete independent corroboration, and the material
+    qualification that the paragraph does not itself define the philosophic best regime named by the predecessor synthesis.
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 10
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-110
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
   - The registered scope is the first paragraph only.
   - The reviewed 1997 SUNY collected witness occupies printed page 409 and one-based PDF page 428.
   - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
   - The collection states that this first paragraph first appeared in Leo Strauss, What Is Political Philosophy? (New York: Free Press, 1959), 9-10.
-predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Places political philosophy beside the prophetic image of Jerusalem while distinguishing the philosophic best regime from the Kingdom of God.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
-publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, registered_scope: first paragraph, printed_page_range: {start: 409, end: 409}, pdf_page_range_one_based: {start: 428, end: 428}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
-reviewed_witness: {witness_id: CORPUS-WIT-110, witness_record_path: studies/theologico-political/what-is-political-philosophy/reviewed-witness.yaml, registered_scope: first paragraph, printed_page_range: {start: 409, end: 409}, pdf_page_range_one_based: {start: 428, end: 428}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
-source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness covers the registered first-paragraph scope only and is not independent corroboration."}
-next_required_actions: [conduct an independent sequential reading of the registered first-paragraph scope, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization, compare the 1959 printing when separately reviewed]
-termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - The paragraph explicitly places political philosophy in Jerusalem under the prophetic longing for righteousness and the just city and promises not to forget what Jerusalem stands for while moving away from sacred heritage.
+  - The phrase philosophic best regime is not stated or defined in the registered paragraph.
+predecessor_contribution_record:
+  evidence_status: PROVISIONALLY_RETESTED_WITH_PARTIAL_CONFIRMATION_AND_MATERIAL_QUALIFICATION
+  statement: Places political philosophy beside the prophetic image of Jerusalem while distinguishing the philosophic best regime from the Kingdom of God.
+  retest_result: >
+    The registered paragraph confirms that political philosophy is placed in Jerusalem beside the prophetic image of the city
+    of righteousness and the just city and that Strauss's discourse must move toward regions distant from the Kingdom of God
+    while never forgetting Jerusalem. It materially qualifies the predecessor because the registered paragraph does not itself
+    state or define the philosophic best regime; that phrase requires evidence outside the present bounded source scope.
+  preservation_rule: >
+    Partial confirmation and material qualification do not silently rewrite, migrate, certify, activate, or displace the active predecessor.
+publication_and_witness_condition:
+  reviewed_collection: Jewish Philosophy and the Crisis of Modernity
+  editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  year: 1997
+  registered_scope: first paragraph
+  original_appearance: "Leo Strauss, What Is Political Philosophy? (New York: Free Press, 1959), 9-10"
+  printed_page_range: {start: 409, end: 409}
+  pdf_page_range_one_based: {start: 428, end: 428}
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  file_size_bytes: 39287307
+  sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  fingerprint_state: AVAILABLE
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+  original_1959_printing_comparison: PENDING
+reviewed_witness:
+  witness_id: CORPUS-WIT-110
+  witness_record_path: studies/theologico-political/what-is-political-philosophy/reviewed-witness.yaml
+  registered_scope: first paragraph
+  printed_page_range: {start: 409, end: 409}
+  pdf_page_range_one_based: {start: 428, end: 428}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+study_record:
+  internal_study_id: WIPP-FIRST-PARAGRAPH-STUDY-001
+  corpus_study_id: CORPUS-STUDY-021
+  path: studies/theologico-political/what-is-political-philosophy/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REGISTERED_FIRST_PARAGRAPH_OF_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE
+  independent_corroboration: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_WRITING
+  documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS_WITH_BOUNDED_FIRST_PARAGRAPH_SCOPE
+  analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION_FOR_REGISTERED_SCOPE
+required_distinctions:
+  - registered first paragraph from the complete What Is Political Philosophy? essay
+  - prophetic Jerusalem from Strauss's philosophic discourse
+  - movement away from sacred heritage from forgetting Jerusalem
+  - the Kingdom of God from unnamed regions distant from its vision
+  - predecessor phrase philosophic best regime from what the registered paragraph explicitly states
+  - Jerusalem-versus-philosophic-distance structure from a developed Athens doctrine
+prohibitions:
+  - Do not treat the registered first paragraph as a reconstruction of the complete essay.
+  - Do not claim that philosophic best regime is stated or defined in the registered paragraph.
+  - Do not import later portions of the essay to make the predecessor statement appear fully confirmed.
+  - Do not identify unnamed regions with Athens without further textual evidence.
+  - Do not certify prophecy, Jerusalem, the Kingdom of God, political philosophy, migration, successor activation, predecessor displacement, or repository completion.
+next_required_actions:
+  - compare the 1959 Free Press printing when separately available
+  - reconstruct the complete What Is Political Philosophy? essay only through a separately authorized source identity or scope expansion
+  - preserve the source-level Theologico-Political and controlled Athens-versus-Jerusalem findings without importing a developed Athens doctrine
+  - proceed to CORPUS-SRC-114 after validation and merge of this production unit
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: REGISTERED
+  registered_scope: FIRST_PARAGRAPH_ONLY
+  study_scope_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE
+  study_state: COMPLETE_PROVISIONAL
+  study_id: WIPP-FIRST-PARAGRAPH-STUDY-001
+  independent_corroboration: INCOMPLETE
+  original_1959_printing_comparison: PENDING
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
