@@ -3,7 +3,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.16.0
+  version: 1.17.0
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
   structural_interface: IMPLEMENTED
@@ -11,10 +11,11 @@ status:
   certification: NOT_CERTIFIED
   destructive_actions_authorized: false
 revision_history:
-  predecessor_version: 1.15.0
+  predecessor_version: 1.16.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Synchronize WHY-REMAIN-JEWS-STUDY-001, corpus v1.20.0, findings v1.12.0, audit v3.4.0, process v1.18.0, and schedule
-    v1.16.0 while preserving seven pending studies and transcription/editorial limits.
+  reason: Synchronize STATE-ISRAEL-LETTER-STUDY-001, corpus v1.21.0, findings v1.13.0, audit v3.5.0, process v1.19.0, and
+    schedule v1.17.0 while preserving six pending studies, National Review comparison, material predecessor qualification,
+    noncorroboration, and no successor effect.
 source_state:
   repository: izzy9118-blip/Strauss
   governing_commit_before_mapping: 853dd7de13d7bf4abc881fc7671a5833b822b6cb
@@ -28,7 +29,7 @@ source_state:
   - scripts/
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 3.4.0
+  version: 3.5.0
   rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be reported
     as doctrinal, migration, successor, or repository completion.
 
@@ -39,7 +40,7 @@ production_process:
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
   completed_witness_subunit: THEOLOGICO_POLITICAL_REVIEWED_WITNESSES_19_OF_19_COMPLETE
-  completed_study_subunit: TWELVE_OF_19_COMPLETE_PROVISIONAL_SEVEN_PENDING
+  completed_study_subunit: THIRTEEN_OF_19_COMPLETE_PROVISIONAL_SIX_PENDING
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 mapping_rules:
@@ -122,6 +123,12 @@ mappings:
     - path: problems/athens-vs-jerusalem/synthesis/why-we-remain-jews.yaml
       source: CORPUS-SRC-107
       derivation: FINDSET-019_TO_FINDSET-139
+    - path: problems/theologico-political/synthesis/letter-to-editor-state-of-israel.yaml
+      source: CORPUS-SRC-112
+      derivation: FINDSET-020_TO_FINDSET-140
+    - path: problems/ancients-vs-moderns/synthesis/letter-to-editor-state-of-israel.yaml
+      source: CORPUS-SRC-112
+      derivation: FINDSET-020_TO_FINDSET-141
     limit: 'Problem-local integration does not finish independent witnesses, proposition-level migration, doctrinal certification,
       predecessor transition, or successor activation.
 
@@ -166,6 +173,8 @@ mappings:
       state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM_WITH_DOCUMENTARY_LIMIT
     - record: studies/theologico-political/why-we-remain-jews/sequential-reconstruction.yaml
       state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM_WITH_DOCUMENTARY_LIMIT
+    - record: studies/theologico-political/letter-to-editor-state-of-israel/sequential-reconstruction.yaml
+      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method:
     target_role: inquiry_sequence
@@ -206,6 +215,9 @@ mappings:
     - record: studies/theologico-political/why-we-remain-jews/sequential-reconstruction.yaml
       state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM_WITH_DOCUMENTARY_LIMIT
       reading_units: 12
+    - record: studies/theologico-political/letter-to-editor-state-of-israel/sequential-reconstruction.yaml
+      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
+      reading_units: 4
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   speech:
     target_role: ministerial_expression_and_output_discipline
@@ -222,7 +234,7 @@ mappings:
     - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.20.0
+      registry_version: 1.21.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
     transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COMPLETE_NINETEEN_ITEM_REVIEWED_WITNESS_COVERAGE
@@ -258,8 +270,8 @@ mappings:
       remaining_count: 0
       reviewed_witness_count: 19
       remaining_without_reviewed_witness: 0
-      independent_sequential_study_count: 12
-      remaining_without_independent_sequential_study: 7
+      independent_sequential_study_count: 13
+      remaining_without_independent_sequential_study: 6
       completed_study_ids:
       - COHEN-STUDY-001
       - JA-STUDY-001
@@ -273,9 +285,9 @@ mappings:
       - HUSIK-PREFACE-STUDY-001
       - FREUD-MOSES-STUDY-001
       - WHY-REMAIN-JEWS-STUDY-001
+      - STATE-ISRAEL-LETTER-STUDY-001
       witness_only_source_ids:
       - CORPUS-SRC-110
-      - CORPUS-SRC-112
       - CORPUS-SRC-114
       - CORPUS-SRC-115
       - CORPUS-SRC-117
@@ -293,25 +305,25 @@ mappings:
     - preserve corpus gaps and textual-state comparison limits
     - validate FREUD-MOSES-STUDY-001 as a complete provisional reconstruction with active unknown-transcriber, apparent nonapproval,
       and editor-emendation limits and no successor effect
-    limit: Current-state exhaustiveness, nineteen reviewed item witnesses, and twelve complete provisional item studies do
-      not create a complete corpus, supply independent corroboration, resolve documentary limits, certify findings, or authorize
-      migration and activation.
+    limit: Current-state exhaustiveness, nineteen reviewed item witnesses, and thirteen complete provisional item studies
+      do not create a complete corpus, supply independent corroboration, resolve textual-state or predecessor-qualification
+      limits, certify findings, or authorize migration and activation.
   findings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.12.0
+      registry_version: 1.13.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
-    - finding_set_id: FINDSET-019
-      path: studies/theologico-political/why-we-remain-jews/sequential-reconstruction.yaml
-    - finding_set_id: FINDSET-138
-      path: problems/theologico-political/synthesis/why-we-remain-jews.yaml
-      derived_from: FINDSET-019
-    - finding_set_id: FINDSET-139
-      path: problems/athens-vs-jerusalem/synthesis/why-we-remain-jews.yaml
-      derived_from: FINDSET-019
+    - finding_set_id: FINDSET-020
+      path: studies/theologico-political/letter-to-editor-state-of-israel/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-140
+      path: problems/theologico-political/synthesis/letter-to-editor-state-of-israel.yaml
+      derived_from: FINDSET-020
+    - finding_set_id: FINDSET-141
+      path: problems/ancients-vs-moderns/synthesis/letter-to-editor-state-of-israel.yaml
+      derived_from: FINDSET-020
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
     limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify doctrine
       or migration, displace predecessors, or activate successors.
@@ -377,12 +389,12 @@ completed_production_units:
 - complete read-only foundational problem bundles
 - typed current-state corpus and findings registries
 - complete 19-of-19 Theologico-Political source-identity and reviewed-witness range
-- twelve complete provisional Theologico-Political sequential reconstructions through WHY-REMAIN-JEWS-STUDY-001
-- jurisdiction-preserving source-to-problem syntheses through FINDSET-139
+- thirteen complete provisional Theologico-Political sequential reconstructions through STATE-ISRAEL-LETTER-STUDY-001
+- jurisdiction-preserving source-to-problem syntheses through FINDSET-141
 next_production_units:
-- validate and merge the bounded CORPUS-SRC-107 production unit
-- conduct CORPUS-SRC-112 independent sequential reconstruction
-- continue the remaining six item studies after CORPUS-SRC-112
+- validate and merge the bounded CORPUS-SRC-112 production unit
+- conduct CORPUS-SRC-110 independent sequential reconstruction
+- continue the remaining five item studies after CORPUS-SRC-110
 - expand independent witness reconstruction and textual-state comparison
 - validate actual candidate ministerial reports
 repinning_rule: 'Do not repin Sanctum as a completed Strauss interface while semantic completion remains INCOMPLETE. Passing

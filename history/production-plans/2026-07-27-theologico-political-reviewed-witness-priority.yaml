@@ -3,18 +3,19 @@ record_type: reviewed_witness_priority_schedule
 identity:
   id: TP-REVIEWED-WITNESS-PRIORITY-001
   title: Theologico-Political Reviewed-Witness Priority Schedule
-  version: 1.16.0
+  version: 1.17.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SCHEDULE
   certification: NOT_CERTIFIED
   identity_registration: COMPLETE_19_OF_19
   reviewed_witness_completion: COMPLETE_19_OF_19
-  independent_sequential_study_completion: INCOMPLETE_12_OF_19
+  independent_sequential_study_completion: INCOMPLETE_13_OF_19
 revision_history:
-  predecessor_version: 1.15.0
+  predecessor_version: 1.16.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete WHY-REMAIN-JEWS-STUDY-001 from CORPUS-WIT-107, advancing independent sequential study coverage to 12-of-19
-    and the next study unit to CORPUS-SRC-112 while preserving complete witness coverage and transcription/editorial limits.
+  reason: Complete STATE-ISRAEL-LETTER-STUDY-001 from CORPUS-WIT-112, advancing independent sequential study coverage to 13-of-19
+    and the next study unit to CORPUS-SRC-110 while preserving complete witness coverage, pending National Review comparison,
+    and predecessor qualification.
 purpose: 'Order reviewed-witness and sequential-study production for the nineteen source identities by documentary availability,
   foundational jurisdiction, source-asymmetry repair, nonduplication, and locator reproducibility. Priority does not rank
   philosophical truth.
@@ -196,15 +197,16 @@ priority_groups:
   - rank: 11
     source_id: CORPUS-SRC-112
     title: Letter to the Editor — The State of Israel
-    next_action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_AND_ORIGINAL_TEXTUAL_STATE_COMPARISON_WHERE_AVAILABLE
+    next_action: ORIGINAL_1957_NATIONAL_REVIEW_COMPARISON_AND_INDEPENDENT_HERZL_ISRAEL_EMANCIPATION_WITNESS_EXPANSION
     status_id: CORPUS-STATUS-112
     witness_id: CORPUS-WIT-112
-    state: REVIEWED_WITNESS_REGISTERED_SEQUENTIAL_STUDY_PENDING
+    state: REVIEWED_WITNESS_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDY
     witness_locator:
       container_title: Jewish Philosophy and the Crisis of Modernity
       container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
       printed_pages: 413-414
       pdf_pages_one_based: 432-433
+    study_id: STATE-ISRAEL-LETTER-STUDY-001
   - rank: 12
     source_id: CORPUS-SRC-104
     title: Preface to Isaac Husik, Philosophical Essays
@@ -362,12 +364,13 @@ selection:
   - HUSIK-PREFACE-STUDY-001
   - FREUD-MOSES-STUDY-001
   - WHY-REMAIN-JEWS-STUDY-001
-  selection_state: NINETEEN_REVIEWED_ITEM_WITNESSES_TWELVE_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
+  - STATE-ISRAEL-LETTER-STUDY-001
+  selection_state: NINETEEN_REVIEWED_ITEM_WITNESSES_THIRTEEN_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
   completed_units:
   - all nineteen predecessor source identities have reviewed witnesses
-  - twelve source studies are complete provisional
-  - seven witness-only sources remain pending independent sequential reconstruction
-  - all textual-state, transcription, speaker-layer, editorial, and independent-corroboration limits remain explicit
+  - thirteen source studies are complete provisional
+  - six witness-only sources remain pending independent sequential reconstruction
+  - all textual-state, transmission, predecessor-qualification, and independent-corroboration limits remain explicit
   limits:
   - reviewed-witness coverage does not constitute completed sequential reconstruction
   - original or earlier textual-state comparisons remain pending where not separately reviewed
@@ -391,13 +394,14 @@ prohibitions:
 termination:
   schedule_state: ACTIVE
   reviewed_item_witness_registration: COMPLETE_19_OF_19
-  independent_sequential_reconstruction: INCOMPLETE_12_OF_19
+  independent_sequential_reconstruction: INCOMPLETE_13_OF_19
   next_item_witness: NONE
   certification: NOT_CERTIFIED
-  next_item_study: CORPUS-SRC-112
+  next_item_study: CORPUS-SRC-110
 next_item_study_unit:
-  source_id: CORPUS-SRC-112
-  title: Letter to the Editor — The State of Israel
+  source_id: CORPUS-SRC-110
+  title: What Is Political Philosophy?
+  scope: FIRST_PARAGRAPH_ONLY_AS_REGISTERED_BY_PREDECESSOR
   action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_FROM_REGISTERED_WITNESS
-  prerequisite: SATISFIED_CORPUS_WIT_112_REGISTERED
-  following_source: CORPUS-SRC-110
+  prerequisite: SATISFIED_CORPUS_WIT_110_REGISTERED
+  following_source: CORPUS-SRC-114

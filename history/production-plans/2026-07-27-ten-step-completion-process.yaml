@@ -3,7 +3,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.18.0
+  version: 1.19.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
@@ -14,22 +14,23 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.17.0
+  predecessor_version: 1.18.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete WHY-REMAIN-JEWS-STUDY-001 as the twelfth provisional Theologico-Political sequential reconstruction and
-    advance the next study unit to CORPUS-SRC-112 while preserving transcription/editorial limits and seven remaining studies.
+  reason: Complete STATE-ISRAEL-LETTER-STUDY-001 as the thirteenth provisional Theologico-Political sequential reconstruction
+    and advance the next study unit to CORPUS-SRC-110 while preserving the National Review comparison and material predecessor
+    qualification.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 3.4.0
+  current_version: 3.5.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.16.0
+  current_version: 1.17.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -84,6 +85,8 @@ steps:
     with an explicit posthumous-transcription limit
   - Why We Remain Jews supplies distinct provisional syntheses to Theologico-Political and Athens-versus-Jerusalem with explicit
     speaker/transcription/editorial limits
+  - Letter to the Editor — The State of Israel supplies distinct provisional syntheses to Theologico-Political and Ancients-versus-Moderns
+    while materially qualifying the predecessor's unexpressed theological language
   remaining:
   - complete source-specific application to each problem
   - complete independent witness reconstruction
@@ -112,8 +115,9 @@ steps:
   - FREUD-MOSES-STUDY-001 is complete provisional for CORPUS-WIT-106 with an active transcription and editorial-emendation
     limit
   - WHY-REMAIN-JEWS-STUDY-001 is complete provisional for CORPUS-WIT-107 with active transcription and editorial limits
+  - STATE-ISRAEL-LETTER-STUDY-001 is complete provisional for CORPUS-WIT-112
   remaining:
-  - conduct seven independent sequential item studies, beginning with CORPUS-SRC-112
+  - conduct six independent sequential item studies, beginning with CORPUS-SRC-110
   - compare original or earlier textual states where available and material
   - materialize and fingerprint CORPUS-WIT-102 only through later forward revision if exact bytes become accessible
   - reconstruct Talmon's reviewed work independently
@@ -127,8 +131,8 @@ steps:
   - tests/
   - .github/workflows/validate-lean-interface.yml
   completed_in_current_sequence:
-  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the seven witness-only states
-    from the twelve completed-study states
+  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the six witness-only states
+    from the thirteen completed-study states
   - tests preserve qualified platform-reference, fingerprint, locator, scope, edition-comparison, noncertification, and no-successor
     safeguards
   - tests cover the completed study integrations through CORPUS-SRC-106 while preserving findings derivation, problem jurisdiction,
@@ -148,18 +152,18 @@ steps:
 current_production_unit:
   step: 8
   completed_subunit:
-    title: Why We Remain Jews independent sequential reconstruction
-    state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
-    source_id: CORPUS-SRC-107
-    witness_id: CORPUS-WIT-107
-    study_id: WHY-REMAIN-JEWS-STUDY-001
-    study_coverage: INCOMPLETE_12_OF_19
-    documentary_limit: POSTHUMOUS_TAPE_TRANSCRIPTION_SPEAKER_AND_EDITORIAL_LAYERS
-  next_subunit:
     title: Letter to the Editor — The State of Israel independent sequential reconstruction
+    state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
     source_id: CORPUS-SRC-112
     witness_id: CORPUS-WIT-112
-    following_source: CORPUS-SRC-110
+    study_id: STATE-ISRAEL-LETTER-STUDY-001
+    study_coverage: INCOMPLETE_13_OF_19
+    documentary_limit: ORIGINAL_1957_NATIONAL_REVIEW_COMPARISON_PENDING_AND_PREDECESSOR_THEOLOGICAL_LANGUAGE_MATERIALLY_QUALIFIED
+  next_subunit:
+    title: What Is Political Philosophy? first-paragraph independent sequential reconstruction
+    source_id: CORPUS-SRC-110
+    witness_id: CORPUS-WIT-110
+    following_source: CORPUS-SRC-114
 termination:
   state: CONTINUE_UNTIL_GENUINE_BLOCKER
   blocker_rule: 'A blocker must identify the exact missing source, authority, path, validation failure, or jurisdictional
