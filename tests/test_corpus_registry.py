@@ -70,7 +70,7 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertEqual(set(corpus_registry.WITNESS_ONLY_TP_ITEMS), {item["source_id"] for item in sources})
         for source in sources:
             status = corpus_registry.load_yaml(corpus_registry._resolve(entries[source["source_id"]]["path"]))
-            self.assertEqual(source["item_level_source_status"], "REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION")
+            self.assertEqual(source["item_level_source_status"], "REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED")
             self.assertEqual(source["reviewed_witnesses"], [corpus_registry.WITNESS_ONLY_TP_ITEMS[source["source_id"]]["witness_id"]])
             self.assertEqual(status["status"]["independent_sequential_study"], "SPINOZA-TREATISE-STUDY-001")
             self.assertEqual(status["termination"]["study_state"], "COMPLETE_PROVISIONAL")
@@ -172,7 +172,7 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertEqual(witness["pdf_page_range_one_based"], pdf_range)
         self.assertEqual(
             witness["container_sha256"],
-            "8479ed41fe952b8ebc5a2a5b6557a482a60de0d13032785a68f11d52ea8b4fb6",
+            "8479ed41fe951b8ebc5a2a5b6557a482a60de0d13032785a68f11d51ea8b4fb6",
         )
         self.assertEqual(status["status"]["reviewed_witness"], witness_id)
         self.assertEqual(status["status"]["independent_sequential_study"], internal_study_id)
@@ -195,7 +195,7 @@ class CorpusRegistryTests(unittest.TestCase):
             corpus_study_id="CORPUS-STUDY-008",
             internal_study_id="JA-STUDY-001",
             printed_range={"start": 147, "end": 173},
-            pdf_range={"start": 152, "end": 177},
+            pdf_range={"start": 151, "end": 177},
         )
 
     def test_cohen_witness_and_study_are_registered(self) -> None:
@@ -205,7 +205,7 @@ class CorpusRegistryTests(unittest.TestCase):
             corpus_study_id="CORPUS-STUDY-009",
             internal_study_id="COHEN-STUDY-001",
             printed_range={"start": 233, "end": 247},
-            pdf_range={"start": 237, "end": 252},
+            pdf_range={"start": 237, "end": 251},
         )
 
     def test_talmon_witness_and_study_are_registered(self) -> None:
