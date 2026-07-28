@@ -28,7 +28,7 @@ class CompleteTPWitnessCoverageTests(unittest.TestCase):
         self.assertEqual(corpus["coverage"]["theologico_political_reviewed_item_witnesses_registered"], 19)
         self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 4)
         self.assertEqual(corpus["termination"]["theologico_political_reviewed_witness_state"], "COMPLETE_19_OF_19")
-        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_4_OF_19")
+        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_5_OF_19")
 
     def test_fifteen_witness_only_items_remain_noncertified_and_unstudied(self):
         corpus = load_yaml("corpus/index.yaml")

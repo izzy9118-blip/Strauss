@@ -61,6 +61,7 @@ BASE_REQUIRED_STUDY_PATHS = {
     "studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml",
     "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml",
     "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml",
+    "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml",
 }
 
 REQUIRED_TOP_LEVEL = {
@@ -100,79 +101,6 @@ COMPLETE_TP_ITEMS: dict[str, dict[str, Any]] = {
         "reading_state": "COMPLETE_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS",
         "platform_reference": True,
         "platform_object_identifier": "file_0000000073c081fd9fb65f9ea7552cde",
-    },
-    "CORPUS-SRC-105": {
-        "status_id": "CORPUS-STATUS-105",
-        "witness_id": "CORPUS-WIT-105",
-        "study_id": "CORPUS-STUDY-009",
-        "internal_study_id": "COHEN-STUDY-001",
-        "study_path": (
-            "studies/theologico-political/"
-            "introductory-essay-hermann-cohen-religion-of-reason/"
-            "sequential-reconstruction.yaml"
-        ),
-        "witness_record_path": (
-            "studies/theologico-political/"
-            "introductory-essay-hermann-cohen-religion-of-reason/"
-            "reviewed-witness.yaml"
-        ),
-        "printed_page_range": {"start": 233, "end": 247},
-        "pdf_page_range_one_based": {"start": 237, "end": 251},
-        "reading_state": "COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS",
-        "platform_reference": False,
-    },
-    "CORPUS-SRC-109": {
-        "status_id": "CORPUS-STATUS-109",
-        "witness_id": "CORPUS-WIT-109",
-        "study_id": "CORPUS-STUDY-008",
-        "internal_study_id": "JA-STUDY-001",
-        "study_path": "studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml",
-        "witness_record_path": None,
-        "printed_page_range": {"start": 147, "end": 173},
-        "pdf_page_range_one_based": {"start": 151, "end": 177},
-        "reading_state": "COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS",
-        "platform_reference": False,
-    },
-    "CORPUS-SRC-111": {
-        "status_id": "CORPUS-STATUS-111",
-        "witness_id": "CORPUS-WIT-111",
-        "study_id": "CORPUS-STUDY-010",
-        "internal_study_id": "TALMON-STUDY-001",
-        "study_path": (
-            "studies/theologico-political/review-talmon-nature-of-jewish-history/"
-            "sequential-reconstruction.yaml"
-        ),
-        "witness_record_path": (
-            "studies/theologico-political/review-talmon-nature-of-jewish-history/"
-            "reviewed-witness.yaml"
-        ),
-        "printed_page_range": {"start": 232, "end": 232},
-        "pdf_page_range_one_based": {"start": 236, "end": 236},
-        "reading_state": "COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS",
-        "platform_reference": False,
-    },
-}
-
-WITNESS_ONLY_TP_ITEMS: dict[str, dict[str, Any]] = {
-    "CORPUS-SRC-101": {
-        "status_id": "CORPUS-STATUS-101",
-        "witness_id": "CORPUS-WIT-101",
-        "witness_record_path": "studies/theologico-political/progress-or-return/reviewed-witness.yaml",
-        "printed_page_range": {'start': 87, 'end': 136},
-        "pdf_page_range_one_based": {'start': 106, 'end': 155},
-        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
-        "container_file_size_bytes": 39287307,
-        "container_page_count": 526,
-    },
-    "CORPUS-SRC-103": {
-        "status_id": "CORPUS-STATUS-103",
-        "witness_id": "CORPUS-WIT-103",
-        "witness_record_path": "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml",
-        "printed_page_range": {'start': 181, 'end': 233},
-        "pdf_page_range_one_based": {'start': 200, 'end': 252},
-        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
-        "container_file_size_bytes": 39287307,
-        "container_page_count": 526,
     },
     "CORPUS-SRC-104": {
         "status_id": "CORPUS-STATUS-104",
@@ -722,8 +650,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.12.0":
-        errors.append("corpus registry identity.version must be 1.12.0")
+    if identity.get("version") != "1.13.0":
+        errors.append("corpus registry identity.version must be 1.13.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
@@ -750,7 +678,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "source entities": (len(source_ids), 22),
         "reviewed witnesses": (len(witness_ids), 22),
         "source-status records": (len(status_ids), 22),
-        "study records": (len(study_ids), 11),
+        "study records": (len(study_ids), 12),
         "corpus gaps": (len(gap_ids), 7),
     }
     for label, (actual, expected) in expected_counts.items():
@@ -817,7 +745,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "theologico_political_predecessor_sources_registered": len(tp_entities),
         "theologico_political_item_level_statuses_registered": 19,
         "theologico_political_reviewed_item_witnesses_registered": 19,
-        "theologico_political_independent_item_studies_registered": 4,
+        "theologico_political_independent_item_studies_registered": 5,
         "current_studies_tree_yaml_records_accounted_for": len(actual_studies),
         "exhaustive_within_declared_scope": True,
     }
@@ -834,8 +762,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         errors.append("TP identity registration must remain COMPLETE_19_OF_19")
     if termination.get("theologico_political_reviewed_witness_state") != "COMPLETE_19_OF_19":
         errors.append("TP reviewed-witness state must be COMPLETE_19_OF_19")
-    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_4_OF_19":
-        errors.append("TP independent-study state must be INCOMPLETE_4_OF_19")
+    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_5_OF_19":
+        errors.append("TP independent-study state must be INCOMPLETE_5_OF_19")
     if termination.get("corpus_state") != "OPEN_AND_MATERIALLY_INCOMPLETE":
         errors.append("registry termination must preserve an open, incomplete corpus")
     if termination.get("certification") != "NOT_CERTIFIED":

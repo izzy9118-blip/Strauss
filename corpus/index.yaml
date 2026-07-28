@@ -3,7 +3,7 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.12.0
+  version: 1.13.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
@@ -11,13 +11,12 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 revision_history:
-  predecessor_version: 1.11.0
-  predecessor_blob_sha: b23efa44e354894bb22cfd6b0b0d65312b5c3ad0
+  predecessor_version: 1.12.0
+  predecessor_blob_sha: aa9e00e2272f35a773e3be89fa1269650642924f
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register the remaining fourteen fingerprinted 1997 SUNY collected witnesses so all nineteen Theologico-Political
-    predecessor source identities have reviewed witnesses, while preserving fifteen pending independent sequential
-    studies, edition-comparison limits, noncorroboration, noncertification, predecessor authority, and no successor
-    effect.
+  reason: Register SPINOZA-TREATISE-STUDY-001 as the fifth complete provisional Theologico-Political item study,
+    preserving the reviewed 1997 witness, pending 1948 comparison, independent-corroboration limits, noncertification,
+    predecessor authority, and no successor effect.
 purpose: Provide deterministic discovery, source identity, documentary status, provenance, problem binding, study
   binding, witness condition, and gap records without moving source records, distributing source texts, certifying
   doctrine, or treating a registered corpus as complete merely because every current record is indexed.
@@ -172,15 +171,18 @@ source_entities:
   - wise-vs-vulgar
   reviewed_witnesses:
   - CORPUS-WIT-103
-  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
   limits:
   - reviewed witness is the fingerprinted 1997 SUNY collected reprint, not a separately reviewed 1948 journal printing
   - printed pages 181-233 correspond to one-based PDF pages 200-252 in the reviewed file
+  - the argumentative body is printed pages 181-224 and notes continue through printed page 233
   - the collection acknowledgment identifies the original publication as Proceedings of the American Academy for
     Jewish Research 17 (1948), 69-131
-  - original 1948 journal comparison and independent sequential reconstruction remain pending
-  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - SPINOZA-TREATISE-STUDY-001 is source-local and not independent corroboration of Spinoza or represented traditions
+  - original 1948 journal comparison remains pending
+  study_records:
+  - CORPUS-STUDY-012
 - source_id: CORPUS-SRC-104
   creator: Leo Strauss
   canonical_title: Preface to Isaac Husik, Philosophical Essays
@@ -1198,6 +1200,12 @@ study_records:
   record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
   completion: COMPLETE_PROVISIONAL_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
   certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-012
+  source_id: CORPUS-SRC-103
+  path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
 problem_witness_registries:
 - problem: nomos-vs-physis
   path: problems/nomos-vs-physis/witnesses.yaml
@@ -1249,13 +1257,13 @@ coverage:
   source_entities_registered: 22
   reviewed_witnesses_registered: 22
   source_status_records_registered: 22
-  study_records_registered: 11
+  study_records_registered: 12
   problem_witness_registries_registered: 7
   theologico_political_predecessor_sources_registered: 19
   theologico_political_item_level_statuses_registered: 19
   theologico_political_reviewed_item_witnesses_registered: 19
-  theologico_political_independent_item_studies_registered: 4
-  current_studies_tree_yaml_records_accounted_for: 51
+  theologico_political_independent_item_studies_registered: 5
+  current_studies_tree_yaml_records_accounted_for: 52
   exhaustive_within_declared_scope: true
 corpus_gaps:
 - gap_id: CORPUS-GAP-001
@@ -1269,9 +1277,9 @@ corpus_gaps:
   effect: EDITION_SPECIFIC_DIFFERENCES_NOT_YET_TESTED
 - gap_id: CORPUS-GAP-003
   category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES
-  statement: All nineteen predecessor writings have bounded source identities and reviewed witnesses. Four have
-    complete provisional independent sequential studies; the remaining fifteen have registered witnesses but still
-    require independent sequential reconstruction.
+  statement: All nineteen predecessor writings have bounded source identities and reviewed item witnesses; CORPUS-SRC-102,
+    CORPUS-SRC-103, CORPUS-SRC-105, CORPUS-SRC-109, and CORPUS-SRC-111 have complete provisional sequential studies,
+    while the remaining fourteen lack independent item studies.
   effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL
 - gap_id: CORPUS-GAP-004
   category: INDEPENDENT_CLASSICAL_WITNESSES
@@ -1313,13 +1321,12 @@ termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   theologico_political_identity_registration_state: COMPLETE_19_OF_19
   theologico_political_reviewed_witness_state: COMPLETE_19_OF_19
-  theologico_political_independent_study_state: INCOMPLETE_4_OF_19
+  theologico_political_independent_study_state: INCOMPLETE_5_OF_19
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
   certification: NOT_CERTIFIED
   next_required_units:
-  - conduct independent sequential reconstruction for the remaining fifteen writings, beginning with CORPUS-SRC-103
-  - compare collected witnesses with separately reviewed original or earlier textual states where available and
-    material
+  - conduct independent sequential reconstruction of CORPUS-SRC-108 from CORPUS-WIT-108
+  - compare the reviewed 1997 CORPUS-WIT-103 item with the original 1948 journal printing when available
   - compare the 1997 CORPUS-WIT-102 composite with separately reviewed 1965 and 1968 textual states
-  - acquire and reconstruct Talmon's reviewed work and other independent classical, biblical, medieval, Spinozist,
-    Cohenian, Kantian, and modern witnesses
+  - conduct independent sequential reconstruction for the remaining fourteen writings
+  - acquire and reconstruct Talmon's reviewed work
