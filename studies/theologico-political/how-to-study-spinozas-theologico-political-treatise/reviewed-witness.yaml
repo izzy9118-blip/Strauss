@@ -1,0 +1,105 @@
+schema_version: 1.0
+document_type: reviewed_item_witness_record
+
+identity:
+  witness_id: CORPUS-WIT-103
+  source_id: CORPUS-SRC-103
+  title: Reviewed item witness — How to Study Spinoza's Theologico-Political Treatise
+  version: 1.0.0
+
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
+  certification: NOT_CERTIFIED
+  independent_sequential_study: NOT_YET_COMPLETED
+  original_edition_comparison: PENDING
+  source_text_admission: NOT_REQUESTED
+  successor_effect: NONE
+
+source_identity:
+  author: Leo Strauss
+  canonical_title: How to Study Spinoza's Theologico-Political Treatise
+  date: 1948
+  corpus_source_id: CORPUS-SRC-103
+  source_status_id: CORPUS-STATUS-103
+
+publication_provenance:
+  collection_acknowledgment: >
+    The 1997 collection acknowledges the essay as reprinted from Proceedings of the
+    American Academy for Jewish Research 17 (1948), pages 69 through 131.
+  original_publication:
+    journal: Proceedings of the American Academy for Jewish Research
+    volume: 17
+    year: 1948
+    printed_page_range: {start: 69, end: 131}
+  original_1948_journal_copy_reviewed: false
+  collected_reprint:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    series: SUNY Series in the Jewish Writings of Leo Strauss
+    publisher: State University of New York Press
+    publication_place: Albany
+    year: 1997
+
+container_witness:
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+
+item_locators:
+  printed_page_range: {start: 181, end: 233}
+  pdf_page_range_one_based: {start: 200, end: 252}
+  argumentative_body_printed_page_range: {start: 181, end: 224}
+  notes_printed_page_range: {start: 224, end: 233}
+  following_blank_pdf_page_one_based: 253
+  next_item_pdf_page_one_based: 254
+  next_item_printed_page: 235
+  item_completeness: COMPLETE_COLLECTED_ITEM
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+
+textual_condition:
+  searchable_text: true
+  page_images_available: true
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  original_1948_journal_copy_compared: false
+
+jurisdiction_and_limits:
+  governing_problem: theologico-political
+  secondary_problem_bindings: [wise-vs-vulgar]
+  distinctions:
+    - interpretation from historical or psychological explanation
+    - explicit meaning from inferred hidden or unconscious implication
+    - author-supplied interpretive framework from external historical information
+    - exoteric accommodation from a mechanical rule of inversion
+    - the reviewed 1997 collected reprint from the separately reviewed 1948 journal printing
+    - witness registration from independent sequential reconstruction
+    - source-level reconstruction from predecessor synthesis
+  non_effects:
+    - no source-level proposition promotion
+    - no predecessor synthesis confirmation
+    - no doctrinal certification
+    - no migration certification
+    - no successor activation
+    - no predecessor displacement
+
+next_required_action:
+  action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  range: printed pages 181 through 233
+  prerequisites_satisfied: REVIEWED_ITEM_WITNESS_REGISTERED
+  remaining_requirements:
+    - reconstruct the complete argument in textual order
+    - distinguish the argumentative body from notes and editorial framing
+    - distinguish explicit statements, contradictions, audience claims, and exoteric interpretation without mechanical inversion
+    - classify documented findings, supported inferences, uncertainties, and false resolutions with locators
+    - compare with the predecessor only after source-level reconstruction
+    - compare the original 1948 journal printing when available
+
+termination:
+  witness_state: REGISTERED
+  study_state: INCOMPLETE
+  original_edition_comparison: PENDING
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
