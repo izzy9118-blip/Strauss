@@ -1,0 +1,27 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: AVJ-PROGRESS-RETURN-001, version: 1.0.0, title: "Athens-versus-Jerusalem Synthesis — Progress or Return?"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-101
+  reviewed_witness_id: CORPUS-WIT-101
+  study_id: PROGRESS-RETURN-STUDY-001
+  study_path: studies/theologico-political/progress-or-return/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-016
+  derived_finding_set_id: FINDSET-132
+problem: {canonical_key: athens-vs-jerusalem, role: CONTROLLED_SECONDARY_JURISDICTION, primary_problem_reference: theologico-political}
+source_local_findings:
+  - {classification: documented_finding, proposition: "The Bible and Greek philosophy are the two fundamental sources or codes of Western civilization."}
+  - {classification: documented_finding, proposition: "Strauss describes Western life as life between Jerusalem and Athens and treats their tension as fundamental and life-giving."}
+  - {classification: documented_finding, proposition: "Biblical and classical ethics overlap substantially in practical conduct while differing radically over humility, self-assertion, art, cosmology, creation, and the meaning of wisdom."}
+  - {classification: documented_finding, proposition: "Every attempted synthesis ultimately sides with one of the alternatives, while neither Jerusalem nor Athens has refuted the other."}
+  - {classification: bounded_conclusion, proposition: "The source requires openness to both alternatives without aesthetic eclecticism, harmonization, or certification of a victor."}
+non_absorption:
+  - Jerusalem and Athens are not reduced to historical cultures detached from the primary question of revelation versus philosophy.
+  - Moral overlap does not dissolve disagreement over ultimate authority and the good life.
+  - The synthesis does not certify either alternative or a higher common principle.
+  - Independent biblical and Greek witnesses remain required for corroboration.
+limits:
+  - The 1979 and 1981 publication states remain separately unreviewed.
+  - No doctrine, migration, successor activation, or predecessor displacement is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, earlier_publication_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
