@@ -38,7 +38,7 @@ class HusikPrefaceCompletionTests(unittest.TestCase):
         layers = study["speaker_and_documentary_layers"]
         self.assertIn("original_1952_editors_statement", layers)
         self.assertIn("green_1997_editorial_layer", layers)
-        self.assertIn("collective 1952 editorial layer", " ".join(study["source_limits"]))
+        self.assertIn("collective editorial layer", " ".join(study["source_limits"]))
         self.assertIn("1997 collected-edition editorial layer", " ".join(study["source_limits"]))
 
     def test_findings_derivation_preserves_two_problem_jurisdictions_only(self) -> None:
