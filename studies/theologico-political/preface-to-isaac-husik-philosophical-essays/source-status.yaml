@@ -7,7 +7,7 @@ registration_basis: {active_predecessor: problems/theologico-political.yaml, act
 verified_documentary_facts:
   - The reviewed 1997 SUNY collected witness occupies printed pages 235-266 and one-based PDF pages 254-285.
   - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
-  - The collection states that the preface first appeared in Isaac Husik, Philosophical Essays: Ancient, Medieval, and Modern, edited by Milton Nahm and Leo Strauss (Oxford: Basil Blackwell, 1952), vii-xli.
+  - "The collection states that the preface first appeared in Isaac Husik, Philosophical Essays: Ancient, Medieval, and Modern, edited by Milton Nahm and Leo Strauss (Oxford: Basil Blackwell, 1952), vii-xli."
 predecessor_contribution_record:
   evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
   statement: Distinguishes the living confrontation between philosophy and revealed law from an antiquarian history of medieval Jewish philosophy.
