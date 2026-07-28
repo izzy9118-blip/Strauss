@@ -1,0 +1,57 @@
+name: Materialize Final Five Theologico-Political Studies
+
+on:
+  push:
+    branches:
+      - production/complete-final-five-tp-studies
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/complete-final-five-tp-studies
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependency
+        run: python -m pip install ruamel.yaml PyYAML
+
+      - name: Decode and run bounded materializer
+        shell: bash
+        run: |
+          base64 -d scripts/.final5_materializer.py.gz.b64 | gzip -d > /tmp/materialize_final_five.py
+          python /tmp/materialize_final_five.py
+
+      - name: Remove temporary materializer artifacts
+        run: |
+          rm -f scripts/.final5_materializer.py.gz.b64
+          rm -f .github/workflows/materialize-final-five-tp.yml
+
+      - name: Validate generated repository state
+        run: |
+          python adapter.py --validate
+          python problem_bundles.py --validate
+          python corpus_registry.py --validate
+          python findings_registry.py --validate
+          python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Commit generated final-five integration
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git status --short
+          git commit -m "Integrate final five Theologico-Political studies"
+          git push origin HEAD:production/complete-final-five-tp-studies
