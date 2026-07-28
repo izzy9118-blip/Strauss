@@ -3,7 +3,7 @@ record_type: typed_findings_registry
 identity:
   id: STRAUSS-FINDINGS-INDEX-001
   title: Strauss Repository Typed Findings Registry
-  version: 1.8.0
+  version: 1.9.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
@@ -11,12 +11,11 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_JURISDICTION_AND_REVISION_ONLY
 revision_history:
-  predecessor_version: 1.7.0
+  predecessor_version: 1.8.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register HOBBES-PREFACE-STUDY-001 as FINDSET-015 and its jurisdiction-preserving Theologico-Political
-    and Ancients-versus-Moderns syntheses as FINDSET-129 and FINDSET-130 while preserving the documentary-omission,
-    textual-state, noncorroboration, noncertification, and no-successor safeguards.
+  reason: Register PROGRESS-RETURN-STUDY-001 as FINDSET-016 and jurisdiction-preserving syntheses FINDSET-131 through
+    FINDSET-133 while preserving publication-state, noncorroboration, noncertification, and no-successor safeguards.
 purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record
   class, migration state, and provenance while preserving the difference among documentary finding, supported inference,
   working hypothesis, comparative question, contradiction, dissent, and unresolved uncertainty.
@@ -336,6 +335,26 @@ finding_sets:
   original_1965_german_preface_comparison: PENDING
   interpretation_1979_80_translation_comparison: PENDING
   omitted_text_review: INCOMPLETE
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
+- finding_set_id: FINDSET-016
+  path: studies/theologico-political/progress-or-return/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-101
+  problem_bindings:
+  - theologico-political
+  - athens-vs-jerusalem
+  - ancients-vs-moderns
+  status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  derived_local_syntheses:
+  - FINDSET-131
+  - FINDSET-132
+  - FINDSET-133
+  witness_id: CORPUS-WIT-101
+  earlier_publication_comparison: PENDING
   independent_corroboration: INCOMPLETE
   successor_effect: NONE
 - finding_set_id: FINDSET-101
@@ -781,6 +800,50 @@ finding_sets:
   status: PROVISIONAL_NOT_CERTIFIED
   certification: NOT_CERTIFIED
   successor_effect: NONE
+- finding_set_id: FINDSET-131
+  path: problems/theologico-political/synthesis/progress-or-return.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-101
+  problem_bindings:
+  - theologico-political
+  adjacent_problem_references:
+  - athens-vs-jerusalem
+  - ancients-vs-moderns
+  derived_from:
+  - FINDSET-016
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-132
+  path: problems/athens-vs-jerusalem/synthesis/progress-or-return.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-101
+  problem_bindings:
+  - athens-vs-jerusalem
+  theologico_political_reference: theologico-political
+  derived_from:
+  - FINDSET-016
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-133
+  path: problems/ancients-vs-moderns/synthesis/progress-or-return.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-101
+  problem_bindings:
+  - ancients-vs-moderns
+  theologico_political_reference: theologico-political
+  derived_from:
+  - FINDSET-016
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
 - finding_set_id: FINDSET-201
   path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   record_class: MIGRATION_TRANSACTION_LEDGER
@@ -919,6 +982,7 @@ indexes:
     - FINDSET-013
     - FINDSET-014
     - FINDSET-015
+    - FINDSET-016
     - FINDSET-105
     - FINDSET-106
     - FINDSET-111
@@ -929,6 +993,7 @@ indexes:
     - FINDSET-124
     - FINDSET-127
     - FINDSET-129
+    - FINDSET-131
     - FINDSET-202
     - FINDSET-203
     - FINDSET-301
@@ -942,12 +1007,14 @@ indexes:
     - FINDSET-010
     - FINDSET-011
     - FINDSET-013
+    - FINDSET-016
     - FINDSET-107
     - FINDSET-112
     - FINDSET-114
     - FINDSET-117
     - FINDSET-120
     - FINDSET-125
+    - FINDSET-132
     wise-vs-vulgar:
     - FINDSET-002
     - FINDSET-003
@@ -971,11 +1038,13 @@ indexes:
     - FINDSET-010
     - FINDSET-011
     - FINDSET-015
+    - FINDSET-016
     - FINDSET-110
     - FINDSET-115
     - FINDSET-118
     - FINDSET-121
     - FINDSET-130
+    - FINDSET-133
   by_source:
     CORPUS-SRC-001:
     - FINDSET-001
@@ -997,6 +1066,14 @@ indexes:
     CORPUS-SRC-003:
     - FINDSET-007
     - FINDSET-108
+    CORPUS-SRC-101:
+    - FINDSET-016
+    - FINDSET-105
+    - FINDSET-131
+    - FINDSET-132
+    - FINDSET-133
+    - FINDSET-203
+    - FINDSET-301
     CORPUS-SRC-102:
     - FINDSET-011
     - FINDSET-105
@@ -1072,6 +1149,7 @@ indexes:
     - FINDSET-013
     - FINDSET-014
     - FINDSET-015
+    - FINDSET-016
     INTEGRATION_GOVERNANCE_RECORD:
     - FINDSET-005
     - FINDSET-006
@@ -1106,6 +1184,9 @@ indexes:
     - FINDSET-128
     - FINDSET-129
     - FINDSET-130
+    - FINDSET-131
+    - FINDSET-132
+    - FINDSET-133
     MIGRATION_TRANSACTION_LEDGER:
     - FINDSET-201
     - FINDSET-202
@@ -1114,14 +1195,14 @@ indexes:
     - FINDSET-301
     - FINDSET-302
 coverage:
-  finding_sets_registered: 50
-  source_specific_and_integration_records_registered: 15
-  problem_syntheses_registered: 30
+  finding_sets_registered: 54
+  source_specific_and_integration_records_registered: 16
+  problem_syntheses_registered: 33
   migration_transaction_ledgers_registered: 3
   preserved_finding_bases_registered: 2
-  current_problem_synthesis_tree_yaml_records_accounted_for: 30
+  current_problem_synthesis_tree_yaml_records_accounted_for: 33
   current_foundational_transaction_tree_yaml_records_accounted_for: 3
-  corpus_study_records_accounted_for: 15
+  corpus_study_records_accounted_for: 16
   canonical_problem_indexes_registered: 7
   exhaustive_within_declared_scope: true
 proposition_kinds:
@@ -1155,8 +1236,8 @@ findings_gaps:
   statement: Many registered source entities lack independent source-specific study records.
   effect: FINDINGS_COVERAGE_REMAINS_SOURCE_ASYMMETRICAL
 - gap_id: FINDINGS-GAP-003
-  statement: Eight of the nineteen Theologico-Political writings now have complete provisional item studies; the
-    remaining eleven lack individual sequential studies.
+  statement: Nine of the nineteen Theologico-Political writings now have complete provisional item studies; the
+    remaining ten lack individual sequential studies.
   effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE
 - gap_id: FINDINGS-GAP-004
   statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and
@@ -1189,6 +1270,8 @@ validation_rules:
   and retain noncorroboration and no-successor safeguards
 - FINDSET-015 must derive only FINDSET-129 and FINDSET-130, preserve CORPUS-WIT-116, the omitted-text limit, pending
   1965/1979-80 comparison, noncorroboration, and no-successor safeguards
+- FINDSET-016 must derive only FINDSET-131 through FINDSET-133, preserve CORPUS-WIT-101, pending earlier-publication
+  comparison, noncorroboration, and no-successor safeguards
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   findings_state: OPEN_MATERIALLY_INCOMPLETE_AND_NONCERTIFIED

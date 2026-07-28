@@ -1,0 +1,31 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: TP-PROGRESS-RETURN-001, version: 1.0.0, title: "Theologico-Political Synthesis — Progress or Return?"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-101
+  reviewed_witness_id: CORPUS-WIT-101
+  study_id: PROGRESS-RETURN-STUDY-001
+  study_path: studies/theologico-political/progress-or-return/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-016
+  derived_finding_set_id: FINDSET-131
+problem: {canonical_key: theologico-political, role: PRIMARY_JURISDICTION, adjacent_problem_references: [athens-vs-jerusalem, ancients-vs-moderns]}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Return from the crisis of modern progress leads to the two premodern sources of Western civilization, the Bible and Greek philosophy."}
+  - {classification: documented_finding, proposition: "Strauss presents revelation and philosophy as irreducible ways of life whose conflict cannot be settled by human reason."}
+  - {classification: documented_finding, proposition: "Historical criticism cannot prove or disprove revelation because the required historical evidence cannot be made complete in the relevant demonstrative sense."}
+  - {classification: documented_finding, proposition: "Philosophy cannot refute revelation without completing the proof of autonomous natural order and the impossibility of miracle."}
+  - {classification: documented_finding, proposition: "Strauss concludes that philosophy itself rests on an act of faith in the philosophic life as the one thing needful while revelation remains rationally unrefuted."}
+  - {classification: bounded_conclusion, proposition: "The source preserves the revelation-philosophy conflict rather than certifying either alternative or resolving it through synthesis."}
+predecessor_retest:
+  active_predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirms: ["progress and return are rival orientations", "biblical and philosophic accounts of the good life remain unresolved alternatives", "their tension is presented as a living foundation of Western civilization"]
+  qualifies: ["return is not restoration to one homogeneous tradition but return to two conflicting roots", "the final argument explicitly states that the conflict cannot be settled by human reason", "philosophy's own commitment is described by Strauss as an act of faith within this confrontation"]
+  predecessor_effect: NONE
+limits:
+  - The 1997 collected witness is not a separately reviewed 1979 or 1981 publication state.
+  - Biblical, Greek, Jewish, Christian, Spinozist, and modern historical witnesses remain independently incomplete unless separately registered.
+  - No doctrine, migration, successor activation, predecessor displacement, or repository completion is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, earlier_publication_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}

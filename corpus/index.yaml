@@ -3,7 +3,7 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.16.0
+  version: 1.17.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
@@ -11,12 +11,13 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 revision_history:
-  predecessor_version: 1.15.0
-  predecessor_blob_sha: 5104e4b0a1b3ac55d5df057a365d52ce3c785426
+  predecessor_version: 1.16.0
+  predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register HOBBES-PREFACE-STUDY-001 as the eighth complete provisional Theologico-Political item study while
-    preserving the reviewed item's documentary omission, pending 1965/1979-80 comparison, noncorroboration, noncertification,
-    predecessor authority, and no successor effect.
+  reason: Register PROGRESS-RETURN-STUDY-001 as the ninth complete provisional Theologico-Political item study,
+    correct CORPUS-SRC-101 publication provenance to the 1952 lectures and 1979/1981 posthumous publication history
+    supplied by the reviewed collection, and preserve noncorroboration, noncertification, predecessor authority,
+    and no successor effect.
 purpose: Provide deterministic discovery, source identity, documentary status, provenance, problem binding, study
   binding, witness condition, and gap records without moving source records, distributing source texts, certifying
   doctrine, or treating a registered corpus as complete merely because every current record is indexed.
@@ -127,12 +128,20 @@ source_entities:
   - theologico-political
   - athens-vs-jerusalem
   - ancients-vs-moderns
-  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
   reviewed_witnesses:
   - CORPUS-WIT-101
   limits:
-  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - reviewed witness is the fingerprinted 1997 SUNY collected text, not separately reviewed 1979 or 1981 posthumous
+    publications
+  - printed pages 87-136 correspond to one-based PDF pages 106-155
+  - Strauss lecture and discussion body occupies printed pages 87-132 and editorial notes continue through 136
+  - PROGRESS-RETURN-STUDY-001 is source-local and not independent corroboration of biblical, Greek, Jewish, Christian,
+    Spinozist, or modern historical claims
+  - the act-of-faith formulation remains source-local and the revelation-philosophy conflict remains unresolved
+  study_records:
+  - CORPUS-STUDY-016
 - source_id: CORPUS-SRC-102
   creator: Leo Strauss
   canonical_title: Preface to Spinoza's Critique of Religion
@@ -1050,7 +1059,7 @@ source_status_records:
   source_id: CORPUS-SRC-101
   path: studies/theologico-political/progress-or-return/source-status.yaml
   document_type: source_status_record
-  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-102
   source_id: CORPUS-SRC-102
@@ -1251,6 +1260,12 @@ study_records:
   record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
   completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS_WITH_DOCUMENTARY_OMISSION_LIMIT
   certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-016
+  source_id: CORPUS-SRC-101
+  path: studies/theologico-political/progress-or-return/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
 problem_witness_registries:
 - problem: nomos-vs-physis
   path: problems/nomos-vs-physis/witnesses.yaml
@@ -1302,13 +1317,13 @@ coverage:
   source_entities_registered: 22
   reviewed_witnesses_registered: 22
   source_status_records_registered: 22
-  study_records_registered: 15
+  study_records_registered: 16
   problem_witness_registries_registered: 7
   theologico_political_predecessor_sources_registered: 19
   theologico_political_item_level_statuses_registered: 19
   theologico_political_reviewed_item_witnesses_registered: 19
-  theologico_political_independent_item_studies_registered: 8
-  current_studies_tree_yaml_records_accounted_for: 55
+  theologico_political_independent_item_studies_registered: 9
+  current_studies_tree_yaml_records_accounted_for: 56
   exhaustive_within_declared_scope: true
 corpus_gaps:
 - gap_id: CORPUS-GAP-001
@@ -1322,8 +1337,8 @@ corpus_gaps:
   effect: EDITION_SPECIFIC_DIFFERENCES_NOT_YET_TESTED
 - gap_id: CORPUS-GAP-003
   category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES
-  statement: All nineteen predecessor writings have bounded source identities and reviewed item witnesses; eight
-    have complete provisional sequential studies, while the remaining eleven lack independent item studies.
+  statement: All nineteen predecessor writings have bounded source identities and reviewed item witnesses; nine
+    have complete provisional sequential studies, while the remaining ten lack independent item studies.
   effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL
 - gap_id: CORPUS-GAP-004
   category: INDEPENDENT_CLASSICAL_WITNESSES
@@ -1365,18 +1380,19 @@ validation_rules:
   while original-1952 comparison remains pending
 - CORPUS-SRC-116 preserves the documentary-omission limit while recording complete provisional reconstruction of
   the text actually present in CORPUS-WIT-116
-- all eleven witness-only Theologico-Political sources preserve registered-witness, pending-study, edition-comparison,
+- CORPUS-SRC-101 preserves reviewed-witness safeguards and complete provisional sequential reconstruction while
+  1979/1981 publication comparison remains pending
+- all ten witness-only Theologico-Political sources preserve registered-witness, pending-study, edition-comparison,
   noncertification, and no-successor safeguards
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   theologico_political_identity_registration_state: COMPLETE_19_OF_19
   theologico_political_reviewed_witness_state: COMPLETE_19_OF_19
-  theologico_political_independent_study_state: INCOMPLETE_8_OF_19
+  theologico_political_independent_study_state: INCOMPLETE_9_OF_19
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
   certification: NOT_CERTIFIED
   next_required_units:
-  - conduct independent sequential reconstruction of CORPUS-SRC-101 from CORPUS-WIT-101
-  - review the omitted final three paragraphs and compare the 1965 German and 1979-80 English Hobbes-preface textual
-    states when lawful witnesses are available
-  - conduct independent sequential reconstruction for the remaining eleven writings
-  - expand independent Hobbesian, Spinozist, biblical, Greek, medieval, modern, and reviewed-work witnesses
+  - conduct independent sequential reconstruction of CORPUS-SRC-104 from CORPUS-WIT-104
+  - compare the reviewed 1997 CORPUS-WIT-101 item with the 1979 and 1981 publication states when available
+  - conduct independent sequential reconstruction for the remaining ten writings
+  - expand independent biblical, Greek, Jewish, Christian, Spinozist, medieval, modern, and reviewed-work witnesses

@@ -34,12 +34,14 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/ancients-vs-moderns/synthesis/preface-to-hobbes-politische-wissenschaft.yaml",
     "problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml",
+    "problems/ancients-vs-moderns/synthesis/progress-or-return.yaml",
     "problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml",
     "problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml",
     "problems/athens-vs-jerusalem/synthesis/on-the-interpretation-of-genesis.yaml",
     "problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml",
+    "problems/athens-vs-jerusalem/synthesis/progress-or-return.yaml",
     "problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml",
     "problems/nomos-vs-physis/synthesis/on-the-interpretation-of-genesis.yaml",
@@ -54,6 +56,7 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml",
     "problems/theologico-political/synthesis/preface-to-hobbes-politische-wissenschaft.yaml",
     "problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml",
+    "problems/theologico-political/synthesis/progress-or-return.yaml",
     "problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml",
     "problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml",
@@ -98,6 +101,7 @@ DIRECT_SOURCE_KEYS = [
     "CORPUS-SRC-001",
     "CORPUS-SRC-002",
     "CORPUS-SRC-003",
+    "CORPUS-SRC-101",
     "CORPUS-SRC-102",
     "CORPUS-SRC-103",
     "CORPUS-SRC-105",
@@ -186,6 +190,12 @@ SOURCE_STUDY_CONTRACTS = {
         "local_syntheses": ["FINDSET-129", "FINDSET-130"],
         "problem_bindings": {"FINDSET-129": "theologico-political", "FINDSET-130": "ancients-vs-moderns"},
         "required_limits": {"witness_id": "CORPUS-WIT-116", "omitted_text_review": "INCOMPLETE", "independent_corroboration": "INCOMPLETE"},
+    },
+    "FINDSET-016": {
+        "source_id": "CORPUS-SRC-101",
+        "local_syntheses": ["FINDSET-131", "FINDSET-132", "FINDSET-133"],
+        "problem_bindings": {"FINDSET-131": "theologico-political", "FINDSET-132": "athens-vs-jerusalem", "FINDSET-133": "ancients-vs-moderns"},
+        "required_limits": {"witness_id": "CORPUS-WIT-101", "earlier_publication_comparison": "PENDING", "independent_corroboration": "INCOMPLETE"},
     },
 }
 
@@ -324,7 +334,7 @@ def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[
     result = {key: [] for key in DIRECT_SOURCE_KEYS}
     result["CORPUS-SRC-101-119"] = []
     predecessor_sources = {f"CORPUS-SRC-{number:03d}" for number in range(101, 120)}
-    separately_indexed = {"CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-105", "CORPUS-SRC-108", "CORPUS-SRC-111", "CORPUS-SRC-113", "CORPUS-SRC-116"}
+    separately_indexed = {"CORPUS-SRC-101", "CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-105", "CORPUS-SRC-108", "CORPUS-SRC-111", "CORPUS-SRC-113", "CORPUS-SRC-116"}
     for item in finding_sets:
         bindings = set(item.get("source_bindings", []))
         finding_id = item["finding_set_id"]
@@ -408,8 +418,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.8.0":
-        errors.append("findings registry identity.version must be 1.8.0")
+    if identity.get("version") != "1.9.0":
+        errors.append("findings registry identity.version must be 1.9.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -424,8 +434,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(registry.get("findings_gaps", []), "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 50:
-        errors.append(f"expected 50 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 54:
+        errors.append(f"expected 54 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 

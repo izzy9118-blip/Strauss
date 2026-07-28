@@ -3,13 +3,13 @@ record_type: reviewed_witness_priority_schedule
 identity:
   id: TP-REVIEWED-WITNESS-PRIORITY-001
   title: Theologico-Political Reviewed-Witness Priority Schedule
-  version: 1.12.0
+  version: 1.13.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SCHEDULE
   certification: NOT_CERTIFIED
   identity_registration: COMPLETE_19_OF_19
   reviewed_witness_completion: COMPLETE_19_OF_19
-  independent_sequential_study_completion: INCOMPLETE_8_OF_19
+  independent_sequential_study_completion: INCOMPLETE_9_OF_19
 revision_history:
   predecessor_version: 1.11.0
   predecessor_blob_sha: PRESERVED_BY_GIT
@@ -168,15 +168,16 @@ priority_groups:
   - rank: 9
     source_id: CORPUS-SRC-101
     title: Progress or Return?
-    next_action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_AND_ORIGINAL_TEXTUAL_STATE_COMPARISON_WHERE_AVAILABLE
+    next_action: COMPARE_1979_1981_PUBLICATION_STATES_AND_EXPAND_INDEPENDENT_WITNESSES
     status_id: CORPUS-STATUS-101
     witness_id: CORPUS-WIT-101
-    state: REVIEWED_WITNESS_REGISTERED_SEQUENTIAL_STUDY_PENDING
+    state: REVIEWED_WITNESS_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDY
     witness_locator:
       container_title: Jewish Philosophy and the Crisis of Modernity
       container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
       printed_pages: 87-136
       pdf_pages_one_based: 106-155
+    study_id: PROGRESS-RETURN-STUDY-001
 - priority: 3
   designation: POLITICAL_AND_HISTORICAL_MEDIATIONS
   items:
@@ -355,6 +356,7 @@ selection:
   - GENESIS-STUDY-001
   - PERSECUTION-INTRO-STUDY-001
   - HOBBES-PREFACE-STUDY-001
+  - PROGRESS-RETURN-STUDY-001
   selection_state: NINETEEN_REVIEWED_ITEM_WITNESSES_EIGHT_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
   completed_units:
   - all nineteen predecessor source identities have reviewed witnesses
@@ -384,13 +386,13 @@ prohibitions:
 termination:
   schedule_state: ACTIVE
   reviewed_item_witness_registration: COMPLETE_19_OF_19
-  independent_sequential_reconstruction: INCOMPLETE_8_OF_19
+  independent_sequential_reconstruction: INCOMPLETE_9_OF_19
   next_item_witness: NONE
   certification: NOT_CERTIFIED
-  next_item_study: CORPUS-SRC-101
+  next_item_study: CORPUS-SRC-104
 next_item_study_unit:
-  source_id: CORPUS-SRC-101
-  title: Progress or Return?
+  source_id: CORPUS-SRC-104
+  title: Preface to Isaac Husik, Philosophical Essays
   action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_FROM_REGISTERED_WITNESS
-  prerequisite: SATISFIED_CORPUS_WIT_101_REGISTERED
-  following_source: CORPUS-SRC-104
+  prerequisite: SATISFIED_CORPUS_WIT_104_REGISTERED
+  following_source: CORPUS-SRC-106
