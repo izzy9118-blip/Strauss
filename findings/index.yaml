@@ -991,6 +991,9 @@ validation_rules:
 - FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
 - FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison,
   and retain noncorroboration and no-successor safeguards
+- FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
+- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison,
+  and retain noncorroboration and no-successor safeguards
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   findings_state: OPEN_MATERIALLY_INCOMPLETE_AND_NONCERTIFIED
