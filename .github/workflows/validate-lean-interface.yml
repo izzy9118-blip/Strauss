@@ -41,7 +41,7 @@ on:
       - ".github/workflows/validate-lean-interface.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -49,6 +49,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -57,6 +59,18 @@ jobs:
 
       - name: Install dependency
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
+
+      - name: Materialize SRC103 integration
+        if: github.event_name == 'pull_request' && github.head_ref == 'study-src103-spinoza-treatise'
+        run: |
+          python scripts/materialize_src103_integration.py
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add corpus/index.yaml findings/index.yaml corpus_registry.py findings_registry.py manifest.yaml audits/operational-completeness.yaml migrations/lean-operational-interface.yaml history/production-plans/2026-07-27-ten-step-completion-process.yaml history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
+            git commit -m "Integrate CORPUS-SRC-103 into typed registries"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
 
       - name: Validate manifest, audit, paths, and speech contract
         run: |
