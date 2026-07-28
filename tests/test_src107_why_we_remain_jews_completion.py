@@ -50,15 +50,15 @@ class WhyWeRemainJewsCompletionTests(unittest.TestCase):
         self.assertEqual(study["independent_corroboration"], "INCOMPLETE")
         self.assertEqual(study["successor_effect"], "NONE")
 
-    def test_twelve_of_nineteen_completion_language_is_synchronized(self) -> None:
+    def test_forward_completion_language_remains_synchronized_after_src112(self) -> None:
         corpus = load_yaml("corpus/index.yaml")
         manifest = load_yaml("manifest.yaml")
         schedule = load_yaml("history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml")
-        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 12)
-        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_12_OF_19")
-        self.assertEqual(manifest["corpus"]["theologico_political_item_level_statuses"]["independent_sequential_study_count"], 12)
-        self.assertEqual(schedule["termination"]["independent_sequential_reconstruction"], "INCOMPLETE_12_OF_19")
-        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-112")
+        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 13)
+        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_13_OF_19")
+        self.assertEqual(manifest["corpus"]["theologico_political_item_level_statuses"]["independent_sequential_study_count"], 13)
+        self.assertEqual(schedule["termination"]["independent_sequential_reconstruction"], "INCOMPLETE_13_OF_19")
+        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-110")
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,16 +1,117 @@
 schema_version: 1.0
 document_type: source_status_record
-identity: {status_id: CORPUS-STATUS-112, corpus_source_id: CORPUS-SRC-112, canonical_title: "Letter to the Editor — The State of Israel", author: Leo Strauss, date: 1957, version: 1.1.0}
-status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-112, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
-revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, pending National Review comparison, predecessor authority, noncertification, and no successor effect."}
-registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 12, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-112, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
+identity:
+  status_id: CORPUS-STATUS-112
+  corpus_source_id: CORPUS-SRC-112
+  canonical_title: Letter to the Editor — The State of Israel
+  author: Leo Strauss
+  date: 1957
+  version: 1.2.0
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: CORPUS-WIT-112
+  independent_sequential_study: STATE-ISRAEL-LETTER-STUDY-001
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+revision_history:
+  predecessor_version: 1.1.0
+  transformation: FORWARD_SOURCE_STUDY_COMPLETION_AND_PREDECESSOR_QUALIFICATION
+  reason: >
+    Record the independent sequential reconstruction of the reviewed 1997 collected letter and retest the predecessor
+    contribution without silently importing theological language absent from this source. Preserve pending comparison with
+    the 5 January 1957 National Review printing, incomplete independent corroboration, predecessor authority,
+    noncertification, and no migration or successor effect.
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 12
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-112
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
   - The reviewed 1997 SUNY collected witness occupies printed pages 413-414 and one-based PDF pages 432-433.
   - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
   - The collection states that the letter first appeared in National Review 3, no. 1 (5 January 1957): 23.
-predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Distinguishes the political dignity and necessity of Jewish statehood from redemption, messianic fulfillment, or proof of providence.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
-publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 413, end: 414}, pdf_page_range_one_based: {start: 432, end: 433}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
-reviewed_witness: {witness_id: CORPUS-WIT-112, witness_record_path: studies/theologico-political/letter-to-editor-state-of-israel/reviewed-witness.yaml, printed_page_range: {start: 413, end: 414}, pdf_page_range_one_based: {start: 432, end: 433}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
-source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to the source, not independent corroboration."}
-next_required_actions: [conduct an independent sequential reading of printed pages 413-414, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization, compare the 1957 National Review printing when separately reviewed]
-termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - Strauss states that his observations are based exclusively on what he saw while teaching at the Hebrew University in Jerusalem during the academic year 1954-55.
+  - STATE-ISRAEL-LETTER-STUDY-001 reconstructs the complete two-page letter before comparison with the active predecessor.
+  - The letter explicitly calls political Zionism problematic while defending its moral force, restoration of inner freedom and dignity, and conservative resistance to progressive leveling.
+  - The terms redemption, messianic fulfillment, and providence do not occur in the source argument reconstructed from the reviewed item.
+predecessor_contribution_record:
+  evidence_status: PROVISIONALLY_RETESTED_WITH_PARTIAL_CONFIRMATION_AND_MATERIAL_QUALIFICATION
+  statement: Distinguishes the political dignity and necessity of Jewish statehood from redemption, messianic fulfillment, or proof of providence.
+  retest_result: >
+    The study strongly confirms political dignity and moral force: Zionism is connected with restoration of inner freedom,
+    heritage, loyalty to fate, and simple dignity after the limits of emancipation. It also confirms that Zionism remains
+    explicitly problematic rather than an unqualified fulfillment. The study materially qualifies the predecessor because
+    this letter does not explicitly discuss redemption, messianic fulfillment, or providence, and it states political
+    dignity and moral force more clearly than a systematic doctrine of political necessity.
+  preservation_rule: >
+    Partial confirmation and material qualification do not silently revise, migrate, certify, activate, or displace the active predecessor.
+publication_and_witness_condition:
+  reviewed_collection: Jewish Philosophy and the Crisis of Modernity
+  editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  year: 1997
+  original_appearance: "National Review 3, no. 1 (5 January 1957): 23"
+  printed_page_range: {start: 413, end: 414}
+  pdf_page_range_one_based: {start: 432, end: 433}
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  file_size_bytes: 39287307
+  sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_page_count: 526
+  fingerprint_state: AVAILABLE
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+  original_1957_national_review_comparison: PENDING
+reviewed_witness:
+  witness_id: CORPUS-WIT-112
+  witness_record_path: studies/theologico-political/letter-to-editor-state-of-israel/reviewed-witness.yaml
+  printed_page_range: {start: 413, end: 414}
+  pdf_page_range_one_based: {start: 432, end: 433}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_file_size_bytes: 39287307
+study_record:
+  internal_study_id: STATE-ISRAEL-LETTER-STUDY-001
+  corpus_study_id: CORPUS-STUDY-020
+  path: studies/theologico-political/letter-to-editor-state-of-israel/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  independent_corroboration: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_WRITING
+  documentary_rank: REVIEWED_PRIMARY_STRAUSS_ITEM_WITHIN_FINGERPRINTED_COLLECTED_WITNESS
+  analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+required_distinctions:
+  - political dignity and moral force from theological redemption or providential proof
+  - nobility of effort from exclusive success calculation
+  - heritage from lethargic traditionalism
+  - formal equality from inner freedom
+  - institutional label from meaning in historical circumstances
+  - political Zionism's acknowledged problematic character from rejection of its moral achievement
+  - source-local conservative criteria from a complete general doctrine of conservatism
+  - reviewed 1997 collected reprint from separately reviewed 1957 National Review printing
+prohibitions:
+  - Do not claim that this letter explicitly separates Zionism from redemption, messianic fulfillment, or providence; those terms are absent from its argument.
+  - Do not convert the favorable judgment of Israel into doctrinal certification of Zionism or the state of Israel.
+  - Do not convert the repeated rhetorical definition of a conservative into a complete repository doctrine of conservatism.
+  - Do not treat Strauss's observations about Israel, labor, marriage, constitutional life, or Herzl as independent historical corroboration.
+  - Do not infer Athens-versus-Jerusalem merely from the Bible, West, or East language.
+  - Do not treat source-specific reconstruction as independent corroboration.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+next_required_actions:
+  - compare the original 5 January 1957 National Review printing when separately available
+  - reconstruct the National Review articles Strauss answers, Herzl, emancipation history, Israeli institutional history, and relevant theological sources independently where required
+  - preserve source-level findings and Theologico-Political plus Ancients-versus-Moderns jurisdictions in the typed findings registry
+  - proceed to CORPUS-SRC-110 after validation and merge of this production unit
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-112
+  study_state: COMPLETE_PROVISIONAL
+  study_id: STATE-ISRAEL-LETTER-STUDY-001
+  independent_corroboration: INCOMPLETE
+  original_1957_national_review_comparison: PENDING
+  certification: NOT_CERTIFIED
+  successor_effect: NONE

@@ -1,0 +1,37 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: TP-STATE-ISRAEL-LETTER-001, version: 1.0.0, title: "Theologico-Political Synthesis — Letter to the Editor: The State of Israel"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-112
+  reviewed_witness_id: CORPUS-WIT-112
+  study_id: STATE-ISRAEL-LETTER-STUDY-001
+  study_path: studies/theologico-political/letter-to-editor-state-of-israel/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-020
+  derived_finding_set_id: FINDSET-140
+problem: {canonical_key: theologico-political, role: PRIMARY_JURISDICTION, adjacent_problem_references: [ancients-vs-moderns]}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Strauss defends Israel through political dignity, heritage, biblical antiquity, heroic austerity, and the nobility of the undertaking rather than through calculations of success alone."}
+  - {classification: documented_finding, proposition: "Political Zionism is reconstructed as a response to emancipation's combination of formal equality with alienation from heritage and loss of inner freedom."}
+  - {classification: documented_finding, proposition: "Herzl's Zionism is called conservative because it seeks restoration of inner freedom, simple dignity, memory of heritage, loyalty to fate, and resistance to progressive leveling of ancestral differences."}
+  - {classification: documented_finding, proposition: "Political Zionism remains explicitly problematic in the letter even while Strauss refuses to forget its moral achievement."}
+  - {classification: bounded_conclusion, proposition: "The source confirms a moral-political defense of Jewish statehood but does not itself explicitly formulate a distinction between statehood and redemption, messianic fulfillment, or providence; those predecessor terms remain independently unconfirmed by this letter."}
+predecessor_retest:
+  active_predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  state: PROVISIONAL_RETEST_PARTIAL_CONFIRMATION_WITH_MATERIAL_QUALIFICATION_NO_PROMOTION
+  confirms:
+    - political dignity and inner freedom are central to Strauss's defense of Zionism
+    - Zionism can be a moral force even while remaining explicitly problematic
+    - Jewish statehood is defended through heritage and political nobility rather than merely material success
+  qualifies:
+    - redemption, messianic fulfillment, and providence are not explicitly discussed in this letter and cannot be claimed as independently confirmed source findings
+    - political necessity is less explicit than political dignity and moral force
+    - the Hebrew Bible and nearness of biblical antiquity remain positive features of Israel's national spirit, so the source is not simply a secular-political separation of statehood from religion
+  predecessor_effect: NONE
+limits:
+  - The reviewed witness is the 1997 collected reprint; comparison with National Review 3, no. 1 (5 January 1957): 23 remains pending.
+  - Historical and institutional claims remain source-local pending independent verification.
+  - The source does not certify Zionism, Israel, redemption, messianism, providence, or any general doctrine of conservatism.
+  - No migration, successor activation, predecessor displacement, or repository completion is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, original_1957_national_review_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
