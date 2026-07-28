@@ -70,6 +70,7 @@ publication_and_witness_condition:
   editor_notes_authorship: ENTIRELY_KENNETH_HART_GREEN
   discussion_record_state: EDITOR_REPORTS_NO_TAPE_OR_TRANSCRIPT_SURVIVES
   earlier_publication_citation_in_collection_sources: NONE_SUPPLIED
+  original_or_earlier_textual_state_comparison: PENDING_IF_LATER_IDENTIFIED_OR_ACQUIRED
   printed_page_range: {start: 285, end: 309}
   lecture_body: {start: 285, end: 306}
   editor_notes: {start: 306, end: 309}
@@ -132,9 +133,10 @@ termination:
   source_identity_state: REGISTERED
   reviewed_witness_state: REGISTERED
   reviewed_witness_id: CORPUS-WIT-106
-  study_state: COMPLETE_PROVISIONAL_WITH_TRANSCRIPTION_AND_EDITORIAL_LIMIT
+  study_state: COMPLETE_PROVISIONAL
   study_id: FREUD-MOSES-STUDY-001
   independent_corroboration: INCOMPLETE
   transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_FAR_AS_COLLECTION_EDITOR_CAN_DETERMINE
+  documentary_transmission_limit: ACTIVE
   certification: NOT_CERTIFIED
   successor_effect: NONE
