@@ -3,7 +3,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.17.0
+  version: 1.18.0
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
   structural_interface: IMPLEMENTED
@@ -11,7 +11,7 @@ status:
   certification: NOT_CERTIFIED
   destructive_actions_authorized: false
 revision_history:
-  predecessor_version: 1.16.0
+  predecessor_version: 1.17.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   reason: Synchronize STATE-ISRAEL-LETTER-STUDY-001, corpus v1.21.0, findings v1.13.0, audit v3.5.0, process v1.19.0, and
     schedule v1.17.0 while preserving six pending studies, National Review comparison, material predecessor qualification,
@@ -29,7 +29,7 @@ source_state:
   - scripts/
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 3.5.0
+  version: 3.6.0
   rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be reported
     as doctrinal, migration, successor, or repository completion.
 
@@ -40,7 +40,7 @@ production_process:
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
   completed_witness_subunit: THEOLOGICO_POLITICAL_REVIEWED_WITNESSES_19_OF_19_COMPLETE
-  completed_study_subunit: THIRTEEN_OF_19_COMPLETE_PROVISIONAL_SIX_PENDING
+  completed_study_subunit: FOURTEEN_OF_19_COMPLETE_PROVISIONAL_FIVE_PENDING
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 mapping_rules:
@@ -234,7 +234,7 @@ mappings:
     - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.21.0
+      registry_version: 1.22.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
     transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COMPLETE_NINETEEN_ITEM_REVIEWED_WITNESS_COVERAGE
@@ -270,8 +270,8 @@ mappings:
       remaining_count: 0
       reviewed_witness_count: 19
       remaining_without_reviewed_witness: 0
-      independent_sequential_study_count: 13
-      remaining_without_independent_sequential_study: 6
+      independent_sequential_study_count: 14
+      remaining_without_independent_sequential_study: 5
       completed_study_ids:
       - COHEN-STUDY-001
       - JA-STUDY-001
@@ -286,8 +286,8 @@ mappings:
       - FREUD-MOSES-STUDY-001
       - WHY-REMAIN-JEWS-STUDY-001
       - STATE-ISRAEL-LETTER-STUDY-001
+      - WIPP-FIRST-PARAGRAPH-STUDY-001
       witness_only_source_ids:
-      - CORPUS-SRC-110
       - CORPUS-SRC-114
       - CORPUS-SRC-115
       - CORPUS-SRC-117
@@ -312,18 +312,18 @@ mappings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.13.0
+      registry_version: 1.14.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
-    - finding_set_id: FINDSET-020
-      path: studies/theologico-political/letter-to-editor-state-of-israel/sequential-reconstruction.yaml
-    - finding_set_id: FINDSET-140
-      path: problems/theologico-political/synthesis/letter-to-editor-state-of-israel.yaml
-      derived_from: FINDSET-020
-    - finding_set_id: FINDSET-141
-      path: problems/ancients-vs-moderns/synthesis/letter-to-editor-state-of-israel.yaml
-      derived_from: FINDSET-020
+    - finding_set_id: FINDSET-021
+      path: studies/theologico-political/what-is-political-philosophy/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-142
+      path: problems/theologico-political/synthesis/what-is-political-philosophy-first-paragraph.yaml
+      derived_from: FINDSET-021
+    - finding_set_id: FINDSET-143
+      path: problems/athens-vs-jerusalem/synthesis/what-is-political-philosophy-first-paragraph.yaml
+      derived_from: FINDSET-021
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
     limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify doctrine
       or migration, displace predecessors, or activate successors.

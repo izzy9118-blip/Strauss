@@ -3,15 +3,15 @@ record_type: reviewed_witness_priority_schedule
 identity:
   id: TP-REVIEWED-WITNESS-PRIORITY-001
   title: Theologico-Political Reviewed-Witness Priority Schedule
-  version: 1.17.0
+  version: 1.18.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SCHEDULE
   certification: NOT_CERTIFIED
   identity_registration: COMPLETE_19_OF_19
   reviewed_witness_completion: COMPLETE_19_OF_19
-  independent_sequential_study_completion: INCOMPLETE_13_OF_19
+  independent_sequential_study_completion: INCOMPLETE_14_OF_19
 revision_history:
-  predecessor_version: 1.16.0
+  predecessor_version: 1.17.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   reason: Complete STATE-ISRAEL-LETTER-STUDY-001 from CORPUS-WIT-112, advancing independent sequential study coverage to 13-of-19
     and the next study unit to CORPUS-SRC-110 while preserving complete witness coverage, pending National Review comparison,
@@ -262,16 +262,17 @@ priority_groups:
   - rank: 16
     source_id: CORPUS-SRC-110
     title: What Is Political Philosophy?
-    next_action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_AND_ORIGINAL_TEXTUAL_STATE_COMPARISON_WHERE_AVAILABLE
+    next_action: ORIGINAL_1959_COMPARISON_AND_SEPARATELY_AUTHORIZED_COMPLETE_ESSAY_SCOPE_IF_NEEDED
     status_id: CORPUS-STATUS-110
     witness_id: CORPUS-WIT-110
-    state: REVIEWED_WITNESS_REGISTERED_SEQUENTIAL_STUDY_PENDING
+    state: REVIEWED_WITNESS_AND_COMPLETE_PROVISIONAL_REGISTERED_SCOPE_STUDY
     witness_locator:
       container_title: Jewish Philosophy and the Crisis of Modernity
       container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
       printed_pages: 409-409
       pdf_pages_one_based: 428-428
       registered_scope: first paragraph
+    study_id: WIPP-FIRST-PARAGRAPH-STUDY-001
   - rank: 17
     source_id: CORPUS-SRC-118
     title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
@@ -365,7 +366,8 @@ selection:
   - FREUD-MOSES-STUDY-001
   - WHY-REMAIN-JEWS-STUDY-001
   - STATE-ISRAEL-LETTER-STUDY-001
-  selection_state: NINETEEN_REVIEWED_ITEM_WITNESSES_THIRTEEN_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
+  - WIPP-FIRST-PARAGRAPH-STUDY-001
+  selection_state: NINETEEN_REVIEWED_ITEM_WITNESSES_FOURTEEN_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
   completed_units:
   - all nineteen predecessor source identities have reviewed witnesses
   - thirteen source studies are complete provisional
@@ -394,14 +396,12 @@ prohibitions:
 termination:
   schedule_state: ACTIVE
   reviewed_item_witness_registration: COMPLETE_19_OF_19
-  independent_sequential_reconstruction: INCOMPLETE_13_OF_19
+  independent_sequential_reconstruction: INCOMPLETE_14_OF_19
   next_item_witness: NONE
   certification: NOT_CERTIFIED
-  next_item_study: CORPUS-SRC-110
+  next_item_study: CORPUS-SRC-114
 next_item_study_unit:
-  source_id: CORPUS-SRC-110
-  title: What Is Political Philosophy?
-  scope: FIRST_PARAGRAPH_ONLY_AS_REGISTERED_BY_PREDECESSOR
+  source_id: CORPUS-SRC-114
+  title: Perspectives on the Good Society
   action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_FROM_REGISTERED_WITNESS
-  prerequisite: SATISFIED_CORPUS_WIT_110_REGISTERED
-  following_source: CORPUS-SRC-114
+  prerequisite: SATISFIED_CORPUS_WIT_114_REGISTERED

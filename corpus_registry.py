@@ -173,6 +173,16 @@ COMPLETE_TP_ITEMS: dict[str, dict[str, Any]] = {'CORPUS-SRC-101': {'status_id': 
                     'pdf_page_range_one_based': {'start': 151, 'end': 177},
                     'reading_state': 'COMPLETE_FOR_REVIEWED_1983_COLLECTED_WITNESS',
                     'platform_reference': False},
+ 'CORPUS-SRC-110': {'status_id': 'CORPUS-STATUS-110',
+                    'witness_id': 'CORPUS-WIT-110',
+                    'study_id': 'CORPUS-STUDY-021',
+                    'internal_study_id': 'WIPP-FIRST-PARAGRAPH-STUDY-001',
+                    'study_path': 'studies/theologico-political/what-is-political-philosophy/sequential-reconstruction.yaml',
+                    'witness_record_path': 'studies/theologico-political/what-is-political-philosophy/reviewed-witness.yaml',
+                    'printed_page_range': {'start': 409, 'end': 409},
+                    'pdf_page_range_one_based': {'start': 428, 'end': 428},
+                    'reading_state': 'COMPLETE_FOR_REGISTERED_FIRST_PARAGRAPH_OF_REVIEWED_1997_COLLECTED_WITNESS',
+                    'platform_reference': False},
  'CORPUS-SRC-111': {'status_id': 'CORPUS-STATUS-111',
                     'witness_id': 'CORPUS-WIT-111',
                     'study_id': 'CORPUS-STUDY-010',
@@ -214,15 +224,7 @@ COMPLETE_TP_ITEMS: dict[str, dict[str, Any]] = {'CORPUS-SRC-101': {'status_id': 
                     'reading_state': 'COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS',
                     'platform_reference': False}}
 
-WITNESS_ONLY_TP_ITEMS: dict[str, dict[str, Any]] = {'CORPUS-SRC-110': {'status_id': 'CORPUS-STATUS-110',
-                    'witness_id': 'CORPUS-WIT-110',
-                    'witness_record_path': 'studies/theologico-political/what-is-political-philosophy/reviewed-witness.yaml',
-                    'printed_page_range': {'start': 409, 'end': 409},
-                    'pdf_page_range_one_based': {'start': 428, 'end': 428},
-                    'container_sha256': '43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66',
-                    'container_file_size_bytes': 39287307,
-                    'container_page_count': 526},
- 'CORPUS-SRC-114': {'status_id': 'CORPUS-STATUS-114',
+WITNESS_ONLY_TP_ITEMS: dict[str, dict[str, Any]] = {'CORPUS-SRC-114': {'status_id': 'CORPUS-STATUS-114',
                     'witness_id': 'CORPUS-WIT-114',
                     'witness_record_path': 'studies/theologico-political/perspectives-on-the-good-society/reviewed-witness.yaml',
                     'printed_page_range': {'start': 431, 'end': 445},
@@ -679,8 +681,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.21.0":
-        errors.append("corpus registry identity.version must be 1.21.0")
+    if identity.get("version") != "1.22.0":
+        errors.append("corpus registry identity.version must be 1.22.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
@@ -707,7 +709,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "source entities": (len(source_ids), 22),
         "reviewed witnesses": (len(witness_ids), 22),
         "source-status records": (len(status_ids), 22),
-        "study records": (len(study_ids), 20),
+        "study records": (len(study_ids), 21),
         "corpus gaps": (len(gap_ids), 7),
     }
     for label, (actual, expected) in expected_counts.items():
@@ -774,7 +776,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "theologico_political_predecessor_sources_registered": len(tp_entities),
         "theologico_political_item_level_statuses_registered": 19,
         "theologico_political_reviewed_item_witnesses_registered": 19,
-        "theologico_political_independent_item_studies_registered": 13,
+        "theologico_political_independent_item_studies_registered": 14,
         "current_studies_tree_yaml_records_accounted_for": len(actual_studies),
         "exhaustive_within_declared_scope": True,
     }
@@ -791,8 +793,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         errors.append("TP identity registration must remain COMPLETE_19_OF_19")
     if termination.get("theologico_political_reviewed_witness_state") != "COMPLETE_19_OF_19":
         errors.append("TP reviewed-witness state must be COMPLETE_19_OF_19")
-    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_13_OF_19":
-        errors.append("TP independent-study state must be INCOMPLETE_13_OF_19")
+    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_14_OF_19":
+        errors.append("TP independent-study state must be INCOMPLETE_14_OF_19")
     if termination.get("corpus_state") != "OPEN_AND_MATERIALLY_INCOMPLETE":
         errors.append("registry termination must preserve an open, incomplete corpus")
     if termination.get("certification") != "NOT_CERTIFIED":

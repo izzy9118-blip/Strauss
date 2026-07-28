@@ -47,6 +47,7 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/athens-vs-jerusalem/synthesis/progress-or-return.yaml",
     "problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml",
+    "problems/athens-vs-jerusalem/synthesis/what-is-political-philosophy-first-paragraph.yaml",
     "problems/athens-vs-jerusalem/synthesis/why-we-remain-jews.yaml",
     "problems/nomos-vs-physis/synthesis/on-the-interpretation-of-genesis.yaml",
     "problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml",
@@ -66,6 +67,7 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/theologico-political/synthesis/letter-to-editor-state-of-israel.yaml",
     "problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml",
+    "problems/theologico-political/synthesis/what-is-political-philosophy-first-paragraph.yaml",
     "problems/theologico-political/synthesis/why-we-remain-jews.yaml",
     "problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/wise-vs-vulgar/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml",
@@ -117,6 +119,7 @@ DIRECT_SOURCE_KEYS = [
     "CORPUS-SRC-106",
     "CORPUS-SRC-107",
     "CORPUS-SRC-108",
+    "CORPUS-SRC-110",
     "CORPUS-SRC-111",
     "CORPUS-SRC-112",
     "CORPUS-SRC-113",
@@ -232,6 +235,12 @@ SOURCE_STUDY_CONTRACTS = {
         "local_syntheses": ["FINDSET-140", "FINDSET-141"],
         "problem_bindings": {"FINDSET-140": "theologico-political", "FINDSET-141": "ancients-vs-moderns"},
         "required_limits": {"witness_id": "CORPUS-WIT-112", "original_1957_national_review_comparison": "PENDING", "predecessor_retest_state": "PARTIAL_CONFIRMATION_WITH_MATERIAL_QUALIFICATION", "independent_corroboration": "INCOMPLETE"},
+    },
+    "FINDSET-021": {
+        "source_id": "CORPUS-SRC-110",
+        "local_syntheses": ["FINDSET-142", "FINDSET-143"],
+        "problem_bindings": {"FINDSET-142": "theologico-political", "FINDSET-143": "athens-vs-jerusalem"},
+        "required_limits": {"witness_id": "CORPUS-WIT-110", "registered_scope": "FIRST_PARAGRAPH_ONLY", "original_1959_printing_comparison": "PENDING", "predecessor_retest_state": "PARTIAL_CONFIRMATION_WITH_MATERIAL_QUALIFICATION", "independent_corroboration": "INCOMPLETE"},
     },
 }
 
@@ -370,7 +379,7 @@ def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[
     result = {key: [] for key in DIRECT_SOURCE_KEYS}
     result["CORPUS-SRC-101-119"] = []
     predecessor_sources = {f"CORPUS-SRC-{number:03d}" for number in range(101, 120)}
-    separately_indexed = {"CORPUS-SRC-101", "CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-104", "CORPUS-SRC-105", "CORPUS-SRC-106", "CORPUS-SRC-107", "CORPUS-SRC-108", "CORPUS-SRC-111", "CORPUS-SRC-112", "CORPUS-SRC-113", "CORPUS-SRC-116"}
+    separately_indexed = {"CORPUS-SRC-101", "CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-104", "CORPUS-SRC-105", "CORPUS-SRC-106", "CORPUS-SRC-107", "CORPUS-SRC-108", "CORPUS-SRC-110", "CORPUS-SRC-111", "CORPUS-SRC-112", "CORPUS-SRC-113", "CORPUS-SRC-116"}
     for item in finding_sets:
         bindings = set(item.get("source_bindings", []))
         finding_id = item["finding_set_id"]
@@ -454,8 +463,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.13.0":
-        errors.append("findings registry identity.version must be 1.13.0")
+    if identity.get("version") != "1.14.0":
+        errors.append("findings registry identity.version must be 1.14.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -470,8 +479,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(registry.get("findings_gaps", []), "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 66:
-        errors.append(f"expected 66 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 69:
+        errors.append(f"expected 69 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 
