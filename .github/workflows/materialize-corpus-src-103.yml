@@ -61,21 +61,19 @@ jobs:
             python -m unittest discover -s tests -p 'test_*.py'
           } > /tmp/src103-materialize.log 2>&1
           status=$?
-          if [ "$status" -ne 0 ]; then
-            git reset --hard HEAD
-            cp /tmp/src103-materialize.log history/staging/src103-materialize-error.log
-            rm -f history/staging/src103-complete-payload/READY
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add history/staging/src103-materialize-error.log history/staging/src103-complete-payload/READY
-            git commit -m "Record CORPUS-SRC-103 materialization failure"
-            git push origin HEAD:corpus-src-103-complete-review
-            cat /tmp/src103-materialize.log
-            exit "$status"
-          fi
+          cat /tmp/src103-materialize.log
+          exit "$status"
+
+      - name: Upload failure log
+        if: failure() && steps.payload.outputs.present == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: src103-materialize-error
+          path: /tmp/src103-materialize.log
+          if-no-files-found: error
 
       - name: Commit complete review
-        if: steps.payload.outputs.present == 'true'
+        if: success() && steps.payload.outputs.present == 'true'
         shell: bash
         run: |
           set -euo pipefail
