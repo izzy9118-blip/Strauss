@@ -8,6 +8,7 @@ on:
     paths:
       - "scripts/apply_owner_authorization.py"
       - "scripts/fix_owner_authorization_validation.py"
+      - "scripts/fix_owner_authorization_validation_2.py"
       - ".github/workflows/apply-owner-authorization.yml"
   pull_request:
     branches:
@@ -41,6 +42,7 @@ jobs:
         run: |
           python scripts/apply_owner_authorization.py
           python scripts/fix_owner_authorization_validation.py
+          python scripts/fix_owner_authorization_validation_2.py
 
       - name: Validate authorized repository state
         shell: bash
@@ -66,6 +68,7 @@ jobs:
         run: |
           rm -f scripts/apply_owner_authorization.py
           rm -f scripts/fix_owner_authorization_validation.py
+          rm -f scripts/fix_owner_authorization_validation_2.py
           rm -f .github/workflows/apply-owner-authorization.yml
 
       - name: Commit authorized state
