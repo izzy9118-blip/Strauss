@@ -3,7 +3,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.12.0
+  version: 1.13.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
@@ -15,23 +15,23 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.11.0
-  predecessor_blob_sha: CURRENT_MAIN_PREDECESSOR_PRESERVED_BY_GIT
-  reason: Complete GENESIS-STUDY-001 as the sixth provisional Theologico-Political sequential reconstruction and
-    advance the next study unit to CORPUS-SRC-113 while preserving 19-of-19 witness coverage and thirteen remaining
+  predecessor_version: 1.12.0
+  predecessor_blob_sha: PRESERVED_BY_GIT
+  reason: Complete PERSECUTION-INTRO-STUDY-001 as the seventh provisional Theologico-Political sequential reconstruction
+    and advance the next study unit to CORPUS-SRC-116 while preserving 19-of-19 witness coverage and twelve remaining
     studies.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 2.8.0
+  current_version: 2.9.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.10.0
+  current_version: 1.11.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -80,6 +80,8 @@ steps:
     and Wise-versus-Vulgar
   - On the Interpretation of Genesis supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem,
     and Nomos-versus-Physis
+  - Introduction to Persecution and the Art of Writing supplies distinct provisional syntheses to Theologico-Political
+    and Wise-versus-Vulgar
   remaining:
   - complete source-specific application to each problem
   - complete independent witness reconstruction
@@ -101,8 +103,9 @@ steps:
   - corpus and findings registries preserve derivation, jurisdiction, gaps, witness/study distinctions, and noncertification
   - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
   - GENESIS-STUDY-001 is complete provisional for CORPUS-WIT-108
+  - PERSECUTION-INTRO-STUDY-001 is complete provisional for CORPUS-WIT-113
   remaining:
-  - conduct thirteen independent sequential item studies, beginning with CORPUS-SRC-113
+  - conduct twelve independent sequential item studies, beginning with CORPUS-SRC-116
   - compare original or earlier textual states where available and material
   - materialize and fingerprint CORPUS-WIT-102 only through later forward revision if exact bytes become accessible
   - reconstruct Talmon's reviewed work independently
@@ -136,21 +139,21 @@ steps:
 current_production_unit:
   step: 8
   completed_subunit:
-    title: On the Interpretation of Genesis independent sequential reconstruction
+    title: Introduction to Persecution and the Art of Writing independent sequential reconstruction
     state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
-    source_id: CORPUS-SRC-108
-    witness_id: CORPUS-WIT-108
-    study_id: GENESIS-STUDY-001
+    source_id: CORPUS-SRC-113
+    witness_id: CORPUS-WIT-113
+    study_id: PERSECUTION-INTRO-STUDY-001
     witness_coverage: COMPLETE_19_OF_19
-    study_coverage: INCOMPLETE_6_OF_19
+    study_coverage: INCOMPLETE_7_OF_19
     non_effect: Source-study completion does not supply independent corroboration, doctrine, certified migration,
       successor activation, predecessor displacement, or completed-interface readiness.
   next_subunit:
-    title: Introduction to Persecution and the Art of Writing independent sequential reconstruction
-    source_id: CORPUS-SRC-113
-    witness_id: CORPUS-WIT-113
-    first_action: Reconstruct printed pages 417-429 in textual order before comparing with the active predecessor.
-    following_source: CORPUS-SRC-116
+    title: Preface to Hobbes Politische Wissenschaft independent sequential reconstruction
+    source_id: CORPUS-SRC-116
+    witness_id: CORPUS-WIT-116
+    first_action: Reconstruct printed pages 453-456 in textual order before comparing with the active predecessor.
+    following_source: CORPUS-SRC-101
   non_effects:
   - no source-text admission through registries
   - no doctrinal or migration certification

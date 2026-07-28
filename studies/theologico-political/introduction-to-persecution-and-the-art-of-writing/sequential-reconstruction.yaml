@@ -1,0 +1,455 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: PERSECUTION-INTRO-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Introduction to Persecution and the Art of Writing
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1952_printing_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-113
+  source_status_id: CORPUS-STATUS-113
+  reviewed_witness_id: CORPUS-WIT-113
+  author: Leo Strauss
+  canonical_title: Introduction to Persecution and the Art of Writing
+  date: 1952
+  reviewed_container:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  original_publication: "Leo Strauss, Persecution and the Art of Writing (Glencoe, Illinois: Free Press, 1952), 7-21"
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  locators:
+    printed_pages: {start: 417, end: 429}
+    argumentative_body: {start: 417, end: 428}
+    notes: {start: 428, end: 429}
+    pdf_pages_one_based: {start: 436, end: 448}
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The reviewed witness is the 1997 SUNY collected reprint, not a separately reviewed 1952 Free Press printing.
+  - Printed page 428 contains the conclusion of Strauss's argumentative body and the beginning of the notes; the notes continue through printed page 429.
+  - Farabi, Maimonides, Halevi, Averroes, Avicenna, Plato, Aristotle, Thomas Aquinas, Jewish law, Islamic law, Christian scholasticism, and the represented historical traditions remain independently unreconstructed unless separately registered.
+  - Strauss's reconstruction of the falasifa and medieval religious communities is not independent corroboration of their doctrines, institutions, or historical development.
+  - Exoteric writing is established here as a source-level possibility and practice under specified political conditions; it is not a license to assume concealed teaching in every philosophic text.
+  - This study does not certify philosophy as true, religion as false, or a stable social identity of philosophers as wise persons.
+
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+
+method_application:
+  governing_question: >
+    What political and social conditions make a sociology of philosophy necessary, and what evidence permits a reader
+    to distinguish a philosopher's serious teaching from the public or exoteric form in which philosophy becomes visible
+    to a community that may deny philosophy legitimacy?
+  recovered_source_question: >
+    How must medieval Islamic and Jewish philosophy be interpreted once their relation to revealed Law, political order,
+    persecution, differentiated audiences, and the private status of philosophy is reconstructed rather than assimilated
+    to Christian scholasticism or to a modern assumption of harmony between thought and society?
+  reconstruction_rule: >
+    Read printed pages 417-428 in order before comparing with the active predecessor. Treat notes beginning on printed
+    page 428 as documentary apparatus. Distinguish Strauss's explicit methodological claims, his reconstruction of Farabi
+    and the falasifa, his historical comparisons, and unresolved questions. Do not infer exotericism solely from doctrinal
+    disagreement, rarity, or a prior expectation of concealment.
+  exoteric_evidence_rule: >
+    Source-local evidence includes differentiated treatment of the same subject across differently exposed works,
+    significant silence where a commentator would be expected to report a doctrine, explicit remarks on danger and
+    audience, declared conformity with accepted opinions, and the political function Strauss assigns to exoteric teaching.
+  sociology_of_philosophy_rule: >
+    The object is the fundamental relation of thought as such to society as such, especially the recurring danger that
+    accompanies philosophy when society does not recognize the right to philosophize; differences among historical
+    societies matter insofar as they alter the forms of that relation.
+
+speaker_and_documentary_layers:
+  strauss_1952:
+    role: source author and interpreter
+    rule: Strauss's explicit methodological and historical claims govern this reconstruction of the introduction.
+  farabi_as_reconstructed:
+    role: principal medieval philosophic witness within Strauss's argument
+    rule: Claims about Farabi remain Strauss's reconstruction until independently tested against registered Farabi witnesses.
+  other_medieval_and_classical_figures:
+    role: comparanda and transmitted evidence
+    examples: [Maimonides, Halevi, Averroes, Avicenna, Plato, Aristotle, Thomas Aquinas]
+    rule: Their doctrines and historical relations are not independently established by this study.
+  religious_communities_and_laws:
+    role: political and theological contexts reconstructed by Strauss
+    rule: Generalizations about Judaism, Islam, and Christianity remain source-level historical claims subject to independent corroboration.
+  notes:
+    role: documentary apparatus
+    rule: Notes support references and qualifications but do not replace the sequential argumentative body.
+
+sequential_reading:
+  - unit: PERSECUTION-INTRO-RU-001
+    printed_pages: 417-418
+    function: Define the missing sociology of philosophy and criticize sociology of knowledge's assumption of harmony between thought and society.
+    findings:
+      - id: PERSECUTION-INTRO-DF-001
+        classification: documented_finding
+        proposition: >
+          Strauss places the essays within a possible sociology of philosophy, understood as inquiry into philosophy's relation to society rather than merely the relation of different intellectual types to different social groups.
+      - id: PERSECUTION-INTRO-DF-002
+        classification: documented_finding
+        proposition: >
+          Sociology of knowledge failed to isolate philosophy because it tended to assume an essential harmony between thought and society or intellectual and social progress and treated philosophers as members of a broader intellectual class.
+      - id: PERSECUTION-INTRO-DF-003
+        classification: documented_finding
+        proposition: >
+          Strauss raises the possibility that genuine philosophers form a class by themselves and that what unites philosophers across societies may be more important than what connects a philosopher with neighboring nonphilosophers.
+      - id: PERSECUTION-INTRO-DF-004
+        classification: documented_finding
+        proposition: >
+          The inadequacy is traced partly to the narrow historical experience of early sociology of knowledge, which was largely confined to nineteenth- and early twentieth-century Western thought.
+    uncertainties:
+      - The introduction proposes material for a future sociology of philosophy rather than a complete sociological theory with independently tested comparative cases.
+
+  - unit: PERSECUTION-INTRO-RU-002
+    printed_pages: 418-420
+    function: Distinguish Islamic and Jewish medieval philosophy from Christian scholasticism through literary sources, revealed Law, prophecy, and political philosophy.
+    findings:
+      - id: PERSECUTION-INTRO-DF-005
+        classification: documented_finding
+        proposition: >
+          Proper understanding of Islamic and Jewish medieval philosophy requires philosophic rather than merely antiquarian interest and requires ceasing to treat them simply as counterparts or precursors of Christian scholasticism.
+      - id: PERSECUTION-INTRO-DF-006
+        classification: documented_finding
+        proposition: >
+          Strauss identifies a decisive literary-political difference: Plato's Republic and Laws occupy for Islamic and Jewish philosophy a place analogous to sources such as Aristotle's Politics, Cicero, and Roman law in Christian scholasticism.
+      - id: PERSECUTION-INTRO-DF-007
+        classification: documented_finding
+        proposition: >
+          Because revelation in Judaism and Islam is understood primarily as Law rather than Faith, the falasifa confront revelation first as an all-comprehensive political order regulating actions and opinions.
+      - id: PERSECUTION-INTRO-DF-008
+        classification: documented_finding
+        proposition: >
+          Strauss reconstructs the falasifa as interpreting prophecy through human perfection and the prophetic lawgiver as the supreme philosopher-king, which directs them toward Platonic political philosophy and especially Plato's Laws.
+      - id: PERSECUTION-INTRO-DF-009
+        classification: documented_finding
+        proposition: >
+          The falasifa admit rational laws but reject rational commandments or natural law in the Stoic-Christian sense, treating moral principles as probable or generally accepted rather than strictly rational and obligatory.
+    uncertainties:
+      - These comparisons are Strauss's reconstruction of medieval traditions and do not independently establish the full doctrinal diversity of Judaism, Islam, Christianity, or their legal and theological schools.
+
+  - unit: PERSECUTION-INTRO-RU-003
+    printed_pages: 420-422
+    function: Reconstruct Farabi's purpose and the philosophic challenge to revealed religion.
+    findings:
+      - id: PERSECUTION-INTRO-DF-010
+        classification: documented_finding
+        proposition: >
+          Strauss treats Farabi's On the Purposes of Plato and of Aristotle, and especially the Plato, as a privileged clue to the latent purpose of the falasifa because it is concerned with restoring philosophy after philosophy had been blurred or destroyed.
+      - id: PERSECUTION-INTRO-DF-011
+        classification: documented_finding
+        proposition: >
+          Farabi's Plato begins from human happiness, identifies its science with philosophy and its practical art with the royal or political art, and presents philosophy as necessary and sufficient in rank rather than requiring supplementation by revelation.
+      - id: PERSECUTION-INTRO-DF-012
+        classification: documented_finding
+        proposition: >
+          Strauss interprets Farabi's praise of pagan philosophy as ruling out independent cognitive claims for revealed religion and treats Farabi's classification of Islamic sciences as subordinating them to political science and generalizing them into arts of interpreting and defending positive religion.
+      - id: PERSECUTION-INTRO-DF-013
+        classification: documented_finding
+        proposition: >
+          In Farabi's Plato, religious knowledge is ranked below philosophy and even below grammar and poetry as a source of knowledge of beings.
+    uncertainties:
+      - Strauss calls Farabi's Plato the likely clue par excellence to falsafa while acknowledging that the extent to which Farabi's successors accepted the crucial views cannot be determined fully in the present state of knowledge.
+
+  - unit: PERSECUTION-INTRO-RU-004
+    printed_pages: 422-423
+    function: Use silence, exposure, commentator status, and cross-work comparison to identify accommodation in Farabi.
+    findings:
+      - id: PERSECUTION-INTRO-DF-014
+        classification: documented_finding
+        proposition: >
+          Strauss gives special weight to Farabi's complete silence about immortality in a work presenting Plato's philosophy from beginning to end, because a literal commentator would have been expected to report Plato's doctrine of life after death.
+      - id: PERSECUTION-INTRO-DF-015
+        classification: documented_finding
+        proposition: >
+          Differently exposed works treat happiness and the afterlife differently: Strauss reads the least exposed historical or commentary settings as permitting clearer expression than works in which Farabi speaks in his own name.
+      - id: PERSECUTION-INTRO-DF-016
+        classification: documented_finding
+        proposition: >
+          Strauss concludes that Farabi's silence about immortality in the Plato makes the immortality-affirming statements in some other writings accommodations to accepted views.
+      - id: PERSECUTION-INTRO-DF-017
+        classification: documented_finding
+        proposition: >
+          Farabi distinguishes philosophy as the highest theoretical art from the royal art as the highest practical art; the supplement to philosophy is political rather than revelatory, and Strauss describes this as substituting politics for religion.
+      - id: PERSECUTION-INTRO-SI-001
+        classification: supported_inference
+        proposition: >
+          The evidentiary force of silence here depends on a strong expectation created by the work's announced completeness and commentator role; silence is not treated as self-interpreting evidence in every text.
+    uncertainties:
+      - Farabi's own writings require independent reconstruction before Strauss's conclusion about immortality or accommodation can be treated as corroborated Farabian doctrine.
+
+  - unit: PERSECUTION-INTRO-RU-005
+    printed_pages: 423-425
+    function: Reconstruct the political solution to philosophy's conflict with society and define the exoteric teaching as philosophy's political form.
+    findings:
+      - id: PERSECUTION-INTRO-DF-018
+        classification: documented_finding
+        proposition: >
+          Strauss reconstructs Farabi's Plato as distinguishing the intransigent Socratic way from a Platonic way that combines Socratic inquiry with a manner of dealing with the vulgar associated with Thrasymachus.
+      - id: PERSECUTION-INTRO-DF-019
+        classification: documented_finding
+        proposition: >
+          The Platonic political solution replaces an openly revolutionary quest for the virtuous city with gradual replacement of accepted opinions by truth or approximation to truth, which requires provisional acceptance of existing opinions and statements that do not flagrantly contradict them.
+      - id: PERSECUTION-INTRO-DF-020
+        classification: documented_finding
+        proposition: >
+          Strauss describes the result as a secret kingship of the philosopher who lives privately within an imperfect society and tries to humanize it within the limits of the possible.
+      - id: PERSECUTION-INTRO-DF-021
+        classification: documented_finding
+        proposition: >
+          It is therefore rash to identify the serious teaching of the falasifa with what they teach most frequently or conspicuously, especially when both philosophers and some opponents had reasons to conceal dangerous teaching.
+      - id: PERSECUTION-INTRO-DF-022
+        classification: documented_finding
+        proposition: >
+          Strauss explicitly defines exoteric teaching as armor needed to protect philosophy, as the form in which philosophy becomes visible to the political community, and therefore as the political aspect of philosophy or political philosophy.
+    uncertainties:
+      - The introduction establishes a historical and methodological case for exotericism under danger; it does not prove that every apparent contradiction or every philosophic work contains a concealed doctrine.
+
+  - unit: PERSECUTION-INTRO-RU-006
+    printed_pages: 426-427
+    function: Compare philosophy's legal and institutional status in Christianity, Islam, and Judaism and connect Judaism versus philosophy to Jerusalem versus Athens.
+    findings:
+      - id: PERSECUTION-INTRO-DF-023
+        classification: documented_finding
+        proposition: >
+          Strauss argues that philosophy's legitimacy was precarious in Islamic and Jewish settings because sacred doctrine was primarily legal interpretation of divine Law, whereas philosophy became institutionally integrated into Christian theological training.
+      - id: PERSECUTION-INTRO-DF-024
+        classification: documented_finding
+        proposition: >
+          Maimonides and Averroes therefore needed a legal justification of philosophy before the tribunal of divine Law more urgently than a philosophic justification of the Law before philosophy.
+      - id: PERSECUTION-INTRO-DF-025
+        classification: documented_finding
+        proposition: >
+          Strauss contrasts Maimonides' Guide with Thomas's Summa to show how the respective starting points reflect different relations between sacred doctrine and philosophy.
+      - id: PERSECUTION-INTRO-DF-026
+        classification: documented_finding
+        proposition: >
+          Strauss explicitly states that the issue of traditional Judaism versus philosophy is identical with the issue of Jerusalem versus Athens and connects it to biblical and talmudic restraints on inquiry into heaven and divine things.
+    uncertainties:
+      - The broad institutional comparison requires independent historical and textual corroboration and must not be treated as a complete sociological history of Christianity, Judaism, or Islam.
+
+  - unit: PERSECUTION-INTRO-RU-007
+    printed_pages: 427-428
+    function: Conclude with the ambivalent political status of philosophy and state the sole task of the sociology of philosophy.
+    findings:
+      - id: PERSECUTION-INTRO-DF-027
+        classification: documented_finding
+        proposition: >
+          Philosophy's precarious status in Judaism and Islam is not treated as an unqualified misfortune: lack of official recognition could preserve philosophy's private character and inner freedom from institutional supervision.
+      - id: PERSECUTION-INTRO-DF-028
+        classification: documented_finding
+        proposition: >
+          Strauss compares this private and transpolitical status with classical Greece, where philosophy and even philosophic schools were activities of private men despite extensive civic regulation of morals, worship, tragedy, and comedy.
+      - id: PERSECUTION-INTRO-DF-029
+        classification: documented_finding
+        proposition: >
+          The danger to philosophy exemplified by Socrates varies in form but is coeval with philosophy, and Strauss makes understanding that danger and its possible forms the foremost and sole task of the sociology of philosophy.
+      - id: PERSECUTION-INTRO-SI-002
+        classification: supported_inference
+        proposition: >
+          The sociology of philosophy is therefore not reducible to social determination of thought; its central object is the enduring political problem created by philosophy's claim to pursue truth independently of authoritative social opinion.
+    uncertainties:
+      - Strauss does not provide in this introduction an exhaustive typology of every historical form of danger to philosophy.
+
+  - unit: PERSECUTION-INTRO-RU-008
+    printed_pages: 428-429
+    function: Review notes as documentary apparatus without allowing them to substitute for independent reconstruction of the cited sources.
+    findings:
+      - id: PERSECUTION-INTRO-DO-001
+        classification: structural_evidence
+        proposition: >
+          The twenty notes anchor the introduction in Farabi, Averroes, Maimonides, Thomas Aquinas, Jewish and Islamic sources, and modern scholarship and repeatedly direct the reader to the later essays in Persecution and the Art of Writing.
+      - id: PERSECUTION-INTRO-DO-002
+        classification: structural_evidence
+        proposition: >
+          Several notes identify precise textual bases for claims about Farabi's Plato, happiness, philosopher and legislator terminology, and the legal or theological status of philosophy.
+      - id: PERSECUTION-INTRO-UU-001
+        classification: unresolved_uncertainty
+        proposition: >
+          Citation density makes Strauss's reconstruction more reproducible but does not itself independently verify the cited primary texts, translations, or modern historical claims.
+
+permanent_findings:
+  - id: PERSECUTION-INTRO-PF-001
+    classification: documented_finding
+    proposition: >
+      A sociology of philosophy must investigate the fundamental relation of philosophy as such to society as such rather than presuming harmony between intellectual and social progress.
+  - id: PERSECUTION-INTRO-PF-002
+    classification: documented_finding
+    proposition: >
+      Strauss raises the possibility that philosophers form a class by themselves whose shared relation to philosophy is more important than their membership in surrounding nonphilosophic groups.
+  - id: PERSECUTION-INTRO-PF-003
+    classification: documented_finding
+    proposition: >
+      Islamic and Jewish medieval philosophy cannot be adequately understood as inferior counterparts of Christian scholasticism because revealed Law and Platonic political philosophy structure their problem differently.
+  - id: PERSECUTION-INTRO-PF-004
+    classification: documented_finding
+    proposition: >
+      Strauss reconstructs the falasifa as understanding revelation politically as perfect Law and the prophet as supreme philosophic lawgiver, thereby making political philosophy central to their relation to revelation.
+  - id: PERSECUTION-INTRO-PF-005
+    classification: documented_finding
+    proposition: >
+      Farabi's differently exposed writings, together with meaningful silence in his Plato, supply Strauss with evidence that public orthodox statements can be accommodations rather than the serious philosophic teaching.
+  - id: PERSECUTION-INTRO-PF-006
+    classification: bounded_conclusion
+    proposition: >
+      Silence has interpretive force only when the work's purpose, genre, and expected content make the omission significant; it is not a general rule that silence proves denial.
+  - id: PERSECUTION-INTRO-PF-007
+    classification: documented_finding
+    proposition: >
+      The Platonic political strategy reconstructed through Farabi combines uncompromising philosophic inquiry with prudent dealings with the vulgar and gradual modification of accepted opinions.
+  - id: PERSECUTION-INTRO-PF-008
+    classification: documented_finding
+    proposition: >
+      Exoteric teaching protects philosophy under political danger and is the form in which philosophy becomes visible to the political community; in this sense Strauss calls it political philosophy.
+  - id: PERSECUTION-INTRO-PF-009
+    classification: bounded_conclusion
+    proposition: >
+      Frequency, conspicuousness, contradiction, or orthodoxy cannot by themselves identify a philosopher's serious teaching; source-local relations among audience, danger, genre, silence, and cross-work differences must be reconstructed.
+  - id: PERSECUTION-INTRO-PF-010
+    classification: documented_finding
+    proposition: >
+      The legal status of philosophy differs structurally among the religious traditions Strauss compares, with philosophy requiring especially urgent legal justification in Judaism and Islam.
+  - id: PERSECUTION-INTRO-PF-011
+    classification: documented_finding
+    proposition: >
+      Strauss explicitly identifies traditional Judaism versus philosophy with Jerusalem versus Athens.
+  - id: PERSECUTION-INTRO-PF-012
+    classification: documented_finding
+    proposition: >
+      Philosophy's precarious public status can preserve its private and transpolitical freedom, so official nonrecognition has both danger and a possible philosophic advantage.
+  - id: PERSECUTION-INTRO-PF-013
+    classification: documented_finding
+    proposition: >
+      The danger accompanying philosophy is coeval with philosophy although its forms vary, and understanding that danger and its forms is the sole task Strauss assigns to the sociology of philosophy.
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss presents the introduction as material for a future sociology of philosophy and as a correction of both
+    antiquarian medieval scholarship and sociology of knowledge's assumption that philosophy naturally belongs within
+    socially recognized intellectual life.
+  textual_deed: >
+    The introduction begins by isolating philosophy from the broad category of intellectuals, reconstructs the political
+    and legal situation of philosophy in Jewish and Islamic medieval thought, reads Farabi's differentiated modes of
+    presentation as evidence of accommodation under danger, and ends by identifying the enduring danger to philosophy
+    as the central object of a sociology of philosophy.
+  relation: POLITICAL_CONDITION_OF_PHILOSOPHIC_COMMUNICATION_DEMONSTRATED_THROUGH_MEDIEVAL_RECONSTRUCTION
+  finding: >
+    Exoteric writing emerges here not as an arbitrary decoding technique but as a political response to a recurring
+    conflict between philosophic inquiry and communities whose authoritative opinions may deny philosophy legitimacy.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - revelation understood as Law and the legal justification of philosophy
+      - prophecy, legislation, philosopher-kingship, and political philosophy within medieval falsafa
+      - the different institutional relations of philosophy to Judaism, Islam, and Christianity
+      - Jerusalem versus Athens as the issue of traditional Judaism versus philosophy
+      - persecution and political danger as conditions shaping philosophic communication
+    non_absorption: >
+      This problem does not independently establish the doctrines of Judaism, Islam, Christianity, Farabi, Maimonides,
+      Plato, or Aristotle and does not absorb the distinct audience-and-concealment questions of Wise-versus-Vulgar.
+  wise_vs_vulgar:
+    role: CONTROLLED_SECONDARY_HERMENEUTIC_JURISDICTION
+    receives:
+      - philosophers as potentially distinct from nonphilosophers
+      - differentiated dealings with elite and vulgar readers
+      - provisional conformity with accepted opinion and gradual replacement by truth or approximation
+      - exoteric teaching as protective armor and political presentation
+      - meaningful silence and cross-work variation under different levels of exposure
+    non_absorption: >
+      Audience differentiation does not certify a stable caste of wise persons, does not imply contempt for all
+      nonphilosophers, and does not license mechanical inversion, unrestricted deception, or automatic esoteric readings.
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  predecessor_statement: >
+    Establishes the political conditions of philosophic communication and the criteria and limits governing inquiry into exoteric and esoteric writing.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirmations:
+    - The introduction explicitly locates philosophic communication within the political problem of danger, social nonrecognition, and differing legal-religious orders.
+    - It supplies criteria for exoteric interpretation through exposure, silence, commentator role, cross-work differences, accepted opinion, and differentiated audiences.
+    - It explicitly identifies exoteric teaching as protection for philosophy and as philosophy's political form when philosophy is not socially recognized.
+  qualifications:
+    - The source does not provide a universal mechanical test for hidden teaching and does not make contradiction or infrequency sufficient by themselves.
+    - Strauss's strongest Farabi conclusions depend on a specific reconstruction of genre, expected content, and differences among Farabi's works and therefore require independent Farabi study for corroboration.
+    - The sociology of philosophy concerns a recurring danger coeval with philosophy, not merely persecution in one historical religious setting.
+  unresolved:
+    - The original 1952 Free Press printing has not been separately compared with the reviewed 1997 reprint.
+    - Farabi and the other cited medieval, classical, legal, theological, and historical sources remain independently incomplete unless separately registered.
+    - The essay does not specify exhaustively every historical form the danger to philosophy may take.
+  predecessor_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+uncertainties:
+  - id: PERSECUTION-INTRO-U-001
+    statement: The study is edition-specific to the 1997 collected witness and remains revisable after comparison with the 1952 Free Press printing.
+  - id: PERSECUTION-INTRO-U-002
+    statement: Strauss's account of Farabi and medieval Jewish, Islamic, and Christian intellectual institutions requires independent primary and historical corroboration.
+  - id: PERSECUTION-INTRO-U-003
+    statement: The general relation between philosophical truth, political prudence, and the moral limits of accommodation is not exhausted by this introduction.
+
+prohibitions:
+  - Do not let the active predecessor or Green's editorial framing govern the source reconstruction.
+  - Do not identify philosophers with a socially certified elite or treat philosophical status as proof of wisdom.
+  - Do not infer serious teaching from frequency, conspicuousness, rarity, silence, contradiction, or orthodoxy in isolation.
+  - Do not use Strauss's interpretation of Farabi as independent proof of Farabi's doctrine.
+  - Do not identify provisional conformity with unrestricted deception or private advantage.
+  - Do not treat exoteric writing as evidence that every philosopher hides a complete secret doctrine.
+  - Do not collapse Judaism, Islam, and Christianity into a single relation between sacred doctrine and philosophy.
+  - Do not treat the 1997 collected reprint as a separately reviewed 1952 printing.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  original_1952_printing_comparison_required: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
+  next_units:
+    - update CORPUS-STATUS-113 to record PERSECUTION-INTRO-STUDY-001
+    - register CORPUS-STUDY-014 and FINDSET-014
+    - create jurisdiction-preserving Theologico-Political and Wise-versus-Vulgar synthesis bridges
+    - validate source, witness, study, findings, jurisdiction, noncorroboration, and completion language
+    - proceed to CORPUS-SRC-116 after merge while preserving all edition, certification, migration, activation, and repin blockers
