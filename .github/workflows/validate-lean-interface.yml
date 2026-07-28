@@ -22,6 +22,7 @@ on:
       - "migrations/lean-operational-interface.yaml"
       - "history/production-plans/**"
       - "scripts/materialize_remaining_tp_witnesses.py"
+      - "scripts/normalize_remaining_tp_witness_files.py"
       - "tests/**"
       - ".github/workflows/validate-lean-interface.yml"
   pull_request:
@@ -67,12 +68,13 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/complete-remaining-tp-witnesses'
         run: |
           set -euo pipefail
+          python scripts/normalize_remaining_tp_witness_files.py
           python scripts/materialize_remaining_tp_witnesses.py
           if ! git diff --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add corpus/index.yaml manifest.yaml audits/operational-completeness.yaml migrations/lean-operational-interface.yaml history/production-plans/2026-07-27-ten-step-completion-process.yaml history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml corpus_registry.py tests/
-            git commit -m "Materialize complete 19-of-19 Theologico-Political witness coverage"
+            git add -A
+            git commit -m "Normalize and materialize complete 19-of-19 Theologico-Political witness coverage"
             git push origin HEAD:complete-remaining-tp-witnesses
           fi
 
