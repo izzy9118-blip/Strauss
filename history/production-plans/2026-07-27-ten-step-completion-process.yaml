@@ -3,7 +3,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.9.0
+  version: 1.10.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
@@ -15,23 +15,23 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.8.0
-  predecessor_blob_sha: 0b1a33607309972247673c1a0d3c42d1f5c0c23e
-  reason: Register CORPUS-WIT-103 as a complete fingerprinted 1997 collected witness while preserving pending independent
-    sequential reconstruction, pending original 1948 journal comparison, fourteen remaining witness acquisitions,
-    fifteen remaining studies, noncertification, and the Step 10 repin blocker.
+  predecessor_version: 1.9.0
+  predecessor_blob_sha: 63d4ecb7e55d39cce6521315b505200e2aea947d
+  reason: Complete reviewed-witness acquisition and registration for the remaining fourteen Theologico-Political
+    predecessor items, reaching 19-of-19 witness coverage while preserving fifteen pending independent sequential
+    studies, edition-comparison limits, noncertification, and the Step 10 repin blocker.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 2.5.0
+  current_version: 2.6.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.7.0
+  current_version: 1.8.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -89,22 +89,16 @@ steps:
   - findings/index.yaml
   completed:
   - all 19 Theologico-Political predecessor writings have bounded item identities
-  - CORPUS-WIT-102 remains a qualified platform-reference witness with printed locators and missing-byte safeguards
-  - CORPUS-WIT-103 is a fingerprinted 1997 SUNY collected witness with printed pages 181-233 and PDF pages 200-252
-  - CORPUS-WIT-109, CORPUS-WIT-105, and CORPUS-WIT-111 remain fingerprinted reviewed item witnesses
-  - SPINOZA-PREFACE-STUDY-001, JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 are complete provisional for
+  - all 19 Theologico-Political predecessor writings now have reviewed witnesses
+  - CORPUS-WIT-102 remains a qualified platform-reference witness with preserved missing-byte safeguards
+  - the other eighteen Theologico-Political reviewed witnesses are fingerprinted against their reviewed containers
+  - SPINOZA-PREFACE-STUDY-001, JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 remain complete provisional for
     their reviewed witnesses
-  - CORPUS-STUDY-008 through CORPUS-STUDY-011, FINDSET-008 through FINDSET-011, and FINDSET-111 through FINDSET-121
-    are registered
-  - corpus and findings registries preserve derivation, jurisdiction, gaps, platform-reference limits, fingerprinted
-    witness-only limits, and noncertification
+  - corpus and findings registries preserve derivation, jurisdiction, gaps, witness/study distinctions, and noncertification
   remaining:
-  - establish reviewed witnesses for fourteen item identities
   - conduct fifteen independent sequential item studies, beginning with CORPUS-SRC-103
-  - compare CORPUS-WIT-103 with the original 1948 journal printing when available
+  - compare original or earlier textual states where available and material
   - materialize and fingerprint CORPUS-WIT-102 only through later forward revision if exact bytes become accessible
-  - compare the 1965 and 1968 Preface textual states with the 1997 composite where wording matters
-  - complete the remaining original-edition comparisons already recorded
   - reconstruct Talmon's reviewed work independently
   - expand independent primary witnesses beyond Strauss's writings
   - normalize propositions where warranted by reproducible extraction
@@ -116,12 +110,10 @@ steps:
   - tests/
   - .github/workflows/validate-lean-interface.yml
   completed_in_current_sequence:
-  - tests cover five Theologico-Political item witnesses, four complete studies, one witness-only state, and fourteen
-    missing-witness states
-  - tests cover qualified platform-reference identity, fingerprinted witness-only identity, locators, missing-byte,
-    edition-comparison, noncertification, and no-successor safeguards
-  - tests cover SPINOZA-PREFACE-STUDY-001 textual order, reason-revelation distinctions, predecessor preservation,
-    and problem jurisdiction
+  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the fifteen witness-only
+    states from the four completed-study states
+  - tests preserve qualified platform-reference, fingerprint, locator, scope, edition-comparison, noncertification,
+    and no-successor safeguards
   - tests cover corpus and findings coverage, derivation, jurisdiction, and completion-language consistency
   current_requirement: Run the complete GitHub Actions validation before merge.
   limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
@@ -137,20 +129,17 @@ steps:
 current_production_unit:
   step: 8
   completed_subunit:
-    title: How to Study Spinoza's Theologico-Political Treatise reviewed-witness registration
+    title: Remaining fourteen Theologico-Political reviewed-witness acquisition and registration
     state: COMPLETE_PENDING_BRANCH_VALIDATION_AND_MERGE
-    source_id: CORPUS-SRC-103
-    witness_id: CORPUS-WIT-103
-    witness_record: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml
-    acquisition_record: history/reviewed-witness-acquisitions/2026-07-28-how-to-study-spinoza-uploaded-witness.yaml
-    non_effect: Witness registration does not supply independent sequential reconstruction, independent corroboration,
-      doctrine, certified migration, successor activation, predecessor displacement, or completed-interface readiness.
+    witness_coverage: COMPLETE_19_OF_19
+    study_coverage: INCOMPLETE_4_OF_19
+    non_effect: Witness registration does not supply sequential reconstruction, independent corroboration, doctrine,
+      certified migration, successor activation, predecessor displacement, or completed-interface readiness.
   next_subunit:
     title: How to Study Spinoza's Theologico-Political Treatise independent sequential reconstruction
     source_id: CORPUS-SRC-103
     witness_id: CORPUS-WIT-103
-    first_action: Read printed pages 181-233 sequentially and classify source-level findings before comparison with
-      the predecessor or adjacent source studies.
+    first_action: Reconstruct printed pages 181-233 in textual order before comparing with the active predecessor.
     following_source: CORPUS-SRC-108
   non_effects:
   - no source-text admission through registries

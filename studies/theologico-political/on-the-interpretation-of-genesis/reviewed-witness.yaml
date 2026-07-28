@@ -1,0 +1,19 @@
+schema_version: 1.0
+document_type: reviewed_item_witness_record
+identity: {witness_id: CORPUS-WIT-108, source_id: CORPUS-SRC-108, title: "Reviewed item witness — On the Interpretation of Genesis", version: 1.0.0}
+status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, independent_sequential_study: NOT_YET_COMPLETED, original_edition_comparison: PENDING, source_text_admission: NOT_REQUESTED, successor_effect: NONE}
+source_identity: {author: Leo Strauss, canonical_title: "On the Interpretation of Genesis", date: 1957, corpus_source_id: CORPUS-SRC-108, source_status_id: CORPUS-STATUS-108}
+publication_provenance:
+  reviewed_container: "Jewish Philosophy and the Crisis of Modernity: Essays and Lectures in Modern Jewish Thought"
+  editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_place: Albany
+  year: 1997
+  collection_source_note: "The collection states that On the Interpretation of Genesis first appeared in L'Homme 21 (1981): 5-36; the active predecessor preserves the 1957 source date."
+  separately_reviewed_original_or_earlier_printing: false
+container_witness: {local_filename_recorded: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES, container_page_count: 526, container_file_size_bytes: 39287307, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY}
+item_locators: {printed_page_range: {start: 359, end: 376}, pdf_page_range_one_based: {start: 378, end: 395}, item_completeness: COMPLETE_REGISTERED_SCOPE, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM}
+textual_condition: {searchable_text: true, page_images_available: true, wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS, original_or_earlier_printing_compared: false}
+jurisdiction_and_limits: {governing_problem: theologico-political, secondary_problem_bindings: [athens-vs-jerusalem, nomos-vs-physis], non_effects: [no source-level proposition promotion, no predecessor synthesis confirmation, no doctrinal certification, no migration certification, no successor activation, no predecessor displacement]}
+next_required_action: {action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, range: "printed pages 359 through 376", prerequisites_satisfied: REVIEWED_ITEM_WITNESS_REGISTERED}
+termination: {witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}

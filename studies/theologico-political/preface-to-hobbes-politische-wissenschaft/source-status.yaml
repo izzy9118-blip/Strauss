@@ -1,65 +1,16 @@
 schema_version: 1.0
 document_type: source_status_record
-identity:
-  status_id: CORPUS-STATUS-116
-  corpus_source_id: CORPUS-SRC-116
-  canonical_title: Preface to Hobbes Politische Wissenschaft
-  author: Leo Strauss
-  date: 1965
-  version: 1.0.0
-status:
-  lifecycle: REGISTERED_SOURCE_IDENTITY
-  certification: NOT_CERTIFIED
-  source_text_admission: NOT_REQUESTED
-  reviewed_witness: NOT_YET_REGISTERED
-  independent_sequential_study: NOT_YET_COMPLETED
-  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
-registration_basis:
-  active_predecessor: problems/theologico-political.yaml
-  active_predecessor_source_sequence: 16
-  corpus_registry: corpus/index.yaml
-  corpus_source_id: CORPUS-SRC-116
-  governing_problem: theologico-political
-  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+identity: {status_id: CORPUS-STATUS-116, corpus_source_id: CORPUS-SRC-116, canonical_title: "Preface to Hobbes Politische Wissenschaft", author: Leo Strauss, date: 1965, version: 1.1.0}
+status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-116, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
+revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, pending earlier textual-state comparison, predecessor authority, noncertification, and no successor effect."}
+registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 16, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-116, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
 verified_documentary_facts:
-  - The active predecessor identifies this work, date, and sequence position.
-  - The current corpus registry identifies the work as CORPUS-SRC-116.
-predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_WITNESS
-  statement: >
-    Names the theologico-political problem as a continuing theme of Strauss's investigations
-    and examines sovereign peace as political neutralization rather than philosophic resolution.
-  preservation_rule: This derivative statement is not independently confirmed or certified here.
-publication_and_witness_condition:
-  publication_venue: UNVERIFIED_IN_THIS_RECORD
-  edition: UNVERIFIED_IN_THIS_RECORD
-  pagination: UNVERIFIED_IN_THIS_RECORD
-  local_file: NOT_REGISTERED
-  fingerprint: NOT_AVAILABLE
-  text_condition: NOT_ASSESSED
-  locator_reproducibility: INCOMPLETE
-source_classification:
-  author_relation: PRIMARY_STRAUSS_PREFACE
-  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
-  analytical_use: ORIENTATION_ONLY_UNTIL_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
-required_distinctions:
-  - named continuing theme from final doctrinal resolution
-  - sovereign peace from philosophic truth
-  - political neutralization from abolition of the underlying conflict
-  - preface occasion from the complete Hobbes argument
-  - predecessor synthesis from source-level documented finding
-prohibitions:
-  - Do not treat sovereign settlement as philosophical resolution.
-  - Do not infer final doctrine from the phrase continuing theme alone.
-  - Do not assign locators or infer publication facts before witness registration.
-  - Do not certify doctrine, migration, or activation.
-next_required_actions:
-  - register a reviewed witness and publication provenance
-  - conduct an independent sequential reading
-  - reconstruct the relation between preface, earlier Hobbes work, and later retrospective statement
-termination:
-  source_identity_state: REGISTERED
-  reviewed_witness_state: MISSING
-  study_state: INCOMPLETE
-  certification: NOT_CERTIFIED
-  successor_effect: NONE
+  - The reviewed 1997 SUNY collected witness occupies printed pages 453-456 and one-based PDF pages 472-475.
+  - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
+  - The collection states that the preface first appeared in Interpretation 8, no. 1 (1979-80): 1-3, translated by Donald J. Maletz; the active predecessor preserves the 1965 source date.
+predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Names the theologico-political problem as a continuing theme of Strauss's investigations and examines sovereign peace as political neutralization rather than philosophic resolution.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
+publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 453, end: 456}, pdf_page_range_one_based: {start: 472, end: 475}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
+reviewed_witness: {witness_id: CORPUS-WIT-116, witness_record_path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/reviewed-witness.yaml, printed_page_range: {start: 453, end: 456}, pdf_page_range_one_based: {start: 472, end: 475}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
+source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to the source, not independent corroboration."}
+next_required_actions: [conduct an independent sequential reading of printed pages 453-456, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization, compare the earlier published translation when separately reviewed]
+termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}

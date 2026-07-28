@@ -5,7 +5,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 1.7.0
+  version: 1.8.0
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
   structural_validation: REQUIRED_ON_EACH_CHANGE
@@ -21,12 +21,12 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.6.0
-  predecessor_blob_sha: 2349da0c63c45cd512ef66b702461281e7642594
-  reason: Register fingerprinted CORPUS-WIT-103 and synchronize corpus registry v1.11.0, audit v2.5.0, mapping v1.7.0,
-    process v1.9.0, and schedule v1.7.0 while preserving pending CORPUS-SRC-103 sequential reconstruction, pending
-    original 1948 comparison, fourteen remaining reviewed-witness acquisitions, fifteen remaining studies,
-    noncertification, predecessor authority, and the Sanctum repin block.
+  predecessor_version: 1.7.0
+  predecessor_blob_sha: 583017561cc0f5425600fc545da2f64e1db39d7e
+  reason: Register the remaining fourteen fingerprinted 1997 SUNY collected witnesses, completing 19-of-19 reviewed-witness
+    coverage for the active Theologico-Political predecessor sequence while preserving fifteen pending independent
+    sequential studies, edition-comparison limits, noncertification, predecessor authority, and the Sanctum repin
+    block.
 purpose: 'Provide one compact, machine-readable entry point through which a runtime can load the repository''s problems,
   hermeneutics, method, speech discipline, corpus registry, and findings registry without deleting, overwriting,
   or silently harmonizing the richer records from which this interface is derived.
@@ -34,7 +34,7 @@ purpose: 'Provide one compact, machine-readable entry point through which a runt
   '
 audit:
   path: audits/operational-completeness.yaml
-  version: 2.5.0
+  version: 2.6.0
   classification_vocabulary:
   - SUBSTANTIVELY_RECONSTRUCTED
   - PARTIALLY_RECONSTRUCTED
@@ -52,8 +52,8 @@ component_completion:
   problem_bundle_loader: PARTIALLY_RECONSTRUCTED_READ_ONLY_BUNDLE_SUPPORT
   corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-  reviewed_source_witnesses: EIGHT_REVIEWED_WITNESSES_INCLUDING_QUALIFIED_PLATFORM_REFERENCE_CORPUS_WIT_102_AND_FINGERPRINTED_CORPUS_WIT_103_WITH_RECORDED_LIMITS
-  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_5_OF_19_REVIEWED_ITEM_WITNESSES_4_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES
+  reviewed_source_witnesses: TWENTY_TWO_REVIEWED_WITNESSES_TOTAL_WITH_ALL_NINETEEN_THEOLOGICO_POLITICAL_PREDECESSOR_ITEMS_WITNESSED
+  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_19_OF_19_REVIEWED_ITEM_WITNESSES_4_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
@@ -61,7 +61,7 @@ component_completion:
   corpus_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_PLATFORM_REFERENCE_AND_FINGERPRINTED_WITNESS_ONLY_CONTRACTS_REQUIRE_VALIDATION
+  behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_AND_COMPLETE_THEOLOGICO_POLITICAL_WITNESS_COVERAGE_CONTRACTS_REQUIRE_VALIDATION
 source_hierarchy:
   tiers:
   - primary_external
@@ -207,7 +207,7 @@ speech:
 corpus:
   index: corpus/index.yaml
   loader: corpus_registry.py
-  registry_version: 1.11.0
+  registry_version: 1.12.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   reviewed_witnesses:
@@ -217,6 +217,17 @@ corpus:
     witness_id: CORPUS-WIT-002
   - source: Socrates and Aristophanes
     witness_id: CORPUS-WIT-003
+  - source: Progress or Return?
+    witness_id: CORPUS-WIT-101
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 87-136
+    pdf_pages_one_based: 106-155
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/progress-or-return/source-status.yaml
   - source: Preface to Spinoza's Critique of Religion
     witness_id: CORPUS-WIT-102
     witness_class: PLATFORM_REFERENCE_WITNESS
@@ -235,6 +246,17 @@ corpus:
     container_file_size_bytes: 39287307
     original_1948_journal_comparison: PENDING
     item_status: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml
+  - source: Preface to Isaac Husik, Philosophical Essays
+    witness_id: CORPUS-WIT-104
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 235-266
+    pdf_pages_one_based: 254-285
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/source-status.yaml
   - source: Introductory Essay for Hermann Cohen
     witness_id: CORPUS-WIT-105
     container_witness_id: CORPUS-WIT-001
@@ -243,6 +265,39 @@ corpus:
     original_publication: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism,
       Frederick Ungar, New York, 1972
     item_status: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
+  - source: Freud on Moses and Monotheism
+    witness_id: CORPUS-WIT-106
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 285-309
+    pdf_pages_one_based: 304-328
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/freud-on-moses-and-monotheism/source-status.yaml
+  - source: Why We Remain Jews
+    witness_id: CORPUS-WIT-107
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 311-356
+    pdf_pages_one_based: 330-375
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/why-we-remain-jews/source-status.yaml
+  - source: On the Interpretation of Genesis
+    witness_id: CORPUS-WIT-108
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 359-376
+    pdf_pages_one_based: 378-395
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/on-the-interpretation-of-genesis/source-status.yaml
   - source: Jerusalem and Athens
     witness_id: CORPUS-WIT-109
     container_witness_id: CORPUS-WIT-001
@@ -250,6 +305,18 @@ corpus:
     pdf_pages_one_based: 151-177
     original_publication: The City College Papers, no. 6, The City College of New York, 1967
     item_status: studies/theologico-political/jerusalem-and-athens/source-status.yaml
+  - source: What Is Political Philosophy?
+    witness_id: CORPUS-WIT-110
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 409-409
+    pdf_pages_one_based: 428-428
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/what-is-political-philosophy/source-status.yaml
+    registered_scope: first paragraph
   - source: Review of J. L. Talmon
     witness_id: CORPUS-WIT-111
     container_witness_id: CORPUS-WIT-001
@@ -257,12 +324,101 @@ corpus:
     pdf_pages_one_based: 236
     original_publication: Journal of Modern History 29, no. 3, 1957
     item_status: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml
+  - source: Letter to the Editor — The State of Israel
+    witness_id: CORPUS-WIT-112
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 413-414
+    pdf_pages_one_based: 432-433
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/letter-to-editor-state-of-israel/source-status.yaml
+  - source: Introduction to Persecution and the Art of Writing
+    witness_id: CORPUS-WIT-113
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 417-429
+    pdf_pages_one_based: 436-448
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/source-status.yaml
+  - source: Perspectives on the Good Society
+    witness_id: CORPUS-WIT-114
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 431-445
+    pdf_pages_one_based: 450-464
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/perspectives-on-the-good-society/source-status.yaml
+  - source: An Unspoken Prologue
+    witness_id: CORPUS-WIT-115
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 449-452
+    pdf_pages_one_based: 468-471
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/an-unspoken-prologue/source-status.yaml
+  - source: Preface to Hobbes Politische Wissenschaft
+    witness_id: CORPUS-WIT-116
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 453-456
+    pdf_pages_one_based: 472-475
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/source-status.yaml
+  - source: A Giving of Accounts
+    witness_id: CORPUS-WIT-117
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 457-466
+    pdf_pages_one_based: 476-485
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/a-giving-of-accounts/source-status.yaml
+  - source: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
+    witness_id: CORPUS-WIT-118
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 467-470
+    pdf_pages_one_based: 486-489
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/source-status.yaml
+  - source: Restatement on Xenophon's Hiero
+    witness_id: CORPUS-WIT-119
+    witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+    container: Jewish Philosophy and the Crisis of Modernity
+    publication_year: 1997
+    printed_pages: 471-473
+    pdf_pages_one_based: 490-492
+    container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    container_file_size_bytes: 39287307
+    original_or_earlier_printing_comparison: PENDING
+    item_status: studies/theologico-political/restatement-on-xenophons-hiero/source-status.yaml
+    registered_scope: last paragraph
   theologico_political_item_level_statuses:
     registered_count: 19
     total_predecessor_sources: 19
     remaining_without_item_level_status: 0
-    reviewed_witness_count: 5
-    remaining_without_reviewed_item_witness: 14
+    reviewed_witness_count: 19
+    remaining_without_reviewed_item_witness: 0
     independent_sequential_study_count: 4
     remaining_without_independent_sequential_study: 15
     completed_study_ids:
@@ -273,14 +429,12 @@ corpus:
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     root: studies/theologico-political/
     priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
-    rule: Five reviewed item witnesses and four complete provisional source studies include one qualified platform-reference
-      witness and one fingerprinted witness-only source awaiting sequential reconstruction. They are not independent
-      corroboration, doctrinal certification, migration completion, successor activation, or repository completion.
-  limitation: All nineteen predecessor writings have bounded identities. CORPUS-SRC-102, CORPUS-SRC-105, CORPUS-SRC-109,
-    and CORPUS-SRC-111 have reviewed item witnesses and complete provisional sequential studies. CORPUS-SRC-103 has
-    a fingerprinted reviewed witness but its independent sequential reconstruction and original 1948 comparison remain
-    pending. Fourteen sources still lack reviewed item witnesses and fifteen lack independent studies. Byte custody
-    for CORPUS-WIT-102, original-edition comparisons, independent witnesses, and source-text access remain incomplete.
+    rule: All nineteen predecessor items now have reviewed witnesses. Only four have complete provisional independent
+      sequential studies. Witness coverage is documentary availability, not independent corroboration, doctrinal
+      certification, migration completion, successor activation, or repository completion.
+  limitation: All nineteen predecessor writings now have bounded identities and reviewed witnesses, but fifteen
+    still lack independent sequential studies. Original-edition comparisons, independent source traditions, source-text
+    admission, doctrinal certification, migration certification, and successor activation remain incomplete.
 findings:
   index: findings/index.yaml
   loader: findings_registry.py

@@ -3,7 +3,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.7.0
+  version: 1.8.0
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
   structural_interface: IMPLEMENTED
@@ -11,11 +11,11 @@ status:
   certification: NOT_CERTIFIED
   destructive_actions_authorized: false
 revision_history:
-  predecessor_version: 1.6.0
-  predecessor_blob_sha: 4f8ec7c77118d9657c9e9bfe60c5e1d7a8efb04f
-  reason: Synchronize fingerprinted CORPUS-WIT-103, corpus registry v1.11.0, audit v2.5.0, process v1.9.0, and witness
-    schedule v1.7.0 while preserving pending CORPUS-SRC-103 sequential reconstruction, original-edition comparison,
-    noncorroboration, noncertification, predecessor authority, and repository incompleteness.
+  predecessor_version: 1.7.0
+  predecessor_blob_sha: 2ce5cf4b5ec6f78c19a2a6b4c1c1acf34b1f792c
+  reason: Synchronize complete 19-of-19 Theologico-Political reviewed-witness coverage, corpus registry v1.12.0,
+    audit v2.6.0, process v1.10.0, and witness schedule v1.8.0 while preserving fifteen pending studies, edition-comparison
+    limits, noncorroboration, noncertification, predecessor authority, and repository incompleteness.
 source_state:
   repository: izzy9118-blip/Strauss
   governing_commit_before_mapping: 853dd7de13d7bf4abc881fc7671a5833b822b6cb
@@ -29,7 +29,7 @@ source_state:
   - scripts/
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 2.5.0
+  version: 2.6.0
   rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be
     reported as doctrinal, migration, successor, or repository completion.
 
@@ -39,8 +39,8 @@ production_process:
   state: IN_PROGRESS
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
-  completed_witness_subunit: JERUSALEM_ATHENS_COHEN_TALMON_SPINOZA_PREFACE_AND_SPINOZA_TREATISE_5_OF_19
-  completed_study_subunit: JERUSALEM_ATHENS_COHEN_TALMON_AND_SPINOZA_PREFACE_4_OF_19_COMPLETE_PROVISIONAL
+  completed_witness_subunit: THEOLOGICO_POLITICAL_REVIEWED_WITNESSES_19_OF_19_COMPLETE
+  completed_study_subunit: FOUR_OF_19_COMPLETE_PROVISIONAL_FIFTEEN_PENDING
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 mapping_rules:
@@ -190,28 +190,42 @@ mappings:
     - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.11.0
+      registry_version: 1.12.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
-    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_QUALIFIED_PLATFORM_REFERENCE_AND_FINGERPRINTED_WITNESS_ONLY_STATE
+    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COMPLETE_NINETEEN_ITEM_REVIEWED_WITNESS_COVERAGE
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
     reviewed_witnesses:
-      count: 8
+      count: 22
       source_ids:
       - CORPUS-SRC-001
       - CORPUS-SRC-002
       - CORPUS-SRC-003
+      - CORPUS-SRC-101
       - CORPUS-SRC-102
       - CORPUS-SRC-103
+      - CORPUS-SRC-104
       - CORPUS-SRC-105
+      - CORPUS-SRC-106
+      - CORPUS-SRC-107
+      - CORPUS-SRC-108
       - CORPUS-SRC-109
+      - CORPUS-SRC-110
       - CORPUS-SRC-111
+      - CORPUS-SRC-112
+      - CORPUS-SRC-113
+      - CORPUS-SRC-114
+      - CORPUS-SRC-115
+      - CORPUS-SRC-116
+      - CORPUS-SRC-117
+      - CORPUS-SRC-118
+      - CORPUS-SRC-119
     theologico_political_item_level_statuses:
       active_predecessor_source_count: 19
       registered_count: 19
       remaining_count: 0
-      reviewed_witness_count: 5
-      remaining_without_reviewed_witness: 14
+      reviewed_witness_count: 19
+      remaining_without_reviewed_witness: 0
       independent_sequential_study_count: 4
       remaining_without_independent_sequential_study: 15
       completed_study_ids:
@@ -220,21 +234,35 @@ mappings:
       - TALMON-STUDY-001
       - SPINOZA-PREFACE-STUDY-001
       witness_only_source_ids:
+      - CORPUS-SRC-101
       - CORPUS-SRC-103
+      - CORPUS-SRC-104
+      - CORPUS-SRC-106
+      - CORPUS-SRC-107
+      - CORPUS-SRC-108
+      - CORPUS-SRC-110
+      - CORPUS-SRC-112
+      - CORPUS-SRC-113
+      - CORPUS-SRC-114
+      - CORPUS-SRC-115
+      - CORPUS-SRC-116
+      - CORPUS-SRC-117
+      - CORPUS-SRC-118
+      - CORPUS-SRC-119
       status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
       root: studies/theologico-political/
     present_function:
     - register source entities separately from witnesses and studies
-    - account for all 37 YAML records in the current studies tree
-    - validate all nineteen identities, aliases, scopes, witness states, study states, and noncertification
-    - validate CORPUS-WIT-102 platform identity, printed locators, missing byte identity, and complete provisional study
-    - validate CORPUS-WIT-103 fingerprint, file size, page count, printed and PDF locators, pending study, and pending
-      original 1948 comparison
-    - validate fingerprinted witnesses and completed study bindings for CORPUS-WIT-105, CORPUS-WIT-109, and CORPUS-WIT-111
+    - account for all 51 YAML records in the current studies tree
+    - validate all nineteen identities, aliases, scopes, reviewed-witness states, study states, fingerprints, locators,
+      and noncertification
+    - preserve CORPUS-WIT-102 platform-reference safeguards
+    - validate the fingerprinted 1997 SUNY witness batch without converting witness registration into sequential
+      study completion
     - preserve corpus gaps and original-edition comparison limits
-    limit: Current-state exhaustiveness, five reviewed item witnesses, and four complete provisional item studies do
-      not create a complete corpus, admit source text, supply independent corroboration, certify findings, or authorize
-      migration and activation.
+    limit: Current-state exhaustiveness and 19-of-19 reviewed item witness coverage do not create a complete corpus,
+      complete the fifteen pending sequential studies, admit source text, supply independent corroboration, certify
+      findings, or authorize migration and activation.
   findings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
@@ -321,7 +349,8 @@ completed_production_units:
 - typed current-state corpus and findings registries
 - complete 19-of-19 Theologico-Political source-identity range
 - CORPUS-WIT-102, CORPUS-WIT-103, CORPUS-WIT-105, CORPUS-WIT-109, and CORPUS-WIT-111 reviewed item witnesses
-- JA-STUDY-001, COHEN-STUDY-001, TALMON-STUDY-001, and SPINOZA-PREFACE-STUDY-001 complete provisional source-specific reconstructions
+- JA-STUDY-001, COHEN-STUDY-001, TALMON-STUDY-001, and SPINOZA-PREFACE-STUDY-001 complete provisional source-specific
+  reconstructions
 - eleven jurisdiction-preserving local synthesis bridges derived from the four completed item studies
 next_production_units:
 - validate and merge this bounded CORPUS-WIT-103 registration

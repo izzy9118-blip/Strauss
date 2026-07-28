@@ -69,7 +69,7 @@ class CorpusWitness102PlatformRegistrationTests(unittest.TestCase):
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_reviewed_witness_state"],
-            "INCOMPLETE_5_OF_19",
+            "COMPLETE_19_OF_19",
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_independent_study_state"],

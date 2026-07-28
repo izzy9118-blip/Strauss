@@ -3,7 +3,7 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.11.0
+  version: 1.12.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
@@ -11,12 +11,13 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 revision_history:
-  predecessor_version: 1.10.0
-  predecessor_blob_sha: 69116e3b81bf3c267ae6c7681dede6d5dd0beab1
+  predecessor_version: 1.11.0
+  predecessor_blob_sha: b23efa44e354894bb22cfd6b0b0d65312b5c3ad0
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register CORPUS-WIT-103 for the complete fingerprinted 1997 SUNY collected witness of How to Study Spinoza's
-    Theologico-Political Treatise while preserving pending independent sequential reconstruction, pending original
-    1948 journal comparison, noncorroboration, noncertification, predecessor authority, and no successor effect.
+  reason: Register the remaining fourteen fingerprinted 1997 SUNY collected witnesses so all nineteen Theologico-Political
+    predecessor source identities have reviewed witnesses, while preserving fifteen pending independent sequential
+    studies, edition-comparison limits, noncorroboration, noncertification, predecessor authority, and no successor
+    effect.
 purpose: Provide deterministic discovery, source identity, documentary status, provenance, problem binding, study
   binding, witness condition, and gap records without moving source records, distributing source texts, certifying
   doctrine, or treating a registered corpus as complete merely because every current record is indexed.
@@ -127,8 +128,12 @@ source_entities:
   - theologico-political
   - athens-vs-jerusalem
   - ancients-vs-moderns
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-101
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-102
   creator: Leo Strauss
   canonical_title: Preface to Spinoza's Critique of Religion
@@ -175,6 +180,7 @@ source_entities:
   - the collection acknowledgment identifies the original publication as Proceedings of the American Academy for
     Jewish Research 17 (1948), 69-131
   - original 1948 journal comparison and independent sequential reconstruction remain pending
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-104
   creator: Leo Strauss
   canonical_title: Preface to Isaac Husik, Philosophical Essays
@@ -185,8 +191,12 @@ source_entities:
   problem_bindings:
   - theologico-political
   - athens-vs-jerusalem
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-104
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-105
   creator: Leo Strauss
   canonical_title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
@@ -219,8 +229,12 @@ source_entities:
   problem_bindings:
   - theologico-political
   - ancients-vs-moderns
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-106
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-107
   creator: Leo Strauss
   canonical_title: Why We Remain Jews
@@ -231,8 +245,12 @@ source_entities:
   problem_bindings:
   - theologico-political
   - athens-vs-jerusalem
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-107
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-108
   creator: Leo Strauss
   canonical_title: On the Interpretation of Genesis
@@ -244,8 +262,12 @@ source_entities:
   - theologico-political
   - athens-vs-jerusalem
   - nomos-vs-physis
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-108
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-109
   creator: Leo Strauss
   canonical_title: Jerusalem and Athens
@@ -280,8 +302,13 @@ source_entities:
   - theory-vs-practice
   - athens-vs-jerusalem
   registered_scope: first paragraph
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-110
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - registered witness covers only the predecessor-defined first paragraph scope
 - source_id: CORPUS-SRC-111
   creator: Leo Strauss
   canonical_title: Review of J. L. Talmon, The Nature of Jewish History
@@ -316,8 +343,12 @@ source_entities:
   - theologico-political
   - athens-vs-jerusalem
   - theory-vs-practice
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-112
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-113
   creator: Leo Strauss
   canonical_title: Introduction to Persecution and the Art of Writing
@@ -328,8 +359,12 @@ source_entities:
   problem_bindings:
   - theologico-political
   - wise-vs-vulgar
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-113
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-114
   creator: Leo Strauss
   canonical_title: Perspectives on the Good Society
@@ -341,8 +376,12 @@ source_entities:
   - theologico-political
   - theory-vs-practice
   - ancients-vs-moderns
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-114
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-115
   creator: Leo Strauss
   canonical_title: An Unspoken Prologue
@@ -354,8 +393,12 @@ source_entities:
   - theologico-political
   - athens-vs-jerusalem
   - wise-vs-vulgar
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-115
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-116
   creator: Leo Strauss
   canonical_title: Preface to Hobbes Politische Wissenschaft
@@ -366,8 +409,12 @@ source_entities:
   problem_bindings:
   - theologico-political
   - ancients-vs-moderns
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-116
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-117
   creator: Leo Strauss
   canonical_title: A Giving of Accounts
@@ -378,8 +425,12 @@ source_entities:
   problem_bindings:
   - theologico-political
   - wise-vs-vulgar
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-117
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-118
   creator: Leo Strauss
   canonical_title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
@@ -390,8 +441,12 @@ source_entities:
   problem_bindings:
   - theologico-political
   - athens-vs-jerusalem
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-118
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
 - source_id: CORPUS-SRC-119
   creator: Leo Strauss
   canonical_title: Restatement on Xenophon's Hiero
@@ -403,8 +458,13 @@ source_entities:
   - theologico-political
   - theory-vs-practice
   - ancients-vs-moderns
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  reviewed_witnesses:
+  - CORPUS-WIT-119
+  limits:
+  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - registered witness covers only the predecessor-defined last paragraph scope
 reviewed_witnesses:
 - witness_id: CORPUS-WIT-001
   source_id: CORPUS-SRC-002
@@ -438,6 +498,33 @@ reviewed_witnesses:
   source_status_path: studies/socrates-and-aristophanes/source-status.yaml
   repository_copy_status: NOT_DISTRIBUTED_BY_REGISTRY
   ocr_rule: PAGE_IMAGES_GOVERN_WORDING_WHERE_OCR_IS_UNCERTAIN
+- witness_id: CORPUS-WIT-101
+  source_id: CORPUS-SRC-101
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Progress or Return?
+  publication_provenance_note: '1952 Hillel House lectures; 1997 text combines Modern Judaism 1 (1981): 17-45 and
+    The Independent Journal of Philosophy 3 (1979): 111-18'
+  printed_page_range:
+    start: 87
+    end: 136
+  pdf_page_range_one_based:
+    start: 106
+    end: 155
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/progress-or-return/source-status.yaml
+  witness_record_path: studies/theologico-political/progress-or-return/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
 - witness_id: CORPUS-WIT-102
   source_id: CORPUS-SRC-102
   witness_type: ITEM_WITHIN_PLATFORM_REFERENCE_SEARCHABLE_PDF_WITH_PAGE_IMAGES
@@ -492,6 +579,33 @@ reviewed_witnesses:
   wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
   repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
   original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-104
+  source_id: CORPUS-SRC-104
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Preface to Isaac Husik, Philosophical Essays
+  publication_provenance_note: 'Isaac Husik, Philosophical Essays: Ancient, Medieval, and Modern (Basil Blackwell,
+    1952), vii-xli'
+  printed_page_range:
+    start: 235
+    end: 266
+  pdf_page_range_one_based:
+    start: 254
+    end: 285
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/source-status.yaml
+  witness_record_path: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
 - witness_id: CORPUS-WIT-105
   source_id: CORPUS-SRC-105
   witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
@@ -517,6 +631,84 @@ reviewed_witnesses:
   repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
   original_edition_comparison: PENDING
   witness_record_path: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/reviewed-witness.yaml
+- witness_id: CORPUS-WIT-106
+  source_id: CORPUS-SRC-106
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Freud on Moses and Monotheism
+  publication_provenance_note: 1997 collection supplies no earlier publication citation in its Sources section
+  printed_page_range:
+    start: 285
+    end: 309
+  pdf_page_range_one_based:
+    start: 304
+    end: 328
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/freud-on-moses-and-monotheism/source-status.yaml
+  witness_record_path: studies/theologico-political/freud-on-moses-and-monotheism/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-107
+  source_id: CORPUS-SRC-107
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Why We Remain Jews
+  publication_provenance_note: 1997 collection supplies no earlier publication citation in its Sources section
+  printed_page_range:
+    start: 311
+    end: 356
+  pdf_page_range_one_based:
+    start: 330
+    end: 375
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/why-we-remain-jews/source-status.yaml
+  witness_record_path: studies/theologico-political/why-we-remain-jews/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-108
+  source_id: CORPUS-SRC-108
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: On the Interpretation of Genesis
+  publication_provenance_note: 'L''Homme 21 (1981): 5-36; active predecessor preserves source date 1957'
+  printed_page_range:
+    start: 359
+    end: 376
+  pdf_page_range_one_based:
+    start: 378
+    end: 395
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/on-the-interpretation-of-genesis/source-status.yaml
+  witness_record_path: studies/theologico-political/on-the-interpretation-of-genesis/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
 - witness_id: CORPUS-WIT-109
   source_id: CORPUS-SRC-109
   witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
@@ -540,6 +732,33 @@ reviewed_witnesses:
   wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
   repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
   original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-110
+  source_id: CORPUS-SRC-110
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: What Is Political Philosophy?
+  publication_provenance_note: first-paragraph scope; What Is Political Philosophy? (Free Press, 1959), 9-10
+  printed_page_range:
+    start: 409
+    end: 409
+  pdf_page_range_one_based:
+    start: 428
+    end: 428
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/what-is-political-philosophy/source-status.yaml
+  witness_record_path: studies/theologico-political/what-is-political-philosophy/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+  registered_scope: first paragraph
 - witness_id: CORPUS-WIT-111
   source_id: CORPUS-SRC-111
   witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
@@ -567,6 +786,218 @@ reviewed_witnesses:
   reviewed_work: J. L. Talmon, The Nature of Jewish History—Its Universal Significance, Hillel Foundation, London,
     1957
   reviewed_work_witness: NOT_REGISTERED
+- witness_id: CORPUS-WIT-112
+  source_id: CORPUS-SRC-112
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Letter to the Editor — The State of Israel
+  publication_provenance_note: 'National Review 3, no. 1 (5 January 1957): 23'
+  printed_page_range:
+    start: 413
+    end: 414
+  pdf_page_range_one_based:
+    start: 432
+    end: 433
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/letter-to-editor-state-of-israel/source-status.yaml
+  witness_record_path: studies/theologico-political/letter-to-editor-state-of-israel/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-113
+  source_id: CORPUS-SRC-113
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Introduction to Persecution and the Art of Writing
+  publication_provenance_note: Persecution and the Art of Writing (Free Press, 1952), 7-21
+  printed_page_range:
+    start: 417
+    end: 429
+  pdf_page_range_one_based:
+    start: 436
+    end: 448
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/source-status.yaml
+  witness_record_path: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-114
+  source_id: CORPUS-SRC-114
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Perspectives on the Good Society
+  publication_provenance_note: 'Criterion 2, no. 3 (Summer 1963): 2-9'
+  printed_page_range:
+    start: 431
+    end: 445
+  pdf_page_range_one_based:
+    start: 450
+    end: 464
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/perspectives-on-the-good-society/source-status.yaml
+  witness_record_path: studies/theologico-political/perspectives-on-the-good-society/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-115
+  source_id: CORPUS-SRC-115
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: An Unspoken Prologue
+  publication_provenance_note: 'Interpretation 7, no. 3 (1978): 1-3; active predecessor preserves source date 1959'
+  printed_page_range:
+    start: 449
+    end: 452
+  pdf_page_range_one_based:
+    start: 468
+    end: 471
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/an-unspoken-prologue/source-status.yaml
+  witness_record_path: studies/theologico-political/an-unspoken-prologue/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-116
+  source_id: CORPUS-SRC-116
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Preface to Hobbes Politische Wissenschaft
+  publication_provenance_note: 'Interpretation 8, no. 1 (1979-80): 1-3, translated by Donald J. Maletz; active predecessor
+    preserves source date 1965'
+  printed_page_range:
+    start: 453
+    end: 456
+  pdf_page_range_one_based:
+    start: 472
+    end: 475
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/source-status.yaml
+  witness_record_path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-117
+  source_id: CORPUS-SRC-117
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: A Giving of Accounts
+  publication_provenance_note: 'The College 22, no. 1 (April 1970): 1-5'
+  printed_page_range:
+    start: 457
+    end: 466
+  pdf_page_range_one_based:
+    start: 476
+    end: 485
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/a-giving-of-accounts/source-status.yaml
+  witness_record_path: studies/theologico-political/a-giving-of-accounts/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-118
+  source_id: CORPUS-SRC-118
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
+  publication_provenance_note: 1997 collection supplies no earlier publication citation in its Sources section;
+    active predecessor preserves source date 1946
+  printed_page_range:
+    start: 467
+    end: 470
+  pdf_page_range_one_based:
+    start: 486
+    end: 489
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/source-status.yaml
+  witness_record_path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+- witness_id: CORPUS-WIT-119
+  source_id: CORPUS-SRC-119
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  witness_class: FINGERPRINTED_LOCAL_REVIEW_WITNESS
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: Restatement on Xenophon's Hiero
+  publication_provenance_note: last-paragraph scope; 1997 collection supplies no separate earlier-publication citation
+    for the excerpt; active predecessor preserves source date 1950
+  printed_page_range:
+    start: 471
+    end: 473
+  pdf_page_range_one_based:
+    start: 490
+    end: 492
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  source_status_path: studies/theologico-political/restatement-on-xenophons-hiero/source-status.yaml
+  witness_record_path: studies/theologico-political/restatement-on-xenophons-hiero/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
+  registered_scope: last paragraph
 source_status_records:
 - status_id: CORPUS-STATUS-001
   source_id: CORPUS-SRC-002
@@ -590,7 +1021,7 @@ source_status_records:
   source_id: CORPUS-SRC-101
   path: studies/theologico-political/progress-or-return/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-102
   source_id: CORPUS-SRC-102
@@ -608,7 +1039,7 @@ source_status_records:
   source_id: CORPUS-SRC-104
   path: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-105
   source_id: CORPUS-SRC-105
@@ -620,19 +1051,19 @@ source_status_records:
   source_id: CORPUS-SRC-106
   path: studies/theologico-political/freud-on-moses-and-monotheism/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-107
   source_id: CORPUS-SRC-107
   path: studies/theologico-political/why-we-remain-jews/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-108
   source_id: CORPUS-SRC-108
   path: studies/theologico-political/on-the-interpretation-of-genesis/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-109
   source_id: CORPUS-SRC-109
@@ -644,7 +1075,7 @@ source_status_records:
   source_id: CORPUS-SRC-110
   path: studies/theologico-political/what-is-political-philosophy/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-111
   source_id: CORPUS-SRC-111
@@ -656,49 +1087,49 @@ source_status_records:
   source_id: CORPUS-SRC-112
   path: studies/theologico-political/letter-to-editor-state-of-israel/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-113
   source_id: CORPUS-SRC-113
   path: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-114
   source_id: CORPUS-SRC-114
   path: studies/theologico-political/perspectives-on-the-good-society/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-115
   source_id: CORPUS-SRC-115
   path: studies/theologico-political/an-unspoken-prologue/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-116
   source_id: CORPUS-SRC-116
   path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-117
   source_id: CORPUS-SRC-117
   path: studies/theologico-political/a-giving-of-accounts/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-118
   source_id: CORPUS-SRC-118
   path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-119
   source_id: CORPUS-SRC-119
   path: studies/theologico-political/restatement-on-xenophons-hiero/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
   certification: NOT_CERTIFIED
 study_records:
 - study_id: CORPUS-STUDY-001
@@ -816,15 +1247,15 @@ repository_documentary_artifacts:
   path: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
 coverage:
   source_entities_registered: 22
-  reviewed_witnesses_registered: 8
+  reviewed_witnesses_registered: 22
   source_status_records_registered: 22
   study_records_registered: 11
   problem_witness_registries_registered: 7
   theologico_political_predecessor_sources_registered: 19
   theologico_political_item_level_statuses_registered: 19
-  theologico_political_reviewed_item_witnesses_registered: 5
+  theologico_political_reviewed_item_witnesses_registered: 19
   theologico_political_independent_item_studies_registered: 4
-  current_studies_tree_yaml_records_accounted_for: 37
+  current_studies_tree_yaml_records_accounted_for: 51
   exhaustive_within_declared_scope: true
 corpus_gaps:
 - gap_id: CORPUS-GAP-001
@@ -838,10 +1269,9 @@ corpus_gaps:
   effect: EDITION_SPECIFIC_DIFFERENCES_NOT_YET_TESTED
 - gap_id: CORPUS-GAP-003
   category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES
-  statement: All nineteen predecessor writings have bounded source identities; CORPUS-SRC-102, CORPUS-SRC-105, CORPUS-SRC-109,
-    and CORPUS-SRC-111 have reviewed witnesses and complete provisional sequential studies; CORPUS-SRC-103 now has
-    a reviewed witness but awaits independent sequential reconstruction; the other fourteen lack reviewed item witnesses
-    and the remaining fifteen lack independent item studies.
+  statement: All nineteen predecessor writings have bounded source identities and reviewed witnesses. Four have
+    complete provisional independent sequential studies; the remaining fifteen have registered witnesses but still
+    require independent sequential reconstruction.
   effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL
 - gap_id: CORPUS-GAP-004
   category: INDEPENDENT_CLASSICAL_WITNESSES
@@ -874,21 +1304,22 @@ validation_rules:
   records
 - missing, witness-only, and completed-study states must remain distinct
 - CORPUS-SRC-102 preserves platform-reference safeguards while recording a complete provisional study
-- CORPUS-SRC-103 preserves fingerprinted witness-only safeguards while sequential reconstruction remains pending
 - counts in coverage must match registry contents and the studies tree
 - source inclusion may not change certification, migration, or activation status
 - complete current-state indexing may not be described as a complete corpus
+- all fifteen witness-only Theologico-Political sources preserve registered-witness, pending-study, edition-comparison,
+  noncertification, and no-successor safeguards
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   theologico_political_identity_registration_state: COMPLETE_19_OF_19
-  theologico_political_reviewed_witness_state: INCOMPLETE_5_OF_19
+  theologico_political_reviewed_witness_state: COMPLETE_19_OF_19
   theologico_political_independent_study_state: INCOMPLETE_4_OF_19
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
   certification: NOT_CERTIFIED
   next_required_units:
-  - conduct independent sequential reconstruction of CORPUS-SRC-103 from CORPUS-WIT-103
-  - compare the reviewed 1997 CORPUS-WIT-103 item with the original 1948 journal printing when available
+  - conduct independent sequential reconstruction for the remaining fifteen writings, beginning with CORPUS-SRC-103
+  - compare collected witnesses with separately reviewed original or earlier textual states where available and
+    material
   - compare the 1997 CORPUS-WIT-102 composite with separately reviewed 1965 and 1968 textual states
-  - acquire and register reviewed witnesses for the remaining fourteen item identities
-  - conduct independent sequential reconstruction for the remaining fifteen writings
-  - acquire and reconstruct Talmon's reviewed work
+  - acquire and reconstruct Talmon's reviewed work and other independent classical, biblical, medieval, Spinozist,
+    Cohenian, Kantian, and modern witnesses
