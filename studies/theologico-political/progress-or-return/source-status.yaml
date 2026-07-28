@@ -6,18 +6,22 @@ identity:
   canonical_title: Progress or Return?
   author: Leo Strauss
   date: 1952
-  version: 1.1.0
+  version: 1.2.0
 status:
-  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
   source_text_admission: NOT_REQUESTED
   reviewed_witness: CORPUS-WIT-101
-  independent_sequential_study: NOT_YET_COMPLETED
+  independent_sequential_study: PROGRESS-RETURN-STUDY-001
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
 revision_history:
-  predecessor_version: 1.0.0
-  transformation: FORWARD_WITNESS_REGISTRATION
-  reason: Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, pending textual-state comparison, predecessor authority, noncertification, and no successor effect.
+  predecessor_version: 1.1.0
+  transformation: FORWARD_SOURCE_STUDY_COMPLETION_AND_PROVENANCE_CORRECTION
+  reason: >
+    Record the independent sequential reconstruction of the reviewed 1997 collected text and replace the prior incorrect
+    publication-venue claim with the collection's editorial provenance: three University of Chicago Hillel lectures in
+    November 1952, first published posthumously in two parts in 1979 and 1981. Preserve pending textual-state comparison,
+    incomplete independent corroboration, predecessor authority, noncertification, and no migration or successor effect.
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
   active_predecessor_source_sequence: 1
@@ -26,52 +30,98 @@ registration_basis:
   governing_problem: theologico-political
   preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
-  - The active predecessor identifies the work as Progress or Return? and records the date as 1952.
   - The reviewed 1997 SUNY collected witness occupies printed pages 87-136 and one-based PDF pages 106-155.
+  - Strauss's lecture and discussion body occupies printed pages 87-132; editorial notes begin on printed page 132 and continue through page 136.
   - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
-  - The collection states that the work was delivered in 1952 and combines two later published textual components from 1979 and 1981.
+  - The editor identifies the source as three lectures delivered on 5, 12, and 19 November 1952 at the B'nai B'rith Hillel Foundation at the University of Chicago.
+  - The editor states that sections I-II were first published posthumously in Modern Judaism 1, nos. 1 and 2 (February and May 1981), pages 17-45, and section III in Independent Journal of Philosophy 3 (1979), pages 111-18.
+  - PROGRESS-RETURN-STUDY-001 reconstructs the reviewed item sequentially in ten bounded reading units before comparison with the active predecessor.
 predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
-  statement: Establishes progress and return as rival orientations and presents the unresolved conflict between the biblical and philosophic accounts of the good life as a living foundation of Western civilization.
-  preservation_rule: Witness registration does not independently confirm, promote, revise, or certify this predecessor statement.
+  evidence_status: PROVISIONALLY_RETESTED_BY_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  statement: >
+    Establishes progress and return as rival orientations and presents the unresolved conflict between the biblical and philosophic accounts of the good life as a living foundation of Western civilization.
+  retest_result: >
+    The study confirms progress and return as rival orientations and confirms Jerusalem and Athens as the two fundamental
+    Western sources whose unresolved tension constitutes Western life. It qualifies return as return to two conflicting
+    roots rather than one homogeneous tradition and records the stronger final argument that revelation and philosophy
+    cannot refute one another, that human reason cannot settle their conflict, and that philosophy itself is described
+    as resting on an act of faith within this confrontation.
+  preservation_rule: >
+    Provisional confirmation and qualification do not certify, migrate, activate, displace, or silently rewrite the active predecessor.
 publication_and_witness_condition:
-  reviewed_collection: Jewish Philosophy and the Crisis of Modernity
-  editor: Kenneth Hart Green
-  publisher: State University of New York Press
-  year: 1997
-  printed_page_range: {start: 87, end: 136}
-  pdf_page_range_one_based: {start: 106, end: 155}
+  source_date: 1952
+  lecture_series: Three lectures at the B'nai B'rith Hillel Foundation, University of Chicago
+  lecture_dates: [1952-11-05, 1952-11-12, 1952-11-19]
+  first_posthumous_publication_sections_i_ii: "Modern Judaism 1, nos. 1 and 2 (February and May 1981): 17-45"
+  first_posthumous_publication_section_iii: "Independent Journal of Philosophy 3 (1979): 111-18"
+  edition: 1997 SUNY collected reprint in Jewish Philosophy and the Crisis of Modernity
+  pagination:
+    printed_page_range: {start: 87, end: 136}
+    lecture_and_discussion_body: {start: 87, end: 132}
+    editorial_notes: {start: 132, end: 136}
+    pdf_page_range_one_based: {start: 106, end: 155}
   local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  fingerprint:
+    algorithm: SHA256
+    value: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
   file_size_bytes: 39287307
-  sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
-  fingerprint: AVAILABLE
+  container_page_count: 526
   text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
   locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
-  original_or_earlier_printing_comparison: PENDING
+  1979_publication_comparison: PENDING
+  1981_publication_comparison: PENDING
 reviewed_witness:
   witness_id: CORPUS-WIT-101
   witness_record_path: studies/theologico-political/progress-or-return/reviewed-witness.yaml
+  collected_reprint_year: 1997
+  source_date: 1952
   printed_page_range: {start: 87, end: 136}
   pdf_page_range_one_based: {start: 106, end: 155}
   container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_file_size_bytes: 39287307
+  earlier_publication_comparison: PENDING
+study_record:
+  internal_study_id: PROGRESS-RETURN-STUDY-001
+  corpus_study_id: CORPUS-STUDY-016
+  path: studies/theologico-political/progress-or-return/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  independent_corroboration: INCOMPLETE
 source_classification:
   author_relation: PRIMARY_STRAUSS_WRITING
-  documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS
-  analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  independence_limit: The witness is documentary access to the source, not independent corroboration of claims or predecessor synthesis.
+  documentary_rank: REVIEWED_PRIMARY_STRAUSS_ITEM_WITHIN_FINGERPRINTED_COLLECTED_WITNESS
+  analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+required_distinctions:
+  - progress from cumulative scientific or technological advance
+  - return from restoration to one homogeneous tradition
+  - Jerusalem from Athens without harmonization
+  - practical moral overlap from ultimate disagreement over authority and the good life
+  - modern unbelief from classical philosophy
+  - historical criticism from historical omniscience
+  - philosophic quest from possession of a complete system
+  - source-local act-of-faith formulation from repository-wide doctrine
+  - reviewed 1997 collection from separately reviewed 1979 and 1981 publication states
 prohibitions:
-  - Do not count witness registration as an independent sequential reconstruction.
-  - Do not treat the 1997 collected witness as proof of identity with unreviewed earlier textual states.
+  - Do not treat the prior Dawn publication claim as verified; the reviewed collection supplies different provenance and governs this status record.
+  - Do not harmonize Jerusalem and Athens or certify either alternative as true.
+  - Do not treat historical criticism as capable of proving or disproving revelation merely because it can undermine traditional reliability claims.
+  - Do not generalize the act-of-faith formulation beyond this source without further comparison.
+  - Do not treat source-specific reconstruction as independent corroboration of biblical, Greek, Jewish, Christian, Spinozist, or modern historical claims.
+  - Do not attribute the editorial notes on printed pages 132-136 to Strauss.
   - Do not certify doctrine, migration, successor activation, or predecessor displacement.
 next_required_actions:
-  - conduct an independent sequential reading of printed pages 87-136
-  - classify source-level findings by evidence status
-  - compare the source-level reconstruction with the active predecessor without silent harmonization
-  - compare separately reviewed earlier textual states when available
+  - compare the 1979 and 1981 posthumous publication states when separately available
+  - reconstruct biblical, Greek, Jewish, Christian, Spinozist, and modern sources independently where required
+  - preserve source-level findings and problem jurisdictions in the typed findings registry
+  - proceed to the next scheduled independent Theologico-Political item study without revisiting completed witness acquisition
 termination:
   source_identity_state: REGISTERED
   reviewed_witness_state: REGISTERED
-  study_state: INCOMPLETE
-  original_edition_comparison: PENDING
+  reviewed_witness_id: CORPUS-WIT-101
+  study_state: COMPLETE_PROVISIONAL
+  study_id: PROGRESS-RETURN-STUDY-001
+  independent_corroboration: INCOMPLETE
+  earlier_publication_comparison: PENDING
   certification: NOT_CERTIFIED
   successor_effect: NONE
