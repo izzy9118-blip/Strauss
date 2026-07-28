@@ -1,0 +1,125 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+identity:
+  id: GIVING-ACCOUNTS-STUDY-001
+  title: Sequential Reconstruction of A Giving of Accounts — Jacob Klein and Leo Strauss
+  version: 1.0.0
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1970_college_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+source:
+  source_id: CORPUS-SRC-117
+  source_status_id: CORPUS-STATUS-117
+  reviewed_witness_id: CORPUS-WIT-117
+  author_relation: MULTI_SPEAKER_EVENT_WITH_STRAUSS_CONTRIBUTION
+  canonical_title: A Giving of Accounts
+  source_date: 1970
+  source_form: TRANSCRIBED_PUBLIC_CONVERSATION_AND_QUESTION_PERIOD
+  reviewed_container: {title: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, place: Albany, year: 1997}
+  editorial_provenance: {original_appearance: 'The College 22, no. 1 (April 1970): 1-5', separately_reviewed_original_printing: false}
+  locators: {printed_pages: {start: 457, end: 466}, pdf_pages_one_based: {start: 476, end: 485}}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+source_limits:
+  - Dean Goldwin, Jacob Klein, Leo Strauss, and questioners are distinct speakers; only Strauss's statements are Strauss evidence.
+  - A recorded tape break occurs in the question period and must remain a documentary discontinuity.
+  - Strauss explicitly says his life is relevant as a starting point and possible explanation of pitfalls; autobiography therefore may not be treated as a doctrinal confession.
+  - Claims about Cohen, Husserl, Barth, Rosenzweig, Heidegger, Lessing, Spinoza, Maimonides, Avicenna, Plato, Aristotle, Aquinas, Kant, Rousseau, and Nietzsche remain Strauss's source-level representations unless independently reconstructed.
+method_application:
+  governing_question: How does Strauss narrate the genesis of his theologico-political inquiry, his recovery of exotericism and classical philosophy, and his difference with Klein concerning the city and morality?
+  reconstruction_rule: Preserve speaker identity and chronology while reconstructing Strauss's own account, then compare it with the predecessor without treating autobiography as final doctrine.
+speaker_and_documentary_layers:
+  dean_goldwin: INTRODUCTORY_SPEAKER
+  jacob_klein: INDEPENDENT_INTERLOCUTOR
+  leo_strauss: PRIMARY_AUTHORIAL_SPEAKER_FOR_THIS_STUDY
+  questioners: DISTINCT_UNNAMED_SPEAKERS
+  tape_break: DOCUMENTARY_DISCONTINUITY
+sequential_reading:
+  - unit: GIVING-RU-001
+    printed_pages: 457-459
+    findings:
+      - {id: GIVING-DF-001, classification: documented_finding, proposition: 'Klein identifies Strauss’s early primary interests as the question of God and the question of politics; this is Klein’s testimony, not Strauss’s own formulation.'}
+      - {id: GIVING-DF-002, classification: documented_finding, proposition: 'Strauss justifies the autobiographical account only insofar as thoughts about public matters are connected with a life whose circumstances may explain errors and pitfalls.'}
+      - {id: GIVING-DF-003, classification: documented_finding, proposition: 'Strauss frames the exercise around both agreement and difference with Klein rather than around a self-contained confession.'}
+  - unit: GIVING-RU-002
+    printed_pages: 459-461
+    findings:
+      - {id: GIVING-DF-004, classification: documented_finding, proposition: 'Strauss describes an orthodox Jewish home with little Jewish knowledge, movement toward German humanism, Schopenhauer and Nietzsche, early attachment to Plato, and conversion at seventeen to straightforward political Zionism.'}
+      - {id: GIVING-DF-005, classification: documented_finding, proposition: 'Hermann Cohen attracted him as both passionate philosopher and Jew devoted to Judaism, while the postwar resurgence of Barthian and Rosenzweigian theology made the reason-revelation question newly urgent.'}
+      - {id: GIVING-DF-006, classification: documented_finding, proposition: 'Heidegger’s interpretation revealed the possibility of radically serious textual reading, but Strauss rejected the moral indeterminacy of resoluteness and later connected it directly to Heidegger’s 1933 political choice.'}
+  - unit: GIVING-RU-003
+    printed_pages: 461-462
+    findings:
+      - {id: GIVING-DF-007, classification: documented_finding, proposition: 'The resurgence of theology required Strauss to reconsider how far the Enlightenment attack on old orthodoxy had succeeded or failed.'}
+      - {id: GIVING-DF-008, classification: documented_finding, proposition: 'Spinoza’s Theologico-Political Treatise became the classical document for this inquiry; Cohen’s critique was impressive but insufficient, leading Strauss to a fresh independent study.'}
+      - {id: GIVING-DF-009, classification: documented_finding, proposition: 'Strauss says he later recognized that Lessing had already articulated what he rediscovered about exoteric and esoteric speech and their grounds.'}
+      - {id: GIVING-DF-010, classification: documented_finding, proposition: 'Klein helped redirect the Heideggerian destruction of tradition toward recovery of classical philosophy and toward reading Plato with attention to the dramatic form of the dialogues.'}
+  - unit: GIVING-RU-004
+    printed_pages: 462-463
+    findings:
+      - {id: GIVING-DF-011, classification: documented_finding, proposition: 'Strauss’s Spinoza study led both to Hobbes and to Maimonides; Maimonides became intelligible through prophetology, Islamic philosophers, and the claim that Plato’s Laws was the standard work on prophecy and revelation.'}
+      - {id: GIVING-DF-012, classification: documented_finding, proposition: 'Strauss and Klein agreed that they had rediscovered exotericism, but Strauss attached greater importance to the tension between philosophy and the city, even the best city.'}
+      - {id: GIVING-DF-013, classification: documented_finding, proposition: 'Strauss formulates philosophy as replacing opinion by knowledge while opinion is the element of the city; philosophy is therefore subversive and philosophic public speech must improve rather than subvert the city.'}
+      - {id: GIVING-DF-014, classification: documented_finding, proposition: 'He describes philosophy as transpolitical, transreligious, and transmoral while the city is and ought to be moral and religious.'}
+  - unit: GIVING-RU-005
+    printed_pages: 463-464
+    findings:
+      - {id: GIVING-DF-015, classification: documented_finding, proposition: 'Modern philosophy attempts to bridge the philosophy-city gulf through science for relief and power and through popular enlightenment.'}
+      - {id: GIVING-DF-016, classification: documented_finding, proposition: 'Kant’s primacy of practical moral reason marks a high point of this modern bridge, whereas Strauss doubts that moralism—the view that moral virtue is highest—occurs in antiquity.'}
+      - {id: GIVING-DF-017, classification: documented_finding, proposition: 'Strauss connects modern historical consciousness to political history and calls politics and political philosophy its matrix.'}
+  - unit: GIVING-RU-006
+    printed_pages: 464-466
+    findings:
+      - {id: GIVING-DF-018, classification: documented_finding, proposition: 'In the question period Klein and Strauss agree that philosophizing is an immoderate undertaking whose goal cannot finally be secured, while disagreeing about the place of morality.'}
+      - {id: GIVING-DF-019, classification: documented_finding, proposition: 'Strauss argues that virtues may be indispensable to philosophic activity without therefore being understood morally as ends in themselves.'}
+      - {id: GIVING-DF-020, classification: documented_finding, proposition: 'The city is a condition of philosophy because it supplies bodily support, education, and the first formation from which philosophers emerge; it is not thereby identified as the source of philosophic truth.'}
+permanent_findings:
+  - {id: GIVING-PF-001, classification: documented_finding, proposition: 'Strauss presents his theologico-political inquiry as growing from the renewed postwar challenge of theology to Enlightenment claims and from a fresh study of Spinoza’s Theologico-Political Treatise.'}
+  - {id: GIVING-PF-002, classification: documented_finding, proposition: 'Maimonides became intelligible to him through prophecy, revelation, Islamic philosophy, and Platonic political philosophy.'}
+  - {id: GIVING-PF-003, classification: documented_finding, proposition: 'Strauss and Klein agreed on the rediscovery of exotericism but differed in the importance Strauss assigned to the tension between philosophy and the city.'}
+  - {id: GIVING-PF-004, classification: documented_finding, proposition: 'Strauss explicitly describes philosophy as transpolitical, transreligious, and transmoral while insisting that the city ought to remain moral and religious.'}
+  - {id: GIVING-PF-005, classification: documentary_limit, proposition: 'The autobiographical account is offered as a starting point and possible explanation of pitfalls, not as self-certifying doctrinal evidence.'}
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives: [God and politics, orthodoxy and Enlightenment, Barth and Rosenzweig, Spinoza, prophecy and revelation, Maimonides, philosophy and the moral-religious city]
+    non_absorption: Autobiographical genealogy does not settle the truth of philosophy or revelation.
+  wise_vs_vulgar:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives: [exoteric and esoteric speech, philosophy as subversive, public speech as sophrosyne, city opinion and philosophic knowledge]
+    non_absorption: The source does not license mechanical hidden-teaching inference.
+  ancients_vs_moderns:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives: [recovery of classical philosophy, Heidegger and historical consciousness, modern bridging of philosophy and city, Kantian moralism]
+    non_absorption: The conversation is not a complete systematic history of ancient and modern philosophy.
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  predecessor_statement: Presents philosophy through teachers, books, gratitude, intellectual debts, and continued inquiry while limiting doctrinal inference from autobiography.
+  state: PROVISIONAL_RETEST_STRONG_CONFIRMATION_AND_SUBSTANTIVE_DEEPENING_NO_PROMOTION
+  confirmations:
+    - The conversation is explicitly a giving of accounts through teachers, books, intellectual debts, friendship, and continuing disagreements.
+    - Strauss directly limits doctrinal inference by saying life is only a starting point and may explain pitfalls.
+  deepenings:
+    - The source supplies a detailed genealogy from orthodoxy and Zionism through Cohen, theology, Spinoza, Lessing, Maimonides, exotericism, and the philosophy-city problem.
+  predecessor_effect: NONE
+uncertainties:
+  - The original 1970 College printing remains unreviewed.
+  - The tape break in the question period prevents treating the surviving sequence as perfectly continuous.
+prohibitions:
+  - Do not attribute Klein’s statements to Strauss.
+  - Do not treat autobiography as final doctrinal allegiance.
+  - Do not treat exotericism as permission to invert explicit statements mechanically.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1970_college_comparison_required: true
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
