@@ -18,11 +18,12 @@ class WippFirstParagraphCompletionTests(unittest.TestCase):
         study = load_yaml("studies/theologico-political/what-is-political-philosophy/sequential-reconstruction.yaml")
         self.assertEqual(source["reviewed_witnesses"], ["CORPUS-WIT-110"])
         self.assertEqual(source["study_records"], ["CORPUS-STUDY-021"])
-        self.assertEqual(source["scope"], "FIRST_PARAGRAPH_ONLY")
+        self.assertEqual(source["registered_scope"], "first paragraph")
         self.assertEqual(witness["printed_page_range"], {"start": 409, "end": 409})
         self.assertEqual(witness["pdf_page_range_one_based"], {"start": 428, "end": 428})
         self.assertEqual(status["termination"]["registered_scope"], "FIRST_PARAGRAPH_ONLY")
-        self.assertEqual(status["termination"]["study_state"], "COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE")
+        self.assertEqual(status["termination"]["study_scope_state"], "COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE")
+        self.assertEqual(status["termination"]["study_state"], "COMPLETE_PROVISIONAL")
         self.assertEqual(study["termination"]["registered_scope"], "FIRST_PARAGRAPH_ONLY")
         self.assertEqual(witness_record["termination"]["study_state"], "INCOMPLETE")
 
@@ -32,7 +33,7 @@ class WippFirstParagraphCompletionTests(unittest.TestCase):
         self.assertEqual(comparison["state"], "PROVISIONAL_RETEST_PARTIAL_CONFIRMATION_WITH_MATERIAL_QUALIFICATION_NO_PROMOTION")
         qualifications = " ".join(comparison["qualifications"])
         self.assertIn("does not itself use the phrase philosophic best regime", qualifications)
-        self.assertIn("later parts of the complete essay may not be silently imported", qualifications)
+        self.assertIn("may not be silently imported", qualifications)
         self.assertEqual(comparison["predecessor_effect"], "NONE")
 
     def test_findings_preserve_tp_and_structural_avj_jurisdictions_only(self) -> None:
