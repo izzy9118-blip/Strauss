@@ -1,0 +1,40 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: TP-WHY-REMAIN-JEWS-001, version: 1.0.0, title: "Theologico-Political Synthesis — Why We Remain Jews"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-107
+  reviewed_witness_id: CORPUS-WIT-107
+  study_id: WHY-REMAIN-JEWS-STUDY-001
+  study_path: studies/theologico-political/why-we-remain-jews/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-019
+  derived_finding_set_id: FINDSET-138
+problem: {canonical_key: theologico-political, role: PRIMARY_JURISDICTION, adjacent_problem_references: [athens-vs-jerusalem]}
+source_local_findings:
+  - {classification: documented_finding, proposition: "The lecture rejects the premise that every human problem has a final political or social solution and treats liberal equality as necessarily incomplete because private society remains."}
+  - {classification: documented_finding, proposition: "Political Zionism addresses dignity and statehood but not Jewish substance; cultural Zionism leads back to Bible, Talmud, and Midrash and therefore to their claim of revelation rather than merely national culture."}
+  - {classification: documented_finding, proposition: "Religious Zionism is called the clearest consistent solution yet is acknowledged as humanly inaccessible to Jews who cannot believe as their ancestors believed."}
+  - {classification: documented_finding, proposition: "Fidelity to Jewish inheritance is defended only after the inherited past is distinguished from baseness and reconstructed as heroic dedication to what was regarded as the highest."}
+  - {classification: documented_finding, proposition: "Positivist science's infinite revisability is used to approach the mystery of being, placing scientific unbelief and religious mystery within hailing distance without reconciling them."}
+  - {classification: bounded_conclusion, proposition: "The final Q&A rejects cultural substitution and formulates the deepest alternative as Torah or unbelief, while requiring unbelief itself to be examined rather than assumed."}
+predecessor_retest:
+  active_predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirms:
+    - emancipation and individual assimilation do not erase inherited Jewish peoplehood or the Jewish question
+    - merely political Zionism and merely cultural Zionism remain insufficient to settle the substance of Judaism
+    - Torah, Creator, justice, redemption, belief, and unbelief remain central once political and cultural substitutes are tested
+  qualifies:
+    - the source more strongly rejects the expectation of a final solution as itself a modern premise
+    - religious Zionism is internally clear but not a simple practical prescription for unbelieving Jews
+    - fidelity is qualified rather than universalized and depends on the character of the inherited past
+    - science and religious mystery approach without merging; no synthesis or doctrinal conclusion is certified
+    - the 1997 text is a posthumous transcription not reviewed or formally approved by Strauss according to its transcribers and contains acknowledged editorial interventions
+  predecessor_effect: NONE
+limits:
+  - Cropsey, questioners, Green's notes, Green's added phrases, and the editorial Aleinu translation remain distinct from Strauss evidence.
+  - Historical and political examples remain source-local until independently reviewed.
+  - The study does not certify Torah, revelation, Zionism, Creator, redemption, or unbelief.
+  - No doctrine, migration, successor activation, predecessor displacement, or repository completion is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_REPORTED_BY_TRANSCRIBERS, certification: NOT_CERTIFIED, successor_effect: NONE}

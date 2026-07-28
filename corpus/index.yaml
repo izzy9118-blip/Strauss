@@ -3,7 +3,7 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.19.0
+  version: 1.20.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
@@ -11,12 +11,12 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 revision_history:
-  predecessor_version: 1.18.0
+  predecessor_version: 1.19.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register FREUD-MOSES-STUDY-001 as the eleventh complete provisional Theologico-Political item study, register CORPUS-STUDY-018,
-    preserve the posthumous unknown-transcriber and editor-emendation limits, and retain noncorroboration, noncertification,
-    predecessor authority, and no successor effect.
+  reason: Register WHY-REMAIN-JEWS-STUDY-001 as the twelfth complete provisional Theologico-Political item study and CORPUS-STUDY-019
+    while preserving the tape-transcription, speaker-layer, editorial-intervention, noncorroboration, noncertification, predecessor-authority,
+    and no-successor safeguards.
 purpose: Provide deterministic discovery, source identity, documentary status, provenance, problem binding, study binding,
   witness condition, and gap records without moving source records, distributing source texts, certifying doctrine, or treating
   a registered corpus as complete merely because every current record is indexed.
@@ -273,12 +273,18 @@ source_entities:
   problem_bindings:
   - theologico-political
   - athens-vs-jerusalem
-  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS_WITH_TRANSCRIPTION_AND_EDITORIAL_LIMIT
   reviewed_witnesses:
   - CORPUS-WIT-107
   limits:
-  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - reviewed witness is the fingerprinted 1997 SUNY posthumous tape-based transcription, not an authorially reviewed manuscript
+  - printed pages 311-356 correspond to one-based PDF pages 330-375
+  - Cropsey, questioners, Green notes and additions, and the editorial Aleinu translation remain distinct from Strauss evidence
+  - Dannhauser and Lane report that Strauss neither reviewed nor formally approved the transcribed version
+  - WHY-REMAIN-JEWS-STUDY-001 is source-local and not independent corroboration of represented traditions
+  study_records:
+  - CORPUS-STUDY-019
 - source_id: CORPUS-SRC-108
   creator: Leo Strauss
   canonical_title: On the Interpretation of Genesis
@@ -1108,7 +1114,7 @@ source_status_records:
   source_id: CORPUS-SRC-107
   path: studies/theologico-political/why-we-remain-jews/source-status.yaml
   document_type: source_status_record
-  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-108
   source_id: CORPUS-SRC-108
@@ -1291,6 +1297,12 @@ study_records:
   record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
   completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS_WITH_TRANSCRIPTION_LIMIT
   certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-019
+  source_id: CORPUS-SRC-107
+  path: studies/theologico-political/why-we-remain-jews/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS_WITH_TRANSCRIPTION_AND_EDITORIAL_LIMIT
+  certification: NOT_CERTIFIED
 problem_witness_registries:
 - problem: nomos-vs-physis
   path: problems/nomos-vs-physis/witnesses.yaml
@@ -1342,13 +1354,13 @@ coverage:
   source_entities_registered: 22
   reviewed_witnesses_registered: 22
   source_status_records_registered: 22
-  study_records_registered: 18
+  study_records_registered: 19
   problem_witness_registries_registered: 7
   theologico_political_predecessor_sources_registered: 19
   theologico_political_item_level_statuses_registered: 19
   theologico_political_reviewed_item_witnesses_registered: 19
-  theologico_political_independent_item_studies_registered: 11
-  current_studies_tree_yaml_records_accounted_for: 58
+  theologico_political_independent_item_studies_registered: 12
+  current_studies_tree_yaml_records_accounted_for: 59
   exhaustive_within_declared_scope: true
 corpus_gaps:
 - gap_id: CORPUS-GAP-001
@@ -1362,8 +1374,8 @@ corpus_gaps:
   effect: EDITION_SPECIFIC_DIFFERENCES_NOT_YET_TESTED
 - gap_id: CORPUS-GAP-003
   category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES
-  statement: All nineteen predecessor writings have bounded source identities and reviewed item witnesses; eleven have complete
-    provisional sequential studies, while the remaining eight lack independent item studies.
+  statement: All nineteen predecessor writings have bounded source identities and reviewed item witnesses; twelve have complete
+    provisional sequential studies, while the remaining seven lack independent item studies.
   effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL
 - gap_id: CORPUS-GAP-004
   category: INDEPENDENT_CLASSICAL_WITNESSES
@@ -1406,23 +1418,24 @@ validation_rules:
   actually present in CORPUS-WIT-116
 - CORPUS-SRC-101 preserves reviewed-witness safeguards and complete provisional sequential reconstruction while 1979/1981
   publication comparison remains pending
-- all eight witness-only Theologico-Political sources preserve registered-witness, pending-study, edition-comparison, noncertification,
+- all seven witness-only Theologico-Political sources preserve registered-witness, pending-study, edition-comparison, noncertification,
   and no-successor safeguards
 - CORPUS-SRC-104 preserves the fingerprinted reviewed witness, collective 1952 editorial-layer distinction, complete provisional
   sequential reconstruction, pending original-1952 comparison, noncorroboration, noncertification, and no-successor safeguards
 - CORPUS-SRC-106 preserves the fingerprinted reviewed transcript, unknown-transcriber and editorial-emendation limits, complete
   provisional sequential reconstruction, noncorroboration, noncertification, and no-successor safeguards
+- CORPUS-SRC-107 preserves the fingerprinted reviewed transcript, speaker and editorial-layer distinctions, complete provisional
+  sequential reconstruction, noncorroboration, noncertification, and no-successor safeguards
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   theologico_political_identity_registration_state: COMPLETE_19_OF_19
   theologico_political_reviewed_witness_state: COMPLETE_19_OF_19
-  theologico_political_independent_study_state: INCOMPLETE_11_OF_19
+  theologico_political_independent_study_state: INCOMPLETE_12_OF_19
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
   certification: NOT_CERTIFIED
   next_required_units:
-  - conduct independent sequential reconstruction of CORPUS-SRC-107 from CORPUS-WIT-107
-  - seek any surviving tape, prepared notes, authorially reviewed transcript, or earlier textual state of CORPUS-SRC-106 only
-    through later separately verified documentary acquisition
-  - conduct independent sequential reconstruction for the remaining eight writings
-  - expand independent biblical, Greek, Jewish, Christian, Spinozist, Freudian, psychoanalytic, medieval, modern, and reviewed-work
+  - conduct independent sequential reconstruction of CORPUS-SRC-112 from CORPUS-WIT-112
+  - compare any separately verified earlier or authorially checked textual state of CORPUS-SRC-107 if later acquired
+  - conduct independent sequential reconstruction for the remaining seven writings
+  - expand independent biblical, rabbinic, Zionist, Nietzschean, Cohenian, Scholemian, Christian, scientific, and historical
     witnesses

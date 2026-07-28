@@ -1,0 +1,29 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: AVJ-WHY-REMAIN-JEWS-001, version: 1.0.0, title: "Athens-versus-Jerusalem Synthesis — Why We Remain Jews"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-107
+  reviewed_witness_id: CORPUS-WIT-107
+  study_id: WHY-REMAIN-JEWS-STUDY-001
+  study_path: studies/theologico-political/why-we-remain-jews/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-019
+  derived_finding_set_id: FINDSET-139
+problem: {canonical_key: athens-vs-jerusalem, role: CONTROLLED_SECONDARY_JURISDICTION, theologico_political_reference: theologico-political}
+source_local_findings:
+  - {classification: documented_finding, proposition: "The lecture reconstructs Jewish fidelity through rejection of pagan gods, the unresolved Jewish-Christian difference over redemption, and inherited dedication to the highest rather than through ethnic self-assertion alone."}
+  - {classification: documented_finding, proposition: "Nietzsche supplies a high Western model of assimilation as transformation rather than abandonment of Jewish inheritance, but the state of Israel simultaneously normalizes Jews politically and reasserts Jewish difference."}
+  - {classification: documented_finding, proposition: "Positivist science and Jewish religious mystery are brought within hailing distance through the mystery of being, but Strauss explicitly refuses to make them coincide."}
+  - {classification: documented_finding, proposition: "The Q&A rejects cultural Judaism as a substitute for the belief it has abandoned and formulates the deepest alternative as Torah or unbelief while permitting serious postcritical restatement."}
+  - {classification: bounded_conclusion, proposition: "The source sustains rather than resolves the tension between inherited revelation and philosophic or scientific unbelief; no harmonized Jerusalem-Athens doctrine is certified."}
+relation_to_primary_jurisdiction:
+  primary_problem: theologico-political
+  rule: >
+    The secondary jurisdiction receives only Strauss's own treatment of revelation, paganism, Nietzsche, science, mystery,
+    Torah, Cohen, and Scholem. Cropsey's explicit post-lecture Jerusalem-and-Athens interpretation is excluded as Strauss evidence.
+limits:
+  - Cropsey's post-lecture comment is a separate speaker layer and cannot establish this problem binding by itself.
+  - Nietzsche, Cohen, Scholem, biblical, rabbinic, Christian, pagan, and scientific materials remain independently incomplete unless separately registered.
+  - Coming within hailing distance is not reconciliation.
+  - No doctrine, migration, successor activation, predecessor displacement, or repository completion is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_REPORTED_BY_TRANSCRIBERS, certification: NOT_CERTIFIED, successor_effect: NONE}

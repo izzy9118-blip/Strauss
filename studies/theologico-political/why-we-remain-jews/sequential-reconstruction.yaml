@@ -1,0 +1,382 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: WHY-REMAIN-JEWS-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Why We Remain Jews
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_or_earlier_printing_comparison: PENDING
+  transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_REPORTED_BY_TRANSCRIBERS
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-107
+  source_status_id: CORPUS-STATUS-107
+  reviewed_witness_id: CORPUS-WIT-107
+  author: Leo Strauss
+  canonical_title: Why We Remain Jews
+  collection_title_form: "Why We Remain Jews: Can Jewish Faith and History Still Speak to Us?"
+  source_date: 1962
+  source_form: LECTURE_TRANSCRIPTION_WITH_Q_AND_A_PUBLISHED_POSTHUMOUSLY_IN_1997_COLLECTION
+  reviewed_container:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  editorial_provenance:
+    delivery_date: 1962-02-04
+    delivery_place: Hillel House, University of Chicago
+    prepared_notes: EDITOR_REPORTS_APPARENT_PRIOR_NOTES_THAT_DO_NOT_SURVIVE
+    transcribers: [Werner Dannhauser, James Lane]
+    transcription_source: TAPE_RECORDING
+    transcript_condition: ESSENTIALLY_ORAL_AND_PARTLY_SPONTANEOUS_AS_REPORTED_BY_TRANSCRIBERS
+    strauss_review_or_formal_approval: TRANSCRIBERS_REPORT_NONE
+    published_version_basis: ALMOST_ENTIRELY_THE_DANNHAUSER_LANE_TRANSCRIPTION
+    editor_changes: SLIGHT_GRAMMATICAL_CHANGES_FOR_CLARITY_WITH_SIGNIFICANT_CHANGES_NOTED
+    editor_notes_authorship: ENTIRELY_KENNETH_HART_GREEN
+    editor_added_phrases_noted: true
+    aleinu_translation_condition: EDITORIAL_INSERT_NOT_READ_BY_STRAUSS_DURING_LECTURE
+    collection_sources_section: NO_EARLIER_PUBLICATION_CITATION_SUPPLIED_FOR_THIS_ITEM
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  locators:
+    printed_pages: {start: 311, end: 356}
+    cropsey_opening: {start: 311, end: 312}
+    strauss_lecture: {start: 312, end: 329}
+    cropsey_post_lecture_comment: {start: 329, end: 329}
+    question_and_answer: {start: 329, end: 345}
+    editor_notes: {start: 345, end: 356}
+    pdf_pages_one_based: {start: 330, end: 375}
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The reviewed witness is the 1997 posthumously published lecture transcription with question-and-answer material, not an authorially reviewed manuscript.
+  - Green reports that prepared notes apparently used by Strauss do not survive; Werner Dannhauser and James Lane transcribed the lecture from tape and report that Strauss neither reviewed nor formally approved the transcription.
+  - Green states that the published version is based almost entirely on that transcription, with slight grammatical changes and significant changes noted; his notes are entirely his own work.
+  - Cropsey's opening introduction and post-lecture Jerusalem-and-Athens interpretation are separate speaker layers and are not Strauss evidence.
+  - Questioners in the discussion are separate speakers; only responses explicitly assigned to Strauss are used as Strauss evidence.
+  - The Aleinu translation inserted on printed pages 327-328 is explicitly editorial and was not read by Strauss during the lecture; it is excluded from Strauss proposition evidence.
+  - Several clarifying phrases in the published text were added by Green and are preserved as editorial interventions rather than silently treated as exact spoken wording.
+  - Historical claims concerning Spain, liberalism, communism, Nazism, Zionism, Crusades, Nietzsche, Christian-Jewish relations, Cohen, Scholem, and other represented materials remain source-local unless independently reconstructed.
+  - The study does not decide the truth of Torah, revelation, creation, final redemption, Zionism, or unbelief.
+
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+
+method_application:
+  governing_question: >
+    Why should a Jew who cannot simply return to the ancestral faith nevertheless remain a Jew, and what do the failures
+    of assimilation, political and cultural solutions, and modern scientific confidence disclose about Jewish fidelity,
+    revelation, unbelief, and the permanent character of the Jewish question?
+  recovered_source_question: >
+    Can the Jewish question be solved by individual assimilation, liberal emancipation, secular society, political Zionism,
+    cultural Zionism, or scientific progress, or does serious examination return the unbelieving Jew to a choice between
+    the inherited claim of Torah and unbelief while preserving the mystery of being that neither modern politics nor
+    positivist science abolishes?
+  reconstruction_rule: >
+    Read the Strauss lecture on printed pages 312-329 in order, excluding Cropsey and editorial insertions from Strauss
+    evidence; then read the question-and-answer period on pages 329-345 speaker by speaker; finally preserve Green's notes
+    on pages 345-356 as a distinct documentary layer. Compare with the predecessor only after source reconstruction.
+  alternative_preservation_rule: >
+    Preserve assimilation versus fidelity, political equality versus private discrimination, political and cultural Zionism
+    versus revelation, Torah versus unbelief, progress versus destructive modernity, scientific provisionality versus
+    mystery, and belief versus unbelief without turning the source's unresolved tensions into repository doctrine.
+
+speaker_and_documentary_layers:
+  cropsey_opening:
+    role: chairman introduction
+    rule: Context only; not Strauss evidence.
+  strauss_lecture:
+    role: primary Strauss source content mediated by transcription
+    rule: Governs the lecture reconstruction subject to transcription and editorial limits.
+  editorial_aleinu_translation:
+    role: inserted translation explicitly not read by Strauss
+    rule: Excluded from Strauss proposition evidence.
+  cropsey_post_lecture_comment:
+    role: chairman interpretation after the lecture
+    rule: Cropsey's Jerusalem-and-Athens formulation is not used as Strauss evidence.
+  q_and_a_questioners:
+    role: interlocutors
+    rule: Their claims frame Strauss's responses but are not attributed to Strauss.
+  strauss_q_and_a:
+    role: primary Strauss discussion responses mediated by transcription
+    rule: Used with the same documentary transmission limits as the lecture.
+  dannhauser_lane_transcription:
+    role: known intermediary from tape to text
+    rule: The published wording is not treated as authorially approved verbatim text.
+  green_editorial_layer:
+    role: editor, note author, and limited clarifying/grammatical intervenor
+    rule: Editorial additions and notes remain distinct from Strauss.
+
+sequential_reading:
+  - unit: WHY-REMAIN-JEWS-RU-001
+    printed_pages: 311-313
+    function: Separate Cropsey's framing from Strauss's own methodological beginning and establish the Jewish question as Strauss's longstanding subject.
+    findings:
+      - {id: WRJ-DF-001, classification: structural_evidence, proposition: "Cropsey frames the lecture series through modern science and politics, but his introduction is a separate speaker layer."}
+      - {id: WRJ-DF-002, classification: documented_finding, proposition: "Strauss narrows his responsibility to the question why Jews remain Jews and presents himself as beginning from solid, low facts rather than claiming authority in divinity."}
+      - {id: WRJ-DF-003, classification: documented_finding, proposition: "Strauss identifies the Jewish question as a main theme of his reflections from early life and connects it with the childhood impression that persecution elsewhere could also happen where Jews presently lived in peace."}
+      - {id: WRJ-DF-004, classification: documented_finding, proposition: "He promises a frank or hard-boiled but honorable treatment rather than a sermon or a predetermined solution."}
+
+  - unit: WHY-REMAIN-JEWS-RU-002
+    printed_pages: 313-318
+    function: Test individual assimilation and the liberal solution by distinguishing public equality from private society.
+    findings:
+      - {id: WRJ-DF-005, classification: documented_finding, proposition: "Heine's characterization of Judaism as misfortune supplies the premise from which complete assimilation appears as the obvious cure."}
+      - {id: WRJ-DF-006, classification: documented_finding, proposition: "Historical conversion does not necessarily erase imposed Jewish distinction, as Strauss illustrates through the old-Christian/new-Christian and purity-of-blood distinction in Spain."}
+      - {id: WRJ-DF-007, classification: documented_finding, proposition: "Modern assimilation occurs within secular liberal society, whose essential public-private distinction simultaneously abolishes legal Jewish disabilities and preserves a private sphere in which private discrimination remains possible."}
+      - {id: WRJ-DF-008, classification: documented_finding, proposition: "Legally prohibiting every private discrimination would abolish the private sphere and therefore destroy liberal society; the liberal political solution is consequently necessarily uneasy rather than total."}
+      - {id: WRJ-DF-009, classification: documented_finding, proposition: "Strauss argues that abolishing liberal society does not solve the Jewish problem and uses communist rule as a counterexample to the expectation that complete political control eliminates anti-Jewish policy."}
+      - {id: WRJ-DF-010, classification: bounded_conclusion, proposition: "The source rejects the modern expectation that every social problem must have a final solution and states that no better political arrangement is available than legal equality joined to an unavoidable private sphere."}
+    uncertainties:
+      - Historical and political claims about Spain, Soviet policy, Stalin, Hitler, and social discrimination remain Strauss's source-level argument unless independently checked.
+
+  - unit: WHY-REMAIN-JEWS-RU-003
+    printed_pages: 318-320
+    function: Move from individual assimilation through political and cultural Zionism to the revelation problem.
+    findings:
+      - {id: WRJ-DF-011, classification: documented_finding, proposition: "Reducing Judaism to a voluntary sect is rejected because inherited Jewish peoplehood cannot be made equivalent to freely changing membership in an association."}
+      - {id: WRJ-DF-012, classification: documented_finding, proposition: "Political Zionism honestly faces Jewish nationhood and is praised for concern with Jewish dignity, but its reliance on political and military self-help marks a radical break with traditional trust in God and remains formally insufficient as Jewish substance."}
+      - {id: WRJ-DF-013, classification: documented_finding, proposition: "Cultural Zionism deepens the question because the Bible, Talmud, and Midrash, taken seriously on their own claim, are not merely products of a national mind but present themselves as grounded in revelation."}
+      - {id: WRJ-DF-014, classification: documented_finding, proposition: "Religious Zionism is therefore called the only clear and consistent solution, yet it is humanly infeasible for Jews who cannot believe as their ancestors believed."}
+      - {id: WRJ-DF-015, classification: documented_finding, proposition: "The unbelieving Jew is thus returned to fidelity, loyalty, or pietas toward an inherited past, but Strauss immediately tests whether fidelity is universally obligatory rather than assuming it dogmatically."}
+
+  - unit: WHY-REMAIN-JEWS-RU-004
+    printed_pages: 320-323
+    function: Establish why Jewish origin is not a base inheritance from which honorable escape is required.
+    findings:
+      - {id: WRJ-DF-016, classification: documented_finding, proposition: "Strauss rejects the pseudo-scientific race vocabulary of anti-Semitism and treats hostility to Jews as historically changing rather than reducible to one racial theory."}
+      - {id: WRJ-DF-017, classification: documented_finding, proposition: "The source interprets ancient Jewish rejection of other nations' gods as dedication to a standard above national plurality and reads the Jewish conflict with Rome as a fight for more than political independence."}
+      - {id: WRJ-DF-018, classification: documented_finding, proposition: "The enduring Jewish-Christian distinction is stated through the opposing claims that redemption has come and has not come."}
+      - {id: WRJ-DF-019, classification: documented_finding, proposition: "Jewish martyrdom in the Crusades is used to transform the category of misfortune into heroic suffering: suffering generated by communal dedication to what was regarded as infinitely highest."}
+      - {id: WRJ-DF-020, classification: bounded_conclusion, proposition: "The argument for fidelity depends not on ancestry alone but on the claim that the inherited Jewish past is not baseness; even the unbelieving Jew can remember a history of dedication to the highest."}
+
+  - unit: WHY-REMAIN-JEWS-RU-005
+    printed_pages: 323-327
+    function: Reconsider assimilation at its highest possible level through Nietzsche and the founding of Israel.
+    findings:
+      - {id: WRJ-DF-021, classification: documented_finding, proposition: "The unbelieving challenge is sharpened into a moral one: if ancestral faith was delusion, assimilation to truth may seem more honorable than fidelity to error."}
+      - {id: WRJ-DF-022, classification: documented_finding, proposition: "Strauss treats Nietzsche's account as the deepest statement he knows of what assimilation could mean: not abandoning the inheritance but transforming accumulated Jewish experience toward major Western spiritual achievement."}
+      - {id: WRJ-DF-023, classification: documented_finding, proposition: "Actual assimilation is measured against this high standard and criticized where it becomes self-congratulation about ordinary success rather than genuine excellence."}
+      - {id: WRJ-DF-024, classification: documented_finding, proposition: "The establishment of Israel is treated as a necessary national purification that also refutes Nietzsche's dream, because it is simultaneously an act of assimilation into nation-state normality and a reassertion of Jewish difference."}
+      - {id: WRJ-DF-025, classification: documented_finding, proposition: "National self-assertion can therefore coexist with diminished Jewish substance; political Jewishness and inherited Jewish content are not identical."}
+    uncertainties:
+      - Nietzsche is reconstructed only through the passage and Strauss's comments here; no independent Nietzsche study is supplied by this record.
+
+  - unit: WHY-REMAIN-JEWS-RU-006
+    printed_pages: 327-329
+    function: Move from heroic delusion to righteousness, non-redemption, mystery, and the limit of positivist science.
+    findings:
+      - {id: WRJ-DF-026, classification: documented_finding, proposition: "Strauss provisionally recasts Judaism from misfortune into heroic delusion and identifies its decisive claim with righteousness or charity in a world created by a just, loving, holy God."}
+      - {id: WRJ-DF-027, classification: documented_finding, proposition: "Jewish history is presented as a living witness to the absence of redemption, and chosen-people language is interpreted through that unresolved condition rather than through worldly triumph."}
+      - {id: WRJ-DO-001, classification: structural_evidence, proposition: "Strauss introduces Aleinu but explicitly says it would be improper for him to read it; the printed English translation that follows is an editorial insertion and is excluded from Strauss speech evidence."}
+      - {id: WRJ-DF-028, classification: documented_finding, proposition: "The category of delusion is then transformed into dream, aspiration, enigmatic vision, and ultimately the truth that being is radically mysterious."}
+      - {id: WRJ-DF-029, classification: documented_finding, proposition: "Positivist social science fragments the Jewish problem into generic categories and misses its unity when it fails to reflect on its own scientific assumptions."}
+      - {id: WRJ-DF-030, classification: documented_finding, proposition: "If science is essentially and eternally progressive, every result remains provisional; Strauss argues that this infinite progress implies an inner infinity in the object of science, being itself, and thereby implicitly acknowledges mystery."}
+      - {id: WRJ-DF-031, classification: bounded_conclusion, proposition: "Religious mystery and scientific provisionality do not meet in a synthesis, but the two lines come within hailing distance; the source explicitly refuses to claim more."}
+
+  - unit: WHY-REMAIN-JEWS-RU-007
+    printed_pages: 329-332
+    function: Use the opening Q&A to distinguish honorable fidelity, rare individual escape, mutual understanding, and unqualified progress.
+    findings:
+      - {id: WRJ-DF-032, classification: documented_finding, proposition: "Asked whether Jews have no choice, Strauss answers that honorable men do not, while allowing that rare individuals may escape social identification without providing a general solution."}
+      - {id: WRJ-DF-033, classification: documented_finding, proposition: "Improved mutual understanding and scientific knowledge can contribute to decency but cannot guarantee political harmony because power and serious differences remain."}
+      - {id: WRJ-DF-034, classification: documented_finding, proposition: "Strauss rejects an unqualified doctrine of progress: modern science, technology, legal security, and material standards advance while the same science and technology make unprecedented destructive power possible."}
+      - {id: WRJ-DF-035, classification: documented_finding, proposition: "Change from ancestral Judaism to modern Judaism is undeniable, but treating change as progress requires a substantive standard rather than arbitrary individual preference."}
+
+  - unit: WHY-REMAIN-JEWS-RU-008
+    printed_pages: 332-336
+    function: Reject prediction of eventual religious convergence and place Jewish-Christian reconciliation inside a changing political horizon.
+    findings:
+      - {id: WRJ-DF-036, classification: documented_finding, proposition: "A future secular convergence of beliefs cannot govern present practical decisions because the circumstances of future Jews cannot be known and social science cannot predict them in the required detail."}
+      - {id: WRJ-DF-037, classification: documented_finding, proposition: "Jewish community is represented simultaneously as what modern language calls religious community and as a people or seed of Abraham; peoplehood is not dissolved by declining religious observance."}
+      - {id: WRJ-DF-038, classification: documented_finding, proposition: "Strauss welcomes improved Jewish-Christian relations but insists on political sobriety: the rise of powerful anti-Jewish and anti-Christian movements can reconcile former antagonists without eliminating new lines of conflict."}
+      - {id: WRJ-DF-039, classification: documented_finding, proposition: "The disappearance of one antagonism cannot be equated with universal harmony; distinctions can be reorganized and exploited by new political powers."}
+    uncertainties:
+      - The specific twentieth-century political diagnoses remain source-local and are not independently corroborated here.
+
+  - unit: WHY-REMAIN-JEWS-RU-009
+    printed_pages: 336-341
+    function: Test universal humanism, race, myth, and the persistence of galut against the demand for a perfect social solution.
+    findings:
+      - {id: WRJ-DF-040, classification: documented_finding, proposition: "Strauss rejects biological race as the ground of Jewish persistence while denying that self-identification as Jew implies denial of common humanity."}
+      - {id: WRJ-DF-041, classification: documented_finding, proposition: "Inherited communal and familial bonds cannot be made or unmade by individual wish alone, so a private act of rupture does not solve a social problem for those to whom one remains connected."}
+      - {id: WRJ-DF-042, classification: documented_finding, proposition: "Strauss rejects the demand for perfect solutions and contrasts clean schemes with uneasy arrangements that avoid greater political bestiality."}
+      - {id: WRJ-DF-043, classification: documented_finding, proposition: "Galut is defended against the charge of fabricated myth as an empirically available consciousness of a deep defect in Jewish existence connected, in the traditional view, with a defect in the human situation."}
+      - {id: WRJ-DF-044, classification: documented_finding, proposition: "The Jewish problem is described as a particularly accessible exemplification of the human problem, while specific Zionist theories may still be criticized as mythic constructions."}
+      - {id: WRJ-DF-045, classification: documented_finding, proposition: "Fidelity is again qualified: departure from a genuinely degraded origin can be honorable, but Strauss denies that Jewish historical degradation by others made the inherited Jewish life itself degraded."}
+
+  - unit: WHY-REMAIN-JEWS-RU-010
+    printed_pages: 341-343
+    function: Distinguish sincere individual conversion from the persistence of the social Jewish question and answer the charge that the argument offers only constraint.
+    findings:
+      - {id: WRJ-DF-046, classification: documented_finding, proposition: "Strauss concedes the possibility of subjectively sincere conversion and distinguishes rational judgment from inherited emotional aversion to conversion."}
+      - {id: WRJ-DF-047, classification: documented_finding, proposition: "Even sincere change of belief does not automatically dissolve the social Jewish question, because others may continue to classify and group former Jews independently of their intentions."}
+      - {id: WRJ-DF-048, classification: documented_finding, proposition: "The source therefore treats the whole situation rather than isolated experiences of discrimination or individual conviction as the proper object of the practical question."}
+
+  - unit: WHY-REMAIN-JEWS-RU-011
+    printed_pages: 343-345
+    function: Clarify the final alternative as Torah or unbelief and refuse cultural substitution for the lost authority of faith.
+    findings:
+      - {id: WRJ-DF-049, classification: documented_finding, proposition: "Strauss states that clarity and honesty about the most important matters require rejecting cultural reinterpretations that tacitly presuppose unbelief while pretending to replace the belief they have surrendered."}
+      - {id: WRJ-DF-050, classification: documented_finding, proposition: "He formulates the fundamental alternative as Torah understood by the tradition or unbelief, while denying that ancestral faith means literal adherence to every historically prevalent particular belief."}
+      - {id: WRJ-DF-051, classification: documented_finding, proposition: "A postcritical restatement of the essence of Jewish faith is treated as a legitimate goal, but Judaism without belief in the Creator is said to face a fundamental problem."}
+      - {id: WRJ-DF-052, classification: documented_finding, proposition: "Belief in God is distinguished from a necessary commitment to creation ex nihilo, yet certainty of final redemption is said to require belief in a God concerned with justice."}
+      - {id: WRJ-DF-053, classification: documented_finding, proposition: "The proper posture of the unbeliever is not cultural replacement but entry into the mystery of the inherited belief in order to gain understanding even without conversion to belief."}
+      - {id: WRJ-DF-054, classification: documented_finding, proposition: "Scholem's study of Jewish mysticism is invoked to show that traditional beliefs can be thought through beyond common modern objections, whereas replacing God by the creative genius of the Jewish people deprives even the unbeliever of a source of human understanding."}
+      - {id: WRJ-DF-055, classification: documented_finding, proposition: "Belief and unbelief themselves require examination because unbelief may also be inherited through hearsay or social pressure; thoughtful people do not divide neatly into two self-evident camps."}
+      - {id: WRJ-DF-056, classification: bounded_conclusion, proposition: "Folk culture, language, statehood, and inherited identity can matter, but none can substitute for the deepest question raised by the traditional claim of revelation and the honest alternative of unbelief."}
+
+  - unit: WHY-REMAIN-JEWS-RU-012
+    printed_pages: 345-356
+    function: Preserve the posthumous transcription and editorial note layer as documentary evidence distinct from Strauss's argument.
+    findings:
+      - {id: WRJ-DO-002, classification: structural_evidence, proposition: "Green dates the lecture to 4 February 1962 at Hillel House, University of Chicago, and reports that prepared notes apparently used by Strauss do not survive."}
+      - {id: WRJ-DO-003, classification: structural_evidence, proposition: "Werner Dannhauser and James Lane transcribed the lecture from a tape recording and state that Strauss did not review or formally approve the transcribed version."}
+      - {id: WRJ-DO-004, classification: structural_evidence, proposition: "Green states that the published version is based almost entirely on that transcription, with slight grammatical changes for clarity and significant changes noted, and that the notes are entirely his work."}
+      - {id: WRJ-DO-005, classification: structural_evidence, proposition: "Green explicitly identifies several phrases added to clarify Strauss's references; these interventions remain editorial and are not treated as exact spoken wording."}
+      - {id: WRJ-UU-001, classification: unresolved_uncertainty, proposition: "The surviving reviewed witness cannot establish exact authorially approved wording where transcription or editorial intervention may matter, and the collection supplies no earlier publication citation for comparison."}
+
+permanent_findings:
+  - {id: WRJ-PF-001, classification: documented_finding, proposition: "The Jewish question is not treated as a technical problem awaiting a final social solution; Strauss rejects the premise that every human problem must be solvable."}
+  - {id: WRJ-PF-002, classification: documented_finding, proposition: "Liberal society's public-private distinction can guarantee legal equality while necessarily preserving a private sphere in which discrimination remains possible; abolishing every private distinction would abolish liberal society itself."}
+  - {id: WRJ-PF-003, classification: documented_finding, proposition: "Individual assimilation, voluntary-sect Judaism, political Zionism, and cultural Zionism each fail to exhaust Jewish substance or erase inherited peoplehood."}
+  - {id: WRJ-PF-004, classification: documented_finding, proposition: "Political Zionism is honored as a defense of Jewish dignity but remains formally insufficient, while cultural Zionism returns serious inquiry to Bible, Talmud, and Midrash and therefore to their claim of revelation."}
+  - {id: WRJ-PF-005, classification: documented_finding, proposition: "Religious Zionism is the clearest consistent solution within the source but is not humanly available to Jews who cannot believe as their ancestors believed; the unbelieving Jew therefore confronts the problem of fidelity without simple restoration."}
+  - {id: WRJ-PF-006, classification: documented_finding, proposition: "Fidelity is not defended as an unconditional rule of ancestry: its force in the Jewish case depends on the inherited past being understood as heroic dedication to the highest rather than baseness."}
+  - {id: WRJ-PF-007, classification: documented_finding, proposition: "Nietzsche's highest assimilation is reconstructed as transformation rather than abandonment of Jewish inheritance, and Israel simultaneously normalizes Jews politically and reasserts their difference."}
+  - {id: WRJ-PF-008, classification: documented_finding, proposition: "The traditional Jewish claim is finally stated through righteousness, a just and holy Creator, the absence of redemption, and the expectation of final redemption; cultural interpretation cannot replace this theological substance without tacit unbelief."}
+  - {id: WRJ-PF-009, classification: documented_finding, proposition: "Positivist science's own commitment to indefinite revision implies, in Strauss's argument, an inexhaustible object and therefore an implicit acknowledgment that being is mysterious; science and religious mystery approach but do not merge."}
+  - {id: WRJ-PF-010, classification: documented_finding, proposition: "Modern change and technical progress do not establish unqualified human progress because the same scientific-technological development also increases destructive capacity."}
+  - {id: WRJ-PF-011, classification: documented_finding, proposition: "Jewish existence is simultaneously religious and peoplely in the source; neither declining observance nor private changes of belief can simply make inherited social and familial bonds disappear."}
+  - {id: WRJ-PF-012, classification: documented_finding, proposition: "The final intellectual alternative is not Jewish culture versus assimilation but Torah or unbelief, with both belief and unbelief subjected to serious examination rather than treated as self-evident camps."}
+  - {id: WRJ-PF-013, classification: bounded_conclusion, proposition: "The unbelieving Jew is not commanded by this lecture to pretend belief; he is asked to remain honest about the depth of the inherited claim, enter its mystery, and resist replacing revelation with merely political, cultural, or positivist substitutes."}
+  - {id: WRJ-PF-014, classification: documentary_limit, proposition: "The reviewed 1997 text is a posthumous tape-based transcription by Dannhauser and Lane, not reviewed or formally approved by Strauss according to the transcribers, with acknowledged Green editorial interventions and editor-authored notes."}
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss asks why Jews remain Jews, rejects complete assimilation and perfect political solutions, surveys political,
+    cultural, and religious Zionism, reconstructs Jewish suffering and fidelity, tests unbelief through Nietzsche and
+    positivist science, and ends by opposing cultural substitution to the deeper alternative of Torah and unbelief.
+  textual_deed: >
+    The lecture begins by promising to remain on solid low facts and apparently avoiding divinity, but the failure of every
+    merely political and cultural solution drives the argument back toward revelation, redemption, mystery, and the status
+    of unbelief. The Q&A then retests this return against progress, humanism, conversion, secularization, and modern Jewish
+    self-understanding rather than treating the lecture conclusion as closed.
+  relation: LOW_POLITICAL_FACTS_DRIVE_THE_INQUIRY_BACK_TO_REVELATION_MYSTERY_AND_THE_EXAMINATION_OF_UNBELIEF
+  finding: >
+    The deed of the lecture is to show that attempts to solve the Jewish question below theology cannot eliminate the
+    theological claim: politics can manage conditions, culture can preserve artifacts, and science can analyze categories,
+    but each leaves unresolved what the inherited Torah claims and what unbelief itself can rationally establish.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - failure of purely political and social solutions to erase the Jewish question
+      - political and cultural Zionism as insufficient to settle the substance of Judaism
+      - revelation as the claim underlying Bible, Talmud, Midrash, Torah, Creator, justice, and redemption
+      - religious Zionism as internally clear but humanly inaccessible to unbelievers
+      - the relation of fidelity, pietas, unbelief, and inherited revelation
+      - positivist science, infinite progress, and mystery
+      - Torah versus unbelief and the need to examine unbelief rather than assume it
+    non_absorption: >
+      The study does not certify Judaism, Torah, revelation, Zionism, or unbelief as true. Political and historical claims
+      remain source-local and independently revisable.
+  athens_vs_jerusalem:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives:
+      - ancient Jewish rejection of pagan gods and the continuing Jewish-Christian claim about redemption
+      - Nietzsche's Western or European transformation of Jewish inheritance as a high model of assimilation
+      - the movement from positivist science to the mystery of being without a completed synthesis
+      - the final contrast between Torah and unbelief and the insistence that cultural reinterpretation cannot replace revelation
+      - Cohen and Scholem as source-local examples of sustained Jewish thought under modern philosophical pressure
+    non_absorption: >
+      Cropsey's explicit post-lecture claim that Strauss has spoken again on Jerusalem and Athens is not used as Strauss
+      evidence. The secondary jurisdiction is grounded only in Strauss's own treatment and does not certify reconciliation.
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  predecessor_statement: >
+    Reconstructs emancipation, assimilation, Jewish persistence, political and cultural Zionism, Torah, and the limits of merely political solutions.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirmations:
+    - The source explicitly rejects individual assimilation and the expectation that liberal or communist politics can finally solve the Jewish problem.
+    - Political Zionism is honored but judged formally insufficient, while cultural Zionism returns inquiry to texts that claim revelation rather than cultural authorship.
+    - Jewish persistence is not reduced to external persecution because fidelity depends on the inherited past being interpreted as dedication to the highest rather than mere misfortune.
+    - The Q&A preserves Jewish peoplehood, Torah, Creator, justice, and final redemption as questions that merely political or cultural identity cannot replace.
+  qualifications:
+    - The source states more strongly than a generic limit of politics that there is no final solution to the Jewish problem because the expectation that every human problem is soluble is itself rejected.
+    - Religious Zionism is called the only clear consistent solution yet is acknowledged as humanly infeasible for unbelievers; the source therefore does not end in a simple prescription to return to faith.
+    - The unbelieving position is itself retested through Nietzsche, positivist science, mystery, and the distinction between cultural reinterpretation and Torah.
+    - Science and religious mystery come only within hailing distance; no synthesis is certified.
+    - The final Q&A sharpens the alternative into Torah or unbelief while permitting historically serious postcritical restatement and denying that every traditional particular is equally binding.
+  unresolved:
+    - The 1997 text is a posthumous transcription not reviewed or formally approved by Strauss according to its transcribers, and it contains acknowledged editorial interventions.
+    - Earlier publication or authorially checked textual states have not been separately reviewed.
+    - Historical, biblical, rabbinic, Zionist, Nietzschean, Cohenian, Scholemian, Christian, and political sources remain independently unreconstructed unless separately registered.
+    - The source does not settle the truth of revelation, Creator, final redemption, or unbelief.
+  predecessor_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+uncertainties:
+  - {id: WRJ-U-001, statement: "Prepared notes apparently used by Strauss do not survive; exact correspondence between tape, transcription, and spoken wording cannot be established from the reviewed witness alone."}
+  - {id: WRJ-U-002, statement: "Dannhauser and Lane report no Strauss review or formal approval of the transcription, so the published text retains an active authorial-approval limit."}
+  - {id: WRJ-U-003, statement: "Green's acknowledged grammatical and clarifying changes, including identified added phrases and the editorial Aleinu translation, require continuing separation of editorial wording from Strauss speech."}
+  - {id: WRJ-U-004, statement: "The collection supplies no earlier publication citation, but this does not prove that no earlier circulation or textual state existed."}
+  - {id: WRJ-U-005, statement: "The source's historical and political claims remain source-local and require independent evidentiary review before use as historical facts."}
+
+prohibitions:
+  - Do not treat the posthumous transcript as authorially approved verbatim wording.
+  - Do not attribute Cropsey's introduction, Cropsey's Jerusalem-and-Athens comment, questioners' claims, Green's notes, Green's added phrases, or the editorial Aleinu translation to Strauss.
+  - Do not treat the source's historical examples as independently verified historical facts.
+  - Do not convert the failure of political or cultural solutions into certification of religious Zionism, Torah, or revelation.
+  - Do not turn fidelity or pietas into an unconditional repository rule applying to every ancestry; Strauss explicitly tests and qualifies that generalization.
+  - Do not interpret infinite scientific progress as proof of religious revelation; the source says the two lines come within hailing distance, not that they coincide.
+  - Do not infer an Ancients-versus-Moderns binding merely from the discussion of progress, science, or modernity; this study retains the registered Theologico-Political and Athens-versus-Jerusalem jurisdictions.
+  - Do not treat belief or unbelief as self-evidently established positions without the source's demanded examination.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, independent corroboration, or repository completion.
+
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL_WITH_TRANSCRIPTION_AND_EDITORIAL_LIMIT
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_REPORTED_BY_TRANSCRIBERS
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  original_or_earlier_printing_comparison_required: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE

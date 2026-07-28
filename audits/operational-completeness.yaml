@@ -3,21 +3,21 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 3.3.0
+  version: 3.4.0
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
   certification: NOT_CERTIFIED
   audit_scope_complete: true
   repository_completion: INCOMPLETE
 revision_history:
-  predecessor_version: 3.2.0
+  predecessor_version: 3.3.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete FREUD-MOSES-STUDY-001, advance Theologico-Political study coverage to eleven of nineteen, preserve eight
-    pending studies, and retain the unknown-transcriber, authorial-approval, editor-emendation, and noncorroboration limits.
+  reason: Complete WHY-REMAIN-JEWS-STUDY-001, advance study coverage to twelve of nineteen, preserve seven pending studies
+    and the transcription/editorial limits.
 basis:
   repository: izzy9118-blip/Strauss
   prior_validated_interface_commit: ea193b51b6664f69c90b3982c32d81cdbb6921b7
-  current_revision_scope: production/corpus-src-106-sequential-reconstruction
+  current_revision_scope: production/corpus-src-107-sequential-reconstruction
   manifest: manifest.yaml
   corpus_registry: corpus/index.yaml
   corpus_registry_loader: corpus_registry.py
@@ -93,14 +93,17 @@ summary:
   - FREUD-MOSES-STUDY-001 complete provisional sequential reconstruction with active transcription limit
   - CORPUS-STUDY-018 and FINDSET-018 typed registrations
   - FINDSET-136 and FINDSET-137 jurisdiction-preserving problem-local syntheses
+  - WHY-REMAIN-JEWS-STUDY-001 complete provisional sequential reconstruction with active transcription and editorial limits
+  - CORPUS-STUDY-019 and FINDSET-019 typed registrations
+  - FINDSET-138 and FINDSET-139 jurisdiction-preserving problem-local syntheses
   theologico_political_item_level_status:
     active_predecessor_source_count: 19
     registered_source_identity_count: 19
     reviewed_item_witness_count: 19
     registered_without_reviewed_witness_count: 0
     remaining_without_item_level_status_count: 0
-    independently_reconstructed_count_within_this_sequence: 11
-    remaining_without_independent_sequential_study: 8
+    independently_reconstructed_count_within_this_sequence: 12
+    remaining_without_independent_sequential_study: 7
     completed_source_ids:
     - CORPUS-SRC-102
     - CORPUS-SRC-105
@@ -113,6 +116,7 @@ summary:
     - CORPUS-SRC-101
     - CORPUS-SRC-104
     - CORPUS-SRC-106
+    - CORPUS-SRC-107
     completed_witness_ids:
     - CORPUS-WIT-102
     - CORPUS-WIT-105
@@ -125,6 +129,7 @@ summary:
     - CORPUS-WIT-101
     - CORPUS-WIT-104
     - CORPUS-WIT-106
+    - CORPUS-WIT-107
     completed_study_ids:
     - SPINOZA-PREFACE-STUDY-001
     - COHEN-STUDY-001
@@ -137,8 +142,8 @@ summary:
     - PROGRESS-RETURN-STUDY-001
     - HUSIK-PREFACE-STUDY-001
     - FREUD-MOSES-STUDY-001
+    - WHY-REMAIN-JEWS-STUDY-001
     witness_only_source_ids:
-    - CORPUS-SRC-107
     - CORPUS-SRC-110
     - CORPUS-SRC-112
     - CORPUS-SRC-114
@@ -147,7 +152,6 @@ summary:
     - CORPUS-SRC-118
     - CORPUS-SRC-119
     witness_only_witness_ids:
-    - CORPUS-WIT-107
     - CORPUS-WIT-110
     - CORPUS-WIT-112
     - CORPUS-WIT-114
@@ -157,10 +161,9 @@ summary:
     - CORPUS-WIT-119
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     registry_root: studies/theologico-political/
-    interpretation_limit: All nineteen predecessor items have reviewed witnesses and eleven completed studies are independent
-      reconstructions relative to predecessor and collection-level synthesis. Eight witness registrations remain study-pending;
-      none of the source studies is independent corroboration of represented traditions, and CORPUS-SRC-106 retains an active
-      posthumous-transcription and editorial-emendation limit.
+    interpretation_limit: All nineteen predecessor items have reviewed witnesses and twelve completed studies are independent
+      reconstructions relative to predecessor and collection-level synthesis. Seven witness registrations remain study-pending;
+      none is independent corroboration, and SRC107 retains active transcription, speaker-layer, and editorial limits.
     registered_witness_source_ids:
     - CORPUS-SRC-101
     - CORPUS-SRC-102
@@ -202,7 +205,7 @@ summary:
     - CORPUS-WIT-118
     - CORPUS-WIT-119
   remaining_major_deficiencies:
-  - eight Theologico-Political writings still require independent sequential item studies
+  - seven Theologico-Political writings still require independent sequential item studies
   - the original 1948 journal printing of How to Study Spinoza's Theologico-Political Treatise has not been compared with
     the reviewed 1997 collected reprint
   - the exact CORPUS-WIT-102 bytes, SHA256, file size, and PDF-page offset are unavailable to the repository
@@ -663,10 +666,11 @@ production_order:
   - PERSECUTION-INTRO-STUDY-001 with FINDSET-014, FINDSET-127, and FINDSET-128
   - HUSIK-PREFACE-STUDY-001 with FINDSET-017, FINDSET-134, and FINDSET-135
   - FREUD-MOSES-STUDY-001 with FINDSET-018, FINDSET-136, and FINDSET-137
+  - WHY-REMAIN-JEWS-STUDY-001 with FINDSET-019, FINDSET-138, and FINDSET-139
   next:
-  - run complete structural and behavioral validation for the eleventh Theologico-Political item study
-  - conduct CORPUS-SRC-107 independent sequential reconstruction from printed pages 311-356
-  - continue the remaining seven independent sequential reconstructions after CORPUS-SRC-107
+  - run complete structural and behavioral validation for the twelfth Theologico-Political item study
+  - conduct CORPUS-SRC-112 independent sequential reconstruction from its registered witness
+  - continue the remaining six independent sequential reconstructions after CORPUS-SRC-112
   - expand independent source-tradition witnesses and textual-state comparisons
   - validate actual ministerial reports against the full contract stack
   final_repin:
