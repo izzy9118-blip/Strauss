@@ -40,6 +40,7 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml",
     "problems/athens-vs-jerusalem/synthesis/on-the-interpretation-of-genesis.yaml",
+    "problems/athens-vs-jerusalem/synthesis/preface-to-isaac-husik-philosophical-essays.yaml",
     "problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml",
     "problems/athens-vs-jerusalem/synthesis/progress-or-return.yaml",
     "problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml",
@@ -53,6 +54,7 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/theologico-political/synthesis/introduction-to-persecution-and-the-art-of-writing.yaml",
     "problems/theologico-political/synthesis/jerusalem-and-athens.yaml",
     "problems/theologico-political/synthesis/on-the-interpretation-of-genesis.yaml",
+    "problems/theologico-political/synthesis/preface-to-isaac-husik-philosophical-essays.yaml",
     "problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml",
     "problems/theologico-political/synthesis/preface-to-hobbes-politische-wissenschaft.yaml",
     "problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml",
@@ -104,6 +106,7 @@ DIRECT_SOURCE_KEYS = [
     "CORPUS-SRC-101",
     "CORPUS-SRC-102",
     "CORPUS-SRC-103",
+    "CORPUS-SRC-104",
     "CORPUS-SRC-105",
     "CORPUS-SRC-108",
     "CORPUS-SRC-111",
@@ -196,6 +199,12 @@ SOURCE_STUDY_CONTRACTS = {
         "local_syntheses": ["FINDSET-131", "FINDSET-132", "FINDSET-133"],
         "problem_bindings": {"FINDSET-131": "theologico-political", "FINDSET-132": "athens-vs-jerusalem", "FINDSET-133": "ancients-vs-moderns"},
         "required_limits": {"witness_id": "CORPUS-WIT-101", "earlier_publication_comparison": "PENDING", "independent_corroboration": "INCOMPLETE"},
+    },
+    "FINDSET-017": {
+        "source_id": "CORPUS-SRC-104",
+        "local_syntheses": ["FINDSET-134", "FINDSET-135"],
+        "problem_bindings": {"FINDSET-134": "theologico-political", "FINDSET-135": "athens-vs-jerusalem"},
+        "required_limits": {"witness_id": "CORPUS-WIT-104", "original_1952_printing_comparison": "PENDING", "independent_corroboration": "INCOMPLETE"},
     },
 }
 
@@ -334,7 +343,7 @@ def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[
     result = {key: [] for key in DIRECT_SOURCE_KEYS}
     result["CORPUS-SRC-101-119"] = []
     predecessor_sources = {f"CORPUS-SRC-{number:03d}" for number in range(101, 120)}
-    separately_indexed = {"CORPUS-SRC-101", "CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-105", "CORPUS-SRC-108", "CORPUS-SRC-111", "CORPUS-SRC-113", "CORPUS-SRC-116"}
+    separately_indexed = {"CORPUS-SRC-101", "CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-104", "CORPUS-SRC-105", "CORPUS-SRC-108", "CORPUS-SRC-111", "CORPUS-SRC-113", "CORPUS-SRC-116"}
     for item in finding_sets:
         bindings = set(item.get("source_bindings", []))
         finding_id = item["finding_set_id"]
@@ -418,8 +427,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.9.0":
-        errors.append("findings registry identity.version must be 1.9.0")
+    if identity.get("version") != "1.10.0":
+        errors.append("findings registry identity.version must be 1.10.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -434,8 +443,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(registry.get("findings_gaps", []), "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 54:
-        errors.append(f"expected 54 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 57:
+        errors.append(f"expected 57 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 

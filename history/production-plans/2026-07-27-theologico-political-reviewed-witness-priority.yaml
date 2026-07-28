@@ -3,22 +3,22 @@ record_type: reviewed_witness_priority_schedule
 identity:
   id: TP-REVIEWED-WITNESS-PRIORITY-001
   title: Theologico-Political Reviewed-Witness Priority Schedule
-  version: 1.13.0
+  version: 1.14.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SCHEDULE
   certification: NOT_CERTIFIED
   identity_registration: COMPLETE_19_OF_19
   reviewed_witness_completion: COMPLETE_19_OF_19
-  independent_sequential_study_completion: INCOMPLETE_9_OF_19
+  independent_sequential_study_completion: INCOMPLETE_10_OF_19
 revision_history:
-  predecessor_version: 1.11.0
+  predecessor_version: 1.13.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete HOBBES-PREFACE-STUDY-001 from CORPUS-WIT-116, advancing independent sequential study coverage
-    to 8-of-19 and the next study unit to CORPUS-SRC-101 while preserving complete witness coverage and the documentary-omission
-    limit.
-purpose: 'Order reviewed-witness and sequential-study production for the nineteen source identities by documentary
-  availability, foundational jurisdiction, source-asymmetry repair, nonduplication, and locator reproducibility.
-  Priority does not rank philosophical truth.
+  reason: Complete HUSIK-PREFACE-STUDY-001 from CORPUS-WIT-104, advancing independent sequential study coverage to 10-of-19
+    and the next study unit to CORPUS-SRC-106 while preserving complete witness coverage, the original-1952 comparison limit,
+    and noncorroboration.
+purpose: 'Order reviewed-witness and sequential-study production for the nineteen source identities by documentary availability,
+  foundational jurisdiction, source-asymmetry repair, nonduplication, and locator reproducibility. Priority does not rank
+  philosophical truth.
 
   '
 governing_records:
@@ -208,15 +208,16 @@ priority_groups:
   - rank: 12
     source_id: CORPUS-SRC-104
     title: Preface to Isaac Husik, Philosophical Essays
-    next_action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_AND_ORIGINAL_TEXTUAL_STATE_COMPARISON_WHERE_AVAILABLE
+    next_action: ORIGINAL_1952_PRINTING_COMPARISON_AND_INDEPENDENT_HUSIK_MEDIEVAL_JURISPRUDENTIAL_WITNESS_EXPANSION
     status_id: CORPUS-STATUS-104
     witness_id: CORPUS-WIT-104
-    state: REVIEWED_WITNESS_REGISTERED_SEQUENTIAL_STUDY_PENDING
+    state: REVIEWED_WITNESS_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDY
     witness_locator:
       container_title: Jewish Philosophy and the Crisis of Modernity
       container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
       printed_pages: 235-266
       pdf_pages_one_based: 254-285
+    study_id: HUSIK-PREFACE-STUDY-001
   - rank: 13
     source_id: CORPUS-SRC-115
     title: An Unspoken Prologue
@@ -357,17 +358,18 @@ selection:
   - PERSECUTION-INTRO-STUDY-001
   - HOBBES-PREFACE-STUDY-001
   - PROGRESS-RETURN-STUDY-001
-  selection_state: NINETEEN_REVIEWED_ITEM_WITNESSES_EIGHT_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
+  - HUSIK-PREFACE-STUDY-001
+  selection_state: NINETEEN_REVIEWED_ITEM_WITNESSES_TEN_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
   completed_units:
   - all nineteen predecessor source identities have reviewed witnesses
-  - seven source studies are complete provisional
-  - twelve witness-only sources remain pending independent sequential reconstruction
+  - ten source studies are complete provisional
+  - nine witness-only sources remain pending independent sequential reconstruction
   - all original-edition and independent-corroboration limits remain explicit
   limits:
   - reviewed-witness coverage does not constitute completed sequential reconstruction
   - original or earlier textual-state comparisons remain pending where not separately reviewed
-  - the studies are not independent Spinozist, biblical, Greek, Cohenian, Talmonian, Kantian, Hobbesian, or other
-    source-tradition corroboration
+  - the studies are not independent Spinozist, biblical, Greek, Cohenian, Talmonian, Kantian, Hobbesian, or other source-tradition
+    corroboration
   - no doctrine, migration, or successor certification
 next_item_witness_unit:
   source_id: NONE
@@ -386,13 +388,13 @@ prohibitions:
 termination:
   schedule_state: ACTIVE
   reviewed_item_witness_registration: COMPLETE_19_OF_19
-  independent_sequential_reconstruction: INCOMPLETE_9_OF_19
+  independent_sequential_reconstruction: INCOMPLETE_10_OF_19
   next_item_witness: NONE
   certification: NOT_CERTIFIED
-  next_item_study: CORPUS-SRC-104
+  next_item_study: CORPUS-SRC-106
 next_item_study_unit:
-  source_id: CORPUS-SRC-104
-  title: Preface to Isaac Husik, Philosophical Essays
+  source_id: CORPUS-SRC-106
+  title: Freud on Moses and Monotheism
   action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_FROM_REGISTERED_WITNESS
-  prerequisite: SATISFIED_CORPUS_WIT_104_REGISTERED
-  following_source: CORPUS-SRC-106
+  prerequisite: SATISFIED_CORPUS_WIT_106_REGISTERED
+  following_source: CORPUS-SRC-107

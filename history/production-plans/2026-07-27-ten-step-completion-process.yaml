@@ -3,35 +3,33 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.15.0
+  version: 1.16.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
   completion: IN_PROGRESS
-  governing_rule: 'Structural validity, typed registration, completed provisional study, and passing tests do not
-    establish substantive repository completion. Every unit must preserve source hierarchy, independent reconstruction,
-    uncertainty, predecessor authority, nonabsorption, and the prohibition on repository or artificial-intelligence
-    self-certification.
+  governing_rule: 'Structural validity, typed registration, completed provisional study, and passing tests do not establish
+    substantive repository completion. Every unit must preserve source hierarchy, independent reconstruction, uncertainty,
+    predecessor authority, nonabsorption, and the prohibition on repository or artificial-intelligence self-certification.
 
     '
 revision_history:
-  predecessor_version: 1.13.0
+  predecessor_version: 1.15.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete HOBBES-PREFACE-STUDY-001 as the eighth provisional Theologico-Political sequential reconstruction
-    and advance the next study unit to CORPUS-SRC-101 while preserving the documentary-omission limit and eleven
-    remaining studies.
+  reason: Complete HUSIK-PREFACE-STUDY-001 as the tenth provisional Theologico-Political sequential reconstruction and advance
+    the next study unit to CORPUS-SRC-106 while preserving the original-1952 comparison limit and nine remaining studies.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 3.1.0
+  current_version: 3.2.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.13.0
+  current_version: 1.14.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -70,20 +68,18 @@ steps:
   - controlled relation records exist
   - active predecessors and accepted migration sources remain preserved
   - Jerusalem and Athens supplies distinct provisional syntheses to Theologico-Political and Athens-versus-Jerusalem
-  - the Cohen essay supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem, and
-    Ancients-versus-Moderns
-  - the Talmon review supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem,
-    and Ancients-versus-Moderns
-  - the Spinoza Preface supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem,
-    and Ancients-versus-Moderns
-  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
-    and Wise-versus-Vulgar
+  - the Cohen essay supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns
+  - the Talmon review supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns
+  - the Spinoza Preface supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns
+  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political and
+    Wise-versus-Vulgar
   - On the Interpretation of Genesis supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem,
     and Nomos-versus-Physis
-  - Introduction to Persecution and the Art of Writing supplies distinct provisional syntheses to Theologico-Political
-    and Wise-versus-Vulgar
-  - Preface to Hobbes Politische Wissenschaft supplies distinct provisional syntheses to Theologico-Political and
-    Ancients-versus-Moderns with a documentary-omission limit
+  - Introduction to Persecution and the Art of Writing supplies distinct provisional syntheses to Theologico-Political and
+    Wise-versus-Vulgar
+  - Preface to Hobbes Politische Wissenschaft supplies distinct provisional syntheses to Theologico-Political and Ancients-versus-Moderns
+    with a documentary-omission limit
+  - the Husik Preface supplies distinct provisional syntheses to Theologico-Political and Athens-versus-Jerusalem
   remaining:
   - complete source-specific application to each problem
   - complete independent witness reconstruction
@@ -100,16 +96,17 @@ steps:
   - all 19 Theologico-Political predecessor writings now have reviewed witnesses
   - CORPUS-WIT-102 remains a qualified platform-reference witness with preserved missing-byte safeguards
   - the other eighteen Theologico-Political reviewed witnesses are fingerprinted against their reviewed containers
-  - SPINOZA-PREFACE-STUDY-001, JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 remain complete provisional for
-    their reviewed witnesses
+  - SPINOZA-PREFACE-STUDY-001, JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 remain complete provisional for their reviewed
+    witnesses
   - corpus and findings registries preserve derivation, jurisdiction, gaps, witness/study distinctions, and noncertification
   - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
   - GENESIS-STUDY-001 is complete provisional for CORPUS-WIT-108
   - PERSECUTION-INTRO-STUDY-001 is complete provisional for CORPUS-WIT-113
   - HOBBES-PREFACE-STUDY-001 is complete provisional for the text present in CORPUS-WIT-116
   - PROGRESS-RETURN-STUDY-001 is complete provisional for CORPUS-WIT-101
+  - HUSIK-PREFACE-STUDY-001 is complete provisional for CORPUS-WIT-104
   remaining:
-  - conduct ten independent sequential item studies, beginning with CORPUS-SRC-104
+  - conduct nine independent sequential item studies, beginning with CORPUS-SRC-106
   - compare original or earlier textual states where available and material
   - materialize and fingerprint CORPUS-WIT-102 only through later forward revision if exact bytes become accessible
   - reconstruct Talmon's reviewed work independently
@@ -123,37 +120,38 @@ steps:
   - tests/
   - .github/workflows/validate-lean-interface.yml
   completed_in_current_sequence:
-  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the ten witness-only
-    states from the nine completed-study states
-  - tests preserve qualified platform-reference, fingerprint, locator, scope, edition-comparison, noncertification,
-    and no-successor safeguards
-  - tests cover the completed CORPUS-SRC-103, CORPUS-SRC-108, CORPUS-SRC-113, CORPUS-SRC-116, and CORPUS-SRC-101
+  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the nine witness-only states
+    from the ten completed-study states
+  - tests preserve qualified platform-reference, fingerprint, locator, scope, edition-comparison, noncertification, and no-successor
+    safeguards
+  - tests cover the completed CORPUS-SRC-103, CORPUS-SRC-108, CORPUS-SRC-113, CORPUS-SRC-116, CORPUS-SRC-101, and CORPUS-SRC-104
     study integrations while preserving findings derivation, problem jurisdiction, and completion-language consistency
-  current_requirement: Run the complete GitHub Actions validation before merge using the ordinary read-only validation workflow; no materialization or self-push step is required.
+  current_requirement: Run the complete GitHub Actions validation before merge using the ordinary read-only validation workflow;
+    no materialization or self-push step is required.
   limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
 - sequence: 10
   action: Repin the completed Strauss interface in Sanctum.
   state: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
   governing_record: izzy9118-blip/Sanctum/registry/ministers.yaml
   prohibition: 'Do not describe a limited or structurally valid Strauss interface as completed. A later completed-interface
-    pin requires substantive completion, declared validation, accurate preservation or resolution of blockers, and
-    separate Sanctum validation.
+    pin requires substantive completion, declared validation, accurate preservation or resolution of blockers, and separate
+    Sanctum validation.
 
     '
 current_production_unit:
   step: 8
   completed_subunit:
-    title: Progress or Return? independent sequential reconstruction
-    state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
-    source_id: CORPUS-SRC-101
-    witness_id: CORPUS-WIT-101
-    study_id: PROGRESS-RETURN-STUDY-001
-    study_coverage: INCOMPLETE_9_OF_19
-  next_subunit:
     title: Preface to Isaac Husik, Philosophical Essays independent sequential reconstruction
+    state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
     source_id: CORPUS-SRC-104
     witness_id: CORPUS-WIT-104
-    following_source: CORPUS-SRC-106
+    study_id: HUSIK-PREFACE-STUDY-001
+    study_coverage: INCOMPLETE_10_OF_19
+  next_subunit:
+    title: Freud on Moses and Monotheism independent sequential reconstruction
+    source_id: CORPUS-SRC-106
+    witness_id: CORPUS-WIT-106
+    following_source: CORPUS-SRC-107
 termination:
   state: CONTINUE_UNTIL_GENUINE_BLOCKER
   blocker_rule: 'A blocker must identify the exact missing source, authority, path, validation failure, or jurisdictional

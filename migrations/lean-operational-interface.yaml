@@ -3,7 +3,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.13.0
+  version: 1.14.0
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
   structural_interface: IMPLEMENTED
@@ -11,10 +11,10 @@ status:
   certification: NOT_CERTIFIED
   destructive_actions_authorized: false
 revision_history:
-  predecessor_version: 1.11.0
+  predecessor_version: 1.13.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Synchronize HOBBES-PREFACE-STUDY-001, corpus v1.16.0, findings v1.8.0, audit v3.0.0, process v1.14.0,
-    and schedule v1.12.0 while preserving eleven pending studies and the documentary-omission limit.
+  reason: Synchronize HUSIK-PREFACE-STUDY-001, corpus v1.18.0, findings v1.10.0, audit v3.2.0, process v1.16.0, and schedule
+    v1.14.0 while preserving nine pending studies, the 1952 textual-state limit, noncorroboration, and no successor effect.
 source_state:
   repository: izzy9118-blip/Strauss
   governing_commit_before_mapping: 853dd7de13d7bf4abc881fc7671a5833b822b6cb
@@ -28,9 +28,9 @@ source_state:
   - scripts/
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 3.1.0
-  rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be
-    reported as doctrinal, migration, successor, or repository completion.
+  version: 3.2.0
+  rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be reported
+    as doctrinal, migration, successor, or repository completion.
 
     '
 production_process:
@@ -39,18 +39,18 @@ production_process:
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
   completed_witness_subunit: THEOLOGICO_POLITICAL_REVIEWED_WITNESSES_19_OF_19_COMPLETE
-  completed_study_subunit: NINE_OF_19_COMPLETE_PROVISIONAL_TEN_PENDING
+  completed_study_subunit: TEN_OF_19_COMPLETE_PROVISIONAL_NINE_PENDING
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 mapping_rules:
 - No source record is deleted, moved, or edited merely to satisfy the lean interface.
 - Existing migration, predecessor, certification, and activation states remain governing.
 - Forward revision preserves predecessor blob identity and states the substantive change.
-- Interface validity, identity completeness, witness completeness, study completion, independent corroboration,
-  and semantic completion are distinct states.
+- Interface validity, identity completeness, witness completeness, study completion, independent corroboration, and semantic
+  completion are distinct states.
 - Contract reconstruction does not complete source-specific application.
-- Source entity, reviewed edition, local file, OCR layer, page image, source-status record, study, synthesis, and
-  migration ledger may not be collapsed.
+- Source entity, reviewed edition, local file, OCR layer, page image, source-status record, study, synthesis, and migration
+  ledger may not be collapsed.
 - A source-specific study does not constitute independent corroboration of sources represented within it.
 - Registry inclusion does not admit source text or promote propositions beyond record-local status.
 - Multiple records derived from one source do not constitute independent corroboration.
@@ -104,8 +104,14 @@ mappings:
     - path: problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml
       source: CORPUS-SRC-102
       derivation: FINDSET-011_TO_FINDSET-121
-    limit: 'Problem-local integration does not finish independent witnesses, proposition-level migration, doctrinal
-      certification, predecessor transition, or successor activation.
+    - path: problems/theologico-political/synthesis/preface-to-isaac-husik-philosophical-essays.yaml
+      source: CORPUS-SRC-104
+      derivation: FINDSET-017_TO_FINDSET-134
+    - path: problems/athens-vs-jerusalem/synthesis/preface-to-isaac-husik-philosophical-essays.yaml
+      source: CORPUS-SRC-104
+      derivation: FINDSET-017_TO_FINDSET-135
+    limit: 'Problem-local integration does not finish independent witnesses, proposition-level migration, doctrinal certification,
+      predecessor transition, or successor activation.
 
       '
   hermeneutics:
@@ -142,6 +148,8 @@ mappings:
       state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
     - record: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
       state: COMPLETE_PROVISIONAL_FOR_ONE_QUALIFIED_PLATFORM_REFERENCE_ITEM
+    - record: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/sequential-reconstruction.yaml
+      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method:
     target_role: inquiry_sequence
@@ -173,6 +181,9 @@ mappings:
     - record: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
       state: COMPLETE_PROVISIONAL_FOR_ONE_QUALIFIED_PLATFORM_REFERENCE_ITEM
       reading_units: 10
+    - record: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/sequential-reconstruction.yaml
+      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
+      reading_units: 10
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   speech:
     target_role: ministerial_expression_and_output_discipline
@@ -189,7 +200,7 @@ mappings:
     - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.17.0
+      registry_version: 1.18.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
     transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COMPLETE_NINETEEN_ITEM_REVIEWED_WITNESS_COVERAGE
@@ -225,8 +236,8 @@ mappings:
       remaining_count: 0
       reviewed_witness_count: 19
       remaining_without_reviewed_witness: 0
-      independent_sequential_study_count: 9
-      remaining_without_independent_sequential_study: 10
+      independent_sequential_study_count: 10
+      remaining_without_independent_sequential_study: 9
       completed_study_ids:
       - COHEN-STUDY-001
       - JA-STUDY-001
@@ -237,8 +248,8 @@ mappings:
       - PERSECUTION-INTRO-STUDY-001
       - HOBBES-PREFACE-STUDY-001
       - PROGRESS-RETURN-STUDY-001
+      - HUSIK-PREFACE-STUDY-001
       witness_only_source_ids:
-      - CORPUS-SRC-104
       - CORPUS-SRC-106
       - CORPUS-SRC-107
       - CORPUS-SRC-110
@@ -252,44 +263,36 @@ mappings:
       root: studies/theologico-political/
     present_function:
     - register source entities separately from witnesses and studies
-    - account for all 51 YAML records in the current studies tree
-    - validate all nineteen identities, aliases, scopes, reviewed-witness states, study states, fingerprints, locators,
-      and noncertification
+    - account for all 57 YAML records in the current studies tree
+    - validate all nineteen identities, aliases, scopes, reviewed-witness states, study states, fingerprints, locators, and
+      noncertification
     - preserve CORPUS-WIT-102 platform-reference safeguards
-    - validate the fingerprinted 1997 SUNY witness batch without converting witness registration into sequential
-      study completion
+    - validate the fingerprinted 1997 SUNY witness batch without converting witness registration into sequential study completion
     - preserve corpus gaps and original-edition comparison limits
-    - validate SPINOZA-TREATISE-STUDY-001 as a complete provisional reconstruction with pending 1948 comparison
-      and no successor effect
-    - validate GENESIS-STUDY-001 as a complete provisional reconstruction with pending 1981 and manuscript comparison
-      and no successor effect
-    - validate PERSECUTION-INTRO-STUDY-001 as a complete provisional reconstruction with pending 1952 comparison
-      and no successor effect
-    limit: Current-state exhaustiveness, nineteen reviewed item witnesses, and eight complete provisional item studies
-      do not create a complete corpus, supply independent corroboration, resolve documentary omissions, certify
-      findings, or authorize migration and activation.
+    - validate HUSIK-PREFACE-STUDY-001 as a complete provisional reconstruction with pending 1952 comparison and no successor
+      effect
+    limit: Current-state exhaustiveness, nineteen reviewed item witnesses, and ten complete provisional item studies do not
+      create a complete corpus, supply independent corroboration, resolve documentary omissions, certify findings, or authorize
+      migration and activation.
   findings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.9.0
+      registry_version: 1.10.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
-    - finding_set_id: FINDSET-016
-      path: studies/theologico-political/progress-or-return/sequential-reconstruction.yaml
-    - finding_set_id: FINDSET-131
-      path: problems/theologico-political/synthesis/progress-or-return.yaml
-      derived_from: FINDSET-016
-    - finding_set_id: FINDSET-132
-      path: problems/athens-vs-jerusalem/synthesis/progress-or-return.yaml
-      derived_from: FINDSET-016
-    - finding_set_id: FINDSET-133
-      path: problems/ancients-vs-moderns/synthesis/progress-or-return.yaml
-      derived_from: FINDSET-016
+    - finding_set_id: FINDSET-017
+      path: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-134
+      path: problems/theologico-political/synthesis/preface-to-isaac-husik-philosophical-essays.yaml
+      derived_from: FINDSET-017
+    - finding_set_id: FINDSET-135
+      path: problems/athens-vs-jerusalem/synthesis/preface-to-isaac-husik-philosophical-essays.yaml
+      derived_from: FINDSET-017
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-    limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify
-      doctrine or migration, displace predecessors, or activate successors.
+    limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify doctrine
+      or migration, displace predecessors, or activate successors.
 
       '
   runtime:
@@ -302,9 +305,8 @@ mappings:
     - tests/
     - .github/workflows/validate-lean-interface.yml
     completion: PARTIALLY_RECONSTRUCTED
-    limit: 'Runtime validation does not perform source interpretation, source-text admission, proposition promotion,
-      doctrinal certification, migration execution, successor activation, predecessor displacement, or authoritative
-      Assembly admission.
+    limit: 'Runtime validation does not perform source interpretation, source-text admission, proposition promotion, doctrinal
+      certification, migration execution, successor activation, predecessor displacement, or authoritative Assembly admission.
 
       '
 path_conflicts:
@@ -318,19 +320,18 @@ non_effects:
 - No active predecessor is displaced and no accepted migration source is superseded.
 - No source-specific finding is promoted beyond its record-local status.
 - No source text is admitted or distributed.
-- Four completed source studies are not independent corroboration or repository completion.
-- CORPUS-WIT-103 registration is not a completed source study or an original-1948 comparison.
+- Ten completed Theologico-Political source studies are not independent corroboration or repository completion.
+- CORPUS-WIT-104 remains distinct from HUSIK-PREFACE-STUDY-001 and the original 1952 printing remains unreviewed.
 - No Assembly authority is conferred; Sanctum validation remains separate.
 validation_states:
   structural_interface_valid_when:
   - manifest paths and declared YAML records resolve
   - manifest, audit, mapping, corpus, findings, process, and schedule versions and counts agree
   - adapter validates manifest and speech contract
-  - problem_bundles validates all seven complete bundles and twenty-one synthesis records
+  - problem_bundles validates all seven complete bundles and thirty-five synthesis records
   - corpus_registry validates identities, witnesses, statuses, studies, predecessor equality, paths, counts, fingerprints,
     locators, and gaps
-  - findings_registry validates thirty-three finding sets, exact record coverage, derivations, bindings, indexes,
-    and gaps
+  - findings_registry validates fifty-seven finding sets, exact record coverage, derivations, bindings, indexes, and gaps
   - all structural and behavioral tests pass
   - GitHub Actions passes on the implementing commit
   semantic_completion_requires:
@@ -352,18 +353,16 @@ completed_production_units:
 - speech, hermeneutic, and method operational contracts
 - complete read-only foundational problem bundles
 - typed current-state corpus and findings registries
-- complete 19-of-19 Theologico-Political source-identity range
-- CORPUS-WIT-102, CORPUS-WIT-103, CORPUS-WIT-105, CORPUS-WIT-109, and CORPUS-WIT-111 reviewed item witnesses
-- JA-STUDY-001, COHEN-STUDY-001, TALMON-STUDY-001, and SPINOZA-PREFACE-STUDY-001 complete provisional source-specific
-  reconstructions
-- eleven jurisdiction-preserving local synthesis bridges derived from the four completed item studies
+- complete 19-of-19 Theologico-Political source-identity and reviewed-witness range
+- ten complete provisional Theologico-Political sequential reconstructions through HUSIK-PREFACE-STUDY-001
+- jurisdiction-preserving source-to-problem syntheses through FINDSET-135
 next_production_units:
-- validate and merge this bounded CORPUS-WIT-103 registration
-- conduct CORPUS-SRC-103 independent sequential reconstruction from the registered witness
-- acquire CORPUS-SRC-108 and the remaining thirteen item witnesses after it
-- expand independent witness reconstruction
+- validate and merge the bounded CORPUS-SRC-104 production unit
+- conduct CORPUS-SRC-106 independent sequential reconstruction from the registered witness
+- continue the remaining eight item studies after CORPUS-SRC-106
+- expand independent witness reconstruction and original-edition comparison
 - validate actual candidate ministerial reports
-repinning_rule: 'Do not repin Sanctum as a completed Strauss interface while semantic completion remains INCOMPLETE.
-  Passing validation establishes only the integrity of this bounded revision.
+repinning_rule: 'Do not repin Sanctum as a completed Strauss interface while semantic completion remains INCOMPLETE. Passing
+  validation establishes only the integrity of this bounded revision.
 
   '
