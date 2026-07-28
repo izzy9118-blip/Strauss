@@ -69,11 +69,11 @@ class CorpusWitness102PlatformRegistrationTests(unittest.TestCase):
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_reviewed_witness_state"],
-            "INCOMPLETE_4_OF_19",
+            "INCOMPLETE_5_OF_19",
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_independent_study_state"],
-            "INCOMPLETE_4_OF_19",
+            "INCOMPLETE_5_OF_19",
         )
 
     def test_acquisition_record_remains_historically_distinct(self) -> None:

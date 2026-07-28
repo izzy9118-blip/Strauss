@@ -1,0 +1,76 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+identity:
+  synthesis_id: TP-SPINOZA-TREATISE-001
+  problem: theologico-political
+  source_study: SPINOZA-TREATISE-STUDY-001
+  title: The Theologico-Political Problem — How to Study Spinoza’s Theologico-Political Treatise
+  version: 1.0.0
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_CERTIFIED_MIGRATION
+source:
+  source_id: CORPUS-SRC-103
+  witness_id: CORPUS-WIT-103
+  corpus_study_id: CORPUS-STUDY-012
+  source_status: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml
+  witness_record: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml
+  study_path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+  reviewed_container: Jewish Philosophy and the Crisis of Modernity, SUNY Press, 1997
+  printed_pages:
+    start: 181
+    end: 233
+  pdf_pages_one_based:
+    start: 200
+    end: 252
+  sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  original_1948_journal_comparison: PENDING
+relation_to_existing_problem:
+  active_predecessor: problems/theologico-political.yaml
+  relation: SUPPLIES_AND_QUALIFIES_WITHOUT_REPLACING
+  governing_rule: The source-local synthesis preserves its own jurisdiction, the active predecessor, uncertainty,
+    and every noncertification and nonactivation safeguard.
+strict_problem_contribution:
+  role: PRIMARY
+  governing_claim: The Treatise’s conflict between philosophy and revelation must be reconstructed through exact interpretation
+    of its practical intervention, differentiated audience, theological accommodations, contradictions, omissions,
+    and defense of freedom to philosophize under sovereign authority.
+  documented_findings:
+  - Interpretation precedes explanation and the practical proposal precedes hidden teaching.
+  - The Treatise addresses potential philosophers obstructed by the subordination of reason to theology.
+  - Jewish subject matter serves an intervention directed toward Christian readers.
+  - Freedom to philosophize and sovereign authority belong to the work’s practical action.
+  - Contradictions concerning revelation, theology, Christ, and Christianity require controlled interpretation.
+  bounded_conclusion: The reviewed source supplies a complete provisional contribution for this jurisdiction but does
+    not certify doctrine or replace any predecessor.
+adjacent_problem_rules:
+  wise_vs_vulgar:
+    relation: CONTROLLED_HERMENEUTIC_SUPPORT
+    non_absorption: Audience structure may not absorb the conflict of philosophy, revelation, and political authority.
+  ancients_vs_moderns:
+    relation: CONTROLLED_COMPARATIVE_SUPPORT
+    non_absorption: Historical genealogy does not settle the substantive conflict.
+  athens_vs_jerusalem:
+    relation: CONTROLLED_INTERSECTION
+    non_absorption: The source does not independently adjudicate Bible and philosophy.
+source_and_evidence_limits:
+- The synthesis derives from SPINOZA-TREATISE-STUDY-001 and is not independent corroboration.
+- The original 1948 journal comparison remains pending.
+- The source studies Strauss’s interpretation of Spinoza, not independently established Spinozist doctrine.
+prohibitions:
+- no mechanical reversal of explicit statements
+- no audience differentiation treated as proof of wisdom or deception
+- no source-local agreement treated as independent corroboration
+- no 1997 witness equated with the unreviewed 1948 journal printing
+- no doctrine, migration, activation, displacement, or completed-interface effect
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_FINGERPRINTED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  predecessor_status: UNCHANGED
+  successor_activation: NOT_AUTHORIZED
+  remaining_work:
+  - compare the original 1948 journal printing
+  - independently reconstruct Spinoza and the represented sources

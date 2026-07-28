@@ -3,7 +3,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.6.0
+  version: 1.8.0
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
   structural_interface: IMPLEMENTED
@@ -11,27 +11,27 @@ status:
   certification: NOT_CERTIFIED
   destructive_actions_authorized: false
 revision_history:
-  predecessor_version: 1.5.0
-  predecessor_blob_sha: 0333b7a88ce9de90d79b1058aa53d75e20c9ca99
-  reason: Synchronize corpus registry v1.10.0, findings registry v1.4.0, SPINOZA-PREFACE-STUDY-001, and its three
-    jurisdiction-preserving local syntheses while preserving platform-reference limits, noncorroboration, noncertification,
-    predecessor authority, and repository incompleteness.
+  predecessor_version: 1.7.0
+  predecessor_blob_sha: 04b9e2b5a8cba3c009aed66ccc5d3620050c13cf
+  reason: Synchronize corpus registry v1.12.0, findings registry v1.5.0, and audit v2.6.0 after complete provisional CORPUS-SRC-103
+    reconstruction, while preserving original-edition, noncorroboration, noncertification, predecessor, migration, and activation
+    limits.
 source_state:
   repository: izzy9118-blip/Strauss
   governing_commit_before_mapping: 853dd7de13d7bf4abc881fc7671a5833b822b6cb
   preserved_roots:
-  - governance/
-  - problems/
-  - protocols/
-  - studies/
-  - migrations/foundational-problems-v2/
-  - history/
-  - scripts/
+    - governance/
+    - problems/
+    - protocols/
+    - studies/
+    - migrations/foundational-problems-v2/
+    - history/
+    - scripts/
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 2.4.0
-  rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be
-    reported as doctrinal, migration, successor, or repository completion.
+  version: 2.6.0
+  rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be reported
+    as doctrinal, migration, successor, or repository completion.
 
     '
 production_process:
@@ -39,23 +39,23 @@ production_process:
   state: IN_PROGRESS
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
-  completed_witness_subunit: JERUSALEM_ATHENS_COHEN_TALMON_AND_SPINOZA_PREFACE_4_OF_19
-  completed_study_subunit: JERUSALEM_ATHENS_COHEN_TALMON_AND_SPINOZA_PREFACE_4_OF_19_COMPLETE_PROVISIONAL
+  completed_witness_subunit: JERUSALEM_ATHENS_COHEN_TALMON_SPINOZA_PREFACE_AND_SPINOZA_TREATISE_5_OF_19
+  completed_study_subunit: JERUSALEM_ATHENS_COHEN_TALMON_SPINOZA_PREFACE_AND_SPINOZA_TREATISE_5_OF_19_COMPLETE_PROVISIONAL
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 mapping_rules:
-- No source record is deleted, moved, or edited merely to satisfy the lean interface.
-- Existing migration, predecessor, certification, and activation states remain governing.
-- Forward revision preserves predecessor blob identity and states the substantive change.
-- Interface validity, identity completeness, witness completeness, study completion, independent corroboration,
-  and semantic completion are distinct states.
-- Contract reconstruction does not complete source-specific application.
-- Source entity, reviewed edition, local file, OCR layer, page image, source-status record, study, synthesis, and
-  migration ledger may not be collapsed.
-- A source-specific study does not constitute independent corroboration of sources represented within it.
-- Registry inclusion does not admit source text or promote propositions beyond record-local status.
-- Multiple records derived from one source do not constitute independent corroboration.
-- Active predecessors remain authoritative until an authorized certified transition.
+  - No source record is deleted, moved, or edited merely to satisfy the lean interface.
+  - Existing migration, predecessor, certification, and activation states remain governing.
+  - Forward revision preserves predecessor blob identity and states the substantive change.
+  - Interface validity, identity completeness, witness completeness, study completion, independent corroboration, and semantic
+    completion are distinct states.
+  - Contract reconstruction does not complete source-specific application.
+  - Source entity, reviewed edition, local file, OCR layer, page image, source-status record, study, synthesis, and migration
+    ledger may not be collapsed.
+  - A source-specific study does not constitute independent corroboration of sources represented within it.
+  - Registry inclusion does not admit source text or promote propositions beyond record-local status.
+  - Multiple records derived from one source do not constitute independent corroboration.
+  - Active predecessors remain authoritative until an authorized certified transition.
 mappings:
   problems:
     target_role: permanent_questions_and_complete_read_only_operational_bundles
@@ -63,8 +63,8 @@ mappings:
       registry: problems/registry.yaml
       successor_directories: problems/*/
       active_predecessors:
-      - problems/theologico-political.yaml
-      - problems/wise-and-vulgar.yaml
+        - problems/theologico-political.yaml
+        - problems/wise-and-vulgar.yaml
     interface:
       manifest_section: problems
       loader: problem_bundles.py
@@ -72,108 +72,108 @@ mappings:
     transformation: REFERENCE_WITH_STATUS_PRESERVATION_AND_READ_ONLY_BUNDLE_LOADING
     completion: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
     new_source_relations:
-    - path: problems/theologico-political/synthesis/jerusalem-and-athens.yaml
-      source: CORPUS-SRC-109
-      derivation: FINDSET-008_TO_FINDSET-111
-    - path: problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml
-      source: CORPUS-SRC-109
-      derivation: FINDSET-008_TO_FINDSET-112
-    - path: problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml
-      source: CORPUS-SRC-105
-      derivation: FINDSET-009_TO_FINDSET-113
-    - path: problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml
-      source: CORPUS-SRC-105
-      derivation: FINDSET-009_TO_FINDSET-114
-    - path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml
-      source: CORPUS-SRC-105
-      derivation: FINDSET-009_TO_FINDSET-115
-    - path: problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml
-      source: CORPUS-SRC-111
-      derivation: FINDSET-010_TO_FINDSET-116
-    - path: problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml
-      source: CORPUS-SRC-111
-      derivation: FINDSET-010_TO_FINDSET-117
-    - path: problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml
-      source: CORPUS-SRC-111
-      derivation: FINDSET-010_TO_FINDSET-118
-    - path: problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml
-      source: CORPUS-SRC-102
-      derivation: FINDSET-011_TO_FINDSET-119
-    - path: problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml
-      source: CORPUS-SRC-102
-      derivation: FINDSET-011_TO_FINDSET-120
-    - path: problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml
-      source: CORPUS-SRC-102
-      derivation: FINDSET-011_TO_FINDSET-121
-    limit: 'Problem-local integration does not finish independent witnesses, proposition-level migration, doctrinal
-      certification, predecessor transition, or successor activation.
+      - path: problems/theologico-political/synthesis/jerusalem-and-athens.yaml
+        source: CORPUS-SRC-109
+        derivation: FINDSET-008_TO_FINDSET-111
+      - path: problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml
+        source: CORPUS-SRC-109
+        derivation: FINDSET-008_TO_FINDSET-112
+      - path: problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml
+        source: CORPUS-SRC-105
+        derivation: FINDSET-009_TO_FINDSET-113
+      - path: problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml
+        source: CORPUS-SRC-105
+        derivation: FINDSET-009_TO_FINDSET-114
+      - path: problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml
+        source: CORPUS-SRC-105
+        derivation: FINDSET-009_TO_FINDSET-115
+      - path: problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml
+        source: CORPUS-SRC-111
+        derivation: FINDSET-010_TO_FINDSET-116
+      - path: problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml
+        source: CORPUS-SRC-111
+        derivation: FINDSET-010_TO_FINDSET-117
+      - path: problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml
+        source: CORPUS-SRC-111
+        derivation: FINDSET-010_TO_FINDSET-118
+      - path: problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml
+        source: CORPUS-SRC-102
+        derivation: FINDSET-011_TO_FINDSET-119
+      - path: problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml
+        source: CORPUS-SRC-102
+        derivation: FINDSET-011_TO_FINDSET-120
+      - path: problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml
+        source: CORPUS-SRC-102
+        derivation: FINDSET-011_TO_FINDSET-121
+    limit: 'Problem-local integration does not finish independent witnesses, proposition-level migration, doctrinal certification,
+      predecessor transition, or successor activation.
 
       '
   hermeneutics:
     target_role: interpretive_reading_disciplines
     source:
-    - protocols/source-status.yaml
-    - protocols/evidence-classification.yaml
-    - protocols/inference-discipline.yaml
-    - protocols/uncertainty-preservation.yaml
-    - protocols/speech-and-deed.yaml
-    - protocols/irony.yaml
-    - protocols/comedy.yaml
-    - protocols/audience-and-rhetoric.yaml
-    - protocols/claimant-to-wisdom.yaml
+      - protocols/source-status.yaml
+      - protocols/evidence-classification.yaml
+      - protocols/inference-discipline.yaml
+      - protocols/uncertainty-preservation.yaml
+      - protocols/speech-and-deed.yaml
+      - protocols/irony.yaml
+      - protocols/comedy.yaml
+      - protocols/audience-and-rhetoric.yaml
+      - protocols/claimant-to-wisdom.yaml
     interface:
-    - path: hermeneutics/literary-concealment.yaml
-      contract_version: STRAUSS-HERMENEUTIC-LC-1
-    - path: hermeneutics/whole-and-part.yaml
-      contract_version: STRAUSS-HERMENEUTIC-WP-1
-    - path: hermeneutics/speaker-and-author.yaml
-      contract_version: STRAUSS-HERMENEUTIC-SA-1
-    - path: hermeneutics/audience.yaml
-      contract_version: STRAUSS-HERMENEUTIC-AUD-1
-    - path: hermeneutics/contradiction.yaml
-      contract_version: STRAUSS-HERMENEUTIC-CON-1
-    - path: hermeneutics/historical-and-philosophical-understanding.yaml
-      contract_version: STRAUSS-HERMENEUTIC-HPU-1
+      - path: hermeneutics/literary-concealment.yaml
+        contract_version: STRAUSS-HERMENEUTIC-LC-1
+      - path: hermeneutics/whole-and-part.yaml
+        contract_version: STRAUSS-HERMENEUTIC-WP-1
+      - path: hermeneutics/speaker-and-author.yaml
+        contract_version: STRAUSS-HERMENEUTIC-SA-1
+      - path: hermeneutics/audience.yaml
+        contract_version: STRAUSS-HERMENEUTIC-AUD-1
+      - path: hermeneutics/contradiction.yaml
+        contract_version: STRAUSS-HERMENEUTIC-CON-1
+      - path: hermeneutics/historical-and-philosophical-understanding.yaml
+        contract_version: STRAUSS-HERMENEUTIC-HPU-1
     source_applications:
-    - record: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
-      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
-    - record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
-      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
-    - record: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
-      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
-    - record: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
-      state: COMPLETE_PROVISIONAL_FOR_ONE_QUALIFIED_PLATFORM_REFERENCE_ITEM
+      - record: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+        state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
+      - record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+        state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
+      - record: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
+        state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
+      - record: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
+        state: COMPLETE_PROVISIONAL_FOR_ONE_QUALIFIED_PLATFORM_REFERENCE_ITEM
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method:
     target_role: inquiry_sequence
     source:
-    - protocols/source-status.yaml
-    - protocols/evidence-classification.yaml
-    - protocols/inference-discipline.yaml
-    - protocols/uncertainty-preservation.yaml
-    - governance/foundational-problem-architecture.yaml
+      - protocols/source-status.yaml
+      - protocols/evidence-classification.yaml
+      - protocols/inference-discipline.yaml
+      - protocols/uncertainty-preservation.yaml
+      - governance/foundational-problem-architecture.yaml
     interface:
-    - path: method/recover-question.yaml
-      contract_version: STRAUSS-METHOD-RQ-1
-    - path: method/reconstruct-alternatives.yaml
-      contract_version: STRAUSS-METHOD-RA-1
-    - path: method/textual-order.yaml
-      contract_version: STRAUSS-METHOD-TO-1
-    - path: method/preserve-problem.yaml
-      contract_version: STRAUSS-METHOD-PP-1
+      - path: method/recover-question.yaml
+        contract_version: STRAUSS-METHOD-RQ-1
+      - path: method/reconstruct-alternatives.yaml
+        contract_version: STRAUSS-METHOD-RA-1
+      - path: method/textual-order.yaml
+        contract_version: STRAUSS-METHOD-TO-1
+      - path: method/preserve-problem.yaml
+        contract_version: STRAUSS-METHOD-PP-1
     source_applications:
-    - record: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
-      reading_units: 12
-      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
-    - record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
-      reading_units: 8
-      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
-    - record: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
-      reading_units: 3
-      state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
-    - record: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
-      state: COMPLETE_PROVISIONAL_FOR_ONE_QUALIFIED_PLATFORM_REFERENCE_ITEM
-      reading_units: 10
+      - record: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
+        reading_units: 12
+        state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
+      - record: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/sequential-reconstruction.yaml
+        reading_units: 8
+        state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
+      - record: studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml
+        reading_units: 3
+        state: COMPLETE_PROVISIONAL_FOR_ONE_REVIEWED_ITEM
+      - record: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
+        state: COMPLETE_PROVISIONAL_FOR_ONE_QUALIFIED_PLATFORM_REFERENCE_ITEM
+        reading_units: 10
     completion: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   speech:
     target_role: ministerial_expression_and_output_discipline
@@ -183,148 +183,149 @@ mappings:
   corpus:
     target_role: typed_source_identity_status_study_provenance_witness_and_gap_registry
     source:
-    - studies/**/*.yaml
-    - problems/*/witnesses.yaml
-    - problems/theologico-political.yaml
-    - history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
-    - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+      - studies/**/*.yaml
+      - problems/*/witnesses.yaml
+      - problems/theologico-political.yaml
+      - history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+      - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.10.0
+      registry_version: 1.12.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
-    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_QUALIFIED_PLATFORM_REFERENCE_WITNESS
+    transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_FINGERPRINTED_AND_PLATFORM_REFERENCE_WITNESSES
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
     reviewed_witnesses:
-      count: 7
+      count: 8
       source_ids:
-      - CORPUS-SRC-001
-      - CORPUS-SRC-002
-      - CORPUS-SRC-003
-      - CORPUS-SRC-102
-      - CORPUS-SRC-105
-      - CORPUS-SRC-109
-      - CORPUS-SRC-111
+        - CORPUS-SRC-001
+        - CORPUS-SRC-002
+        - CORPUS-SRC-003
+        - CORPUS-SRC-102
+        - CORPUS-SRC-103
+        - CORPUS-SRC-105
+        - CORPUS-SRC-109
+        - CORPUS-SRC-111
     theologico_political_item_level_statuses:
       active_predecessor_source_count: 19
       registered_count: 19
       remaining_count: 0
-      reviewed_witness_count: 4
-      remaining_without_reviewed_witness: 15
-      independent_sequential_study_count: 4
-      remaining_without_independent_sequential_study: 15
+      reviewed_witness_count: 5
+      remaining_without_reviewed_witness: 14
+      independent_sequential_study_count: 5
+      remaining_without_independent_sequential_study: 14
       completed_study_ids:
-      - COHEN-STUDY-001
-      - JA-STUDY-001
-      - TALMON-STUDY-001
-      - SPINOZA-PREFACE-STUDY-001
+        - COHEN-STUDY-001
+        - JA-STUDY-001
+        - TALMON-STUDY-001
+        - SPINOZA-PREFACE-STUDY-001
+        - SPINOZA-TREATISE-STUDY-001
       status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
       root: studies/theologico-political/
     present_function:
-    - register source entities separately from witnesses and studies
-    - account for all 36 YAML records in the current studies tree
-    - validate all nineteen identities, aliases, scopes, witness states, study states, and noncertification
-    - validate CORPUS-WIT-102 platform identity, printed locators, missing byte identity, and complete provisional
-      study
-    - validate fingerprinted witnesses and completed study bindings for CORPUS-WIT-105, CORPUS-WIT-109, and CORPUS-WIT-111
-    - preserve corpus gaps and original-edition comparison limits
-    limit: Current-state exhaustiveness, four reviewed item witnesses, and four complete provisional item studies
-      do not create a complete corpus, admit source text, supply independent corroboration, certify findings, or
-      authorize migration and activation.
+      - register source entities separately from witnesses and studies
+      - account for all 38 YAML records in the current studies tree
+      - validate all nineteen identities, aliases, scopes, witness states, study states, and noncertification
+      - validate CORPUS-WIT-102 platform-reference limits and completed study
+      - validate CORPUS-WIT-103 fingerprint, exact locators, and completed source study
+      - validate all five completed Theologico-Political witness and study bindings
+      - preserve corpus gaps and original-edition comparison limits
+    limit: Current-state exhaustiveness, five reviewed item witnesses, and five complete provisional item studies do not create
+      a complete corpus, admit source text, supply independent corroboration, certify findings, or authorize migration and
+      activation.
   findings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.4.0
+      registry_version: 1.5.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
-    - finding_set_id: FINDSET-011
-      path: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
-    - finding_set_id: FINDSET-119
-      path: problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml
-      derived_from: FINDSET-011
-    - finding_set_id: FINDSET-120
-      path: problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml
-      derived_from: FINDSET-011
-    - finding_set_id: FINDSET-121
-      path: problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml
-      derived_from: FINDSET-011
+      - finding_set_id: FINDSET-012
+        path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+      - finding_set_id: FINDSET-122
+        path: problems/theologico-political/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+        derived_from: FINDSET-012
+      - finding_set_id: FINDSET-123
+        path: problems/wise-vs-vulgar/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+        derived_from: FINDSET-012
+      - finding_set_id: FINDSET-124
+        path: problems/ancients-vs-moderns/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+        derived_from: FINDSET-012
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-    limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify
-      doctrine or migration, displace predecessors, or activate successors.
+    limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify doctrine
+      or migration, displace predecessors, or activate successors.
 
       '
   runtime:
     target_role: deterministic_loaders_contract_validators_and_candidate_report_builder
     interface:
-    - adapter.py
-    - problem_bundles.py
-    - corpus_registry.py
-    - findings_registry.py
-    - tests/
-    - .github/workflows/validate-lean-interface.yml
+      - adapter.py
+      - problem_bundles.py
+      - corpus_registry.py
+      - findings_registry.py
+      - tests/
+      - .github/workflows/validate-lean-interface.yml
     completion: PARTIALLY_RECONSTRUCTED
-    limit: 'Runtime validation does not perform source interpretation, source-text admission, proposition promotion,
-      doctrinal certification, migration execution, successor activation, predecessor displacement, or authoritative
-      Assembly admission.
+    limit: 'Runtime validation does not perform source interpretation, source-text admission, proposition promotion, doctrinal
+      certification, migration execution, successor activation, predecessor displacement, or authoritative Assembly admission.
 
       '
 path_conflicts:
-- requested_path: problems/theologico-political.yaml
-  existing_role: ACTIVE_PREDECESSOR
-  resolution: PRESERVE_EXISTING_PATH_AND_LOAD_SUCCESSOR_BUNDLE_FROM_MANIFEST
-  successor_path: problems/theologico-political/problem.yaml
-  prohibition: DO_NOT_OVERWRITE_OR_REPURPOSE_WITHOUT_CERTIFIED_MIGRATION
+  - requested_path: problems/theologico-political.yaml
+    existing_role: ACTIVE_PREDECESSOR
+    resolution: PRESERVE_EXISTING_PATH_AND_LOAD_SUCCESSOR_BUNDLE_FROM_MANIFEST
+    successor_path: problems/theologico-political/problem.yaml
+    prohibition: DO_NOT_OVERWRITE_OR_REPURPOSE_WITHOUT_CERTIFIED_MIGRATION
 non_effects:
-- No successor problem is certified or activated.
-- No active predecessor is displaced and no accepted migration source is superseded.
-- No source-specific finding is promoted beyond its record-local status.
-- No source text is admitted or distributed.
-- Four source studies are not independent corroboration or repository completion.
-- No Assembly authority is conferred; Sanctum validation remains separate.
+  - No successor problem is certified or activated.
+  - No active predecessor is displaced and no accepted migration source is superseded.
+  - No source-specific finding is promoted beyond its record-local status.
+  - No source text is admitted or distributed.
+  - Five source studies are not independent corroboration or repository completion.
+  - No Assembly authority is conferred; Sanctum validation remains separate.
 validation_states:
   structural_interface_valid_when:
-  - manifest paths and declared YAML records resolve
-  - manifest, audit, mapping, corpus, findings, process, and schedule versions and counts agree
-  - adapter validates manifest and speech contract
-  - problem_bundles validates all seven complete bundles and twenty-one synthesis records
-  - corpus_registry validates identities, witnesses, statuses, studies, predecessor equality, paths, counts, fingerprints,
-    locators, and gaps
-  - findings_registry validates thirty-three finding sets, exact record coverage, derivations, bindings, indexes,
-    and gaps
-  - all structural and behavioral tests pass
-  - GitHub Actions passes on the implementing commit
+    - manifest paths and declared YAML records resolve
+    - manifest, audit, mapping, corpus, findings, process, and schedule versions and counts agree
+    - adapter validates manifest and speech contract
+    - problem_bundles validates all seven complete bundles and twenty-four synthesis records
+    - corpus_registry validates identities, witnesses, statuses, studies, predecessor equality, paths, counts, fingerprints,
+      locators, and gaps
+    - findings_registry validates forty-one finding sets, exact record coverage, derivations, bindings, indexes, and gaps
+    - all structural and behavioral tests pass
+    - GitHub Actions passes on the implementing commit
   semantic_completion_requires:
-  - reviewed witnesses and independent studies for remaining writings
-  - original-edition comparison where wording or pagination requires it
-  - expanded independent classical, biblical, medieval, Cohenian, Kantian, and modern witnesses
-  - source-specific method and hermeneutic application across the corpus
-  - actual candidate-report validation against the full contract stack
+    - reviewed witnesses and independent studies for remaining writings
+    - original-edition comparison where wording or pagination requires it
+    - expanded independent classical, biblical, medieval, Cohenian, Kantian, and modern witnesses
+    - source-specific method and hermeneutic application across the corpus
+    - actual candidate-report validation against the full contract stack
   doctrinal_certification_requires:
-  - separate source-grounded and migration-specific certification records
-  - preserved dissent, contradiction, and uncertainty
-  - no self-certification by repository, runtime, minister, or artificial intelligence
+    - separate source-grounded and migration-specific certification records
+    - preserved dissent, contradiction, and uncertainty
+    - no self-certification by repository, runtime, minister, or artificial intelligence
   successor_activation_requires:
-  - predecessor preservation and complete classified migration coverage
-  - reference and schema validation
-  - explicit authorized certification
-  - no activation merely from interface, witness, or study readiness
+    - predecessor preservation and complete classified migration coverage
+    - reference and schema validation
+    - explicit authorized certification
+    - no activation merely from interface, witness, or study readiness
 completed_production_units:
-- speech, hermeneutic, and method operational contracts
-- complete read-only foundational problem bundles
-- typed current-state corpus and findings registries
-- complete 19-of-19 Theologico-Political source-identity range
-- CORPUS-WIT-109, CORPUS-WIT-105, and CORPUS-WIT-111 reviewed item witnesses
-- JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 complete provisional source-specific reconstructions
-- eight jurisdiction-preserving local synthesis bridges derived from the three item studies
+  - speech, hermeneutic, and method operational contracts
+  - complete read-only foundational problem bundles
+  - typed current-state corpus and findings registries
+  - complete 19-of-19 Theologico-Political source-identity range
+  - CORPUS-WIT-109, CORPUS-WIT-105, and CORPUS-WIT-111 reviewed item witnesses
+  - JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 complete provisional source-specific reconstructions
+  - eight jurisdiction-preserving local synthesis bridges derived from the three item studies
+  - CORPUS-WIT-103 and SPINOZA-TREATISE-STUDY-001 with three jurisdiction-preserving local synthesis bridges
 next_production_units:
-- validate and merge this bounded integration
-- acquire and reconstruct CORPUS-SRC-102, the Preface to Spinoza's Critique of Religion
-- acquire and reconstruct the remaining sixteen item witnesses
-- expand independent witness reconstruction
-- validate actual candidate ministerial reports
-repinning_rule: 'Do not repin Sanctum as a completed Strauss interface while semantic completion remains INCOMPLETE.
-  Passing validation establishes only the integrity of this bounded revision.
+  - validate and merge this bounded integration
+  - acquire and reconstruct CORPUS-SRC-108, On the Interpretation of Genesis
+  - acquire and reconstruct the remaining thirteen item witnesses after CORPUS-SRC-108
+  - expand independent witness reconstruction
+  - validate actual candidate ministerial reports
+repinning_rule: 'Do not repin Sanctum as a completed Strauss interface while semantic completion remains INCOMPLETE. Passing
+  validation establishes only the integrity of this bounded revision.
 
   '

@@ -5,7 +5,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 1.6.0
+  version: 1.8.0
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
   structural_validation: REQUIRED_ON_EACH_CHANGE
@@ -14,36 +14,34 @@ status:
   runtime_readiness: LIMITED_READ_ONLY_CONTEXT_AND_CANDIDATE_REPORT_SUPPORT
   activation: AVAILABLE_FOR_VALIDATED_LIMITED_ADAPTER_USE
   constitutional_effect: NONE_ON_EXISTING_PROBLEM_MIGRATION
-  governing_notice: 'A resolved path, valid YAML document, passing loader, bounded current-state index, reviewed
-    witness, completed provisional source study, or successful test does not establish repository completion, doctrinal
-    truth, claimant rank, migration certification, successor activation, or readiness for unrestricted ministerial
-    reasoning.
+  governing_notice: 'A resolved path, valid YAML document, passing loader, bounded current-state index, reviewed witness,
+    completed provisional source study, or successful test does not establish repository completion, doctrinal truth, claimant
+    rank, migration certification, successor activation, or readiness for unrestricted ministerial reasoning.
 
     '
 revision_history:
-  predecessor_version: 1.5.0
-  predecessor_blob_sha: 1a8c730386293af9794f8e25d5e5a351a5262ba7
-  reason: Register SPINOZA-PREFACE-STUDY-001, CORPUS-STUDY-011, FINDSET-011, and FINDSET-119 through FINDSET-121.
-    Synchronize corpus registry v1.10.0 and findings registry v1.4.0 while preserving the 1997 editorial-composite
-    condition, missing byte identity and PDF offset, pending 1965/1968 comparison, fifteen missing witnesses and
-    studies, noncertification, predecessor authority, and the Sanctum repin block.
-purpose: 'Provide one compact, machine-readable entry point through which a runtime can load the repository''s problems,
-  hermeneutics, method, speech discipline, corpus registry, and findings registry without deleting, overwriting,
-  or silently harmonizing the richer records from which this interface is derived.
+  predecessor_version: 1.7.0
+  predecessor_blob_sha: b3f2d4b8335441bd958ab49fe96819d242f986ca
+  reason: Register SPINOZA-TREATISE-STUDY-001, CORPUS-STUDY-012, FINDSET-012, and FINDSET-122 through FINDSET-124; synchronize
+    corpus registry v1.12.0, findings registry v1.5.0, and audit v2.6.0 while preserving fourteen missing witnesses and studies,
+    noncertification, predecessor authority, and the Sanctum repin block.
+purpose: 'Provide one compact, machine-readable entry point through which a runtime can load the repository''s problems, hermeneutics,
+  method, speech discipline, corpus registry, and findings registry without deleting, overwriting, or silently harmonizing
+  the richer records from which this interface is derived.
 
   '
 audit:
   path: audits/operational-completeness.yaml
-  version: 2.4.0
+  version: 2.6.0
   classification_vocabulary:
-  - SUBSTANTIVELY_RECONSTRUCTED
-  - PARTIALLY_RECONSTRUCTED
-  - MAPPED_TO_RICHER_RECORDS
-  - STRUCTURAL_PLACEHOLDER
-  - EMPTY_OR_UNIMPLEMENTED
-  repinning_rule: 'Sanctum must not be repinned as a completed Strauss interface while semantic completion remains
-    INCOMPLETE. Any interim pin requires successful declared validation and must preserve all source, witness, study,
-    doctrine, migration, activation, and runtime limits.
+    - SUBSTANTIVELY_RECONSTRUCTED
+    - PARTIALLY_RECONSTRUCTED
+    - MAPPED_TO_RICHER_RECORDS
+    - STRUCTURAL_PLACEHOLDER
+    - EMPTY_OR_UNIMPLEMENTED
+  repinning_rule: 'Sanctum must not be repinned as a completed Strauss interface while semantic completion remains INCOMPLETE.
+    Any interim pin requires successful declared validation and must preserve all source, witness, study, doctrine, migration,
+    activation, and runtime limits.
 
     '
 component_completion:
@@ -52,8 +50,9 @@ component_completion:
   problem_bundle_loader: PARTIALLY_RECONSTRUCTED_READ_ONLY_BUNDLE_SUPPORT
   corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-  reviewed_source_witnesses: SEVEN_REVIEWED_WITNESSES_INCLUDING_QUALIFIED_PLATFORM_REFERENCE_CORPUS_WIT_102_WITH_RECORDED_LIMITS
-  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_4_OF_19_REVIEWED_ITEM_WITNESSES_4_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES
+  reviewed_source_witnesses: 
+    EIGHT_REVIEWED_WITNESSES_INCLUDING_FINGERPRINTED_CORPUS_WIT_103_AND_QUALIFIED_PLATFORM_REFERENCE_CORPUS_WIT_102_WITH_RECORDED_LIMITS
+  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_5_OF_19_REVIEWED_ITEM_WITNESSES_5_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
@@ -64,224 +63,232 @@ component_completion:
   behavioral_tests: SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_AND_PLATFORM_REFERENCE_WITNESS_CONTRACTS_REQUIRE_VALIDATION
 source_hierarchy:
   tiers:
-  - primary_external
-  - primary_contemporaneous
-  - secondary_about_own_primary_acts
-  - secondary_interpretive
+    - primary_external
+    - primary_contemporaneous
+    - secondary_about_own_primary_acts
+    - secondary_interpretive
   rule: 'Primary sources govern secondary sources where primary sources are available. Source type, edition, translation,
     editorial condition, documentary limits, and nonindependence remain explicit in every source-specific reconstruction.
 
     '
 proposition_kinds:
-- documented_finding
-- supported_inference
-- working_hypothesis
-- comparative_question
-- unresolved_uncertainty
+  - documented_finding
+  - supported_inference
+  - working_hypothesis
+  - comparative_question
+  - unresolved_uncertainty
 load_order:
-- method
-- hermeneutics
-- problems
-- speech
-- corpus
-- findings
+  - method
+  - hermeneutics
+  - problems
+  - speech
+  - corpus
+  - findings
 problems:
-- canonical_key: nomos-vs-physis
-  canonical_order: 1
-  source: problems/nomos-vs-physis/problem.yaml
-  inquiry_profile: problems/nomos-vs-physis/inquiry-profile.yaml
-  witnesses: problems/nomos-vs-physis/witnesses.yaml
-  relations: problems/nomos-vs-physis/relations.yaml
-  synthesis_directory: problems/nomos-vs-physis/synthesis/
-- canonical_key: philosophy-vs-poetry
-  canonical_order: 2
-  source: problems/philosophy-vs-poetry/problem.yaml
-  inquiry_profile: problems/philosophy-vs-poetry/inquiry-profile.yaml
-  witnesses: problems/philosophy-vs-poetry/witnesses.yaml
-  relations: problems/philosophy-vs-poetry/relations.yaml
-  synthesis_directory: problems/philosophy-vs-poetry/synthesis/
-- canonical_key: theory-vs-practice
-  canonical_order: 3
-  source: problems/theory-vs-practice/problem.yaml
-  inquiry_profile: problems/theory-vs-practice/inquiry-profile.yaml
-  witnesses: problems/theory-vs-practice/witnesses.yaml
-  relations: problems/theory-vs-practice/relations.yaml
-  synthesis_directory: problems/theory-vs-practice/synthesis/
-- canonical_key: theologico-political
-  canonical_order: 4
-  source: problems/theologico-political/problem.yaml
-  inquiry_profile: problems/theologico-political/inquiry-profile.yaml
-  witnesses: problems/theologico-political/witnesses.yaml
-  relations: problems/theologico-political/relations.yaml
-  synthesis_directory: problems/theologico-political/synthesis/
-  active_predecessor: problems/theologico-political.yaml
-  historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
-- canonical_key: athens-vs-jerusalem
-  canonical_order: 5
-  source: problems/athens-vs-jerusalem/problem.yaml
-  inquiry_profile: problems/athens-vs-jerusalem/inquiry-profile.yaml
-  witnesses: problems/athens-vs-jerusalem/witnesses.yaml
-  relations: problems/athens-vs-jerusalem/relations.yaml
-  synthesis_directory: problems/athens-vs-jerusalem/synthesis/
-- canonical_key: wise-vs-vulgar
-  canonical_order: 6
-  source: problems/wise-vs-vulgar/problem.yaml
-  inquiry_profile: problems/wise-vs-vulgar/inquiry-profile.yaml
-  witnesses: problems/wise-vs-vulgar/witnesses.yaml
-  relations: problems/wise-vs-vulgar/relations.yaml
-  synthesis_directory: problems/wise-vs-vulgar/synthesis/
-  active_predecessor: problems/wise-and-vulgar.yaml
-  accepted_migration_source: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
-- canonical_key: ancients-vs-moderns
-  canonical_order: 7
-  source: problems/ancients-vs-moderns/problem.yaml
-  inquiry_profile: problems/ancients-vs-moderns/inquiry-profile.yaml
-  witnesses: problems/ancients-vs-moderns/witnesses.yaml
-  relations: problems/ancients-vs-moderns/relations.yaml
-  synthesis_directory: problems/ancients-vs-moderns/synthesis/
+  - canonical_key: nomos-vs-physis
+    canonical_order: 1
+    source: problems/nomos-vs-physis/problem.yaml
+    inquiry_profile: problems/nomos-vs-physis/inquiry-profile.yaml
+    witnesses: problems/nomos-vs-physis/witnesses.yaml
+    relations: problems/nomos-vs-physis/relations.yaml
+    synthesis_directory: problems/nomos-vs-physis/synthesis/
+  - canonical_key: philosophy-vs-poetry
+    canonical_order: 2
+    source: problems/philosophy-vs-poetry/problem.yaml
+    inquiry_profile: problems/philosophy-vs-poetry/inquiry-profile.yaml
+    witnesses: problems/philosophy-vs-poetry/witnesses.yaml
+    relations: problems/philosophy-vs-poetry/relations.yaml
+    synthesis_directory: problems/philosophy-vs-poetry/synthesis/
+  - canonical_key: theory-vs-practice
+    canonical_order: 3
+    source: problems/theory-vs-practice/problem.yaml
+    inquiry_profile: problems/theory-vs-practice/inquiry-profile.yaml
+    witnesses: problems/theory-vs-practice/witnesses.yaml
+    relations: problems/theory-vs-practice/relations.yaml
+    synthesis_directory: problems/theory-vs-practice/synthesis/
+  - canonical_key: theologico-political
+    canonical_order: 4
+    source: problems/theologico-political/problem.yaml
+    inquiry_profile: problems/theologico-political/inquiry-profile.yaml
+    witnesses: problems/theologico-political/witnesses.yaml
+    relations: problems/theologico-political/relations.yaml
+    synthesis_directory: problems/theologico-political/synthesis/
+    active_predecessor: problems/theologico-political.yaml
+    historical_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  - canonical_key: athens-vs-jerusalem
+    canonical_order: 5
+    source: problems/athens-vs-jerusalem/problem.yaml
+    inquiry_profile: problems/athens-vs-jerusalem/inquiry-profile.yaml
+    witnesses: problems/athens-vs-jerusalem/witnesses.yaml
+    relations: problems/athens-vs-jerusalem/relations.yaml
+    synthesis_directory: problems/athens-vs-jerusalem/synthesis/
+  - canonical_key: wise-vs-vulgar
+    canonical_order: 6
+    source: problems/wise-vs-vulgar/problem.yaml
+    inquiry_profile: problems/wise-vs-vulgar/inquiry-profile.yaml
+    witnesses: problems/wise-vs-vulgar/witnesses.yaml
+    relations: problems/wise-vs-vulgar/relations.yaml
+    synthesis_directory: problems/wise-vs-vulgar/synthesis/
+    active_predecessor: problems/wise-and-vulgar.yaml
+    accepted_migration_source: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+  - canonical_key: ancients-vs-moderns
+    canonical_order: 7
+    source: problems/ancients-vs-moderns/problem.yaml
+    inquiry_profile: problems/ancients-vs-moderns/inquiry-profile.yaml
+    witnesses: problems/ancients-vs-moderns/witnesses.yaml
+    relations: problems/ancients-vs-moderns/relations.yaml
+    synthesis_directory: problems/ancients-vs-moderns/synthesis/
 problem_bundle_completion:
   state: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
   loader: problem_bundles.py
   bundle_members:
-  - constitution
-  - inquiry_profile
-  - witness_registry
-  - relation_record
-  - synthesis_records
-  limitation: 'Bundle loading validates identity, relation coverage, noncertification, and path integrity. It does
-    not complete missing witnesses, settle doctrine, certify migrations, activate successors, displace predecessors,
-    or confer Assembly authority.
+    - constitution
+    - inquiry_profile
+    - witness_registry
+    - relation_record
+    - synthesis_records
+  limitation: 'Bundle loading validates identity, relation coverage, noncertification, and path integrity. It does not complete
+    missing witnesses, settle doctrine, certify migrations, activate successors, displace predecessors, or confer Assembly
+    authority.
 
     '
 hermeneutic_completion:
   state: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   limitation: Contract reconstruction does not complete application to every source, author, or finding.
 hermeneutics:
-- key: literary-concealment
-  path: hermeneutics/literary-concealment.yaml
-  contract_version: STRAUSS-HERMENEUTIC-LC-1
-- key: whole-and-part
-  path: hermeneutics/whole-and-part.yaml
-  contract_version: STRAUSS-HERMENEUTIC-WP-1
-- key: speaker-and-author
-  path: hermeneutics/speaker-and-author.yaml
-  contract_version: STRAUSS-HERMENEUTIC-SA-1
-- key: audience
-  path: hermeneutics/audience.yaml
-  contract_version: STRAUSS-HERMENEUTIC-AUD-1
-- key: contradiction
-  path: hermeneutics/contradiction.yaml
-  contract_version: STRAUSS-HERMENEUTIC-CON-1
-- key: historical-and-philosophical-understanding
-  path: hermeneutics/historical-and-philosophical-understanding.yaml
-  contract_version: STRAUSS-HERMENEUTIC-HPU-1
+  - key: literary-concealment
+    path: hermeneutics/literary-concealment.yaml
+    contract_version: STRAUSS-HERMENEUTIC-LC-1
+  - key: whole-and-part
+    path: hermeneutics/whole-and-part.yaml
+    contract_version: STRAUSS-HERMENEUTIC-WP-1
+  - key: speaker-and-author
+    path: hermeneutics/speaker-and-author.yaml
+    contract_version: STRAUSS-HERMENEUTIC-SA-1
+  - key: audience
+    path: hermeneutics/audience.yaml
+    contract_version: STRAUSS-HERMENEUTIC-AUD-1
+  - key: contradiction
+    path: hermeneutics/contradiction.yaml
+    contract_version: STRAUSS-HERMENEUTIC-CON-1
+  - key: historical-and-philosophical-understanding
+    path: hermeneutics/historical-and-philosophical-understanding.yaml
+    contract_version: STRAUSS-HERMENEUTIC-HPU-1
 method_completion:
   state: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
-  limitation: 'Method contracts govern question recovery, independent reconstruction, ordered reading, and problem
-    preservation but do not execute source interpretation by themselves.
+  limitation: 'Method contracts govern question recovery, independent reconstruction, ordered reading, and problem preservation
+    but do not execute source interpretation by themselves.
 
     '
 method:
-- key: recover-question
-  path: method/recover-question.yaml
-  contract_version: STRAUSS-METHOD-RQ-1
-- key: reconstruct-alternatives
-  path: method/reconstruct-alternatives.yaml
-  contract_version: STRAUSS-METHOD-RA-1
-- key: textual-order
-  path: method/textual-order.yaml
-  contract_version: STRAUSS-METHOD-TO-1
-- key: preserve-problem
-  path: method/preserve-problem.yaml
-  contract_version: STRAUSS-METHOD-PP-1
+  - key: recover-question
+    path: method/recover-question.yaml
+    contract_version: STRAUSS-METHOD-RQ-1
+  - key: reconstruct-alternatives
+    path: method/reconstruct-alternatives.yaml
+    contract_version: STRAUSS-METHOD-RA-1
+  - key: textual-order
+    path: method/textual-order.yaml
+    contract_version: STRAUSS-METHOD-TO-1
+  - key: preserve-problem
+    path: method/preserve-problem.yaml
+    contract_version: STRAUSS-METHOD-PP-1
 speech:
   mechanism: speech/speech-mechanism.yaml
   contract_version: STRAUSS-SPEECH-CONTRACT-1
   completion: PARTIALLY_RECONSTRUCTED
   voice_status: subordinate_to_reasoning
   limitation: 'The contract governs inputs, evidence, audience, speech and deed, concealment, irony, comedy, uncertainty,
-    typed candidate output, and stopping conditions. It does not automatically perform source interpretation or
-    final natural-language composition.
+    typed candidate output, and stopping conditions. It does not automatically perform source interpretation or final natural-language
+    composition.
 
     '
 corpus:
   index: corpus/index.yaml
   loader: corpus_registry.py
-  registry_version: 1.10.0
+  registry_version: 1.12.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   reviewed_witnesses:
-  - source: Studies in Platonic Political Philosophy
-    witness_id: CORPUS-WIT-001
-  - source: Plato's Apology of Socrates
-    witness_id: CORPUS-WIT-002
-  - source: Socrates and Aristophanes
-    witness_id: CORPUS-WIT-003
-  - source: Preface to Spinoza's Critique of Religion
-    witness_id: CORPUS-WIT-102
-    witness_class: PLATFORM_REFERENCE_WITNESS
-    platform_object_identifier: file_0000000073c081fd9fb65f9ea7552cde
-    printed_pages: 137-180
-    pdf_pages_one_based: PENDING_DIRECT_OFFSET_VERIFICATION
-    item_status: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
-  - source: Introductory Essay for Hermann Cohen
-    witness_id: CORPUS-WIT-105
-    container_witness_id: CORPUS-WIT-001
-    printed_pages: 233-247
-    pdf_pages_one_based: 237-251
-    original_publication: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism,
-      Frederick Ungar, New York, 1972
-    item_status: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
-  - source: Jerusalem and Athens
-    witness_id: CORPUS-WIT-109
-    container_witness_id: CORPUS-WIT-001
-    printed_pages: 147-173
-    pdf_pages_one_based: 151-177
-    original_publication: The City College Papers, no. 6, The City College of New York, 1967
-    item_status: studies/theologico-political/jerusalem-and-athens/source-status.yaml
-  - source: Review of J. L. Talmon
-    witness_id: CORPUS-WIT-111
-    container_witness_id: CORPUS-WIT-001
-    printed_pages: 232
-    pdf_pages_one_based: 236
-    original_publication: Journal of Modern History 29, no. 3, 1957
-    item_status: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml
+    - source: Studies in Platonic Political Philosophy
+      witness_id: CORPUS-WIT-001
+    - source: Plato's Apology of Socrates
+      witness_id: CORPUS-WIT-002
+    - source: Socrates and Aristophanes
+      witness_id: CORPUS-WIT-003
+    - source: Preface to Spinoza's Critique of Religion
+      witness_id: CORPUS-WIT-102
+      witness_class: PLATFORM_REFERENCE_WITNESS
+      platform_object_identifier: file_0000000073c081fd9fb65f9ea7552cde
+      printed_pages: 137-180
+      pdf_pages_one_based: PENDING_DIRECT_OFFSET_VERIFICATION
+      item_status: studies/theologico-political/preface-to-spinozas-critique-of-religion/source-status.yaml
+    - source: How to Study Spinoza's Theologico-Political Treatise
+      witness_id: CORPUS-WIT-103
+      container: Jewish Philosophy and the Crisis of Modernity
+      printed_pages: 181-233
+      pdf_pages_one_based: 200-252
+      container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+      item_status: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml
+    - source: Introductory Essay for Hermann Cohen
+      witness_id: CORPUS-WIT-105
+      container_witness_id: CORPUS-WIT-001
+      printed_pages: 233-247
+      pdf_pages_one_based: 237-251
+      original_publication: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism, Frederick
+        Ungar, New York, 1972
+      item_status: studies/theologico-political/introductory-essay-hermann-cohen-religion-of-reason/source-status.yaml
+    - source: Jerusalem and Athens
+      witness_id: CORPUS-WIT-109
+      container_witness_id: CORPUS-WIT-001
+      printed_pages: 147-173
+      pdf_pages_one_based: 151-177
+      original_publication: The City College Papers, no. 6, The City College of New York, 1967
+      item_status: studies/theologico-political/jerusalem-and-athens/source-status.yaml
+    - source: Review of J. L. Talmon
+      witness_id: CORPUS-WIT-111
+      container_witness_id: CORPUS-WIT-001
+      printed_pages: 232
+      pdf_pages_one_based: 236
+      original_publication: Journal of Modern History 29, no. 3, 1957
+      item_status: studies/theologico-political/review-talmon-nature-of-jewish-history/source-status.yaml
   theologico_political_item_level_statuses:
     registered_count: 19
     total_predecessor_sources: 19
     remaining_without_item_level_status: 0
-    reviewed_witness_count: 4
-    remaining_without_reviewed_item_witness: 15
-    independent_sequential_study_count: 4
-    remaining_without_independent_sequential_study: 15
+    reviewed_witness_count: 5
+    remaining_without_reviewed_item_witness: 14
+    independent_sequential_study_count: 5
+    remaining_without_independent_sequential_study: 14
     completed_study_ids:
-    - COHEN-STUDY-001
-    - JA-STUDY-001
-    - TALMON-STUDY-001
-    - SPINOZA-PREFACE-STUDY-001
+      - COHEN-STUDY-001
+      - JA-STUDY-001
+      - TALMON-STUDY-001
+      - SPINOZA-PREFACE-STUDY-001
+      - SPINOZA-TREATISE-STUDY-001
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     root: studies/theologico-political/
     priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
     rule: Four reviewed item witnesses and four complete provisional source studies include one qualified platform-reference
-      witness. They are not independent corroboration, doctrinal certification, migration completion, successor
-      activation, or repository completion.
-  limitation: All nineteen predecessor writings have bounded identities. CORPUS-SRC-102, CORPUS-SRC-105, CORPUS-SRC-109,
-    and CORPUS-SRC-111 have reviewed item witnesses and complete provisional sequential studies. The remaining fifteen
-    lack reviewed item witnesses and independent studies. Byte custody, original-edition comparisons, independent
-    witnesses, and source-text access remain incomplete.
+      witness. They are not independent corroboration, doctrinal certification, migration completion, successor activation,
+      or repository completion.
+  limitation: All nineteen predecessor writings have bounded identities. CORPUS-SRC-102, CORPUS-SRC-105, CORPUS-SRC-109, and
+    CORPUS-SRC-111 have reviewed item witnesses and complete provisional sequential studies. The remaining fifteen lack reviewed
+    item witnesses and independent studies. Byte custody, original-edition comparisons, independent witnesses, and source-text
+    access remain incomplete.
 findings:
   index: findings/index.yaml
   loader: findings_registry.py
-  registry_version: 1.4.0
+  registry_version: 1.5.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   newly_registered:
-  - FINDSET-011
-  - FINDSET-119
-  - FINDSET-120
-  - FINDSET-121
-  limitation: 'Proposition-level normalization, source-asymmetry repair, independent witness expansion, doctrinal
-    certification, migration certification, and successor activation remain incomplete.
+    - FINDSET-011
+    - FINDSET-119
+    - FINDSET-120
+    - FINDSET-121
+  limitation: 'Proposition-level normalization, source-asymmetry repair, independent witness expansion, doctrinal certification,
+    migration certification, and successor activation remain incomplete.
 
     '
 runtime:
@@ -295,40 +302,39 @@ runtime:
   findings_registry_validation_command: python findings_registry.py --validate
   test_command: python -m unittest discover -s tests -p 'test_*.py'
   permitted_operations:
-  - validate declared paths and substantive contracts
-  - load bounded operational context
-  - load complete read-only foundational problem bundles
-  - load typed current-state corpus and findings registries
-  - validate reviewed-witness metadata, locators, study bindings, derivations, and jurisdiction
-  - validate typed speech requests
-  - build non-authoritative candidate report structures
+    - validate declared paths and substantive contracts
+    - load bounded operational context
+    - load complete read-only foundational problem bundles
+    - load typed current-state corpus and findings registries
+    - validate reviewed-witness metadata, locators, study bindings, derivations, and jurisdiction
+    - validate typed speech requests
+    - build non-authoritative candidate report structures
   prohibited_operations:
-  - admit or distribute source texts through a registry
-  - allow a local filename to override title-page or copyright-page evidence
-  - treat OCR as authoritative where page images disagree or remain unclear
-  - treat source-study completion as independent corroboration
-  - promote a finding beyond its record-local evidence status
-  - certify doctrine, wisdom, witnesses, findings, or migration
-  - activate successor problems or displace active predecessors
-  - rewrite source findings or confer Assembly authority
+    - admit or distribute source texts through a registry
+    - allow a local filename to override title-page or copyright-page evidence
+    - treat OCR as authoritative where page images disagree or remain unclear
+    - treat source-study completion as independent corroboration
+    - promote a finding beyond its record-local evidence status
+    - certify doctrine, wisdom, witnesses, findings, or migration
+    - activate successor problems or displace active predecessors
+    - rewrite source findings or confer Assembly authority
 sanctum_contract:
   assembly_repository: izzy9118-blip/Sanctum
   registry_path: registry/ministers.yaml
   participation: universal
   outside_my_ground_permitted: true
   completed_interface_repin_status: BLOCKED_WHILE_SEMANTIC_COMPLETION_IS_INCOMPLETE
-  output_rule: 'The adapter emits candidate context and reports. Git remains authoritative memory, and Sanctum''s
-    Validation Gate alone may confer Assembly-level authority. No pin may describe this interface as completed while
-    semantic_completion is INCOMPLETE.
+  output_rule: 'The adapter emits candidate context and reports. Git remains authoritative memory, and Sanctum''s Validation
+    Gate alone may confer Assembly-level authority. No pin may describe this interface as completed while semantic_completion
+    is INCOMPLETE.
 
     '
 migration:
   mapping_record: migrations/lean-operational-interface.yaml
   mode: ADDITIVE_NON_DESTRUCTIVE
   flat_problem_projection_deferred: true
-  reason: 'Explicit mappings preserve predecessors, successor directories, studies, protocols, governance records,
-    transaction ledgers, and historical copies. The active predecessor at problems/theologico-political.yaml may
-    not be overwritten silently.
+  reason: 'Explicit mappings preserve predecessors, successor directories, studies, protocols, governance records, transaction
+    ledgers, and historical copies. The active predecessor at problems/theologico-political.yaml may not be overwritten silently.
 
     '
 safeguards:

@@ -59,6 +59,8 @@ BASE_REQUIRED_STUDY_PATHS = {
     "studies/theologico-political/review-talmon-nature-of-jewish-history/sequential-reconstruction.yaml",
     "studies/theologico-political/preface-to-spinozas-critique-of-religion/reviewed-witness.yaml",
     "studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml",
+    "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml",
+    "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml",
 }
 
 REQUIRED_TOP_LEVEL = {
@@ -98,6 +100,24 @@ COMPLETE_TP_ITEMS: dict[str, dict[str, Any]] = {
         "reading_state": "COMPLETE_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS",
         "platform_reference": True,
         "platform_object_identifier": "file_0000000073c081fd9fb65f9ea7552cde",
+    },
+    "CORPUS-SRC-103": {
+        "status_id": "CORPUS-STATUS-103",
+        "witness_id": "CORPUS-WIT-103",
+        "study_id": "CORPUS-STUDY-012",
+        "internal_study_id": "SPINOZA-TREATISE-STUDY-001",
+        "study_path": (
+            "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/"
+            "sequential-reconstruction.yaml"
+        ),
+        "witness_record_path": (
+            "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/"
+            "reviewed-witness.yaml"
+        ),
+        "printed_page_range": {"start": 181, "end": 233},
+        "pdf_page_range_one_based": {"start": 200, "end": 252},
+        "reading_state": "COMPLETE_FOR_FINGERPRINTED_1997_COLLECTED_WITNESS",
+        "platform_reference": False,
     },
     "CORPUS-SRC-105": {
         "status_id": "CORPUS-STATUS-105",
@@ -345,7 +365,13 @@ def _validate_completed_tp_item(
         errors.append(f"{study_id} reading state mismatch")
     if study_record.get("status", {}).get("certification") != "NOT_CERTIFIED":
         errors.append(f"{study_id} must remain NOT_CERTIFIED")
-    if study_record.get("termination", {}).get("successor_effect") not in (None, "NONE"):
+    study_status = study_record.get("status", {})
+    study_termination = study_record.get("termination", {})
+    study_successor_effect = study_termination.get(
+        "successor_effect",
+        study_status.get("successor_effect", study_status.get("successor_activation_effect")),
+    )
+    if study_successor_effect != "NONE":
         errors.append(f"{study_id} may not affect successor activation")
 
     witness_record_path = spec.get("witness_record_path")
@@ -485,8 +511,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.10.0":
-        errors.append("corpus registry identity.version must be 1.10.0")
+    if identity.get("version") != "1.12.0":
+        errors.append("corpus registry identity.version must be 1.12.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
@@ -511,9 +537,9 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
 
     expected_counts = {
         "source entities": (len(source_ids), 22),
-        "reviewed witnesses": (len(witness_ids), 7),
+        "reviewed witnesses": (len(witness_ids), 8),
         "source-status records": (len(status_ids), 22),
-        "study records": (len(study_ids), 11),
+        "study records": (len(study_ids), 12),
         "corpus gaps": (len(gap_ids), 7),
     }
     for label, (actual, expected) in expected_counts.items():
@@ -579,8 +605,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "problem_witness_registries_registered": len(problem_registries) if isinstance(problem_registries, list) else 0,
         "theologico_political_predecessor_sources_registered": len(tp_entities),
         "theologico_political_item_level_statuses_registered": 19,
-        "theologico_political_reviewed_item_witnesses_registered": 4,
-        "theologico_political_independent_item_studies_registered": 4,
+        "theologico_political_reviewed_item_witnesses_registered": 5,
+        "theologico_political_independent_item_studies_registered": 5,
         "current_studies_tree_yaml_records_accounted_for": len(actual_studies),
         "exhaustive_within_declared_scope": True,
     }
@@ -595,10 +621,10 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         errors.append("registry termination state must preserve bounded current-state completion")
     if termination.get("theologico_political_identity_registration_state") != "COMPLETE_19_OF_19":
         errors.append("TP identity registration must remain COMPLETE_19_OF_19")
-    if termination.get("theologico_political_reviewed_witness_state") != "INCOMPLETE_4_OF_19":
-        errors.append("TP reviewed-witness state must be INCOMPLETE_4_OF_19")
-    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_4_OF_19":
-        errors.append("TP independent-study state must be INCOMPLETE_4_OF_19")
+    if termination.get("theologico_political_reviewed_witness_state") != "INCOMPLETE_5_OF_19":
+        errors.append("TP reviewed-witness state must be INCOMPLETE_5_OF_19")
+    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_5_OF_19":
+        errors.append("TP independent-study state must be INCOMPLETE_5_OF_19")
     if termination.get("corpus_state") != "OPEN_AND_MATERIALLY_INCOMPLETE":
         errors.append("registry termination must preserve an open, incomplete corpus")
     if termination.get("certification") != "NOT_CERTIFIED":

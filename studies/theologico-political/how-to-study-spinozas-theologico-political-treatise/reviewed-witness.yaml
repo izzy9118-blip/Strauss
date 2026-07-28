@@ -1,0 +1,153 @@
+schema_version: 1.0
+document_type: reviewed_item_witness_record
+identity:
+  witness_id: CORPUS-WIT-103
+  source_id: CORPUS-SRC-103
+  title: Reviewed item witness — How to Study Spinoza's Theologico-Political Treatise
+  version: 1.0.0
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
+  certification: NOT_CERTIFIED
+  independent_sequential_study: NOT_YET_COMPLETED
+  original_edition_comparison: PENDING
+  source_text_admission: NOT_REQUESTED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
+protocol_authority:
+  governing_protocol: protocols/source-status.yaml
+  acquisition_record: history/reviewed-witness-acquisitions/2026-07-27-how-to-study-spinoza-uploaded-witness.yaml
+  qualification_rule: 'Registration establishes the identity and complete reviewability of one fingerprinted 1997 collected
+    reprint. It does not establish independent corroboration, original-edition identity, source-study completion, doctrine,
+    migration, activation, or displacement.
+
+    '
+source_identity:
+  author: Leo Strauss
+  canonical_title: How to Study Spinoza's Theologico-Political Treatise
+  date: 1948
+  corpus_source_id: CORPUS-SRC-103
+  source_status_id: CORPUS-STATUS-103
+container_bibliography:
+  title: Jewish Philosophy and the Crisis of Modernity
+  subtitle: Essays and Lectures in Modern Jewish Thought
+  author: Leo Strauss
+  editor: Kenneth Hart Green
+  series: SUNY Series in the Jewish Writings of Leo Strauss
+  publisher: State University of New York Press
+  publication_place: Albany
+  publication_year: 1997
+  isbn:
+    cloth: 0-7914-2773-0
+    paperback: 0-7914-2774-9
+container_witness:
+  uploaded_file_object_id: file_00000000369481f5b39f768dc1599ff3
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+item_locators:
+  printed_page_range:
+    start: 181
+    end: 233
+  pdf_page_range_one_based:
+    start: 200
+    end: 252
+  argumentative_body_printed_range:
+    start: 181
+    end: 224
+  notes_printed_range:
+    start: 224
+    end: 233
+  excluded_blank_separator:
+    printed_page: 234
+    pdf_page_one_based: 253
+  item_completeness: COMPLETE_COLLECTED_ITEM
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+publication_provenance:
+  original_item_occasion: JOURNAL_ARTICLE
+  original_venue: Proceedings of the American Academy for Jewish Research
+  original_volume: 17
+  original_year: 1948
+  original_pages: 69-131
+  collected_reprint:
+    title: Jewish Philosophy and the Crisis of Modernity
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  original_1948_journal_printing_compared: false
+  rule: 'The reviewed witness is the 1997 collected reprint and may not be silently identified with the original 1948 journal
+    printing.
+
+    '
+textual_condition:
+  searchable_text: true
+  page_images_available: true
+  parsed_text_authority: SUBORDINATE_TO_RENDERED_PAGE_IMAGES_WHERE_WORDING_CONFLICTS_OR_IS_UNCERTAIN
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  complete_text_reviewability: CONFIRMED
+jurisdiction_and_limits:
+  governing_problem: theologico-political
+  additional_problem_bindings:
+  - wise-vs-vulgar
+  - ancients-vs-moderns
+  controlled_intersections:
+  - historical-and-philosophical-understanding
+  - literary-concealment
+  - audience
+  - contradiction
+  distinctions:
+  - interpretation from historical or psychological explanation
+  - explicit meaning from hidden intention and unconscious implication
+  - author-supplied framework from externally imposed historical categories
+  - Christian addressees from Jewish subject matter
+  - potential philosophers from the vulgar audience allowed to listen
+  - contradiction as textual evidence from unrestricted reversal or secret-doctrine attribution
+  - Strauss's account of Spinoza from independently reconstructed Spinoza
+  - 1997 collected reprint from original 1948 journal printing
+  - witness registration from sequential reconstruction and independent corroboration
+  non_effects:
+  - no source-level proposition promotion
+  - no confirmation or revision of the active predecessor
+  - no independent Spinozist, biblical, Christian, Jewish, Maimonidean, classical, or historical corroboration
+  - no doctrinal certification
+  - no migration certification
+  - no successor activation
+  - no predecessor displacement
+  - no completed-interface Sanctum repin
+next_required_action:
+  action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  range: printed pages 181-233
+  prerequisites_satisfied: REVIEWED_ITEM_WITNESS_REGISTERED
+  remaining_requirements:
+  - reconstruct the complete item in textual order before problem-local isolation
+  - distinguish interpretation, explanation, explicit meaning, hidden meaning, irony, error, and unconscious implication
+  - distinguish Strauss's voice from Spinoza's statements and from editor-supplied note cross-references
+  - classify documented findings, structural evidence, supported inferences, hypotheses, and unresolved uncertainties
+  - compare with the active predecessor only after source-level reconstruction
+  - compare the original 1948 journal printing when available
+termination:
+  witness_state: REGISTERED
+  study_state: INCOMPLETE
+  original_edition_comparison: PENDING
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+byte_identity:
+  algorithm: SHA256
+  sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  file_size_bytes: 39287307
+item_identity_and_locators:
+  printed_page_range:
+    start: 181
+    end: 233
+  pdf_page_range_one_based:
+    start: 200
+    end: 252
+  argumentative_body_printed_range:
+    start: 181
+    end: 224
+  notes_printed_range:
+    start: 224
+    end: 233

@@ -3,7 +3,7 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.10.0
+  version: 1.12.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
@@ -11,13 +11,12 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 revision_history:
-  predecessor_version: 1.9.0
-  predecessor_blob_sha: 7a059e48521fc4a2a137c56111bac5b86625c17f
+  predecessor_version: 1.11.0
+  predecessor_blob_sha: 1982de512dfea96decee78bc05e240f407ba379d
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register CORPUS-STUDY-011 for the complete provisional sequential reconstruction of CORPUS-SRC-102 while
-    preserving its qualified platform-reference witness, missing byte identity and PDF offset, 1997 editorial-composite
-    condition, pending 1965/1968 comparison, incomplete corroboration, noncertification, predecessor authority,
-    and no successor effect.
+  reason: Complete the independent sequential reconstruction of CORPUS-SRC-103 from the fingerprinted 1997 collected
+    witness; register CORPUS-STUDY-012 and FINDSET-012/FINDSET-122-124; preserve original-1948 comparison, independent-corroboration,
+    noncertification, migration, activation, displacement, and completed-interface limits.
 purpose: Provide deterministic discovery, source identity, documentary status, provenance, problem binding, study
   binding, witness condition, and gap records without moving source records, distributing source texts, certifying
   doctrine, or treating a registered corpus as complete merely because every current record is indexed.
@@ -29,8 +28,8 @@ governing_protocols:
   textual_order: method/textual-order.yaml
   independent_reconstruction: method/reconstruct-alternatives.yaml
 scope_rule: This registry is exhaustive for source and study identities presently committed or explicitly enumerated
-  by a governing repository record. It is not exhaustive of all works by Strauss, all editions or translations,
-  all classical and biblical witnesses, or all sources required to complete the seven foundational problems.
+  by a governing repository record. It is not exhaustive of all works by Strauss, all editions or translations, all
+  classical and biblical witnesses, or all sources required to complete the seven foundational problems.
 identifier_rules:
   source_entity_prefix: CORPUS-SRC
   reviewed_witness_prefix: CORPUS-WIT
@@ -166,8 +165,17 @@ source_entities:
   problem_bindings:
   - theologico-political
   - wise-vs-vulgar
-  item_level_source_status: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  item_level_source_status: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  reviewed_witnesses:
+  - CORPUS-WIT-103
+  limits:
+  - reviewed witness is the 1997 SUNY collected reprint, not a separately reviewed 1948 journal printing
+  - original 1948 journal comparison remains pending
+  - the study is not independent Spinozist, biblical, Christian, Jewish, medieval, or classical corroboration
+  - no doctrine, migration, activation, displacement, or certification effect
+  study_records:
+  - CORPUS-STUDY-012
 - source_id: CORPUS-SRC-104
   creator: Leo Strauss
   canonical_title: Preface to Isaac Husik, Philosophical Essays
@@ -459,6 +467,32 @@ reviewed_witnesses:
   file_size_state: NOT_AVAILABLE
   original_1965_edition_comparison: PENDING
   authorial_1968_reprint_comparison: PENDING
+- witness_id: CORPUS-WIT-103
+  source_id: CORPUS-SRC-103
+  witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
+  container_title: Jewish Philosophy and the Crisis of Modernity
+  container_editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_year: 1997
+  collected_title: How to Study Spinoza's Theologico-Political Treatise
+  original_publication: 'Proceedings of the American Academy for Jewish Research 17 (1948): 69-131'
+  uploaded_file_object_id: file_00000000369481f5b39f768dc1599ff3
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  printed_page_range:
+    start: 181
+    end: 233
+  pdf_page_range_one_based:
+    start: 200
+    end: 252
+  source_status_path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml
+  witness_record_path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
+  original_edition_comparison: PENDING
 - witness_id: CORPUS-WIT-105
   source_id: CORPUS-SRC-105
   witness_type: ITEM_WITHIN_SEARCHABLE_PDF_WITH_PAGE_IMAGES
@@ -466,8 +500,8 @@ reviewed_witnesses:
   container_witness_id: CORPUS-WIT-001
   container_title: Studies in Platonic Political Philosophy
   collected_title: Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
-  original_publication: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism,
-    Frederick Ungar, New York, 1972
+  original_publication: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism, Frederick
+    Ungar, New York, 1972
   printed_page_range:
     start: 233
     end: 247
@@ -569,7 +603,7 @@ source_status_records:
   source_id: CORPUS-SRC-103
   path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml
   document_type: source_status_record
-  completion: REGISTERED_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
+  completion: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-104
   source_id: CORPUS-SRC-104
@@ -734,6 +768,12 @@ study_records:
   record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
   completion: COMPLETE_PROVISIONAL_FOR_QUALIFIED_1997_PLATFORM_REFERENCE_WITNESS
   certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-012
+  source_id: CORPUS-SRC-103
+  path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
 problem_witness_registries:
 - problem: nomos-vs-physis
   path: problems/nomos-vs-physis/witnesses.yaml
@@ -783,15 +823,15 @@ repository_documentary_artifacts:
   path: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
 coverage:
   source_entities_registered: 22
-  reviewed_witnesses_registered: 7
+  reviewed_witnesses_registered: 8
   source_status_records_registered: 22
-  study_records_registered: 11
+  study_records_registered: 12
   problem_witness_registries_registered: 7
   theologico_political_predecessor_sources_registered: 19
   theologico_political_item_level_statuses_registered: 19
-  theologico_political_reviewed_item_witnesses_registered: 4
-  theologico_political_independent_item_studies_registered: 4
-  current_studies_tree_yaml_records_accounted_for: 36
+  theologico_political_reviewed_item_witnesses_registered: 5
+  theologico_political_independent_item_studies_registered: 5
+  current_studies_tree_yaml_records_accounted_for: 38
   exhaustive_within_declared_scope: true
 corpus_gaps:
 - gap_id: CORPUS-GAP-001
@@ -800,14 +840,14 @@ corpus_gaps:
   effect: CORPUS_REMAINS_OPEN
 - gap_id: CORPUS-GAP-002
   category: EDITION_COMPARISON
-  statement: The reviewed 1980 University of Chicago Press paperback of Socrates and Aristophanes is registered,
-    but comparison with the 1966 Basic Books printing remains pending.
+  statement: The reviewed 1980 University of Chicago Press paperback of Socrates and Aristophanes is registered, but
+    comparison with the 1966 Basic Books printing remains pending.
   effect: EDITION_SPECIFIC_DIFFERENCES_NOT_YET_TESTED
 - gap_id: CORPUS-GAP-003
   category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES
-  statement: All nineteen predecessor writings have bounded source identities; CORPUS-SRC-102, CORPUS-SRC-105, CORPUS-SRC-109,
-    and CORPUS-SRC-111 have reviewed witnesses and complete provisional sequential studies; the other fifteen lack
-    reviewed item witnesses and independent item studies.
+  statement: All nineteen predecessor writings have bounded source identities; CORPUS-SRC-102, CORPUS-SRC-103, CORPUS-SRC-105,
+    CORPUS-SRC-109, and CORPUS-SRC-111 have reviewed witnesses and complete provisional sequential studies; the other
+    fourteen lack reviewed item witnesses and independent item studies.
   effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL
 - gap_id: CORPUS-GAP-004
   category: INDEPENDENT_CLASSICAL_WITNESSES
@@ -843,17 +883,18 @@ validation_rules:
 - counts in coverage must match registry contents and the studies tree
 - source inclusion may not change certification, migration, or activation status
 - complete current-state indexing may not be described as a complete corpus
+- CORPUS-SRC-103 preserves fingerprinted witness registration while its sequential study remains incomplete
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   theologico_political_identity_registration_state: COMPLETE_19_OF_19
-  theologico_political_reviewed_witness_state: INCOMPLETE_4_OF_19
-  theologico_political_independent_study_state: INCOMPLETE_4_OF_19
+  theologico_political_reviewed_witness_state: INCOMPLETE_5_OF_19
+  theologico_political_independent_study_state: INCOMPLETE_5_OF_19
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
   certification: NOT_CERTIFIED
   next_required_units:
-  - create problem-local synthesis bridges for SPINOZA-PREFACE-STUDY-001
-  - compare the 1997 composite with separately reviewed 1965 and 1968 textual states
+  - compare CORPUS-WIT-103 with the original 1948 journal printing when available
+  - compare the CORPUS-SRC-102 1997 composite with separately reviewed 1965 and 1968 textual states
   - materialize and fingerprint CORPUS-WIT-102 only through forward revision if exact bytes become available
-  - acquire and register reviewed witnesses for the remaining fifteen item identities
-  - conduct independent sequential reconstruction for the remaining fifteen writings
-  - acquire and reconstruct Talmon's reviewed work
+  - acquire and register reviewed witnesses for the remaining fourteen item identities
+  - conduct independent sequential reconstruction for the remaining fourteen writings
+  - acquire and reconstruct the independently reviewed works and comparative corpora required by existing studies

@@ -1,0 +1,605 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+identity:
+  id: SPINOZA-TREATISE-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, How to Study Spinoza's Theologico-Political Treatise
+  version: 1.0.0
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_FINGERPRINTED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1948_journal_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+source:
+  source_id: CORPUS-SRC-103
+  source_status_id: CORPUS-STATUS-103
+  reviewed_witness_id: CORPUS-WIT-103
+  author: Leo Strauss
+  canonical_title: How to Study Spinoza's Theologico-Political Treatise
+  date: 1948
+  reviewed_container:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  uploaded_file:
+    platform_object_identifier: file_00000000369481f5b39f768dc1599ff3
+    displayed_filename: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+    page_count: 526
+    file_size_bytes: 39287307
+    sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  locators:
+    printed_pages:
+      start: 181
+      end: 233
+    pdf_pages_one_based:
+      start: 200
+      end: 252
+    argumentative_body:
+      start: 181
+      end: 224
+    notes:
+      start: 224
+      end: 233
+  original_publication: 'Proceedings of the American Academy for Jewish Research 17 (1948): 69-131'
+  textual_state: 1997_SUNY_COLLECTED_REPRINT
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+source_limits:
+- The reviewed witness is the 1997 SUNY collected reprint, not a separately reviewed 1948 journal printing.
+- The original 1948 journal comparison remains pending.
+- The complete container bytes are fingerprinted, but the copyrighted source text is not distributed by this record.
+- Green’s editorial cross-references and collection framing are secondary and do not govern Strauss’s 1948 argument.
+- Pangle’s Introduction to Studies in Platonic Political Philosophy did not govern this reconstruction.
+- Spinoza, the Bible, Christianity, Judaism, Maimonides, ibn Ezra, Farabi, Plato, Descartes, Bacon, and the represented
+  historical claims remain independently unreconstructed unless separately registered.
+- This source-local reconstruction does not certify esotericism, revelation, secularism, freedom, sovereignty, or
+  any doctrine.
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+method_application:
+  governing_question: How must Spinoza’s Theologico-Political Treatise be interpreted before it is historically or
+    psychologically explained, and how do audience, contradiction, accommodation, omission, structure, and practical
+    purpose disclose its serious teaching?
+  recovered_source_question: What rules of reading follow from Spinoza’s own distinctions, and how do those rules
+    reveal the Treatise as an intelligible philosophic book addressed to potential philosophers through a cautious
+    political intervention?
+  reconstruction_rule: Read the complete item in order. Begin with explicit argument and textual action; distinguish
+    Strauss’s documented claims from structural evidence and supported inference; seek hidden teaching only after
+    the practical proposal and obvious reasoning are understood.
+  locator_rule: Reading units use directly verified printed and one-based PDF spans in the fingerprinted 1997 witness.
+  comparison_rule: Compare with the active predecessor only after independent sequential reconstruction and preserve
+    every qualification, uncertainty, and non-effect.
+speaker_and_documentary_layers:
+  strauss_1948:
+    role: authorial interpreter of Spinoza
+    rule: Strauss’s explicit methodological claims and reconstruction belong to the essay, subject to the pending
+      original-edition comparison.
+  spinoza_as_reconstructed:
+    role: object of Strauss’s interpretation
+    rule: Strauss’s account is not identical with independently established Spinozist doctrine.
+  biblical_and_comparative_sources:
+    role: evidence and comparison represented within the essay
+    rule: Each requires independent source review before corroborative or doctrinal use.
+  editor_1997:
+    role: publication provenance and cross-reference apparatus
+    rule: Editorial aids do not decide Strauss’s argument.
+  active_predecessor:
+    role: prior nineteen-source synthesis
+    rule: Comparison target, never premise or source quotation.
+sequential_reading:
+- unit: SPINOZA-TREATISE-RU-001
+  printed_pages:
+    start: 181
+    end: 184
+  function: Establish the live issue and the priority of interpretation over explanation.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-001
+    proposition: The Treatise is reopened because the conflict between philosophy and revelation has again become
+      central, while contemporary discussion proceeds on a lower level than earlier discussion.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-002
+    proposition: Interpretation seeks what a speaker said and how he understood it; explanation seeks implications
+      of which the speaker was unaware.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-003
+    proposition: Interpretation must precede explanation, and explicit meaning must precede proof of irony, lying,
+      or deliberate concealment.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-004
+    proposition: The degree of interpretive exactness must answer to the author’s demonstrated habits of writing and
+      reading.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-001-01
+    proposition: Spinoza’s chapter on biblical interpretation is used as initial evidence for how a careful reader
+      and writer expects books to be read.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-001-01
+    proposition: A method that begins with unconscious causes or historical situation before exact interpretation
+      risks explaining an imagined text.
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+- unit: SPINOZA-TREATISE-RU-002
+  printed_pages:
+    start: 184
+    end: 190
+  function: Distinguish Spinoza’s rules for the Bible from the reading appropriate to intelligible philosophic books.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-005
+    proposition: Spinoza’s formula that the Bible must be understood exclusively through itself overstates his actual
+      procedure, which also uses language, tradition, external information, and nonbiblical ordering principles.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-006
+    proposition: Strauss’s first questions concern the author’s subject, intention, governing questions, and hierarchy
+      of topics rather than an ungoverned collection of statements.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-007
+    proposition: Spinoza treats the Bible as substantially hieroglyphic, whereas he treats his own philosophic books
+      as intelligible and therefore in principle self-explanatory through their subject matter and intention.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-008
+    proposition: For intelligible books, external historical information is subordinate and must not replace the author-supplied
+      framework.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-002-01
+    proposition: The contrast between hieroglyphic and intelligible books controls the transfer from Spinoza’s biblical
+      hermeneutics to the study of Spinoza.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-002-01
+    proposition: 'Strauss’s criticism is immanent: he draws the reading rule for Spinoza from distinctions and examples
+      supplied by Spinoza himself.'
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+- unit: SPINOZA-TREATISE-RU-003
+  printed_pages:
+    start: 190
+    end: 196
+  function: Limit historicism and define the legitimate reconstruction of background.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-009
+    proposition: The rise of modern historical consciousness does not license reading a mature philosophic work primarily
+      as an expression of its time.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-010
+    proposition: Necessary background must follow signposts supplied by Spinoza and remain integrated into an explicit
+      Spinozist framework.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-011
+    proposition: Mature philosophic books are primarily addressed to posterity; letters to particular contemporaries
+      have a different documentary weight.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-012
+    proposition: Understanding a deliberate silence about something relevant belongs to interpretation proper because
+      suppression is an action.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-003-01
+    proposition: The interpreter may reconstruct terminology and background that Spinoza could reasonably assume but
+      could not preserve exhaustively for posterity.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-003-01
+    proposition: Judgment on Spinoza may exceed his indications only after his teaching has been interpreted as he
+      presented it.
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+- unit: SPINOZA-TREATISE-RU-004
+  printed_pages:
+    start: 196
+    end: 201
+  function: Recover the Treatise’s differentiated audience and the function of its Jewish subject matter.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-013
+    proposition: The Treatise is addressed neither to the vulgar nor to actual philosophers but especially to potential
+      philosophers obstructed by the belief that reason must serve theology.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-014
+    proposition: Its Christian addressees are approached through a predominantly Jewish subject matter.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-015
+    proposition: Chapters III through V must be read as parts of the Treatise’s complete argument rather than isolated
+      historical essays.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-016
+    proposition: The historical “time” invoked by the Treatise is an opportunity for freedom, not a neutral chronology
+      detached from the work’s practical aim.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-004-01
+    proposition: Audience is not extraneous biography; Spinoza names the addressees and thereby supplies a clue to
+      the work’s difficulty.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-004-01
+    proposition: The Jewish material performs a political and rhetorical function within an intervention directed
+      toward Christian readers.
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+- unit: SPINOZA-TREATISE-RU-005
+  printed_pages:
+    start: 201
+    end: 206
+  function: Inventory contradictions concerning revelation, theology, Christ, and biblical intelligibility.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-017
+    proposition: Spinoza alternately appears to concede and deny suprarational revelation and the certainty or autonomy
+      of theology.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-018
+    proposition: Statements about Christ and Christianity cannot all be combined without qualification.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-019
+    proposition: The Bible is described both as accessible in its moral teaching and as unintelligible in much of
+      its subject matter.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-020
+    proposition: These tensions require interpretation before they are dismissed as error, development, or unconscious
+      inconsistency.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-005-01
+    proposition: The contradictions cluster around questions most exposed to theological and political danger.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-005-01
+    proposition: The work’s explicit pedagogic and political purpose makes contradiction potentially functional rather
+      than merely accidental.
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+- unit: SPINOZA-TREATISE-RU-006
+  printed_pages:
+    start: 206
+    end: 211
+  function: Reconstruct accommodation to the vulgar and the rule for finding the serious view.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-021
+    proposition: 'Spinoza repeatedly speaks ad captum vulgi: in accordance with the capacity and opinions of the vulgar.'
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-022
+    proposition: Accommodation can reproduce premises Spinoza rejects in order to persuade readers who begin from
+      those premises.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-023
+    proposition: Where opposed statements cannot both be serious, the view furthest from the vulgar position is generally
+      the stronger candidate for Spinoza’s serious view.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-024
+    proposition: This rule is evidentiary and contextual, not a license to reverse every explicit statement mechanically.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-006-01
+    proposition: Spinoza’s own discussion of accommodated speech supplies the vocabulary for reading his accommodations.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-006-01
+    proposition: The relevant audience distinction is potential philosopher versus vulgar, not simply private versus
+      public writing.
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+- unit: SPINOZA-TREATISE-RU-007
+  printed_pages:
+    start: 211
+    end: 216
+  function: Place Spinoza within a tradition of philosophic communication.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-025
+    proposition: Strauss relates Spinoza’s manner of writing to Maimonides, ibn Ezra, Farabi, Plato, Descartes, and
+      Bacon without treating those relations as independent proof of doctrine.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-026
+    proposition: The traditional terminology of philosophy can calm readers by allowing them initially to believe
+      they remain within a familiar world.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-027
+    proposition: Contradictions, omissions, and altered emphases can direct attentive readers toward a teaching not
+      stated with equal openness everywhere.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-028
+    proposition: The possibility that the same communicative problem extends to the Ethics is raised but not completed
+      within this essay.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-007-01
+    proposition: The comparative references serve as interpretive controls for kinds of writing and reading, not as
+      substitutes for sequential study of the Treatise.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-007-01
+    proposition: The essay preserves a difference between an author’s public defensibility and the legal permissibility
+      of a proposition.
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+- unit: SPINOZA-TREATISE-RU-008
+  printed_pages:
+    start: 216
+    end: 220
+  function: Clarify the political use of Jewish and Christian materials.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-029
+    proposition: Spinoza’s attack proceeds cautiously through the Old Testament while the deeper political target
+      includes Christian theological authority.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-030
+    proposition: His relative silence about the Gospels cannot be explained solely by insufficient Greek, because
+      the shape of the New Testament discussion remains selective.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-031
+    proposition: 'The return to the literal Bible can serve opposed purposes: exposing inherited theology and reopening
+      the force of the text against theological mediation.'
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-032
+    proposition: Freedom to philosophize is defended through an argument addressed to a historically situated regime
+      and public.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-008-01
+    proposition: The asymmetry between treatment of Old and New Testaments is part of the textual deed of the Treatise.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-008-01
+    proposition: Caution does not by itself prove a hidden doctrine; it identifies a problem requiring comparison
+      of explicit claims, omissions, and audience.
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+- unit: SPINOZA-TREATISE-RU-009
+  printed_pages:
+    start: 220
+    end: 224
+  function: Order the practical proposal, obvious reasoning, historical study, and hidden teaching.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-033
+    proposition: Detached historical investigation is a cura posterior, a later concern subordinate to first understanding
+      the practical proposal and argument of the Treatise.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-034
+    proposition: The practical proposal concerning freedom and sovereign authority must be understood in the order
+      in which the Treatise presents it.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-035
+    proposition: The obvious reasoning must be completely understood before an interpreter attempts to bring a hidden
+      teaching to light.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-036
+    proposition: Exoteric interpretation therefore begins with, rather than bypasses, the surface and the work’s manifest
+      action.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-009-01
+    proposition: The conclusion returns to the essay’s opening priority of interpretation over explanation.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-009-01
+    proposition: Hidden teaching is a late result of demonstrated contradictions, omissions, audience, and structure,
+      not an opening assumption.
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+- unit: SPINOZA-TREATISE-RU-010
+  printed_pages:
+    start: 224
+    end: 233
+  function: Preserve the note apparatus as documentary support and delimit what the essay establishes.
+  documented_findings:
+  - id: SPINOZA-TREATISE-DF-037
+    proposition: The numbered notes document the Treatise passages and comparative texts on which the reconstruction
+      rests.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-038
+    proposition: Editor-supplied cross-references in the 1997 collection assist relocation but are not part of Strauss’s
+      1948 argumentative body.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-039
+    proposition: The essay establishes a method for studying the Treatise and a provisional reconstruction of its
+      communicative structure, not an independently corroborated account of Spinoza’s complete doctrine.
+    classification: documented_finding
+  - id: SPINOZA-TREATISE-DF-040
+    proposition: Comparison with the original 1948 journal printing remains necessary before textual identity across
+      editions can be asserted.
+    classification: documented_finding
+  structural_evidence:
+  - id: SPINOZA-TREATISE-SE-010-01
+    proposition: The note apparatus continues through printed page 233 after the argumentative conclusion on printed
+      page 224.
+    classification: structural_evidence
+  supported_inferences:
+  - id: SPINOZA-TREATISE-SI-010-01
+    proposition: The 1997 collected reprint is complete and fingerprinted, but edition comparison remains a separate
+      task.
+    classification: supported_inference
+  uncertainty: The unit reconstructs Strauss’s argument from the reviewed 1997 collected witness; claims about Spinoza,
+    the Bible, Christianity, Judaism, or the compared philosophers remain independently unverified.
+permanent_source_level_findings:
+- id: SPINOZA-TREATISE-PF-001
+  proposition: Exact interpretation of what an author said and understood must precede historical, psychological,
+    or causal explanation.
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-002
+  proposition: Within interpretation, explicit meaning must be established before irony, lying, deliberate silence,
+    or hidden teaching can be demonstrated.
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-003
+  proposition: The author’s subject, intention, questions, hierarchy of topics, audience, and manner of writing govern
+    the collection and arrangement of statements.
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-004
+  proposition: Spinoza’s rules for the hieroglyphic Bible cannot simply be transferred to his own intelligible philosophic
+    writings.
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-005
+  proposition: Historical and biographical information is subordinate and may supply a clue only within a framework
+    authentically supplied by Spinoza or after direct interpretation proves insufficient.
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-006
+  proposition: Mature philosophic books are primarily addressed to posterity, and deliberate silence about relevant
+    material belongs to interpretation proper.
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-007
+  proposition: The Treatise addresses potential philosophers among Christians through predominantly Jewish material
+    and must be read as a practical and rhetorical whole.
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-008
+  proposition: Contradictions concerning revelation, theology, Christ, Christianity, and biblical intelligibility
+    are interpretive evidence rather than automatically mistakes.
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-009
+  proposition: Spinoza’s accommodated speech to the vulgar provides a controlled basis for distinguishing public or
+    provisional statements from his more serious view.
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-010
+  proposition: The Jewish subject matter and asymmetrical treatment of the Testaments support the inference that a
+    cautious attack on Christian authority belongs to the work’s political action.
+  classification: supported_inference
+- id: SPINOZA-TREATISE-PF-011
+  proposition: 'Detached historical study is a later concern: the Treatise’s practical proposal and obvious reasoning
+    must be understood completely before a hidden teaching is sought.'
+  classification: documented_finding
+- id: SPINOZA-TREATISE-PF-012
+  proposition: The essay models exoteric reading as disciplined fidelity to surface, structure, audience, contradiction,
+    omission, and order; it does not authorize mechanical reversal or certify Spinoza’s complete doctrine.
+  classification: supported_inference
+speech_and_deed_analysis:
+  explicit_speech: The essay explicitly prescribes interpretation before explanation and derives rules for reading
+    Spinoza from Spinoza’s own hermeneutic distinctions.
+  textual_deed: It applies those rules to the Treatise, reconstructing its audience, contradictions, accommodations,
+    omissions, order, Jewish subject matter, Christian target, practical proposal, and possible hidden teaching.
+  relation: METHOD_STATED_AND_PERFORMED_IN_ORDER
+  finding: 'The deed confirms that exoteric reading is not free invention: it is a late, evidence-bound result of
+    exact surface interpretation.'
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+    - philosophy and revelation
+    - theology and freedom to philosophize
+    - sovereign authority and public defensibility
+    - the Jewish subject matter and Christian political target
+    non_absorption: The reason-revelation conflict does not absorb the distinct hermeneutic problem of audience and
+      communication.
+  wise_vs_vulgar:
+    role: CONTROLLED_SECONDARY
+    receives:
+    - potential philosophers, actual philosophers, and the vulgar
+    - ad captum vulgi accommodation
+    - contradiction, omission, and differentiated communication
+    non_absorption: Audience differentiation does not establish wisdom, elitism, deception, or a mechanical reversal
+      rule.
+  ancients_vs_moderns:
+    role: CONTROLLED_SECONDARY
+    receives:
+    - Spinoza’s modern rationalism and historicist reception
+    - Maimonides, ibn Ezra, Farabi, Plato, Descartes, and Bacon as comparative controls
+    - mature works addressed to posterity
+    non_absorption: Comparative genealogy does not independently establish any thinker’s doctrine.
+  athens_vs_jerusalem:
+    role: CONTROLLED_INTERSECTION
+    receives:
+    - biblical intelligibility
+    - revelation, prophecy, law, and philosophy
+    non_absorption: The essay studies Spinoza’s interpretation and does not independently adjudicate Bible or philosophy.
+  philosophy_vs_poetry:
+    role: BOUNDARY_REFERENCE_ONLY
+    non_absorption: Accommodation and concealment may not be recoded as poetry without source evidence.
+  nomos_vs_physis:
+    role: CONTROLLED_INTERSECTION
+    receives:
+    - sovereign authority, freedom, and public order
+  theory_vs_practice:
+    role: CONTROLLED_INTERSECTION
+    receives:
+    - the practical proposal and obvious reasoning prior to hidden teaching
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  state: PROVISIONAL_RETEST_COMPLETE_NO_PROMOTION
+  predecessor_statement: Interpretation must precede historical or psychological explanation and the Treatise must
+    be read through Scripture, prophecy, freedom to philosophize, sovereign authority, and differentiated audiences.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  confirmations:
+  - Interpretation explicitly precedes explanation.
+  - Audience differentiation is central to the Treatise’s difficulty.
+  - Freedom to philosophize and sovereign authority belong to the work’s practical action.
+  - Scripture and prophecy are interpreted within a controlled account of biblical intelligibility and accommodation.
+  qualifications:
+  - The source’s governing order begins from the author’s subject, intention, explicit meaning, and practical proposal.
+  - Historical information is subordinate rather than excluded.
+  - Contradictions and hidden teaching require positive textual evidence and cannot be inferred mechanically.
+  - The Treatise is addressed to potential philosophers rather than to actual philosophers or the vulgar simply.
+  unresolved:
+  - The original 1948 journal printing has not been compared.
+  - Spinoza and the represented biblical, Christian, Jewish, medieval, and classical sources remain independently
+    incomplete.
+  - The essay does not certify a complete hidden doctrine or a final resolution of reason and revelation.
+  predecessor_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+uncertainties:
+- id: SPINOZA-TREATISE-U-001
+  statement: Textual differences between the 1948 journal printing and the 1997 collected reprint remain unknown.
+- id: SPINOZA-TREATISE-U-002
+  statement: The full application of the essay’s method to every chapter of the Treatise remains a larger Spinoza
+    study.
+- id: SPINOZA-TREATISE-U-003
+  statement: The possible extension of the communicative analysis to the Ethics is raised but not completed.
+- id: SPINOZA-TREATISE-U-004
+  statement: The precise doctrinal content behind every contradiction or omission remains bounded by the evidence
+    discussed in the essay.
+- id: SPINOZA-TREATISE-U-005
+  statement: Strauss’s historical and comparative statements require independent corroboration.
+- id: SPINOZA-TREATISE-U-006
+  statement: The source does not establish that every philosophic author writes esoterically or that every contradiction
+    is deliberate.
+prohibitions:
+- No explanation before adequate interpretation.
+- No hidden meaning before explicit meaning, practical proposal, and obvious reasoning are understood.
+- No mechanical reversal of explicit statements.
+- No audience distinction treated as proof of wisdom or unrestricted deception.
+- No 1997 collected reprint silently identified with the unreviewed 1948 journal printing.
+- No source-local reconstruction treated as independent Spinozist, biblical, Christian, Jewish, medieval, or classical
+  corroboration.
+- No doctrine, migration, successor activation, predecessor displacement, completed-interface repin, or repository
+  completion.
+termination:
+  reading_state: COMPLETE_FOR_FINGERPRINTED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  witness_state: FINGERPRINTED_REVIEWED_ITEM_WITNESS
+  source_status_update_required: false
+  corpus_study_registration_required: false
+  findings_registration_required: false
+  problem_integration_required: false
+  independent_witness_expansion_required: true
+  original_1948_journal_comparison_required: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
+  next_units:
+  - compare the 1997 collected reprint with the original 1948 journal printing
+  - independently reconstruct the Treatise and the represented comparative sources where required
+  - proceed to the next source in the controlled priority schedule without reopening this completed reading

@@ -1,0 +1,33 @@
+schema_version: 1.0
+record_type: source_review_completion_record
+identity:
+  id: CORPUS-SRC-103-COMPLETION-001
+  title: Completion — How to Study Spinoza's Theologico-Political Treatise
+  version: 1.0.0
+  recorded_date: '2026-07-27'
+completed_objects:
+  reviewed_witness: CORPUS-WIT-103
+  source_study: SPINOZA-TREATISE-STUDY-001
+  corpus_study: CORPUS-STUDY-012
+  finding_sets:
+  - FINDSET-012
+  - FINDSET-122
+  - FINDSET-123
+  - FINDSET-124
+  reading_units: 10
+  permanent_findings: 12
+documentary_scope:
+  reviewed_witness: 1997 SUNY collected reprint, printed 181-233, PDF 200-252 one-based
+  sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  original_1948_journal_comparison: PENDING
+safeguards:
+- no independent corroboration claimed
+- no doctrinal certification
+- no migration certification
+- no successor activation
+- no predecessor displacement
+- no completed-interface repin
+termination:
+  review_state: COMPLETE_PROVISIONAL_FOR_REVIEWED_WITNESS
+  certification: NOT_CERTIFIED
+  next_source_action: advance controlled corpus schedule

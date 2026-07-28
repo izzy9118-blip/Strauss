@@ -52,6 +52,9 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml",
     "problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml",
+    "problems/theologico-political/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml",
+    "problems/wise-vs-vulgar/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml",
+    "problems/ancients-vs-moderns/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml",
 }
 
 EXPECTED_TRANSACTION_PATHS = {
@@ -90,6 +93,7 @@ DIRECT_SOURCE_KEYS = [
     "CORPUS-SRC-002",
     "CORPUS-SRC-003",
     "CORPUS-SRC-102",
+    "CORPUS-SRC-103",
     "CORPUS-SRC-105",
     "CORPUS-SRC-111",
 ]
@@ -147,6 +151,19 @@ SOURCE_STUDY_CONTRACTS = {
             "original_1965_edition_comparison": "PENDING",
             "authorial_1968_reprint_comparison": "PENDING",
             "byte_identity_state": "UNAVAILABLE_WITH_REASON_PRESERVED",
+            "independent_corroboration": "INCOMPLETE",
+        },
+    },    "FINDSET-012": {
+        "source_id": "CORPUS-SRC-103",
+        "local_syntheses": ["FINDSET-122", "FINDSET-123", "FINDSET-124"],
+        "problem_bindings": {
+            "FINDSET-122": "theologico-political",
+            "FINDSET-123": "wise-vs-vulgar",
+            "FINDSET-124": "ancients-vs-moderns",
+        },
+        "required_limits": {
+            "witness_id": "CORPUS-WIT-103",
+            "original_1948_journal_comparison": "PENDING",
             "independent_corroboration": "INCOMPLETE",
         },
     },
@@ -371,8 +388,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.4.0":
-        errors.append("findings registry identity.version must be 1.4.0")
+    if identity.get("version") != "1.5.0":
+        errors.append("findings registry identity.version must be 1.5.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -387,8 +404,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(registry.get("findings_gaps", []), "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 37:
-        errors.append(f"expected 37 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 41:
+        errors.append(f"expected 41 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 

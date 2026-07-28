@@ -3,7 +3,7 @@ record_type: typed_findings_registry
 identity:
   id: STRAUSS-FINDINGS-INDEX-001
   title: Strauss Repository Typed Findings Registry
-  version: 1.4.0
+  version: 1.5.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
@@ -11,16 +11,15 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_JURISDICTION_AND_REVISION_ONLY
 revision_history:
-  predecessor_version: 1.3.0
-  predecessor_blob_sha: a862815c6e197e8b235d2fd97201f43a40c5e981
+  predecessor_version: 1.4.0
+  predecessor_blob_sha: 820aacb74d7dbd340b75222a73d78eaa62b8f2db
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register SPINOZA-PREFACE-STUDY-001 as FINDSET-011 and register its distinct Theologico-Political, Athens-versus-Jerusalem,
-    and Ancients-versus-Moderns synthesis bridges. Preserve the 1997 editorial-composite condition, platform-reference
-    limits, source-level evidence classifications, primary jurisdiction, predecessor qualification, noncorroboration,
+  reason: Register SPINOZA-TREATISE-STUDY-001 as FINDSET-012 and its distinct Theologico-Political, Wise-versus-Vulgar, and
+    Ancients-versus-Moderns synthesis bridges while preserving original-edition comparison, uncertainty, noncorroboration,
     noncertification, and no successor effect.
-purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record
-  class, migration state, and provenance while preserving the difference among documentary finding, supported inference,
-  working hypothesis, comparative question, contradiction, dissent, and unresolved uncertainty.
+purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record class,
+  migration state, and provenance while preserving the difference among documentary finding, supported inference, working
+  hypothesis, comparative question, contradiction, dissent, and unresolved uncertainty.
 governing_records:
   evidence_classification: protocols/evidence-classification.yaml
   inference_discipline: protocols/inference-discipline.yaml
@@ -29,20 +28,20 @@ governing_records:
   corpus_registry: corpus/index.yaml
   problem_registry: problems/registry.yaml
   migration_plan: migrations/foundational-problems-v2/migration.yaml
-scope_rule: The registry is exhaustive for findings-bearing and findings-governing records now committed in studies,
-  problem synthesis directories, foundational migration transaction ledgers, and the two preserved predecessor sources
-  explicitly used by current migration. It is not an assertion that every sentence in the repository is a finding,
-  that every source has been studied, or that current findings are complete, correct, or certified.
-finding_unit_rule: The registry identifies authoritative finding sets by reference. Individual propositions, evidence
-  locators, qualifications, contradictions, and uncertainties remain in the referenced record and must be loaded
-  from that record. The registry may not paraphrase them into a stronger or more final claim.
+scope_rule: The registry is exhaustive for findings-bearing and findings-governing records now committed in studies, problem
+  synthesis directories, foundational migration transaction ledgers, and the two preserved predecessor sources explicitly
+  used by current migration. It is not an assertion that every sentence in the repository is a finding, that every source
+  has been studied, or that current findings are complete, correct, or certified.
+finding_unit_rule: The registry identifies authoritative finding sets by reference. Individual propositions, evidence locators,
+  qualifications, contradictions, and uncertainties remain in the referenced record and must be loaded from that record. The
+  registry may not paraphrase them into a stronger or more final claim.
 identifier_rules:
   finding_set_prefix: FINDSET
   source_binding_authority: corpus/index.yaml
   problem_binding_authority: problems/registry.yaml
   uniqueness_rule: Every finding_set_id identifies one committed repository record.
-  nonduplication_rule: The same underlying proposition may appear in a study, local synthesis, and migration transaction
-    only through explicit derivation or reference. Repetition in the registry does not establish independent corroboration.
+  nonduplication_rule: The same underlying proposition may appear in a study, local synthesis, and migration transaction only
+    through explicit derivation or reference. Repetition in the registry does not establish independent corroboration.
 finding_sets:
 - finding_set_id: FINDSET-001
   path: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
@@ -263,6 +262,26 @@ finding_sets:
   - FINDSET-119
   - FINDSET-120
   - FINDSET-121
+- finding_set_id: FINDSET-012
+  path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-103
+  problem_bindings:
+  - theologico-political
+  - wise-vs-vulgar
+  - ancients-vs-moderns
+  derived_local_syntheses:
+  - FINDSET-122
+  - FINDSET-123
+  - FINDSET-124
+  status: COMPLETE_PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  witness_id: CORPUS-WIT-103
+  original_1948_journal_comparison: PENDING
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
 - finding_set_id: FINDSET-101
   path: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
   record_class: PROBLEM_LOCAL_SYNTHESIS
@@ -578,6 +597,45 @@ finding_sets:
   status: PROVISIONAL_NOT_CERTIFIED
   certification: NOT_CERTIFIED
   successor_effect: NONE
+- finding_set_id: FINDSET-122
+  path: problems/theologico-political/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_THEOLOGICO_POLITICAL_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-103
+  problem_bindings:
+  - theologico-political
+  derived_from:
+  - FINDSET-012
+  status: PROVISIONAL_NOT_CERTIFIED_NOT_MIGRATED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-123
+  path: problems/wise-vs-vulgar/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_WISE_VULGAR_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-103
+  problem_bindings:
+  - wise-vs-vulgar
+  derived_from:
+  - FINDSET-012
+  status: PROVISIONAL_NOT_CERTIFIED_NOT_MIGRATED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-124
+  path: problems/ancients-vs-moderns/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_ANCIENTS_MODERNS_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-103
+  problem_bindings:
+  - ancients-vs-moderns
+  derived_from:
+  - FINDSET-012
+  status: PROVISIONAL_NOT_CERTIFIED_NOT_MIGRATED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
 - finding_set_id: FINDSET-201
   path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   record_class: MIGRATION_TRANSACTION_LEDGER
@@ -710,12 +768,14 @@ indexes:
     - FINDSET-009
     - FINDSET-010
     - FINDSET-011
+    - FINDSET-012
     - FINDSET-105
     - FINDSET-106
     - FINDSET-111
     - FINDSET-113
     - FINDSET-116
     - FINDSET-119
+    - FINDSET-122
     - FINDSET-202
     - FINDSET-203
     - FINDSET-301
@@ -739,8 +799,10 @@ indexes:
     - FINDSET-005
     - FINDSET-006
     - FINDSET-007
+    - FINDSET-012
     - FINDSET-108
     - FINDSET-109
+    - FINDSET-123
     - FINDSET-201
     - FINDSET-302
     ancients-vs-moderns:
@@ -751,10 +813,12 @@ indexes:
     - FINDSET-009
     - FINDSET-010
     - FINDSET-011
+    - FINDSET-012
     - FINDSET-110
     - FINDSET-115
     - FINDSET-118
     - FINDSET-121
+    - FINDSET-124
   by_source:
     CORPUS-SRC-001:
     - FINDSET-001
@@ -784,6 +848,14 @@ indexes:
     - FINDSET-121
     - FINDSET-203
     - FINDSET-301
+    CORPUS-SRC-103:
+    - FINDSET-012
+    - FINDSET-105
+    - FINDSET-122
+    - FINDSET-123
+    - FINDSET-124
+    - FINDSET-203
+    - FINDSET-301
     CORPUS-SRC-105:
     - FINDSET-009
     - FINDSET-105
@@ -802,9 +874,13 @@ indexes:
     - FINDSET-301
     CORPUS-SRC-101-119:
     - FINDSET-008
+    - FINDSET-012
     - FINDSET-105
     - FINDSET-111
     - FINDSET-112
+    - FINDSET-122
+    - FINDSET-123
+    - FINDSET-124
     - FINDSET-203
     - FINDSET-301
   by_record_class:
@@ -818,6 +894,7 @@ indexes:
     - FINDSET-009
     - FINDSET-010
     - FINDSET-011
+    - FINDSET-012
     INTEGRATION_GOVERNANCE_RECORD:
     - FINDSET-005
     - FINDSET-006
@@ -843,6 +920,9 @@ indexes:
     - FINDSET-119
     - FINDSET-120
     - FINDSET-121
+    - FINDSET-122
+    - FINDSET-123
+    - FINDSET-124
     MIGRATION_TRANSACTION_LEDGER:
     - FINDSET-201
     - FINDSET-202
@@ -851,14 +931,14 @@ indexes:
     - FINDSET-301
     - FINDSET-302
 coverage:
-  finding_sets_registered: 37
-  source_specific_and_integration_records_registered: 11
-  problem_syntheses_registered: 21
+  finding_sets_registered: 41
+  source_specific_and_integration_records_registered: 12
+  problem_syntheses_registered: 24
   migration_transaction_ledgers_registered: 3
   preserved_finding_bases_registered: 2
-  current_problem_synthesis_tree_yaml_records_accounted_for: 21
+  current_problem_synthesis_tree_yaml_records_accounted_for: 24
   current_foundational_transaction_tree_yaml_records_accounted_for: 3
-  corpus_study_records_accounted_for: 11
+  corpus_study_records_accounted_for: 12
   canonical_problem_indexes_registered: 7
   exhaustive_within_declared_scope: true
 proposition_kinds:
@@ -892,12 +972,12 @@ findings_gaps:
   statement: Many registered source entities lack independent source-specific study records.
   effect: FINDINGS_COVERAGE_REMAINS_SOURCE_ASYMMETRICAL
 - gap_id: FINDINGS-GAP-003
-  statement: Four of the nineteen Theologico-Political writings now have complete provisional item studies; the
-    remaining fifteen lack individual sequential studies.
+  statement: Five of the nineteen Theologico-Political writings now have complete provisional item studies; the remaining
+    fourteen lack individual sequential studies.
   effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE
 - gap_id: FINDINGS-GAP-004
-  statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and
-    most Platonic findings remain incomplete.
+  statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and most Platonic
+    findings remain incomplete.
   effect: COMPARATIVE_AND_DOCTRINAL_RANKING_BLOCKED
 - gap_id: FINDINGS-GAP-005
   statement: Actual candidate ministerial reports have not yet been validated against the complete contract stack.
@@ -915,23 +995,17 @@ validation_rules:
 - every problem binding must resolve in problems/registry.yaml
 - indexes must equal bindings derived from finding_sets
 - active predecessor content must equal the preserved historical copy
-- FINDSET-011 must derive only its three jurisdiction-preserving local syntheses and retain platform-reference limitations
 - certification and activation may not be inferred from lifecycle, completion, acceptance, or classification
 - current-state exhaustive indexing may not be described as complete findings or doctrine
+- FINDSET-011 and FINDSET-012 must derive only their registered jurisdiction-preserving local syntheses and retain their distinct
+  witness and edition limitations
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   findings_state: OPEN_MATERIALLY_INCOMPLETE_AND_NONCERTIFIED
   certification: NOT_CERTIFIED
   next_required_units:
-  - compare the Preface to Spinoza's Critique of Religion 1997 composite with separately reviewed 1965 and 1968
-    textual states
-  - materialize and fingerprint CORPUS-WIT-102 only through forward revision if exact bytes become available
-  - acquire and reconstruct the remaining fifteen Strauss item witnesses and studies
-  - compare Jerusalem and Athens with the original 1967 printing where required
-  - compare the Cohen essay with the original 1972 printing where required
-  - compare the Talmon review with the original 1957 journal printing where required
-  - acquire and reconstruct Talmon's reviewed work
-  - expand source-specific and independent witness studies
-  - normalize proposition-level identifiers only where source records support reproducible extraction
-  - validate actual ministerial reports against source, method, hermeneutic, problem, corpus, and speech contracts
+  - compare How to Study Spinoza’s Theologico-Political Treatise with the original 1948 journal printing
+  - compare the Preface to Spinoza's Critique of Religion 1997 composite with separately reviewed 1965 and 1968 textual states
+  - acquire and reconstruct the remaining fourteen Strauss item witnesses and studies
+  - expand independent Spinozist, biblical, Christian, Jewish, medieval, classical, and historical witness studies
   - preserve later corrections, dissent, and supersession through forward registry revision
