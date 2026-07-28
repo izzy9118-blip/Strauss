@@ -1,0 +1,32 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: TP-PERSECUTION-INTRO-001, version: 1.0.0, title: "Theologico-Political Synthesis — Introduction to Persecution and the Art of Writing"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-113
+  reviewed_witness_id: CORPUS-WIT-113
+  study_id: PERSECUTION-INTRO-STUDY-001
+  study_path: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-014
+  derived_finding_set_id: FINDSET-127
+problem: {canonical_key: theologico-political, role: PRIMARY_JURISDICTION, adjacent_problem_reference: wise-vs-vulgar}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Strauss reconstructs Jewish and Islamic revelation primarily as Law, making the legal and political status of philosophy central to the philosopher's relation to revelation."}
+  - {classification: documented_finding, proposition: "The falasifa interpret the prophet as supreme lawgiver and philosopher-king, bringing prophecy and revelation within the horizon of Platonic political philosophy."}
+  - {classification: documented_finding, proposition: "Philosophy's legitimacy was more precarious in the Jewish and Islamic settings Strauss compares than in Christian scholasticism, where philosophy became part of recognized theological training."}
+  - {classification: documented_finding, proposition: "Maimonides and Averroes therefore required legal justification of philosophy before divine Law more urgently than philosophical justification of divine Law."}
+  - {classification: documented_finding, proposition: "Strauss explicitly identifies traditional Judaism versus philosophy with Jerusalem versus Athens."}
+  - {classification: documented_finding, proposition: "Exoteric teaching is philosophy's protective political form when society does not recognize the right to philosophize."}
+predecessor_retest:
+  active_predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirms: ["political conditions of philosophic communication are explicit", "danger and legal nonrecognition shape public philosophic speech", "the introduction supplies source-local criteria for inquiry into exoteric writing"]
+  qualifies: ["no universal mechanical test for hidden doctrine is supplied", "Farabi-specific conclusions depend on genre, silence, exposure, and cross-work comparison", "the sociology of philosophy concerns a danger coeval with philosophy rather than one religious setting alone"]
+  predecessor_effect: NONE
+limits:
+  - The reviewed witness is the 1997 collected reprint and comparison with the original 1952 Free Press printing remains pending.
+  - Farabi, Maimonides, Plato, Aristotle, Judaism, Islam, Christianity, and represented institutions remain independently unreconstructed unless separately registered.
+  - Source-local agreement with the predecessor is not doctrinal certification or independent corroboration.
+  - No migration, successor activation, or predecessor displacement is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
