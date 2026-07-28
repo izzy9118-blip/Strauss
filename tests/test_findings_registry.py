@@ -9,7 +9,7 @@ class FindingsRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_findings_state(self) -> None:
         registry = findings_registry.load_registry()
         self.assertEqual(findings_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.7.0")
+        self.assertEqual(registry["identity"]["version"], "1.8.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE",
@@ -24,7 +24,7 @@ class FindingsRegistryTests(unittest.TestCase):
         registry = findings_registry.load_registry()
         finding_ids = [item["finding_set_id"] for item in registry["finding_sets"]]
         gap_ids = [item["gap_id"] for item in registry["findings_gaps"]]
-        self.assertEqual(len(finding_ids), 47)
+        self.assertEqual(len(finding_ids), 50)
         self.assertEqual(len(finding_ids), len(set(finding_ids)))
         self.assertEqual(len(gap_ids), 6)
         self.assertEqual(len(gap_ids), len(set(gap_ids)))
@@ -38,7 +38,7 @@ class FindingsRegistryTests(unittest.TestCase):
         }
         self.assertEqual(registered, findings_registry._actual_synthesis_paths())
         self.assertEqual(registered, findings_registry.EXPECTED_SYNTHESIS_PATHS)
-        self.assertEqual(len(registered), 28)
+        self.assertEqual(len(registered), 30)
 
     def test_migration_transaction_tree_is_exhaustively_registered(self) -> None:
         registry = findings_registry.load_registry()
@@ -59,7 +59,7 @@ class FindingsRegistryTests(unittest.TestCase):
             in {"SOURCE_SPECIFIC_STUDY", "INTEGRATION_GOVERNANCE_RECORD"}
         }
         self.assertEqual(registered, findings_registry._corpus_study_paths())
-        self.assertEqual(len(registered), 14)
+        self.assertEqual(len(registered), 15)
 
     def _assert_source_derivation(
         self,
@@ -174,6 +174,12 @@ class FindingsRegistryTests(unittest.TestCase):
         )
         self.assertEqual(study["witness_id"], "CORPUS-WIT-113")
         self.assertEqual(study["original_1952_printing_comparison"], "PENDING")
+        self.assertEqual(study["successor_effect"], "NONE")
+
+    def test_hobbes_preface_study_and_two_local_syntheses_preserve_documentary_limit(self) -> None:
+        study = self._assert_source_derivation(study_id="FINDSET-015", source_id="CORPUS-SRC-116", local_syntheses=[("FINDSET-129", "theologico-political"), ("FINDSET-130", "ancients-vs-moderns")])
+        self.assertEqual(study["witness_id"], "CORPUS-WIT-116")
+        self.assertEqual(study["omitted_text_review"], "INCOMPLETE")
         self.assertEqual(study["successor_effect"], "NONE")
 
     def test_indexes_are_derived_from_finding_set_bindings(self) -> None:

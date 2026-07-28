@@ -152,6 +152,16 @@ COMPLETE_TP_ITEMS: dict[str, dict[str, Any]] = {'CORPUS-SRC-102': {'status_id': 
                     'printed_page_range': {'start': 417, 'end': 429},
                     'pdf_page_range_one_based': {'start': 436, 'end': 448},
                     'reading_state': 'COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS',
+                    'platform_reference': False},
+ 'CORPUS-SRC-116': {'status_id': 'CORPUS-STATUS-116',
+                    'witness_id': 'CORPUS-WIT-116',
+                    'study_id': 'CORPUS-STUDY-015',
+                    'internal_study_id': 'HOBBES-PREFACE-STUDY-001',
+                    'study_path': 'studies/theologico-political/preface-to-hobbes-politische-wissenschaft/sequential-reconstruction.yaml',
+                    'witness_record_path': 'studies/theologico-political/preface-to-hobbes-politische-wissenschaft/reviewed-witness.yaml',
+                    'printed_page_range': {'start': 453, 'end': 456},
+                    'pdf_page_range_one_based': {'start': 472, 'end': 475},
+                    'reading_state': 'COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS',
                     'platform_reference': False}}
 
 WITNESS_ONLY_TP_ITEMS: dict[str, dict[str, Any]] = {'CORPUS-SRC-101': {'status_id': 'CORPUS-STATUS-101',
@@ -215,14 +225,6 @@ WITNESS_ONLY_TP_ITEMS: dict[str, dict[str, Any]] = {'CORPUS-SRC-101': {'status_i
                     'witness_record_path': 'studies/theologico-political/an-unspoken-prologue/reviewed-witness.yaml',
                     'printed_page_range': {'start': 449, 'end': 452},
                     'pdf_page_range_one_based': {'start': 468, 'end': 471},
-                    'container_sha256': '43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66',
-                    'container_file_size_bytes': 39287307,
-                    'container_page_count': 526},
- 'CORPUS-SRC-116': {'status_id': 'CORPUS-STATUS-116',
-                    'witness_id': 'CORPUS-WIT-116',
-                    'witness_record_path': 'studies/theologico-political/preface-to-hobbes-politische-wissenschaft/reviewed-witness.yaml',
-                    'printed_page_range': {'start': 453, 'end': 456},
-                    'pdf_page_range_one_based': {'start': 472, 'end': 475},
                     'container_sha256': '43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66',
                     'container_file_size_bytes': 39287307,
                     'container_page_count': 526},
@@ -667,8 +669,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.15.0":
-        errors.append("corpus registry identity.version must be 1.15.0")
+    if identity.get("version") != "1.16.0":
+        errors.append("corpus registry identity.version must be 1.16.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
@@ -695,7 +697,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "source entities": (len(source_ids), 22),
         "reviewed witnesses": (len(witness_ids), 22),
         "source-status records": (len(status_ids), 22),
-        "study records": (len(study_ids), 14),
+        "study records": (len(study_ids), 15),
         "corpus gaps": (len(gap_ids), 7),
     }
     for label, (actual, expected) in expected_counts.items():
@@ -762,7 +764,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "theologico_political_predecessor_sources_registered": len(tp_entities),
         "theologico_political_item_level_statuses_registered": 19,
         "theologico_political_reviewed_item_witnesses_registered": 19,
-        "theologico_political_independent_item_studies_registered": 7,
+        "theologico_political_independent_item_studies_registered": 8,
         "current_studies_tree_yaml_records_accounted_for": len(actual_studies),
         "exhaustive_within_declared_scope": True,
     }
@@ -779,8 +781,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         errors.append("TP identity registration must remain COMPLETE_19_OF_19")
     if termination.get("theologico_political_reviewed_witness_state") != "COMPLETE_19_OF_19":
         errors.append("TP reviewed-witness state must be COMPLETE_19_OF_19")
-    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_7_OF_19":
-        errors.append("TP independent-study state must be INCOMPLETE_7_OF_19")
+    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_8_OF_19":
+        errors.append("TP independent-study state must be INCOMPLETE_8_OF_19")
     if termination.get("corpus_state") != "OPEN_AND_MATERIALLY_INCOMPLETE":
         errors.append("registry termination must preserve an open, incomplete corpus")
     if termination.get("certification") != "NOT_CERTIFIED":

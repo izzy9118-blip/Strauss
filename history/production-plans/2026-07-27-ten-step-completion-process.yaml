@@ -3,7 +3,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.13.0
+  version: 1.14.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
@@ -15,23 +15,23 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.12.0
+  predecessor_version: 1.13.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete PERSECUTION-INTRO-STUDY-001 as the seventh provisional Theologico-Political sequential reconstruction
-    and advance the next study unit to CORPUS-SRC-116 while preserving 19-of-19 witness coverage and twelve remaining
-    studies.
+  reason: Complete HOBBES-PREFACE-STUDY-001 as the eighth provisional Theologico-Political sequential reconstruction
+    and advance the next study unit to CORPUS-SRC-101 while preserving the documentary-omission limit and eleven
+    remaining studies.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 2.9.0
+  current_version: 3.0.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.11.0
+  current_version: 1.12.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -82,6 +82,8 @@ steps:
     and Nomos-versus-Physis
   - Introduction to Persecution and the Art of Writing supplies distinct provisional syntheses to Theologico-Political
     and Wise-versus-Vulgar
+  - Preface to Hobbes Politische Wissenschaft supplies distinct provisional syntheses to Theologico-Political and
+    Ancients-versus-Moderns with a documentary-omission limit
   remaining:
   - complete source-specific application to each problem
   - complete independent witness reconstruction
@@ -104,8 +106,9 @@ steps:
   - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
   - GENESIS-STUDY-001 is complete provisional for CORPUS-WIT-108
   - PERSECUTION-INTRO-STUDY-001 is complete provisional for CORPUS-WIT-113
+  - HOBBES-PREFACE-STUDY-001 is complete provisional for the text present in CORPUS-WIT-116
   remaining:
-  - conduct twelve independent sequential item studies, beginning with CORPUS-SRC-116
+  - conduct eleven independent sequential item studies, beginning with CORPUS-SRC-101
   - compare original or earlier textual states where available and material
   - materialize and fingerprint CORPUS-WIT-102 only through later forward revision if exact bytes become accessible
   - reconstruct Talmon's reviewed work independently
@@ -139,26 +142,21 @@ steps:
 current_production_unit:
   step: 8
   completed_subunit:
-    title: Introduction to Persecution and the Art of Writing independent sequential reconstruction
+    title: Preface to Hobbes Politische Wissenschaft independent sequential reconstruction
     state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
-    source_id: CORPUS-SRC-113
-    witness_id: CORPUS-WIT-113
-    study_id: PERSECUTION-INTRO-STUDY-001
+    source_id: CORPUS-SRC-116
+    witness_id: CORPUS-WIT-116
+    study_id: HOBBES-PREFACE-STUDY-001
     witness_coverage: COMPLETE_19_OF_19
-    study_coverage: INCOMPLETE_7_OF_19
+    study_coverage: INCOMPLETE_8_OF_19
+    documentary_omission_limit: ACTIVE
     non_effect: Source-study completion does not supply independent corroboration, doctrine, certified migration,
       successor activation, predecessor displacement, or completed-interface readiness.
   next_subunit:
-    title: Preface to Hobbes Politische Wissenschaft independent sequential reconstruction
-    source_id: CORPUS-SRC-116
-    witness_id: CORPUS-WIT-116
-    first_action: Reconstruct printed pages 453-456 in textual order before comparing with the active predecessor.
-    following_source: CORPUS-SRC-101
-  non_effects:
-  - no source-text admission through registries
-  - no doctrinal or migration certification
-  - no successor activation or predecessor displacement
-  - no Sanctum repin as a completed interface
+    title: Progress or Return? independent sequential reconstruction
+    source_id: CORPUS-SRC-101
+    witness_id: CORPUS-WIT-101
+    following_source: CORPUS-SRC-104
 termination:
   state: CONTINUE_UNTIL_GENUINE_BLOCKER
   blocker_rule: 'A blocker must identify the exact missing source, authority, path, validation failure, or jurisdictional

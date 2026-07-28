@@ -3,22 +3,21 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 2.9.0
+  version: 3.0.0
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
   certification: NOT_CERTIFIED
   audit_scope_complete: true
   repository_completion: INCOMPLETE
 revision_history:
-  predecessor_version: 2.8.0
+  predecessor_version: 2.9.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete PERSECUTION-INTRO-STUDY-001 from CORPUS-WIT-113, advance Theologico-Political study coverage
-    to seven of nineteen, and preserve twelve pending studies, original-1952 comparison, noncorroboration, noncertification,
-    predecessor authority, and the Sanctum repin block.
+  reason: Complete HOBBES-PREFACE-STUDY-001, advance study coverage to eight of nineteen, and preserve eleven pending
+    studies plus the omitted-text and textual-state limits.
 basis:
   repository: izzy9118-blip/Strauss
   prior_validated_interface_commit: ea193b51b6664f69c90b3982c32d81cdbb6921b7
-  current_revision_scope: production/corpus-src-113-sequential-reconstruction
+  current_revision_scope: production/corpus-src-116-sequential-reconstruction
   manifest: manifest.yaml
   corpus_registry: corpus/index.yaml
   corpus_registry_loader: corpus_registry.py
@@ -82,14 +81,17 @@ summary:
   - PERSECUTION-INTRO-STUDY-001 complete provisional sequential reconstruction
   - CORPUS-STUDY-014 and FINDSET-014 typed registrations
   - FINDSET-127 and FINDSET-128 jurisdiction-preserving problem-local syntheses
+  - HOBBES-PREFACE-STUDY-001 complete provisional sequential reconstruction with documentary-omission limit
+  - CORPUS-STUDY-015 and FINDSET-015 typed registrations
+  - FINDSET-129 and FINDSET-130 jurisdiction-preserving problem-local syntheses
   theologico_political_item_level_status:
     active_predecessor_source_count: 19
     registered_source_identity_count: 19
     reviewed_item_witness_count: 19
     registered_without_reviewed_witness_count: 0
     remaining_without_item_level_status_count: 0
-    independently_reconstructed_count_within_this_sequence: 7
-    remaining_without_independent_sequential_study: 12
+    independently_reconstructed_count_within_this_sequence: 8
+    remaining_without_independent_sequential_study: 11
     completed_source_ids:
     - CORPUS-SRC-102
     - CORPUS-SRC-105
@@ -98,6 +100,7 @@ summary:
     - CORPUS-SRC-103
     - CORPUS-SRC-108
     - CORPUS-SRC-113
+    - CORPUS-SRC-116
     completed_witness_ids:
     - CORPUS-WIT-102
     - CORPUS-WIT-105
@@ -106,6 +109,7 @@ summary:
     - CORPUS-WIT-103
     - CORPUS-WIT-108
     - CORPUS-WIT-113
+    - CORPUS-WIT-116
     completed_study_ids:
     - SPINOZA-PREFACE-STUDY-001
     - COHEN-STUDY-001
@@ -114,6 +118,7 @@ summary:
     - SPINOZA-TREATISE-STUDY-001
     - GENESIS-STUDY-001
     - PERSECUTION-INTRO-STUDY-001
+    - HOBBES-PREFACE-STUDY-001
     witness_only_source_ids:
     - CORPUS-SRC-101
     - CORPUS-SRC-104
@@ -123,7 +128,6 @@ summary:
     - CORPUS-SRC-112
     - CORPUS-SRC-114
     - CORPUS-SRC-115
-    - CORPUS-SRC-116
     - CORPUS-SRC-117
     - CORPUS-SRC-118
     - CORPUS-SRC-119
@@ -136,7 +140,6 @@ summary:
     - CORPUS-WIT-112
     - CORPUS-WIT-114
     - CORPUS-WIT-115
-    - CORPUS-WIT-116
     - CORPUS-WIT-117
     - CORPUS-WIT-118
     - CORPUS-WIT-119
@@ -186,7 +189,7 @@ summary:
     - CORPUS-WIT-118
     - CORPUS-WIT-119
   remaining_major_deficiencies:
-  - twelve Theologico-Political writings still require independent sequential item studies
+  - eleven Theologico-Political writings still require independent sequential item studies
   - the original 1948 journal printing of How to Study Spinoza's Theologico-Political Treatise has not been compared
     with the reviewed 1997 collected reprint
   - the exact CORPUS-WIT-102 bytes, SHA256, file size, and PDF-page offset are unavailable to the repository
