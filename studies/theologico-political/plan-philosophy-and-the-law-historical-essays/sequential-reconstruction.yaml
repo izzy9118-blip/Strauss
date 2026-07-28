@@ -1,0 +1,108 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+identity:
+  id: PHILOSOPHY-LAW-PLAN-STUDY-001
+  title: Sequential Reconstruction of Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
+  version: 1.0.0
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  earlier_textual_state_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+source:
+  source_id: CORPUS-SRC-118
+  source_status_id: CORPUS-STATUS-118
+  reviewed_witness_id: CORPUS-WIT-118
+  author: Leo Strauss
+  canonical_title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
+  source_date: 1946
+  source_form: UNPUBLISHED_BOOK_PROPOSAL_OR_PLAN
+  reviewed_container: {title: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, place: Albany, year: 1997}
+  editorial_provenance:
+    collection_note: 'Green states that the plan was discovered in the Leo Strauss Archive, box 11, folder 11, and may never have been submitted to a publisher.'
+    editor_mature_view_claim: EDITORIAL_INTERPRETATION_NOT_STRAUSS_STATEMENT
+  locators: {printed_pages: {start: 467, end: 470}, pdf_pages_one_based: {start: 486, end: 489}}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+source_limits:
+  - The plan is an architectural proposal for a projected book, not evidence that every projected essay was completed as described or that the plan remained Strauss's final architecture.
+  - Green's statement that the document reflects Strauss's mature view is editorial and may not be attributed to Strauss.
+  - Titles and short descriptions of projected essays identify intended problems and relations but do not substitute for the arguments of completed essays.
+method_application:
+  governing_question: What architecture did Strauss propose in 1946 for approaching modern Jewish philosophy, Jerusalem and Athens, medieval philosophy, prophecy and law, exotericism, persecution, liberal freedom, Spinoza, and tolerance?
+  reconstruction_rule: Read the projected twelve-essay sequence in order as an argument-architecture, distinguish planned from already published items, and keep the editor's note separate.
+sequential_reading:
+  - unit: PLAN-RU-001
+    printed_pages: 467
+    findings:
+      - {id: PLAN-DF-001, classification: documented_finding, proposition: 'Strauss proposes an introduction to Jewish medieval philosophy for educated readers that begins from crucial problems immediately graspable through modern life rather than from a popularized version of current scholarship.'}
+      - {id: PLAN-DF-002, classification: documented_finding, proposition: 'The opening essay traces the modern Jewish spiritual-intellectual situation to rejection of miracles and modern biblical criticism and asks whether failed modern restorations require learning from medieval philosophy.'}
+  - unit: PLAN-RU-002
+    printed_pages: 468
+    findings:
+      - {id: PLAN-DF-003, classification: documented_finding, proposition: 'The objection to a return is stated as the alleged impossibility of reconciling biblical tradition and Greek philosophy; this becomes the subject of Jerusalem and Athens.'}
+      - {id: PLAN-DF-004, classification: documented_finding, proposition: 'Strauss calls Judaism and classical Greek philosophy ultimately and fundamentally conflicting spiritual powers while explaining historical reconciliation through the classical requirement of exoteric teaching indispensable for social order.'}
+      - {id: PLAN-DF-005, classification: documented_finding, proposition: 'The projected Two Faces of Socrates treats Socrates as the representative synthesis of esoteric and exoteric forms of philosophy.'}
+  - unit: PLAN-RU-003
+    printed_pages: 468-469
+    findings:
+      - {id: PLAN-DF-006, classification: documented_finding, proposition: 'How to Study Jewish Medieval Philosophy emphasizes that its social situation and function differ fundamentally from both Christian medieval philosophy and modern philosophy.'}
+      - {id: PLAN-DF-007, classification: documented_finding, proposition: 'Strauss says Maimonides’ prophecy, revelation, and divine law become transparent from political philosophy rather than from theoretical philosophy alone.'}
+      - {id: PLAN-DF-008, classification: documented_finding, proposition: 'Maimonides’ political philosophy is described as a modified form of Plato’s Republic and Laws, with Farabi crucial for understanding the Platonic form in which it reaches Maimonides.'}
+  - unit: PLAN-RU-004
+    printed_pages: 469-470
+    findings:
+      - {id: PLAN-DF-009, classification: documented_finding, proposition: 'The Kuzari is used to test whether the interpretive framework extends beyond Maimonides and his Islamic predecessors.'}
+      - {id: PLAN-DF-010, classification: documented_finding, proposition: 'Modern totalitarian suppression of free speech is proposed as a clue to the conditions under which free minds of former centuries thought, spoke, and wrote; this leads to Persecution and the Art of Writing.'}
+      - {id: PLAN-DF-011, classification: documented_finding, proposition: 'The emergence of liberal society and the right of free speech is treated as a radical change in the literary conditions of heterodox thinkers, to be explored through Mendelssohn, Jacobi, Lessing, and Spinoza.'}
+      - {id: PLAN-DF-012, classification: documented_finding, proposition: 'The book was to conclude with Lessing’s Nathan the Wise as a poetic monument to Jewish medieval philosophy and a problem concerning tolerance and modern Jewry.'}
+  - unit: PLAN-RU-005
+    printed_pages: 470
+    findings:
+      - {id: PLAN-DF-013, classification: bounded_conclusion, proposition: 'The projected sequence forms a deliberate movement from the modern Jewish crisis to the biblical-Greek conflict, then to medieval political philosophy and exotericism, and finally to persecution, liberalization, Spinoza, and modern tolerance.'}
+permanent_findings:
+  - {id: PLAN-PF-001, classification: documented_finding, proposition: 'The plan explicitly makes the fundamental conflict between biblical tradition and Greek philosophy an organizing problem.'}
+  - {id: PLAN-PF-002, classification: documented_finding, proposition: 'Exoteric teaching is presented as the classical mechanism by which irreconcilable philosophy and revealed tradition could become socially reconcilable.'}
+  - {id: PLAN-PF-003, classification: documented_finding, proposition: 'Maimonidean prophecy, revelation, and divine law are to be understood through political philosophy, Plato, and Farabi.'}
+  - {id: PLAN-PF-004, classification: documented_finding, proposition: 'Persecution and liberal freedom of speech are treated as different political conditions of philosophic writing.'}
+  - {id: PLAN-PF-005, classification: documentary_limit, proposition: 'The plan records intended architecture; it does not certify completion of the projected book or Green’s claim that it represents Strauss’s mature view.'}
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives: [modern rejection of miracles and biblical criticism, biblical tradition and philosophy, prophecy, revelation, divine law, political philosophy, persecution and liberal freedom]
+    non_absorption: The plan does not itself settle the truth of revelation or philosophy.
+  athens_vs_jerusalem:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives: [explicit Jerusalem and Athens essay, biblical tradition versus classical Greek philosophy, Plato, Socrates, Maimonides, Farabi]
+    non_absorption: Historical reconciliation through exotericism does not erase the stated ultimate conflict.
+  wise_vs_vulgar:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives: [esoteric and exoteric teaching, social function of philosophy, persecution, heterodox literary production]
+    non_absorption: The plan does not authorize hidden-teaching claims beyond the projected questions it states.
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  predecessor_statement: Reveals the original architecture of the inquiry as philosophy confronted by revealed law, particularly in medieval Jewish and Islamic philosophy.
+  state: PROVISIONAL_RETEST_STRONG_CONFIRMATION_WITH_DOCUMENTARY_LIMIT_NO_PROMOTION
+  confirmations:
+    - The plan directly organizes the project around the conflict of biblical tradition and Greek philosophy and around Maimonidean prophecy, revelation, divine law, Plato, and Farabi.
+    - It integrates exotericism, persecution, and the modern liberal transformation of freedom of speech into that architecture.
+  qualifications:
+    - “Original architecture” is supported for this 1946 plan but does not prove that the architecture was final or unchanged thereafter.
+    - The editor’s statement that the plan reflects Strauss’s mature view is not Strauss’s statement.
+  predecessor_effect: NONE
+prohibitions:
+  - Do not treat a projected essay description as equivalent to a completed argument.
+  - Do not attribute the editor's mature-view judgment to Strauss.
+  - Do not infer reconciliation means doctrinal synthesis; Strauss explicitly calls the two traditions ultimately conflicting.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  independent_corroboration: INCOMPLETE
+  earlier_textual_state_comparison_required: true
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
