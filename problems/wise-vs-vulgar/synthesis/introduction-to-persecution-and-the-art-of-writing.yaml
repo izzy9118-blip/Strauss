@@ -1,0 +1,29 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: WVG-PERSECUTION-INTRO-001, version: 1.0.0, title: "Wise-versus-Vulgar Synthesis — Introduction to Persecution and the Art of Writing"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-113
+  reviewed_witness_id: CORPUS-WIT-113
+  study_id: PERSECUTION-INTRO-STUDY-001
+  study_path: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-014
+  derived_finding_set_id: FINDSET-128
+problem: {canonical_key: wise-vs-vulgar, role: CONTROLLED_SECONDARY_HERMENEUTIC_JURISDICTION, primary_problem_reference: theologico-political}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Strauss raises the possibility that genuine philosophers form a class whose philosophic bond is more important than their membership in surrounding nonphilosophic groups."}
+  - {classification: documented_finding, proposition: "Farabi's Platonic strategy combines intransigent inquiry among the elite with a different mode of dealing with the vulgar."}
+  - {classification: documented_finding, proposition: "Gradual replacement of accepted opinion requires provisional conformity and formulations that point toward truth without flagrantly contradicting prevailing opinion."}
+  - {classification: documented_finding, proposition: "Strauss describes the philosopher's political role as a private secret kingship within an imperfect society rather than necessarily open rule in a virtuous city."}
+  - {classification: documented_finding, proposition: "Exoteric teaching is protective armor for philosophy and the form in which philosophy becomes visible to the political community."}
+  - {classification: bounded_conclusion, proposition: "Frequency, conspicuousness, silence, contradiction, or orthodoxy cannot identify serious teaching in isolation; genre, exposure, audience, danger, and cross-work relations must be reconstructed."}
+non_absorption:
+  - The source does not certify a fixed caste of wise persons or identify philosophic membership with wisdom.
+  - Differentiated communication does not license unrestricted deception or mechanical inversion.
+  - The Wise-versus-Vulgar problem does not absorb the primary Theologico-Political questions of revealed Law, legal justification of philosophy, prophecy, or philosophy's public legitimacy.
+  - Strauss's reconstruction of Farabi and the falasifa is not independent corroboration of their serious teaching.
+limits:
+  - The reviewed witness is the 1997 collected reprint and the original 1952 printing comparison remains pending.
+  - Independent Farabi, Maimonidean, Platonic, and historical witnesses remain required for corroboration.
+  - No claimant-to-wisdom, doctrine, migration, successor activation, or predecessor displacement is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
