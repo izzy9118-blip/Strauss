@@ -1,0 +1,500 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: PROGRESS-RETURN-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Progress or Return?
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  earlier_publication_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-101
+  source_status_id: CORPUS-STATUS-101
+  reviewed_witness_id: CORPUS-WIT-101
+  author: Leo Strauss
+  canonical_title: Progress or Return?
+  source_date: 1952
+  reviewed_container:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  editorial_provenance:
+    lecture_series: Three lectures delivered at the B'nai B'rith Hillel Foundation at the University of Chicago
+    lecture_dates: [1952-11-05, 1952-11-12, 1952-11-19]
+    first_posthumous_publication_sections_i_ii: "Modern Judaism 1, nos. 1 and 2 (February and May 1981): 17-45"
+    first_posthumous_publication_section_iii: "Independent Journal of Philosophy 3 (1979): 111-18"
+    note_status: editor-supplied notes to the collected edition
+    separately_reviewed_earlier_publications: false
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  locators:
+    printed_pages: {start: 87, end: 136}
+    lecture_and_discussion_body: {start: 87, end: 132}
+    editorial_notes: {start: 132, end: 136}
+    pdf_pages_one_based: {start: 106, end: 155}
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The reviewed witness is the 1997 SUNY collected text, not a separately reviewed copy of the 1979 or 1981 posthumous publications or an original 1952 lecture transcript independent of this editorial witness.
+  - Printed page 132 contains the end of Strauss's discussion and the beginning of editorial notes; those layers are kept distinct.
+  - Biblical, Platonic, Aristotelian, Nietzschean, Spinozist, Christian, Jewish, Islamic, and modern scientific or historical claims remain independently unreconstructed unless separately registered.
+  - Strauss's descriptions of biblical and Greek alternatives are source-level reconstructions and not independent corroboration of either tradition.
+  - The study does not decide whether revelation is true, whether philosophy is true, whether historical progress is impossible, or whether one of Jerusalem and Athens is ultimately superior.
+  - Strauss's final claim that philosophy itself rests on an act of faith is reconstructed as his source-level argument here and is not silently generalized into a repository doctrine about all philosophy.
+
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+
+method_application:
+  governing_question: >
+    What does Strauss mean by progress and return, and why does the crisis of modern progress lead not to one simple
+    return but to the unresolved confrontation between the biblical and Greek-philosophic accounts of the good life?
+  recovered_source_question: >
+    Can modern Western man recover a defensible orientation by returning to the sources of Western civilization, and if
+    those sources are Jerusalem and Athens, can reason decide between revealed obedience and philosophic freedom or must
+    Western life remain exposed to both irreducible appeals?
+  reconstruction_rule: >
+    Read printed pages 87-132 in order before comparing the result with the active predecessor. Treat the editorial notes
+    beginning on printed page 132 as documentary apparatus. Distinguish the practical Jewish framing, the critique of
+    modern progress, the reconstruction of Greek and biblical alternatives, and the final argument concerning revelation,
+    philosophy, historical criticism, and rational irresolution.
+  alternative_preservation_rule: >
+    Do not harmonize Jerusalem and Athens. Strauss repeatedly rejects a successful synthesis, while also denying that
+    either alternative has refuted the other. The repository must preserve both the opposition and the source's refusal
+    to close it.
+
+speaker_and_documentary_layers:
+  strauss_1952_lectures:
+    role: primary source author and speaker
+    rule: Strauss's lecture and discussion body on printed pages 87-132 governs the reconstruction.
+  biblical_and_jewish_material_as_reconstructed:
+    role: one fundamental source of Western civilization and one side of the final alternative
+    rule: Strauss's account does not independently certify revelation, Jewish doctrine, or biblical history.
+  greek_philosophy_as_reconstructed:
+    role: second fundamental source and alternative
+    rule: Strauss's account does not independently certify Plato, Aristotle, classical cosmology, or natural right.
+  modern_progress_as_reconstructed:
+    role: challenged modern orientation
+    rule: Claims about science, technology, socialism, communism, Christianity, and modern history remain source-level unless independently corroborated.
+  editor_kenneth_hart_green:
+    role: provenance and note layer
+    rule: Editorial notes and publication history remain distinct from Strauss's lecture body.
+
+sequential_reading:
+  - unit: PROGRESS-RETURN-RU-001
+    printed_pages: 87-92
+    function: Frame return through prophecy, messianic restoration, Jewish emancipation, and the modern practical choice between mission and progress.
+    findings:
+      - id: PROGRESS-RETURN-DF-001
+        classification: documented_finding
+        proposition: >
+          Strauss begins from Western self-understanding and presents return in the biblical setting as repentance and restoration under prophetic authority rather than merely nostalgia for an earlier historical condition.
+      - id: PROGRESS-RETURN-DF-002
+        classification: documented_finding
+        proposition: >
+          The messianic hope is reconstructed as restoration of justice, peace, Jerusalem, divine rule, and acknowledgement of the one God, with a specifically Jewish form less centered on the end of the world than the Christian second-coming schema Strauss contrasts with it.
+      - id: PROGRESS-RETURN-DF-003
+        classification: documented_finding
+        proposition: >
+          Jewish emancipation produces a modern crisis because the older understanding of Israel's mission and election confronts political equality and the possibility of national dissolution or assimilation.
+      - id: PROGRESS-RETURN-DF-004
+        classification: documented_finding
+        proposition: >
+          The practical title-question arises because the modern West offers progress as an alternative to return while Zionist and other Jewish responses reopen the question of what genuine return would mean.
+    uncertainties:
+      - Strauss's account of messianic and Jewish political views is schematic and requires independent Jewish textual and historical corroboration.
+
+  - unit: PROGRESS-RETURN-RU-002
+    printed_pages: 92-98
+    function: Define progress and expose the insufficiency of science, technology, production, and consumption as final human ends.
+    findings:
+      - id: PROGRESS-RETURN-DF-005
+        classification: documented_finding
+        proposition: >
+          Progress presupposes a goal and therefore an objectively good end if human life is to supply the measure of improvement.
+      - id: PROGRESS-RETURN-DF-006
+        classification: documented_finding
+        proposition: >
+          Strauss distinguishes cumulative progress in strict science and technical usefulness from progress in the whole of human life, noting that scientific advance can be driven forward without being freely directed toward a final human purpose.
+      - id: PROGRESS-RETURN-DF-007
+        classification: documented_finding
+        proposition: >
+          Unlimited production and consumption cannot by themselves define happiness because mass production requires ever renewed demand and therefore risks converting means into an endless self-perpetuating process.
+      - id: PROGRESS-RETURN-DF-008
+        classification: documented_finding
+        proposition: >
+          Strauss treats the decisive modern issue as one of convictions and political faith rather than merely economic distribution, and he contrasts communist faith in historical progress with the weakened Western formula of progress and freedom.
+    uncertainties:
+      - The lecture's economic examples are philosophical illustrations rather than a complete political-economic analysis of production or consumption.
+
+  - unit: PROGRESS-RETURN-RU-003
+    printed_pages: 98-104
+    function: Contrast classical cyclical or permanent-order views with the distinctively modern doctrine of indefinite historical progress.
+    findings:
+      - id: PROGRESS-RETURN-DF-009
+        classification: documented_finding
+        proposition: >
+          Greek thought allows improvement in arts, laws, and inventions but not Progress in the modern sense because the cosmos and human nature provide an essentially unchangeable framework and civilization remains exposed to recurring catastrophe or cycle.
+      - id: PROGRESS-RETURN-DF-010
+        classification: documented_finding
+        proposition: >
+          On Strauss's classical reconstruction, permanent human nature grounds permanent political problems and a limited range of possible solutions, so the best attainable order cannot become indefinitely better merely through historical time.
+      - id: PROGRESS-RETURN-DF-011
+        classification: documented_finding
+        proposition: >
+          Modern progress arises through a break with traditional teachings in which perfection is transferred to an indefinite future rather than located in an ancestral or naturally best order.
+      - id: PROGRESS-RETURN-DF-012
+        classification: documented_finding
+        proposition: >
+          Christianity prepared some conditions for modern progress but is not itself a doctrine of earthly historical progress; Strauss associates the modern faith with secularization and emancipation from orthodoxy.
+      - id: PROGRESS-RETURN-DF-013
+        classification: documented_finding
+        proposition: >
+          The modern faith in progress becomes questionable from within modernity itself, and Strauss presents renewed sensitivity to recurring fundamental problems as evidence that a return to premodern standards cannot simply be dismissed.
+    uncertainties:
+      - Strauss's genealogy of modern progress is compressed and requires independent historical corroboration before being treated as a complete history of the idea.
+
+  - unit: PROGRESS-RETURN-RU-004
+    printed_pages: 104-109
+    function: Identify the two premodern roots to which return points and establish the permanent tension of Western civilization.
+    findings:
+      - id: PROGRESS-RETURN-DF-014
+        classification: documented_finding
+        proposition: >
+          A return from the crisis of modern civilization does not lead to one undifferentiated tradition but to the Bible and Greek philosophy as the two fundamental sources of Western civilization.
+      - id: PROGRESS-RETURN-DF-015
+        classification: documented_finding
+        proposition: >
+          Strauss says the life peculiar to Western civilization is life between two codes, Jerusalem and Athens, and that the tension between them is fundamental rather than accidental.
+      - id: PROGRESS-RETURN-DF-016
+        classification: documented_finding
+        proposition: >
+          Attempts at synthesis ultimately take the side of either Jerusalem or Athens, while neither side has succeeded in refuting the other.
+      - id: PROGRESS-RETURN-DF-017
+        classification: documented_finding
+        proposition: >
+          The proper openness is therefore not eclectic aesthetic admiration but serious exposure to the authoritative appeal of both alternatives.
+    uncertainties:
+      - The claim that every synthesis ultimately sides with one alternative is Strauss's argument here and is not independently established by exhaustive study of all historical syntheses.
+
+  - unit: PROGRESS-RETURN-RU-005
+    printed_pages: 109-115
+    function: Show substantial moral agreement while isolating differences in humility, charity, art, civilization, and self-assertion.
+    findings:
+      - id: PROGRESS-RETURN-DF-018
+        classification: documented_finding
+        proposition: >
+          Biblical and classical ethics share rule of reason or law over passion, justice, disciplined conduct, and a permanent standard beyond merely positive law, so their practical moral overlap is substantial.
+      - id: PROGRESS-RETURN-DF-019
+        classification: documented_finding
+        proposition: >
+          Strauss nevertheless contrasts biblical humility with Aristotelian magnanimity and biblical charity or concern for the poor with Greek liberal generosity.
+      - id: PROGRESS-RETURN-DF-020
+        classification: documented_finding
+        proposition: >
+          The biblical depreciation of pride and self-assertion is connected to an austerity toward artistic and civilizational achievement that Strauss contrasts with the Greek world of poetry, plastic art, and noble self-perfection.
+      - id: PROGRESS-RETURN-DF-021
+        classification: documented_finding
+        proposition: >
+          Neither biblical nor classical morality simply identifies human perfection with technical civilization or historical progress.
+    uncertainties:
+      - Strauss's cultural contrasts are stylized and may not be generalized into exhaustive descriptions of Jewish, biblical, or Greek historical life.
+
+  - unit: PROGRESS-RETURN-RU-006
+    printed_pages: 115-120
+    function: Trace the deepest opposition to cosmology, creation, omnipotence, natural order, and the meaning of wisdom.
+    findings:
+      - id: PROGRESS-RETURN-DF-022
+        classification: documented_finding
+        proposition: >
+          Strauss locates the deeper difference in the Greek orientation toward an eternal intelligible natural order and the biblical orientation toward an omnipotent creator whose free act is not governed by an autonomous necessity of nature.
+      - id: PROGRESS-RETURN-DF-023
+        classification: documented_finding
+        proposition: >
+          The possibility of miracle negates the autonomy of nature presupposed by Greek cosmology, while creation makes the world dependent on divine will rather than necessary eternal order.
+      - id: PROGRESS-RETURN-DF-024
+        classification: documented_finding
+        proposition: >
+          Both traditions honor wisdom, but philosophy understands wisdom through free inquiry into what is, whereas biblical wisdom begins from fear of the Lord and acknowledgement of divine inscrutability.
+      - id: PROGRESS-RETURN-DF-025
+        classification: documented_finding
+        proposition: >
+          Strauss warns that recognizing Jerusalem and Athens as ultimate alternatives does not justify positing a third common principle behind them.
+    uncertainties:
+      - The lecture's compressed Greek cosmology and biblical theology require independent source reconstruction for corroboration.
+
+  - unit: PROGRESS-RETURN-RU-007
+    printed_pages: 120-123
+    function: State the radical opposition of obedience and autonomous inquiry while refusing synthesis and preserving both as standards against modernity.
+    findings:
+      - id: PROGRESS-RETURN-DF-026
+        classification: documented_finding
+        proposition: >
+          Philosophy proceeds dialectically from opinion toward truth and seeks reasons concerning all things, whereas the biblical mode presents divine truth and command as something heard and obeyed.
+      - id: PROGRESS-RETURN-DF-027
+        classification: documented_finding
+        proposition: >
+          Creation itself cannot be reached by unaided reason in Strauss's reconstruction; the Bible tells man what natural powers cannot discover on their own.
+      - id: PROGRESS-RETURN-DF-028
+        classification: documented_finding
+        proposition: >
+          The opposition is therefore obedience to revelation versus autonomous human insight, even though both Jerusalem and Athens stand closer to one another than either does to modern historical progress in their recognition of permanent moral questions.
+      - id: PROGRESS-RETURN-DF-029
+        classification: documented_finding
+        proposition: >
+          Strauss presents Bible and Greek philosophy as standards from which modernity may be criticized without converting them into a harmonized synthesis.
+    uncertainties:
+      - The degree of moral agreement does not remove the radical opposition at the level of ultimate authority and the good life.
+
+  - unit: PROGRESS-RETURN-RU-008
+    printed_pages: 123-127
+    function: Recast the present-day confrontation with revelation and explain why historical criticism cannot settle it.
+    findings:
+      - id: PROGRESS-RETURN-DF-030
+        classification: documented_finding
+        proposition: >
+          The contemporary conflict is not simply medieval orthodoxy versus classical philosophy; Strauss describes both modern theology and modern unbelief as transformed descendants of modernity.
+      - id: PROGRESS-RETURN-DF-031
+        classification: documented_finding
+        proposition: >
+          Strauss rejects private subjective certainty as sufficient to establish revelation for another person and therefore asks whether revelation can be demonstrated from facts accessible to believer and unbeliever alike.
+      - id: PROGRESS-RETURN-DF-032
+        classification: documented_finding
+        proposition: >
+          Historical verification cannot prove revelation because a complete demonstration would require omniscient command of the relevant historical facts and certainty that no important contrary evidence has been lost.
+      - id: PROGRESS-RETURN-DF-033
+        classification: documented_finding
+        proposition: >
+          Historical criticism can show the unreliability of tradition as a general rule, but that finding does not by itself establish the falsity of every claim transmitted by tradition.
+    uncertainties:
+      - Strauss's argument concerns the limits of historical proof regarding revelation and does not deny the possibility of bounded historical knowledge.
+
+  - unit: PROGRESS-RETURN-RU-009
+    printed_pages: 127-132
+    function: Complete the rational confrontation by distinguishing modern unbelief from classical philosophy and showing why neither revelation nor philosophy can refute the other.
+    findings:
+      - id: PROGRESS-RETURN-DF-034
+        classification: documented_finding
+        proposition: >
+          Strauss argues that the traditional claim that all Old Testament statements are true cannot be maintained merely by tradition, while the modern historical conclusion that some transmitted propositions are doubtful does not prove revelation false.
+      - id: PROGRESS-RETURN-DF-035
+        classification: documented_finding
+        proposition: >
+          Modern unbelief often rejects revelation in the name of modern philosophy's anthropocentric concern with human culture and mastery of nature, whereas classical philosophy claims an unchangeable natural order independent of man and is therefore a more serious opponent.
+      - id: PROGRESS-RETURN-DF-036
+        classification: documented_finding
+        proposition: >
+          Strauss says classical philosophy is not refuted by the mere possibility of revelation because philosophy can understand itself as a quest under an admitted lack of wisdom rather than as possession of a complete system.
+      - id: PROGRESS-RETURN-DF-037
+        classification: documented_finding
+        proposition: >
+          Yet the philosopher cannot refute revelation without proving that the unchangeable natural order is absolutely valid and miracles impossible, a proof that would require completion of philosophy or a comprehensive system.
+      - id: PROGRESS-RETURN-DF-038
+        classification: documented_finding
+        proposition: >
+          Strauss therefore concludes that philosophy itself rests on an act of faith: the decision to regard quest for evident and necessary knowledge as the one thing needful, despite awareness that revelation cannot be refuted by unaided human reason.
+      - id: PROGRESS-RETURN-DF-039
+        classification: documented_finding
+        proposition: >
+          The conflict between revelation and philosophy cannot be settled by human reason, so each remains an open possibility and neither can coherently refute the other from within the source's final argument.
+    uncertainties:
+      - Strauss's phrase "act of faith" describes philosophy's commitment in this confrontation and should not be generalized beyond the argument without further source study.
+
+  - unit: PROGRESS-RETURN-RU-010
+    printed_pages: 132-136
+    function: Separate editorial provenance and reference notes from Strauss's lecture body.
+    findings:
+      - id: PROGRESS-RETURN-DO-001
+        classification: structural_evidence
+        proposition: >
+          The editor identifies the source as three lectures delivered on 5, 12, and 19 November 1952 at the University of Chicago Hillel Foundation and states that sections I-II and III were first published posthumously in different journals in 1981 and 1979 respectively.
+      - id: PROGRESS-RETURN-DO-002
+        classification: structural_evidence
+        proposition: >
+          The notes supply citations and cross-references to biblical passages, Spinoza, classical authors, modern thinkers, and Strauss's other works but are editorial apparatus rather than a second Strauss-authored argumentative layer.
+      - id: PROGRESS-RETURN-UU-001
+        classification: unresolved_uncertainty
+        proposition: >
+          The 1979 and 1981 publication states and any independent 1952 lecture transcript remain unreviewed, so wording and editorial differences cannot yet be assessed.
+
+permanent_findings:
+  - id: PROGRESS-RETURN-PF-001
+    classification: documented_finding
+    proposition: >
+      Progress requires a goal and cannot be identified simply with cumulative science, technology, production, or consumption.
+  - id: PROGRESS-RETURN-PF-002
+    classification: documented_finding
+    proposition: >
+      Modern Progress differs from classical improvement because it places perfection in an indefinite future rather than within a permanent natural order and stable human nature.
+  - id: PROGRESS-RETURN-PF-003
+    classification: documented_finding
+    proposition: >
+      Return from the crisis of modernity leads to two fundamental Western sources, the Bible and Greek philosophy, rather than to one homogeneous premodern tradition.
+  - id: PROGRESS-RETURN-PF-004
+    classification: documented_finding
+    proposition: >
+      Western civilization lives between Jerusalem and Athens, and Strauss treats their tension as fundamental and life-giving rather than as a defect already overcome by synthesis.
+  - id: PROGRESS-RETURN-PF-005
+    classification: documented_finding
+    proposition: >
+      Every attempted synthesis ultimately sides with one of the alternatives, while neither Jerusalem nor Athens has refuted the other.
+  - id: PROGRESS-RETURN-PF-006
+    classification: documented_finding
+    proposition: >
+      Biblical and classical ethics substantially agree at the practical moral level while differing radically over humility, self-assertion, the status of art and civilization, cosmology, creation, and the ultimate source of wisdom.
+  - id: PROGRESS-RETURN-PF-007
+    classification: documented_finding
+    proposition: >
+      The deepest opposition is between obedience to revealed divine authority and the autonomous philosophic search for evident and necessary knowledge.
+  - id: PROGRESS-RETURN-PF-008
+    classification: documented_finding
+    proposition: >
+      Historical criticism cannot prove or disprove revelation because the relevant historical evidence cannot be made complete in the sense required for such a demonstration.
+  - id: PROGRESS-RETURN-PF-009
+    classification: documented_finding
+    proposition: >
+      Classical philosophy is a more radical opponent of revelation than modern anthropocentric unbelief because it appeals to an unchangeable natural order independent of man.
+  - id: PROGRESS-RETURN-PF-010
+    classification: documented_finding
+    proposition: >
+      Philosophy cannot refute revelation without completing the proof of the autonomous natural order and the impossibility of miracle, while revelation cannot refute philosophy merely by remaining possible.
+  - id: PROGRESS-RETURN-PF-011
+    classification: documented_finding
+    proposition: >
+      Strauss concludes that philosophy itself rests on an act of faith in the philosophic life as the one thing needful while remaining unable to refute revelation by unaided human reason.
+  - id: PROGRESS-RETURN-PF-012
+    classification: bounded_conclusion
+    proposition: >
+      The final source-level result is an unresolved rational confrontation: revelation and philosophy remain open possibilities and the conflict between them cannot be settled by human reason within the argument of these lectures.
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss asks whether modern progress can still orient human life and whether return supplies an alternative. He then
+    identifies the relevant return not with nostalgia but with renewed exposure to the Bible and Greek philosophy and
+    carries the inquiry to the unresolved confrontation between revelation and philosophy.
+  textual_deed: >
+    The lectures move from a practical Jewish question through a conceptual critique of progress, then through the moral
+    and cosmological comparison of Jerusalem and Athens, and finally through a direct test of whether historical evidence
+    or philosophy can refute revelation. The argument ends by preserving the conflict rather than resolving it.
+  relation: MODERN_PROGRESS_CRITIQUE_CULMINATING_IN_UNRESOLVED_REVELATION_PHILOSOPHY_ALTERNATIVE
+  finding: >
+    The title-question is transformed: the decisive return is to the two premodern roots whose unresolved opposition
+    exposes the insufficiency of modern progress and prevents return from becoming a simple restoration of one tradition.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - revelation versus philosophy as irreducible ways of life
+      - limits of historical proof and philosophical refutation of revelation
+      - obedience, creation, miracle, divine omnipotence, and philosophic autonomy
+      - Strauss's final statement that the conflict cannot be settled by human reason
+    non_absorption: >
+      The source does not certify either revelation or philosophy as true and does not absorb the separate historical and
+      civilizational relations tracked under Athens-versus-Jerusalem or Ancients-versus-Moderns.
+  athens_vs_jerusalem:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives:
+      - Bible and Greek philosophy as the two fundamental sources of Western civilization
+      - substantial ethical overlap together with radical disagreement over humility, self-assertion, cosmology, creation, and wisdom
+      - Western life as life between two codes without successful synthesis
+    non_absorption: >
+      The civilizational labels do not replace the primary question of revelation versus philosophy, and no synthesis or
+      victor is certified.
+  ancients_vs_moderns:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives:
+      - classical permanent order and human nature versus modern indefinite historical progress
+      - classical philosophy as a stronger opponent of revelation than modern anthropocentric unbelief
+      - return to premodern standards as critique of the crisis of modern progress
+    non_absorption: >
+      The source does not establish one uniform ancient or modern doctrine and does not reduce Jerusalem to the ancient
+      side of a Greek-modern dispute.
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  predecessor_statement: >
+    Establishes progress and return as rival orientations and presents the unresolved conflict between the biblical and philosophic accounts of the good life as a living foundation of Western civilization.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirmations:
+    - Progress and return are explicit rival orientations, but return is transformed into return to the two sources of Western civilization rather than one homogeneous tradition.
+    - Strauss explicitly presents Jerusalem and Athens as two fundamental codes whose unresolved tension constitutes the peculiar life of Western civilization.
+    - The final argument states that revelation and philosophy cannot refute one another and that their conflict cannot be settled by human reason.
+  qualifications:
+    - The source's climax is stronger than a general statement of cultural tension: philosophy itself is said to rest on an act of faith when it chooses the philosophic life despite inability to refute revelation.
+    - Historical criticism is not rejected generally; its incapacity is specifically tied to the impossible completeness required to demonstrate or disprove revelation.
+    - Return is not simple restoration, because the premodern source itself is internally divided between Jerusalem and Athens.
+  unresolved:
+    - Earlier 1979 and 1981 published textual states have not been separately compared with the reviewed 1997 collection.
+    - Biblical, Greek, Jewish, Christian, Spinozist, and modern historical witnesses remain independently incomplete unless separately registered.
+    - The source preserves rather than resolves the truth-question between revelation and philosophy.
+  predecessor_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+uncertainties:
+  - id: PROGRESS-RETURN-U-001
+    statement: The study is edition-specific to the 1997 collected witness and remains revisable after comparison with the 1979 and 1981 posthumous publication states.
+  - id: PROGRESS-RETURN-U-002
+    statement: Strauss's historical genealogy of progress and his characterizations of biblical, Greek, Christian, Jewish, and modern positions require independent corroboration.
+  - id: PROGRESS-RETURN-U-003
+    statement: The phrase "philosophy itself rests on an act of faith" is preserved as a source-local conclusion and must not be generalized without testing Strauss's other writings.
+
+prohibitions:
+  - Do not harmonize Jerusalem and Athens or treat synthesis as the source's solution.
+  - Do not infer that substantial moral overlap resolves the disagreement over ultimate authority and the good life.
+  - Do not treat modern historical criticism as capable of proving or disproving revelation merely because it can undermine traditional reliability claims.
+  - Do not use modern unbelief as a substitute for classical philosophy in the confrontation with revelation.
+  - Do not treat Strauss's act-of-faith formulation as a repository-wide doctrine without further source comparison.
+  - Do not certify revelation, philosophy, progress, natural right, theology, migration, successor activation, predecessor displacement, or repository completion.
+  - Do not attribute the editorial notes on printed pages 132-136 to Strauss.
+
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  earlier_publication_comparison_required: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
+  next_units:
+    - update CORPUS-STATUS-101 to record PROGRESS-RETURN-STUDY-001 and correct the source's publication provenance from the 1997 editorial note
+    - register CORPUS-STUDY-016 and FINDSET-016
+    - create jurisdiction-preserving Theologico-Political, Athens-versus-Jerusalem, and Ancients-versus-Moderns synthesis bridges
+    - validate source, witness, study, findings, jurisdiction, noncorroboration, and completion language
+    - proceed to CORPUS-SRC-104 after merge while preserving all edition, certification, migration, activation, and repin blockers
