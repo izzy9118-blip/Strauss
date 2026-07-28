@@ -1,16 +1,128 @@
 schema_version: 1.0
 document_type: source_status_record
-identity: {status_id: CORPUS-STATUS-108, corpus_source_id: CORPUS-SRC-108, canonical_title: "On the Interpretation of Genesis", author: Leo Strauss, date: 1957, version: 1.1.0}
-status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-108, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
-revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, pending comparison with the earlier published textual state, predecessor authority, noncertification, and no successor effect."}
-registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 8, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-108, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
+identity:
+  status_id: CORPUS-STATUS-108
+  corpus_source_id: CORPUS-SRC-108
+  canonical_title: On the Interpretation of Genesis
+  author: Leo Strauss
+  date: 1957
+  version: 1.2.0
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: CORPUS-WIT-108
+  independent_sequential_study: GENESIS-STUDY-001
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+revision_history:
+  predecessor_version: 1.1.0
+  transformation: FORWARD_SOURCE_STUDY_COMPLETION_AND_PROVENANCE_CORRECTION
+  reason: >
+    Record the independent sequential reconstruction of the complete reviewed 1997 collected item and correct the
+    collection-provenance statement to the editor's specific identification of the English text in L'Homme 21, no. 1
+    (1981), pages 5-20, followed by a French translation, while preserving the 1957 lecture date, pending textual-state
+    comparison, incomplete independent corroboration, predecessor authority, noncertification, and no successor effect.
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 8
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-108
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
   - The reviewed 1997 SUNY collected witness occupies printed pages 359-376 and one-based PDF pages 378-395.
+  - Strauss's lecture body occupies printed pages 359-375; editorial notes begin on printed page 375 and continue through page 376.
   - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
-  - The collection states that the item first appeared in L'Homme 21 (1981): 5-36; the active predecessor preserves the 1957 source date.
-predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Requires Genesis to be read first as a serious account of creation, command, obedience, disobedience, punishment, and the human place in the whole.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
-publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 359, end: 376}, pdf_page_range_one_based: {start: 378, end: 395}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
-reviewed_witness: {witness_id: CORPUS-WIT-108, witness_record_path: studies/theologico-political/on-the-interpretation-of-genesis/reviewed-witness.yaml, printed_page_range: {start: 359, end: 376}, pdf_page_range_one_based: {start: 378, end: 395}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
-source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to the source, not independent corroboration of biblical or predecessor claims."}
-next_required_actions: [conduct an independent sequential reading of printed pages 359-376, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization, compare the 1981 publication when separately reviewed]
-termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - The editor identifies the item as a lecture delivered on 25 January 1957 in the Works of the Mind series at University College, University of Chicago.
+  - The editor states that Strauss's prepared lecture text was first published posthumously in L'Homme 21, no. 1 (January-March 1981), pages 5-20, followed by a French translation.
+  - The editor states that the twenty-three notes in the reviewed collection are entirely editorial.
+  - GENESIS-STUDY-001 reconstructs the reviewed lecture sequentially in eight bounded reading units before comparison with the active predecessor.
+predecessor_contribution_record:
+  evidence_status: PROVISIONALLY_RETESTED_BY_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  statement: >
+    Requires Genesis to be read first as a serious account of creation, command, obedience, disobedience, punishment,
+    and the human place in the whole.
+  retest_result: >
+    The study confirms serious non-myth-dismissive reading, creation, command, prohibition, obedience, disobedience,
+    responsibility, and the human place in the whole. It qualifies punishment as less analytically central than
+    responsibility and prohibition and identifies the lecture's culminating issue as the unresolved alternative between
+    revelation and philosophy together with the different literary expectations of sacred and Greek philosophic books.
+  preservation_rule: >
+    Provisional confirmation and qualification do not certify, migrate, activate, displace, or silently rewrite the active predecessor.
+publication_and_witness_condition:
+  source_date: 1957
+  lecture_date: 1957-01-25
+  lecture_venue: University College, University of Chicago
+  lecture_series: Works of the Mind
+  first_posthumous_publication: "L'Homme 21, no. 1 (January-March 1981), 5-20, followed by a French translation"
+  edition: 1997 SUNY collected reprint in Jewish Philosophy and the Crisis of Modernity
+  pagination:
+    printed_page_range: {start: 359, end: 376}
+    argumentative_body: {start: 359, end: 375}
+    editorial_notes: {start: 375, end: 376}
+    pdf_page_range_one_based: {start: 378, end: 395}
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  fingerprint:
+    algorithm: SHA256
+    value: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  file_size_bytes: 39287307
+  container_page_count: 526
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+  lhomme_1981_text_comparison: PENDING
+  typed_1957_lecture_manuscript_comparison: PENDING
+reviewed_witness:
+  witness_id: CORPUS-WIT-108
+  witness_record_path: studies/theologico-political/on-the-interpretation-of-genesis/reviewed-witness.yaml
+  collected_reprint_year: 1997
+  source_date: 1957
+  printed_page_range: {start: 359, end: 376}
+  pdf_page_range_one_based: {start: 378, end: 395}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_file_size_bytes: 39287307
+  earlier_published_text_comparison: PENDING
+study_record:
+  internal_study_id: GENESIS-STUDY-001
+  corpus_study_id: CORPUS-STUDY-013
+  path: studies/theologico-political/on-the-interpretation-of-genesis/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  independent_corroboration: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_WRITING
+  documentary_rank: REVIEWED_PRIMARY_STRAUSS_ITEM_WITHIN_FINGERPRINTED_COLLECTED_WITNESS
+  analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+required_distinctions:
+  - scholarly doubt from dogmatic belief or unbelief
+  - the permanently given whole from explanations of its origin
+  - cosmological articulation accessible to man as man from the revelatory assertion of createdness
+  - human freedom from moral goodness
+  - autonomous knowledge of good and evil from knowledge received under revelation
+  - Greek philosophic book from sacred biblical book
+  - Strauss's lecture body from Kenneth Hart Green's editorial notes
+  - the reviewed 1997 collected text from separately reviewed 1981 or 1957 textual states
+  - source-specific reconstruction from independent corroboration
+prohibitions:
+  - Do not treat the predecessor contribution as a source-level quotation.
+  - Do not treat source-specific reconstruction as independent corroboration of Genesis, Greek philosophy, or represented traditions.
+  - Do not treat the 1997 collected text as a separately reviewed 1981 publication or 1957 typed manuscript.
+  - Do not attribute the editor's notes or note 16 hypothesis to Strauss.
+  - Do not transfer Greek whole-and-part expectations mechanically to the Bible.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
+next_required_actions:
+  - compare the 1981 L'Homme English text when separately available
+  - compare Strauss's typed 1957 lecture manuscript if a lawful reviewed witness becomes available
+  - reconstruct Genesis, Deuteronomy, and represented Greek and modern philosophical witnesses independently where required
+  - preserve source-level findings and problem jurisdictions in the typed findings registry
+  - proceed to the next scheduled independent Theologico-Political item study without revisiting completed witness acquisition
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-108
+  study_state: COMPLETE_PROVISIONAL
+  study_id: GENESIS-STUDY-001
+  independent_corroboration: INCOMPLETE
+  earlier_published_text_comparison: PENDING
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
