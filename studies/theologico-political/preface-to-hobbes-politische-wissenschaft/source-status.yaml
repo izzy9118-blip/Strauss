@@ -1,16 +1,128 @@
 schema_version: 1.0
 document_type: source_status_record
-identity: {status_id: CORPUS-STATUS-116, corpus_source_id: CORPUS-SRC-116, canonical_title: "Preface to Hobbes Politische Wissenschaft", author: Leo Strauss, date: 1965, version: 1.1.0}
-status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-116, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
-revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, pending earlier textual-state comparison, predecessor authority, noncertification, and no successor effect."}
-registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 16, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-116, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
+identity:
+  status_id: CORPUS-STATUS-116
+  corpus_source_id: CORPUS-SRC-116
+  canonical_title: Preface to Hobbes Politische Wissenschaft
+  author: Leo Strauss
+  date: 1965
+  version: 1.2.0
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: CORPUS-WIT-116
+  independent_sequential_study: HOBBES-PREFACE-STUDY-001
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+revision_history:
+  predecessor_version: 1.1.0
+  transformation: FORWARD_SOURCE_STUDY_COMPLETION
+  reason: >
+    Record the independent sequential reconstruction of the complete text actually reproduced in the reviewed 1997
+    collected item while preserving the omission of the final three paragraphs, pending comparison with the 1965 German
+    preface and 1979-80 Interpretation translation, incomplete independent corroboration, predecessor authority,
+    noncertification, and no migration or successor effect.
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 16
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-116
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
   - The reviewed 1997 SUNY collected witness occupies printed pages 453-456 and one-based PDF pages 472-475.
+  - Strauss's preface text reproduced in the collection occupies printed pages 453-454; translator/editorial notes begin on printed page 454 and continue through page 456.
   - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
-  - The collection states that the preface first appeared in Interpretation 8, no. 1 (1979-80): 1-3, translated by Donald J. Maletz; the active predecessor preserves the 1965 source date.
-predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Names the theologico-political problem as a continuing theme of Strauss's investigations and examines sovereign peace as political neutralization rather than philosophic resolution.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
-publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 453, end: 456}, pdf_page_range_one_based: {start: 472, end: 475}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
-reviewed_witness: {witness_id: CORPUS-WIT-116, witness_record_path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/reviewed-witness.yaml, printed_page_range: {start: 453, end: 456}, pdf_page_range_one_based: {start: 472, end: 475}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
-source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to the source, not independent corroboration."}
-next_required_actions: [conduct an independent sequential reading of printed pages 453-456, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization, compare the earlier published translation when separately reviewed]
-termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - Editorial note 1 states that Strauss added the preface to the 1965 first publication of the German original of his Hobbes book and that its first English translation appeared in Interpretation 8, no. 1 (1979-80), pages 1-3, translated by Donald J. Maletz; that translation is reproduced in the 1997 collection.
+  - Editorial note 8 states that the remaining three paragraphs of the 1965 preface are a German translation of the Preface to the American Edition of The Political Philosophy of Hobbes (1952), xv-xvi; those paragraphs are not reproduced in the reviewed item body.
+  - HOBBES-PREFACE-STUDY-001 reconstructs the reviewed item sequentially in six bounded reading units before comparison with the active predecessor.
+predecessor_contribution_record:
+  evidence_status: PARTIALLY_RETESTED_WITH_DOCUMENTARY_LIMIT
+  statement: >
+    Names the theologico-political problem as a continuing theme of Strauss's investigations and examines sovereign peace as political neutralization rather than philosophic resolution.
+  retest_result: >
+    The study directly confirms Strauss's explicit statement that the theologico-political problem has remained the theme
+    of his investigations and reconstructs its connection to Spinoza, biblical criticism, revived theology, Hobbes, true
+    politics, and the ancient-modern dispute. The sovereign-peace formulation cannot be independently retested because
+    the reviewed 1997 body omits the final three paragraphs to which editorial note 8 points.
+  preservation_rule: >
+    The untestable portion remains a predecessor claim rather than a promoted source finding. Provisional confirmation of
+    the continuity claim does not certify, migrate, activate, displace, or silently rewrite the active predecessor.
+publication_and_witness_condition:
+  source_date: 1965
+  german_publication: "Hobbes Politische Wissenschaft (Neuwied am Rhein und Berlin: Hermann Luchterhand Verlag, 1965)"
+  first_english_translation: "Interpretation 8, no. 1 (1979-80): 1-3, translated by Donald J. Maletz"
+  reviewed_edition: 1997 SUNY collected reproduction of the Maletz translation
+  pagination:
+    printed_page_range: {start: 453, end: 456}
+    strauss_preface_text_present_in_collection: {start: 453, end: 454}
+    notes: {start: 454, end: 456}
+    pdf_page_range_one_based: {start: 472, end: 475}
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  fingerprint:
+    algorithm: SHA256
+    value: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  file_size_bytes: 39287307
+  container_page_count: 526
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+  original_1965_german_preface_comparison: PENDING
+  interpretation_1979_80_translation_comparison: PENDING
+  omitted_final_three_paragraphs_review_state: NOT_PRESENT_IN_REVIEWED_ITEM_BODY
+reviewed_witness:
+  witness_id: CORPUS-WIT-116
+  witness_record_path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/reviewed-witness.yaml
+  collected_reprint_year: 1997
+  source_date: 1965
+  printed_page_range: {start: 453, end: 456}
+  pdf_page_range_one_based: {start: 472, end: 475}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_file_size_bytes: 39287307
+  original_edition_comparison: PENDING
+study_record:
+  internal_study_id: HOBBES-PREFACE-STUDY-001
+  corpus_study_id: CORPUS-STUDY-015
+  path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL_WITH_DOCUMENTARY_OMISSION_LIMIT
+  independent_corroboration: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_WRITING_IN_TRANSLATION
+  documentary_rank: REVIEWED_PRIMARY_STRAUSS_ITEM_WITHIN_FINGERPRINTED_COLLECTED_TRANSLATION
+  analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION_WITH_DOCUMENTARY_OMISSION_LIMIT
+required_distinctions:
+  - retrospective self-report from independent intellectual history
+  - theologico-political continuity claim from substantive resolution of the theologico-political problem
+  - mature Hobbes teaching from historical genesis of that teaching
+  - clear conclusions from obscure presuppositions
+  - partly voluntary obscurity from mechanical esoteric inversion
+  - reproduced Strauss preface body from translator/editorial notes and supplied excerpts
+  - reviewed 1997 Maletz translation from separately reviewed 1965 German or 1979-80 English textual states
+  - directly retested predecessor claim from claim blocked by omitted text
+prohibitions:
+  - Do not reconstruct omitted final paragraphs from the predecessor, memory, editorial summaries, or general knowledge.
+  - Do not attribute translator/editorial notes or supplied excerpts to Strauss's reproduced 1965 preface body.
+  - Do not treat Strauss's retrospective continuity claim as proof of a single unchanged doctrine across all later writings.
+  - Do not treat Hobbes's partly voluntary obscurity as a license for mechanical inversion.
+  - Do not treat source-specific reconstruction as independent corroboration of Hobbes, Spinoza, Kant, or named interlocutors.
+  - Do not treat the 1997 translation as independently identical to the 1965 German text or 1979-80 printing without comparison.
+  - Do not promote the sovereign-peace predecessor claim beyond PARTIALLY_RETESTED_WITH_DOCUMENTARY_LIMIT in this witness.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
+next_required_actions:
+  - compare the 1965 German preface and 1979-80 Interpretation translation when separately available
+  - review the omitted final three paragraphs through a lawful textual witness before retesting the sovereign-peace predecessor claim
+  - reconstruct Hobbes, Spinoza, and represented modern and ancient interlocutors independently where required
+  - preserve source-level findings and problem jurisdictions in the typed findings registry
+  - proceed to the next scheduled independent Theologico-Political item study without revisiting completed witness acquisition
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-116
+  study_state: COMPLETE_PROVISIONAL_WITH_DOCUMENTARY_OMISSION_LIMIT
+  study_id: HOBBES-PREFACE-STUDY-001
+  independent_corroboration: INCOMPLETE
+  original_edition_comparison: PENDING
+  omitted_text_review: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
