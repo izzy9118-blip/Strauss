@@ -1,0 +1,474 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: GENESIS-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, On the Interpretation of Genesis
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  earlier_published_text_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-108
+  source_status_id: CORPUS-STATUS-108
+  reviewed_witness_id: CORPUS-WIT-108
+  author: Leo Strauss
+  canonical_title: On the Interpretation of Genesis
+  source_date: 1957
+  reviewed_container:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  editorial_provenance:
+    lecture_delivered: 1957-01-25
+    venue: University College, University of Chicago
+    series: Works of the Mind
+    first_posthumous_publication: "L'Homme 21, no. 1 (January-March 1981): 5-20, followed by a French translation"
+    source_of_provenance: editor_note_in_reviewed_1997_witness
+    earlier_published_text_separately_reviewed: false
+    original_typed_lecture_manuscript_separately_reviewed: false
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  locators:
+    printed_pages: {start: 359, end: 376}
+    argumentative_body: {start: 359, end: 375}
+    editorial_notes: {start: 375, end: 376}
+    pdf_pages_one_based: {start: 378, end: 395}
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The reviewed witness is the 1997 SUNY collected text, not a separately reviewed copy of the 1981 L'Homme publication or Strauss's 1957 typed lecture manuscript.
+  - The notes beginning on printed page 375 are explicitly identified by the editor as entirely editorial and therefore may not be treated as Strauss's notes.
+  - The editor states that the 1997 version reproduces the previously published text while preserving two textual difficulties discussed in editorial note 16; this study does not independently compare the 1981 text or the typed manuscript.
+  - Strauss's Hebrew, biblical, Platonic, Aristotelian, Herodotean, Hegelian, and other represented claims remain independently unreconstructed unless separately registered.
+  - Strauss's reconstruction of Genesis is not independent corroboration of the biblical text, its authorship, its historical origin, or any theological doctrine.
+  - The study does not decide the truth of revelation, the existence or nonexistence of an omnipotent God, the possibility of miracles, or the truth of philosophy.
+
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+
+method_application:
+  governing_question: >
+    How does Strauss read the beginning of Genesis when the reader cannot decide in advance, by scholarly reason alone,
+    whether the Bible is merely a human work or the document of revelation, and when the biblical articulation of the
+    whole must be understood before it is explained away as myth, cosmology, source history, or later theology?
+  recovered_source_question: >
+    What becomes visible when Genesis 1-3 is read as a serious articulation of the permanently given whole and of human
+    life, and how does that articulation pose the still-unresolved alternative between obedient life under revelation
+    and the human freedom represented by Greek philosophy?
+  reconstruction_rule: >
+    Read printed pages 359-375 in textual order before comparing with the active predecessor. Keep the editor's notes on
+    printed pages 375-376 documentary and separate from Strauss's lecture. Distinguish Strauss's explicit claims, his
+    tentative suggestions, his reconstructions of Genesis and Greek philosophy, and unresolved questions.
+  presupposition_rule: >
+    Do not decide the possibility of revelation or miracles before reading. Strauss argues that scholarly reason can
+    neither prove nor disprove the omnipotent God without a final comprehensive philosophic system; the scholarly stance
+    therefore begins in doubt rather than dogmatic unbelief or belief.
+  whole_and_part_rule: >
+    Do not assume that the literary standards Strauss associates with a Greek philosophic book govern the Bible. The
+    lecture explicitly contrasts a Greek book, whose parts are ordered by a sovereign human author toward a knowable
+    purpose, with a sacred book whose human transmitters are subordinate to writings and purposes they regard as divine.
+
+speaker_and_documentary_layers:
+  strauss_1957_lecture:
+    role: source author and interpreter
+    rule: Strauss's lecture body on printed pages 359-375 is the primary object reconstructed here.
+  genesis_as_reconstructed:
+    role: biblical text interpreted by Strauss
+    rule: Findings about Genesis are Strauss's source-level reconstruction until independently tested against registered biblical witnesses and language evidence.
+  greek_philosophy_as_reconstructed:
+    role: principal alternative represented by Strauss
+    rule: Claims about Greek philosophy, Plato, Aristotle, Herodotus, and cosmology remain source-represented rather than independently corroborated.
+  editor_kenneth_hart_green:
+    role: provenance and annotation layer
+    rule: Editorial notes, including note 16's hypothesis about Strauss's textual irregularities, remain editorial evidence and may not be attributed to Strauss without separate support.
+
+sequential_reading:
+  - unit: GENESIS-RU-001
+    printed_pages: 359-361
+    function: Establish the reader's initial predicament between revelation and human authorship and the scholarly state of doubt.
+    findings:
+      - id: GENESIS-DF-001
+        classification: documented_finding
+        proposition: >
+          Strauss begins from the Western inheritance as partly biblical and partly Greek and treats their agreement and disagreement as unavoidable for political theory.
+      - id: GENESIS-DF-002
+        classification: documented_finding
+        proposition: >
+          Whether the Bible is a human work or the work of God is decisive for how it must be read: critical argument is appropriate to a human book, whereas revelation calls for reverent hearing and submission.
+      - id: GENESIS-DF-003
+        classification: documented_finding
+        proposition: >
+          The possibility of miracles turns on the possibility of an omnipotent God, and Strauss argues that experience and contradiction arguments do not establish the nonexistence of such a God.
+      - id: GENESIS-DF-004
+        classification: documented_finding
+        proposition: >
+          Human reason likewise cannot establish the existence of the omnipotent God, so the scholar approaches the Bible in doubt concerning the most important question.
+      - id: GENESIS-DF-005
+        classification: documented_finding
+        proposition: >
+          The background of that doubt is not nihilistic ignorance but knowledge of permanent comprehensive questions arising from the fundamental human situation within the permanently given whole.
+    uncertainties:
+      - The lecture does not convert scholarly doubt into either belief or unbelief and therefore does not settle the theological alternative it makes decisive.
+
+  - unit: GENESIS-RU-002
+    printed_pages: 361-365
+    function: Refuse the dismissal of Genesis as merely mythical and reconstruct creation through separation and the two-part order of the six days.
+    findings:
+      - id: GENESIS-DF-006
+        classification: documented_finding
+        proposition: >
+          The opening speaker is unnamed and the creation account is strange, but Strauss treats strangeness as a reason for closer interpretation rather than as permission to stop understanding by labeling the text mythical.
+      - id: GENESIS-DF-007
+        classification: supported_inference
+        proposition: >
+          By comparing creating with making and with the fruit tree's production, Strauss suggests that creation is intelligible through separation: the making of distinguishable and separable beings and even of separating things.
+      - id: GENESIS-DF-008
+        classification: documented_finding
+        proposition: >
+          The six days form two parallel triads: the first begins with light and culminates in the vegetative world, while the second begins with the heavenly bodies and culminates in land animals and man.
+      - id: GENESIS-DF-009
+        classification: supported_inference
+        proposition: >
+          Strauss proposes separation or distinction as the principle of the first triad and local motion as the higher form of separation governing the second, thereby making the priority of plants to the sun intelligible within the account's own order.
+    uncertainties:
+      - Strauss repeatedly presents parts of this reconstruction as suggestions and clues rather than as demonstrated authorial doctrine.
+
+  - unit: GENESIS-RU-003
+    printed_pages: 365-368
+    function: Develop the ascending order from local motion through life to man and identify the chapter's diairetic articulation.
+    findings:
+      - id: GENESIS-DF-010
+        classification: supported_inference
+        proposition: >
+          Life represents a higher separation than heavenly motion because animals can change not merely place but course, while the capacity to be addressed and to hear marks living beings in Strauss's reading.
+      - id: GENESIS-DF-011
+        classification: supported_inference
+        proposition: >
+          Man is the creature separated in the highest degree because human beings can depart not merely from a place or course but from a way, including the right way; freedom therefore appears together with the possibility of deviation.
+      - id: GENESIS-DF-012
+        classification: documented_finding
+        proposition: >
+          Strauss describes Genesis 1 as structured by division by two, or Platonic diairesis, and argues that its fundamental articulation is intellectual rather than the sexual dualism of male and female found in other cosmogonies.
+      - id: GENESIS-DF-013
+        classification: documented_finding
+        proposition: >
+          The created beings named in Genesis 1 are beings accessible to ordinary human perception, so the account begins from the world as human beings permanently know it prior to mythical or scientific explanation.
+    uncertainties:
+      - The invocation of Platonic diairesis is an interpretive comparison and does not establish historical dependence of Genesis on Plato.
+
+  - unit: GENESIS-RU-004
+    printed_pages: 368-370
+    function: Move from the accessible cosmological articulation to the non-evident claim of creation and the depreciation of heaven.
+    findings:
+      - id: GENESIS-DF-014
+        classification: documented_finding
+        proposition: >
+          The cosmology underlying Genesis is an unthematic presupposition rather than the biblical author's theme; the theme is that the articulated world was created by God.
+      - id: GENESIS-DF-015
+        classification: supported_inference
+        proposition: >
+          The pattern of divine naming and calling-good leads Strauss to describe Genesis 1 as demoting heaven: heavenly bodies are lifeless instruments rather than gods, and heaven is subordinated to earthly life and man.
+      - id: GENESIS-DF-016
+        classification: documented_finding
+        proposition: >
+          Strauss presents the demotion of heaven as a deep opposition between the Bible and cosmology and, because philosophy ultimately rests on cosmology in his account here, between the Bible and philosophy.
+      - id: GENESIS-DF-017
+        classification: documented_finding
+        proposition: >
+          The articulation of plants, animals, heaven, and earth is accessible to man as man, whereas the world's createdness is not evident knowledge and is known, in the biblical presentation, through divine speech to Israel.
+      - id: GENESIS-DF-018
+        classification: documented_finding
+        proposition: >
+          Those who have not heard the revelatory speech remain within the horizon of cosmology and are naturally led toward the heavenly bodies rather than beyond created things.
+    uncertainties:
+      - This is Strauss's reconstruction of the biblical contrast; it does not independently prove creation or reconstruct Deuteronomy as a separate witness.
+
+  - unit: GENESIS-RU-005
+    printed_pages: 370-372
+    function: Explain why a second creation account is required once man appears as free, ambiguous, and responsible.
+    findings:
+      - id: GENESIS-DF-019
+        classification: documented_finding
+        proposition: >
+          Genesis 1 ends with man as the highest part of the whole, but that perspective cannot adequately display the absolute difference and ambiguity introduced by human freedom.
+      - id: GENESIS-DF-020
+        classification: documented_finding
+        proposition: >
+          The second account begins from man and introduces prohibition because a negative command sets the human limit explicitly and therefore articulates the distinction between good and evil.
+      - id: GENESIS-DF-021
+        classification: supported_inference
+        proposition: >
+          Strauss reconstructs the garden as an original condition of ease so that present injustice cannot be excused as the unavoidable result of original neediness; responsibility requires that disobedience not have been forced by necessity.
+      - id: GENESIS-DF-022
+        classification: documented_finding
+        proposition: >
+          The second account redistributes the accents of the first by presenting man in lowliness, as dust from the earth, and thereby removes both need and exalted status as sufficient explanations for disobedience.
+    uncertainties:
+      - Strauss's remarks on the sequence of man, animals, and woman are part of his reconstruction of the text and may not be generalized into a repository doctrine about sex or human rank.
+
+  - unit: GENESIS-RU-006
+    printed_pages: 372-373
+    function: Interpret the transgression as autonomous knowledge and state the fundamental alternative of Bible and philosophy.
+    findings:
+      - id: GENESIS-DF-023
+        classification: documented_finding
+        proposition: >
+          Strauss calls the transgression mysterious but insists that man chose to disobey; he interprets knowledge of good and evil as the principle of autonomous human knowledge rather than simply as a prior desire for knowledge.
+      - id: GENESIS-DF-024
+        classification: supported_inference
+        proposition: >
+          Strauss links Genesis 1's depreciation of heaven with Genesis 2-3's depreciation of autonomous knowledge: the first questions philosophy's primary theme and the second its intention.
+      - id: GENESIS-DF-025
+        classification: documented_finding
+        proposition: >
+          The Bible confronts the reader with the fundamental alternative between life in obedience to revelation and life in human freedom represented by Greek philosophy.
+      - id: GENESIS-DF-026
+        classification: documented_finding
+        proposition: >
+          Strauss rejects a higher synthesis of Bible and philosophy because a synthesis necessarily sacrifices the decisive claim of at least one of the alternatives.
+    uncertainties:
+      - Strauss qualifies the claim that true knowledge of good and evil is supplied only by revelation as something one could say in light of later theological developments, not as a direct statement of Genesis by itself.
+      - The discussion following the lecture, where Strauss proposed to take up the question of synthesis, is not preserved according to the editor.
+
+  - unit: GENESIS-RU-007
+    printed_pages: 373-375
+    function: Contrast the Greek philosophic book with the sacred book and derive different whole-part expectations.
+    findings:
+      - id: GENESIS-DF-027
+        classification: documented_finding
+        proposition: >
+          Strauss presents the Greek philosophic book as a deliberate work of art imitating a living being, in which a sovereign author orders beginning, end, center, and every part toward a knowable function and independent thinking.
+      - id: GENESIS-DF-028
+        classification: documented_finding
+        proposition: >
+          The perfect Greek book is an image of the comprehensive and evident knowledge philosophy seeks but never fully attains, and Strauss therefore says Greek philosophy is inseparable from Greek poetry.
+      - id: GENESIS-DF-029
+        classification: documented_finding
+        proposition: >
+          The Bible rejects autonomous knowledge; under the biblical premise, human transmitters are not sovereign authors but inherit holy writings whose divine purpose exceeds them and which they may alter only under a rule of reverence and minimal necessary change.
+      - id: GENESIS-DF-030
+        classification: documented_finding
+        proposition: >
+          Strauss consequently allows that the sacred book may contain unintended contradictions and repetitions, whereas the Greek philosophic book is interpreted on the premise that every part has a knowable authorial ground.
+      - id: GENESIS-DF-031
+        classification: bounded_conclusion
+        proposition: >
+          The lecture itself therefore forbids applying one undifferentiated whole-and-part hermeneutic to Bible and Platonic dialogue: literary form follows their opposed understandings of divine mystery and human authorial sovereignty.
+    uncertainties:
+      - Strauss's account of biblical compilation is presented as probable and governed by the biblical premise; it is not a source-critical reconstruction of the Hebrew Bible's actual compositional history.
+
+  - unit: GENESIS-RU-008
+    printed_pages: 375-376
+    function: Separate editorial apparatus from Strauss's lecture and preserve textual-provenance uncertainties.
+    findings:
+      - id: GENESIS-DO-001
+        classification: structural_evidence
+        proposition: >
+          The editor identifies the item as a lecture delivered on 25 January 1957 and states that Strauss's prepared text was first published posthumously in L'Homme 21, no. 1 (1981), pages 5-20, followed by a French translation.
+      - id: GENESIS-DO-002
+        classification: structural_evidence
+        proposition: >
+          The editor explicitly states that all twenty-three notes to the lecture are editorial rather than Strauss's own notes.
+      - id: GENESIS-UU-001
+        classification: unresolved_uncertainty
+        proposition: >
+          Editorial note 16 reports two textual irregularities concerning Genesis 1:27 and says the typed manuscript suggests they may have been deliberate; without separate review of that manuscript, authorial intention remains unresolved.
+      - id: GENESIS-UU-002
+        classification: unresolved_uncertainty
+        proposition: >
+          The editor reports that no record, tape, or transcript of the post-lecture discussion is known, so Strauss's proposed further discussion of synthesis cannot be reconstructed from this witness.
+
+permanent_findings:
+  - id: GENESIS-PF-001
+    classification: documented_finding
+    proposition: >
+      The Bible must be approached under an unresolved alternative between human authorship and revelation because the answer determines whether criticism or reverent hearing is the appropriate primary posture.
+  - id: GENESIS-PF-002
+    classification: documented_finding
+    proposition: >
+      Scholarly reason neither proves nor disproves the omnipotent God in Strauss's argument here; responsible scholarly reading therefore begins from doubt rather than an assumed impossibility of revelation.
+  - id: GENESIS-PF-003
+    classification: documented_finding
+    proposition: >
+      Genesis begins from an articulation of the permanently given whole accessible to human beings prior to mythical or scientific explanation.
+  - id: GENESIS-PF-004
+    classification: supported_inference
+    proposition: >
+      Strauss reconstructs Genesis 1 through separation, two parallel triads, and an ascent from distinction through local motion and life to human freedom.
+  - id: GENESIS-PF-005
+    classification: documented_finding
+    proposition: >
+      The cosmological articulation of the world is accessible to man as man, but the claim that the world is created is not evident knowledge and belongs to revelation.
+  - id: GENESIS-PF-006
+    classification: documented_finding
+    proposition: >
+      Genesis demotes heaven and the heavenly bodies, opposing the biblical orientation to cosmology and therefore, in Strauss's formulation here, to philosophy.
+  - id: GENESIS-PF-007
+    classification: documented_finding
+    proposition: >
+      Human freedom appears as ambiguity and danger, requiring the second creation account to articulate human life through prohibition, responsibility, obedience, and disobedience.
+  - id: GENESIS-PF-008
+    classification: supported_inference
+    proposition: >
+      Strauss interprets disobedience as autonomous knowledge of good and evil and links it to the philosophic attempt to orient life by understanding nature or heaven.
+  - id: GENESIS-PF-009
+    classification: documented_finding
+    proposition: >
+      The fundamental alternative is life in obedience to revelation or life in human freedom represented by Greek philosophy, and Strauss denies that a superior synthesis can preserve the decisive claims of both.
+  - id: GENESIS-PF-010
+    classification: documented_finding
+    proposition: >
+      The Greek philosophic book and the sacred Bible require different literary expectations because the former presupposes sovereign human authorship and knowable purposive order while the latter reflects a divine purpose held to exceed human mastery.
+  - id: GENESIS-PF-011
+    classification: documented_finding
+    proposition: >
+      Strauss explicitly allows unintended contradictions and repetitions in the sacred book while treating the ideal Greek philosophic book as ordered so that every part has a knowable ground.
+  - id: GENESIS-PF-012
+    classification: bounded_conclusion
+    proposition: >
+      The source therefore places a jurisdictional limit on whole-and-part analysis: standards appropriate to Platonic dialogue may not be transferred mechanically to the Bible.
+  - id: GENESIS-PF-013
+    classification: unresolved_uncertainty
+    proposition: >
+      The 1981 published text, the 1957 typed manuscript, and the editor's hypothesis concerning the Genesis 1:27 irregularities remain unverified against separately reviewed witnesses.
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss presents the lecture as a non-biblical-specialist's attempt to understand the beginning of Genesis without
+    relying entirely on authorities, while maintaining scholarly doubt about revelation and taking the biblical account
+    seriously enough to reconstruct its internal distinctions.
+  textual_deed: >
+    The lecture begins by suspending the modern presumption against miracle, reconstructs Genesis 1 as a rationally
+    articulable whole, then shows that its decisive claim of creation exceeds natural evidence; it moves from cosmology
+    to command and human responsibility, states the Bible-philosophy alternative, and concludes by showing that the two
+    alternatives imply different kinds of books and therefore different rules of reading.
+  relation: THEOLOGICO_POLITICAL_ALTERNATIVE_DEMONSTRATED_THROUGH_GENESIS_AND_BOOK_FORM
+  finding: >
+    The movement of the lecture enacts the distinction between what is accessible to man as man and what is known only
+    through revelation, while refusing either to dissolve revelation into mythology or to certify it philosophically.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - revelation and human reason under scholarly doubt
+      - creation as divine declaration rather than evident cosmological knowledge
+      - command, prohibition, obedience, disobedience, responsibility, and autonomous knowledge
+      - the unresolved alternative between biblical obedience and philosophic freedom
+      - Strauss's rejection of a synthesis that cancels a decisive claim of either alternative
+    non_absorption: >
+      The problem does not independently establish biblical revelation, miracles, divine omnipotence, or the doctrines
+      of Greek philosophy, and it does not erase the distinct Athens-versus-Jerusalem or Nomos-versus-Physis jurisdictions.
+  athens_vs_jerusalem:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives:
+      - biblical and Greek sources of the Western inheritance
+      - the depreciation of heaven versus philosophic cosmology
+      - revelation and obedience versus Greek philosophic freedom
+      - the contrast between the sacred book and the sovereign Greek philosophic book
+    non_absorption: >
+      The source states an alternative but does not certify either side as true, does not prove a complete historical
+      account of Athens or Jerusalem, and does not authorize a synthesis that silently removes their decisive claims.
+  nomos_vs_physis:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives:
+      - prohibition as the explicit limit separating permitted from forbidden human action
+      - autonomous knowledge of good and evil contrasted with knowledge received under revelation
+      - the relation between human freedom, responsibility, need, nature, and command
+    non_absorption: >
+      Command may not be reduced to convention and nature may not be identified with philosophic truth without independent
+      source reconstruction; the source preserves rather than settles the relation between natural evidence and revealed law.
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  predecessor_statement: >
+    Requires Genesis to be read first as a serious account of creation, command, obedience, disobedience, punishment,
+    and the human place in the whole.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirmations:
+    - Strauss explicitly refuses to dismiss Genesis as merely mythical and reconstructs its order before explaining it away.
+    - Creation, command, prohibition, obedience, disobedience, responsibility, and the human place in the whole are explicit components of the lecture.
+    - The first account places man within the whole while the second account focuses on the distinctive ambiguity and responsibility of human life.
+  qualifications:
+    - Punishment is present in the background of the transition from original ease to present human life, but the lecture's sharper analytic emphasis is on responsibility, prohibition, and the choice of disobedience.
+    - The source's culminating claim is not merely anthropological: Genesis brings into view the unresolved alternative between revelation and philosophy and then connects that alternative to two different ideals of the book.
+    - The source itself limits the transfer of Greek whole-and-part expectations to the Bible by allowing unintended contradiction and repetition in sacred compilation.
+  unresolved:
+    - The 1981 published textual state and Strauss's 1957 typed lecture manuscript have not been separately reviewed.
+    - Genesis, Deuteronomy, Plato, Aristotle, Herodotus, Hegel, and represented theological and historical traditions require independent reconstruction where relied upon.
+    - The truth of revelation, the possibility of miracles, and the truth of philosophy remain unresolved by the scholarly argument.
+  predecessor_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+uncertainties:
+  - id: GENESIS-U-001
+    statement: The study is specific to the 1997 collected witness and remains revisable after separate comparison with the 1981 L'Homme text and, if available, Strauss's typed 1957 lecture manuscript.
+  - id: GENESIS-U-002
+    statement: Strauss's biblical-language claims and his characterizations of Greek philosophy require independent primary-text reconstruction for corroboration.
+  - id: GENESIS-U-003
+    statement: Editorial note 16's suggestion of deliberate textual irregularity is an editorial hypothesis rather than a certified finding about Strauss's intention.
+  - id: GENESIS-U-004
+    statement: The lecture announces further discussion of synthesis, but the editor reports no surviving record of that discussion.
+
+prohibitions:
+  - Do not treat scholarly doubt as a hidden declaration of either belief or unbelief.
+  - Do not dismiss textual strangeness as myth before reconstructing the source's internal articulation.
+  - Do not convert Strauss's tentative separation and diairesis reconstruction into a demonstrated historical claim about Genesis's authorship or dependence.
+  - Do not treat the source's depreciation of heaven as an independently established account of all Greek philosophy.
+  - Do not identify human freedom with moral goodness or disobedience with philosophic truth.
+  - Do not generalize Strauss's source-local remarks about sex hierarchy into a repository doctrine.
+  - Do not transfer the Greek philosophic-book model mechanically to the Bible.
+  - Do not infer Strauss's intention from editorial note 16's hypothesis without separately reviewed manuscript evidence.
+  - Do not attribute the editor's notes to Strauss.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  earlier_published_text_comparison_required: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
+  next_units:
+    - update CORPUS-STATUS-108 to record GENESIS-STUDY-001 and correct publication provenance to the editor's specific 1981 pages 5-20 for Strauss's English text
+    - register CORPUS-STUDY-013 and FINDSET-013
+    - create jurisdiction-preserving Theologico-Political, Athens-versus-Jerusalem, and Nomos-versus-Physis synthesis bridges
+    - validate source, witness, study, findings, jurisdiction, noncorroboration, and completion language
+    - proceed to CORPUS-SRC-113 after merge while preserving all edition, certification, migration, activation, and repin blockers
