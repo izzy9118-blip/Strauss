@@ -3,7 +3,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.11.0
+  version: 1.12.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
@@ -15,23 +15,23 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.10.0
-  predecessor_blob_sha: 2f43687b7d4994ff216abb3d3cd64128c9aaefed
-  reason: Complete SPINOZA-TREATISE-STUDY-001 as the fifth provisional Theologico-Political sequential reconstruction
-    and advance the next study unit to CORPUS-SRC-108 while preserving 19-of-19 witness coverage and fourteen remaining
+  predecessor_version: 1.11.0
+  predecessor_blob_sha: CURRENT_MAIN_PREDECESSOR_PRESERVED_BY_GIT
+  reason: Complete GENESIS-STUDY-001 as the sixth provisional Theologico-Political sequential reconstruction and
+    advance the next study unit to CORPUS-SRC-113 while preserving 19-of-19 witness coverage and thirteen remaining
     studies.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 2.7.0
+  current_version: 2.8.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.9.0
+  current_version: 1.10.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -78,16 +78,8 @@ steps:
     and Ancients-versus-Moderns
   - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
     and Wise-versus-Vulgar
-  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
-    and Wise-versus-Vulgar
-  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
-    and Wise-versus-Vulgar
-  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
-    and Wise-versus-Vulgar
-  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
-    and Wise-versus-Vulgar
-  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
-    and Wise-versus-Vulgar
+  - On the Interpretation of Genesis supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem,
+    and Nomos-versus-Physis
   remaining:
   - complete source-specific application to each problem
   - complete independent witness reconstruction
@@ -108,13 +100,9 @@ steps:
     their reviewed witnesses
   - corpus and findings registries preserve derivation, jurisdiction, gaps, witness/study distinctions, and noncertification
   - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
-  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
-  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
-  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
-  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
-  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
+  - GENESIS-STUDY-001 is complete provisional for CORPUS-WIT-108
   remaining:
-  - conduct fourteen independent sequential item studies, beginning with CORPUS-SRC-108
+  - conduct thirteen independent sequential item studies, beginning with CORPUS-SRC-113
   - compare original or earlier textual states where available and material
   - materialize and fingerprint CORPUS-WIT-102 only through later forward revision if exact bytes become accessible
   - reconstruct Talmon's reviewed work independently
@@ -148,21 +136,21 @@ steps:
 current_production_unit:
   step: 8
   completed_subunit:
-    title: How to Study Spinoza's Theologico-Political Treatise independent sequential reconstruction
+    title: On the Interpretation of Genesis independent sequential reconstruction
     state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
-    source_id: CORPUS-SRC-103
-    witness_id: CORPUS-WIT-103
-    study_id: SPINOZA-TREATISE-STUDY-001
+    source_id: CORPUS-SRC-108
+    witness_id: CORPUS-WIT-108
+    study_id: GENESIS-STUDY-001
     witness_coverage: COMPLETE_19_OF_19
-    study_coverage: INCOMPLETE_5_OF_19
+    study_coverage: INCOMPLETE_6_OF_19
     non_effect: Source-study completion does not supply independent corroboration, doctrine, certified migration,
       successor activation, predecessor displacement, or completed-interface readiness.
   next_subunit:
-    title: On the Interpretation of Genesis independent sequential reconstruction
-    source_id: CORPUS-SRC-108
-    witness_id: CORPUS-WIT-108
-    first_action: Reconstruct printed pages 359-376 in textual order before comparing with the active predecessor.
-    following_source: CORPUS-SRC-113
+    title: Introduction to Persecution and the Art of Writing independent sequential reconstruction
+    source_id: CORPUS-SRC-113
+    witness_id: CORPUS-WIT-113
+    first_action: Reconstruct printed pages 417-429 in textual order before comparing with the active predecessor.
+    following_source: CORPUS-SRC-116
   non_effects:
   - no source-text admission through registries
   - no doctrinal or migration certification

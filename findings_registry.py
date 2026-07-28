@@ -31,29 +31,32 @@ TP_PRESERVED_PATH = (
 )
 
 EXPECTED_SYNTHESIS_PATHS = {
+    "problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml",
+    "problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml",
+    "problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml",
+    "problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml",
+    "problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml",
+    "problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml",
+    "problems/athens-vs-jerusalem/synthesis/on-the-interpretation-of-genesis.yaml",
+    "problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml",
+    "problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml",
+    "problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml",
+    "problems/nomos-vs-physis/synthesis/on-the-interpretation-of-genesis.yaml",
     "problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/philosophy-vs-poetry/synthesis/socrates-and-aristophanes.yaml",
     "problems/philosophy-vs-poetry/synthesis/studies-in-platonic-political-philosophy.yaml",
-    "problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml",
-    "problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml",
-    "problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml",
-    "problems/theologico-political/synthesis/jerusalem-and-athens.yaml",
     "problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml",
-    "problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml",
-    "problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml",
-    "problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml",
-    "problems/athens-vs-jerusalem/synthesis/jerusalem-and-athens.yaml",
-    "problems/athens-vs-jerusalem/synthesis/hermann-cohen-religion-of-reason.yaml",
-    "problems/athens-vs-jerusalem/synthesis/talmon-nature-of-jewish-history.yaml",
-    "problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml",
     "problems/theologico-political/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml",
+    "problems/theologico-political/synthesis/jerusalem-and-athens.yaml",
+    "problems/theologico-political/synthesis/on-the-interpretation-of-genesis.yaml",
+    "problems/theologico-political/synthesis/predecessor-v1.1-reconstruction.yaml",
+    "problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml",
+    "problems/theologico-political/synthesis/studies-in-platonic-political-philosophy.yaml",
+    "problems/theologico-political/synthesis/talmon-nature-of-jewish-history.yaml",
+    "problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/wise-vs-vulgar/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml",
     "problems/wise-vs-vulgar/synthesis/plato-apology.yaml",
     "problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml",
-    "problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml",
-    "problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml",
-    "problems/ancients-vs-moderns/synthesis/talmon-nature-of-jewish-history.yaml",
-    "problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml",
 }
 
 EXPECTED_TRANSACTION_PATHS = {
@@ -94,6 +97,7 @@ DIRECT_SOURCE_KEYS = [
     "CORPUS-SRC-102",
     "CORPUS-SRC-103",
     "CORPUS-SRC-105",
+    "CORPUS-SRC-108",
     "CORPUS-SRC-111",
 ]
 
@@ -158,6 +162,12 @@ SOURCE_STUDY_CONTRACTS = {
         "local_syntheses": ["FINDSET-122", "FINDSET-123"],
         "problem_bindings": {"FINDSET-122": "theologico-political", "FINDSET-123": "wise-vs-vulgar"},
         "required_limits": {"witness_id": "CORPUS-WIT-103", "original_1948_journal_comparison": "PENDING", "independent_corroboration": "INCOMPLETE"},
+    },
+    "FINDSET-013": {
+        "source_id": "CORPUS-SRC-108",
+        "local_syntheses": ["FINDSET-124", "FINDSET-125", "FINDSET-126"],
+        "problem_bindings": {"FINDSET-124": "theologico-political", "FINDSET-125": "athens-vs-jerusalem", "FINDSET-126": "nomos-vs-physis"},
+        "required_limits": {"witness_id": "CORPUS-WIT-108", "earlier_published_text_comparison": "PENDING", "independent_corroboration": "INCOMPLETE"},
     },
 }
 
@@ -296,7 +306,7 @@ def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[
     result = {key: [] for key in DIRECT_SOURCE_KEYS}
     result["CORPUS-SRC-101-119"] = []
     predecessor_sources = {f"CORPUS-SRC-{number:03d}" for number in range(101, 120)}
-    separately_indexed = {"CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-105", "CORPUS-SRC-111"}
+    separately_indexed = {"CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-105", "CORPUS-SRC-108", "CORPUS-SRC-111"}
     for item in finding_sets:
         bindings = set(item.get("source_bindings", []))
         finding_id = item["finding_set_id"]
@@ -380,8 +390,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.5.0":
-        errors.append("findings registry identity.version must be 1.5.0")
+    if identity.get("version") != "1.6.0":
+        errors.append("findings registry identity.version must be 1.6.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -396,8 +406,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(registry.get("findings_gaps", []), "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 40:
-        errors.append(f"expected 40 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 44:
+        errors.append(f"expected 44 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 

@@ -3,19 +3,19 @@ record_type: reviewed_witness_priority_schedule
 identity:
   id: TP-REVIEWED-WITNESS-PRIORITY-001
   title: Theologico-Political Reviewed-Witness Priority Schedule
-  version: 1.9.0
+  version: 1.10.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SCHEDULE
   certification: NOT_CERTIFIED
   identity_registration: COMPLETE_19_OF_19
   reviewed_witness_completion: COMPLETE_19_OF_19
-  independent_sequential_study_completion: INCOMPLETE_5_OF_19
+  independent_sequential_study_completion: INCOMPLETE_6_OF_19
 revision_history:
-  predecessor_version: 1.8.0
-  predecessor_blob_sha: 432005d900258d2fc0eac1c76a655fb02ee77b08
-  reason: Complete SPINOZA-TREATISE-STUDY-001 from CORPUS-WIT-103, advancing independent sequential study coverage
-    to 5-of-19 and the next study unit to CORPUS-SRC-108 while preserving complete 19-of-19 witness coverage and
-    all edition, corroboration, certification, migration, and successor limits.
+  predecessor_version: 1.9.0
+  predecessor_blob_sha: bfef8527585a7e6c87f33b519717135bb2b08ccd
+  reason: Complete GENESIS-STUDY-001 from CORPUS-WIT-108, advancing independent sequential study coverage to 6-of-19
+    and the next study unit to CORPUS-SRC-113 while preserving complete 19-of-19 witness coverage and all textual-state,
+    corroboration, certification, migration, and successor limits.
 purpose: 'Order reviewed-witness and sequential-study production for the nineteen source identities by documentary
   availability, foundational jurisdiction, source-asymmetry repair, nonduplication, and locator reproducibility.
   Priority does not rank philosophical truth.
@@ -129,15 +129,16 @@ priority_groups:
   - rank: 6
     source_id: CORPUS-SRC-108
     title: On the Interpretation of Genesis
-    next_action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_AND_ORIGINAL_TEXTUAL_STATE_COMPARISON_WHERE_AVAILABLE
+    next_action: 1981_LHOMME_AND_1957_MANUSCRIPT_COMPARISON_AND_INDEPENDENT_BIBLICAL_GREEK_WITNESS_EXPANSION
     status_id: CORPUS-STATUS-108
     witness_id: CORPUS-WIT-108
-    state: REVIEWED_WITNESS_REGISTERED_SEQUENTIAL_STUDY_PENDING
+    state: REVIEWED_WITNESS_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDY
     witness_locator:
       container_title: Jewish Philosophy and the Crisis of Modernity
       container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
       printed_pages: 359-376
       pdf_pages_one_based: 378-395
+    study_id: GENESIS-STUDY-001
   - rank: 7
     source_id: CORPUS-SRC-113
     title: Introduction to Persecution and the Art of Writing
@@ -349,12 +350,13 @@ selection:
   - TALMON-STUDY-001
   - SPINOZA-PREFACE-STUDY-001
   - SPINOZA-TREATISE-STUDY-001
-  selection_state: NINETEEN_REVIEWED_ITEM_WITNESSES_FIVE_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
+  - GENESIS-STUDY-001
+  selection_state: NINETEEN_REVIEWED_ITEM_WITNESSES_SIX_COMPLETE_PROVISIONAL_SEQUENTIAL_STUDIES
   completed_units:
   - all nineteen predecessor source identities have reviewed witnesses
-  - five source studies are complete provisional
-  - fourteen witness-only sources remain pending independent sequential reconstruction
-  - all original-edition and independent-corroboration limits remain explicit
+  - six source studies are complete provisional
+  - thirteen witness-only sources remain pending independent sequential reconstruction
+  - all original or earlier textual-state and independent-corroboration limits remain explicit
   limits:
   - reviewed-witness coverage does not constitute completed sequential reconstruction
   - original or earlier textual-state comparisons remain pending where not separately reviewed
@@ -378,13 +380,13 @@ prohibitions:
 termination:
   schedule_state: ACTIVE
   reviewed_item_witness_registration: COMPLETE_19_OF_19
-  independent_sequential_reconstruction: INCOMPLETE_5_OF_19
+  independent_sequential_reconstruction: INCOMPLETE_6_OF_19
   next_item_witness: NONE
   certification: NOT_CERTIFIED
-  next_item_study: CORPUS-SRC-108
+  next_item_study: CORPUS-SRC-113
 next_item_study_unit:
-  source_id: CORPUS-SRC-108
-  title: On the Interpretation of Genesis
+  source_id: CORPUS-SRC-113
+  title: Introduction to Persecution and the Art of Writing
   action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_FROM_REGISTERED_WITNESS
-  prerequisite: SATISFIED_CORPUS_WIT_108_REGISTERED
-  following_source: CORPUS-SRC-113
+  prerequisite: SATISFIED_CORPUS_WIT_113_REGISTERED
+  following_source: CORPUS-SRC-116
