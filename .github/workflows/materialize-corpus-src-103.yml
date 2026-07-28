@@ -51,6 +51,55 @@ jobs:
             set -euo pipefail
             cat history/staging/src103-complete-payload/part-* | base64 --decode | gzip --decompress > /tmp/complete_src103_review.py
             python /tmp/complete_src103_review.py
+            python - <<'PY'
+          from pathlib import Path
+          import yaml
+
+          status_path = Path("studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml")
+          status = yaml.safe_load(status_path.read_text(encoding="utf-8"))
+          status["registration_basis"]["corpus_source_id"] = "CORPUS-SRC-103"
+          reviewed = status["reviewed_witness"]
+          reviewed["witness_id"] = "CORPUS-WIT-103"
+          reviewed["printed_page_range"] = {"start": 181, "end": 233}
+          reviewed["pdf_page_range_one_based"] = {"start": 200, "end": 252}
+          status["termination"]["study_id"] = "SPINOZA-TREATISE-STUDY-001"
+          status_path.write_text(
+              yaml.safe_dump(status, sort_keys=False, allow_unicode=True, width=120),
+              encoding="utf-8",
+          )
+
+          registry_path = Path("corpus_registry.py")
+          text = registry_path.read_text(encoding="utf-8")
+          text = text.replace(
+              '        "theologico_political_reviewed_item_witnesses_registered": 4,\n'
+              '        "theologico_political_independent_item_studies_registered": 4,',
+              '        "theologico_political_reviewed_item_witnesses_registered": 5,\n'
+              '        "theologico_political_independent_item_studies_registered": 5,',
+          )
+          text = text.replace(
+              '    if termination.get("theologico_political_reviewed_witness_state") != "INCOMPLETE_4_OF_19":\n'
+              '        errors.append("TP reviewed-witness state must be INCOMPLETE_4_OF_19")\n'
+              '    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_4_OF_19":\n'
+              '        errors.append("TP independent-study state must be INCOMPLETE_4_OF_19")',
+              '    if termination.get("theologico_political_reviewed_witness_state") != "INCOMPLETE_5_OF_19":\n'
+              '        errors.append("TP reviewed-witness state must be INCOMPLETE_5_OF_19")\n'
+              '    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_5_OF_19":\n'
+              '        errors.append("TP independent-study state must be INCOMPLETE_5_OF_19")',
+          )
+          text = text.replace(
+              '    if study_record.get("termination", {}).get("successor_effect") != "NONE":\n'
+              '        errors.append(f"{study_id} may not affect successor activation")',
+              '    study_status = study_record.get("status", {})\n'
+              '    study_termination = study_record.get("termination", {})\n'
+              '    study_successor_effect = study_termination.get(\n'
+              '        "successor_effect",\n'
+              '        study_status.get("successor_effect", study_status.get("successor_activation_effect")),\n'
+              '    )\n'
+              '    if study_successor_effect != "NONE":\n'
+              '        errors.append(f"{study_id} may not affect successor activation")',
+          )
+          registry_path.write_text(text, encoding="utf-8")
+          PY
             rm -rf history/staging/src103-payload
             rm -rf history/staging/src103-complete-payload
             rm -f .github/workflows/materialize-corpus-src-103.yml
