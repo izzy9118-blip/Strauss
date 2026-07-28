@@ -42,13 +42,13 @@ class CorpusWit103RegistrationTests(unittest.TestCase):
         self.assertFalse(publication["original_1948_journal_copy_reviewed"])
         self.assertEqual(witness["termination"]["original_edition_comparison"], "PENDING")
 
-    def test_witness_registration_does_not_claim_sequential_study_or_certification(self) -> None:
+    def test_witness_registration_record_remains_historical_while_source_status_advances(self) -> None:
         witness = load_yaml(WITNESS_PATH)
         status = load_yaml(STATUS_PATH)
         self.assertEqual(witness["status"]["independent_sequential_study"], "NOT_YET_COMPLETED")
         self.assertEqual(witness["termination"]["study_state"], "INCOMPLETE")
-        self.assertEqual(status["status"]["independent_sequential_study"], "NOT_YET_COMPLETED")
-        self.assertEqual(status["termination"]["study_state"], "INCOMPLETE")
+        self.assertEqual(status["status"]["independent_sequential_study"], "SPINOZA-TREATISE-STUDY-001")
+        self.assertEqual(status["termination"]["study_state"], "COMPLETE_PROVISIONAL")
         self.assertEqual(status["termination"]["independent_corroboration"], "INCOMPLETE")
         self.assertEqual(status["termination"]["certification"], "NOT_CERTIFIED")
         self.assertEqual(status["termination"]["successor_effect"], "NONE")

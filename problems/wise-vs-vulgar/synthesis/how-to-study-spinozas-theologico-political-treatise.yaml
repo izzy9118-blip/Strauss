@@ -1,0 +1,59 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+
+identity:
+  id: WVG-SPINOZA-TREATISE-001
+  version: 1.0.0
+  title: Wise-versus-Vulgar Synthesis — How to Study Spinoza's Theologico-Political Treatise
+
+status:
+  lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-103
+  reviewed_witness_id: CORPUS-WIT-103
+  study_id: SPINOZA-TREATISE-STUDY-001
+  study_path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-012
+  derived_finding_set_id: FINDSET-123
+
+problem:
+  canonical_key: wise-vs-vulgar
+  role: CONTROLLED_SECONDARY_HERMENEUTIC_JURISDICTION
+  primary_problem_reference: theologico-political
+
+source_local_findings:
+  - classification: documented_finding
+    proposition: The Treatise is addressed to potential philosophers among Christians while remaining publicly accessible to vulgar readers.
+  - classification: documented_finding
+    proposition: Ad captum vulgi loqui can mean accommodation to accepted prejudices and not merely simplification of language.
+  - classification: documented_finding
+    proposition: Spinoza's discussion of biblical accommodation, contradiction, and audience supplies Strauss with evidence for reconstructing Spinoza's own differentiated communication.
+  - classification: documented_finding
+    proposition: In contradictions, Strauss gives priority to the statement most opposed to what Spinoza regarded as the vulgar view when the relation of accommodation and implication is demonstrable.
+  - classification: bounded_conclusion
+    proposition: Contradiction or rarity alone does not prove a hidden teaching; the public argument must first be completely understood and the source-local relation among statements demonstrated.
+  - classification: documented_finding
+    proposition: No written work can be assumed to be strictly esoteric merely because it is addressed to philosophers, since it remains accessible to readers beyond a philosophic elite.
+
+non_absorption:
+  - Audience differentiation does not certify the identity, rank, or wisdom of a stable social caste.
+  - Exoteric interpretation does not authorize unrestricted deception or mechanical inversion of explicit propositions.
+  - The Wise-versus-Vulgar problem does not absorb the primary Theologico-Political questions of revelation, theology, prophecy, biblical authority, and freedom of philosophizing.
+  - Strauss's reconstruction of Spinoza is not independent corroboration of Spinoza's own doctrine.
+
+limits:
+  - The reviewed witness is the 1997 collected reprint and the original 1948 journal comparison remains pending.
+  - Maimonides, ibn Ezra, Farabi, Plato, and other precedents cited by Strauss require independent reconstruction before historical corroboration.
+  - No doctrine, migration, successor activation, predecessor displacement, or claimant-to-wisdom certification is authorized.
+
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION
+  independent_corroboration: INCOMPLETE
+  original_edition_comparison: PENDING
+  certification: NOT_CERTIFIED
+  successor_effect: NONE

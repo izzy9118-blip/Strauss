@@ -3,7 +3,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.8.0
+  version: 1.9.0
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
   structural_interface: IMPLEMENTED
@@ -11,11 +11,11 @@ status:
   certification: NOT_CERTIFIED
   destructive_actions_authorized: false
 revision_history:
-  predecessor_version: 1.7.0
-  predecessor_blob_sha: 2ce5cf4b5ec6f78c19a2a6b4c1c1acf34b1f792c
-  reason: Synchronize complete 19-of-19 Theologico-Political reviewed-witness coverage, corpus registry v1.12.0,
-    audit v2.6.0, process v1.10.0, and witness schedule v1.8.0 while preserving fifteen pending studies, edition-comparison
-    limits, noncorroboration, noncertification, predecessor authority, and repository incompleteness.
+  predecessor_version: 1.8.0
+  predecessor_blob_sha: 8cfbda404a0e553599f7308b97fbd9161681f3da
+  reason: Synchronize SPINOZA-TREATISE-STUDY-001, corpus registry v1.13.0, findings v1.5.0, audit v2.7.0, process
+    v1.11.0, and schedule v1.9.0 while preserving fourteen pending studies, noncorroboration, noncertification,
+    predecessor authority, and repository incompleteness.
 source_state:
   repository: izzy9118-blip/Strauss
   governing_commit_before_mapping: 853dd7de13d7bf4abc881fc7671a5833b822b6cb
@@ -29,7 +29,7 @@ source_state:
   - scripts/
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 2.6.0
+  version: 2.7.0
   rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be
     reported as doctrinal, migration, successor, or repository completion.
 
@@ -40,7 +40,7 @@ production_process:
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
   completed_witness_subunit: THEOLOGICO_POLITICAL_REVIEWED_WITNESSES_19_OF_19_COMPLETE
-  completed_study_subunit: FOUR_OF_19_COMPLETE_PROVISIONAL_FIFTEEN_PENDING
+  completed_study_subunit: FIVE_OF_19_COMPLETE_PROVISIONAL_FOURTEEN_PENDING
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 mapping_rules:
@@ -190,7 +190,7 @@ mappings:
     - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.12.0
+      registry_version: 1.13.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
     transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COMPLETE_NINETEEN_ITEM_REVIEWED_WITNESS_COVERAGE
@@ -226,16 +226,16 @@ mappings:
       remaining_count: 0
       reviewed_witness_count: 19
       remaining_without_reviewed_witness: 0
-      independent_sequential_study_count: 4
-      remaining_without_independent_sequential_study: 15
+      independent_sequential_study_count: 5
+      remaining_without_independent_sequential_study: 14
       completed_study_ids:
       - COHEN-STUDY-001
       - JA-STUDY-001
       - TALMON-STUDY-001
       - SPINOZA-PREFACE-STUDY-001
+      - SPINOZA-TREATISE-STUDY-001
       witness_only_source_ids:
       - CORPUS-SRC-101
-      - CORPUS-SRC-103
       - CORPUS-SRC-104
       - CORPUS-SRC-106
       - CORPUS-SRC-107
@@ -260,28 +260,37 @@ mappings:
     - validate the fingerprinted 1997 SUNY witness batch without converting witness registration into sequential
       study completion
     - preserve corpus gaps and original-edition comparison limits
-    limit: Current-state exhaustiveness and 19-of-19 reviewed item witness coverage do not create a complete corpus,
-      complete the fifteen pending sequential studies, admit source text, supply independent corroboration, certify
-      findings, or authorize migration and activation.
+    - validate SPINOZA-TREATISE-STUDY-001 as a complete provisional reconstruction with pending 1948 comparison
+      and no successor effect
+    - validate SPINOZA-TREATISE-STUDY-001 as a complete provisional reconstruction with pending 1948 comparison
+      and no successor effect
+    - validate SPINOZA-TREATISE-STUDY-001 as a complete provisional reconstruction with pending 1948 comparison
+      and no successor effect
+    - validate SPINOZA-TREATISE-STUDY-001 as a complete provisional reconstruction with pending 1948 comparison
+      and no successor effect
+    - validate SPINOZA-TREATISE-STUDY-001 as a complete provisional reconstruction with pending 1948 comparison
+      and no successor effect
+    - validate SPINOZA-TREATISE-STUDY-001 as a complete provisional reconstruction with pending 1948 comparison
+      and no successor effect
+    limit: Current-state exhaustiveness, nineteen reviewed item witnesses, and five complete provisional item studies
+      do not create a complete corpus, supply independent corroboration, certify findings, or authorize migration
+      and activation.
   findings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.4.0
+      registry_version: 1.5.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
-    - finding_set_id: FINDSET-011
-      path: studies/theologico-political/preface-to-spinozas-critique-of-religion/sequential-reconstruction.yaml
-    - finding_set_id: FINDSET-119
-      path: problems/theologico-political/synthesis/preface-to-spinozas-critique-of-religion.yaml
-      derived_from: FINDSET-011
-    - finding_set_id: FINDSET-120
-      path: problems/athens-vs-jerusalem/synthesis/preface-to-spinozas-critique-of-religion.yaml
-      derived_from: FINDSET-011
-    - finding_set_id: FINDSET-121
-      path: problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml
-      derived_from: FINDSET-011
+    - finding_set_id: FINDSET-012
+      path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-122
+      path: problems/theologico-political/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+      derived_from: FINDSET-012
+    - finding_set_id: FINDSET-123
+      path: problems/wise-vs-vulgar/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+      derived_from: FINDSET-012
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
     limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify
       doctrine or migration, displace predecessors, or activate successors.

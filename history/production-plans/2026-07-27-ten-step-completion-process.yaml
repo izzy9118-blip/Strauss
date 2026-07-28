@@ -3,7 +3,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.10.0
+  version: 1.11.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
@@ -15,23 +15,23 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.9.0
-  predecessor_blob_sha: 63d4ecb7e55d39cce6521315b505200e2aea947d
-  reason: Complete reviewed-witness acquisition and registration for the remaining fourteen Theologico-Political
-    predecessor items, reaching 19-of-19 witness coverage while preserving fifteen pending independent sequential
-    studies, edition-comparison limits, noncertification, and the Step 10 repin blocker.
+  predecessor_version: 1.10.0
+  predecessor_blob_sha: 2f43687b7d4994ff216abb3d3cd64128c9aaefed
+  reason: Complete SPINOZA-TREATISE-STUDY-001 as the fifth provisional Theologico-Political sequential reconstruction
+    and advance the next study unit to CORPUS-SRC-108 while preserving 19-of-19 witness coverage and fourteen remaining
+    studies.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 2.6.0
+  current_version: 2.7.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.8.0
+  current_version: 1.9.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -76,6 +76,18 @@ steps:
     and Ancients-versus-Moderns
   - the Spinoza Preface supplies distinct provisional syntheses to Theologico-Political, Athens-versus-Jerusalem,
     and Ancients-versus-Moderns
+  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
+    and Wise-versus-Vulgar
+  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
+    and Wise-versus-Vulgar
+  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
+    and Wise-versus-Vulgar
+  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
+    and Wise-versus-Vulgar
+  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
+    and Wise-versus-Vulgar
+  - How to Study Spinoza's Theologico-Political Treatise supplies distinct provisional syntheses to Theologico-Political
+    and Wise-versus-Vulgar
   remaining:
   - complete source-specific application to each problem
   - complete independent witness reconstruction
@@ -95,8 +107,14 @@ steps:
   - SPINOZA-PREFACE-STUDY-001, JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 remain complete provisional for
     their reviewed witnesses
   - corpus and findings registries preserve derivation, jurisdiction, gaps, witness/study distinctions, and noncertification
+  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
+  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
+  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
+  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
+  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
+  - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
   remaining:
-  - conduct fifteen independent sequential item studies, beginning with CORPUS-SRC-103
+  - conduct fourteen independent sequential item studies, beginning with CORPUS-SRC-108
   - compare original or earlier textual states where available and material
   - materialize and fingerprint CORPUS-WIT-102 only through later forward revision if exact bytes become accessible
   - reconstruct Talmon's reviewed work independently
@@ -110,11 +128,12 @@ steps:
   - tests/
   - .github/workflows/validate-lean-interface.yml
   completed_in_current_sequence:
-  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the fifteen witness-only
-    states from the four completed-study states
+  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the fourteen witness-only
+    states from the five completed-study states
   - tests preserve qualified platform-reference, fingerprint, locator, scope, edition-comparison, noncertification,
     and no-successor safeguards
-  - tests cover corpus and findings coverage, derivation, jurisdiction, and completion-language consistency
+  - tests cover CORPUS-SRC-103 study completion, findings derivation, problem jurisdiction, and completion-language
+    consistency
   current_requirement: Run the complete GitHub Actions validation before merge.
   limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
 - sequence: 10
@@ -129,18 +148,21 @@ steps:
 current_production_unit:
   step: 8
   completed_subunit:
-    title: Remaining fourteen Theologico-Political reviewed-witness acquisition and registration
-    state: COMPLETE_PENDING_BRANCH_VALIDATION_AND_MERGE
-    witness_coverage: COMPLETE_19_OF_19
-    study_coverage: INCOMPLETE_4_OF_19
-    non_effect: Witness registration does not supply sequential reconstruction, independent corroboration, doctrine,
-      certified migration, successor activation, predecessor displacement, or completed-interface readiness.
-  next_subunit:
     title: How to Study Spinoza's Theologico-Political Treatise independent sequential reconstruction
+    state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
     source_id: CORPUS-SRC-103
     witness_id: CORPUS-WIT-103
-    first_action: Reconstruct printed pages 181-233 in textual order before comparing with the active predecessor.
-    following_source: CORPUS-SRC-108
+    study_id: SPINOZA-TREATISE-STUDY-001
+    witness_coverage: COMPLETE_19_OF_19
+    study_coverage: INCOMPLETE_5_OF_19
+    non_effect: Source-study completion does not supply independent corroboration, doctrine, certified migration,
+      successor activation, predecessor displacement, or completed-interface readiness.
+  next_subunit:
+    title: On the Interpretation of Genesis independent sequential reconstruction
+    source_id: CORPUS-SRC-108
+    witness_id: CORPUS-WIT-108
+    first_action: Reconstruct printed pages 359-376 in textual order before comparing with the active predecessor.
+    following_source: CORPUS-SRC-113
   non_effects:
   - no source-text admission through registries
   - no doctrinal or migration certification
