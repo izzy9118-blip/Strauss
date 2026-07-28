@@ -76,6 +76,9 @@ summary:
   - SPINOZA-TREATISE-STUDY-001 complete provisional sequential reconstruction
   - CORPUS-STUDY-012 and FINDSET-012 typed registrations
   - FINDSET-122 and FINDSET-123 jurisdiction-preserving problem-local syntheses
+  - SPINOZA-TREATISE-STUDY-001 complete provisional sequential reconstruction
+  - CORPUS-STUDY-012 and FINDSET-012 typed registrations
+  - FINDSET-122 and FINDSET-123 jurisdiction-preserving problem-local syntheses
   theologico_political_item_level_status:
     active_predecessor_source_count: 19
     registered_source_identity_count: 19
@@ -178,6 +181,7 @@ summary:
     - CORPUS-WIT-118
     - CORPUS-WIT-119
   remaining_major_deficiencies:
+  - fourteen Theologico-Political writings still require independent sequential item studies
   - fourteen Theologico-Political writings still require independent sequential item studies
   - the original 1948 journal printing of How to Study Spinoza's Theologico-Political Treatise has not been compared
     with the reviewed 1997 collected reprint
@@ -484,6 +488,32 @@ records:
   - supplies the source-local audience and accommodation synthesis without mechanical inversion or claimant certification
   remaining:
   - independent source-tradition reconstruction and later authorized migration review
+- path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: SPINOZA-TREATISE-STUDY-001
+  present_function:
+  - reconstructs printed pages 181-233 in ten ordered units
+  - distinguishes interpretation from explanation and public teaching from controlled concealed reasoning
+  - preserves Theologico-Political primary and Wise-versus-Vulgar secondary jurisdiction
+  - retests the predecessor without promotion, certification, migration, activation, or displacement
+  remaining:
+  - original 1948 journal comparison
+  - independent Spinozist, biblical, medieval, classical, Christian, Jewish, and historical witnesses
+  - later authorized proposition-level migration review
+- path: problems/theologico-political/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: TP-SPINOZA-TREATISE-001
+  present_function:
+  - supplies the source-local Theologico-Political synthesis without predecessor displacement
+  remaining:
+  - independent witness expansion and any later certified proposition-level migration
+- path: problems/wise-vs-vulgar/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: WVG-SPINOZA-TREATISE-001
+  present_function:
+  - supplies the source-local audience and accommodation synthesis without mechanical inversion or claimant certification
+  remaining:
+  - independent source-tradition reconstruction and later authorized migration review
 production_order:
   governing_process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   completed_in_current_sequence:
@@ -494,6 +524,7 @@ production_order:
   - substantive validator and behavioral-test revision
   - CORPUS-WIT-102 qualified platform-reference registration and SPINOZA-PREFACE-STUDY-001 reconstruction
   - CORPUS-WIT-103 fingerprinted reviewed-witness registration
+  - SPINOZA-TREATISE-STUDY-001 with FINDSET-012, FINDSET-122, and FINDSET-123
   - SPINOZA-TREATISE-STUDY-001 with FINDSET-012, FINDSET-122, and FINDSET-123
   next:
   - run complete structural and behavioral validation for the fifth Theologico-Political item study
