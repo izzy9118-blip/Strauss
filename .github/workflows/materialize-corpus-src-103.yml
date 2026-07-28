@@ -99,6 +99,37 @@ jobs:
               '        errors.append(f"{study_id} may not affect successor activation")',
           )
           registry_path.write_text(text, encoding="utf-8")
+
+          findings_path = Path("findings/index.yaml")
+          findings = yaml.safe_load(findings_path.read_text(encoding="utf-8"))
+          direct_source_keys = [
+              "CORPUS-SRC-001",
+              "CORPUS-SRC-002",
+              "CORPUS-SRC-003",
+              "CORPUS-SRC-102",
+              "CORPUS-SRC-103",
+              "CORPUS-SRC-105",
+              "CORPUS-SRC-111",
+          ]
+          by_source = {key: [] for key in direct_source_keys}
+          by_source["CORPUS-SRC-101-119"] = []
+          predecessor_sources = {f"CORPUS-SRC-{number:03d}" for number in range(101, 120)}
+          separately_indexed = {"CORPUS-SRC-102", "CORPUS-SRC-105", "CORPUS-SRC-111"}
+          for item in findings["finding_sets"]:
+              bindings = set(item.get("source_bindings", []))
+              finding_id = item["finding_set_id"]
+              for key in direct_source_keys:
+                  if key in bindings:
+                      by_source[key].append(finding_id)
+              if bindings & predecessor_sources and not (
+                  len(bindings) == 1 and next(iter(bindings)) in separately_indexed
+              ):
+                  by_source["CORPUS-SRC-101-119"].append(finding_id)
+          findings["indexes"]["by_source"] = by_source
+          findings_path.write_text(
+              yaml.safe_dump(findings, sort_keys=False, allow_unicode=True, width=120),
+              encoding="utf-8",
+          )
           PY
             rm -rf history/staging/src103-payload
             rm -rf history/staging/src103-complete-payload
