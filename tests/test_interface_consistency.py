@@ -42,7 +42,7 @@ class InterfaceConsistencyTests(unittest.TestCase):
         self.assertEqual(step_one["current_version"], audit["identity"]["version"])
         self.assertEqual(step_two["current_version"], manifest["identity"]["version"])
 
-    def test_nineteen_identity_five_witness_four_study_language_matches(self) -> None:
+    def test_nineteen_identity_nineteen_witness_four_study_language_matches(self) -> None:
         manifest = load_yaml("manifest.yaml")
         audit = load_yaml("audits/operational-completeness.yaml")
         mapping = load_yaml("migrations/lean-operational-interface.yaml")
@@ -61,14 +61,14 @@ class InterfaceConsistencyTests(unittest.TestCase):
         self.assertEqual(manifest_state["registered_count"], 19)
         self.assertEqual(audit_state["registered_source_identity_count"], 19)
         self.assertEqual(mapping_state["registered_count"], 19)
-        self.assertEqual(manifest_state["reviewed_witness_count"], 5)
-        self.assertEqual(audit_state["reviewed_item_witness_count"], 5)
-        self.assertEqual(mapping_state["reviewed_witness_count"], 5)
+        self.assertEqual(manifest_state["reviewed_witness_count"], 19)
+        self.assertEqual(audit_state["reviewed_item_witness_count"], 19)
+        self.assertEqual(mapping_state["reviewed_witness_count"], 19)
         self.assertEqual(manifest_state["independent_sequential_study_count"], 4)
         self.assertEqual(audit_state["independently_reconstructed_count_within_this_sequence"], 4)
         self.assertEqual(mapping_state["independent_sequential_study_count"], 4)
-        self.assertEqual(manifest_state["remaining_without_reviewed_item_witness"], 14)
-        self.assertEqual(mapping_state["remaining_without_reviewed_witness"], 14)
+        self.assertEqual(manifest_state["remaining_without_reviewed_item_witness"], 0)
+        self.assertEqual(mapping_state["remaining_without_reviewed_witness"], 0)
         self.assertEqual(manifest_state["remaining_without_independent_sequential_study"], 15)
         self.assertEqual(mapping_state["remaining_without_independent_sequential_study"], 15)
         self.assertEqual(
@@ -77,38 +77,22 @@ class InterfaceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_reviewed_witness_state"],
-            "INCOMPLETE_5_OF_19",
+            "COMPLETE_19_OF_19",
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_independent_study_state"],
             "INCOMPLETE_4_OF_19",
         )
 
-    def test_priority_schedule_advances_witness_to_genesis_while_spinoza_treatise_study_is_next(self) -> None:
-        schedule = load_yaml(
-            "history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml"
-        )
-        self.assertEqual(
-            schedule["selection"]["completed_source_ids"],
-            ["CORPUS-SRC-109", "CORPUS-SRC-105", "CORPUS-SRC-111", "CORPUS-SRC-102", "CORPUS-SRC-103"],
-        )
-        self.assertEqual(
-            schedule["selection"]["completed_witness_ids"],
-            ["CORPUS-WIT-109", "CORPUS-WIT-105", "CORPUS-WIT-111", "CORPUS-WIT-102", "CORPUS-WIT-103"],
-        )
-        self.assertEqual(
-            schedule["selection"]["completed_study_ids"],
-            ["JA-STUDY-001", "COHEN-STUDY-001", "TALMON-STUDY-001", "SPINOZA-PREFACE-STUDY-001"],
-        )
-        self.assertEqual(
-            schedule["termination"]["reviewed_item_witness_registration"],
-            "COMPLETE_FOR_CORPUS_WIT_102_CORPUS_WIT_103_CORPUS_WIT_105_CORPUS_WIT_109_AND_CORPUS_WIT_111",
-        )
-        self.assertEqual(
-            schedule["termination"]["independent_sequential_reconstruction"],
-            "COMPLETE_PROVISIONAL_FOR_COHEN_STUDY_001_JA_STUDY_001_TALMON_STUDY_001_AND_SPINOZA_PREFACE_STUDY_001",
-        )
-        self.assertEqual(schedule["termination"]["next_item_witness"], "CORPUS-SRC-108")
+    def test_priority_schedule_marks_witness_acquisition_complete_and_spinoza_treatise_study_next(self) -> None:
+        schedule = load_yaml("history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml")
+        self.assertEqual(len(schedule["selection"]["completed_source_ids"]), 19)
+        self.assertEqual(len(schedule["selection"]["completed_witness_ids"]), 19)
+        self.assertEqual(set(schedule["selection"]["completed_source_ids"]), {f"CORPUS-SRC-{i:03d}" for i in range(101, 120)})
+        self.assertEqual(schedule["selection"]["completed_study_ids"], ["JA-STUDY-001", "COHEN-STUDY-001", "TALMON-STUDY-001", "SPINOZA-PREFACE-STUDY-001"])
+        self.assertEqual(schedule["termination"]["reviewed_item_witness_registration"], "COMPLETE_19_OF_19")
+        self.assertEqual(schedule["termination"]["independent_sequential_reconstruction"], "INCOMPLETE_4_OF_19")
+        self.assertEqual(schedule["termination"]["next_item_witness"], "NONE")
         self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-103")
         self.assertEqual(schedule["status"]["certification"], "NOT_CERTIFIED")
 

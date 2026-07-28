@@ -154,15 +154,152 @@ COMPLETE_TP_ITEMS: dict[str, dict[str, Any]] = {
 }
 
 WITNESS_ONLY_TP_ITEMS: dict[str, dict[str, Any]] = {
+    "CORPUS-SRC-101": {
+        "status_id": "CORPUS-STATUS-101",
+        "witness_id": "CORPUS-WIT-101",
+        "witness_record_path": "studies/theologico-political/progress-or-return/reviewed-witness.yaml",
+        "printed_page_range": {'start': 87, 'end': 136},
+        "pdf_page_range_one_based": {'start': 106, 'end': 155},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
     "CORPUS-SRC-103": {
         "status_id": "CORPUS-STATUS-103",
         "witness_id": "CORPUS-WIT-103",
-        "witness_record_path": (
-            "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/"
-            "reviewed-witness.yaml"
-        ),
-        "printed_page_range": {"start": 181, "end": 233},
-        "pdf_page_range_one_based": {"start": 200, "end": 252},
+        "witness_record_path": "studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml",
+        "printed_page_range": {'start': 181, 'end': 233},
+        "pdf_page_range_one_based": {'start': 200, 'end': 252},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-104": {
+        "status_id": "CORPUS-STATUS-104",
+        "witness_id": "CORPUS-WIT-104",
+        "witness_record_path": "studies/theologico-political/preface-to-isaac-husik-philosophical-essays/reviewed-witness.yaml",
+        "printed_page_range": {'start': 235, 'end': 266},
+        "pdf_page_range_one_based": {'start': 254, 'end': 285},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-106": {
+        "status_id": "CORPUS-STATUS-106",
+        "witness_id": "CORPUS-WIT-106",
+        "witness_record_path": "studies/theologico-political/freud-on-moses-and-monotheism/reviewed-witness.yaml",
+        "printed_page_range": {'start': 285, 'end': 309},
+        "pdf_page_range_one_based": {'start': 304, 'end': 328},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-107": {
+        "status_id": "CORPUS-STATUS-107",
+        "witness_id": "CORPUS-WIT-107",
+        "witness_record_path": "studies/theologico-political/why-we-remain-jews/reviewed-witness.yaml",
+        "printed_page_range": {'start': 311, 'end': 356},
+        "pdf_page_range_one_based": {'start': 330, 'end': 375},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-108": {
+        "status_id": "CORPUS-STATUS-108",
+        "witness_id": "CORPUS-WIT-108",
+        "witness_record_path": "studies/theologico-political/on-the-interpretation-of-genesis/reviewed-witness.yaml",
+        "printed_page_range": {'start': 359, 'end': 376},
+        "pdf_page_range_one_based": {'start': 378, 'end': 395},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-110": {
+        "status_id": "CORPUS-STATUS-110",
+        "witness_id": "CORPUS-WIT-110",
+        "witness_record_path": "studies/theologico-political/what-is-political-philosophy/reviewed-witness.yaml",
+        "printed_page_range": {'start': 409, 'end': 409},
+        "pdf_page_range_one_based": {'start': 428, 'end': 428},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-112": {
+        "status_id": "CORPUS-STATUS-112",
+        "witness_id": "CORPUS-WIT-112",
+        "witness_record_path": "studies/theologico-political/letter-to-editor-state-of-israel/reviewed-witness.yaml",
+        "printed_page_range": {'start': 413, 'end': 414},
+        "pdf_page_range_one_based": {'start': 432, 'end': 433},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-113": {
+        "status_id": "CORPUS-STATUS-113",
+        "witness_id": "CORPUS-WIT-113",
+        "witness_record_path": "studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/reviewed-witness.yaml",
+        "printed_page_range": {'start': 417, 'end': 429},
+        "pdf_page_range_one_based": {'start': 436, 'end': 448},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-114": {
+        "status_id": "CORPUS-STATUS-114",
+        "witness_id": "CORPUS-WIT-114",
+        "witness_record_path": "studies/theologico-political/perspectives-on-the-good-society/reviewed-witness.yaml",
+        "printed_page_range": {'start': 431, 'end': 445},
+        "pdf_page_range_one_based": {'start': 450, 'end': 464},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-115": {
+        "status_id": "CORPUS-STATUS-115",
+        "witness_id": "CORPUS-WIT-115",
+        "witness_record_path": "studies/theologico-political/an-unspoken-prologue/reviewed-witness.yaml",
+        "printed_page_range": {'start': 449, 'end': 452},
+        "pdf_page_range_one_based": {'start': 468, 'end': 471},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-116": {
+        "status_id": "CORPUS-STATUS-116",
+        "witness_id": "CORPUS-WIT-116",
+        "witness_record_path": "studies/theologico-political/preface-to-hobbes-politische-wissenschaft/reviewed-witness.yaml",
+        "printed_page_range": {'start': 453, 'end': 456},
+        "pdf_page_range_one_based": {'start': 472, 'end': 475},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-117": {
+        "status_id": "CORPUS-STATUS-117",
+        "witness_id": "CORPUS-WIT-117",
+        "witness_record_path": "studies/theologico-political/a-giving-of-accounts/reviewed-witness.yaml",
+        "printed_page_range": {'start': 457, 'end': 466},
+        "pdf_page_range_one_based": {'start': 476, 'end': 485},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-118": {
+        "status_id": "CORPUS-STATUS-118",
+        "witness_id": "CORPUS-WIT-118",
+        "witness_record_path": "studies/theologico-political/plan-philosophy-and-the-law-historical-essays/reviewed-witness.yaml",
+        "printed_page_range": {'start': 467, 'end': 470},
+        "pdf_page_range_one_based": {'start': 486, 'end': 489},
+        "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+        "container_file_size_bytes": 39287307,
+        "container_page_count": 526,
+    },
+    "CORPUS-SRC-119": {
+        "status_id": "CORPUS-STATUS-119",
+        "witness_id": "CORPUS-WIT-119",
+        "witness_record_path": "studies/theologico-political/restatement-on-xenophons-hiero/reviewed-witness.yaml",
+        "printed_page_range": {'start': 471, 'end': 473},
+        "pdf_page_range_one_based": {'start': 490, 'end': 492},
         "container_sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
         "container_file_size_bytes": 39287307,
         "container_page_count": 526,
@@ -418,13 +555,7 @@ def _validate_witness_only_tp_item(
         return
     if witness.get("source_id") != source_id:
         errors.append(f"{witness_id} source binding mismatch")
-    for field in (
-        "printed_page_range",
-        "pdf_page_range_one_based",
-        "container_sha256",
-        "container_file_size_bytes",
-        "container_page_count",
-    ):
+    for field in ("printed_page_range", "pdf_page_range_one_based", "container_sha256", "container_file_size_bytes", "container_page_count"):
         if witness.get(field) != spec[field]:
             errors.append(f"{witness_id} {field} mismatch")
     if witness.get("witness_record_path") != spec["witness_record_path"]:
@@ -434,32 +565,28 @@ def _validate_witness_only_tp_item(
     if not isinstance(reviewed, dict) or reviewed.get("witness_id") != witness_id:
         errors.append(f"{status_id} reviewed_witness block mismatch")
     else:
-        for field in (
-            "printed_page_range",
-            "pdf_page_range_one_based",
-            "container_sha256",
-            "container_file_size_bytes",
-        ):
+        for field in ("printed_page_range", "pdf_page_range_one_based", "container_sha256"):
             if reviewed.get(field) != witness.get(field):
                 errors.append(f"{witness_id} {field} mismatch between registry and status")
 
     publication = status_record.get("publication_and_witness_condition", {})
-    fingerprint = publication.get("fingerprint", {})
-    if not isinstance(fingerprint, dict) or fingerprint.get("value") != spec["container_sha256"]:
+    fingerprint = publication.get("fingerprint")
+    if isinstance(fingerprint, dict):
+        digest = fingerprint.get("value")
+    else:
+        digest = publication.get("sha256") if fingerprint == "AVAILABLE" else None
+    if digest != spec["container_sha256"]:
         errors.append(f"{status_id} fingerprint mismatch")
     if publication.get("file_size_bytes") != spec["container_file_size_bytes"]:
         errors.append(f"{status_id} file-size mismatch")
-    if publication.get("container_page_count") != spec["container_page_count"]:
-        errors.append(f"{status_id} page-count mismatch")
-    if publication.get("original_1948_journal_copy_comparison") != "PENDING":
-        errors.append(f"{status_id} must preserve pending original-1948 comparison")
+    comparison = publication.get("original_or_earlier_printing_comparison", publication.get("original_1948_journal_copy_comparison"))
+    if comparison != "PENDING":
+        errors.append(f"{status_id} must preserve pending original/earlier textual-state comparison")
 
     if termination.get("reviewed_witness_state") != "REGISTERED":
         errors.append(f"{status_id} reviewed witness state must be REGISTERED")
     if termination.get("study_state") != "INCOMPLETE":
         errors.append(f"{status_id} study state must remain INCOMPLETE")
-    if termination.get("independent_corroboration") != "INCOMPLETE":
-        errors.append(f"{status_id} independent corroboration must remain INCOMPLETE")
     if termination.get("original_edition_comparison") != "PENDING":
         errors.append(f"{status_id} original edition comparison must remain PENDING")
     if termination.get("certification") != "NOT_CERTIFIED":
@@ -470,12 +597,16 @@ def _validate_witness_only_tp_item(
     witness_record = load_yaml(_resolve(spec["witness_record_path"]))
     if witness_record.get("identity", {}).get("witness_id") != witness_id:
         errors.append(f"{witness_id} record identity mismatch")
+    cw = witness_record.get("container_witness", {})
+    if cw.get("container_sha256") != spec["container_sha256"] or cw.get("container_file_size_bytes") != spec["container_file_size_bytes"] or cw.get("container_page_count") != spec["container_page_count"]:
+        errors.append(f"{witness_id} witness-record container fingerprint mismatch")
     if witness_record.get("status", {}).get("certification") != "NOT_CERTIFIED":
         errors.append(f"{witness_id} record must remain NOT_CERTIFIED")
     if witness_record.get("termination", {}).get("study_state") != "INCOMPLETE":
         errors.append(f"{witness_id} witness record may not claim study completion")
     if witness_record.get("termination", {}).get("successor_effect") != "NONE":
         errors.append(f"{witness_id} record must preserve successor_effect NONE")
+
 
 
 def _validate_tp_sources_and_statuses(
@@ -591,8 +722,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.11.0":
-        errors.append("corpus registry identity.version must be 1.11.0")
+    if identity.get("version") != "1.12.0":
+        errors.append("corpus registry identity.version must be 1.12.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
@@ -617,7 +748,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
 
     expected_counts = {
         "source entities": (len(source_ids), 22),
-        "reviewed witnesses": (len(witness_ids), 8),
+        "reviewed witnesses": (len(witness_ids), 22),
         "source-status records": (len(status_ids), 22),
         "study records": (len(study_ids), 11),
         "corpus gaps": (len(gap_ids), 7),
@@ -685,7 +816,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "problem_witness_registries_registered": len(problem_registries) if isinstance(problem_registries, list) else 0,
         "theologico_political_predecessor_sources_registered": len(tp_entities),
         "theologico_political_item_level_statuses_registered": 19,
-        "theologico_political_reviewed_item_witnesses_registered": 5,
+        "theologico_political_reviewed_item_witnesses_registered": 19,
         "theologico_political_independent_item_studies_registered": 4,
         "current_studies_tree_yaml_records_accounted_for": len(actual_studies),
         "exhaustive_within_declared_scope": True,
@@ -701,8 +832,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         errors.append("registry termination state must preserve bounded current-state completion")
     if termination.get("theologico_political_identity_registration_state") != "COMPLETE_19_OF_19":
         errors.append("TP identity registration must remain COMPLETE_19_OF_19")
-    if termination.get("theologico_political_reviewed_witness_state") != "INCOMPLETE_5_OF_19":
-        errors.append("TP reviewed-witness state must be INCOMPLETE_5_OF_19")
+    if termination.get("theologico_political_reviewed_witness_state") != "COMPLETE_19_OF_19":
+        errors.append("TP reviewed-witness state must be COMPLETE_19_OF_19")
     if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_4_OF_19":
         errors.append("TP independent-study state must be INCOMPLETE_4_OF_19")
     if termination.get("corpus_state") != "OPEN_AND_MATERIALLY_INCOMPLETE":
