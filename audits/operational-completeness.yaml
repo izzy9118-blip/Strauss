@@ -3,23 +3,23 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 2.4.0
+  version: 2.5.0
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
   certification: NOT_CERTIFIED
   audit_scope_complete: true
   repository_completion: INCOMPLETE
 revision_history:
-  predecessor_version: 2.3.0
-  predecessor_blob_sha: a0d89cc3622b945448c9730036051641027b91cc
-  reason: Record complete provisional reconstruction and jurisdiction-preserving integration of CORPUS-SRC-102 through
-    SPINOZA-PREFACE-STUDY-001, CORPUS-STUDY-011, FINDSET-011, and FINDSET-119 through FINDSET-121. Preserve platform-reference
-    limits, pending edition comparison, incomplete independent corroboration, fifteen missing witnesses and studies,
+  predecessor_version: 2.4.0
+  predecessor_blob_sha: 407f5d265b8726852c12f2b57c2a73fc1ff0eb05
+  reason: Register fingerprinted CORPUS-WIT-103 for the reviewed 1997 SUNY collected item, synchronize corpus registry
+    v1.11.0 and interface records, and preserve pending CORPUS-SRC-103 sequential reconstruction, pending original
+    1948 journal comparison, incomplete independent corroboration, fourteen missing witnesses, fifteen missing studies,
     noncertification, and the Sanctum repin block.
 basis:
   repository: izzy9118-blip/Strauss
-  prior_validated_interface_commit: a639c932aca7843fe12d78d7c9d7192bd10ee9a0
-  current_revision_scope: production/corpus-src-102-sequential-reconstruction
+  prior_validated_interface_commit: ea193b51b6664f69c90b3982c32d81cdbb6921b7
+  current_revision_scope: production/corpus-src-103-reviewed-witness-registration
   manifest: manifest.yaml
   corpus_registry: corpus/index.yaml
   corpus_registry_loader: corpus_registry.py
@@ -28,10 +28,10 @@ basis:
   production_process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   witness_priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
   mapping_record: migrations/lean-operational-interface.yaml
-  governing_rule: 'A complete provisional source-specific reconstruction establishes a bounded analytical record
-    for one reviewed witness. It does not supply independent corroboration, original- edition verification, final
-    doctrine, certified migration, successor activation, predecessor displacement, unrestricted runtime readiness,
-    or repository completion.
+  governing_rule: 'A reviewed-witness registration establishes bounded documentary identity and reproducible locators
+    for one witness. It does not supply independent sequential reconstruction, independent corroboration, original-edition
+    verification, final doctrine, certified migration, successor activation, predecessor displacement, unrestricted
+    runtime readiness, or repository completion.
 
     '
 classification_vocabulary:
@@ -64,7 +64,7 @@ summary:
   - typed current-state corpus and findings registries
   - bounded source identities for all nineteen active Theologico-Political predecessor writings
   - JA-STUDY-001 complete provisional sequential reconstruction
-  - seven reviewed witnesses, including qualified platform-reference CORPUS-WIT-102
+  - eight reviewed witnesses, including qualified platform-reference CORPUS-WIT-102 and fingerprinted CORPUS-WIT-103
   - COHEN-STUDY-001 complete provisional sequential reconstruction
   - TALMON-STUDY-001 complete provisional sequential reconstruction
   - CORPUS-STUDY-008 through CORPUS-STUDY-010 and FINDSET-008 through FINDSET-010 typed registrations
@@ -72,11 +72,12 @@ summary:
   - SPINOZA-PREFACE-STUDY-001 complete provisional sequential reconstruction
   - CORPUS-STUDY-011 and FINDSET-011 typed registrations
   - FINDSET-119 through FINDSET-121 jurisdiction-preserving problem-local syntheses
+  - CORPUS-WIT-103 reviewed-witness registration with exact byte fingerprint and locators
   theologico_political_item_level_status:
     active_predecessor_source_count: 19
     registered_source_identity_count: 19
-    reviewed_item_witness_count: 4
-    registered_without_reviewed_witness_count: 15
+    reviewed_item_witness_count: 5
+    registered_without_reviewed_witness_count: 14
     remaining_without_item_level_status_count: 0
     independently_reconstructed_count_within_this_sequence: 4
     remaining_without_independent_sequential_study: 15
@@ -95,24 +96,34 @@ summary:
     - COHEN-STUDY-001
     - JA-STUDY-001
     - TALMON-STUDY-001
+    witness_only_source_ids:
+    - CORPUS-SRC-103
+    witness_only_witness_ids:
+    - CORPUS-WIT-103
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     registry_root: studies/theologico-political/
-    interpretation_limit: The four studies are independent reconstructions relative to predecessor and collection-level
-      synthesis as governing interpretations, but they are not independent corroboration of Spinoza, Cohen, biblical,
-      Greek, prophetic, historical, theological, or political witnesses.
+    interpretation_limit: The four completed studies are independent reconstructions relative to predecessor and
+      collection-level synthesis as governing interpretations, but they are not independent corroboration of Spinoza,
+      Cohen, biblical, Greek, prophetic, historical, theological, or political witnesses. CORPUS-WIT-103 is a reviewed
+      witness only and does not yet constitute a fifth independent reconstruction.
     registered_witness_source_ids:
     - CORPUS-SRC-102
+    - CORPUS-SRC-103
     - CORPUS-SRC-105
     - CORPUS-SRC-109
     - CORPUS-SRC-111
     registered_witness_ids:
     - CORPUS-WIT-102
+    - CORPUS-WIT-103
     - CORPUS-WIT-105
     - CORPUS-WIT-109
     - CORPUS-WIT-111
   remaining_major_deficiencies:
-  - fifteen Theologico-Political item identities lack reviewed item witnesses
+  - fourteen Theologico-Political item identities lack reviewed item witnesses
   - fifteen Theologico-Political writings lack independent sequential item studies
+  - CORPUS-SRC-103 requires independent sequential reconstruction from printed pages 181-233
+  - the original 1948 journal printing of How to Study Spinoza's Theologico-Political Treatise has not been compared
+    with the reviewed 1997 collected reprint
   - the exact CORPUS-WIT-102 bytes, SHA256, file size, and PDF-page offset are unavailable to the repository
   - the 1965 and 1968 Preface textual states have not been separately compared with the 1997 composite
   - the original 1967 Jerusalem and Athens printing has not been compared with the reviewed 1983 reprint
@@ -234,21 +245,45 @@ records:
   - 1965 and 1968 textual-state comparison
   - exact byte materialization, fingerprinting, and PDF offset if later available
   - independent source-tradition reconstruction and corroboration
+- path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  identity: CORPUS-WIT-103
+  present_function:
+  - registers the complete 1997 SUNY collected item separately from source identity and future study
+  - records printed pages 181-233 and one-based PDF pages 200-252
+  - records container SHA256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, file size
+    39287307 bytes, and 526-page container extent
+  - records the collection acknowledgment to Proceedings of the American Academy for Jewish Research 17 (1948), 69-131
+  - preserves page-image authority and the distinction from a separately reviewed original 1948 journal copy
+  remaining:
+  - independent sequential reconstruction of printed pages 181-233
+  - original 1948 journal comparison
+  - independent Spinozist, biblical, medieval, philosophical, and historical corroboration
+- path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/source-status.yaml
+  classification: SUBSTANTIVELY_RECONSTRUCTED
+  present_function:
+  - registers CORPUS-WIT-103 as a reviewed witness while leaving independent sequential study incomplete
+  - preserves the predecessor contribution as untested by the independent source-level reconstruction
+  - preserves original-edition, doctrine, migration, activation, and predecessor-displacement limits
+  remaining:
+  - independent sequential reconstruction
+  - original 1948 journal comparison
+  - independent source-tradition reconstruction and corroboration
 - path: corpus/index.yaml
   classification: SUBSTANTIVELY_RECONSTRUCTED
-  registry_version: 1.10.0
+  registry_version: 1.11.0
   completion: CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   present_function:
   - 22 typed source entities
-  - 7 reviewed witnesses
+  - 8 reviewed witnesses
   - 22 source-status records
   - 11 analytical and integration study records
-  - all 36 YAML records in the studies tree accounted for
+  - all 37 YAML records in the studies tree accounted for
   - all 7 problem witness registries
-  - 19 Theologico-Political identities, 4 reviewed item witnesses, and 4 complete provisional item studies
+  - 19 Theologico-Political identities, 5 reviewed item witnesses, and 4 complete provisional item studies
   - 7 positive corpus-gap records
   remaining:
-  - fifteen reviewed item witnesses
+  - fourteen reviewed item witnesses
   - fifteen independent item studies
   - complete Strauss bibliography and edition-specific source statuses
   - broader independent classical, biblical, medieval, Spinozist, Cohenian, Kantian, and modern corpora
@@ -296,25 +331,26 @@ records:
   present_function:
   - validates exact current studies-tree coverage and all typed counts
   - validates nineteen predecessor identities, aliases, scopes, and preserved-copy equality
-  - validates CORPUS-WIT-102 as a witness-only qualified platform-reference state
+  - validates CORPUS-WIT-102 as a completed qualified platform-reference study state
+  - validates CORPUS-WIT-103 as a fingerprinted witness-only state with pending sequential reconstruction
   - validates complete-study states for CORPUS-SRC-105, CORPUS-SRC-109, and CORPUS-SRC-111
-  - validates witness identity, locators, missing-byte safeguards, study binding, noncertification, and successor
-    non-effect
+  - validates witness identity, locators, fingerprint or missing-byte safeguards, study binding, noncertification, and
+    successor non-effect
   remaining:
   - no source retrieval, interpretation, certification, or activation
 - path: findings_registry.py
   classification: SUBSTANTIVELY_RECONSTRUCTED
   present_function:
-  - validates thirty-three finding sets and eighteen exact synthesis records
+  - validates typed finding sets and exact synthesis records
   - validates corpus-study exhaustiveness, derivations, indexes, source and problem bindings
-  - validates Cohen and Talmon source-local jurisdiction and noncorroboration
+  - validates Cohen, Talmon, and Spinoza-Preface source-local jurisdiction and noncorroboration
   - preserves predecessor equality, noncertification, and no successor effect
   remaining:
   - no proposition promotion, doctrinal certification, or migration execution
 - path: manifest.yaml
   classification: PARTIALLY_RECONSTRUCTED
   present_function:
-  - registers corpus v1.9.0, findings v1.3.0, 19 identities, 4 item witnesses, and 3 item studies
+  - registers corpus v1.11.0, findings v1.4.0, 19 identities, 5 item witnesses, and 4 item studies
   - preserves structural, semantic, runtime, migration, predecessor, and certification limits
   - blocks completed-interface Sanctum repinning
   remaining:
@@ -363,13 +399,13 @@ production_order:
   - TALMON-STUDY-001 complete provisional sequential reconstruction
   - source-status, corpus, findings, and three problem-local synthesis registrations
   - substantive validator and behavioral-test revision
-  - CORPUS-WIT-102 qualified platform-reference registration
+  - CORPUS-WIT-102 qualified platform-reference registration and SPINOZA-PREFACE-STUDY-001 reconstruction
+  - CORPUS-WIT-103 fingerprinted reviewed-witness registration
   next:
-  - run complete structural and behavioral validation for this witness registration
-  - conduct CORPUS-SRC-102 independent sequential reconstruction from printed pages 137-180
-  - acquire CORPUS-SRC-103 and the remaining fourteen item witnesses after it
-  - expand independent Spinozist, biblical, Platonic, Xenophontic, medieval, Cohenian, Kantian, and modern witness
-    studies
+  - run complete structural and behavioral validation for CORPUS-WIT-103 registration
+  - conduct CORPUS-SRC-103 independent sequential reconstruction from printed pages 181-233
+  - acquire CORPUS-SRC-108 and the remaining thirteen item witnesses after it
+  - expand independent Spinozist, biblical, Platonic, Xenophontic, medieval, Cohenian, Kantian, and modern witness studies
   - validate actual ministerial reports against the full contract stack
   final_repin:
     status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
@@ -381,6 +417,7 @@ non_effects:
 - This audit does not certify any doctrine, claimant, source, finding, successor problem, or migration.
 - This audit does not admit or distribute source text.
 - A source-specific study is not independent corroboration of the traditions it examines.
+- A reviewed witness without a completed sequential reconstruction is not a completed source study.
 - This audit does not convert predecessor contributions into certified source-level doctrine.
 - This audit does not alter active predecessors or accepted migration sources.
 - This audit does not authorize successor activation or completed-interface Sanctum repinning.
