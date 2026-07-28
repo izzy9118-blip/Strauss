@@ -116,16 +116,20 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DF-001
         classification: documented_finding
-        proposition: Interpretation seeks what a speaker said and understood, while explanation seeks implications of which the speaker was unaware; interpretation must therefore precede explanation.
+        proposition: >
+          Interpretation seeks what a speaker said and understood, while explanation seeks implications of which the speaker was unaware; interpretation must therefore precede explanation.
       - id: SPINOZA-TREATISE-DF-002
         classification: documented_finding
-        proposition: Within interpretation, explicit meaning must be understood before what the author knew but did not state explicitly.
+        proposition: >
+          Within interpretation, explicit meaning must be understood before what the author knew but did not state explicitly.
       - id: SPINOZA-TREATISE-DF-003
         classification: documented_finding
-        proposition: The degree of exactness appropriate to a text depends on the author's habits of writing, and Strauss turns to Spinoza's own account of reading as evidence about those habits.
+        proposition: >
+          The degree of exactness appropriate to a text depends on the author's habits of writing, and Strauss turns to Spinoza's own account of reading as evidence about those habits.
       - id: SPINOZA-TREATISE-SI-001
         classification: supported_inference
-        proposition: Strauss's criticism of Spinoza's biblical method does not reject literal reading; it rejects allowing an externally imposed taxonomy to determine the book's central subjects before the author's intention and questions are recovered.
+        proposition: >
+          Strauss's criticism of Spinoza's biblical method does not reject literal reading; it rejects allowing an externally imposed taxonomy to determine the book's central subjects before the author's intention and questions are recovered.
     uncertainties:
       - The distinction between interpretation and explanation does not by itself settle how implicit intention is to be proved in every difficult case.
 
@@ -135,19 +139,24 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DF-004
         classification: documented_finding
-        proposition: Spinoza's own useful books are treated as intelligible rather than hieroglyphic, so historical information cannot supply their primary interpretive key.
+        proposition: >
+          Spinoza's own useful books are treated as intelligible rather than hieroglyphic, so historical information cannot supply their primary interpretive key.
       - id: SPINOZA-TREATISE-DF-005
         classification: documented_finding
-        proposition: The modern historical interpreter risks presupposing the untenability of Spinoza's nonhistorical orientation and thereby losing the incentive to understand Spinoza as he understood himself.
+        proposition: >
+          The modern historical interpreter risks presupposing the untenability of Spinoza's nonhistorical orientation and thereby losing the incentive to understand Spinoza as he understood himself.
       - id: SPINOZA-TREATISE-DF-006
         classification: documented_finding
-        proposition: Historical study can become philosophically necessary when modern assumptions obscure the original meaning of philosophy, but it remains a remedial means rather than a superior standpoint.
+        proposition: >
+          Historical study can become philosophically necessary when modern assumptions obscure the original meaning of philosophy, but it remains a remedial means rather than a superior standpoint.
       - id: SPINOZA-TREATISE-DF-007
         classification: documented_finding
-        proposition: Historical information about life, sources, addressees, and development must remain subordinate to a framework authentically or explicitly supplied by Spinoza.
+        proposition: >
+          Historical information about life, sources, addressees, and development must remain subordinate to a framework authentically or explicitly supplied by Spinoza.
       - id: SPINOZA-TREATISE-DF-008
         classification: documented_finding
-        proposition: Mature works addressed to posterity carry greater interpretive weight than letters addressed to particular contemporaries, and deliberate suppression of relevant material belongs to interpretation proper.
+        proposition: >
+          Mature works addressed to posterity carry greater interpretive weight than letters addressed to particular contemporaries, and deliberate suppression of relevant material belongs to interpretation proper.
     uncertainties:
       - The essay argues that historical understanding can undo historicism, but it does not supply a complete independent history of modern historicism.
 
@@ -157,13 +166,16 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DF-009
         classification: documented_finding
-        proposition: The Treatise is addressed not to actual philosophers or to the vulgar simply, but to potential philosophers among Christians, while remaining publicly accessible to the vulgar.
+        proposition: >
+          The Treatise is addressed not to actual philosophers or to the vulgar simply, but to potential philosophers among Christians, while remaining publicly accessible to the vulgar.
       - id: SPINOZA-TREATISE-DF-010
         classification: documented_finding
-        proposition: The predominance of Jewish subject matter cannot be explained merely by Spinoza's biography; chapters that appear unnecessary to the surface purpose are reconstructed as necessary to the deeper argument about prophecy, law, providence, and miracles.
+        proposition: >
+          The predominance of Jewish subject matter cannot be explained merely by Spinoza's biography; chapters that appear unnecessary to the surface purpose are reconstructed as necessary to the deeper argument about prophecy, law, providence, and miracles.
       - id: SPINOZA-TREATISE-SI-002
         classification: supported_inference
-        proposition: The relation between timeless philosophic purpose and historical time concerns the conditions under which freedom of philosophizing can be publicly advanced, not a claim that philosophic truth is historically relative.
+        proposition: >
+          The relation between timeless philosophic purpose and historical time concerns the conditions under which freedom of philosophizing can be publicly advanced, not a claim that philosophic truth is historically relative.
     uncertainties:
       - Strauss labels the hypothesis of direct incorporation from an earlier anti-Jewish apology merely plausible and refuses to let higher criticism replace interpretation of the published work.
 
@@ -173,13 +185,16 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DF-011
         classification: documented_finding
-        proposition: Spinoza both admits and denies suprarational revelation, creating a contradiction about a central subject that cannot be resolved by simply suspending judgment without making the Treatise unintelligible.
+        proposition: >
+          Spinoza both admits and denies suprarational revelation, creating a contradiction about a central subject that cannot be resolved by simply suspending judgment without making the Treatise unintelligible.
       - id: SPINOZA-TREATISE-DF-012
         classification: documented_finding
-        proposition: Strauss traces related contradictions concerning theology and philosophy, providence, Jesus and Christianity, and whether the Bible is intelligible or hieroglyphic.
+        proposition: >
+          Strauss traces related contradictions concerning theology and philosophy, providence, Jesus and Christianity, and whether the Bible is intelligible or hieroglyphic.
       - id: SPINOZA-TREATISE-DF-013
         classification: documented_finding
-        proposition: Spinoza's own treatment of biblical contradictions permits differences of occasion and audience to explain some contradictions and supplies a model for examining his own writing.
+        proposition: >
+          Spinoza's own treatment of biblical contradictions permits differences of occasion and audience to explain some contradictions and supplies a model for examining his own writing.
     uncertainties:
       - The presence of contradiction alone does not establish which statement is serious; the argument proceeds to Spinoza's explicit practice of accommodation before formulating its stronger rule.
 
@@ -189,16 +204,20 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DF-014
         classification: documented_finding
-        proposition: To speak according to the capacity of the vulgar means more than simplifying vocabulary; it can mean arguing from accepted premises and outwardly professing opinions the philosopher does not regard as true.
+        proposition: >
+          To speak according to the capacity of the vulgar means more than simplifying vocabulary; it can mean arguing from accepted premises and outwardly professing opinions the philosopher does not regard as true.
       - id: SPINOZA-TREATISE-DF-015
         classification: documented_finding
-        proposition: Strauss treats the Treatise's account of biblical accommodation as indirect evidence of Spinoza's own exoteric procedure.
+        proposition: >
+          Strauss treats the Treatise's account of biblical accommodation as indirect evidence of Spinoza's own exoteric procedure.
       - id: SPINOZA-TREATISE-DF-016
         classification: documented_finding
-        proposition: Caution includes the possibility of silence, legitimate ruses, and adaptation of speech to political and religious conditions, with ibn Ezra and Maimonides serving as important precedents in Strauss's reconstruction.
+        proposition: >
+          Caution includes the possibility of silence, legitimate ruses, and adaptation of speech to political and religious conditions, with ibn Ezra and Maimonides serving as important precedents in Strauss's reconstruction.
       - id: SPINOZA-TREATISE-SI-003
         classification: supported_inference
-        proposition: Exoteric communication is presented as a relation among truth, duty, audience, and political danger rather than as unrestricted deception for private advantage.
+        proposition: >
+          Exoteric communication is presented as a relation among truth, duty, audience, and political danger rather than as unrestricted deception for private advantage.
     uncertainties:
       - Strauss's genealogy of exoteric techniques through medieval and classical thinkers requires independent reconstruction of those thinkers before it can count as corroborated intellectual history.
 
@@ -208,16 +227,20 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DF-017
         classification: documented_finding
-        proposition: The Treatise addresses potential philosophers while the vulgar listen, so orthodox formulas can appease superficial readers while less frequent heterodox statements or implications disclose a more serious view to attentive readers.
+        proposition: >
+          The Treatise addresses potential philosophers while the vulgar listen, so orthodox formulas can appease superficial readers while less frequent heterodox statements or implications disclose a more serious view to attentive readers.
       - id: SPINOZA-TREATISE-DF-018
         classification: documented_finding
-        proposition: Strauss states that, in a contradiction, the statement most opposed to what Spinoza regarded as the vulgar view has priority as the serious view, including necessary heterodox implications where the relation is demonstrable.
+        proposition: >
+          Strauss states that, in a contradiction, the statement most opposed to what Spinoza regarded as the vulgar view has priority as the serious view, including necessary heterodox implications where the relation is demonstrable.
       - id: SPINOZA-TREATISE-DF-019
         classification: documented_finding
-        proposition: The Ethics cannot simply be treated as a perfectly esoteric work, because any written work is accessible to readers beyond a philosophic elite and may itself contain accommodations.
+        proposition: >
+          The Ethics cannot simply be treated as a perfectly esoteric work, because any written work is accessible to readers beyond a philosophic elite and may itself contain accommodations.
       - id: SPINOZA-TREATISE-SI-004
         classification: supported_inference
-        proposition: Strauss therefore treats exoteric reading as a controlled reconstruction of relations among statements rather than as a mechanical rule that every explicit proposition must be reversed.
+        proposition: >
+          Strauss therefore treats exoteric reading as a controlled reconstruction of relations among statements rather than as a mechanical rule that every explicit proposition must be reversed.
     uncertainties:
       - Strauss raises, but does not settle within this essay alone, whether Spinoza's ultimate beginning is strictly atheistic or how far accommodation extends into the Ethics.
 
@@ -227,13 +250,16 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DF-020
         classification: documented_finding
-        proposition: Strauss argues that Christianity is the Treatise's public audience because Christianity was the ruling opinion and because Spinoza sought to convert as many potential philosophers as possible, not because Spinoza accepted Christian truth or superiority.
+        proposition: >
+          Strauss argues that Christianity is the Treatise's public audience because Christianity was the ruling opinion and because Spinoza sought to convert as many potential philosophers as possible, not because Spinoza accepted Christian truth or superiority.
       - id: SPINOZA-TREATISE-DF-021
         classification: documented_finding
-        proposition: The predominance of Jewish and Old Testament material is reconstructed as a safer indirect route for conclusions meant to apply to Christianity and both Testaments.
+        proposition: >
+          The predominance of Jewish and Old Testament material is reconstructed as a safer indirect route for conclusions meant to apply to Christianity and both Testaments.
       - id: SPINOZA-TREATISE-DF-022
         classification: documented_finding
-        proposition: The Treatise is historically linked to its time through deliberate adaptation of public expression and practical proposals to political possibilities, not through unconscious historical determination of Spinoza's private thought.
+        proposition: >
+          The Treatise is historically linked to its time through deliberate adaptation of public expression and practical proposals to political possibilities, not through unconscious historical determination of Spinoza's private thought.
     uncertainties:
       - The essay distinguishes classical and biblical justifications of freedom of inquiry but does not independently reconstruct the classical authors cited for that comparison.
 
@@ -243,13 +269,16 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DF-023
         classification: documented_finding
-        proposition: The return to the literal Bible serves two different purposes: an appeal from traditional theology to an authoritative biblical standard and a philosophic attack on the authority of the Bible itself.
+        proposition: >
+          The return to the literal Bible serves two different purposes: an appeal from traditional theology to an authoritative biblical standard and a philosophic attack on the authority of the Bible itself.
       - id: SPINOZA-TREATISE-DF-024
         classification: documented_finding
-        proposition: The same term ancient changes weight across those purposes, meaning venerable in the corrective appeal and rude or obsolete in the philosophic criticism.
+        proposition: >
+          The same term ancient changes weight across those purposes, meaning venerable in the corrective appeal and rude or obsolete in the philosophic criticism.
       - id: SPINOZA-TREATISE-DF-025
         classification: documented_finding
-        proposition: Detached historical study of the Bible is a cura posterior because detachment from biblical authority must first be created; it therefore cannot serve as the governing standard for judging the earlier practical and philosophic stages of the Treatise's argument.
+        proposition: >
+          Detached historical study of the Bible is a cura posterior because detachment from biblical authority must first be created; it therefore cannot serve as the governing standard for judging the earlier practical and philosophic stages of the Treatise's argument.
     uncertainties:
       - The methodological priority of detachment does not by itself establish the truth of Spinoza's criticism of the Bible.
 
@@ -259,16 +288,20 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DF-026
         classification: documented_finding
-        proposition: Strauss argues that Spinoza's high valuation of the Bible's practical teaching can itself belong to accommodation once Spinoza has denied the Bible's cognitive authority.
+        proposition: >
+          Strauss argues that Spinoza's high valuation of the Bible's practical teaching can itself belong to accommodation once Spinoza has denied the Bible's cognitive authority.
       - id: SPINOZA-TREATISE-DF-027
         classification: documented_finding
-        proposition: The Treatise confronts Christian and Jewish forms of dogmatism and skepticism, but Spinoza simplifies the dispute by returning to a common biblical basis and by testing what Strauss presents as the strongest reasonable theological position rather than every historical variant separately.
+        proposition: >
+          The Treatise confronts Christian and Jewish forms of dogmatism and skepticism, but Spinoza simplifies the dispute by returning to a common biblical basis and by testing what Strauss presents as the strongest reasonable theological position rather than every historical variant separately.
       - id: SPINOZA-TREATISE-DF-028
         classification: documented_finding
-        proposition: The practical proposals and their obvious reasoning are meant for all readers and must be understood completely by themselves before the hidden teaching can be brought to light.
+        proposition: >
+          The practical proposals and their obvious reasoning are meant for all readers and must be understood completely by themselves before the hidden teaching can be brought to light.
       - id: SPINOZA-TREATISE-SI-005
         classification: supported_inference
-        proposition: The final methodological order forbids bypassing the surface argument in the name of esoteric interpretation; concealment analysis is subsequent to and dependent on a complete reconstruction of the public teaching.
+        proposition: >
+          The final methodological order forbids bypassing the surface argument in the name of esoteric interpretation; concealment analysis is subsequent to and dependent on a complete reconstruction of the public teaching.
     uncertainties:
       - Strauss's account of the strongest theological position relies heavily on Maimonides and remains subject to independent reconstruction of Maimonides and the broader theological traditions.
 
@@ -278,57 +311,74 @@ sequential_reading:
     findings:
       - id: SPINOZA-TREATISE-DO-001
         classification: structural_evidence
-        proposition: The 119 notes systematically anchor the essay in the Treatise, Spinoza's letters and other works, Maimonides, classical and modern authors, and selected modern scholarship.
+        proposition: >
+          The 119 notes systematically anchor the essay in the Treatise, Spinoza's letters and other works, Maimonides, classical and modern authors, and selected modern scholarship.
       - id: SPINOZA-TREATISE-DO-002
         classification: structural_evidence
-        proposition: The notes repeatedly document parallel passages, apparent contradictions, audience and accommodation formulas, silence, and cross-references to the essay's own argumentative sections.
+        proposition: >
+          The notes repeatedly document parallel passages, apparent contradictions, audience and accommodation formulas, silence, and cross-references to the essay's own argumentative sections.
       - id: SPINOZA-TREATISE-UU-001
         classification: unresolved_uncertainty
-        proposition: The density of citations strengthens reproducibility of Strauss's reconstruction but does not independently verify the cited traditions or settle disputes among editions and translations.
+        proposition: >
+          The density of citations strengthens reproducibility of Strauss's reconstruction but does not independently verify the cited traditions or settle disputes among editions and translations.
 
 permanent_findings:
   - id: SPINOZA-TREATISE-PF-001
     classification: documented_finding
-    proposition: Interpretation must precede explanation, and explicit meaning must precede the interpretation of what an author knew but did not state explicitly.
+    proposition: >
+      Interpretation must precede explanation, and explicit meaning must precede the interpretation of what an author knew but did not state explicitly.
   - id: SPINOZA-TREATISE-PF-002
     classification: documented_finding
-    proposition: Historical and biographical information may assist interpretation but must remain subordinate to a framework supplied by the author's explicit statements and signposts.
+    proposition: >
+      Historical and biographical information may assist interpretation but must remain subordinate to a framework supplied by the author's explicit statements and signposts.
   - id: SPINOZA-TREATISE-PF-003
     classification: documented_finding
-    proposition: Historical study becomes philosophically necessary when prevailing assumptions block access to the original meaning of philosophy, yet historicism can undermine itself by recovering earlier thought on its own terms.
+    proposition: >
+      Historical study becomes philosophically necessary when prevailing assumptions block access to the original meaning of philosophy, yet historicism can undermine itself by recovering earlier thought on its own terms.
   - id: SPINOZA-TREATISE-PF-004
     classification: documented_finding
-    proposition: Mature philosophic works addressed to posterity must be distinguished from occasional letters, and deliberate silence about relevant matters belongs to interpretation proper.
+    proposition: >
+      Mature philosophic works addressed to posterity must be distinguished from occasional letters, and deliberate silence about relevant matters belongs to interpretation proper.
   - id: SPINOZA-TREATISE-PF-005
     classification: documented_finding
-    proposition: The Treatise addresses potential philosophers among Christians while remaining audible to the vulgar; audience differentiation is therefore internal to its manner of presentation.
+    proposition: >
+      The Treatise addresses potential philosophers among Christians while remaining audible to the vulgar; audience differentiation is therefore internal to its manner of presentation.
   - id: SPINOZA-TREATISE-PF-006
     classification: documented_finding
-    proposition: Apparent digressions or inherited materials must first be assigned a function within the published whole before genetic hypotheses are allowed to explain them away.
+    proposition: >
+      Apparent digressions or inherited materials must first be assigned a function within the published whole before genetic hypotheses are allowed to explain them away.
   - id: SPINOZA-TREATISE-PF-007
     classification: documented_finding
-    proposition: The Treatise contains consequential contradictions concerning revelation, theology, Christianity, and biblical intelligibility that require interpretation rather than mere suspension of judgment.
+    proposition: >
+      The Treatise contains consequential contradictions concerning revelation, theology, Christianity, and biblical intelligibility that require interpretation rather than mere suspension of judgment.
   - id: SPINOZA-TREATISE-PF-008
     classification: documented_finding
-    proposition: Ad captum vulgi loqui can mean deliberate accommodation of expression to accepted prejudices and not merely the use of simple or nontechnical language.
+    proposition: >
+      Ad captum vulgi loqui can mean deliberate accommodation of expression to accepted prejudices and not merely the use of simple or nontechnical language.
   - id: SPINOZA-TREATISE-PF-009
     classification: documented_finding
-    proposition: Spinoza's discussion of biblical accommodation and contradiction supplies Strauss with source-local evidence for reconstructing Spinoza's own exoteric procedure.
+    proposition: >
+      Spinoza's discussion of biblical accommodation and contradiction supplies Strauss with source-local evidence for reconstructing Spinoza's own exoteric procedure.
   - id: SPINOZA-TREATISE-PF-010
     classification: bounded_conclusion
-    proposition: Contradictions and heterodox implications may disclose a serious view only through demonstrated relations of audience, accommodation, order, and implication; exoteric reading is not mechanical inversion.
+    proposition: >
+      Contradictions and heterodox implications may disclose a serious view only through demonstrated relations of audience, accommodation, order, and implication; exoteric reading is not mechanical inversion.
   - id: SPINOZA-TREATISE-PF-011
     classification: documented_finding
-    proposition: No written work can be strictly esoteric merely by being addressed to philosophers, so the Ethics cannot be assumed in advance to state Spinoza's serious teaching without accommodation.
+    proposition: >
+      No written work can be strictly esoteric merely by being addressed to philosophers, so the Ethics cannot be assumed in advance to state Spinoza's serious teaching without accommodation.
   - id: SPINOZA-TREATISE-PF-012
     classification: documented_finding
-    proposition: The Treatise is tied to its historical moment through deliberate adaptation of its public argument and proposals, not through an unconscious historicist determination of Spinoza's thought.
+    proposition: >
+      The Treatise is tied to its historical moment through deliberate adaptation of its public argument and proposals, not through an unconscious historicist determination of Spinoza's thought.
   - id: SPINOZA-TREATISE-PF-013
     classification: documented_finding
-    proposition: The return to the literal Bible serves both an appeal against traditional theology and an attack on biblical authority, while detached historical study is subsequent to those primary purposes.
+    proposition: >
+      The return to the literal Bible serves both an appeal against traditional theology and an attack on biblical authority, while detached historical study is subsequent to those primary purposes.
   - id: SPINOZA-TREATISE-PF-014
     classification: documented_finding
-    proposition: The practical proposals and obvious reasoning must be understood completely before any hidden teaching is reconstructed.
+    proposition: >
+      The practical proposals and obvious reasoning must be understood completely before any hidden teaching is reconstructed.
 
 speech_and_deed_analysis:
   explicit_speech: >
