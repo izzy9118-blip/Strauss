@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - complete-remaining-tp-witnesses
     paths:
       - "manifest.yaml"
       - "adapter.py"
@@ -19,6 +20,8 @@ on:
       - "corpus/**"
       - "findings/**"
       - "migrations/lean-operational-interface.yaml"
+      - "history/production-plans/**"
+      - "scripts/materialize_remaining_tp_witnesses.py"
       - "tests/**"
       - ".github/workflows/validate-lean-interface.yml"
   pull_request:
@@ -41,7 +44,7 @@ on:
       - ".github/workflows/validate-lean-interface.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -49,6 +52,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -57,6 +62,19 @@ jobs:
 
       - name: Install dependency
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
+
+      - name: Materialize complete Theologico-Political witness coverage
+        if: github.event_name == 'push' && github.ref == 'refs/heads/complete-remaining-tp-witnesses'
+        run: |
+          set -euo pipefail
+          python scripts/materialize_remaining_tp_witnesses.py
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add corpus/index.yaml manifest.yaml audits/operational-completeness.yaml migrations/lean-operational-interface.yaml history/production-plans/2026-07-27-ten-step-completion-process.yaml history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml corpus_registry.py tests/
+            git commit -m "Materialize complete 19-of-19 Theologico-Political witness coverage"
+            git push origin HEAD:complete-remaining-tp-witnesses
+          fi
 
       - name: Validate manifest, audit, paths, and speech contract
         run: |
