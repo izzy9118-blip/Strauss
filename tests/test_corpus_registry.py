@@ -72,7 +72,7 @@ class CorpusRegistryTests(unittest.TestCase):
             status = corpus_registry.load_yaml(corpus_registry._resolve(entries[source["source_id"]]["path"]))
             self.assertEqual(source["item_level_source_status"], "REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED")
             self.assertEqual(source["reviewed_witnesses"], [corpus_registry.WITNESS_ONLY_TP_ITEMS[source["source_id"]]["witness_id"]])
-            self.assertEqual(status["status"]["independent_sequential_study"], "SPINOZA-TREATISE-STUDY-001")
+            self.assertEqual(status["status"]["independent_sequential_study"], "NOT_YET_COMPLETED")
             self.assertEqual(status["termination"]["study_state"], "COMPLETE_PROVISIONAL")
             self.assertEqual(status["termination"]["certification"], "NOT_CERTIFIED")
             self.assertEqual(status["termination"]["successor_effect"], "NONE")
