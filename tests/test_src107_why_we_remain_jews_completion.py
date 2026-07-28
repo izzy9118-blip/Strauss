@@ -34,7 +34,7 @@ class WhyWeRemainJewsCompletionTests(unittest.TestCase):
             self.assertIn(key, layers)
         self.assertIn("not read by Strauss", " ".join(study["source_limits"]))
         self.assertEqual(study["source"]["editorial_provenance"]["transcribers"], ["Werner Dannhauser", "James Lane"])
-        self.assertEqual(study["source"]["editorial_provenance"]["delivery_date"], "1962-02-04")
+        self.assertEqual(str(study["source"]["editorial_provenance"]["delivery_date"]), "1962-02-04")
 
     def test_findings_preserve_tp_and_avj_jurisdictions_only(self) -> None:
         findings = load_yaml("findings/index.yaml")
