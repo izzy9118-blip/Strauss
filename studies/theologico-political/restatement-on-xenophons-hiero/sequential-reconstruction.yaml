@@ -1,0 +1,103 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+identity:
+  id: HIERO-RESTATEMENT-LAST-PARAGRAPH-STUDY-001
+  title: Sequential Reconstruction of the Registered Last Paragraph of Restatement on Xenophon's Hiero
+  version: 1.0.0
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REGISTERED_LAST_PARAGRAPH_OF_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_REGISTERED_SCOPE
+  independent_corroboration: INCOMPLETE
+  earlier_textual_state_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+source:
+  source_id: CORPUS-SRC-119
+  source_status_id: CORPUS-STATUS-119
+  reviewed_witness_id: CORPUS-WIT-119
+  author: Leo Strauss
+  canonical_title: Restatement on Xenophon's Hiero
+  source_date: 1950
+  source_form: REGISTERED_LAST_PARAGRAPH_EXCERPT_WITH_EDITORIAL_NOTES
+  registered_scope: LAST_PARAGRAPH_ONLY
+  reviewed_container: {title: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, place: Albany, year: 1997}
+  locators: {printed_pages: {start: 471, end: 473}, pdf_pages_one_based: {start: 490, end: 492}}
+  argumentative_body_locator: 'printed pp. 471-472; editorial notes continue pp. 472-473'
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+source_limits:
+  - The source identity covers only the last paragraph, not the complete Restatement or On Tyranny debate.
+  - Green's notes supply transmission history and interpretive suggestions; they are a separate editorial layer and are not Strauss's argument.
+  - Green's statement that the paragraph is the closest thing to a metaphysical confession of faith and his suggestion of theological implications may not be attributed to Strauss.
+  - The registered paragraph does not use the phrase universal state; any such predecessor language must remain qualified unless supported from outside this bounded scope.
+speaker_and_documentary_layers:
+  strauss_last_paragraph: AUTHORIAL_ARGUMENTATIVE_BODY
+  green_editorial_notes: EDITORIAL_TRANSMISSION_AND_INTERPRETIVE_LAYER_NOT_STRAUSS
+method_application:
+  governing_question: What ultimate issue does Strauss say lies beneath the dispute with Kojeve about tyranny and wisdom, and how does the classical idea of philosophy differ from Kojeve’s historical ontology?
+  reconstruction_rule: Read only the registered last paragraph as Strauss's argument, then separately record Green’s notes as provenance and editorial interpretation.
+sequential_reading:
+  - unit: HIERO-LAST-RU-001
+    printed_pages: 471
+    findings:
+      - {id: HIERO-LAST-DF-001, classification: documented_finding, proposition: 'Strauss says the most he hopes to have shown against Kojeve is that Xenophon’s thesis on tyranny and wisdom is compatible with and required by the idea of philosophy; he immediately calls this very little because philosophy itself still requires legitimation.'}
+      - {id: HIERO-LAST-DF-002, classification: documented_finding, proposition: 'Classical philosophy is defined as the quest for the eternal order or eternal cause or causes of all things and therefore presupposes an unchangeable order within which History occurs without altering that order.'}
+      - {id: HIERO-LAST-DF-003, classification: documented_finding, proposition: 'The classical presupposition makes every realm of freedom dependent within the realm of necessity; Strauss explicitly says this presupposition is not self-evident.'}
+  - unit: HIERO-LAST-RU-002
+    printed_pages: 471-472
+    findings:
+      - {id: HIERO-LAST-DF-004, classification: documented_finding, proposition: 'Kojeve’s opposed presupposition is that Being creates itself in History, that the highest being is Society and History, or that eternity is the totality of finite historical time.'}
+      - {id: HIERO-LAST-DF-005, classification: documented_finding, proposition: 'On the classical basis, the social and political conditions under which philosophy exists must be radically distinguished from the sources of philosophic insight.'}
+      - {id: HIERO-LAST-DF-006, classification: documented_finding, proposition: 'On Kojeve’s basis, social change or fate affects Being and therefore affects truth, so unqualified attachment to human concerns becomes a source of philosophic understanding.'}
+      - {id: HIERO-LAST-DF-007, classification: documented_finding, proposition: 'The opposed human postures are absolute citizenship of the earth under Kojeve and classical detachment from human concerns in which man is not absolutely at home on earth but is a citizen of the whole.'}
+      - {id: HIERO-LAST-DF-008, classification: documented_finding, proposition: 'Strauss says the conflict of presuppositions has barely been mentioned but has governed the discussion; the turn from Being to Tyranny arose because evasion of tyranny also forced evasion of Being.'}
+  - unit: HIERO-LAST-RU-003
+    printed_pages: 472-473
+    function: Preserve editorial transmission and interpretation without absorption into Strauss's argument.
+    findings:
+      - {id: HIERO-LAST-DF-009, classification: documentary_finding, proposition: 'Green reports that the paragraph appeared in the 1954 French edition, was absent from the 1963 complete English edition, was retranslated from French in the 1991 edition, and is printed in the 1997 collection from an original English typescript supplied through Laurence Berns.'}
+      - {id: HIERO-LAST-DF-010, classification: documentary_limit, proposition: 'Green’s metaphysical-confession and theological-implication claims are editorial interpretations and are not Strauss statements.'}
+permanent_findings:
+  - {id: HIERO-LAST-PF-001, classification: documented_finding, proposition: 'The last paragraph identifies the deepest dispute with Kojeve as the legitimation of classical philosophy’s presupposition of eternal unchanging order against historical self-creation of Being.'}
+  - {id: HIERO-LAST-PF-002, classification: documented_finding, proposition: 'The classical position distinguishes political conditions of philosophy from sources of philosophic truth; the historicist position threatens that distinction by making social-historical change constitutive of Being and truth.'}
+  - {id: HIERO-LAST-PF-003, classification: documented_finding, proposition: 'The practical contrast is between attachment to human-historical concerns and philosophic detachment toward the whole.'}
+  - {id: HIERO-LAST-PF-004, classification: documentary_limit, proposition: 'The registered paragraph does not itself formulate a doctrine of a universal state or theological implications.'}
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY_AS_REGISTERED_SEQUENCE_WITH_INDIRECT_METAPHYSICAL_CONTRIBUTION
+    receives: [legitimation of philosophy, eternal order versus historical creation, distinction between conditions and sources of truth]
+    non_absorption: The paragraph does not discuss revelation or theology; theological implications in the notes are Green’s.
+  ancients_vs_moderns:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives: [classical philosophy versus Kojeve, eternal order versus historicism, citizen of the whole versus citizen of the earth]
+    non_absorption: The paragraph does not stand for the whole ancient-modern dispute.
+  theory_vs_practice:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives: [tyranny as practical-political issue, conditions of philosophy versus sources of insight, attachment to human concerns versus detachment]
+    non_absorption: Political conditions are not identified with sources of philosophic truth on the classical account.
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  predecessor_statement: Deepens the problem through the dispute over tyranny, wisdom, the universal state, eternity, history, and whether truth is discovered or historically created.
+  state: PROVISIONAL_RETEST_STRONG_CONFIRMATION_WITH_REGISTERED_SCOPE_QUALIFICATION_NO_PROMOTION
+  confirmations:
+    - The paragraph directly joins tyranny and wisdom to the legitimation of philosophy and explicitly opposes eternal order to Being created in History.
+    - It directly asks whether social-historical change affects truth or whether truth comes from sources distinguishable from political conditions.
+  qualifications:
+    - The registered last paragraph does not use the phrase universal state; that part of the predecessor formulation requires evidence from outside this bounded scope.
+    - Green’s theological reading is editorial and may not be counted as Strauss evidence.
+  predecessor_effect: NONE
+prohibitions:
+  - Do not treat the registered last paragraph as the complete Restatement or On Tyranny.
+  - Do not attribute Green's metaphysical-confession or theological-implication language to Strauss.
+  - Do not import the universal-state phrase into the paragraph as if it were explicit here.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+termination:
+  reading_state: COMPLETE_FOR_REGISTERED_LAST_PARAGRAPH_OF_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  registered_scope: LAST_PARAGRAPH_ONLY
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  independent_corroboration: INCOMPLETE
+  earlier_textual_state_comparison_required: true
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
