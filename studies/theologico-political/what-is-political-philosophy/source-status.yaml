@@ -6,7 +6,7 @@ identity:
   canonical_title: What Is Political Philosophy?
   author: Leo Strauss
   date: 1954
-  version: 1.2.0
+  version: 1.2.1
   registered_scope: first paragraph
 status:
   lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
@@ -16,12 +16,12 @@ status:
   independent_sequential_study: WIPP-FIRST-PARAGRAPH-STUDY-001
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
 revision_history:
-  predecessor_version: 1.1.0
-  transformation: FORWARD_REGISTERED_SCOPE_STUDY_COMPLETION_AND_PREDECESSOR_QUALIFICATION
+  predecessor_version: 1.2.0
+  transformation: VALIDATOR_ALIGNMENT_WITHOUT_SCOPE_EXPANSION
   reason: >
-    Complete the independent reconstruction of the predecessor-registered first paragraph while preserving the first-paragraph
-    scope, pending 1959 printing comparison, incomplete independent corroboration, and the material qualification that the
-    paragraph does not itself define the philosophic best regime named by the predecessor synthesis.
+    Normalize the termination study_state to the repository-wide COMPLETE_PROVISIONAL contract while preserving the separately
+    explicit first-paragraph-only scope, pending 1959 printing comparison, incomplete independent corroboration, and the material
+    qualification that the paragraph does not itself define the philosophic best regime named by the predecessor synthesis.
 registration_basis:
   active_predecessor: problems/theologico-political.yaml
   active_predecessor_source_sequence: 10
@@ -103,7 +103,8 @@ termination:
   source_identity_state: REGISTERED
   reviewed_witness_state: REGISTERED
   registered_scope: FIRST_PARAGRAPH_ONLY
-  study_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE
+  study_scope_state: COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE
+  study_state: COMPLETE_PROVISIONAL
   study_id: WIPP-FIRST-PARAGRAPH-STUDY-001
   independent_corroboration: INCOMPLETE
   original_1959_printing_comparison: PENDING
