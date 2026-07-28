@@ -5,7 +5,7 @@ on:
     branches:
       - corpus-src-103-complete-review
     paths:
-      - "history/staging/register-src103.py.gz.b64"
+      - "history/staging/src103-payload/**"
       - ".github/workflows/materialize-corpus-src-103.yml"
 
 permissions:
@@ -21,11 +21,11 @@ jobs:
           ref: corpus-src-103-complete-review
           fetch-depth: 0
 
-      - name: Detect payload
+      - name: Detect complete payload
         id: payload
         shell: bash
         run: |
-          if [ -f history/staging/register-src103.py.gz.b64 ]; then
+          if [ -f history/staging/src103-payload/READY ]; then
             echo "present=true" >> "$GITHUB_OUTPUT"
           else
             echo "present=false" >> "$GITHUB_OUTPUT"
@@ -46,9 +46,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          base64 --decode history/staging/register-src103.py.gz.b64 | gzip --decompress > /tmp/register_src103_witness.py
+          cat history/staging/src103-payload/part-* | base64 --decode | gzip --decompress > /tmp/register_src103_witness.py
           python /tmp/register_src103_witness.py
-          rm -f history/staging/register-src103.py.gz.b64
+          rm -rf history/staging/src103-payload
           rm -f .github/workflows/materialize-corpus-src-103.yml
           python adapter.py --validate
           python problem_bundles.py --validate
