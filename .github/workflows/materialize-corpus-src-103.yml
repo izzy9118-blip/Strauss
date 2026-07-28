@@ -1,0 +1,68 @@
+name: Materialize CORPUS-SRC-103
+
+on:
+  push:
+    branches:
+      - corpus-src-103-complete-review
+    paths:
+      - "history/staging/register-src103.py.gz.b64"
+      - ".github/workflows/materialize-corpus-src-103.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out completion branch
+        uses: actions/checkout@v4
+        with:
+          ref: corpus-src-103-complete-review
+          fetch-depth: 0
+
+      - name: Detect payload
+        id: payload
+        shell: bash
+        run: |
+          if [ -f history/staging/register-src103.py.gz.b64 ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.payload.outputs.present == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.payload.outputs.present == 'true'
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 ruamel.yaml==0.18.10
+
+      - name: Materialize registration and validate
+        if: steps.payload.outputs.present == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 --decode history/staging/register-src103.py.gz.b64 | gzip --decompress > /tmp/register_src103_witness.py
+          python /tmp/register_src103_witness.py
+          rm -f history/staging/register-src103.py.gz.b64
+          rm -f .github/workflows/materialize-corpus-src-103.yml
+          python adapter.py --validate
+          python problem_bundles.py --validate
+          python corpus_registry.py --validate
+          python findings_registry.py --validate
+          python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Commit registration
+        if: steps.payload.outputs.present == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Register reviewed witness for CORPUS-SRC-103"
+          git push origin HEAD:corpus-src-103-complete-review
