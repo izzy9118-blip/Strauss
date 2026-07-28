@@ -1,16 +1,146 @@
 schema_version: 1.0
 document_type: source_status_record
-identity: {status_id: CORPUS-STATUS-107, corpus_source_id: CORPUS-SRC-107, canonical_title: "Why We Remain Jews", author: Leo Strauss, date: 1962, version: 1.1.0}
-status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-107, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
-revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, unresolved prior-publication comparison, predecessor authority, noncertification, and no successor effect."}
-registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 7, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-107, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
+identity:
+  status_id: CORPUS-STATUS-107
+  corpus_source_id: CORPUS-SRC-107
+  canonical_title: Why We Remain Jews
+  author: Leo Strauss
+  date: 1962
+  version: 1.2.0
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: CORPUS-WIT-107
+  independent_sequential_study: WHY-REMAIN-JEWS-STUDY-001
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+revision_history:
+  predecessor_version: 1.1.0
+  transformation: FORWARD_SOURCE_STUDY_COMPLETION_AND_TRANSMISSION_QUALIFICATION
+  reason: >
+    Record the independent sequential reconstruction of the reviewed 1997 collected lecture and question-and-answer
+    transcript while preserving Cropsey, questioner, transcriber, and Green editorial layers; the transcribers' report that
+    Strauss neither reviewed nor formally approved the transcript; Green's acknowledged clarifying and grammatical
+    interventions; the editorial Aleinu insertion; pending earlier-textual-state comparison; incomplete independent
+    corroboration; predecessor authority; noncertification; and no migration or successor effect.
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 7
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-107
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
   - The reviewed 1997 SUNY collected witness occupies printed pages 311-356 and one-based PDF pages 330-375.
   - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
-  - The collection acknowledges publication with permission of Joseph Cropsey and the Estate of Leo Strauss and supplies no earlier publication citation in its Sources section.
-predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Reconstructs emancipation, assimilation, Jewish persistence, political and cultural Zionism, Torah, and the limits of merely political solutions.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
-publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 311, end: 356}, pdf_page_range_one_based: {start: 330, end: 375}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
-reviewed_witness: {witness_id: CORPUS-WIT-107, witness_record_path: studies/theologico-political/why-we-remain-jews/reviewed-witness.yaml, printed_page_range: {start: 311, end: 356}, pdf_page_range_one_based: {start: 330, end: 375}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
-source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to the source, not independent corroboration of claims or predecessor synthesis."}
-next_required_actions: [conduct an independent sequential reading of printed pages 311-356, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization]
-termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - The collection gives the title as Why We Remain Jews: Can Jewish Faith and History Still Speak to Us?
+  - Green dates the lecture to 4 February 1962 at Hillel House, University of Chicago.
+  - Green reports that Strauss apparently used prepared notes that do not survive.
+  - Green reports that Werner Dannhauser and James Lane made the transcription from a tape recording.
+  - The transcribers state that Strauss neither reviewed nor formally approved the lecture in its transcribed version.
+  - Green states that the published version is based almost entirely on that transcription, with slight grammatical changes for clarity and significant changes noted.
+  - Green states that the notes to the lecture are entirely his work and identifies several phrases added by him for clarification.
+  - The English Aleinu translation on printed pages 327-328 is explicitly editorial and was not read by Strauss during the lecture.
+  - Cropsey's opening introduction and post-lecture comment are separate speaker layers; the question-and-answer period also requires questioner-versus-Strauss attribution.
+  - The collection Sources section supplies no earlier publication citation for this item.
+  - WHY-REMAIN-JEWS-STUDY-001 reconstructs the source sequentially while separating all speaker and editorial layers before comparison with the active predecessor.
+predecessor_contribution_record:
+  evidence_status: PROVISIONALLY_RETESTED_BY_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  statement: Reconstructs emancipation, assimilation, Jewish persistence, political and cultural Zionism, Torah, and the limits of merely political solutions.
+  retest_result: >
+    The study confirms that individual assimilation, liberal emancipation, political Zionism, and cultural Zionism do not
+    exhaust the Jewish question. It qualifies the predecessor by showing that the source rejects the expectation of any
+    final social solution, calls religious Zionism the clearest consistent solution while acknowledging its inaccessibility
+    to unbelievers, grounds fidelity in a non-base inherited past rather than ancestry alone, brings positivist science and
+    religious mystery only within hailing distance, and sharpens the final alternative into Torah or unbelief while demanding
+    examination of unbelief itself.
+  preservation_rule: >
+    Provisional confirmation and qualification do not certify, migrate, activate, displace, or silently rewrite the active predecessor.
+publication_and_witness_condition:
+  reviewed_collection: Jewish Philosophy and the Crisis of Modernity
+  editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  year: 1997
+  source_form: POSTHUMOUSLY_PUBLISHED_LECTURE_TRANSCRIPTION_WITH_Q_AND_A
+  delivery_date: 1962-02-04
+  delivery_place: Hillel House, University of Chicago
+  prepared_notes_state: EDITOR_REPORTS_APPARENT_PRIOR_NOTES_DO_NOT_SURVIVE
+  transcribers: [Werner Dannhauser, James Lane]
+  transcription_source: TAPE_RECORDING
+  transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_REPORTED_BY_TRANSCRIBERS
+  published_version_basis: ALMOST_ENTIRELY_DANNHAUSER_LANE_TRANSCRIPTION
+  editor_changes: SLIGHT_GRAMMATICAL_CHANGES_FOR_CLARITY_WITH_SIGNIFICANT_CHANGES_NOTED
+  editor_notes_authorship: ENTIRELY_KENNETH_HART_GREEN
+  aleinu_translation_condition: EDITORIAL_INSERT_NOT_READ_BY_STRAUSS
+  earlier_publication_citation_in_collection_sources: NONE_SUPPLIED
+  original_or_earlier_printing_comparison: PENDING
+  printed_page_range: {start: 311, end: 356}
+  pdf_page_range_one_based: {start: 330, end: 375}
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  file_size_bytes: 39287307
+  sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_page_count: 526
+  fingerprint_state: AVAILABLE
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+reviewed_witness:
+  witness_id: CORPUS-WIT-107
+  witness_record_path: studies/theologico-political/why-we-remain-jews/reviewed-witness.yaml
+  printed_page_range: {start: 311, end: 356}
+  pdf_page_range_one_based: {start: 330, end: 375}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_file_size_bytes: 39287307
+study_record:
+  internal_study_id: WHY-REMAIN-JEWS-STUDY-001
+  corpus_study_id: CORPUS-STUDY-019
+  path: studies/theologico-political/why-we-remain-jews/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL_WITH_TRANSCRIPTION_AND_EDITORIAL_LIMIT
+  independent_corroboration: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_LECTURE_AND_Q_AND_A_CONTENT_WITH_POSTHUMOUS_TRANSCRIPTION_AND_EDITORIAL_MEDIATION
+  documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS_WITH_EXPLICIT_TRANSMISSION_AND_SPEAKER_LIMITS
+  analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+required_distinctions:
+  - Cropsey introduction from Strauss lecture
+  - editorial Aleinu translation from Strauss speech
+  - Cropsey post-lecture comment from Strauss conclusion
+  - questioner speech from Strauss Q&A responses
+  - tape-based transcription from authorially approved verbatim wording
+  - Green's editorial additions and notes from Strauss speech
+  - legal equality from private discrimination in liberal society
+  - political Zionism from cultural Zionism from religious Zionism
+  - fidelity to a non-base inheritance from unconditional ancestry worship
+  - political Jewish normalization from Jewish substantive continuity
+  - scientific infinite progress from proof of religious revelation
+  - cultural reinterpretation from Torah or belief
+  - unbelief as a position requiring examination from unbelief as an unexamined social inheritance
+prohibitions:
+  - Do not treat the reviewed transcript as authorially approved verbatim wording.
+  - Do not attribute Cropsey's introduction or post-lecture comment, questioners' claims, Green's notes or added phrases, or the editorial Aleinu translation to Strauss.
+  - Do not treat absence of an earlier publication citation as proof that no earlier textual state existed.
+  - Do not treat Strauss's historical and political examples as independently verified historical facts.
+  - Do not convert the failure of political and cultural solutions into certification of religious Zionism, Torah, revelation, Creator, or redemption.
+  - Do not turn fidelity into an unconditional repository rule; Strauss explicitly qualifies the principle by the character of the inheritance.
+  - Do not interpret the mystery argument as proof that science confirms revelation; the source says the two lines come within hailing distance, not that they merge.
+  - Do not infer an Ancients-versus-Moderns problem binding merely from progress, science, or modernity language.
+  - Do not treat source-specific reconstruction as independent corroboration.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+next_required_actions:
+  - compare any separately verified earlier publication or authorially checked textual state if later acquired
+  - reconstruct relevant biblical, rabbinic, Zionist, Nietzschean, Cohenian, Scholemian, Christian, scientific, and historical sources independently where required
+  - preserve source-level findings and Theologico-Political plus Athens-versus-Jerusalem jurisdictions in the typed findings registry
+  - proceed to CORPUS-SRC-112 after validation and merge of this production unit
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-107
+  study_state: COMPLETE_PROVISIONAL
+  study_id: WHY-REMAIN-JEWS-STUDY-001
+  independent_corroboration: INCOMPLETE
+  original_or_earlier_printing_comparison: PENDING
+  transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_REPORTED_BY_TRANSCRIBERS
+  documentary_transmission_limit: ACTIVE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
