@@ -1,0 +1,67 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+identity:
+  synthesis_id: TP-SPINOZA-TREATISE-001
+  problem: theologico-political
+  source_study: SPINOZA-TREATISE-STUDY-001
+  title: The Theologico-Political Problem — How to Study Spinoza's Theologico-Political Treatise
+  version: 1.0.0
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE_WITHOUT_CERTIFIED_MIGRATION
+source:
+  source_id: CORPUS-SRC-103
+  witness_id: CORPUS-WIT-103
+  corpus_study_id: CORPUS-STUDY-012
+  study_path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+  reviewed_container: Jewish Philosophy and the Crisis of Modernity, State University of New York Press, 1997
+  printed_pages: {start: 181, end: 233}
+  pdf_pages_one_based: {start: 200, end: 252}
+  original_1948_journal_comparison: PENDING
+strict_problem_contribution:
+  governing_claim: >
+    Strauss treats the conflict between philosophy and revelation as a live problem that must be interpreted before it is historically explained. His reconstruction of Spinoza shows that separation of philosophy from theology is both a philosophic and political task: the public defense of philosophizing is adapted to a Christian audience, uses biblical argument under conditions of caution, and cannot be understood apart from audience, contradiction, accommodation, and the Treatise's ordered practical purpose.
+  documented_findings:
+    - interpretation precedes historical or psychological explanation
+    - explicit meaning precedes inferred hidden implication
+    - Spinoza's biblical hermeneutics separates understanding Scripture from judging its rational truth
+    - the Treatise is addressed to potential philosophers in a Christian setting
+    - Jewish and Old Testament subject matter can function as a safer route toward implications for Christianity
+    - freedom of philosophizing and separation of philosophy from theology are central public aims
+    - return to literal Scripture serves both an appeal against traditional theology and a criticism of biblical authority
+    - historical context matters chiefly as a condition of deliberate public expression rather than as a substitute for interpretation
+  bounded_conclusion: >
+    The source confirms and sharpens the predecessor's methodological core while refusing both historicist reduction and mechanical esoteric inversion. It establishes a controlled relation among revelation, theology, philosophy, biblical criticism, audience, and political freedom without certifying Strauss's final resolution of the reason-revelation conflict.
+predecessor_reconciliation:
+  state: PROVISIONAL_RETEST_COMPLETE_NO_PROMOTION
+  confirmations:
+    - interpretation must precede historical or psychological explanation
+    - differentiated audiences matter to the Treatise's argument
+    - freedom to philosophize is central to Spinoza's public project
+  qualifications:
+    - historical context is subordinate to authorial intention and deliberate public adaptation
+    - contradiction becomes evidence only through controlled textual reconstruction
+    - prophecy and sovereign authority belong to the larger argument but are not isolated as the essay's sole governing subjects
+  unresolved:
+    - original 1948 journal comparison remains pending
+    - Spinoza and represented traditions remain independently unreconstructed
+    - no final Strauss doctrine is certified
+  migration_effect: NONE
+source_and_evidence_limits:
+  - source study is not independent corroboration of Spinoza or represented traditions
+  - 1997 collected reprint is not silently equated with the 1948 journal printing
+  - agreement with predecessor is derivation, not independent corroboration
+prohibitions:
+  - no explanation before interpretation
+  - no contradiction treated as automatic inversion
+  - no silence treated as automatic concealment
+  - no doctrinal or migration certification
+  - no predecessor displacement or successor activation
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  predecessor_status: UNCHANGED
+  successor_activation: NOT_AUTHORIZED
