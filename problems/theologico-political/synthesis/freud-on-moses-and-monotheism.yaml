@@ -1,0 +1,40 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: TP-FREUD-MOSES-001, version: 1.0.0, title: "Theologico-Political Synthesis — Freud on Moses and Monotheism"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-106
+  reviewed_witness_id: CORPUS-WIT-106
+  study_id: FREUD-MOSES-STUDY-001
+  study_path: studies/theologico-political/freud-on-moses-and-monotheism/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-018
+  derived_finding_set_id: FINDSET-136
+problem: {canonical_key: theologico-political, role: PRIMARY_JURISDICTION, adjacent_problem_references: [ancients-vs-moderns]}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Strauss distinguishes understanding a religious teaching and asking whether it is true from explaining the historical or psychological genesis of belief."}
+  - {classification: documented_finding, proposition: "Freud's Egyptian-Moses, murder, repression, and inherited-memory reconstruction is presented as a stacked causal hypothesis whose later explanatory force depends on earlier claims Strauss regards as insufficiently evidenced."}
+  - {classification: documented_finding, proposition: "The psychological problem of religion arises only after certainty that God does not exist; mere agnosticism cannot exclude Presence or Call as a possible ground of religion."}
+  - {classification: documented_finding, proposition: "Ancient reverence and sacred law may have rational grounds under conditions of dependence, danger, founding, and political need for order rather than being reducible to neurosis by a modern standard of rationality."}
+  - {classification: documented_finding, proposition: "If the premises of science remain hypothetical and science cannot scientifically prove the goodness of science, scientific explanation cannot by itself render a religious interpretation absurd or explain the prior choice of science without circularity."}
+  - {classification: bounded_conclusion, proposition: "The lecture's central charge is that Freud's book lacks a philosophic basis: causal explanation has not rationally displaced revelation because it leaves its own historical, metaphysical, scientific, and philosophical premises insufficiently examined."}
+predecessor_retest:
+  active_predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirms:
+    - psychological and historical explanation is explicitly tested as a proposed substitute for rational engagement with revelation
+    - causal explanation of religious origins does not itself decide whether the religious teaching is true
+    - Freud's explanation presupposes claims about God, science, history, and human rationality that require independent justification
+  qualifies:
+    - the source also makes responsible historical evidence and interpretation of the biblical whole central to the critique
+    - ancient law and reverence are defended only as possibly rational under their conditions, not as thereby true
+    - the decisive counterturn is philosophical as well as theological because Strauss asks about science's own premises and philosophy as a nonderivative human possibility
+    - the reviewed source is a posthumous transcription apparently not reviewed or formally approved by Strauss and contains acknowledged limited editorial emendation
+  predecessor_effect: NONE
+limits:
+  - The 1997 witness is a posthumously published transcription made by an unknown transcriber from a tape recording and apparently not reviewed or formally approved by Strauss.
+  - Green's notes on printed pp. 306-309 are entirely editorial and are not treated as Strauss evidence beyond documentary provenance.
+  - Freud, biblical sources, psychoanalysis, Egyptology, ethnology, Plato, Nietzsche, and represented traditions remain independently incomplete unless separately registered.
+  - The possibility of Presence, Call, mystery, or religious interpretation is not proof of God or revelation.
+  - No doctrine, migration, successor activation, predecessor displacement, or repository completion is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_FAR_AS_COLLECTION_EDITOR_CAN_DETERMINE, certification: NOT_CERTIFIED, successor_effect: NONE}

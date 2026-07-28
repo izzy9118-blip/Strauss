@@ -26,19 +26,19 @@ class CompleteTPWitnessCoverageTests(unittest.TestCase):
         for sid in expected:
             self.assertEqual(sources[sid]["reviewed_witnesses"], [witnesses[sid]["witness_id"]])
         self.assertEqual(corpus["coverage"]["theologico_political_reviewed_item_witnesses_registered"], 19)
-        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 10)
+        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 11)
         self.assertEqual(corpus["termination"]["theologico_political_reviewed_witness_state"], "COMPLETE_19_OF_19")
-        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_10_OF_19")
+        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_11_OF_19")
 
-    def test_nine_witness_only_items_remain_noncertified_and_unstudied(self):
+    def test_eight_witness_only_items_remain_noncertified_and_unstudied(self):
         corpus = load_yaml("corpus/index.yaml")
-        complete = {"CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-105", "CORPUS-SRC-108", "CORPUS-SRC-109", "CORPUS-SRC-111", "CORPUS-SRC-113", "CORPUS-SRC-116", "CORPUS-SRC-101", "CORPUS-SRC-104"}
+        complete = {"CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-105", "CORPUS-SRC-108", "CORPUS-SRC-109", "CORPUS-SRC-111", "CORPUS-SRC-113", "CORPUS-SRC-116", "CORPUS-SRC-101", "CORPUS-SRC-104", "CORPUS-SRC-106"}
         witness_only = [
             x
             for x in corpus["source_entities"]
             if x["source_id"].startswith("CORPUS-SRC-1") and x["source_id"] not in complete
         ]
-        self.assertEqual(len(witness_only), 9)
+        self.assertEqual(len(witness_only), 8)
         for source in witness_only:
             self.assertEqual(
                 source["item_level_source_status"],

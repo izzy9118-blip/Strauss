@@ -1,16 +1,142 @@
 schema_version: 1.0
 document_type: source_status_record
-identity: {status_id: CORPUS-STATUS-106, corpus_source_id: CORPUS-SRC-106, canonical_title: "Freud on Moses and Monotheism", author: Leo Strauss, date: 1958, version: 1.1.0}
-status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-106, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
-revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, unresolved prior-publication comparison, predecessor authority, noncertification, and no successor effect."}
-registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 6, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-106, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
+identity:
+  status_id: CORPUS-STATUS-106
+  corpus_source_id: CORPUS-SRC-106
+  canonical_title: Freud on Moses and Monotheism
+  author: Leo Strauss
+  date: 1958
+  version: 1.2.0
+status:
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_text_admission: NOT_REQUESTED
+  reviewed_witness: CORPUS-WIT-106
+  independent_sequential_study: FREUD-MOSES-STUDY-001
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
+revision_history:
+  predecessor_version: 1.1.0
+  transformation: FORWARD_SOURCE_STUDY_COMPLETION_AND_TRANSMISSION_QUALIFICATION
+  reason: >
+    Record the independent sequential reconstruction of the reviewed 1997 collected transcript while preserving the
+    collection editor's report that the lecture was transcribed by an unknown transcriber from a tape, apparently not
+    reviewed or formally approved by Strauss, and subject to acknowledged limited editorial emendation. Preserve the
+    distinction between lecture body and editor-authored notes, incomplete independent corroboration, predecessor authority,
+    noncertification, and no migration or successor effect.
+registration_basis:
+  active_predecessor: problems/theologico-political.yaml
+  active_predecessor_source_sequence: 6
+  corpus_registry: corpus/index.yaml
+  corpus_source_id: CORPUS-SRC-106
+  governing_problem: theologico-political
+  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
 verified_documentary_facts:
   - The reviewed 1997 SUNY collected witness occupies printed pages 285-309 and one-based PDF pages 304-328.
+  - The lecture body runs through printed page 306; the Notes begin on printed page 306 and continue through page 309.
   - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
-  - The collection acknowledges publication with permission of Joseph Cropsey and the Estate of Leo Strauss and supplies no earlier publication citation in its Sources section.
-predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Examines psychological and historical explanation as a proposed substitute for revelation and tests whether causal explanation constitutes refutation.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
-publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 285, end: 309}, pdf_page_range_one_based: {start: 304, end: 328}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
-reviewed_witness: {witness_id: CORPUS-WIT-106, witness_record_path: studies/theologico-political/freud-on-moses-and-monotheism/reviewed-witness.yaml, printed_page_range: {start: 285, end: 309}, pdf_page_range_one_based: {start: 304, end: 328}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
-source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to the source, not independent corroboration of claims or predecessor synthesis."}
-next_required_actions: [conduct an independent sequential reading of printed pages 285-309, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization]
-termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
+  - The collection editor states that the lecture was delivered at Hillel House, University of Chicago, apparently in the spring quarter of 1958, while the precise date is unknown to him.
+  - The editor states that Strauss apparently used previously prepared notes that do not survive and that an unknown transcriber made a transcription from a tape recording.
+  - The editor states that the published version is based on that transcription and that it appears Strauss did not review or formally approve the lecture in its transcribed version.
+  - The editor states that the notes to the lecture are entirely his own work.
+  - In note 4 the editor reports making certain additions and corrections to contradictory spoken verb tenses in one paragraph and reproduces three unemended passages so readers can judge the intervention.
+  - The editor reports that no tape or transcript of the discussion period following the lecture survives.
+  - The collection Sources section supplies no earlier publication citation for this item and acknowledges publication with permission of Joseph Cropsey and the Estate of Leo Strauss.
+  - FREUD-MOSES-STUDY-001 reconstructs the lecture body sequentially before comparing it with the active predecessor and keeps the editor's documentary note layer separate.
+predecessor_contribution_record:
+  evidence_status: PROVISIONALLY_RETESTED_BY_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
+  statement: Examines psychological and historical explanation as a proposed substitute for revelation and tests whether causal explanation constitutes refutation.
+  retest_result: >
+    The study confirms that Strauss tests Freud's historical and psychological explanation against the prior question of
+    truth and argues that causal explanation does not itself refute revelation. It qualifies the predecessor by showing that
+    the critique also turns on responsible historical evidence, interpretation of the biblical whole, the possible
+    rationality of ancient reverence and law, the hypothetical and evaluatively incomplete status of science, and philosophy
+    as a nonderivative human possibility. The closing appeal to Nietzsche's last man supplies a controlled secondary
+    Ancients-versus-Moderns jurisdiction.
+  preservation_rule: >
+    Provisional confirmation and qualification do not certify, migrate, activate, displace, or silently rewrite the active predecessor.
+publication_and_witness_condition:
+  reviewed_collection: Jewish Philosophy and the Crisis of Modernity
+  editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  year: 1997
+  source_form: POSTHUMOUSLY_PUBLISHED_LECTURE_TRANSCRIPTION
+  delivery_place: Hillel House, University of Chicago
+  delivery_period: SPRING_QUARTER_MARCH_TO_JUNE_1958_ACCORDING_TO_EDITOR
+  precise_delivery_date: UNKNOWN_TO_EDITOR
+  prepared_notes_state: EDITOR_REPORTS_APPARENT_PRIOR_NOTES_DO_NOT_SURVIVE
+  transcription_state: UNKNOWN_TRANSCRIBER_FROM_TAPE_RECORDING
+  transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_FAR_AS_COLLECTION_EDITOR_CAN_DETERMINE
+  acknowledged_editorial_emendation: LIMITED_ADDITIONS_AND_CORRECTIONS_TO_SPOKEN_VERB_TENSES_REPORTED_IN_NOTE_4
+  editor_notes_authorship: ENTIRELY_KENNETH_HART_GREEN
+  discussion_record_state: EDITOR_REPORTS_NO_TAPE_OR_TRANSCRIPT_SURVIVES
+  earlier_publication_citation_in_collection_sources: NONE_SUPPLIED
+  original_or_earlier_textual_state_comparison: PENDING_IF_LATER_IDENTIFIED_OR_ACQUIRED
+  printed_page_range: {start: 285, end: 309}
+  lecture_body: {start: 285, end: 306}
+  editor_notes: {start: 306, end: 309}
+  pdf_page_range_one_based: {start: 304, end: 328}
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  file_size_bytes: 39287307
+  sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_page_count: 526
+  fingerprint_state: AVAILABLE
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+reviewed_witness:
+  witness_id: CORPUS-WIT-106
+  witness_record_path: studies/theologico-political/freud-on-moses-and-monotheism/reviewed-witness.yaml
+  printed_page_range: {start: 285, end: 309}
+  pdf_page_range_one_based: {start: 304, end: 328}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_file_size_bytes: 39287307
+study_record:
+  internal_study_id: FREUD-MOSES-STUDY-001
+  corpus_study_id: CORPUS-STUDY-018
+  path: studies/theologico-political/freud-on-moses-and-monotheism/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL_WITH_TRANSCRIPTION_AND_EDITORIAL_LIMIT
+  independent_corroboration: INCOMPLETE
+source_classification:
+  author_relation: PRIMARY_STRAUSS_LECTURE_CONTENT_WITH_POSTHUMOUS_TRANSCRIPTION_AND_EDITORIAL_MEDIATION
+  documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS_WITH_EXPLICIT_TRANSMISSION_LIMIT
+  analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+required_distinctions:
+  - Strauss's lecture body from Green's editor-authored notes
+  - primary Strauss content from unknown-transcriber mediation
+  - published transcript from authorially reviewed or formally approved wording
+  - Green's limited emendations from the transcriber's unemended wording
+  - interpretation of religious teaching from causal explanation of its genesis
+  - causal explanation from rational refutation
+  - historical possibility from demonstrated historical fact
+  - agnosticism from atheistic certainty
+  - possible rationality of ancient reverence from proof of revelation
+  - hypothetical scientific premises from a wholesale rejection of science
+  - Theologico-Political primary jurisdiction from Ancients-versus-Moderns controlled secondary jurisdiction
+prohibitions:
+  - Do not treat the reviewed transcript as authorially approved verbatim wording.
+  - Do not attribute Green's notes, documentary conjectures, or acknowledged emendations to Strauss.
+  - Do not treat the absence of an earlier publication citation in the collection Sources section as proof that no earlier textual state existed.
+  - Do not treat Freud's historical or psychoanalytic claims as independently verified because Strauss reconstructs them.
+  - Do not treat Strauss's alternative historical possibilities as certified historical facts.
+  - Do not convert the possibility of Presence, Call, mystery, or religious interpretation into proof of God or revelation.
+  - Do not infer that all science is irrational or false from the source's critique of science's ungrounded value choice and hypothetical premises.
+  - Do not expand the study into Wise-versus-Vulgar or Athens-versus-Jerusalem merely because communication, Jews, Moses, Bible, or Greek materials appear.
+  - Do not treat source-specific reconstruction as independent corroboration.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+next_required_actions:
+  - seek any surviving tape, prepared notes, authorially reviewed transcript, or earlier textual state only through later separately verified documentary acquisition
+  - reconstruct Freud's Moses and Monotheism and the relevant biblical, psychoanalytic, Egyptological, ethnological, Platonic, and Nietzschean materials independently where required
+  - preserve source-level findings and Theologico-Political plus Ancients-versus-Moderns jurisdictions in the typed findings registry
+  - proceed to CORPUS-SRC-107 after validation and merge of this production unit
+termination:
+  source_identity_state: REGISTERED
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-106
+  study_state: COMPLETE_PROVISIONAL
+  study_id: FREUD-MOSES-STUDY-001
+  independent_corroboration: INCOMPLETE
+  transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_FAR_AS_COLLECTION_EDITOR_CAN_DETERMINE
+  documentary_transmission_limit: ACTIVE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE

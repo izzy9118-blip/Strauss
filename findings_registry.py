@@ -31,6 +31,7 @@ TP_PRESERVED_PATH = (
 )
 
 EXPECTED_SYNTHESIS_PATHS = {
+    "problems/ancients-vs-moderns/synthesis/freud-on-moses-and-monotheism.yaml",
     "problems/ancients-vs-moderns/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/ancients-vs-moderns/synthesis/preface-to-hobbes-politische-wissenschaft.yaml",
     "problems/ancients-vs-moderns/synthesis/preface-to-spinozas-critique-of-religion.yaml",
@@ -49,6 +50,7 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml",
     "problems/philosophy-vs-poetry/synthesis/socrates-and-aristophanes.yaml",
     "problems/philosophy-vs-poetry/synthesis/studies-in-platonic-political-philosophy.yaml",
+    "problems/theologico-political/synthesis/freud-on-moses-and-monotheism.yaml",
     "problems/theologico-political/synthesis/hermann-cohen-religion-of-reason.yaml",
     "problems/theologico-political/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml",
     "problems/theologico-political/synthesis/introduction-to-persecution-and-the-art-of-writing.yaml",
@@ -108,6 +110,7 @@ DIRECT_SOURCE_KEYS = [
     "CORPUS-SRC-103",
     "CORPUS-SRC-104",
     "CORPUS-SRC-105",
+    "CORPUS-SRC-106",
     "CORPUS-SRC-108",
     "CORPUS-SRC-111",
     "CORPUS-SRC-113",
@@ -205,6 +208,12 @@ SOURCE_STUDY_CONTRACTS = {
         "local_syntheses": ["FINDSET-134", "FINDSET-135"],
         "problem_bindings": {"FINDSET-134": "theologico-political", "FINDSET-135": "athens-vs-jerusalem"},
         "required_limits": {"witness_id": "CORPUS-WIT-104", "original_1952_printing_comparison": "PENDING", "independent_corroboration": "INCOMPLETE"},
+    },
+    "FINDSET-018": {
+        "source_id": "CORPUS-SRC-106",
+        "local_syntheses": ["FINDSET-136", "FINDSET-137"],
+        "problem_bindings": {"FINDSET-136": "theologico-political", "FINDSET-137": "ancients-vs-moderns"},
+        "required_limits": {"witness_id": "CORPUS-WIT-106", "transcript_authorial_approval": "NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_FAR_AS_COLLECTION_EDITOR_CAN_DETERMINE", "documentary_transmission_limit": "ACTIVE", "independent_corroboration": "INCOMPLETE"},
     },
 }
 
@@ -343,7 +352,7 @@ def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[
     result = {key: [] for key in DIRECT_SOURCE_KEYS}
     result["CORPUS-SRC-101-119"] = []
     predecessor_sources = {f"CORPUS-SRC-{number:03d}" for number in range(101, 120)}
-    separately_indexed = {"CORPUS-SRC-101", "CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-104", "CORPUS-SRC-105", "CORPUS-SRC-108", "CORPUS-SRC-111", "CORPUS-SRC-113", "CORPUS-SRC-116"}
+    separately_indexed = {"CORPUS-SRC-101", "CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-104", "CORPUS-SRC-105", "CORPUS-SRC-106", "CORPUS-SRC-108", "CORPUS-SRC-111", "CORPUS-SRC-113", "CORPUS-SRC-116"}
     for item in finding_sets:
         bindings = set(item.get("source_bindings", []))
         finding_id = item["finding_set_id"]
@@ -427,8 +436,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.10.0":
-        errors.append("findings registry identity.version must be 1.10.0")
+    if identity.get("version") != "1.11.0":
+        errors.append("findings registry identity.version must be 1.11.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -443,8 +452,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(registry.get("findings_gaps", []), "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 57:
-        errors.append(f"expected 57 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 60:
+        errors.append(f"expected 60 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 

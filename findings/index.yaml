@@ -3,7 +3,7 @@ record_type: typed_findings_registry
 identity:
   id: STRAUSS-FINDINGS-INDEX-001
   title: Strauss Repository Typed Findings Registry
-  version: 1.10.0
+  version: 1.11.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
@@ -11,11 +11,11 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_JURISDICTION_AND_REVISION_ONLY
 revision_history:
-  predecessor_version: 1.9.0
+  predecessor_version: 1.10.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register HUSIK-PREFACE-STUDY-001 as FINDSET-017 and jurisdiction-preserving syntheses FINDSET-134 and FINDSET-135
-    while preserving the collective-editorial-layer distinction, pending original-1952 comparison, noncorroboration, noncertification,
+  reason: Register FREUD-MOSES-STUDY-001 as FINDSET-018 and jurisdiction-preserving syntheses FINDSET-136 and FINDSET-137
+    while preserving the posthumous-transcription, authorial-approval, editorial-emendation, noncorroboration, noncertification,
     and no-successor safeguards.
 purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record class,
   migration state, and provenance while preserving the difference among documentary finding, supported inference, working
@@ -374,6 +374,26 @@ finding_sets:
   - FINDSET-135
   witness_id: CORPUS-WIT-104
   original_1952_printing_comparison: PENDING
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
+- finding_set_id: FINDSET-018
+  path: studies/theologico-political/freud-on-moses-and-monotheism/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-106
+  problem_bindings:
+  - theologico-political
+  - ancients-vs-moderns
+  status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS_WITH_TRANSCRIPTION_LIMIT
+  certification: NOT_CERTIFIED
+  derived_local_syntheses:
+  - FINDSET-136
+  - FINDSET-137
+  witness_id: CORPUS-WIT-106
+  transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_FAR_AS_COLLECTION_EDITOR_CAN_DETERMINE
+  documentary_transmission_limit: ACTIVE
+  earlier_publication_or_textual_state_comparison: PENDING_IF_LATER_IDENTIFIED_OR_ACQUIRED
   independent_corroboration: INCOMPLETE
   successor_effect: NONE
 - finding_set_id: FINDSET-101
@@ -892,6 +912,35 @@ finding_sets:
   status: PROVISIONAL_NOT_CERTIFIED
   certification: NOT_CERTIFIED
   successor_effect: NONE
+- finding_set_id: FINDSET-136
+  path: problems/theologico-political/synthesis/freud-on-moses-and-monotheism.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-106
+  problem_bindings:
+  - theologico-political
+  adjacent_problem_references:
+  - ancients-vs-moderns
+  derived_from:
+  - FINDSET-018
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-137
+  path: problems/ancients-vs-moderns/synthesis/freud-on-moses-and-monotheism.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-106
+  problem_bindings:
+  - ancients-vs-moderns
+  theologico_political_reference: theologico-political
+  derived_from:
+  - FINDSET-018
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
 - finding_set_id: FINDSET-201
   path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   record_class: MIGRATION_TRANSACTION_LEDGER
@@ -1032,6 +1081,7 @@ indexes:
     - FINDSET-015
     - FINDSET-016
     - FINDSET-017
+    - FINDSET-018
     - FINDSET-105
     - FINDSET-106
     - FINDSET-111
@@ -1044,6 +1094,7 @@ indexes:
     - FINDSET-129
     - FINDSET-131
     - FINDSET-134
+    - FINDSET-136
     - FINDSET-202
     - FINDSET-203
     - FINDSET-301
@@ -1091,12 +1142,14 @@ indexes:
     - FINDSET-011
     - FINDSET-015
     - FINDSET-016
+    - FINDSET-018
     - FINDSET-110
     - FINDSET-115
     - FINDSET-118
     - FINDSET-121
     - FINDSET-130
     - FINDSET-133
+    - FINDSET-137
   by_source:
     CORPUS-SRC-001:
     - FINDSET-001
@@ -1156,6 +1209,13 @@ indexes:
     - FINDSET-115
     - FINDSET-203
     - FINDSET-301
+    CORPUS-SRC-106:
+    - FINDSET-018
+    - FINDSET-105
+    - FINDSET-136
+    - FINDSET-137
+    - FINDSET-203
+    - FINDSET-301
     CORPUS-SRC-108:
     - FINDSET-013
     - FINDSET-105
@@ -1210,6 +1270,7 @@ indexes:
     - FINDSET-015
     - FINDSET-016
     - FINDSET-017
+    - FINDSET-018
     INTEGRATION_GOVERNANCE_RECORD:
     - FINDSET-005
     - FINDSET-006
@@ -1249,6 +1310,8 @@ indexes:
     - FINDSET-133
     - FINDSET-134
     - FINDSET-135
+    - FINDSET-136
+    - FINDSET-137
     MIGRATION_TRANSACTION_LEDGER:
     - FINDSET-201
     - FINDSET-202
@@ -1257,14 +1320,14 @@ indexes:
     - FINDSET-301
     - FINDSET-302
 coverage:
-  finding_sets_registered: 57
-  source_specific_and_integration_records_registered: 17
-  problem_syntheses_registered: 35
+  finding_sets_registered: 60
+  source_specific_and_integration_records_registered: 18
+  problem_syntheses_registered: 37
   migration_transaction_ledgers_registered: 3
   preserved_finding_bases_registered: 2
-  current_problem_synthesis_tree_yaml_records_accounted_for: 35
+  current_problem_synthesis_tree_yaml_records_accounted_for: 37
   current_foundational_transaction_tree_yaml_records_accounted_for: 3
-  corpus_study_records_accounted_for: 17
+  corpus_study_records_accounted_for: 18
   canonical_problem_indexes_registered: 7
   exhaustive_within_declared_scope: true
 proposition_kinds:
@@ -1298,8 +1361,8 @@ findings_gaps:
   statement: Many registered source entities lack independent source-specific study records.
   effect: FINDINGS_COVERAGE_REMAINS_SOURCE_ASYMMETRICAL
 - gap_id: FINDINGS-GAP-003
-  statement: Ten of the nineteen Theologico-Political writings now have complete provisional item studies; the remaining nine
-    lack individual sequential studies.
+  statement: Eleven of the nineteen Theologico-Political writings now have complete provisional item studies; the remaining
+    eight lack individual sequential studies.
   effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE
 - gap_id: FINDINGS-GAP-004
   statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and most Platonic
@@ -1336,6 +1399,8 @@ validation_rules:
   noncorroboration, and no-successor safeguards
 - FINDSET-017 must derive only FINDSET-134 and FINDSET-135, preserve CORPUS-WIT-104, pending original-1952 comparison, the
   collective-editorial-layer distinction, noncorroboration, and no-successor safeguards
+- FINDSET-018 must derive only FINDSET-136 and FINDSET-137, preserve CORPUS-WIT-106, the posthumous unknown-transcriber and
+  editor-emendation limits, incomplete independent corroboration, and no-successor safeguards
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   findings_state: OPEN_MATERIALLY_INCOMPLETE_AND_NONCERTIFIED

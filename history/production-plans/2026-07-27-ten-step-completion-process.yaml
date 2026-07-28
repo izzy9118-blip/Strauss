@@ -3,7 +3,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.16.0
+  version: 1.17.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
@@ -14,22 +14,22 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.15.0
+  predecessor_version: 1.16.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete HUSIK-PREFACE-STUDY-001 as the tenth provisional Theologico-Political sequential reconstruction and advance
-    the next study unit to CORPUS-SRC-106 while preserving the original-1952 comparison limit and nine remaining studies.
+  reason: Complete FREUD-MOSES-STUDY-001 as the eleventh provisional Theologico-Political sequential reconstruction and advance
+    the next study unit to CORPUS-SRC-107 while preserving the posthumous-transcription limit and eight remaining studies.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 3.2.0
+  current_version: 3.3.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.14.0
+  current_version: 1.15.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -80,6 +80,8 @@ steps:
   - Preface to Hobbes Politische Wissenschaft supplies distinct provisional syntheses to Theologico-Political and Ancients-versus-Moderns
     with a documentary-omission limit
   - the Husik Preface supplies distinct provisional syntheses to Theologico-Political and Athens-versus-Jerusalem
+  - Freud on Moses and Monotheism supplies distinct provisional syntheses to Theologico-Political and Ancients-versus-Moderns
+    with an explicit posthumous-transcription limit
   remaining:
   - complete source-specific application to each problem
   - complete independent witness reconstruction
@@ -105,8 +107,10 @@ steps:
   - HOBBES-PREFACE-STUDY-001 is complete provisional for the text present in CORPUS-WIT-116
   - PROGRESS-RETURN-STUDY-001 is complete provisional for CORPUS-WIT-101
   - HUSIK-PREFACE-STUDY-001 is complete provisional for CORPUS-WIT-104
+  - FREUD-MOSES-STUDY-001 is complete provisional for CORPUS-WIT-106 with an active transcription and editorial-emendation
+    limit
   remaining:
-  - conduct nine independent sequential item studies, beginning with CORPUS-SRC-106
+  - conduct eight independent sequential item studies, beginning with CORPUS-SRC-107
   - compare original or earlier textual states where available and material
   - materialize and fingerprint CORPUS-WIT-102 only through later forward revision if exact bytes become accessible
   - reconstruct Talmon's reviewed work independently
@@ -120,12 +124,12 @@ steps:
   - tests/
   - .github/workflows/validate-lean-interface.yml
   completed_in_current_sequence:
-  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the nine witness-only states
-    from the ten completed-study states
+  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the eight witness-only states
+    from the eleven completed-study states
   - tests preserve qualified platform-reference, fingerprint, locator, scope, edition-comparison, noncertification, and no-successor
     safeguards
-  - tests cover the completed CORPUS-SRC-103, CORPUS-SRC-108, CORPUS-SRC-113, CORPUS-SRC-116, CORPUS-SRC-101, and CORPUS-SRC-104
-    study integrations while preserving findings derivation, problem jurisdiction, and completion-language consistency
+  - tests cover the completed study integrations through CORPUS-SRC-106 while preserving findings derivation, problem jurisdiction,
+    transmission limits, and completion-language consistency
   current_requirement: Run the complete GitHub Actions validation before merge using the ordinary read-only validation workflow;
     no materialization or self-push step is required.
   limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
@@ -141,17 +145,18 @@ steps:
 current_production_unit:
   step: 8
   completed_subunit:
-    title: Preface to Isaac Husik, Philosophical Essays independent sequential reconstruction
-    state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
-    source_id: CORPUS-SRC-104
-    witness_id: CORPUS-WIT-104
-    study_id: HUSIK-PREFACE-STUDY-001
-    study_coverage: INCOMPLETE_10_OF_19
-  next_subunit:
     title: Freud on Moses and Monotheism independent sequential reconstruction
+    state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
     source_id: CORPUS-SRC-106
     witness_id: CORPUS-WIT-106
-    following_source: CORPUS-SRC-107
+    study_id: FREUD-MOSES-STUDY-001
+    study_coverage: INCOMPLETE_11_OF_19
+    documentary_limit: POSTHUMOUS_UNKNOWN_TRANSCRIBER_APPARENT_NONAPPROVAL_AND_LIMITED_EDITORIAL_EMENDATION
+  next_subunit:
+    title: Why We Remain Jews independent sequential reconstruction
+    source_id: CORPUS-SRC-107
+    witness_id: CORPUS-WIT-107
+    following_source: CORPUS-SRC-112
 termination:
   state: CONTINUE_UNTIL_GENUINE_BLOCKER
   blocker_rule: 'A blocker must identify the exact missing source, authority, path, validation failure, or jurisdictional
