@@ -34,6 +34,7 @@ jobs:
         shell: bash
         run: |
           python scripts/materialize_final_five_tp.py > /tmp/final5-materializer.log 2>&1 || { cat /tmp/final5-materializer.log; exit 1; }
+          python scripts/fix_final5_completion_tests.py >> /tmp/final5-materializer.log 2>&1 || { cat /tmp/final5-materializer.log; exit 1; }
 
       - name: Upload materializer diagnostics
         if: always()
@@ -64,6 +65,7 @@ jobs:
         run: |
           rm -f scripts/.final5_materializer.py.gz.b64
           rm -f scripts/materialize_final_five_tp.py
+          rm -f scripts/fix_final5_completion_tests.py
           rm -f history/production-triggers/final-five-retry.trigger
           rm -f .github/workflows/materialize-final-five-tp.yml
 
