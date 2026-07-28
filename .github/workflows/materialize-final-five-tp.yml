@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - production/complete-final-five-tp-studies
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -61,6 +64,7 @@ jobs:
         run: |
           rm -f scripts/.final5_materializer.py.gz.b64
           rm -f scripts/materialize_final_five_tp.py
+          rm -f history/production-triggers/final-five-retry.trigger
           rm -f .github/workflows/materialize-final-five-tp.yml
 
       - name: Commit generated final-five integration
