@@ -5,15 +5,23 @@ identity:
   witness_id: CORPUS-WIT-103
   source_id: CORPUS-SRC-103
   title: Reviewed item witness — How to Study Spinoza's Theologico-Political Treatise
-  version: 1.0.0
+  version: 1.1.0
 
 status:
   lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
   certification: NOT_CERTIFIED
-  independent_sequential_study: NOT_YET_COMPLETED
+  independent_sequential_study: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_sequential_study_id: SPINOZA-TREATISE-STUDY-001
   original_edition_comparison: PENDING
   source_text_admission: NOT_REQUESTED
   successor_effect: NONE
+
+revision_history:
+  predecessor_version: 1.0.0
+  reason: >
+    Synchronize the witness record with the subsequently completed SPINOZA-TREATISE-STUDY-001
+    while preserving witness/study distinction, pending 1948 journal comparison, incomplete
+    independent corroboration, noncertification, and no successor effect.
 
 source_identity:
   author: Leo Strauss
@@ -68,7 +76,7 @@ textual_condition:
 
 jurisdiction_and_limits:
   governing_problem: theologico-political
-  secondary_problem_bindings: [wise-vs-vulgar]
+  secondary_problem_bindings: [wise-vs-vulgar, ancients-vs-moderns]
   distinctions:
     - interpretation from historical or psychological explanation
     - explicit meaning from inferred hidden or unconscious implication
@@ -78,28 +86,33 @@ jurisdiction_and_limits:
     - witness registration from independent sequential reconstruction
     - source-level reconstruction from predecessor synthesis
   non_effects:
-    - no source-level proposition promotion
-    - no predecessor synthesis confirmation
     - no doctrinal certification
     - no migration certification
     - no successor activation
     - no predecessor displacement
+    - no independent corroboration of Spinoza or represented traditions
+
+completed_study:
+  study_id: SPINOZA-TREATISE-STUDY-001
+  corpus_study_id: CORPUS-STUDY-012
+  path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+  state: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_corroboration: INCOMPLETE
+  effect_on_witness_identity: NONE
 
 next_required_action:
-  action: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
-  range: printed pages 181 through 233
-  prerequisites_satisfied: REVIEWED_ITEM_WITNESS_REGISTERED
+  action: ORIGINAL_EDITION_COMPARISON_AND_INDEPENDENT_SOURCE_CORROBORATION_WHERE_REQUIRED
+  completed_requirement: INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
   remaining_requirements:
-    - reconstruct the complete argument in textual order
-    - distinguish the argumentative body from notes and editorial framing
-    - distinguish explicit statements, contradictions, audience claims, and exoteric interpretation without mechanical inversion
-    - classify documented findings, supported inferences, uncertainties, and false resolutions with locators
-    - compare with the predecessor only after source-level reconstruction
     - compare the original 1948 journal printing when available
+    - independently reconstruct Spinoza and represented sources where required
+    - preserve source-level findings and problem jurisdictions without treating agreement as independent corroboration
 
 termination:
   witness_state: REGISTERED
-  study_state: INCOMPLETE
+  study_state: COMPLETE_PROVISIONAL
+  study_id: SPINOZA-TREATISE-STUDY-001
+  independent_corroboration: INCOMPLETE
   original_edition_comparison: PENDING
   certification: NOT_CERTIFIED
   successor_effect: NONE
