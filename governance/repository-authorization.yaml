@@ -1,0 +1,73 @@
+schema_version: 1.0
+record_type: repository_owner_authorization
+
+identity:
+  id: STRAUSS-AUTH-001
+  title: Repository Certification and Operational Authorization
+  version: 1.0.0
+  repository: izzy9118-blip/Strauss
+
+authority:
+  source: REPOSITORY_OWNER_DIRECTIVE
+  directive_date: 2026-07-28
+  directive: Certify and authorize the current repository state for operational use and remove needless certification and activation gates.
+  scope: CURRENT_COMMITTED_REPOSITORY_STATE_AND_ALL_REGISTERED_COMPONENTS
+
+status:
+  certification: OWNER_CERTIFIED
+  operational_authorization: FULLY_AUTHORIZED
+  successor_activation: AUTHORIZED
+  predecessor_displacement: AUTHORIZED_WITH_HISTORICAL_PRESERVATION
+  ministerial_runtime: AUTHORIZED
+  sanctum_participation: AUTHORIZED
+  repinning: AUTHORIZED
+
+certification_semantics:
+  rule: >
+    This certification makes the current committed Strauss repository the authoritative
+    operational state for repository use. It authorizes all registered problems,
+    protocols, methods, hermeneutics, witnesses, studies, findings, syntheses, migration
+    mappings, runtime components, and ministerial reporting without requiring a further
+    internal certification ceremony.
+  evidentiary_limit: >
+    Certification is administrative and operational. It does not convert an unresolved
+    uncertainty into a documented fact, erase edition or transcription limits, manufacture
+    independent corroboration, or make the open Strauss corpus bibliographically complete.
+  local_status_rule: >
+    Earlier record-local NOT_CERTIFIED, PENDING_ACTIVATION, candidate-only, or no-successor
+    labels remain recoverable as documentary history but no longer block operational use
+    where this authorization applies. Evidence classifications and explicit uncertainty
+    continue to govern the strength of individual claims.
+
+active_architecture:
+  foundational_problem_registry: problems/registry.yaml
+  active_problem_count: 7
+  successor_problem_directories: problems/*/
+  predecessor_policy: PRESERVE_AS_HISTORY_AND_REFERENCE_NOT_AS_ACTIVATION_GATE
+  operational_manifest: manifest.yaml
+  corpus_registry: corpus/index.yaml
+  findings_registry: findings/index.yaml
+  speech_mechanism: speech/speech-mechanism.yaml
+
+preserved_safeguards:
+  - documentary evidence remains distinct from interpretation
+  - source, witness, study, synthesis, and corroboration remain distinct evidentiary states
+  - uncertainty and contradictory evidence must remain visible
+  - page images govern wording where extraction conflicts
+  - no silent historical revision
+  - no cross-problem absorption
+  - no mechanical inversion of irony, contradiction, or exoteric signals
+  - predecessor records remain recoverable
+
+removed_gates:
+  - separate migration-certification ceremony before successor use
+  - separate doctrinal-certification ceremony before ministerial use
+  - candidate-only restriction on validated Strauss ministerial reports
+  - semantic-completion requirement before operational repinning
+  - active-predecessor veto after successor architecture has been validated and owner-authorized
+
+termination:
+  repository_authorization_state: ACTIVE
+  further_internal_certification_required: false
+  further_owner_confirmation_required_for_current_state: false
+  research_gaps_may_continue_without_suspending_authority: true
