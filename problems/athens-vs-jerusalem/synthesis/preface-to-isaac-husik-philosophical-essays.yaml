@@ -1,0 +1,29 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: AVJ-HUSIK-PREFACE-001, version: 1.0.0, title: "Athens-versus-Jerusalem Synthesis — Preface to Isaac Husik, Philosophical Essays"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-104
+  reviewed_witness_id: CORPUS-WIT-104
+  study_id: HUSIK-PREFACE-STUDY-001
+  study_path: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-017
+  derived_finding_set_id: FINDSET-135
+problem: {canonical_key: athens-vs-jerusalem, role: CONTROLLED_SECONDARY_JURISDICTION, theologico_political_reference: theologico-political}
+source_local_findings:
+  - {classification: documented_finding, proposition: "The preface presents Hebraism and Hellenism as two great streams of the Western tradition, associating the former chiefly with moral-spiritual force and justice and the latter with reason, science, and intellectual form."}
+  - {classification: documented_finding, proposition: "Husik's philosophy of law is reconstructed as an attempted practical meeting of Hebrew justice and Greek science rather than as a completed theoretical synthesis of the two traditions."}
+  - {classification: documented_finding, proposition: "Science without justice is presented as capable of destructive hardness, while justice without science is blind and powerless; rational jurisprudence therefore requires both formal inquiry and a passion for justice."}
+  - {classification: documented_finding, proposition: "The source refuses to resolve this mediation by returning either to immutable revealed law or to a Platonic absolute theory of justice, leaving the relation of justice and rational objectivity unsettled."}
+  - {classification: bounded_conclusion, proposition: "Hebraism-Hellenism is a controlled civilizational formulation inside a source whose primary problem remains free philosophic inquiry versus revealed authority; it does not certify a harmonized Jerusalem-Athens doctrine."}
+relation_to_primary_jurisdiction:
+  primary_problem: theologico-political
+  rule: >
+    The Hebraism-Hellenism contrast may clarify the historical and practical relation of justice and science but may not
+    replace the source's primary confrontation between philosophy as free universal inquiry and Judaism as revealed Law.
+limits:
+  - The reviewed witness is the 1997 collected text, not a separately reviewed 1952 Basil Blackwell printing.
+  - The characterizations of Hebraism, Hellenism, Judaism, and Greek philosophy are source-local and require independent primary reconstruction.
+  - Philosophy of law is an attempted mediation in the source, not evidence that Jerusalem and Athens have been reconciled.
+  - No doctrine, migration, successor activation, predecessor displacement, or repository completion is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, original_1952_printing_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}

@@ -3,7 +3,7 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.17.0
+  version: 1.18.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
@@ -11,16 +11,15 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 revision_history:
-  predecessor_version: 1.16.0
+  predecessor_version: 1.17.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register PROGRESS-RETURN-STUDY-001 as the ninth complete provisional Theologico-Political item study,
-    correct CORPUS-SRC-101 publication provenance to the 1952 lectures and 1979/1981 posthumous publication history
-    supplied by the reviewed collection, and preserve noncorroboration, noncertification, predecessor authority,
-    and no successor effect.
-purpose: Provide deterministic discovery, source identity, documentary status, provenance, problem binding, study
-  binding, witness condition, and gap records without moving source records, distributing source texts, certifying
-  doctrine, or treating a registered corpus as complete merely because every current record is indexed.
+  reason: Register HUSIK-PREFACE-STUDY-001 as the tenth complete provisional Theologico-Political item study, register CORPUS-STUDY-017,
+    preserve the collective-editorial-layer distinction and pending original-1952 comparison, and retain noncorroboration,
+    noncertification, predecessor authority, and no successor effect.
+purpose: Provide deterministic discovery, source identity, documentary status, provenance, problem binding, study binding,
+  witness condition, and gap records without moving source records, distributing source texts, certifying doctrine, or treating
+  a registered corpus as complete merely because every current record is indexed.
 governing_protocols:
   source_status: protocols/source-status.yaml
   evidence_classification: protocols/evidence-classification.yaml
@@ -28,18 +27,18 @@ governing_protocols:
   uncertainty_preservation: protocols/uncertainty-preservation.yaml
   textual_order: method/textual-order.yaml
   independent_reconstruction: method/reconstruct-alternatives.yaml
-scope_rule: This registry is exhaustive for source and study identities presently committed or explicitly enumerated
-  by a governing repository record. It is not exhaustive of all works by Strauss, all editions or translations,
-  all classical and biblical witnesses, or all sources required to complete the seven foundational problems.
+scope_rule: This registry is exhaustive for source and study identities presently committed or explicitly enumerated by a
+  governing repository record. It is not exhaustive of all works by Strauss, all editions or translations, all classical and
+  biblical witnesses, or all sources required to complete the seven foundational problems.
 identifier_rules:
   source_entity_prefix: CORPUS-SRC
   reviewed_witness_prefix: CORPUS-WIT
   study_record_prefix: CORPUS-STUDY
   source_status_prefix: CORPUS-STATUS
   gap_prefix: CORPUS-GAP
-  identity_rule: A source entity identifies a work or collection. A reviewed witness identifies a particular edition,
-    translation, file, item, or textual presentation. A source-status record identifies verified and missing documentary
-    conditions. A study identifies repository analysis. These identities may not be collapsed.
+  identity_rule: A source entity identifies a work or collection. A reviewed witness identifies a particular edition, translation,
+    file, item, or textual presentation. A source-status record identifies verified and missing documentary conditions. A
+    study identifies repository analysis. These identities may not be collapsed.
 source_entities:
 - source_id: CORPUS-SRC-001
   creator: Leo Strauss
@@ -133,12 +132,11 @@ source_entities:
   reviewed_witnesses:
   - CORPUS-WIT-101
   limits:
-  - reviewed witness is the fingerprinted 1997 SUNY collected text, not separately reviewed 1979 or 1981 posthumous
-    publications
+  - reviewed witness is the fingerprinted 1997 SUNY collected text, not separately reviewed 1979 or 1981 posthumous publications
   - printed pages 87-136 correspond to one-based PDF pages 106-155
   - Strauss lecture and discussion body occupies printed pages 87-132 and editorial notes continue through 136
-  - PROGRESS-RETURN-STUDY-001 is source-local and not independent corroboration of biblical, Greek, Jewish, Christian,
-    Spinozist, or modern historical claims
+  - PROGRESS-RETURN-STUDY-001 is source-local and not independent corroboration of biblical, Greek, Jewish, Christian, Spinozist,
+    or modern historical claims
   - the act-of-faith formulation remains source-local and the revelation-philosophy conflict remains unresolved
   study_records:
   - CORPUS-STUDY-016
@@ -186,8 +184,8 @@ source_entities:
   - reviewed witness is the fingerprinted 1997 SUNY collected reprint, not a separately reviewed 1948 journal printing
   - printed pages 181-233 correspond to one-based PDF pages 200-252 in the reviewed file
   - the argumentative body is printed pages 181-224 and notes continue through printed page 233
-  - the collection acknowledgment identifies the original publication as Proceedings of the American Academy for
-    Jewish Research 17 (1948), 69-131
+  - the collection acknowledgment identifies the original publication as Proceedings of the American Academy for Jewish Research
+    17 (1948), 69-131
   - SPINOZA-TREATISE-STUDY-001 is source-local and not independent corroboration of Spinoza or represented traditions
   - original 1948 journal comparison remains pending
   study_records:
@@ -202,12 +200,20 @@ source_entities:
   problem_bindings:
   - theologico-political
   - athens-vs-jerusalem
-  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
   reviewed_witnesses:
   - CORPUS-WIT-104
   limits:
-  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - reviewed witness is the fingerprinted 1997 SUNY collected text, not a separately reviewed 1952 Basil Blackwell printing
+  - printed pages 235-266 correspond to one-based PDF pages 254-285
+  - the closing plural statement on printed page 264 is preserved as a collective 1952 editorial layer and later bracketed
+    Ed. notes remain a distinct 1997 editorial layer
+  - HUSIK-PREFACE-STUDY-001 is source-local and not independent corroboration of Husik, Judaism, medieval Jewish philosophy,
+    Greek philosophy, or jurisprudential interlocutors
+  - original 1952 printing comparison remains pending
+  study_records:
+  - CORPUS-STUDY-017
 - source_id: CORPUS-SRC-105
   creator: Leo Strauss
   canonical_title: Introductory Essay to Hermann Cohen, Religion of Reason out of the Sources of Judaism
@@ -278,13 +284,11 @@ source_entities:
   reviewed_witnesses:
   - CORPUS-WIT-108
   limits:
-  - reviewed witness is the fingerprinted 1997 SUNY collected text, not a separately reviewed 1981 L'Homme publication
-    or 1957 typed lecture manuscript
+  - reviewed witness is the fingerprinted 1997 SUNY collected text, not a separately reviewed 1981 L'Homme publication or
+    1957 typed lecture manuscript
   - printed pages 359-376 correspond to one-based PDF pages 378-395
-  - Strauss's lecture body occupies printed pages 359-375; editorial notes begin on page 375 and continue through
-    page 376
-  - GENESIS-STUDY-001 is source-local and not independent corroboration of Genesis, Greek philosophy, or represented
-    traditions
+  - Strauss's lecture body occupies printed pages 359-375; editorial notes begin on page 375 and continue through page 376
+  - GENESIS-STUDY-001 is source-local and not independent corroboration of Genesis, Greek philosophy, or represented traditions
   - comparison with the 1981 English publication and the typed 1957 lecture manuscript remains pending
   study_records:
   - CORPUS-STUDY-013
@@ -350,8 +354,8 @@ source_entities:
   - reviewed witness is the 1983 collected reprint, not a separately reviewed 1957 journal printing
   - Talmon's reviewed book is identified but not registered as a reviewed witness
   - Pangle's Introduction is secondary and may not govern Strauss's review
-  - TALMON-STUDY-001 does not independently establish election, Jewish history, Church-State causation, or Talmon's
-    complete doctrine
+  - TALMON-STUDY-001 does not independently establish election, Jewish history, Church-State causation, or Talmon's complete
+    doctrine
 - source_id: CORPUS-SRC-112
   creator: Leo Strauss
   canonical_title: Letter to the Editor — The State of Israel
@@ -384,12 +388,11 @@ source_entities:
   reviewed_witnesses:
   - CORPUS-WIT-113
   limits:
-  - reviewed witness is the fingerprinted 1997 SUNY collected reprint, not a separately reviewed 1952 Free Press
-    printing
+  - reviewed witness is the fingerprinted 1997 SUNY collected reprint, not a separately reviewed 1952 Free Press printing
   - printed pages 417-429 correspond to one-based PDF pages 436-448
   - Strauss's argumentative body occupies printed pages 417-428 and notes continue through printed page 429
-  - PERSECUTION-INTRO-STUDY-001 is source-local and not independent corroboration of Farabi, Maimonides, Plato,
-    religious traditions, or institutional history
+  - PERSECUTION-INTRO-STUDY-001 is source-local and not independent corroboration of Farabi, Maimonides, Plato, religious
+    traditions, or institutional history
   - original 1952 printing comparison remains pending
   study_records:
   - CORPUS-STUDY-014
@@ -442,14 +445,14 @@ source_entities:
   reviewed_witnesses:
   - CORPUS-WIT-116
   limits:
-  - reviewed witness reproduces the Maletz English translation in the 1997 collection, not separately reviewed 1965
-    German or 1979-80 English textual states
+  - reviewed witness reproduces the Maletz English translation in the 1997 collection, not separately reviewed 1965 German
+    or 1979-80 English textual states
   - printed pages 453-456 correspond to one-based PDF pages 472-475
-  - Strauss's reproduced preface body ends on printed page 454 and the final three paragraphs identified by editorial
-    note 8 are omitted from the reviewed body
+  - Strauss's reproduced preface body ends on printed page 454 and the final three paragraphs identified by editorial note
+    8 are omitted from the reviewed body
   - HOBBES-PREFACE-STUDY-001 is source-local and not independent corroboration of Hobbes, Spinoza, or named interlocutors
-  - the sovereign-peace predecessor formulation remains only partially retested because the required omitted paragraphs
-    were not reviewed
+  - the sovereign-peace predecessor formulation remains only partially retested because the required omitted paragraphs were
+    not reviewed
   study_records:
   - CORPUS-STUDY-015
 - source_id: CORPUS-SRC-117
@@ -544,8 +547,8 @@ reviewed_witnesses:
   publisher: State University of New York Press
   publication_year: 1997
   collected_title: Progress or Return?
-  publication_provenance_note: '1952 Hillel House lectures; 1997 text combines Modern Judaism 1 (1981): 17-45 and
-    The Independent Journal of Philosophy 3 (1979): 111-18'
+  publication_provenance_note: '1952 Hillel House lectures; 1997 text combines Modern Judaism 1 (1981): 17-45 and The Independent
+    Journal of Philosophy 3 (1979): 111-18'
   printed_page_range:
     start: 87
     end: 136
@@ -625,8 +628,8 @@ reviewed_witnesses:
   publisher: State University of New York Press
   publication_year: 1997
   collected_title: Preface to Isaac Husik, Philosophical Essays
-  publication_provenance_note: 'Isaac Husik, Philosophical Essays: Ancient, Medieval, and Modern (Basil Blackwell,
-    1952), vii-xli'
+  publication_provenance_note: 'Isaac Husik, Philosophical Essays: Ancient, Medieval, and Modern (Basil Blackwell, 1952),
+    vii-xli'
   printed_page_range:
     start: 235
     end: 266
@@ -650,8 +653,8 @@ reviewed_witnesses:
   container_witness_id: CORPUS-WIT-001
   container_title: Studies in Platonic Political Philosophy
   collected_title: Introductory Essay for Hermann Cohen, Religion of Reason out of the Sources of Judaism
-  original_publication: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism,
-    Frederick Ungar, New York, 1972
+  original_publication: English translation of Hermann Cohen, Religion of Reason out of the Sources of Judaism, Frederick
+    Ungar, New York, 1972
   printed_page_range:
     start: 233
     end: 247
@@ -729,8 +732,8 @@ reviewed_witnesses:
   publisher: State University of New York Press
   publication_year: 1997
   collected_title: On the Interpretation of Genesis
-  publication_provenance_note: 'Lecture delivered 25 January 1957; editor states the prepared English text first
-    appeared posthumously in L''Homme 21, no. 1 (January-March 1981): 5-20, followed by a French translation'
+  publication_provenance_note: 'Lecture delivered 25 January 1957; editor states the prepared English text first appeared
+    posthumously in L''Homme 21, no. 1 (January-March 1981): 5-20, followed by a French translation'
   printed_page_range:
     start: 359
     end: 376
@@ -821,8 +824,7 @@ reviewed_witnesses:
   repository_copy_status: NOT_DISTRIBUTED_BY_ITEM_REGISTRY
   original_edition_comparison: PENDING
   witness_record_path: studies/theologico-political/review-talmon-nature-of-jewish-history/reviewed-witness.yaml
-  reviewed_work: J. L. Talmon, The Nature of Jewish History—Its Universal Significance, Hillel Foundation, London,
-    1957
+  reviewed_work: J. L. Talmon, The Nature of Jewish History—Its Universal Significance, Hillel Foundation, London, 1957
   reviewed_work_witness: NOT_REGISTERED
 - witness_id: CORPUS-WIT-112
   source_id: CORPUS-SRC-112
@@ -990,8 +992,8 @@ reviewed_witnesses:
   publisher: State University of New York Press
   publication_year: 1997
   collected_title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
-  publication_provenance_note: 1997 collection supplies no earlier publication citation in its Sources section;
-    active predecessor preserves source date 1946
+  publication_provenance_note: 1997 collection supplies no earlier publication citation in its Sources section; active predecessor
+    preserves source date 1946
   printed_page_range:
     start: 467
     end: 470
@@ -1017,8 +1019,8 @@ reviewed_witnesses:
   publisher: State University of New York Press
   publication_year: 1997
   collected_title: Restatement on Xenophon's Hiero
-  publication_provenance_note: last-paragraph scope; 1997 collection supplies no separate earlier-publication citation
-    for the excerpt; active predecessor preserves source date 1950
+  publication_provenance_note: last-paragraph scope; 1997 collection supplies no separate earlier-publication citation for
+    the excerpt; active predecessor preserves source date 1950
   printed_page_range:
     start: 471
     end: 473
@@ -1077,7 +1079,7 @@ source_status_records:
   source_id: CORPUS-SRC-104
   path: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/source-status.yaml
   document_type: source_status_record
-  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-105
   source_id: CORPUS-SRC-105
@@ -1266,6 +1268,12 @@ study_records:
   record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
   completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
   certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-017
+  source_id: CORPUS-SRC-104
+  path: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
 problem_witness_registries:
 - problem: nomos-vs-physis
   path: problems/nomos-vs-physis/witnesses.yaml
@@ -1317,13 +1325,13 @@ coverage:
   source_entities_registered: 22
   reviewed_witnesses_registered: 22
   source_status_records_registered: 22
-  study_records_registered: 16
+  study_records_registered: 17
   problem_witness_registries_registered: 7
   theologico_political_predecessor_sources_registered: 19
   theologico_political_item_level_statuses_registered: 19
   theologico_political_reviewed_item_witnesses_registered: 19
-  theologico_political_independent_item_studies_registered: 9
-  current_studies_tree_yaml_records_accounted_for: 56
+  theologico_political_independent_item_studies_registered: 10
+  current_studies_tree_yaml_records_accounted_for: 57
   exhaustive_within_declared_scope: true
 corpus_gaps:
 - gap_id: CORPUS-GAP-001
@@ -1332,13 +1340,13 @@ corpus_gaps:
   effect: CORPUS_REMAINS_OPEN
 - gap_id: CORPUS-GAP-002
   category: EDITION_COMPARISON
-  statement: The reviewed 1980 University of Chicago Press paperback of Socrates and Aristophanes is registered,
-    but comparison with the 1966 Basic Books printing remains pending.
+  statement: The reviewed 1980 University of Chicago Press paperback of Socrates and Aristophanes is registered, but comparison
+    with the 1966 Basic Books printing remains pending.
   effect: EDITION_SPECIFIC_DIFFERENCES_NOT_YET_TESTED
 - gap_id: CORPUS-GAP-003
   category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES
-  statement: All nineteen predecessor writings have bounded source identities and reviewed item witnesses; nine
-    have complete provisional sequential studies, while the remaining ten lack independent item studies.
+  statement: All nineteen predecessor writings have bounded source identities and reviewed item witnesses; ten have complete
+    provisional sequential studies, while the remaining nine lack independent item studies.
   effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL
 - gap_id: CORPUS-GAP-004
   category: INDEPENDENT_CLASSICAL_WITNESSES
@@ -1346,8 +1354,8 @@ corpus_gaps:
   effect: FINAL_COMPARATIVE_RANKING_BLOCKED
 - gap_id: CORPUS-GAP-005
   category: BIBLICAL_MEDIEVAL_AND_REVIEWED_WORK_WITNESSES
-  statement: Biblical, Maimonidean, Farabian, Spinozist, Hobbesian, Cohenian, Kantian, Talmonian, and other independent
-    primary-text corpora remain incomplete.
+  statement: Biblical, Maimonidean, Farabian, Spinozist, Hobbesian, Cohenian, Kantian, Talmonian, and other independent primary-text
+    corpora remain incomplete.
   effect: THEOLOGICO_POLITICAL_ATHENS_JERUSALEM_AND_HISTORICAL_COMPARISON_BLOCKED
 - gap_id: CORPUS-GAP-006
   category: TRANSLATION_AND_ORIGINAL_LANGUAGE
@@ -1367,32 +1375,33 @@ validation_rules:
 - the active Theologico-Political predecessor must match its preserved copy
 - every canonical problem must have one registered witness registry
 - reviewed-container fingerprints must match source-status records
-- reviewed item witnesses must match their item source-status locator and container-fingerprint or platform-reference
-  records
+- reviewed item witnesses must match their item source-status locator and container-fingerprint or platform-reference records
 - missing, witness-only, and completed-study states must remain distinct
 - CORPUS-SRC-102 preserves platform-reference safeguards while recording a complete provisional study
 - counts in coverage must match registry contents and the studies tree
 - source inclusion may not change certification, migration, or activation status
 - complete current-state indexing may not be described as a complete corpus
-- CORPUS-SRC-108 preserves fingerprinted reviewed-witness safeguards and complete provisional sequential reconstruction
-  while earlier textual-state comparison remains pending
-- CORPUS-SRC-113 preserves fingerprinted reviewed-witness safeguards and complete provisional sequential reconstruction
-  while original-1952 comparison remains pending
-- CORPUS-SRC-116 preserves the documentary-omission limit while recording complete provisional reconstruction of
-  the text actually present in CORPUS-WIT-116
-- CORPUS-SRC-101 preserves reviewed-witness safeguards and complete provisional sequential reconstruction while
-  1979/1981 publication comparison remains pending
-- all ten witness-only Theologico-Political sources preserve registered-witness, pending-study, edition-comparison,
-  noncertification, and no-successor safeguards
+- CORPUS-SRC-108 preserves fingerprinted reviewed-witness safeguards and complete provisional sequential reconstruction while
+  earlier textual-state comparison remains pending
+- CORPUS-SRC-113 preserves fingerprinted reviewed-witness safeguards and complete provisional sequential reconstruction while
+  original-1952 comparison remains pending
+- CORPUS-SRC-116 preserves the documentary-omission limit while recording complete provisional reconstruction of the text
+  actually present in CORPUS-WIT-116
+- CORPUS-SRC-101 preserves reviewed-witness safeguards and complete provisional sequential reconstruction while 1979/1981
+  publication comparison remains pending
+- all nine witness-only Theologico-Political sources preserve registered-witness, pending-study, edition-comparison, noncertification,
+  and no-successor safeguards
+- CORPUS-SRC-104 preserves the fingerprinted reviewed witness, collective 1952 editorial-layer distinction, complete provisional
+  sequential reconstruction, pending original-1952 comparison, noncorroboration, noncertification, and no-successor safeguards
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   theologico_political_identity_registration_state: COMPLETE_19_OF_19
   theologico_political_reviewed_witness_state: COMPLETE_19_OF_19
-  theologico_political_independent_study_state: INCOMPLETE_9_OF_19
+  theologico_political_independent_study_state: INCOMPLETE_10_OF_19
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
   certification: NOT_CERTIFIED
   next_required_units:
-  - conduct independent sequential reconstruction of CORPUS-SRC-104 from CORPUS-WIT-104
-  - compare the reviewed 1997 CORPUS-WIT-101 item with the 1979 and 1981 publication states when available
-  - conduct independent sequential reconstruction for the remaining ten writings
-  - expand independent biblical, Greek, Jewish, Christian, Spinozist, medieval, modern, and reviewed-work witnesses
+  - conduct independent sequential reconstruction of CORPUS-SRC-106 from CORPUS-WIT-106
+  - compare the reviewed 1997 CORPUS-WIT-104 item with the original 1952 Basil Blackwell printing when available
+  - conduct independent sequential reconstruction for the remaining nine writings
+  - expand independent biblical, Greek, Jewish, Christian, Spinozist, medieval, modern, Husik, and reviewed-work witnesses

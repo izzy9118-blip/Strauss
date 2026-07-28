@@ -3,7 +3,7 @@ record_type: typed_findings_registry
 identity:
   id: STRAUSS-FINDINGS-INDEX-001
   title: Strauss Repository Typed Findings Registry
-  version: 1.9.0
+  version: 1.10.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
@@ -11,14 +11,15 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_JURISDICTION_AND_REVISION_ONLY
 revision_history:
-  predecessor_version: 1.8.0
+  predecessor_version: 1.9.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register PROGRESS-RETURN-STUDY-001 as FINDSET-016 and jurisdiction-preserving syntheses FINDSET-131 through
-    FINDSET-133 while preserving publication-state, noncorroboration, noncertification, and no-successor safeguards.
-purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record
-  class, migration state, and provenance while preserving the difference among documentary finding, supported inference,
-  working hypothesis, comparative question, contradiction, dissent, and unresolved uncertainty.
+  reason: Register HUSIK-PREFACE-STUDY-001 as FINDSET-017 and jurisdiction-preserving syntheses FINDSET-134 and FINDSET-135
+    while preserving the collective-editorial-layer distinction, pending original-1952 comparison, noncorroboration, noncertification,
+    and no-successor safeguards.
+purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record class,
+  migration state, and provenance while preserving the difference among documentary finding, supported inference, working
+  hypothesis, comparative question, contradiction, dissent, and unresolved uncertainty.
 governing_records:
   evidence_classification: protocols/evidence-classification.yaml
   inference_discipline: protocols/inference-discipline.yaml
@@ -27,20 +28,20 @@ governing_records:
   corpus_registry: corpus/index.yaml
   problem_registry: problems/registry.yaml
   migration_plan: migrations/foundational-problems-v2/migration.yaml
-scope_rule: The registry is exhaustive for findings-bearing and findings-governing records now committed in studies,
-  problem synthesis directories, foundational migration transaction ledgers, and the two preserved predecessor sources
-  explicitly used by current migration. It is not an assertion that every sentence in the repository is a finding,
-  that every source has been studied, or that current findings are complete, correct, or certified.
-finding_unit_rule: The registry identifies authoritative finding sets by reference. Individual propositions, evidence
-  locators, qualifications, contradictions, and uncertainties remain in the referenced record and must be loaded
-  from that record. The registry may not paraphrase them into a stronger or more final claim.
+scope_rule: The registry is exhaustive for findings-bearing and findings-governing records now committed in studies, problem
+  synthesis directories, foundational migration transaction ledgers, and the two preserved predecessor sources explicitly
+  used by current migration. It is not an assertion that every sentence in the repository is a finding, that every source
+  has been studied, or that current findings are complete, correct, or certified.
+finding_unit_rule: The registry identifies authoritative finding sets by reference. Individual propositions, evidence locators,
+  qualifications, contradictions, and uncertainties remain in the referenced record and must be loaded from that record. The
+  registry may not paraphrase them into a stronger or more final claim.
 identifier_rules:
   finding_set_prefix: FINDSET
   source_binding_authority: corpus/index.yaml
   problem_binding_authority: problems/registry.yaml
   uniqueness_rule: Every finding_set_id identifies one committed repository record.
-  nonduplication_rule: The same underlying proposition may appear in a study, local synthesis, and migration transaction
-    only through explicit derivation or reference. Repetition in the registry does not establish independent corroboration.
+  nonduplication_rule: The same underlying proposition may appear in a study, local synthesis, and migration transaction only
+    through explicit derivation or reference. Repetition in the registry does not establish independent corroboration.
 finding_sets:
 - finding_set_id: FINDSET-001
   path: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
@@ -355,6 +356,24 @@ finding_sets:
   - FINDSET-133
   witness_id: CORPUS-WIT-101
   earlier_publication_comparison: PENDING
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
+- finding_set_id: FINDSET-017
+  path: studies/theologico-political/preface-to-isaac-husik-philosophical-essays/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-104
+  problem_bindings:
+  - theologico-political
+  - athens-vs-jerusalem
+  status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  derived_local_syntheses:
+  - FINDSET-134
+  - FINDSET-135
+  witness_id: CORPUS-WIT-104
+  original_1952_printing_comparison: PENDING
   independent_corroboration: INCOMPLETE
   successor_effect: NONE
 - finding_set_id: FINDSET-101
@@ -844,6 +863,35 @@ finding_sets:
   status: PROVISIONAL_NOT_CERTIFIED
   certification: NOT_CERTIFIED
   successor_effect: NONE
+- finding_set_id: FINDSET-134
+  path: problems/theologico-political/synthesis/preface-to-isaac-husik-philosophical-essays.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-104
+  problem_bindings:
+  - theologico-political
+  adjacent_problem_references:
+  - athens-vs-jerusalem
+  derived_from:
+  - FINDSET-017
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-135
+  path: problems/athens-vs-jerusalem/synthesis/preface-to-isaac-husik-philosophical-essays.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-104
+  problem_bindings:
+  - athens-vs-jerusalem
+  theologico_political_reference: theologico-political
+  derived_from:
+  - FINDSET-017
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
 - finding_set_id: FINDSET-201
   path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   record_class: MIGRATION_TRANSACTION_LEDGER
@@ -983,6 +1031,7 @@ indexes:
     - FINDSET-014
     - FINDSET-015
     - FINDSET-016
+    - FINDSET-017
     - FINDSET-105
     - FINDSET-106
     - FINDSET-111
@@ -994,6 +1043,7 @@ indexes:
     - FINDSET-127
     - FINDSET-129
     - FINDSET-131
+    - FINDSET-134
     - FINDSET-202
     - FINDSET-203
     - FINDSET-301
@@ -1008,6 +1058,7 @@ indexes:
     - FINDSET-011
     - FINDSET-013
     - FINDSET-016
+    - FINDSET-017
     - FINDSET-107
     - FINDSET-112
     - FINDSET-114
@@ -1015,6 +1066,7 @@ indexes:
     - FINDSET-120
     - FINDSET-125
     - FINDSET-132
+    - FINDSET-135
     wise-vs-vulgar:
     - FINDSET-002
     - FINDSET-003
@@ -1089,6 +1141,13 @@ indexes:
     - FINDSET-123
     - FINDSET-203
     - FINDSET-301
+    CORPUS-SRC-104:
+    - FINDSET-017
+    - FINDSET-105
+    - FINDSET-134
+    - FINDSET-135
+    - FINDSET-203
+    - FINDSET-301
     CORPUS-SRC-105:
     - FINDSET-009
     - FINDSET-105
@@ -1150,6 +1209,7 @@ indexes:
     - FINDSET-014
     - FINDSET-015
     - FINDSET-016
+    - FINDSET-017
     INTEGRATION_GOVERNANCE_RECORD:
     - FINDSET-005
     - FINDSET-006
@@ -1187,6 +1247,8 @@ indexes:
     - FINDSET-131
     - FINDSET-132
     - FINDSET-133
+    - FINDSET-134
+    - FINDSET-135
     MIGRATION_TRANSACTION_LEDGER:
     - FINDSET-201
     - FINDSET-202
@@ -1195,14 +1257,14 @@ indexes:
     - FINDSET-301
     - FINDSET-302
 coverage:
-  finding_sets_registered: 54
-  source_specific_and_integration_records_registered: 16
-  problem_syntheses_registered: 33
+  finding_sets_registered: 57
+  source_specific_and_integration_records_registered: 17
+  problem_syntheses_registered: 35
   migration_transaction_ledgers_registered: 3
   preserved_finding_bases_registered: 2
-  current_problem_synthesis_tree_yaml_records_accounted_for: 33
+  current_problem_synthesis_tree_yaml_records_accounted_for: 35
   current_foundational_transaction_tree_yaml_records_accounted_for: 3
-  corpus_study_records_accounted_for: 16
+  corpus_study_records_accounted_for: 17
   canonical_problem_indexes_registered: 7
   exhaustive_within_declared_scope: true
 proposition_kinds:
@@ -1236,12 +1298,12 @@ findings_gaps:
   statement: Many registered source entities lack independent source-specific study records.
   effect: FINDINGS_COVERAGE_REMAINS_SOURCE_ASYMMETRICAL
 - gap_id: FINDINGS-GAP-003
-  statement: Nine of the nineteen Theologico-Political writings now have complete provisional item studies; the
-    remaining ten lack individual sequential studies.
+  statement: Ten of the nineteen Theologico-Political writings now have complete provisional item studies; the remaining nine
+    lack individual sequential studies.
   effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE
 - gap_id: FINDINGS-GAP-004
-  statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and
-    most Platonic findings remain incomplete.
+  statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and most Platonic
+    findings remain incomplete.
   effect: COMPARATIVE_AND_DOCTRINAL_RANKING_BLOCKED
 - gap_id: FINDINGS-GAP-005
   statement: Actual candidate ministerial reports have not yet been validated against the complete contract stack.
@@ -1262,16 +1324,18 @@ validation_rules:
 - certification and activation may not be inferred from lifecycle, completion, acceptance, or classification
 - current-state exhaustive indexing may not be described as complete findings or doctrine
 - FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
-- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison,
+- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison, and retain
+  noncorroboration and no-successor safeguards
+- FINDSET-013 must derive only FINDSET-124 through FINDSET-126, preserve CORPUS-WIT-108 and pending earlier-text comparison,
   and retain noncorroboration and no-successor safeguards
-- FINDSET-013 must derive only FINDSET-124 through FINDSET-126, preserve CORPUS-WIT-108 and pending earlier-text
-  comparison, and retain noncorroboration and no-successor safeguards
-- FINDSET-014 must derive only FINDSET-127 and FINDSET-128, preserve CORPUS-WIT-113 and pending 1952 comparison,
-  and retain noncorroboration and no-successor safeguards
-- FINDSET-015 must derive only FINDSET-129 and FINDSET-130, preserve CORPUS-WIT-116, the omitted-text limit, pending
-  1965/1979-80 comparison, noncorroboration, and no-successor safeguards
-- FINDSET-016 must derive only FINDSET-131 through FINDSET-133, preserve CORPUS-WIT-101, pending earlier-publication
+- FINDSET-014 must derive only FINDSET-127 and FINDSET-128, preserve CORPUS-WIT-113 and pending 1952 comparison, and retain
+  noncorroboration and no-successor safeguards
+- FINDSET-015 must derive only FINDSET-129 and FINDSET-130, preserve CORPUS-WIT-116, the omitted-text limit, pending 1965/1979-80
   comparison, noncorroboration, and no-successor safeguards
+- FINDSET-016 must derive only FINDSET-131 through FINDSET-133, preserve CORPUS-WIT-101, pending earlier-publication comparison,
+  noncorroboration, and no-successor safeguards
+- FINDSET-017 must derive only FINDSET-134 and FINDSET-135, preserve CORPUS-WIT-104, pending original-1952 comparison, the
+  collective-editorial-layer distinction, noncorroboration, and no-successor safeguards
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   findings_state: OPEN_MATERIALLY_INCOMPLETE_AND_NONCERTIFIED
