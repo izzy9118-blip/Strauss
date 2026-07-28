@@ -61,17 +61,15 @@ jobs:
       - name: Install dependency
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
 
-      - name: Materialize CORPUS-SRC-103 study integration
+      - name: Repair CORPUS-SRC-103 integration regression expectations
         if: github.event_name == 'pull_request' && github.head_ref == 'production/corpus-src-103-sequential-reconstruction'
         run: |
-          python scripts/materialize_src103_study.py
-          python scripts/repair_src103_study_yaml.py
-          python scripts/repair_src103_registry_constants.py
+          python scripts/repair_src103_tests.py
           if ! git diff --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add -A
-            git commit -m "Materialize CORPUS-SRC-103 study integration"
+            git commit -m "Repair CORPUS-SRC-103 integration regression expectations"
             git push origin HEAD:${{ github.head_ref }}
           fi
 
