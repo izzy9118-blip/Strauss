@@ -26,26 +26,26 @@ class TalmonIntegrationCompletionTests(unittest.TestCase):
         corpus = load_yaml("corpus/index.yaml")
         findings = load_yaml("findings/index.yaml")
 
-        self.assertEqual(manifest["identity"]["version"], "1.14.0")
-        self.assertEqual(audit["identity"]["version"], "3.2.0")
-        self.assertEqual(mapping["identity"]["version"], "1.14.0")
-        self.assertEqual(process["identity"]["version"], "1.16.0")
-        self.assertEqual(schedule["identity"]["version"], "1.14.0")
-        self.assertEqual(corpus["identity"]["version"], "1.18.0")
-        self.assertEqual(findings["identity"]["version"], "1.10.0")
+        self.assertEqual(manifest["identity"]["version"], "1.15.0")
+        self.assertEqual(audit["identity"]["version"], "3.3.0")
+        self.assertEqual(mapping["identity"]["version"], "1.15.0")
+        self.assertEqual(process["identity"]["version"], "1.17.0")
+        self.assertEqual(schedule["identity"]["version"], "1.15.0")
+        self.assertEqual(corpus["identity"]["version"], "1.19.0")
+        self.assertEqual(findings["identity"]["version"], "1.11.0")
 
         state = manifest["corpus"]["theologico_political_item_level_statuses"]
         self.assertEqual(state["registered_count"], 19)
         self.assertEqual(state["reviewed_witness_count"], 19)
-        self.assertEqual(state["independent_sequential_study_count"], 10)
+        self.assertEqual(state["independent_sequential_study_count"], 11)
         self.assertEqual(state["remaining_without_reviewed_item_witness"], 0)
-        self.assertEqual(state["remaining_without_independent_sequential_study"], 9)
+        self.assertEqual(state["remaining_without_independent_sequential_study"], 8)
         self.assertEqual(
             state["completed_study_ids"],
-            ["COHEN-STUDY-001", "JA-STUDY-001", "TALMON-STUDY-001", "SPINOZA-PREFACE-STUDY-001", "SPINOZA-TREATISE-STUDY-001", "GENESIS-STUDY-001", "PERSECUTION-INTRO-STUDY-001", "HOBBES-PREFACE-STUDY-001", "PROGRESS-RETURN-STUDY-001", "HUSIK-PREFACE-STUDY-001"],
+            ["COHEN-STUDY-001", "JA-STUDY-001", "TALMON-STUDY-001", "SPINOZA-PREFACE-STUDY-001", "SPINOZA-TREATISE-STUDY-001", "GENESIS-STUDY-001", "PERSECUTION-INTRO-STUDY-001", "HOBBES-PREFACE-STUDY-001", "PROGRESS-RETURN-STUDY-001", "HUSIK-PREFACE-STUDY-001", "FREUD-MOSES-STUDY-001"],
         )
         self.assertEqual(schedule["termination"]["next_item_witness"], "NONE")
-        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-106")
+        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-107")
 
     def test_talmon_records_remain_provisional_and_nonactivating(self) -> None:
         witness = load_yaml(

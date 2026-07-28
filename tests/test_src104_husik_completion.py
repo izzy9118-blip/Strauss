@@ -57,15 +57,15 @@ class HusikPrefaceCompletionTests(unittest.TestCase):
         self.assertEqual(study["independent_corroboration"], "INCOMPLETE")
         self.assertEqual(study["successor_effect"], "NONE")
 
-    def test_ten_of_nineteen_completion_language_is_synchronized(self) -> None:
+    def test_forward_completion_language_remains_synchronized_after_src106(self) -> None:
         corpus = load_yaml("corpus/index.yaml")
         manifest = load_yaml("manifest.yaml")
         schedule = load_yaml("history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml")
-        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 10)
-        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_10_OF_19")
-        self.assertEqual(manifest["corpus"]["theologico_political_item_level_statuses"]["independent_sequential_study_count"], 10)
-        self.assertEqual(schedule["termination"]["independent_sequential_reconstruction"], "INCOMPLETE_10_OF_19")
-        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-106")
+        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 11)
+        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_11_OF_19")
+        self.assertEqual(manifest["corpus"]["theologico_political_item_level_statuses"]["independent_sequential_study_count"], 11)
+        self.assertEqual(schedule["termination"]["independent_sequential_reconstruction"], "INCOMPLETE_11_OF_19")
+        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-107")
 
 
 if __name__ == "__main__":
