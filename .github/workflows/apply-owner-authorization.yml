@@ -40,12 +40,24 @@ jobs:
         run: python scripts/apply_owner_authorization.py
 
       - name: Validate authorized repository state
+        shell: bash
         run: |
-          python adapter.py --validate
-          python problem_bundles.py --validate
-          python corpus_registry.py --validate
-          python findings_registry.py --validate
-          python -m unittest discover -s tests -p 'test_*.py'
+          set -o pipefail
+          {
+            python adapter.py --validate
+            python problem_bundles.py --validate
+            python corpus_registry.py --validate
+            python findings_registry.py --validate
+            python -m unittest discover -s tests -p 'test_*.py'
+          } 2>&1 | tee /tmp/owner-authorization-validation.log
+
+      - name: Upload authorization validation diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: owner-authorization-validation
+          path: /tmp/owner-authorization-validation.log
+          if-no-files-found: ignore
 
       - name: Remove one-shot materializer
         run: |
