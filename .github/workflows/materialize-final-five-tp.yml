@@ -34,6 +34,7 @@ jobs:
         shell: bash
         run: |
           base64 -d scripts/.final5_materializer.py.gz.b64 | gzip -d > /tmp/materialize_final_five.py
+          sed -i 's#R=Path(__file__).resolve().parents\[1\]#R=Path.cwd()#' /tmp/materialize_final_five.py
           python /tmp/materialize_final_five.py > /tmp/final5-materializer.log 2>&1 || { cat /tmp/final5-materializer.log; exit 1; }
 
       - name: Upload materializer diagnostics
