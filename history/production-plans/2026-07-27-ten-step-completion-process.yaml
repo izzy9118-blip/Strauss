@@ -123,13 +123,13 @@ steps:
   - tests/
   - .github/workflows/validate-lean-interface.yml
   completed_in_current_sequence:
-  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the fourteen witness-only
-    states from the five completed-study states
+  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the ten witness-only
+    states from the nine completed-study states
   - tests preserve qualified platform-reference, fingerprint, locator, scope, edition-comparison, noncertification,
     and no-successor safeguards
-  - tests cover CORPUS-SRC-103 study completion, findings derivation, problem jurisdiction, and completion-language
-    consistency
-  current_requirement: Run the complete GitHub Actions validation before merge.
+  - tests cover the completed CORPUS-SRC-103, CORPUS-SRC-108, CORPUS-SRC-113, CORPUS-SRC-116, and CORPUS-SRC-101
+    study integrations while preserving findings derivation, problem jurisdiction, and completion-language consistency
+  current_requirement: Run the complete GitHub Actions validation before merge using the ordinary read-only validation workflow; no materialization or self-push step is required.
   limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
 - sequence: 10
   action: Repin the completed Strauss interface in Sanctum.
