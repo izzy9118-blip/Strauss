@@ -1,0 +1,29 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: AVJ-GENESIS-001, version: 1.0.0, title: "Athens-versus-Jerusalem Synthesis — On the Interpretation of Genesis"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-108
+  reviewed_witness_id: CORPUS-WIT-108
+  study_id: GENESIS-STUDY-001
+  study_path: studies/theologico-political/on-the-interpretation-of-genesis/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-013
+  derived_finding_set_id: FINDSET-125
+problem: {canonical_key: athens-vs-jerusalem, role: CONTROLLED_SECONDARY_JURISDICTION, primary_problem_reference: theologico-political}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Strauss begins from the Western inheritance as partly biblical and partly Greek and treats their agreement and disagreement as an unavoidable question."}
+  - {classification: documented_finding, proposition: "Genesis demotes heaven and the heavenly bodies, opposing the biblical orientation to the cosmological orientation Strauss associates with Greek philosophy."}
+  - {classification: documented_finding, proposition: "The lecture formulates the alternatives as obedient life under revelation and human freedom represented by Greek philosophy."}
+  - {classification: documented_finding, proposition: "Strauss denies that a synthesis can preserve the decisive claims of both Bible and philosophy."}
+  - {classification: documented_finding, proposition: "The Greek philosophic book is governed by sovereign human authorship and knowable purposive order, whereas the sacred book reflects a divine purpose held to exceed human mastery."}
+  - {classification: bounded_conclusion, proposition: "The Athens-Jerusalem opposition therefore reaches into literary form and the rules by which the respective books are interpreted, not merely into competing propositions."}
+non_absorption:
+  - The synthesis does not certify either the biblical or Greek alternative as true.
+  - It does not convert Strauss's source-local account of Greek philosophy into a complete reconstruction of Athens.
+  - It does not reduce the primary Theologico-Political question of revelation and reason to a civilizational label.
+  - It does not authorize a harmonizing synthesis that removes the decisive claim of either side.
+limits:
+  - Independent biblical and Greek primary witnesses remain required for corroboration.
+  - The 1981 published text and 1957 typed lecture manuscript remain separately unreviewed.
+  - No doctrine, migration, successor activation, or predecessor displacement is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, earlier_published_text_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
