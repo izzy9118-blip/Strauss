@@ -1,0 +1,609 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: FREUD-MOSES-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Freud on Moses and Monotheism
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  earlier_publication_comparison: NOT_IDENTIFIED_IN_REVIEWED_COLLECTION_SOURCES_SECTION
+  transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_FAR_AS_COLLECTION_EDITOR_CAN_DETERMINE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-106
+  source_status_id: CORPUS-STATUS-106
+  reviewed_witness_id: CORPUS-WIT-106
+  author: Leo Strauss
+  canonical_title: Freud on Moses and Monotheism
+  source_date: 1958
+  source_form: LECTURE_TRANSCRIPTION_PUBLISHED_POSTHUMOUSLY_IN_1997_COLLECTION
+  reviewed_container:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  editorial_provenance:
+    delivery_place: Hillel House, University of Chicago
+    delivery_period: SPRING_QUARTER_MARCH_TO_JUNE_1958_ACCORDING_TO_EDITOR
+    precise_delivery_date: UNKNOWN_TO_EDITOR
+    prepared_notes: EDITOR_REPORTS_APPARENT_PRIOR_NOTES_THAT_DO_NOT_SURVIVE
+    transcription: MADE_BY_UNKNOWN_TRANSCRIBER_FROM_TAPE_RECORDING
+    published_version_basis: UNKNOWN_TRANSCRIBER_TRANSCRIPTION
+    strauss_review_or_formal_approval_of_transcribed_version: EDITOR_REPORTS_IT_APPEARS_NOT
+    lecture_notes_pages_306_309: ENTIRELY_WORK_OF_KENNETH_HART_GREEN
+    discussion_record: EDITOR_REPORTS_NO_TAPE_OR_TRANSCRIPT_OF_DISCUSSION_PERIOD_SURVIVES
+    editorial_emendation_limit: >
+      In note 4 the collection editor reports making certain additions and corrections to contradictory spoken verb tenses
+      in one paragraph so that the published wording would be internally consistent, while reproducing three unemended
+      passages for comparison. The reviewed item therefore contains acknowledged posthumous editorial intervention.
+    collection_sources_section: NO_EARLIER_PUBLICATION_CITATION_SUPPLIED_FOR_THIS_ITEM
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  locators:
+    printed_pages: {start: 285, end: 309}
+    lecture_body: {start: 285, end: 306}
+    editor_notes: {start: 306, end: 309}
+    pdf_pages_one_based: {start: 304, end: 328}
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The reviewed witness is the 1997 posthumously published transcription, not an authorially reviewed lecture manuscript.
+  - The collection editor states that Strauss apparently used prepared notes that do not survive, that an unknown transcriber made the transcription from a tape recording, and that Strauss appears not to have reviewed or formally approved the transcribed version.
+  - The collection editor acknowledges making certain additions and corrections to spoken verb tenses in one paragraph; the published body is therefore not treated as a mechanically exact transcript of Strauss's spoken words.
+  - The notes beginning on printed page 306 are entirely the work of Kenneth Hart Green and are not used as Strauss evidence except to establish documentary provenance and editorial condition.
+  - The collection Sources section supplies no earlier publication citation for the item; absence of a citation is not proof that no earlier publication or textual state existed.
+  - Freud's historical, psychoanalytic, ethnological, and biographical claims are reconstructed only as Strauss represents and criticizes them unless independently reviewed elsewhere.
+  - Biblical, prophetic, Platonic, Nietzschean, Freudian, Egyptian, Jewish, Christian, and ethnological sources represented in the lecture remain independently unreconstructed here.
+  - This study does not decide the truth of revelation, the existence of God, the validity of psychoanalysis, or the truth of Freud's reconstruction of Moses.
+
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+
+method_application:
+  governing_question: >
+    Does Freud's historical and psychological explanation of Moses, monotheism, religion, and Jewish survival refute
+    revelation, or does it merely offer a causal hypothesis whose own scientific and philosophical premises remain
+    unexamined?
+  recovered_source_question: >
+    What must already be known about God, religion, science, causality, human rationality, historical evidence, and the
+    philosophic life before religion can legitimately be explained as neurosis and monotheism as the delayed effect of
+    trauma, murder, repression, and inherited memory?
+  reconstruction_rule: >
+    Read the transcribed lecture body on printed pages 285-306 in order. Reconstruct Freud's thesis only through the
+    argument Strauss actually presents, distinguish Strauss's alternative readings from claims of historical proof, and
+    separate the body from Green's notes on printed pages 306-309. Compare the completed source reconstruction with the
+    active predecessor only after the sequential reading is complete.
+  alternative_preservation_rule: >
+    Preserve causal explanation versus truth, psychoanalytic reconstruction versus textual and historical evidence,
+    modern scientific rationality versus the possible rationality of ancient reverence and law, hypothetical science
+    versus religious interpretation, and philosophy versus the leveling image of the last man without certifying any
+    alternative as repository doctrine.
+
+speaker_and_documentary_layers:
+  strauss_spoken_lecture_as_mediated:
+    role: primary Strauss source content mediated by a posthumous transcription
+    rule: >
+      The lecture body is treated as primary Strauss evidence within its documentary limits, not as an authorially checked
+      typescript or verbatim stenographic record.
+  unknown_transcriber:
+    role: unverified intermediary between tape recording and published transcript
+    rule: No wording is attributed to the transcriber beyond the collection editor's documentary report that the transcript was made by an unknown transcriber.
+  green_editorial_layer:
+    role: 1997 editor, provenance reporter, note author, and acknowledged emender of a limited passage
+    rule: >
+      Green's notes and documentary interventions remain distinct from Strauss's argument. Editorial notes may establish
+      witness condition but may not be imported as Strauss's philosophical claims.
+  freud_as_reconstructed:
+    role: principal interlocutor represented through Strauss's quotations and paraphrases
+    rule: Freud's positions require direct independent review before they are treated as corroborated Freud evidence.
+  biblical_and_classical_material:
+    role: represented primary traditions and texts used in Strauss's counter-readings
+    rule: Their treatment remains source-local until independently reconstructed.
+  nietzsche_closing_passage:
+    role: quoted counter-image used by Strauss to close the lecture
+    rule: Its argumentative function in this lecture is recorded without treating it as an independently reconstructed account of Nietzsche.
+
+sequential_reading:
+  - unit: FREUD-MOSES-RU-001
+    printed_pages: 285-288
+    function: Establish the scholarly duty, define Freud's Jewish seriousness, and introduce the distinction between knowing truth and proclaiming it.
+    findings:
+      - id: FREUD-MOSES-DF-001
+        classification: documented_finding
+        proposition: >
+          Strauss opens by distinguishing open-minded scholarship from credulous receptivity: scholarly and human duty requires both openness and intransigence against accepting an alluring product of imagination as truth.
+      - id: FREUD-MOSES-DF-002
+        classification: documented_finding
+        proposition: >
+          He excludes psychoanalysis as such and the broad question of Freud as a Jew from the lecture's direct subject, while using Ernst Simon's account to characterize Freud as nonreligious yet permanently attached to and proud of Jewish belonging.
+      - id: FREUD-MOSES-DF-003
+        classification: documented_finding
+        proposition: >
+          Strauss proposes a source-local definition of a nonreligious good Jew as one who knows he belongs to the Jewish people, cannot believe the beliefs of his ancestors, and therefore dedicates himself to the truth concerning the Jewish tradition.
+      - id: FREUD-MOSES-DF-004
+        classification: documented_finding
+        proposition: >
+          Freud is treated as a good Jew in that sense, but this only sharpens the question whether his treatment of Moses is good thinking.
+      - id: FREUD-MOSES-DF-005
+        classification: documented_finding
+        proposition: >
+          Freud's opening attack on national tradition raises a prior question Strauss makes explicit: whether truth is more important than society or national interest and whether knowing a truth is identical with proclaiming it.
+      - id: FREUD-MOSES-DF-006
+        classification: documented_finding
+        proposition: >
+          The tacit identification of knowing and proclaiming truth would be justified only if truth as such were salutary or edifying; the relation between inquiry, communication, and human benefit therefore precedes any simple celebration of subversion.
+    uncertainties:
+      - The biographical description of Freud as a Jew is mediated through Simon and Strauss and is not independently reconstructed here.
+
+  - unit: FREUD-MOSES-RU-002
+    printed_pages: 289-291
+    function: Test Freud's Egyptian-Moses inference by reading the Moses story within the biblical whole rather than through the standard hero-exposure myth.
+    findings:
+      - id: FREUD-MOSES-DF-007
+        classification: documented_finding
+        proposition: >
+          Freud's Egyptian origin thesis begins from the Egyptian character of Moses' name, but Strauss emphasizes that the stronger conclusion depends on psychoanalytic interpretation rather than on the name alone.
+      - id: FREUD-MOSES-DF-008
+        classification: documented_finding
+        proposition: >
+          Freud reads hero exposure myths through conflict with the father and treats the biblical Moses story's deviation from the normal pattern as evidence that Jews transformed an Egyptian hero into a Jew.
+      - id: FREUD-MOSES-DF-009
+        classification: documented_finding
+        proposition: >
+          Strauss counters by interpreting the exposure story within the biblical whole: biblical glory is directed toward fear and knowledge of God rather than autonomous heroic self-glorification, Moses is explicitly humble, and his political inadequacy is marked by dependence on Jethro's counsel.
+      - id: FREUD-MOSES-DF-010
+        classification: documented_finding
+        proposition: >
+          The rescue of Moses is read as expressing the extreme improbability and dependence of Moses' and Israel's survival rather than as a conventional hero myth whose function is to exalt the hero.
+      - id: FREUD-MOSES-DF-011
+        classification: documented_finding
+        proposition: >
+          Strauss therefore denies that Freud's mythic canon necessitates an Egyptian Moses and stresses the absence of direct evidence for the conclusion.
+      - id: FREUD-MOSES-DF-012
+        classification: supported_inference
+        proposition: >
+          Strauss offers a nonpsychoanalytic functional possibility for Moses' Egyptian education: a liberator confronting imperial rule would have reason to know the civilization and political order of Pharaoh.
+    uncertainties:
+      - Strauss's alternative does not establish the historical truth of the biblical account; it demonstrates that Freud's inference is not uniquely necessitated by the narrative.
+
+  - unit: FREUD-MOSES-RU-003
+    printed_pages: 291-294
+    function: Reconstruct the cumulative historical scaffolding of Egyptian monotheism, two Moses figures, murder, compromise, and retrospective rewriting.
+    findings:
+      - id: FREUD-MOSES-DF-013
+        classification: documented_finding
+        proposition: >
+          Freud answers the problem of an Egyptian Moses teaching monotheism by connecting Moses with Ikhnaton's Aton religion and imagining an Egyptian adherent who transfers the defeated reform to a new people.
+      - id: FREUD-MOSES-DF-014
+        classification: documented_finding
+        proposition: >
+          Strauss repeatedly marks the dependence of subsequent claims on the prior Egyptian-Moses hypothesis and criticizes arguments that treat Moses' difficulty of speech or the institution of circumcision as stronger historical evidence than they can bear.
+      - id: FREUD-MOSES-DF-015
+        classification: documented_finding
+        proposition: >
+          Freud's reconstruction then incorporates a second desert Moses, a volcanic or demonic desert deity, Sellin's claim that the Jews murdered Moses, and a later compromise in which Levites preserve remnants of Egyptian religion while accepting the new cult.
+      - id: FREUD-MOSES-DF-016
+        classification: documented_finding
+        proposition: >
+          Apparent contradictions in the Moses tradition—masterful or hot-tempered versus meek—become clues for separating two figures, whereas Strauss observes that one human being can possess apparently opposed traits.
+      - id: FREUD-MOSES-DF-017
+        classification: documented_finding
+        proposition: >
+          Freud treats the murder of Moses as the decisive event whose repression, return, and reinterpretation explain the later triumph of the more spiritual monotheism.
+      - id: FREUD-MOSES-DF-018
+        classification: documented_finding
+        proposition: >
+          Strauss objects to the suspicious treatment of patriarchal tradition and asks why, as higher criticism itself becomes more lenient toward tradition, the possibility that Abraham was a real, honest, pious man should be excluded in advance.
+    uncertainties:
+      - Freud's dependence on higher criticism, Sellin, Egyptology, and comparative mythology is represented through Strauss; those evidentiary domains remain independently unreviewed here.
+
+  - unit: FREUD-MOSES-RU-004
+    printed_pages: 295-296
+    function: Ask why Freud published a weakly evidenced thesis and isolate the Jewish-Christian assimilation produced by its conclusion.
+    findings:
+      - id: FREUD-MOSES-DF-019
+        classification: documented_finding
+        proposition: >
+          Strauss judges the proofs for Freud's historical thesis flimsy enough that the rationale for publication must be sought partly in the significance of the conclusion rather than in demonstrative historical evidence.
+      - id: FREUD-MOSES-SI-001
+        classification: supported_inference
+        proposition: >
+          Strauss speculates that the catastrophe of 1933 and Freud's resistance to being driven back toward Judaism may have contributed to the timing and meaning of the thesis, but he explicitly presents such motives as conjectural rather than certain.
+      - id: FREUD-MOSES-DF-020
+        classification: documented_finding
+        proposition: >
+          What Strauss calls certain within his interpretation is the structural effect of Freud's thesis: it makes the Jewish relation to Moses analogous to the Christian or German relation to Jesus and therefore performs an assimilation precisely at a moment when German-Jewish assimilation was collapsing.
+    uncertainties:
+      - The proposed motives behind Freud's publication are not established historical facts and must remain classified as source-level inference.
+
+  - unit: FREUD-MOSES-RU-005
+    printed_pages: 296-298
+    function: Contrast understanding prophetic teaching with causal explanation and show how the psychological theory presupposes the contested historical reconstruction.
+    findings:
+      - id: FREUD-MOSES-DF-021
+        classification: documented_finding
+        proposition: >
+          Strauss distinguishes the readily accessible teaching of the literary prophets from Freud's causal question about why monotheism, election, and delayed spiritualization emerged; understanding what the prophets teach and asking whether it is true is a different task from explaining its genesis.
+      - id: FREUD-MOSES-DF-022
+        classification: supported_inference
+        proposition: >
+          On Freud's own historical assumptions Strauss constructs a simpler possible sequence: liberated people initially follow Moses for practical reasons, relapse into fertility cults, preserve a diminished tradition through Levites, and become receptive to prophetic monotheism after political catastrophe exposes the weakness of arms and alliances.
+      - id: FREUD-MOSES-DF-023
+        classification: supported_inference
+        proposition: >
+          A universal monotheistic God would not be refuted by national military defeat in the way a merely national deity might appear to be, so the survival of the teaching does not by itself require the full psychoanalytic mechanism Freud proposes.
+      - id: FREUD-MOSES-DF-024
+        classification: documented_finding
+        proposition: >
+          Strauss then deliberately turns from the language of high spirituality to Freud's own mass-psychological framework, where religion is treated as neurosis and spirituality becomes a phenomenon to be causally derived.
+    uncertainties:
+      - Strauss's alternative sequence is offered as a possibility that reduces explanatory necessity, not as a certified historical reconstruction.
+
+  - unit: FREUD-MOSES-RU-006
+    printed_pages: 298-300
+    function: Lay out the primal-horde theory and expose the stacked assumptions required for a psychoanalytic explanation of Jewish monotheism.
+    findings:
+      - id: FREUD-MOSES-DF-025
+        classification: documented_finding
+        proposition: >
+          Freud's mass psychology analogizes religious history to individual neurosis through trauma, latency, repression, defense, and delayed return.
+      - id: FREUD-MOSES-DF-026
+        classification: documented_finding
+        proposition: >
+          The primal-horde narrative derives law, morality, religion, father worship, guilt, and ultimately monotheism from sons who unite to kill and consume a monopolizing father and later renounce his position.
+      - id: FREUD-MOSES-DF-027
+        classification: documented_finding
+        proposition: >
+          Jewish susceptibility is then intensified by a second father-murder, the alleged killing of Moses, so the specifically Jewish history depends on the earlier historical reconstruction rather than supplying independent proof of it.
+      - id: FREUD-MOSES-DF-028
+        classification: documented_finding
+        proposition: >
+          Strauss enumerates a chain of required assumptions: religion must be neurosis, the primal horde must have existed in the described form, the father murder must have produced the described transformation, its rationale must persist through inherited group memory, polytheism must lack internal routes toward monotheism, and the Jews must have murdered Moses.
+      - id: FREUD-MOSES-DF-029
+        classification: documented_finding
+        proposition: >
+          Freud's group-memory mechanism invokes inherited archaic traces despite the contemporary biological rejection of inherited acquired characteristics, and Strauss states that no distinct knowledge of such group memory is available apart from ordinary transmitted tradition.
+      - id: FREUD-MOSES-DF-030
+        classification: documented_finding
+        proposition: >
+          Freud acknowledges a procedure that selects useful traditional material, rejects unsuitable material, and recombines fragments according to psychological probability while relaxing usual historical demands; Strauss therefore classifies the result at best as a plausible hypothesis and, more sharply, as a wild guess.
+    uncertainties:
+      - The study does not independently evaluate biological inheritance, mass psychology, or the historical primal-horde hypothesis.
+
+  - unit: FREUD-MOSES-RU-007
+    printed_pages: 300-301
+    function: Test Freud's use of ethnology and transition from historical explanation to the problem of Jewish survival, election, and spirituality.
+    findings:
+      - id: FREUD-MOSES-DF-031
+        classification: documented_finding
+        proposition: >
+          Freud relies on Robertson Smith while acknowledging that later ethnologists rejected Smith's account, but declines to revise because a newer theory need not represent refutation or progress; Strauss notes that Freud nevertheless uses ethnology outside his professed competence without supplying the missing argument.
+      - id: FREUD-MOSES-DF-032
+        classification: documented_finding
+        proposition: >
+          Freud links Jewish survival and extraordinary self-confidence to election and spirituality, yet within his own system spirituality must itself be derived from more primary drives rather than accepted as an irreducible human possibility.
+      - id: FREUD-MOSES-DF-033
+        classification: documented_finding
+        proposition: >
+          Strauss begins his counteranalysis of religious prohibitions by showing that a prohibition such as exogamy can possess intelligible social or political reasons—for example, expansion beyond the family toward wider political association—rather than being explained only as irrational compulsion.
+    uncertainties:
+      - Robertson Smith, later ethnology, and the political function of exogamy are not independently reconstructed here.
+
+  - unit: FREUD-MOSES-RU-008
+    printed_pages: 301-303
+    function: Show that the psychological problem of religion presupposes atheism and reconstruct possible rational grounds for ancient reverence, law, and fear.
+    findings:
+      - id: FREUD-MOSES-DF-034
+        classification: documented_finding
+        proposition: >
+          Strauss states that the psychological problem of the genesis of religion arises only once the nonexistence of God is treated as certain; if God exists, a merely psychological explanation of the experience of God does not decide its truth.
+      - id: FREUD-MOSES-DF-035
+        classification: documented_finding
+        proposition: >
+          Mere agnosticism cannot exclude the possibility that religion is grounded in divine Presence or Call, so causal explanation cannot silently substitute for a prior rational settlement of whether revelation is possible.
+      - id: FREUD-MOSES-DF-036
+        classification: documented_finding
+        proposition: >
+          Strauss reconstructs reverence first through dependence on parents and origins, awareness of one's own defects, and reasonable recognition of superior human beings rather than beginning from pathology.
+      - id: FREUD-MOSES-DF-037
+        classification: documented_finding
+        proposition: >
+          Ancient attachment to law can have rational grounds where law is experienced as the barrier against prior chaos, insecurity, and meaninglessness; changing law exposes its human origin and threatens the sanctity on which order depends.
+      - id: FREUD-MOSES-DF-038
+        classification: documented_finding
+        proposition: >
+          Freud is criticized for measuring early human beings by a modern standard of rationality: under conditions of profound uncertainty, fear of superior powers and adherence to a founder's promised way of safety can be reasonable rather than neurotic, just as flight from a possible mortal danger need not be obsession.
+      - id: FREUD-MOSES-DF-039
+        classification: documented_finding
+        proposition: >
+          Strauss connects this experience of everything turning around with Plato's repeated attention to the moment when the obvious ceases to be taken for granted and appears enigmatic.
+    uncertainties:
+      - These arguments establish possible rationality under the stated conditions; they do not demonstrate the truth of any particular ancient law or revelation.
+
+  - unit: FREUD-MOSES-RU-009
+    printed_pages: 303-304
+    function: Test Freud's claims of empirical and logical refutation and preserve the possibility of a noncontradictory core of religious experience.
+    findings:
+      - id: FREUD-MOSES-DF-040
+        classification: documented_finding
+        proposition: >
+          Strauss asks whether a founder's promise of blessed life after death has in fact received the empirical refutation Freud assumes and distinguishes empirical objection from the claim that religious doctrines are logically absurd.
+      - id: FREUD-MOSES-DF-041
+        classification: documented_finding
+        proposition: >
+          Freud relies on the principle of contradiction, but Strauss asks what grounds that standard within Freud's own psychology when the superego is inherited from parents who need not themselves be free of contradiction.
+      - id: FREUD-MOSES-DF-042
+        classification: documented_finding
+        proposition: >
+          Liberal religion distinguishes a core from a periphery, whereas Freud is said to refuse that distinction without argument; refuting contradictory expressions or lower forms of religious experience would not by itself refute every possible form of the underlying experience.
+      - id: FREUD-MOSES-DF-043
+        classification: documented_finding
+        proposition: >
+          Strauss attributes Freud's failure here to lack of the experience called Presence or Call and claims Freud has erected a weak wall against that experience; this is Strauss's polemical diagnosis within the lecture, not independently verifiable biographical evidence.
+    uncertainties:
+      - The lecture does not offer an independent phenomenology of religious experience sufficient to establish which claimed experiences are genuine or noncontradictory.
+
+  - unit: FREUD-MOSES-RU-010
+    printed_pages: 304-305
+    function: Move from the possibility of religious experience to mystery, hypothetical science, nonrational choice, and the missing philosophic basis of Freud's book.
+    findings:
+      - id: FREUD-MOSES-DF-044
+        classification: documented_finding
+        proposition: >
+          Certainty that no God exists would require certainty that the whole leaves no possible place for God and therefore contains no true mystery; if true mysteries remain, religion may be a way of experiencing and expressing them.
+      - id: FREUD-MOSES-DF-045
+        classification: documented_finding
+        proposition: >
+          Freud himself acknowledges incomprehensible or unresolved enigmas, and Strauss argues that an indefinitely progressive science necessarily preserves unsolved problems that become difficult to distinguish sharply from mysteries merely by appealing to future explanation.
+      - id: FREUD-MOSES-DF-046
+        classification: documented_finding
+        proposition: >
+          A scientific explanation of religion cannot possess greater certainty than the basic premises of science; if those premises and causality remain hypothetical rather than demonstratively necessary, a religious interpretation of religion cannot be dismissed as absurd solely by scientific explanation.
+      - id: FREUD-MOSES-DF-047
+        classification: documented_finding
+        proposition: >
+          Science cannot scientifically prove that science is good because value judgments fall outside science as Freud understands it; complete dedication to science therefore rests ultimately on a nonrational choice if its basic premises remain radically hypothetical.
+      - id: FREUD-MOSES-DF-048
+        classification: documented_finding
+        proposition: >
+          This compulsory choice between science and nonscience cannot itself be explained by science without circularly presupposing the prior groundless choice of science.
+      - id: FREUD-MOSES-DF-049
+        classification: bounded_conclusion
+        proposition: >
+          Strauss's central charge is that Freud's book lacks a philosophic basis because it does not reflect adequately on philosophy itself as an outstanding, nonderivative human possibility belonging to human beings as human beings.
+    uncertainties:
+      - The lecture does not thereby establish religion as true; it denies that Freud's scientific or psychological explanation has rationally disposed of the alternative.
+
+  - unit: FREUD-MOSES-RU-011
+    printed_pages: 305-306
+    function: Close by connecting Freud's reduction of tragic guilt to a modern possibility of eliminating tragic conflict and contrast it with Nietzsche's last man.
+    findings:
+      - id: FREUD-MOSES-DF-050
+        classification: documented_finding
+        proposition: >
+          Freud's account of tragic guilt as a derivative of primal father rebellion implies for Strauss that genuinely tragic conflict is dissolved into a causal mechanism rather than preserved as an irreducible conflict of serious human claims.
+      - id: FREUD-MOSES-DF-051
+        classification: documented_finding
+        proposition: >
+          Strauss gives loyalty to the city versus loyalty to one's convictions as an example of a conflict that Freud's reduction would cease to recognize as tragic.
+      - id: FREUD-MOSES-DF-052
+        classification: documented_finding
+        proposition: >
+          The implied social horizon is one in which human beings can become well-functioning cogs in a large machine, and Strauss closes by reading Nietzsche's description of the last man as the unforgettable presentation of this leveling possibility.
+      - id: FREUD-MOSES-DF-053
+        classification: bounded_conclusion
+        proposition: >
+          The closing movement places Freud's explanatory project inside a larger modern problem: a science that reduces religion, tragedy, and outstanding human possibilities may itself rest on unexamined commitments while tending toward a world in which difference, danger, longing, creation, and serious conflict are made small.
+    uncertainties:
+      - Nietzsche's last-man passage is used by Strauss as a closing counter-image; this study does not independently reconstruct Nietzsche or establish that Freud consciously endorses every feature of that image.
+
+  - unit: FREUD-MOSES-RU-012
+    printed_pages: 306-309
+    function: Preserve the collected edition's documentary note layer without treating it as part of Strauss's argument.
+    findings:
+      - id: FREUD-MOSES-DO-001
+        classification: structural_evidence
+        proposition: >
+          Green states that the lecture appears to have been delivered at Hillel House in the University of Chicago spring quarter of 1958, while the precise date is unknown to him.
+      - id: FREUD-MOSES-DO-002
+        classification: structural_evidence
+        proposition: >
+          Green reports that Strauss apparently used previously prepared notes that do not survive and that an unknown transcriber made the transcription from a tape recording.
+      - id: FREUD-MOSES-DO-003
+        classification: structural_evidence
+        proposition: >
+          Green reports that the published version is based on that transcription and that it appears Strauss neither reviewed nor formally approved the lecture in its transcribed version.
+      - id: FREUD-MOSES-DO-004
+        classification: structural_evidence
+        proposition: >
+          Green states that the notes to the lecture are entirely his own work; note 4 further reports that he made certain additions and corrections to contradictory spoken verb tenses and supplies three unemended passages so readers can judge the intervention.
+      - id: FREUD-MOSES-DO-005
+        classification: structural_evidence
+        proposition: >
+          Green reports that no tape or transcript of the discussion period following the lecture survives.
+      - id: FREUD-MOSES-UU-001
+        classification: unresolved_uncertainty
+        proposition: >
+          The surviving reviewed witness therefore cannot establish an exact authorially approved wording for every sentence, and comparison with a surviving tape, prepared notes, authorially reviewed transcript, or earlier textual state is presently unavailable in this study.
+
+permanent_findings:
+  - id: FREUD-MOSES-PF-001
+    classification: documented_finding
+    proposition: >
+      Strauss frames responsible scholarship as open-minded but intransigent toward treating imaginative reconstruction as truth and makes this evidentiary discipline the standard by which Freud's Moses thesis will be judged.
+  - id: FREUD-MOSES-PF-002
+    classification: documented_finding
+    proposition: >
+      The lecture distinguishes the pursuit of truth from its public proclamation and therefore refuses to assume without argument that every discovered truth is salutary or should be communicated identically in every political or social circumstance.
+  - id: FREUD-MOSES-PF-003
+    classification: documented_finding
+    proposition: >
+      Freud's Egyptian Moses and subsequent two-Moses, murder, repression, and inherited-memory account are presented as a stacked historical-psychological construction whose later explanatory force depends on earlier hypotheses that Strauss regards as insufficiently evidenced.
+  - id: FREUD-MOSES-PF-004
+    classification: documented_finding
+    proposition: >
+      Reading the Moses story within the biblical whole yields a different function from Freud's universal hero-myth pattern: humility, dependence, and divine preservation are central, so the deviation from the standard hero story does not necessitate an Egyptian hero transformed into a Jew.
+  - id: FREUD-MOSES-PF-005
+    classification: documented_finding
+    proposition: >
+      Strauss distinguishes understanding the prophetic teaching and asking whether it is true from causally explaining why monotheistic belief arose; explanation of genesis is not identical with interpretation or refutation.
+  - id: FREUD-MOSES-PF-006
+    classification: documented_finding
+    proposition: >
+      Freud's mass-psychological theory requires multiple independent assumptions—religion as neurosis, primal father murder, inherited group memory, lack of internal monotheistic development, and the murder of Moses—so its result cannot legitimately be presented as necessitated by the available evidence.
+  - id: FREUD-MOSES-PF-007
+    classification: documented_finding
+    proposition: >
+      The psychological problem of religion presupposes certainty that God does not exist; agnosticism leaves open that Presence or Call may ground religion, so causal psychology cannot silently perform the work of metaphysical refutation.
+  - id: FREUD-MOSES-PF-008
+    classification: documented_finding
+    proposition: >
+      Ancient reverence and adherence to sacred law may be rational responses to dependence, uncertainty, danger, superior founders, and the political need for order; judging them pathological merely by modern standards begs the historical and philosophical question.
+  - id: FREUD-MOSES-PF-009
+    classification: documented_finding
+    proposition: >
+      Refuting contradictory peripheral doctrines or lower forms of religious experience would not by itself refute every possible noncontradictory core or highest form of religious experience.
+  - id: FREUD-MOSES-PF-010
+    classification: documented_finding
+    proposition: >
+      If science rests on hypothetical premises and cannot scientifically establish the goodness of science, then the choice of science over religion or nonscience is not itself grounded by scientific demonstration and cannot be explained scientifically without presupposing that choice.
+  - id: FREUD-MOSES-PF-011
+    classification: bounded_conclusion
+    proposition: >
+      Freud's book is judged to lack a philosophic basis because its explanatory apparatus does not adequately examine philosophy itself as a nonderivative human possibility or the rational status of its own scientific premises.
+  - id: FREUD-MOSES-PF-012
+    classification: documented_finding
+    proposition: >
+      The closing appeal to Nietzsche's last man connects reduction of tragedy and outstanding human possibilities with a modern leveling horizon in which human differences, serious conflict, creation, longing, and the question of the star are made small.
+  - id: FREUD-MOSES-PF-013
+    classification: documentary_limit
+    proposition: >
+      The 1997 witness is a posthumously published transcription made by an unknown transcriber from a tape, apparently not reviewed or formally approved by Strauss, with acknowledged limited editorial emendation and editor-authored notes; source wording must therefore retain this transmission limit.
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss subjects Freud's reconstruction of Moses and monotheism to textual, historical, psychological, and
+    philosophical criticism, asks whether Freud's causal account has sufficient evidence, and challenges the presupposition
+    that religion has already been shown false before it is explained psychologically.
+  textual_deed: >
+    The lecture repeatedly moves backward from Freud's explanations to the unproved premises that make them possible. It
+    replaces universal mythic and psychological templates with attention to the biblical whole, replaces causal explanation
+    with the prior question of truth, reconstructs possible rational grounds for ancient reverence, and finally turns
+    Freud's scientific criticism back upon the rational status of science itself before closing with the last man.
+  relation: CAUSAL_EXPLANATION_RETURNED_TO_ITS_UNEXAMINED_HISTORICAL_METAPHYSICAL_AND_PHILOSOPHICAL_PREMISES
+  finding: >
+    The source's governing deed is not a counter-psychology of religion but a demand that explanation justify the premises
+    by which it claims the authority to reduce revelation, law, tragedy, and philosophy to derivative phenomena.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - whether psychological or historical explanation can substitute for rational refutation of revelation
+      - the distinction between interpreting religious teaching, explaining its genesis, and deciding its truth
+      - the necessity of atheistic certainty before religion can be reduced to psychological causation
+      - the possibility of Presence, Call, mystery, and a noncontradictory religious core under agnosticism
+      - ancient sacred law and founder authority as possibly rational rather than merely neurotic
+      - the inability of science to establish its own value or explain the prior choice of science without circularity
+      - philosophy as a nonderivative human possibility omitted from Freud's explanatory basis
+    non_absorption: >
+      The source does not prove revelation or religion true and does not establish the existence of God. It shows that
+      Freud's causal explanation, as reconstructed here, does not by itself constitute refutation.
+  ancients_vs_moderns:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives:
+      - Freud's use of modern rationality as a measure of ancient human beings and sacred law
+      - the possible rationality of reverence under premodern conditions of dependence, danger, and political founding
+      - the contrast between philosophical awareness of the enigmatic obvious and a progress-oriented science that treats mysteries as eventually soluble problems
+      - science's hypothetical premises and inability to prove its own goodness
+      - the closing modern leveling image of the machine and Nietzsche's last man
+    non_absorption: >
+      This secondary jurisdiction does not turn every chronological contrast into an ancient-modern doctrine. The primary
+      question remains whether Freud's modern causal explanation has rationally displaced the revelation-philosophy problem.
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  predecessor_statement: >
+    Examines psychological and historical explanation as a proposed substitute for revelation and tests whether causal explanation constitutes refutation.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirmations:
+    - Strauss repeatedly distinguishes Freud's historical and psychological explanation from proof and attacks the evidentiary weakness of the Egyptian-Moses, murder, repression, and group-memory reconstruction.
+    - The lecture explicitly states that the psychological problem of the genesis of religion arises only after certainty that God does not exist; an agnostic cannot exclude Presence or Call as the ground of religion.
+    - A scientific explanation whose own premises remain hypothetical cannot make a religious interpretation absurd merely by explaining its possible genesis.
+  qualifications:
+    - The source does more than oppose explanation to revelation: it asks what counts as responsible historical evidence, reads the biblical whole against a universal mythic template, and distinguishes understanding a teaching from explaining its cause.
+    - The decisive counterturn is also philosophical rather than theological: Freud's book is charged with lacking reflection on philosophy as a nonderivative human possibility and on the unproved value and premises of science.
+    - Ancient law and reverence are not simply defended as true; Strauss argues that they can possess rational grounds under the conditions in which they arise, undercutting Freud's use of a modern rationality standard as a diagnosis of pathology.
+    - The Nietzschean last-man conclusion connects the critique to a secondary Ancients-versus-Moderns problem concerning leveling, science, tragedy, and outstanding human possibilities.
+  unresolved:
+    - The posthumous transcript was apparently not reviewed or formally approved by Strauss and contains acknowledged limited editorial emendation.
+    - Freud's Moses and Monotheism, psychoanalytic theory, higher criticism, Egyptology, ethnology, biblical sources, Plato, Nietzsche, and represented Jewish and Christian materials remain independently unreconstructed unless separately registered.
+    - The lecture does not settle whether revelation is true, whether God exists, whether psychoanalysis is valid in other domains, or whether every scientific premise is necessarily hypothetical.
+  predecessor_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+uncertainties:
+  - id: FREUD-MOSES-U-001
+    statement: The precise lecture date is unknown; the collection editor places it apparently in the University of Chicago spring quarter of 1958.
+  - id: FREUD-MOSES-U-002
+    statement: Prepared notes reportedly used by Strauss do not survive, and the reviewed collection does not provide a surviving authorially checked text against which the unknown transcriber's wording can be verified.
+  - id: FREUD-MOSES-U-003
+    statement: Green acknowledges limited editorial additions and corrections to one paragraph's spoken verb tenses; exact pre-emendation wording is preserved only for the three passages he reproduces in note 4.
+  - id: FREUD-MOSES-U-004
+    statement: The collection Sources section supplies no earlier publication citation, but this does not prove that no earlier circulation, transcript, or publication existed.
+  - id: FREUD-MOSES-U-005
+    statement: Strauss's conjectures concerning Freud's motives after 1933 remain conjectural and are not promoted to historical facts.
+
+prohibitions:
+  - Do not treat causal explanation of a belief as refutation of that belief's truth without an independent argument addressing truth.
+  - Do not treat Freud's historical reconstruction as independently verified merely because Strauss reconstructs it in detail.
+  - Do not treat Strauss's alternative readings of Moses or ancient reverence as certified historical fact.
+  - Do not convert the possibility of Presence, Call, mystery, or religious interpretation into proof of God or revelation.
+  - Do not infer that every scientific claim is irrational from the source's argument that science cannot scientifically prove its own goodness and may rest on hypothetical premises.
+  - Do not attribute Green's notes, documentary conjectures, or acknowledged emendations to Strauss.
+  - Do not treat this transcript as an authorially approved verbatim text.
+  - Do not expand the source into Wise-versus-Vulgar or Athens-versus-Jerusalem jurisdiction merely because communication, Jews, Moses, Bible, or Greek materials appear.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, independent corroboration, or repository completion.
+
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL_WITH_TRANSCRIPTION_AND_EDITORIAL_LIMIT
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  transcript_authorial_approval: NOT_REVIEWED_OR_FORMALLY_APPROVED_BY_STRAUSS_AS_FAR_AS_COLLECTION_EDITOR_CAN_DETERMINE
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
