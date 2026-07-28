@@ -1451,8 +1451,8 @@ corpus_gaps:
   category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES
   statement: All nineteen predecessor writings have bounded source identities, reviewed item witnesses, and complete provisional
     independent sequential reconstructions within their registered scopes. Original or earlier textual-state comparisons,
-    independent corroboration, broader corpus work, and certification remain incomplete.
-  effect: SEQUENCE_RECONSTRUCTED_BUT_COMPARATIVE_SYNTHESIS_AND_CERTIFICATION_REMAIN_PROVISIONAL
+    independent corroboration, and broader corpus work remain open.
+  effect: SEQUENCE_RECONSTRUCTED_AND_OPERATIONALLY_AUTHORIZED_COMPARATIVE_SYNTHESIS_REMAINS_REVISABLE
 - gap_id: CORPUS-GAP-004
   category: INDEPENDENT_CLASSICAL_WITNESSES
   statement: Direct Aristophanes and Xenophon studies and most Platonic dialogue studies remain pending.
@@ -1495,18 +1495,20 @@ validation_rules:
 - CORPUS-SRC-101 preserves reviewed-witness safeguards and complete provisional sequential reconstruction while 1979/1981
   publication comparison remains pending
 - CORPUS-SRC-104 preserves the fingerprinted reviewed witness, collective 1952 editorial-layer distinction, complete provisional
-  sequential reconstruction, pending original-1952 comparison, noncorroboration, noncertification, and no-successor safeguards
+  sequential reconstruction, pending original-1952 comparison, noncorroboration and record-local historical certification/successor
+  labels
 - CORPUS-SRC-106 preserves the fingerprinted reviewed transcript, unknown-transcriber and editorial-emendation limits, complete
-  provisional sequential reconstruction, noncorroboration, noncertification, and no-successor safeguards
+  provisional sequential reconstruction, noncorroboration and record-local historical certification/successor labels
 - CORPUS-SRC-107 preserves the fingerprinted reviewed transcript, speaker and editorial-layer distinctions, complete provisional
-  sequential reconstruction, noncorroboration, noncertification, and no-successor safeguards
+  sequential reconstruction, noncorroboration and record-local historical certification/successor labels
 - CORPUS-SRC-112 preserves the fingerprinted reviewed witness, complete provisional sequential reconstruction, pending original
-  National Review comparison, material predecessor qualification, noncorroboration, noncertification, and no-successor safeguards
+  National Review comparison, material predecessor qualification, noncorroboration and record-local historical certification/successor
+  labels
 - CORPUS-SRC-110 preserves first-paragraph scope, the fingerprinted reviewed witness, complete provisional registered-scope
-  reconstruction, pending 1959 comparison, material predecessor qualification, noncorroboration, noncertification, and no-successor
-  safeguards
-- all nineteen Theologico-Political predecessor sources preserve distinct source, witness, study, edition-comparison, noncorroboration,
-  noncertification, and no-successor states after complete provisional registered-scope reconstruction
+  reconstruction, pending 1959 comparison, material predecessor qualification, noncorroboration and record-local historical
+  certification/successor labels
+- all nineteen Theologico-Political predecessor sources preserve distinct source, witness, study, edition-comparison, noncorroboration
+  and record-local historical certification/successor states after complete provisional registered-scope reconstruction
 - CORPUS-SRC-115 preserves material nonconfirmation of predecessor-attributed orthodoxy, unbelief, Zionism, and medieval-philosophy
   content rather than silently harmonizing source conflation
 - CORPUS-SRC-119 preserves LAST_PARAGRAPH_ONLY scope and excludes Green editorial theological interpretation from Strauss
@@ -1522,6 +1524,6 @@ termination:
   - compare original or earlier textual states where available and material
   - expand independent biblical, Greek, medieval, modern, and reviewed-work witnesses
   - continue broader corpus and proposition-level work without treating 19-of-19 sequence reconstruction as repository completion
-  - preserve predecessor authority until separately authorized certified transition
+  - preserve predecessor history and provenance while owner-authorized successor problems remain active
   authorization: ACTIVE_OWNER_AUTHORIZED
 owner_authorization: governance/repository-authorization.yaml

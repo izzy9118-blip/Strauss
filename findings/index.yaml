@@ -1922,19 +1922,21 @@ findings_gaps:
     study records.
   effect: FINDINGS_COVERAGE_REMAINS_SOURCE_ASYMMETRICAL
 - gap_id: FINDINGS-GAP-003
-  statement: All nineteen Theologico-Political writings now have complete provisional item studies within registered scopes;
-    textual-state comparisons, independent corroboration, proposition normalization, and certification remain incomplete.
-  effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE
+  statement: All nineteen Theologico-Political writings have complete provisional item studies within registered scopes; textual-state
+    comparisons, independent corroboration, and proposition normalization remain open.
+  effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE_WITHIN_AUTHORIZED_RUNTIME
 - gap_id: FINDINGS-GAP-004
   statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and most Platonic
     findings remain incomplete.
   effect: COMPARATIVE_AND_DOCTRINAL_RANKING_BLOCKED
 - gap_id: FINDINGS-GAP-005
-  statement: Actual candidate ministerial reports have not yet been validated against the complete contract stack.
-  effect: RUNTIME_REPORT_READINESS_REMAINS_LIMITED
+  statement: Authorized ministerial reports remain subject to continuing behavioral validation as new inquiry shapes and evidence
+    combinations are exercised.
+  effect: REPORT_TESTING_CONTINUES_WITHOUT_SUSPENDING_RUNTIME_AUTHORITY
 - gap_id: FINDINGS-GAP-006
-  statement: No authorized certification record promotes the indexed findings to final doctrine or successor activation.
-  effect: ALL_FINDING_SETS_REMAIN_NONCERTIFYING
+  statement: STRAUSS-AUTH-001 authorizes operational use globally; record-local finding classifications remain evidentiary
+    metadata and are not silently promoted to stronger truth claims.
+  effect: LOCAL_EVIDENCE_CLASSES_REMAIN_GOVERNING_WITHIN_OWNER_AUTHORIZED_RUNTIME
 validation_rules:
 - finding_set, gap, source, problem, and relation identifiers must resolve and remain unique
 - every registered path must resolve within the repository

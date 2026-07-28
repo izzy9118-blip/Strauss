@@ -21,13 +21,13 @@ steps:
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
   current_version: 3.8.0
-  limit: The audit records incompleteness; it does not cure or certify it.
+  limit: The audit records open research gaps while the current repository remains owner-certified for operational use.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
   current_version: 1.20.0
-  limit: The manifest remains semantically incomplete and not doctrinally certified.
+  limit: Semantic research completion remains open; operational certification and activation are already in force.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
   state: IMPLEMENTED_CONTRACT_SOURCE_APPLICATION_INCOMPLETE
@@ -107,7 +107,8 @@ steps:
   - the other eighteen Theologico-Political reviewed witnesses are fingerprinted against their reviewed containers
   - SPINOZA-PREFACE-STUDY-001, JA-STUDY-001, COHEN-STUDY-001, and TALMON-STUDY-001 remain complete provisional for their reviewed
     witnesses
-  - corpus and findings registries preserve derivation, jurisdiction, gaps, witness/study distinctions, and noncertification
+  - corpus and findings registries preserve derivation, jurisdiction, gaps, witness/study distinctions, and record-local evidence
+    classifications
   - SPINOZA-TREATISE-STUDY-001 is complete provisional for CORPUS-WIT-103
   - GENESIS-STUDY-001 is complete provisional for CORPUS-WIT-108
   - PERSECUTION-INTRO-STUDY-001 is complete provisional for CORPUS-WIT-113
@@ -137,13 +138,13 @@ steps:
   completed_in_current_sequence:
   - tests cover all nineteen Theologico-Political reviewed witnesses and all nineteen complete provisional registered-scope
     source studies
-  - tests preserve edition-comparison, source-scope, speaker/editorial-layer, predecessor-correction, noncorroboration, noncertification,
-    and no-successor safeguards
+  - tests preserve edition-comparison, source-scope, speaker/editorial-layer, predecessor-correction, noncorroboration, and
+    record-local evidence safeguards
   current_requirement: Run complete GitHub Actions validation before merge; passing tests validate declared contracts, not
     philosophical truth or repository completion.
   limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
 - sequence: 10
-  action: Repin the completed Strauss interface in Sanctum.
+  action: Repin the certified operational Strauss interface in Sanctum.
   state: AUTHORIZED
   governing_record: izzy9118-blip/Sanctum/registry/ministers.yaml
   authorization: STRAUSS-AUTH-001 permits operational repinning of the certified current state; future research advances by

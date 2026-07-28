@@ -54,7 +54,7 @@ mapping_rules:
 - Predecessors remain preserved as historical/reference records rather than activation vetoes.
 mappings:
   problems:
-    target_role: permanent_questions_and_complete_read_only_operational_bundles
+    target_role: permanent_questions_and_owner_authorized_operational_bundles
     source:
       registry: problems/registry.yaml
       successor_directories: problems/*/
@@ -65,8 +65,8 @@ mappings:
       manifest_section: problems
       loader: problem_bundles.py
       validation_command: python problem_bundles.py --validate
-    transformation: REFERENCE_WITH_STATUS_PRESERVATION_AND_READ_ONLY_BUNDLE_LOADING
-    completion: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
+    transformation: REFERENCE_WITH_STATUS_PRESERVATION_AND_OWNER_AUTHORIZED_BUNDLE_LOADING
+    completion: ACTIVE_OWNER_AUTHORIZED_OPEN_RESEARCH
     new_source_relations:
     - path: problems/theologico-political/synthesis/jerusalem-and-athens.yaml
       source: CORPUS-SRC-109
@@ -335,17 +335,14 @@ mappings:
       root: studies/theologico-political/
     present_function:
     - register source entities separately from witnesses and studies
-    - account for all 58 YAML records in the current studies tree
-    - validate all nineteen identities, aliases, scopes, reviewed-witness states, study states, fingerprints, locators, and
-      noncertification
+    - account for all 66 YAML records in the current studies tree
+    - validate all nineteen Theologico-Political identities, aliases, scopes, reviewed-witness states, study states, fingerprints,
+      locators, and record-local evidence limits
     - preserve CORPUS-WIT-102 platform-reference safeguards
-    - validate the fingerprinted 1997 SUNY witness batch without converting witness registration into sequential study completion
-    - preserve corpus gaps and textual-state comparison limits
-    - validate FREUD-MOSES-STUDY-001 as a complete provisional reconstruction with active unknown-transcriber, apparent nonapproval,
-      and editor-emendation limits and no successor effect
-    limit: Current-state exhaustiveness, nineteen reviewed item witnesses, and thirteen complete provisional item studies
-      do not create a complete corpus, supply independent corroboration, resolve textual-state or predecessor-qualification
-      limits, certify findings, or authorize migration and activation.
+    - preserve corpus gaps and textual-state comparison limits without treating them as operational authority blockers
+    limit: Current-state exhaustiveness and nineteen complete provisional Theologico-Political item studies do not create
+      a closed corpus, supply independent corroboration, resolve textual-state questions, or establish final philosophical
+      truth. Operational use and successor activation are nevertheless authorized by STRAUSS-AUTH-001.
   findings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
@@ -407,12 +404,10 @@ mappings:
       path: problems/theory-vs-practice/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
       derived_from: FINDSET-026
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-    limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify doctrine
-      or migration, displace predecessors, or activate successors.
-
-      '
+    limit: 'Findings registration does not normalize every proposition or establish independent corroboration. Record-local
+      evidence classes, uncertainty, contradiction, and derivation remain governing inside the owner-authorized runtime.'
   runtime:
-    target_role: deterministic_loaders_contract_validators_and_candidate_report_builder
+    target_role: deterministic_loaders_contract_validators_and_authorized_report_builder
     interface:
     - adapter.py
     - problem_bundles.py
@@ -421,8 +416,8 @@ mappings:
     - tests/
     - .github/workflows/validate-lean-interface.yml
     completion: OPERATIONAL_AND_OWNER_AUTHORIZED
-    limit: 'Runtime remains evidence-bound and provenance-preserving. STRAUSS-AUTH-001 authorizes ministerial use, successor
-      activation, and repinning without turning research gaps into established facts.'
+    limit: 'Runtime authority does not erase evidentiary limits, admit source text through registries, or convert open research
+      questions into settled facts.'
 path_conflicts:
 - requested_path: problems/theologico-political.yaml
   existing_role: ACTIVE_PREDECESSOR

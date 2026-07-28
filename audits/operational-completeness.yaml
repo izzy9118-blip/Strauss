@@ -27,12 +27,9 @@ basis:
   production_process: history/production-plans/2026-07-27-ten-step-completion-process.yaml
   witness_priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
   mapping_record: migrations/lean-operational-interface.yaml
-  governing_rule: 'A reviewed-witness registration establishes bounded documentary identity and reproducible locators for
-    one witness. It does not supply independent sequential reconstruction, independent corroboration, original-edition verification,
-    final doctrine, certified migration, successor activation, predecessor displacement, unrestricted runtime readiness, or
-    repository completion.
-
-    '
+  governing_rule: 'Witness registration, source-study completion, corroboration, textual-state comparison, and claim strength
+    remain distinct. STRAUSS-AUTH-001 confers operational authority without converting unresolved evidence into fact or making
+    the open corpus complete.'
 classification_vocabulary:
   SUBSTANTIVELY_RECONSTRUCTED:
     meaning: 'A developed contract, registry, source-status, witness, study, or synthesis exists with explicit identity, provenance,
@@ -53,13 +50,13 @@ classification_vocabulary:
 summary:
   structural_validation: REQUIRED_FOR_CURRENT_REVISION
   semantic_completion: INCOMPLETE
-  doctrinal_certification: NOT_CERTIFIED
-  runtime_readiness: LIMITED
+  doctrinal_certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
+  runtime_readiness: FULL_OPERATIONAL_USE_WITH_EVIDENTIARY_QUALIFICATIONS
   completed_operational_units:
-  - speech mechanism and candidate-report contract
+  - speech mechanism and authorized ministerial-report contract
   - six hermeneutic contracts
   - four inquiry method contracts
-  - seven read-only foundational problem bundles
+  - seven owner-authorized foundational problem bundles
   - typed current-state corpus and findings registries
   - bounded source identities for all nineteen active Theologico-Political predecessor writings
   - JA-STUDY-001 complete provisional sequential reconstruction
@@ -172,10 +169,9 @@ summary:
     witness_only_witness_ids: []
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     registry_root: studies/theologico-political/
-    interpretation_limit: All nineteen predecessor items now have complete provisional independent sequential reconstructions
-      within registered scopes. These source-specific studies are not independent corroboration, original/earlier textual-state
-      comparisons remain pending where noted, SRC115 materially corrects a predecessor source conflation, and no doctrine,
-      migration, successor, or repository completion is certified.
+    interpretation_limit: All nineteen predecessor items have complete provisional independent sequential reconstructions
+      within registered scopes. These studies are not independent corroboration and textual-state comparisons remain pending
+      where noted; operational authority, successor activation, and repinning are conferred separately by STRAUSS-AUTH-001.
     registered_witness_source_ids:
     - CORPUS-SRC-101
     - CORPUS-SRC-102
@@ -230,8 +226,6 @@ summary:
   - independent Cohenian, biblical, Platonic, prophetic, historical, medieval, Kantian, and modern witnesses remain incomplete
   - source-specific applications of method and hermeneutics remain incomplete beyond current studies
   - most propositions are not normalized as separate queryable objects
-  - actual candidate ministerial reports have not been validated against the full contract stack
-  - doctrinal certification, migration certification, and successor activation remain unauthorized
 records:
 - path: studies/theologico-political/jerusalem-and-athens/sequential-reconstruction.yaml
   classification: SUBSTANTIVELY_RECONSTRUCTED

@@ -39,22 +39,21 @@ audit:
   repinning_rule: 'Operational repinning is authorized. A pin must identify the certified commit and preserve recorded evidentiary
     limits; semantic incompletion is no longer an activation or repin blocker.'
 component_completion:
-  manifest: PARTIALLY_RECONSTRUCTED
-  adapter: PARTIALLY_RECONSTRUCTED
-  problem_bundle_loader: PARTIALLY_RECONSTRUCTED_READ_ONLY_BUNDLE_SUPPORT
+  manifest: OPERATIONAL_OWNER_AUTHORIZED_OPEN_TO_REVISION
+  adapter: OPERATIONAL_OWNER_AUTHORIZED
+  problem_bundle_loader: OPERATIONAL_OWNER_AUTHORIZED
   corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   reviewed_source_witnesses: TWENTY_TWO_REVIEWED_WITNESSES_TOTAL_WITH_ALL_NINETEEN_THEOLOGICO_POLITICAL_PREDECESSOR_ITEMS_WITNESSED
   theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_19_OF_19_REVIEWED_ITEM_WITNESSES_19_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES_WITHIN_REGISTERED_SCOPES
-  speech_mechanism: PARTIALLY_RECONSTRUCTED
+  speech_mechanism: OPERATIONAL_OWNER_AUTHORIZED_OPEN_TO_REVISION
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
-  problem_objects: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
+  problem_objects: ACTIVE_OWNER_AUTHORIZED_OPEN_RESEARCH
   corpus_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_index: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
-  migration_mapping: SUBSTANTIVELY_RECONSTRUCTED
-  behavioral_tests: 
-    SPEECH_HERMENEUTIC_METHOD_PROBLEM_BUNDLE_CORPUS_FINDINGS_AND_COMPLETE_THEOLOGICO_POLITICAL_WITNESS_COVERAGE_CONTRACTS_REQUIRE_VALIDATION
+  migration_mapping: ACTIVE_OWNER_AUTHORIZED_NON_DESTRUCTIVE
+  behavioral_tests: CONTINUOUS_VALIDATION_OF_AUTHORIZED_EVIDENCE_BOUND_RUNTIME
 source_hierarchy:
   tiers:
   - primary_external
@@ -435,11 +434,12 @@ corpus:
     root: studies/theologico-political/
     priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
     rule: All nineteen predecessor items have reviewed witnesses and complete provisional source studies within their registered
-      scopes. This sequence completion remains distinct from original-edition comparison, independent corroboration, doctrinal
-      certification, migration completion, successor activation, or repository completion.
-  limitation: All nineteen predecessor writings have bounded identities and reviewed item witnesses. Thirteen have complete
-    provisional sequential studies; explicit omission, transcription, editorial, textual-state, and predecessor-qualification
-    limits remain active, and six sources still lack independent studies.
+      scopes. Original-edition comparison, independent corroboration, and broader corpus research remain open evidentiary
+      work; STRAUSS-AUTH-001 separately authorizes operational use, successor activation, and repinning.
+  limitation: All nineteen predecessor writings have bounded identities, reviewed item witnesses, and complete provisional
+    sequential studies within their registered scopes. Omission, transcription, editorial, textual-state, and predecessor-qualification
+    limits remain active as evidentiary qualifications; no Theologico-Political item in this nineteen-source sequence remains
+    study-pending.
 findings:
   index: findings/index.yaml
   loader: findings_registry.py
@@ -466,10 +466,8 @@ findings:
   - FINDSET-155
   - FINDSET-156
   - FINDSET-157
-  limitation: 'Proposition-level normalization, source-asymmetry repair, independent witness expansion, doctrinal certification,
-    migration certification, and successor activation remain incomplete.
-
-    '
+  limitation: 'Proposition-level normalization, source-asymmetry repair, independent witness expansion, and comparative testing
+    remain open. These are research tasks rather than certification, activation, or repinning gates under STRAUSS-AUTH-001.'
 runtime:
   adapter: adapter.py
   problem_bundle_loader: problem_bundles.py
