@@ -1,0 +1,60 @@
+schema_version: 1.0
+record_type: reviewed_witness_acquisition_batch
+identity:
+  id: TP-WITNESS-ACQUISITION-REMAINING-14-2026-07-28
+  title: Remaining fourteen Theologico-Political reviewed witnesses from the 1997 SUNY collection
+  version: 1.0.0
+status:
+  lifecycle: COMPLETED_ACQUISITION_RECORD
+  corpus_registration_effect: DOCUMENTARY_SUPPORT_FOR_FORWARD_REGISTRATION
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+reviewed_container:
+  title: Jewish Philosophy and the Crisis of Modernity
+  subtitle: Essays and Lectures in Modern Jewish Thought
+  author: Leo Strauss
+  editor: Kenneth Hart Green
+  publisher: State University of New York Press
+  publication_place: Albany
+  year: 1997
+  local_filename_recorded: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  page_count: 526
+  file_size_bytes: 39287307
+  sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+acquired_items:
+  - {source_id: CORPUS-SRC-101, witness_id: CORPUS-WIT-101, title: "Progress or Return?", printed_pages: "87-136", pdf_pages_one_based: "106-155"}
+  - {source_id: CORPUS-SRC-104, witness_id: CORPUS-WIT-104, title: "Preface to Isaac Husik, Philosophical Essays", printed_pages: "235-266", pdf_pages_one_based: "254-285"}
+  - {source_id: CORPUS-SRC-106, witness_id: CORPUS-WIT-106, title: "Freud on Moses and Monotheism", printed_pages: "285-309", pdf_pages_one_based: "304-328"}
+  - {source_id: CORPUS-SRC-107, witness_id: CORPUS-WIT-107, title: "Why We Remain Jews", printed_pages: "311-356", pdf_pages_one_based: "330-375"}
+  - {source_id: CORPUS-SRC-108, witness_id: CORPUS-WIT-108, title: "On the Interpretation of Genesis", printed_pages: "359-376", pdf_pages_one_based: "378-395"}
+  - {source_id: CORPUS-SRC-110, witness_id: CORPUS-WIT-110, title: "What Is Political Philosophy?", registered_scope: first paragraph, printed_pages: "409", pdf_pages_one_based: "428"}
+  - {source_id: CORPUS-SRC-112, witness_id: CORPUS-WIT-112, title: "Letter to the Editor — The State of Israel", printed_pages: "413-414", pdf_pages_one_based: "432-433"}
+  - {source_id: CORPUS-SRC-113, witness_id: CORPUS-WIT-113, title: "Introduction to Persecution and the Art of Writing", printed_pages: "417-429", pdf_pages_one_based: "436-448"}
+  - {source_id: CORPUS-SRC-114, witness_id: CORPUS-WIT-114, title: "Perspectives on the Good Society", printed_pages: "431-445", pdf_pages_one_based: "450-464"}
+  - {source_id: CORPUS-SRC-115, witness_id: CORPUS-WIT-115, title: "An Unspoken Prologue", printed_pages: "449-452", pdf_pages_one_based: "468-471"}
+  - {source_id: CORPUS-SRC-116, witness_id: CORPUS-WIT-116, title: "Preface to Hobbes Politische Wissenschaft", printed_pages: "453-456", pdf_pages_one_based: "472-475"}
+  - {source_id: CORPUS-SRC-117, witness_id: CORPUS-WIT-117, title: "A Giving of Accounts", printed_pages: "457-466", pdf_pages_one_based: "476-485"}
+  - {source_id: CORPUS-SRC-118, witness_id: CORPUS-WIT-118, title: "Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays", printed_pages: "467-470", pdf_pages_one_based: "486-489"}
+  - {source_id: CORPUS-SRC-119, witness_id: CORPUS-WIT-119, title: "Restatement on Xenophon's Hiero", registered_scope: last paragraph, printed_pages: "471-473", pdf_pages_one_based: "490-492"}
+provenance_limits:
+  - The reviewed witness for every item in this batch is the 1997 collected presentation, not a separately reviewed original or earlier publication.
+  - Progress or Return? is an editorial recombination of two later published textual components derived from 1952 lectures.
+  - Freud on Moses and Monotheism, Why We Remain Jews, the 1946 Plan, and the Restatement excerpt have no earlier publication citation supplied by the collection's Sources section; no earlier-publication identity is fabricated here.
+  - What Is Political Philosophy? is registered only for the first-paragraph scope preserved by the active predecessor.
+  - Restatement on Xenophon's Hiero is registered only for the last-paragraph scope preserved by the active predecessor.
+  - Witness acquisition does not complete any of the fifteen still-pending independent sequential source studies.
+non_effects:
+  - no source-text admission
+  - no independent corroboration
+  - no doctrinal certification
+  - no migration certification
+  - no successor activation
+  - no predecessor displacement
+termination:
+  acquisition_state: COMPLETE_FOR_REMAINING_FOURTEEN_WITNESSES
+  theologico_political_reviewed_witness_coverage_after_registration: COMPLETE_19_OF_19
+  independent_sequential_study_coverage_after_registration: INCOMPLETE_4_OF_19
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
