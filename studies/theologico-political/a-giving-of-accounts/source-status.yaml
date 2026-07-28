@@ -1,65 +1,16 @@
 schema_version: 1.0
 document_type: source_status_record
-identity:
-  status_id: CORPUS-STATUS-117
-  corpus_source_id: CORPUS-SRC-117
-  canonical_title: A Giving of Accounts
-  author: Leo Strauss
-  date: 1970
-  version: 1.0.0
-status:
-  lifecycle: REGISTERED_SOURCE_IDENTITY
-  certification: NOT_CERTIFIED
-  source_text_admission: NOT_REQUESTED
-  reviewed_witness: NOT_YET_REGISTERED
-  independent_sequential_study: NOT_YET_COMPLETED
-  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
-registration_basis:
-  active_predecessor: problems/theologico-political.yaml
-  active_predecessor_source_sequence: 17
-  corpus_registry: corpus/index.yaml
-  corpus_source_id: CORPUS-SRC-117
-  governing_problem: theologico-political
-  preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+identity: {status_id: CORPUS-STATUS-117, corpus_source_id: CORPUS-SRC-117, canonical_title: "A Giving of Accounts", author: Leo Strauss, date: 1970, version: 1.1.0}
+status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-117, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
+revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, pending The College comparison, predecessor authority, noncertification, and no successor effect."}
+registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 17, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-117, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
 verified_documentary_facts:
-  - The active predecessor identifies this work, date, and sequence position.
-  - The current corpus registry identifies the work as CORPUS-SRC-117.
-predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_WITNESS
-  statement: >
-    Presents philosophy through teachers, books, gratitude, intellectual debts, and
-    continued inquiry while limiting doctrinal inference from autobiography.
-  preservation_rule: This derivative statement is not independently confirmed or certified here.
-publication_and_witness_condition:
-  publication_venue: UNVERIFIED_IN_THIS_RECORD
-  edition: UNVERIFIED_IN_THIS_RECORD
-  pagination: UNVERIFIED_IN_THIS_RECORD
-  local_file: NOT_REGISTERED
-  fingerprint: NOT_AVAILABLE
-  text_condition: NOT_ASSESSED
-  locator_reproducibility: INCOMPLETE
-source_classification:
-  author_relation: PRIMARY_STRAUSS_AUTOBIOGRAPHICAL_WRITING
-  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
-  analytical_use: ORIENTATION_ONLY_UNTIL_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
-required_distinctions:
-  - gratitude from agreement
-  - intellectual debt from doctrinal submission
-  - autobiography from final doctrine
-  - teachers and books from independently reconstructed arguments
-  - predecessor synthesis from source-level documented finding
-prohibitions:
-  - Do not infer final doctrine from gratitude or intellectual genealogy.
-  - Do not treat the predecessor contribution as a source-level quotation.
-  - Do not assign locators or infer publication facts before witness registration.
-  - Do not certify doctrine, migration, or activation.
-next_required_actions:
-  - register a reviewed witness and publication provenance
-  - conduct an independent sequential reading
-  - compare autobiographical speech with dated writings and documentary deed
-termination:
-  source_identity_state: REGISTERED
-  reviewed_witness_state: MISSING
-  study_state: INCOMPLETE
-  certification: NOT_CERTIFIED
-  successor_effect: NONE
+  - The reviewed 1997 SUNY collected witness occupies printed pages 457-466 and one-based PDF pages 476-485.
+  - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
+  - The collection states that A Giving of Accounts first appeared in The College 22, no. 1 (April 1970): 1-5.
+predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Presents philosophy through teachers, books, gratitude, intellectual debts, and continued inquiry while limiting doctrinal inference from autobiography.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
+publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 457, end: 466}, pdf_page_range_one_based: {start: 476, end: 485}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
+reviewed_witness: {witness_id: CORPUS-WIT-117, witness_record_path: studies/theologico-political/a-giving-of-accounts/reviewed-witness.yaml, printed_page_range: {start: 457, end: 466}, pdf_page_range_one_based: {start: 476, end: 485}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
+source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to autobiographical discussion and does not settle doctrine by itself."}
+next_required_actions: [conduct an independent sequential reading of printed pages 457-466, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization, compare The College printing when separately reviewed]
+termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
