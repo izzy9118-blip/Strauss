@@ -4,10 +4,23 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 
+# Align the typed findings validator with the now-directly-indexed final five
+# sources. Once a source has its own source-specific study, it should no longer
+# be duplicated into the legacy CORPUS-SRC-101-119 aggregate index merely
+# because it belongs to that predecessor sequence.
+p = ROOT / "findings_registry.py"
+t = p.read_text(encoding="utf-8")
+t = re.sub(
+    r'    separately_indexed = \{[^\n]+\}\n',
+    '    separately_indexed = set(DIRECT_SOURCE_KEYS) & predecessor_sources\n',
+    t,
+    count=1,
+)
+p.write_text(t, encoding="utf-8")
+
 # The historical regression tests intentionally pinned the prior 14-of-19 state.
 # Replace only those exact completion-state assertions after the final-five
 # materializer has produced the 19-of-19 registered-scope state.
-
 p = ROOT / "tests/test_interface_consistency.py"
 t = p.read_text(encoding="utf-8")
 t = re.sub(
@@ -50,4 +63,4 @@ t = re.sub(
 )
 p.write_text(t, encoding="utf-8")
 
-print("final-five historical completion tests aligned to 19-of-19 registered-scope state")
+print("final-five validator and historical completion tests aligned to 19-of-19 registered-scope state")
