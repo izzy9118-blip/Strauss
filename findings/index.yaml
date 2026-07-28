@@ -3,7 +3,7 @@ record_type: typed_findings_registry
 identity:
   id: STRAUSS-FINDINGS-INDEX-001
   title: Strauss Repository Typed Findings Registry
-  version: 1.5.0
+  version: 1.6.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
@@ -11,11 +11,11 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_JURISDICTION_AND_REVISION_ONLY
 revision_history:
-  predecessor_version: 1.4.0
-  predecessor_blob_sha: 820aacb74d7dbd340b75222a73d78eaa62b8f2db
+  predecessor_version: 1.5.0
+  predecessor_blob_sha: bbd286d4f85b4779a056365cc9d6bc6e93721bc8
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register SPINOZA-TREATISE-STUDY-001 as FINDSET-012 and its jurisdiction-preserving Theologico-Political
-    and Wise-versus-Vulgar syntheses as FINDSET-122 and FINDSET-123, preserving original-edition, noncorroboration,
+  reason: Register GENESIS-STUDY-001 as FINDSET-013 and its jurisdiction-preserving Theologico-Political, Athens-versus-Jerusalem,
+    and Nomos-versus-Physis syntheses as FINDSET-124 through FINDSET-126 while preserving textual-state, noncorroboration,
     noncertification, and no-successor safeguards.
 purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record
   class, migration state, and provenance while preserving the difference among documentary finding, supported inference,
@@ -278,6 +278,26 @@ finding_sets:
   - FINDSET-123
   witness_id: CORPUS-WIT-103
   original_1948_journal_comparison: PENDING
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
+- finding_set_id: FINDSET-013
+  path: studies/theologico-political/on-the-interpretation-of-genesis/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-108
+  problem_bindings:
+  - theologico-political
+  - athens-vs-jerusalem
+  - nomos-vs-physis
+  status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  derived_local_syntheses:
+  - FINDSET-124
+  - FINDSET-125
+  - FINDSET-126
+  witness_id: CORPUS-WIT-108
+  earlier_published_text_comparison: PENDING
   independent_corroboration: INCOMPLETE
   successor_effect: NONE
 - finding_set_id: FINDSET-101
@@ -623,6 +643,50 @@ finding_sets:
   status: PROVISIONAL_NOT_CERTIFIED
   certification: NOT_CERTIFIED
   successor_effect: NONE
+- finding_set_id: FINDSET-124
+  path: problems/theologico-political/synthesis/on-the-interpretation-of-genesis.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-108
+  problem_bindings:
+  - theologico-political
+  adjacent_problem_references:
+  - athens-vs-jerusalem
+  - nomos-vs-physis
+  derived_from:
+  - FINDSET-013
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-125
+  path: problems/athens-vs-jerusalem/synthesis/on-the-interpretation-of-genesis.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-108
+  problem_bindings:
+  - athens-vs-jerusalem
+  theologico_political_reference: theologico-political
+  derived_from:
+  - FINDSET-013
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-126
+  path: problems/nomos-vs-physis/synthesis/on-the-interpretation-of-genesis.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-108
+  problem_bindings:
+  - nomos-vs-physis
+  theologico_political_reference: theologico-political
+  derived_from:
+  - FINDSET-013
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
 - finding_set_id: FINDSET-201
   path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   record_class: MIGRATION_TRANSACTION_LEDGER
@@ -727,7 +791,9 @@ indexes:
     - FINDSET-003
     - FINDSET-005
     - FINDSET-006
+    - FINDSET-013
     - FINDSET-101
+    - FINDSET-126
     philosophy-vs-poetry:
     - FINDSET-001
     - FINDSET-002
@@ -756,6 +822,7 @@ indexes:
     - FINDSET-010
     - FINDSET-011
     - FINDSET-012
+    - FINDSET-013
     - FINDSET-105
     - FINDSET-106
     - FINDSET-111
@@ -763,6 +830,7 @@ indexes:
     - FINDSET-116
     - FINDSET-119
     - FINDSET-122
+    - FINDSET-124
     - FINDSET-202
     - FINDSET-203
     - FINDSET-301
@@ -775,11 +843,13 @@ indexes:
     - FINDSET-009
     - FINDSET-010
     - FINDSET-011
+    - FINDSET-013
     - FINDSET-107
     - FINDSET-112
     - FINDSET-114
     - FINDSET-117
     - FINDSET-120
+    - FINDSET-125
     wise-vs-vulgar:
     - FINDSET-002
     - FINDSET-003
@@ -848,6 +918,14 @@ indexes:
     - FINDSET-115
     - FINDSET-203
     - FINDSET-301
+    CORPUS-SRC-108:
+    - FINDSET-013
+    - FINDSET-105
+    - FINDSET-124
+    - FINDSET-125
+    - FINDSET-126
+    - FINDSET-203
+    - FINDSET-301
     CORPUS-SRC-111:
     - FINDSET-010
     - FINDSET-105
@@ -875,6 +953,7 @@ indexes:
     - FINDSET-010
     - FINDSET-011
     - FINDSET-012
+    - FINDSET-013
     INTEGRATION_GOVERNANCE_RECORD:
     - FINDSET-005
     - FINDSET-006
@@ -902,6 +981,9 @@ indexes:
     - FINDSET-121
     - FINDSET-122
     - FINDSET-123
+    - FINDSET-124
+    - FINDSET-125
+    - FINDSET-126
     MIGRATION_TRANSACTION_LEDGER:
     - FINDSET-201
     - FINDSET-202
@@ -910,14 +992,14 @@ indexes:
     - FINDSET-301
     - FINDSET-302
 coverage:
-  finding_sets_registered: 40
-  source_specific_and_integration_records_registered: 12
-  problem_syntheses_registered: 23
+  finding_sets_registered: 44
+  source_specific_and_integration_records_registered: 13
+  problem_syntheses_registered: 26
   migration_transaction_ledgers_registered: 3
   preserved_finding_bases_registered: 2
-  current_problem_synthesis_tree_yaml_records_accounted_for: 23
+  current_problem_synthesis_tree_yaml_records_accounted_for: 26
   current_foundational_transaction_tree_yaml_records_accounted_for: 3
-  corpus_study_records_accounted_for: 12
+  corpus_study_records_accounted_for: 13
   canonical_problem_indexes_registered: 7
   exhaustive_within_declared_scope: true
 proposition_kinds:
@@ -951,8 +1033,8 @@ findings_gaps:
   statement: Many registered source entities lack independent source-specific study records.
   effect: FINDINGS_COVERAGE_REMAINS_SOURCE_ASYMMETRICAL
 - gap_id: FINDINGS-GAP-003
-  statement: Five of the nineteen Theologico-Political writings now have complete provisional item studies; the
-    remaining fourteen lack individual sequential studies.
+  statement: Six of the nineteen Theologico-Political writings now have complete provisional item studies; the remaining
+    thirteen lack individual sequential studies.
   effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE
 - gap_id: FINDINGS-GAP-004
   statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and
@@ -979,32 +1061,16 @@ validation_rules:
 - FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
 - FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison,
   and retain noncorroboration and no-successor safeguards
-- FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
-- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison,
-  and retain noncorroboration and no-successor safeguards
-- FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
-- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison,
-  and retain noncorroboration and no-successor safeguards
-- FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
-- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison,
-  and retain noncorroboration and no-successor safeguards
-- FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
-- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison,
-  and retain noncorroboration and no-successor safeguards
-- FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
-- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison,
-  and retain noncorroboration and no-successor safeguards
+- FINDSET-013 must derive only FINDSET-124 through FINDSET-126, preserve CORPUS-WIT-108 and pending earlier-text
+  comparison, and retain noncorroboration and no-successor safeguards
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   findings_state: OPEN_MATERIALLY_INCOMPLETE_AND_NONCERTIFIED
   certification: NOT_CERTIFIED
   next_required_units:
-  - conduct the remaining fourteen Theologico-Political independent sequential studies beginning with CORPUS-SRC-108
-  - compare the CORPUS-SRC-103 reviewed 1997 witness with the original 1948 journal printing when available
-  - compare the Preface to Spinoza's Critique of Religion 1997 composite with separately reviewed 1965 and 1968
-    textual states
-  - acquire and reconstruct Talmon's reviewed work
-  - expand source-specific and independent witness studies
+  - conduct the remaining thirteen Theologico-Political independent sequential studies beginning with CORPUS-SRC-113
+  - compare the CORPUS-SRC-108 reviewed 1997 witness with the 1981 English text and 1957 typed lecture manuscript
+    when lawful witnesses are available
+  - expand independent biblical, Greek, medieval, modern, and reviewed-work witness studies
   - normalize proposition-level identifiers only where source records support reproducible extraction
-  - validate actual ministerial reports against source, method, hermeneutic, problem, corpus, and speech contracts
   - preserve later corrections, dissent, and supersession through forward registry revision

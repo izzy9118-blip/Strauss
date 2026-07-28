@@ -1,0 +1,32 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: TP-GENESIS-001, version: 1.0.0, title: "Theologico-Political Synthesis — On the Interpretation of Genesis"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-108
+  reviewed_witness_id: CORPUS-WIT-108
+  study_id: GENESIS-STUDY-001
+  study_path: studies/theologico-political/on-the-interpretation-of-genesis/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-013
+  derived_finding_set_id: FINDSET-124
+problem: {canonical_key: theologico-political, role: PRIMARY_JURISDICTION, adjacent_problem_references: [athens-vs-jerusalem, nomos-vs-physis]}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Scholarly reason neither proves nor disproves the omnipotent God in Strauss's argument, so the Bible must be approached under unresolved doubt concerning revelation rather than an assumed impossibility of miracle."}
+  - {classification: documented_finding, proposition: "The articulated structure of the world is accessible to man as man, whereas the biblical claim that the world was created belongs to divine declaration rather than evident cosmological knowledge."}
+  - {classification: documented_finding, proposition: "Human freedom appears as ambiguity and danger and therefore requires prohibition, responsibility, obedience, and disobedience to articulate the specifically human problem."}
+  - {classification: supported_inference, proposition: "Strauss interprets autonomous knowledge of good and evil as continuous with the philosophic attempt to orient human conduct by nature or heaven."}
+  - {classification: documented_finding, proposition: "The Bible confronts the reader with the alternative between life in obedience to revelation and life in human freedom represented by Greek philosophy."}
+  - {classification: documented_finding, proposition: "Strauss rejects a higher synthesis because it would sacrifice the decisive claim of at least one alternative."}
+predecessor_retest:
+  active_predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  state: PROVISIONAL_RETEST_COMPLETE_WITH_QUALIFICATION_NO_PROMOTION
+  confirms: ["Genesis is read as a serious account rather than dismissed as myth", "creation, command, obedience, disobedience, responsibility, and the human place in the whole are explicit", "the second creation account focuses the ambiguity and responsibility of human life"]
+  qualifies: ["punishment is less analytically central than responsibility and prohibition", "the lecture culminates in the unresolved revelation-philosophy alternative", "the sacred-book model limits mechanical transfer of Greek whole-and-part expectations to the Bible"]
+  predecessor_effect: NONE
+limits:
+  - The 1997 collected witness is not a separately reviewed 1981 L'Homme text or 1957 typed manuscript.
+  - Genesis, Deuteronomy, Greek philosophy, and represented historical and theological traditions remain independently incomplete unless separately registered.
+  - Source-local agreement with the predecessor is not doctrinal certification or independent corroboration.
+  - No migration, successor activation, or predecessor displacement is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, earlier_published_text_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
