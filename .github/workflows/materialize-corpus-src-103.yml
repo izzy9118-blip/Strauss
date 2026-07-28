@@ -68,6 +68,18 @@ jobs:
               encoding="utf-8",
           )
 
+          witness_path = Path("studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml")
+          witness = yaml.safe_load(witness_path.read_text(encoding="utf-8"))
+          witness["byte_identity"] = {
+              "algorithm": "SHA256",
+              "sha256": "43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66",
+              "file_size_bytes": 39287307,
+          }
+          witness_path.write_text(
+              yaml.safe_dump(witness, sort_keys=False, allow_unicode=True, width=120),
+              encoding="utf-8",
+          )
+
           registry_path = Path("corpus_registry.py")
           text = registry_path.read_text(encoding="utf-8")
           text = text.replace(
@@ -130,6 +142,21 @@ jobs:
               yaml.safe_dump(findings, sort_keys=False, allow_unicode=True, width=120),
               encoding="utf-8",
           )
+
+          findings_test_path = Path("tests/test_findings_registry.py")
+          test_text = findings_test_path.read_text(encoding="utf-8")
+          test_text = test_text.replace("self.assertEqual(len(finding_ids), 37)", "self.assertEqual(len(finding_ids), 41)")
+          test_text = test_text.replace("self.assertEqual(len(registered), 21)", "self.assertEqual(len(registered), 24)")
+          test_text = test_text.replace("self.assertEqual(len(registered), 11)", "self.assertEqual(len(registered), 12)")
+          findings_test_path.write_text(test_text, encoding="utf-8")
+
+          talmon_test_path = Path("tests/test_pr21_talmon_completion.py")
+          talmon_text = talmon_test_path.read_text(encoding="utf-8")
+          talmon_text = talmon_text.replace(
+              '["COHEN-STUDY-001", "JA-STUDY-001", "TALMON-STUDY-001", "SPINOZA-PREFACE-STUDY-001"],',
+              '["COHEN-STUDY-001", "JA-STUDY-001", "TALMON-STUDY-001", "SPINOZA-PREFACE-STUDY-001", "SPINOZA-TREATISE-STUDY-001"],',
+          )
+          talmon_test_path.write_text(talmon_text, encoding="utf-8")
           PY
             rm -rf history/staging/src103-payload
             rm -rf history/staging/src103-complete-payload
