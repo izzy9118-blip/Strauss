@@ -133,15 +133,15 @@ class InterfaceConsistencyTests(unittest.TestCase):
         process = load_yaml("history/production-plans/2026-07-27-ten-step-completion-process.yaml")
 
         self.assertEqual(manifest["status"]["semantic_completion"], "INCOMPLETE")
-        self.assertEqual(manifest["status"]["doctrinal_certification"], "NOT_CERTIFIED")
-        self.assertEqual(audit["status"]["repository_completion"], "INCOMPLETE")
+        self.assertEqual(manifest["status"]["doctrinal_certification"], "OWNER_CERTIFIED_FOR_OPERATIONAL_USE")
+        self.assertEqual(audit["status"]["repository_completion"], "OPEN_RESEARCH_REPOSITORY_OPERATIONALLY_CERTIFIED")
         self.assertEqual(mapping["status"]["semantic_completion"], "INCOMPLETE")
         self.assertEqual(
             manifest["sanctum_contract"]["completed_interface_repin_status"],
-            "BLOCKED_WHILE_SEMANTIC_COMPLETION_IS_INCOMPLETE",
+            "AUTHORIZED_FOR_CERTIFIED_OPERATIONAL_REPIN",
         )
         step_ten = next(item for item in process["steps"] if item["sequence"] == 10)
-        self.assertEqual(step_ten["state"], "BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION")
+        self.assertEqual(step_ten["state"], "AUTHORIZED")
 
 
 if __name__ == "__main__":

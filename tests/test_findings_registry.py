@@ -9,7 +9,7 @@ class FindingsRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_findings_state(self) -> None:
         registry = findings_registry.load_registry()
         self.assertEqual(findings_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.15.0")
+        self.assertEqual(registry["identity"]["version"], "1.16.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE",
@@ -18,7 +18,7 @@ class FindingsRegistryTests(unittest.TestCase):
             registry["status"]["findings_completion"],
             "INCOMPLETE_OPEN_FINDINGS_STORE",
         )
-        self.assertEqual(registry["status"]["certification"], "NOT_CERTIFIED")
+        self.assertEqual(registry["status"]["certification"], "OWNER_CERTIFIED_FOR_OPERATIONAL_USE")
 
     def test_finding_and_gap_identifiers_are_unique(self) -> None:
         registry = findings_registry.load_registry()

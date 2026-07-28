@@ -4,11 +4,11 @@ document_type: shared_interpretive_protocol
 identity:
   canonical_key: source-status
   title: Source Status Protocol
-  protocol_version: 1.0.0
+  protocol_version: 1.1.0
 
 status:
-  lifecycle: FOUNDING_DRAFT
-  certification: NOT_CERTIFIED
+  lifecycle: ACTIVE_PROTOCOL
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
 
 purpose: >
   Govern documentary classification before substantive interpretation.
@@ -50,40 +50,41 @@ source_classes:
     description: Later scholarly or interpretive treatment.
 
 required_fields:
-  - author
-  - source_type
-  - publication_status
-  - editorial_interventions
-  - completeness
-  - known_omissions
-  - relation_to_governing_inquiry
+- author
+- source_type
+- publication_status
+- editorial_interventions
+- completeness
+- known_omissions
+- relation_to_governing_inquiry
 
 required_operations:
-  - distinguish authorial text from editorial framing
-  - identify missing or projected material
-  - identify whether wording is direct, reconstructed, or reported
-  - preserve documentary qualifications in later citations
-  - prevent secondary framing from replacing primary evidence
+- distinguish authorial text from editorial framing
+- identify missing or projected material
+- identify whether wording is direct, reconstructed, or reported
+- preserve documentary qualifications in later citations
+- prevent secondary framing from replacing primary evidence
 
 prohibited_inferences:
-  - editorial arrangement is automatically authorial doctrine
-  - posthumous publication is equivalent to authorial finality
-  - student notes preserve exact authorial wording
-  - an introduction governs the meaning of the author's text
-  - chronological lateness establishes interpretive authority
+- editorial arrangement is automatically authorial doctrine
+- posthumous publication is equivalent to authorial finality
+- student notes preserve exact authorial wording
+- an introduction governs the meaning of the author's text
+- chronological lateness establishes interpretive authority
 
 valid_outputs:
-  - source_status_confirmed
-  - source_status_qualified
-  - editorial_dependence_identified
-  - authorial_status_unresolved
-  - source_unfit_for_claim
+- source_status_confirmed
+- source_status_qualified
+- editorial_dependence_identified
+- authorial_status_unresolved
+- source_unfit_for_claim
 
 invoked_by:
-  - nomos-vs-physis
-  - philosophy-vs-poetry
-  - theory-vs-practice
-  - theologico-political
-  - athens-vs-jerusalem
-  - wise-vs-vulgar
-  - ancients-vs-moderns
+- nomos-vs-physis
+- philosophy-vs-poetry
+- theory-vs-practice
+- theologico-political
+- athens-vs-jerusalem
+- wise-vs-vulgar
+- ancients-vs-moderns
+owner_authorization: governance/repository-authorization.yaml

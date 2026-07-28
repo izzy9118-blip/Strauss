@@ -487,16 +487,16 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.15.0":
-        errors.append("findings registry identity.version must be 1.15.0")
+    if identity.get("version") != "1.16.0":
+        errors.append("findings registry identity.version must be 1.16.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
         errors.append("findings registry must state bounded current-state exhaustiveness")
     if status.get("findings_completion") != "INCOMPLETE_OPEN_FINDINGS_STORE":
         errors.append("findings registry must remain an incomplete open findings store")
-    if status.get("certification") != "NOT_CERTIFIED":
-        errors.append("findings registry must remain NOT_CERTIFIED")
+    if status.get("certification") != "OWNER_CERTIFIED_FOR_OPERATIONAL_USE":
+        errors.append("findings registry must carry owner operational certification")
 
     finding_sets_raw = registry.get("finding_sets", [])
     finding_ids = _unique_ids(finding_sets_raw, "finding_set_id", "finding_sets", errors)

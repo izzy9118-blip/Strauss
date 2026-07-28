@@ -26,13 +26,13 @@ class TalmonIntegrationCompletionTests(unittest.TestCase):
         corpus = load_yaml("corpus/index.yaml")
         findings = load_yaml("findings/index.yaml")
 
-        self.assertEqual(manifest["identity"]["version"], "1.19.0")
-        self.assertEqual(audit["identity"]["version"], "3.7.0")
-        self.assertEqual(mapping["identity"]["version"], "1.19.0")
-        self.assertEqual(process["identity"]["version"], "1.21.0")
+        self.assertEqual(manifest["identity"]["version"], "1.20.0")
+        self.assertEqual(audit["identity"]["version"], "3.8.0")
+        self.assertEqual(mapping["identity"]["version"], "1.20.0")
+        self.assertEqual(process["identity"]["version"], "1.22.0")
         self.assertEqual(schedule["identity"]["version"], "1.19.0")
-        self.assertEqual(corpus["identity"]["version"], "1.23.0")
-        self.assertEqual(findings["identity"]["version"], "1.15.0")
+        self.assertEqual(corpus["identity"]["version"], "1.24.0")
+        self.assertEqual(findings["identity"]["version"], "1.16.0")
 
         state = manifest["corpus"]["theologico_political_item_level_statuses"]
         self.assertEqual(state["registered_count"], 19)

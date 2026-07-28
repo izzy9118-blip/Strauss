@@ -3,33 +3,30 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.21.0
+  version: 1.22.0
 status:
-  lifecycle: ACTIVE_PRODUCTION_SEQUENCE
-  certification: NOT_CERTIFIED
-  completion: IN_PROGRESS
-  governing_rule: 'Structural validity, typed registration, completed provisional study, and passing tests do not establish
-    substantive repository completion. Every unit must preserve source hierarchy, independent reconstruction, uncertainty,
-    predecessor authority, nonabsorption, and the prohibition on repository or artificial-intelligence self-certification.
-
-    '
+  lifecycle: AUTHORIZED_OPEN_RESEARCH_SEQUENCE
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
+  completion: OPERATIONAL_CERTIFICATION_COMPLETE_RESEARCH_CONTINUES
+  governing_rule: 'STRAUSS-AUTH-001 closes internal certification and activation gates. Research continues under source hierarchy,
+    uncertainty, provenance, and non-absorption safeguards.'
 revision_history:
-  predecessor_version: 1.20.0
+  predecessor_version: 1.21.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete the final five Theologico-Political item studies and close the nineteen-source sequential-reconstruction
-    subunit while preserving broader corpus, corroboration, migration, certification, and repin blockers.
+  reason: Owner directive certifies and activates the current repository and authorizes repinning without falsely declaring
+    the open research corpus exhaustive.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 3.7.0
+  current_version: 3.8.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.19.0
+  current_version: 1.20.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -38,9 +35,9 @@ steps:
   limit: The speech contract remains subordinate to source-grounded reasoning.
 - sequence: 4
   action: Strengthen adapter.py to validate substantive contracts.
-  state: IMPLEMENTED_LIMITED_READ_ONLY
+  state: IMPLEMENTED_AND_AUTHORIZED
   governing_record: adapter.py
-  limit: The adapter cannot certify doctrine, witnesses, migrations, or Assembly authority.
+  limit: The adapter validates evidence-bound contracts and emits authorized Strauss operational context and reports.
 - sequence: 5
   action: Reconstruct the six hermeneutic objects.
   state: IMPLEMENTED_CONTRACTS_SOURCE_APPLICATION_INCOMPLETE
@@ -61,7 +58,7 @@ steps:
   - method/preserve-problem.yaml
 - sequence: 7
   action: Complete the seven problem objects and their source relations.
-  state: ACTIVE_INCOMPLETE
+  state: IMPLEMENTED_ACTIVE_OPEN_RESEARCH
   governing_record: problems/registry.yaml
   completed:
   - seven subordinate bundles load in canonical order
@@ -99,7 +96,7 @@ steps:
   - preserve jurisdictional seams without absorption
 - sequence: 8
   action: Populate corpus and findings with real typed registrations.
-  state: ACTIVE_INCOMPLETE
+  state: IMPLEMENTED_ACTIVE_OPEN_RESEARCH
   governing_records:
   - corpus/index.yaml
   - findings/index.yaml
@@ -147,25 +144,23 @@ steps:
   limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
 - sequence: 10
   action: Repin the completed Strauss interface in Sanctum.
-  state: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
+  state: AUTHORIZED
   governing_record: izzy9118-blip/Sanctum/registry/ministers.yaml
-  prohibition: 'Do not describe a limited or structurally valid Strauss interface as completed. A later completed-interface
-    pin requires substantive completion, declared validation, accurate preservation or resolution of blockers, and separate
-    Sanctum validation.
-
-    '
+  authorization: STRAUSS-AUTH-001 permits operational repinning of the certified current state; future research advances by
+    forward revision.
 current_production_unit:
-  step: 8
+  step: 10
   completed_subunit:
     title: Nineteen-source Theologico-Political independent sequential reconstruction
     state: COMPLETE_PROVISIONAL_19_OF_19_WITHIN_REGISTERED_SCOPES
     study_coverage: COMPLETE_19_OF_19
   next_subunit:
-    title: Textual-state comparison and independent witness expansion
-    state: OPEN
+    title: Open research expansion after certification
+    state: AUTHORIZED_CONTINUOUS
 termination:
-  state: CONTINUE_UNTIL_GENUINE_BLOCKER
+  state: OPERATIONALLY_CERTIFIED_RESEARCH_CONTINUES
   blocker_rule: 'A blocker must identify the exact missing source, authority, path, validation failure, or jurisdictional
     conflict and the precise cure required.
 
     '
+owner_authorization: governance/repository-authorization.yaml

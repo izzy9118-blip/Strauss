@@ -4,20 +4,19 @@ registry_type: foundational_problem_registry
 identity:
   canonical_key: foundational-problem-registry
   title: Foundational Problem Registry
-  version: 1.7.0
+  version: 1.8.0
 
 status:
-  lifecycle: FOUNDING_DRAFT
-  certification: NOT_CERTIFIED
-  activation: PENDING_FOUNDATIONAL_MIGRATION
+  lifecycle: ACTIVE_FOUNDATIONAL_REGISTRY
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
+  activation: ACTIVE_OWNER_AUTHORIZED
 
 revision_history:
-  predecessor_version: 1.6.0
-  predecessor_blob_sha: 0fa856273aaf220068303800d80c399803f44704
-  reason: >
-    Register the expanded Wise vs. Vulgar witness registry and the completed
-    independent Plato Apology source synthesis while preserving the incompleteness of
-    the remaining witness corpus, migration certification, and activation.
+  predecessor_version: 1.7.0
+  predecessor_blob_sha: PRESERVED_BY_GIT
+  reason: >-
+    Owner certification activates all seven foundational successor problems and converts predecessor retention from an activation
+    gate into historical preservation.
 
 authority:
   purpose: >
@@ -45,158 +44,158 @@ identity_rule:
     do not determine current canonical order.
 
 canonical_problems:
-  - canonical_key: nomos-vs-physis
-    canonical_order: 1
-    title: Nomos vs. Physis
-    successor_path: problems/nomos-vs-physis/problem.yaml
-    subordinate_records:
-      inquiry_profile: problems/nomos-vs-physis/inquiry-profile.yaml
-      witnesses: problems/nomos-vs-physis/witnesses.yaml
-      relations: problems/nomos-vs-physis/relations.yaml
-      synthesis_directory: problems/nomos-vs-physis/synthesis/
-      founding_source_bridge: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
-    jurisdiction: >
-      The distinction and conflict between what is by nature and what exists through
-      law, convention, custom, inheritance, artifice, or authoritative opinion.
-    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
+- canonical_key: nomos-vs-physis
+  canonical_order: 1
+  title: Nomos vs. Physis
+  successor_path: problems/nomos-vs-physis/problem.yaml
+  subordinate_records:
+    inquiry_profile: problems/nomos-vs-physis/inquiry-profile.yaml
+    witnesses: problems/nomos-vs-physis/witnesses.yaml
+    relations: problems/nomos-vs-physis/relations.yaml
+    synthesis_directory: problems/nomos-vs-physis/synthesis/
+    founding_source_bridge: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
+  jurisdiction: >
+    The distinction and conflict between what is by nature and what exists through
+    law, convention, custom, inheritance, artifice, or authoritative opinion.
+  migration_status: CERTIFIED_ACTIVE_OWNER_AUTHORIZED
 
-  - canonical_key: philosophy-vs-poetry
-    canonical_order: 2
-    title: Philosophy vs. Poetry
-    alternate_titles:
-      - The Ancient Quarrel Between Philosophy and Poetry
-    successor_path: problems/philosophy-vs-poetry/problem.yaml
-    subordinate_records:
-      inquiry_profile: problems/philosophy-vs-poetry/inquiry-profile.yaml
-      witnesses: problems/philosophy-vs-poetry/witnesses.yaml
-      relations: problems/philosophy-vs-poetry/relations.yaml
-      synthesis_directory: problems/philosophy-vs-poetry/synthesis/
-    jurisdiction: >
-      The ancient quarrel between philosophy and poetry as rival claimants to wisdom,
-      education, knowledge of souls, knowledge of the gods, political authority, and
-      guidance concerning the human good.
-    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
+- canonical_key: philosophy-vs-poetry
+  canonical_order: 2
+  title: Philosophy vs. Poetry
+  alternate_titles:
+  - The Ancient Quarrel Between Philosophy and Poetry
+  successor_path: problems/philosophy-vs-poetry/problem.yaml
+  subordinate_records:
+    inquiry_profile: problems/philosophy-vs-poetry/inquiry-profile.yaml
+    witnesses: problems/philosophy-vs-poetry/witnesses.yaml
+    relations: problems/philosophy-vs-poetry/relations.yaml
+    synthesis_directory: problems/philosophy-vs-poetry/synthesis/
+  jurisdiction: >
+    The ancient quarrel between philosophy and poetry as rival claimants to wisdom,
+    education, knowledge of souls, knowledge of the gods, political authority, and
+    guidance concerning the human good.
+  migration_status: CERTIFIED_ACTIVE_OWNER_AUTHORIZED
 
-  - canonical_key: theory-vs-practice
-    canonical_order: 3
-    title: Theory vs. Practice
-    successor_path: problems/theory-vs-practice/problem.yaml
-    subordinate_records:
-      inquiry_profile: problems/theory-vs-practice/inquiry-profile.yaml
-      witnesses: problems/theory-vs-practice/witnesses.yaml
-      relations: problems/theory-vs-practice/relations.yaml
-      synthesis_directory: problems/theory-vs-practice/synthesis/
-      founding_source_bridge: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
-    jurisdiction: >
-      The relation between understanding and action, contemplation and political
-      responsibility, theoretical standards and practical judgment, and philosophic
-      knowledge and statesmanship.
-    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
+- canonical_key: theory-vs-practice
+  canonical_order: 3
+  title: Theory vs. Practice
+  successor_path: problems/theory-vs-practice/problem.yaml
+  subordinate_records:
+    inquiry_profile: problems/theory-vs-practice/inquiry-profile.yaml
+    witnesses: problems/theory-vs-practice/witnesses.yaml
+    relations: problems/theory-vs-practice/relations.yaml
+    synthesis_directory: problems/theory-vs-practice/synthesis/
+    founding_source_bridge: problems/theory-vs-practice/synthesis/studies-in-platonic-political-philosophy.yaml
+  jurisdiction: >
+    The relation between understanding and action, contemplation and political
+    responsibility, theoretical standards and practical judgment, and philosophic
+    knowledge and statesmanship.
+  migration_status: CERTIFIED_ACTIVE_OWNER_AUTHORIZED
 
-  - canonical_key: theologico-political
-    canonical_order: 4
-    title: The Theologico-Political Problem
-    legacy_identifiers:
-      - STR-PROBLEM-002
-    predecessor_records:
-      - path: problems/theologico-political.yaml
-        version: 1.1
-        blob_sha: 4a35e71916212082598097985deb23699c0018e7
-        status: ACTIVE_PREDECESSOR
-      - path: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
-        version: 1.1
-        blob_sha: 4a35e71916212082598097985deb23699c0018e7
-        status: EXACT_HISTORICAL_COPY
-    successor_path: problems/theologico-political/problem.yaml
-    subordinate_records:
-      inquiry_profile: problems/theologico-political/inquiry-profile.yaml
-      witnesses: problems/theologico-political/witnesses.yaml
-      relations: problems/theologico-political/relations.yaml
-      synthesis_directory: problems/theologico-political/synthesis/
-      migration_transactions: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
-      sppp_reconciliation: migrations/foundational-problems-v2/transactions/theologico-political-sppp-study-001.yaml
-    jurisdiction: >
-      The conflict concerning ultimate authority among autonomous reason,
-      revelation, divine law, prophecy, theology, interpretation, and political sovereignty.
-    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED_ACTIVE_PREDECESSOR_RETAINED
+- canonical_key: theologico-political
+  canonical_order: 4
+  title: The Theologico-Political Problem
+  legacy_identifiers:
+  - STR-PROBLEM-002
+  predecessor_records:
+  - path: problems/theologico-political.yaml
+    version: 1.1
+    blob_sha: 4a35e71916212082598097985deb23699c0018e7
+    status: PRESERVED_HISTORICAL_OR_REFERENCE_PREDECESSOR
+  - path: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+    version: 1.1
+    blob_sha: 4a35e71916212082598097985deb23699c0018e7
+    status: PRESERVED_HISTORICAL_OR_REFERENCE_PREDECESSOR
+  successor_path: problems/theologico-political/problem.yaml
+  subordinate_records:
+    inquiry_profile: problems/theologico-political/inquiry-profile.yaml
+    witnesses: problems/theologico-political/witnesses.yaml
+    relations: problems/theologico-political/relations.yaml
+    synthesis_directory: problems/theologico-political/synthesis/
+    migration_transactions: migrations/foundational-problems-v2/transactions/theologico-political-v1.1.yaml
+    sppp_reconciliation: migrations/foundational-problems-v2/transactions/theologico-political-sppp-study-001.yaml
+  jurisdiction: >
+    The conflict concerning ultimate authority among autonomous reason,
+    revelation, divine law, prophecy, theology, interpretation, and political sovereignty.
+  migration_status: CERTIFIED_ACTIVE_OWNER_AUTHORIZED
 
-  - canonical_key: athens-vs-jerusalem
-    canonical_order: 5
-    title: Athens vs. Jerusalem
-    successor_path: problems/athens-vs-jerusalem/problem.yaml
-    subordinate_records:
-      inquiry_profile: problems/athens-vs-jerusalem/inquiry-profile.yaml
-      witnesses: problems/athens-vs-jerusalem/witnesses.yaml
-      relations: problems/athens-vs-jerusalem/relations.yaml
-      synthesis_directory: problems/athens-vs-jerusalem/synthesis/
-      founding_source_bridge: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
-    jurisdiction: >
-      The confrontation between autonomous understanding and obedient love as
-      comprehensive orientations toward the highest human life.
-    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
+- canonical_key: athens-vs-jerusalem
+  canonical_order: 5
+  title: Athens vs. Jerusalem
+  successor_path: problems/athens-vs-jerusalem/problem.yaml
+  subordinate_records:
+    inquiry_profile: problems/athens-vs-jerusalem/inquiry-profile.yaml
+    witnesses: problems/athens-vs-jerusalem/witnesses.yaml
+    relations: problems/athens-vs-jerusalem/relations.yaml
+    synthesis_directory: problems/athens-vs-jerusalem/synthesis/
+    founding_source_bridge: problems/athens-vs-jerusalem/synthesis/studies-in-platonic-political-philosophy.yaml
+  jurisdiction: >
+    The confrontation between autonomous understanding and obedient love as
+    comprehensive orientations toward the highest human life.
+  migration_status: CERTIFIED_ACTIVE_OWNER_AUTHORIZED
 
-  - canonical_key: wise-vs-vulgar
-    canonical_order: 6
-    title: The Wise vs. The Vulgar
-    alternate_titles:
-      - The Wise and the Vulgar
-      - The Few and the Many
-    legacy_identifiers:
-      - STR-PROBLEM-003
-    predecessor_records:
-      - path: problems/wise-and-vulgar.yaml
-        version: 0.1-discussion
-        blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
-        status: ACTIVE_PREDECESSOR
-      - identifier: WVG-RECONSTRUCTION-0.2
-        path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
-        version: 0.2-reconstruction-draft
-        blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
-        status: ACCEPTED_MIGRATION_SOURCE_CLASSIFIED_NOT_SUPERSEDED
-    successor_path: problems/wise-vs-vulgar/problem.yaml
-    subordinate_records:
-      inquiry_profile: problems/wise-vs-vulgar/inquiry-profile.yaml
-      witnesses: problems/wise-vs-vulgar/witnesses.yaml
-      relations: problems/wise-vs-vulgar/relations.yaml
-      synthesis_directory: problems/wise-vs-vulgar/synthesis/
-      founding_source_bridge: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
-      plato_apology_synthesis: problems/wise-vs-vulgar/synthesis/plato-apology.yaml
-      migration_transactions: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
-    classification_coverage:
-      accepted_top_level_units: 18
-      accepted_top_level_units_classified: 18
-      constitutive_propositions: 49
-      constitutive_propositions_classified: 49
-      rejected_with_reason: 0
-    witness_reconstruction:
-      registry_version: 0.2.0
-      completed_independent_works: 1
-      completed_work_ids:
-        - PLATO-APOLOGY-PVP-TP-001
-      supporting_witness_lines_registered: 6
-      completion_limit: >
-        One independent Platonic work does not complete Plato, Socrates, or the
-        wider principal and supporting witness corpus.
-    jurisdiction: >
-      The recognition of wisdom, the distinction among genuine and counterfeit
-      claimants to superior understanding, human heterogeneity, differentiated
-      education, audience, mediation, and the political responsibility of philosophy.
-    migration_status: PROPOSITION_CLASSIFICATION_AND_INITIAL_WITNESS_EXPANSION_COMPLETE_VALIDATION_PENDING_NOT_CERTIFIED
+- canonical_key: wise-vs-vulgar
+  canonical_order: 6
+  title: The Wise vs. The Vulgar
+  alternate_titles:
+  - The Wise and the Vulgar
+  - The Few and the Many
+  legacy_identifiers:
+  - STR-PROBLEM-003
+  predecessor_records:
+  - path: problems/wise-and-vulgar.yaml
+    version: 0.1-discussion
+    blob_sha: f65780b6fd7d748dc21867024d6eee96bce08a34
+    status: PRESERVED_HISTORICAL_OR_REFERENCE_PREDECESSOR
+  - identifier: WVG-RECONSTRUCTION-0.2
+    path: history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
+    version: 0.2-reconstruction-draft
+    blob_sha: 82034ee304ee7c21210f3bae45d5c6aeb6c844cf
+    status: PRESERVED_HISTORICAL_OR_REFERENCE_PREDECESSOR
+  successor_path: problems/wise-vs-vulgar/problem.yaml
+  subordinate_records:
+    inquiry_profile: problems/wise-vs-vulgar/inquiry-profile.yaml
+    witnesses: problems/wise-vs-vulgar/witnesses.yaml
+    relations: problems/wise-vs-vulgar/relations.yaml
+    synthesis_directory: problems/wise-vs-vulgar/synthesis/
+    founding_source_bridge: problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml
+    plato_apology_synthesis: problems/wise-vs-vulgar/synthesis/plato-apology.yaml
+    migration_transactions: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
+  classification_coverage:
+    accepted_top_level_units: 18
+    accepted_top_level_units_classified: 18
+    constitutive_propositions: 49
+    constitutive_propositions_classified: 49
+    rejected_with_reason: 0
+  witness_reconstruction:
+    registry_version: 0.2.0
+    completed_independent_works: 1
+    completed_work_ids:
+    - PLATO-APOLOGY-PVP-TP-001
+    supporting_witness_lines_registered: 6
+    completion_limit: >
+      One independent Platonic work does not complete Plato, Socrates, or the
+      wider principal and supporting witness corpus.
+  jurisdiction: >
+    The recognition of wisdom, the distinction among genuine and counterfeit
+    claimants to superior understanding, human heterogeneity, differentiated
+    education, audience, mediation, and the political responsibility of philosophy.
+  migration_status: CERTIFIED_ACTIVE_OWNER_AUTHORIZED
 
-  - canonical_key: ancients-vs-moderns
-    canonical_order: 7
-    title: Ancients vs. Moderns
-    successor_path: problems/ancients-vs-moderns/problem.yaml
-    subordinate_records:
-      inquiry_profile: problems/ancients-vs-moderns/inquiry-profile.yaml
-      witnesses: problems/ancients-vs-moderns/witnesses.yaml
-      relations: problems/ancients-vs-moderns/relations.yaml
-      synthesis_directory: problems/ancients-vs-moderns/synthesis/
-      founding_source_bridge: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
-    jurisdiction: >
-      The modern transformation of nature, history, progress, science, equality,
-      political philosophy, revelation, education, and the relation between knowledge and power.
-    migration_status: FOUNDING_STRUCTURE_COMPLETE_NOT_CERTIFIED
+- canonical_key: ancients-vs-moderns
+  canonical_order: 7
+  title: Ancients vs. Moderns
+  successor_path: problems/ancients-vs-moderns/problem.yaml
+  subordinate_records:
+    inquiry_profile: problems/ancients-vs-moderns/inquiry-profile.yaml
+    witnesses: problems/ancients-vs-moderns/witnesses.yaml
+    relations: problems/ancients-vs-moderns/relations.yaml
+    synthesis_directory: problems/ancients-vs-moderns/synthesis/
+    founding_source_bridge: problems/ancients-vs-moderns/synthesis/studies-in-platonic-political-philosophy.yaml
+  jurisdiction: >
+    The modern transformation of nature, history, progress, science, equality,
+    political philosophy, revelation, education, and the relation between knowledge and power.
+  migration_status: CERTIFIED_ACTIVE_OWNER_AUTHORIZED
 
 official_order_rule: >
   The order recorded here is authoritative for presentation, inquiry orientation,
@@ -208,8 +207,7 @@ reference_rule: >
   Cross-problem references must use canonical_key. Repository paths may also be
   recorded for resolution, but paths do not constitute identity.
 
-activation_rule: >
-  A successor problem becomes active only after its predecessor is preserved,
-  displaced material is classified, references validate, and the migration is
-  certified. Classification, witness registration, and founding-structure completion
-  do not authorize activation.
+activation_rule: >-
+  All seven successor problems are active under STRAUSS-AUTH-001. Predecessors remain recoverable as historical or reference
+  records. New research gaps or unresolved evidentiary questions do not suspend activation.
+owner_authorization: governance/repository-authorization.yaml

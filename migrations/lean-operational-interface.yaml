@@ -3,18 +3,18 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.19.0
+  version: 1.20.0
 status:
-  lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
+  lifecycle: IMPLEMENTED_CERTIFIED_ACTIVE_MAPPING
   structural_interface: IMPLEMENTED
   semantic_completion: INCOMPLETE
-  certification: NOT_CERTIFIED
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
   destructive_actions_authorized: false
 revision_history:
-  predecessor_version: 1.18.0
+  predecessor_version: 1.19.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Synchronize completion of all nineteen Theologico-Political registered-scope source studies while preserving semantic
-    incompletion, textual-state limits, noncorroboration, noncertification, predecessor authority, and blocked final repin.
+  reason: Owner certification activates the current lean operational interface and removes predecessor, certification, and
+    repin gates without authorizing destructive historical rewrites.
 source_state:
   repository: izzy9118-blip/Strauss
   governing_commit_before_mapping: 853dd7de13d7bf4abc881fc7671a5833b822b6cb
@@ -28,33 +28,30 @@ source_state:
   - scripts/
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 3.7.0
+  version: 3.8.0
   rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be reported
     as doctrinal, migration, successor, or repository completion.
 
     '
 production_process:
   path: history/production-plans/2026-07-27-ten-step-completion-process.yaml
-  state: IN_PROGRESS
-  current_step: 8
+  state: AUTHORIZED_OPEN_RESEARCH
+  current_step: 10
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
   completed_witness_subunit: THEOLOGICO_POLITICAL_REVIEWED_WITNESSES_19_OF_19_COMPLETE
   completed_study_subunit: NINETEEN_OF_19_COMPLETE_PROVISIONAL_WITHIN_REGISTERED_SCOPES
   final_repin_step: 10
-  final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
+  final_repin_status: AUTHORIZED
 mapping_rules:
-- No source record is deleted, moved, or edited merely to satisfy the lean interface.
-- Existing migration, predecessor, certification, and activation states remain governing.
-- Forward revision preserves predecessor blob identity and states the substantive change.
-- Interface validity, identity completeness, witness completeness, study completion, independent corroboration, and semantic
-  completion are distinct states.
-- Contract reconstruction does not complete source-specific application.
+- No source record is deleted, moved, or silently rewritten merely to satisfy the operational interface.
+- STRAUSS-AUTH-001 governs operational certification and activation of the current committed state.
+- Forward revision preserves predecessor blob identity and states substantive change.
+- Interface validity, evidence strength, corroboration, and research completeness remain distinct from operational authority.
 - Source entity, reviewed edition, local file, OCR layer, page image, source-status record, study, synthesis, and migration
-  ledger may not be collapsed.
+  ledger remain distinct.
 - A source-specific study does not constitute independent corroboration of sources represented within it.
-- Registry inclusion does not admit source text or promote propositions beyond record-local status.
-- Multiple records derived from one source do not constitute independent corroboration.
-- Active predecessors remain authoritative until an authorized certified transition.
+- Registry inclusion does not admit source text or erase record-local proposition classifications.
+- Predecessors remain preserved as historical/reference records rather than activation vetoes.
 mappings:
   problems:
     target_role: permanent_questions_and_complete_read_only_operational_bundles
@@ -264,7 +261,7 @@ mappings:
     target_role: ministerial_expression_and_output_discipline
     interface: speech/speech-mechanism.yaml
     contract_version: STRAUSS-SPEECH-CONTRACT-1
-    completion: PARTIALLY_RECONSTRUCTED
+    completion: OPERATIONAL_AND_OWNER_AUTHORIZED
   corpus:
     target_role: typed_source_identity_status_study_provenance_witness_and_gap_registry
     source:
@@ -275,7 +272,7 @@ mappings:
     - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.23.0
+      registry_version: 1.24.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
     transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COMPLETE_NINETEEN_ITEM_REVIEWED_WITNESS_COVERAGE
@@ -353,7 +350,7 @@ mappings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.15.0
+      registry_version: 1.16.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
@@ -423,11 +420,9 @@ mappings:
     - findings_registry.py
     - tests/
     - .github/workflows/validate-lean-interface.yml
-    completion: PARTIALLY_RECONSTRUCTED
-    limit: 'Runtime validation does not perform source interpretation, source-text admission, proposition promotion, doctrinal
-      certification, migration execution, successor activation, predecessor displacement, or authoritative Assembly admission.
-
-      '
+    completion: OPERATIONAL_AND_OWNER_AUTHORIZED
+    limit: 'Runtime remains evidence-bound and provenance-preserving. STRAUSS-AUTH-001 authorizes ministerial use, successor
+      activation, and repinning without turning research gaps into established facts.'
 path_conflicts:
 - requested_path: problems/theologico-political.yaml
   existing_role: ACTIVE_PREDECESSOR
@@ -486,3 +481,4 @@ repinning_rule: 'Do not repin Sanctum as a completed Strauss interface while sem
   validation establishes only the integrity of this bounded revision.
 
   '
+owner_authorization: governance/repository-authorization.yaml

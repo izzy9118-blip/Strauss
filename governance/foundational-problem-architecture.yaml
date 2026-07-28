@@ -4,12 +4,12 @@ document_type: foundational_problem_architecture_constitution
 identity:
   canonical_key: foundational-problem-architecture
   title: Foundational Problem Architecture Constitution
-  version: 1.0.0
+  version: 1.1.0
 
 status:
-  lifecycle: FOUNDING_DRAFT
-  certification: NOT_CERTIFIED
-  activation: PENDING_FOUNDATIONAL_MIGRATION
+  lifecycle: ACTIVE_CONSTITUTION
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
+  activation: ACTIVE_OWNER_AUTHORIZED
 
 purpose: >
   Govern the identity, official order, jurisdiction, connection, revision,
@@ -28,13 +28,13 @@ foundational_structure:
   registry: problems/registry.yaml
   official_problem_count: 7
   problems:
-    - Nomos vs. Physis
-    - Philosophy vs. Poetry
-    - Theory vs. Practice
-    - The Theologico-Political Problem
-    - Athens vs. Jerusalem
-    - The Wise vs. The Vulgar
-    - Ancients vs. Moderns
+  - Nomos vs. Physis
+  - Philosophy vs. Poetry
+  - Theory vs. Practice
+  - The Theologico-Political Problem
+  - Athens vs. Jerusalem
+  - The Wise vs. The Vulgar
+  - Ancients vs. Moderns
   order_rule: >
     The registry order is authoritative for repository presentation and inquiry
     orientation. It does not make later problems subordinate to earlier ones or
@@ -53,13 +53,13 @@ identity_and_order:
 
 jurisdiction:
   required_fields:
-    - governing question
-    - compressed question
-    - primary jurisdiction
-    - permanent tension
-    - boundary conditions
-    - neighboring problem relations
-    - non-absorption clause
+  - governing question
+  - compressed question
+  - primary jurisdiction
+  - permanent tension
+  - boundary conditions
+  - neighboring problem relations
+  - non-absorption clause
   primary_jurisdiction_rule: >
     A proposition belongs primarily to the problem whose governing question it
     directly answers, alters, or complicates.
@@ -86,25 +86,25 @@ shared_protocols:
 problem_object_contract:
   constitutional_file: problem.yaml
   required_contents:
-    - identity
-    - status
-    - governing question
-    - compressed question
-    - jurisdiction
-    - permanent tension
-    - boundary
-    - relations
-    - shared protocol references
-    - anti-capture principle
-    - non-absorption clause
-    - termination conditions
+  - identity
+  - status
+  - governing question
+  - compressed question
+  - jurisdiction
+  - permanent tension
+  - boundary
+  - relations
+  - shared protocol references
+  - anti-capture principle
+  - non-absorption clause
+  - termination conditions
   prohibited_contents:
-    - complete chapter analyses
-    - accumulated reading notes
-    - full witness interpretations
-    - copied shared protocol text
-    - uncited interpretive accumulation
-    - silent historical replacement
+  - complete chapter analyses
+  - accumulated reading notes
+  - full witness interpretations
+  - copied shared protocol text
+  - uncited interpretive accumulation
+  - silent historical replacement
   rule: >
     A problem object defines the permanent problem. It is not an archive of
     every interpretation produced under that problem.
@@ -156,34 +156,34 @@ revision_and_redistribution:
 
 transfer_provenance:
   required_fields:
-    - source problem
-    - source version
-    - original item or section
-    - disposition
-    - destination problem or protocol
-    - reason
-    - transformation mode
-    - continuing relevance
-    - unresolved overlap
-    - implementing commit
+  - source problem
+  - source version
+  - original item or section
+  - disposition
+  - destination problem or protocol
+  - reason
+  - transformation mode
+  - continuing relevance
+  - unresolved overlap
+  - implementing commit
   transformation_modes:
-    - VERBATIM
-    - REVISED
-    - DIVIDED
-    - CONSOLIDATED
-    - REFERENCE_ONLY
+  - VERBATIM
+  - REVISED
+  - DIVIDED
+  - CONSOLIDATED
+  - REFERENCE_ONLY
 
 non_duplication:
   permitted:
-    - canonical references
-    - brief jurisdictional summaries
-    - problem-specific applications
-    - source quotations required for independent analysis
+  - canonical references
+  - brief jurisdictional summaries
+  - problem-specific applications
+  - source quotations required for independent analysis
   prohibited:
-    - parallel governing copies of the same doctrine
-    - copied protocol definitions inside problem objects
-    - untracked doctrinal forks
-    - duplication used in place of explicit relations
+  - parallel governing copies of the same doctrine
+  - copied protocol definitions inside problem objects
+  - untracked doctrinal forks
+  - duplication used in place of explicit relations
   conflict_rule: >
     Where two problems require different applications of a common method, the
     shared rule remains in the protocol and each problem records only its local
@@ -194,32 +194,42 @@ historical_preservation:
     Existing problem objects must remain recoverable before replacement,
     relocation, consolidation, or removal from the active tree.
   required_sequence:
-    - record predecessor path, version, identifier, blob hash, and commit
-    - preserve the predecessor through repository history or an explicit historical record
-    - create and validate the successor structure
-    - classify displaced material
-    - record all transfers, elevations, preservations, and rejections
-    - certify the migration
-    - only then remove a predecessor from the active path
+  - record predecessor path, version, identifier, blob hash, and commit
+  - preserve the predecessor through repository history or an explicit historical record
+  - create and validate the successor structure
+  - classify displaced material
+  - record all transfers, elevations, preservations, and rejections
+  - certify the migration
+  - only then remove a predecessor from the active path
   prohibition: >
     No predecessor may be retrospectively rewritten to appear as though it had
     always conformed to the new architecture.
 
 certification:
   required_conditions:
-    - the registry is valid and complete
-    - every problem has a unique canonical key and official order
-    - every problem has a defined jurisdiction and non-absorption clause
-    - shared methods are governed through protocols
-    - displaced accepted material is classified
-    - transfers preserve provenance
-    - predecessor records remain recoverable
-    - cross-references resolve
-    - no uncontrolled governing duplication remains
-    - unresolved jurisdictional conflicts are recorded
+  - the registry is valid and complete
+  - every problem has a unique canonical key and official order
+  - every problem has a defined jurisdiction and non-absorption clause
+  - shared methods are governed through protocols
+  - displaced accepted material is classified
+  - transfers preserve provenance
+  - predecessor records remain recoverable
+  - cross-references resolve
+  - no uncontrolled governing duplication remains
+  - unresolved jurisdictional conflicts are recorded
   prohibited_certification:
-    - certification based only on YAML validity
-    - certification while accepted material is unclassified
-    - certification while predecessor records are lost
-    - certification while a problem silently absorbs another problem
-    - certification while staging artifacts remain authoritative
+  - certification based only on YAML validity
+  - certification while accepted material is unclassified
+  - certification while predecessor records are lost
+  - certification while a problem silently absorbs another problem
+  - certification while staging artifacts remain authoritative
+  authority: REPOSITORY_OWNER_DIRECTIVE_2026_07_28
+  state: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
+  operational_effect: ALL_SEVEN_SUCCESSORS_ACTIVE
+revision_history:
+  predecessor_version: 1.0.0
+  predecessor_blob_sha: PRESERVED_BY_GIT
+owner_authorization:
+  path: governance/repository-authorization.yaml
+  effect: Certification and activation conditions are satisfied administratively for the current validated architecture; evidentiary
+    uncertainty remains a research property rather than an activation veto.

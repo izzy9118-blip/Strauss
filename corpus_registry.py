@@ -647,16 +647,16 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.23.0":
-        errors.append("corpus registry identity.version must be 1.23.0")
+    if identity.get("version") != "1.24.0":
+        errors.append("corpus registry identity.version must be 1.24.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
         errors.append("corpus registry must state bounded current-state exhaustiveness")
     if status.get("corpus_completion") != "INCOMPLETE_OPEN_CORPUS":
         errors.append("corpus registry must remain an incomplete open corpus")
-    if status.get("certification") != "NOT_CERTIFIED":
-        errors.append("corpus registry must remain NOT_CERTIFIED")
+    if status.get("certification") != "OWNER_CERTIFIED_FOR_OPERATIONAL_USE":
+        errors.append("corpus registry must carry owner operational certification")
 
     source_entities = registry.get("source_entities", [])
     witnesses = registry.get("reviewed_witnesses", [])
@@ -763,8 +763,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         errors.append("TP independent-study state must be COMPLETE_19_OF_19")
     if termination.get("corpus_state") != "OPEN_AND_MATERIALLY_INCOMPLETE":
         errors.append("registry termination must preserve an open, incomplete corpus")
-    if termination.get("certification") != "NOT_CERTIFIED":
-        errors.append("registry termination may not certify the corpus")
+    if termination.get("certification") != "OWNER_CERTIFIED_FOR_OPERATIONAL_USE":
+        errors.append("registry termination must preserve owner operational certification")
 
     return errors
 
@@ -784,14 +784,11 @@ def build_registry_context() -> dict[str, Any]:
         "problem_witness_registries": registry["problem_witness_registries"],
         "corpus_gaps": registry["corpus_gaps"],
         "coverage": registry["coverage"],
-        "authority": "READ_ONLY_DISCOVERY_AND_PROVENANCE_CONTEXT",
-        "non_effects": [
-            "no source-text admission",
-            "no doctrinal certification",
-            "no witness ranking as truth",
-            "no migration certification",
-            "no successor activation",
-            "no Assembly authority",
+        "authority": "OWNER_AUTHORIZED_CORPUS_CONTEXT",
+        "preserved_limits": [
+            "no source-text admission through the registry",
+            "no witness ranking as truth merely from registration",
+            "no erasure of documentary gaps or uncertainty",
         ],
     }
 
@@ -814,7 +811,7 @@ def main() -> int:
     if args.validate:
         print(
             "Typed corpus registry validation passed for the current committed source and "
-            "study state; corpus remains open, materially incomplete, and not certified."
+            "study state; the open corpus is owner-certified for operational use while research gaps remain explicit."
         )
         return 0
     print(json.dumps(build_registry_context(), indent=2 if args.pretty else None, ensure_ascii=False))

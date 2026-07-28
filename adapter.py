@@ -157,8 +157,8 @@ def validate_speech_mechanism(mechanism: dict[str, Any]) -> list[str]:
         )
 
     status = mechanism.get("status", {})
-    if status.get("doctrinal_certification") != "NOT_CERTIFIED":
-        errors.append("speech mechanism must remain doctrinally NOT_CERTIFIED")
+    if status.get("doctrinal_certification") != "OWNER_CERTIFIED_FOR_OPERATIONAL_USE":
+        errors.append("speech mechanism must carry owner operational certification")
     if status.get("voice") != "subordinate_to_reasoning":
         errors.append("speech mechanism voice must remain subordinate_to_reasoning")
 
@@ -202,8 +202,8 @@ def validate_speech_mechanism(mechanism: dict[str, Any]) -> list[str]:
     output = mechanism.get("output_contract", {})
     if output.get("record_type") != "ministerial_report":
         errors.append("speech output record_type must be ministerial_report")
-    if output.get("authority") != "CANDIDATE_ONLY_UNTIL_SANCTUM_VALIDATION":
-        errors.append("speech output authority must remain candidate-only")
+    if output.get("authority") != "AUTHORIZED_STRAUSS_MINISTERIAL_REPORT":
+        errors.append("speech output authority must be owner-authorized")
 
     test_ids = {
         item.get("id")
@@ -239,10 +239,10 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
     status = manifest.get("status", {})
     if status.get("semantic_completion") != "INCOMPLETE":
         errors.append("manifest must state semantic_completion: INCOMPLETE")
-    if status.get("doctrinal_certification") != "NOT_CERTIFIED":
-        errors.append("manifest must state doctrinal_certification: NOT_CERTIFIED")
-    if not str(status.get("runtime_readiness", "")).startswith("LIMITED"):
-        errors.append("manifest runtime_readiness must remain explicitly LIMITED")
+    if status.get("doctrinal_certification") != "OWNER_CERTIFIED_FOR_OPERATIONAL_USE":
+        errors.append("manifest must state owner operational certification")
+    if status.get("runtime_readiness") != "FULL_OPERATIONAL_USE_WITH_EVIDENTIARY_QUALIFICATIONS":
+        errors.append("manifest runtime_readiness must state full authorized operational use")
 
     problems = manifest.get("problems", [])
     keys = [item.get("canonical_key") for item in problems]
@@ -263,8 +263,8 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
     speech = manifest.get("speech", {})
     if speech.get("contract_version") != "STRAUSS-SPEECH-CONTRACT-1":
         errors.append("manifest speech contract version mismatch")
-    if speech.get("completion") != "PARTIALLY_RECONSTRUCTED":
-        errors.append("manifest must state speech completion as PARTIALLY_RECONSTRUCTED")
+    if speech.get("completion") != "OPERATIONAL_AND_OWNER_AUTHORIZED":
+        errors.append("manifest must state speech completion as operational and owner-authorized")
 
     safeguards = manifest.get("safeguards", {})
     for required in (
@@ -299,8 +299,8 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
                 errors.append(str(exc))
 
     migration = manifest.get("migration", {})
-    if migration.get("mode") != "ADDITIVE_NON_DESTRUCTIVE":
-        errors.append("migration mode must remain ADDITIVE_NON_DESTRUCTIVE")
+    if migration.get("mode") != "AUTHORIZED_ADDITIVE_NON_DESTRUCTIVE":
+        errors.append("migration mode must be authorized additive non-destructive")
 
     try:
         mechanism = load_speech_mechanism(manifest)

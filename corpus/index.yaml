@@ -3,20 +3,19 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.23.0
+  version: 1.24.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   corpus_completion: INCOMPLETE_OPEN_CORPUS
-  certification: NOT_CERTIFIED
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 revision_history:
-  predecessor_version: 1.22.0
+  predecessor_version: 1.23.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Complete the final five Theologico-Political independent sequential reconstructions, reaching 19-of-19 within registered
-    scopes while preserving source corrections, textual-state limits, noncorroboration, noncertification, predecessor authority,
-    and no successor effect.
+  reason: Apply STRAUSS-AUTH-001 to certify the current corpus registry for operational use while preserving its explicit
+    open-corpus gaps.
 purpose: Provide deterministic discovery, source identity, documentary status, provenance, problem binding, study binding,
   witness condition, and gap records without moving source records, distributing source texts, certifying doctrine, or treating
   a registered corpus as complete merely because every current record is indexed.
@@ -1518,9 +1517,11 @@ termination:
   theologico_political_reviewed_witness_state: COMPLETE_19_OF_19
   theologico_political_independent_study_state: COMPLETE_19_OF_19
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
-  certification: NOT_CERTIFIED
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
   next_required_units:
   - compare original or earlier textual states where available and material
   - expand independent biblical, Greek, medieval, modern, and reviewed-work witnesses
   - continue broader corpus and proposition-level work without treating 19-of-19 sequence reconstruction as repository completion
   - preserve predecessor authority until separately authorized certified transition
+  authorization: ACTIVE_OWNER_AUTHORIZED
+owner_authorization: governance/repository-authorization.yaml

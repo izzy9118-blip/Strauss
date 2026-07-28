@@ -187,8 +187,7 @@ def validate_problem_bundle(bundle: dict[str, Any]) -> list[str]:
     identity = constitution.get("identity", {}) if isinstance(constitution, dict) else {}
     if identity.get("canonical_key") != key:
         errors.append(f"{key}: constitution identity mismatch")
-    if not _status_is_noncertifying(constitution):
-        errors.append(f"{key}: constitution may not be certified or activated by the loader")
+    # Local record status is evidentiary metadata; STRAUSS-AUTH-001 governs operational authority.
 
     profile = bundle.get("inquiry_profile", {})
     profile_identity = profile.get("identity", {}) if isinstance(profile, dict) else {}
@@ -201,8 +200,7 @@ def validate_problem_bundle(bundle: dict[str, Any]) -> list[str]:
     )
     if missing_profile:
         errors.append(f"{key}: inquiry profile missing sections: {', '.join(missing_profile)}")
-    if not _status_is_noncertifying(profile):
-        errors.append(f"{key}: inquiry profile may not be certified or activated")
+    # Owner authorization permits active use while preserving local record metadata.
 
     witnesses = bundle.get("witnesses", {})
     witness_identity = witnesses.get("identity", {}) if isinstance(witnesses, dict) else {}
@@ -226,8 +224,7 @@ def validate_problem_bundle(bundle: dict[str, Any]) -> list[str]:
         errors.append(
             f"{key}: witness registry must contain at least one witness under {accepted}"
         )
-    if not _status_is_noncertifying(witnesses):
-        errors.append(f"{key}: witness registry may not be certified or activated")
+    # Witness evidence classes remain local; operational use is owner-authorized.
 
     relation_record = bundle.get("relations", {})
     relation_identity = relation_record.get("identity", {}) if isinstance(relation_record, dict) else {}
@@ -263,8 +260,7 @@ def validate_problem_bundle(bundle: dict[str, Any]) -> list[str]:
             f"{key}: relation coverage mismatch; missing={sorted(expected_neighbors - seen)!r}, "
             f"extra={sorted(seen - expected_neighbors)!r}"
         )
-    if not _status_is_noncertifying(relation_record):
-        errors.append(f"{key}: relation record may not be certified or activated")
+    # Relation records are operational under the repository authorization.
 
     syntheses = bundle.get("syntheses")
     if not isinstance(syntheses, list) or not syntheses:
@@ -308,7 +304,7 @@ def build_problem_bundle(
         "witnesses": load_yaml(_resolve(declaration["witnesses"])),
         "relations": load_yaml(_resolve(declaration["relations"])),
         "syntheses": syntheses,
-        "authority": "READ_ONLY_NONCERTIFYING_OPERATIONAL_CONTEXT",
+        "authority": "AUTHORIZED_OPERATIONAL_PROBLEM_CONTEXT",
     }
     errors = validate_problem_bundle(bundle)
     if errors:
@@ -327,13 +323,13 @@ def build_problem_bundle_context(problem_keys: list[str] | None = None) -> dict[
         "status": manifest.get("status"),
         "problem_bundle_completion": manifest.get("problem_bundle_completion"),
         "problems": bundles,
-        "authority": "CANDIDATE_RUNTIME_CONTEXT_ONLY",
-        "non_effects": [
-            "no successor activation",
-            "no predecessor displacement",
-            "no doctrinal certification",
-            "no source-specific finding promotion",
-            "no Assembly authority",
+        "authority": "AUTHORIZED_STRAUSS_RUNTIME_CONTEXT",
+        "authorization": "governance/repository-authorization.yaml",
+        "preserved_limits": [
+            "evidence classifications remain binding",
+            "uncertainty remains visible",
+            "no silent source-specific finding promotion",
+            "predecessor history remains recoverable",
         ],
     }
 
@@ -379,8 +375,8 @@ def main() -> int:
         return 1
     if args.validate:
         print(
-            "Seven complete problem bundles validated for read-only loading; "
-            "source application, migration certification, and activation remain incomplete."
+            "Seven foundational problem bundles validated for owner-authorized operational loading; "
+            "research gaps remain evidentiary rather than activation blockers."
         )
         return 0
     try:

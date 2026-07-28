@@ -5,26 +5,23 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 1.19.0
+  version: 1.20.0
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
   structural_validation: REQUIRED_ON_EACH_CHANGE
   semantic_completion: INCOMPLETE
-  doctrinal_certification: NOT_CERTIFIED
-  runtime_readiness: LIMITED_READ_ONLY_CONTEXT_AND_CANDIDATE_REPORT_SUPPORT
-  activation: AVAILABLE_FOR_VALIDATED_LIMITED_ADAPTER_USE
-  constitutional_effect: NONE_ON_EXISTING_PROBLEM_MIGRATION
-  governing_notice: 'A resolved path, valid YAML document, passing loader, bounded current-state index, reviewed witness,
-    completed provisional source study, or successful test does not establish repository completion, doctrinal truth, claimant
-    rank, migration certification, successor activation, or readiness for unrestricted ministerial reasoning.
-
-    '
+  doctrinal_certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
+  runtime_readiness: FULL_OPERATIONAL_USE_WITH_EVIDENTIARY_QUALIFICATIONS
+  activation: ACTIVE_OWNER_AUTHORIZED
+  constitutional_effect: FOUNDATIONAL_SUCCESSORS_ACTIVE_OWNER_AUTHORIZED
+  governing_notice: 'The repository owner has certified and authorized the current committed state for operational use. Certification
+    is administrative and does not erase source limits, uncertainties, edition gaps, or the open-ended nature of research.'
 revision_history:
-  predecessor_version: 1.18.0
+  predecessor_version: 1.19.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete the final five Theologico-Political source studies and synchronize corpus v1.23.0, findings v1.15.0, audit
-    v3.7.0, mapping v1.19.0, process v1.21.0, and schedule v1.19.0 while preserving repository semantic incompletion and all
-    noncertification safeguards.
+  reason: 'Apply the repository-owner directive of 2026-07-28: certify and authorize the current committed repository state
+    for operational use, activate the validated successor architecture, remove candidate-only and repin gates, and preserve
+    evidentiary uncertainty without treating open research gaps as authority blockers.'
 purpose: 'Provide one compact, machine-readable entry point through which a runtime can load the repository''s problems, hermeneutics,
   method, speech discipline, corpus registry, and findings registry without deleting, overwriting, or silently harmonizing
   the richer records from which this interface is derived.
@@ -32,18 +29,15 @@ purpose: 'Provide one compact, machine-readable entry point through which a runt
   '
 audit:
   path: audits/operational-completeness.yaml
-  version: 3.7.0
+  version: 3.8.0
   classification_vocabulary:
   - SUBSTANTIVELY_RECONSTRUCTED
   - PARTIALLY_RECONSTRUCTED
   - MAPPED_TO_RICHER_RECORDS
   - STRUCTURAL_PLACEHOLDER
   - EMPTY_OR_UNIMPLEMENTED
-  repinning_rule: 'Sanctum must not be repinned as a completed Strauss interface while semantic completion remains INCOMPLETE.
-    Any interim pin requires successful declared validation and must preserve all source, witness, study, doctrine, migration,
-    activation, and runtime limits.
-
-    '
+  repinning_rule: 'Operational repinning is authorized. A pin must identify the certified commit and preserve recorded evidentiary
+    limits; semantic incompletion is no longer an activation or repin blocker.'
 component_completion:
   manifest: PARTIALLY_RECONSTRUCTED
   adapter: PARTIALLY_RECONSTRUCTED
@@ -139,7 +133,7 @@ problems:
   relations: problems/ancients-vs-moderns/relations.yaml
   synthesis_directory: problems/ancients-vs-moderns/synthesis/
 problem_bundle_completion:
-  state: SUBSTANTIVE_BUNDLES_RUNTIME_LOADED_SOURCE_APPLICATION_AND_MIGRATION_INCOMPLETE
+  state: SUBSTANTIVE_BUNDLES_ACTIVE_OPEN_RESEARCH
   loader: problem_bundles.py
   bundle_members:
   - constitution
@@ -147,11 +141,8 @@ problem_bundle_completion:
   - witness_registry
   - relation_record
   - synthesis_records
-  limitation: 'Bundle loading validates identity, relation coverage, noncertification, and path integrity. It does not complete
-    missing witnesses, settle doctrine, certify migrations, activate successors, displace predecessors, or confer Assembly
-    authority.
-
-    '
+  limitation: 'Bundle loading preserves identity, relation coverage, path integrity, and evidence qualifications. The owner
+    authorization permits active use without requiring a second certification ceremony.'
 hermeneutic_completion:
   state: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   limitation: Contract reconstruction does not complete application to every source, author, or finding.
@@ -196,7 +187,7 @@ method:
 speech:
   mechanism: speech/speech-mechanism.yaml
   contract_version: STRAUSS-SPEECH-CONTRACT-1
-  completion: PARTIALLY_RECONSTRUCTED
+  completion: OPERATIONAL_AND_OWNER_AUTHORIZED
   voice_status: subordinate_to_reasoning
   limitation: 'The contract governs inputs, evidence, audience, speech and deed, concealment, irony, comedy, uncertainty,
     typed candidate output, and stopping conditions. It does not automatically perform source interpretation or final natural-language
@@ -206,7 +197,7 @@ speech:
 corpus:
   index: corpus/index.yaml
   loader: corpus_registry.py
-  registry_version: 1.23.0
+  registry_version: 1.24.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   reviewed_witnesses:
@@ -452,7 +443,7 @@ corpus:
 findings:
   index: findings/index.yaml
   loader: findings_registry.py
-  registry_version: 1.15.0
+  registry_version: 1.16.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   newly_registered:
@@ -492,39 +483,34 @@ runtime:
   permitted_operations:
   - validate declared paths and substantive contracts
   - load bounded operational context
-  - load complete read-only foundational problem bundles
+  - load complete foundational problem bundles
   - load typed current-state corpus and findings registries
   - validate reviewed-witness metadata, locators, study bindings, derivations, and jurisdiction
   - validate typed speech requests
-  - build non-authoritative candidate report structures
+  - produce authoritative Strauss ministerial reports with explicit evidence classifications
+  - use all seven owner-authorized foundational successor problems
   prohibited_operations:
   - admit or distribute source texts through a registry
   - allow a local filename to override title-page or copyright-page evidence
   - treat OCR as authoritative where page images disagree or remain unclear
   - treat source-study completion as independent corroboration
-  - promote a finding beyond its record-local evidence status
-  - certify doctrine, wisdom, witnesses, findings, or migration
-  - activate successor problems or displace active predecessors
-  - rewrite source findings or confer Assembly authority
+  - promote a finding beyond its record-local evidence status without stating the promotion basis
+  - erase uncertainty, documentary limits, dissent, or predecessor history
+  - silently rewrite source findings or cross-problem jurisdiction
 sanctum_contract:
   assembly_repository: izzy9118-blip/Sanctum
   registry_path: registry/ministers.yaml
   participation: universal
   outside_my_ground_permitted: true
-  completed_interface_repin_status: BLOCKED_WHILE_SEMANTIC_COMPLETION_IS_INCOMPLETE
-  output_rule: 'The adapter emits candidate context and reports. Git remains authoritative memory, and Sanctum''s Validation
-    Gate alone may confer Assembly-level authority. No pin may describe this interface as completed while semantic_completion
-    is INCOMPLETE.
-
-    '
+  completed_interface_repin_status: AUTHORIZED_FOR_CERTIFIED_OPERATIONAL_REPIN
+  output_rule: 'Validated Strauss ministerial reports are authorized outputs of this repository. Sanctum validates provenance,
+    inquiry envelope conformance, and Assembly integration; it need not re-certify Strauss repository authority.'
 migration:
   mapping_record: migrations/lean-operational-interface.yaml
-  mode: ADDITIVE_NON_DESTRUCTIVE
-  flat_problem_projection_deferred: true
-  reason: 'Explicit mappings preserve predecessors, successor directories, studies, protocols, governance records, transaction
-    ledgers, and historical copies. The active predecessor at problems/theologico-political.yaml may not be overwritten silently.
-
-    '
+  mode: AUTHORIZED_ADDITIVE_NON_DESTRUCTIVE
+  flat_problem_projection_deferred: false
+  reason: 'The owner authorization activates the validated successor architecture while preserving predecessor records as
+    history and reference. No destructive rewrite is required.'
 safeguards:
   independent_reconstruction_before_comparison: true
   documentary_evidence_before_interpretation: true
@@ -538,3 +524,7 @@ safeguards:
   title_does_not_certify_wisdom: true
   repository_self_certification_prohibited: true
   artificial_intelligence_self_certification_prohibited: true
+authorization:
+  path: governance/repository-authorization.yaml
+  state: ACTIVE_OWNER_AUTHORIZED
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE

@@ -82,7 +82,7 @@ class StraussAdapterTests(unittest.TestCase):
     def test_manifest_admits_incomplete_semantic_state(self) -> None:
         manifest = adapter.load_manifest()
         self.assertEqual(manifest["status"]["semantic_completion"], "INCOMPLETE")
-        self.assertTrue(manifest["status"]["runtime_readiness"].startswith("LIMITED"))
+        self.assertEqual(manifest["status"]["runtime_readiness"], "FULL_OPERATIONAL_USE_WITH_EVIDENTIARY_QUALIFICATIONS")
         self.assertEqual(
             manifest["audit"]["path"], "audits/operational-completeness.yaml"
         )
@@ -123,7 +123,7 @@ class StraussAdapterTests(unittest.TestCase):
 
     def test_non_destructive_and_non_certifying_safeguards(self) -> None:
         manifest = adapter.load_manifest()
-        self.assertEqual(manifest["migration"]["mode"], "ADDITIVE_NON_DESTRUCTIVE")
+        self.assertEqual(manifest["migration"]["mode"], "AUTHORIZED_ADDITIVE_NON_DESTRUCTIVE")
         self.assertTrue(manifest["safeguards"]["predecessor_overwrite_prohibited"])
         self.assertTrue(
             manifest["safeguards"]["repository_self_certification_prohibited"]

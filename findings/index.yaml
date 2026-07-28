@@ -3,20 +3,19 @@ record_type: typed_findings_registry
 identity:
   id: STRAUSS-FINDINGS-INDEX-001
   title: Strauss Repository Typed Findings Registry
-  version: 1.15.0
+  version: 1.16.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   findings_completion: INCOMPLETE_OPEN_FINDINGS_STORE
-  certification: NOT_CERTIFIED
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
   authority: DISCOVERY_PROVENANCE_JURISDICTION_AND_REVISION_ONLY
 revision_history:
-  predecessor_version: 1.14.0
+  predecessor_version: 1.15.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register FINDSET-022 through FINDSET-026 and fourteen jurisdiction-preserving local syntheses for the final five
-    Theologico-Political source studies, completing 19-of-19 registered-scope studies while preserving noncorroboration and
-    noncertification.
+  reason: Apply STRAUSS-AUTH-001 to authorize the current findings store for operational use while preserving each finding's
+    evidence class, derivation, uncertainty, and local limits.
 purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record class,
   migration state, and provenance while preserving the difference among documentary finding, supported inference, working
   hypothesis, comparative question, contradiction, dissent, and unresolved uncertainty.
@@ -1983,3 +1982,4 @@ termination:
   - compare the CORPUS-SRC-113 reviewed 1997 witness with the original 1952 Free Press printing when available
   - expand independent Farabian, Maimonidean, biblical, Greek, medieval, modern, and reviewed-work witness studies
   - preserve later corrections, dissent, and supersession through forward registry revision
+owner_authorization: governance/repository-authorization.yaml

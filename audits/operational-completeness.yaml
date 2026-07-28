@@ -3,17 +3,18 @@ record_type: operational_completeness_audit
 identity:
   id: STRAUSS-OPERATIONAL-AUDIT-001
   title: Strauss Operational Interface Completeness Audit
-  version: 3.7.0
+  version: 3.8.0
 status:
   lifecycle: ACTIVE_PRODUCTION_AUDIT
-  certification: NOT_CERTIFIED
+  certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
   audit_scope_complete: true
-  repository_completion: INCOMPLETE
+  repository_completion: OPEN_RESEARCH_REPOSITORY_OPERATIONALLY_CERTIFIED
+  operational_authorization: ACTIVE_OWNER_AUTHORIZED
 revision_history:
-  predecessor_version: 3.6.0
+  predecessor_version: 3.7.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete the final five Theologico-Political source studies, reaching 19-of-19 independent sequential reconstruction
-    within registered scopes while preserving textual-state, corroboration, semantic-completion, and certification limits.
+  reason: Record repository-owner certification and full operational authorization while retaining all factual, edition, witness,
+    and corroboration gaps as open research rather than bureaucratic blockers.
 basis:
   repository: izzy9118-blip/Strauss
   prior_validated_interface_commit: ea193b51b6664f69c90b3982c32d81cdbb6921b7
@@ -704,3 +705,4 @@ non_effects:
 - This audit does not alter active predecessors or accepted migration sources.
 - This audit does not authorize successor activation or completed-interface Sanctum repinning.
 - Later completion must proceed through forward revision with preserved provenance.
+owner_authorization: governance/repository-authorization.yaml

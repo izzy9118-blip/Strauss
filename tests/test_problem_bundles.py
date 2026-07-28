@@ -22,16 +22,16 @@ class ProblemBundleTests(unittest.TestCase):
     def test_all_problem_bundles_load_read_only_and_noncertifying(self) -> None:
         context = problem_bundles.build_problem_bundle_context()
         self.assertEqual(len(context["problems"]), 7)
-        self.assertEqual(context["authority"], "CANDIDATE_RUNTIME_CONTEXT_ONLY")
-        self.assertIn("no doctrinal certification", context["non_effects"])
-        self.assertIn("no predecessor displacement", context["non_effects"])
+        self.assertEqual(context["authority"], "AUTHORIZED_STRAUSS_RUNTIME_CONTEXT")
+        self.assertIn("evidence classifications remain binding", context["preserved_limits"])
+        self.assertIn("predecessor history remains recoverable", context["preserved_limits"])
 
         for bundle in context["problems"]:
             key = bundle["declaration"]["canonical_key"]
             with self.subTest(problem=key):
                 self.assertEqual(
                     bundle["authority"],
-                    "READ_ONLY_NONCERTIFYING_OPERATIONAL_CONTEXT",
+                    "AUTHORIZED_OPERATIONAL_PROBLEM_CONTEXT",
                 )
                 self.assertEqual(bundle["constitution"]["identity"]["canonical_key"], key)
                 self.assertEqual(bundle["inquiry_profile"]["identity"]["problem"], key)

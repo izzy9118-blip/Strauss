@@ -9,13 +9,13 @@ class CorpusRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_repository_state(self) -> None:
         registry = corpus_registry.load_registry()
         self.assertEqual(corpus_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.23.0")
+        self.assertEqual(registry["identity"]["version"], "1.24.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE",
         )
         self.assertEqual(registry["status"]["corpus_completion"], "INCOMPLETE_OPEN_CORPUS")
-        self.assertEqual(registry["status"]["certification"], "NOT_CERTIFIED")
+        self.assertEqual(registry["status"]["certification"], "OWNER_CERTIFIED_FOR_OPERATIONAL_USE")
 
     def test_identifiers_are_unique(self) -> None:
         registry = corpus_registry.load_registry()
@@ -304,11 +304,10 @@ class CorpusRegistryTests(unittest.TestCase):
 
     def test_context_is_read_only_and_noncertifying(self) -> None:
         context = corpus_registry.build_registry_context()
-        self.assertEqual(context["authority"], "READ_ONLY_DISCOVERY_AND_PROVENANCE_CONTEXT")
-        self.assertIn("no source-text admission", context["non_effects"])
-        self.assertIn("no doctrinal certification", context["non_effects"])
-        self.assertIn("no successor activation", context["non_effects"])
-        self.assertIn("no Assembly authority", context["non_effects"])
+        self.assertEqual(context["authority"], "OWNER_AUTHORIZED_CORPUS_CONTEXT")
+        self.assertIn("no source-text admission through the registry", context["preserved_limits"])
+        self.assertIn("no witness ranking as truth merely from registration", context["preserved_limits"])
+        self.assertIn("no erasure of documentary gaps or uncertainty", context["preserved_limits"])
 
 
 if __name__ == "__main__":
