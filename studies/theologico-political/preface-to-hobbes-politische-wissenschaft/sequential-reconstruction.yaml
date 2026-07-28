@@ -1,0 +1,375 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+
+identity:
+  id: HOBBES-PREFACE-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Preface to Hobbes Politische Wissenschaft
+  version: 1.0.0
+
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1965_german_preface_comparison: PENDING
+  1979_80_interpretation_translation_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+source:
+  source_id: CORPUS-SRC-116
+  source_status_id: CORPUS-STATUS-116
+  reviewed_witness_id: CORPUS-WIT-116
+  author: Leo Strauss
+  canonical_title: Preface to Hobbes Politische Wissenschaft
+  source_date: 1965
+  reviewed_container:
+    title: Jewish Philosophy and the Crisis of Modernity
+    subtitle: Essays and Lectures in Modern Jewish Thought
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+  textual_provenance:
+    german_book: "Hobbes Politische Wissenschaft (Neuwied am Rhein und Berlin: Hermann Luchterhand Verlag, 1965)"
+    preface_status: added_by_strauss_to_1965_first_publication_of_german_original
+    first_english_translation: "Interpretation 8, no. 1 (1979-80): 1-3"
+    translator: Donald J. Maletz
+    reviewed_text_relation: editor_states_this_english_translation_is_reproduced_in_1997_collection
+    separately_reviewed_1965_german_preface: false
+    separately_reviewed_1979_80_translation: false
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  locators:
+    printed_pages: {start: 453, end: 456}
+    strauss_preface_text_present_in_collection: {start: 453, end: 454}
+    notes: {start: 454, end: 456}
+    pdf_pages_one_based: {start: 472, end: 475}
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+source_limits:
+  - The reviewed witness reproduces Donald J. Maletz's English translation of Strauss's 1965 German preface; the 1965 German text and the 1979-80 Interpretation printing have not been separately reviewed.
+  - The 1997 collection reproduces Strauss's new comments through printed page 454 and then ends with the sentence introducing what Strauss had said thirteen years earlier; the three remaining paragraphs of the 1965 preface are not reproduced in the body of this collected item.
+  - Editorial note 8 identifies those omitted three paragraphs as a German translation of the Preface to the American Edition of The Political Philosophy of Hobbes (1952), xv-xvi; this study does not treat the omitted paragraphs as if their wording had been reviewed here.
+  - The notes on printed pages 454-456 were not provided by Strauss; the collection states that they are based on Donald J. Maletz's notes, with bracketed additions by the present editor.
+  - Hobbes, Spinoza, Kant, Carl Schmitt, Julius Ebbinghaus, Gerhard Kruger, Jacob Klein, and represented texts remain independently unreconstructed unless separately registered.
+  - Strauss's retrospective self-report is primary evidence for his stated intellectual development but not independent proof of the doctrines or historical roles of the thinkers he names.
+
+invoked_method_contracts:
+  recover_question: method/recover-question.yaml
+  reconstruct_alternatives: method/reconstruct-alternatives.yaml
+  textual_order: method/textual-order.yaml
+  preserve_problem: method/preserve-problem.yaml
+
+invoked_hermeneutic_contracts:
+  whole_and_part: hermeneutics/whole-and-part.yaml
+  speaker_and_author: hermeneutics/speaker-and-author.yaml
+  audience: hermeneutics/audience.yaml
+  contradiction: hermeneutics/contradiction.yaml
+  historical_and_philosophical_understanding: hermeneutics/historical-and-philosophical-understanding.yaml
+  literary_concealment: hermeneutics/literary-concealment.yaml
+
+method_application:
+  governing_question: >
+    What does Strauss's 1965 retrospective preface say about the origin and continuing orientation of his Hobbes study,
+    especially the theologico-political problem and the dispute between ancients and moderns, and what claims remain
+    untestable because the reviewed 1997 item omits the final three paragraphs of the original preface?
+  recovered_source_question: >
+    How does Strauss retrospectively situate his early Hobbes research within his movement from biblical criticism and
+    revived theology toward the theologico-political problem, true politics, and the ancient-modern dispute, while also
+    correcting his earlier Hobbes book and acknowledging deliberate obscurity in Hobbes's presentation?
+  reconstruction_rule: >
+    Read Strauss's reproduced preface text on printed pages 453-454 in order, then treat printed pages 454-456 as
+    translator/editorial notes. Do not reconstruct the omitted final three paragraphs from memory, predecessor synthesis,
+    or external knowledge. Claims that depend on those omitted paragraphs remain unresolved in this witness.
+  retrospective_evidence_rule: >
+    Strauss's retrospective statements establish what he says in 1965 about the origin, continuity, correction, and
+    present status of his own investigations. They do not by themselves establish that his retrospective account is a
+    complete causal history or that his characterizations of Hobbes, Spinoza, Kant, or other interlocutors are independently true.
+
+speaker_and_documentary_layers:
+  strauss_1965_preface:
+    role: primary source author and retrospective witness to his own intellectual development
+    rule: The reproduced text on printed pages 453-454 is primary evidence for Strauss's stated orientation and corrections.
+  hobbes_and_other_interlocutors_as_represented:
+    role: objects and stimuli within Strauss's retrospective account
+    examples: [Hobbes, Spinoza, Ebbinghaus, Carl Schmitt, Gerhard Kruger, Jacob Klein, Kant]
+    rule: Their doctrines and contributions require independent source reconstruction for corroboration.
+  donald_j_maletz:
+    role: English translator and source of most notes
+    rule: Translation and note content remain distinct from Strauss's German wording unless separately compared.
+  kenneth_hart_green_editorial_layer:
+    role: collection editor and bracketed annotator
+    rule: Editorial provenance and supplied excerpts may not be attributed to Strauss as part of the 1965 preface without explicit source support.
+
+sequential_reading:
+  - unit: HOBBES-PREFACE-RU-001
+    printed_pages: 453
+    function: Establish the textual history of the Hobbes book and identify formative positive and negative stimuli.
+    findings:
+      - id: HOBBES-PREFACE-DF-001
+        classification: documented_finding
+        proposition: >
+          Strauss states that the Hobbes study was composed in England in 1934-35, published in English translation in 1936, and appeared in its German original in 1965 with the present comments replacing his earlier introductory note.
+      - id: HOBBES-PREFACE-DF-002
+        classification: documented_finding
+        proposition: >
+          Strauss traces the leading thought of his Hobbes book to positive and negative stimuli received while still in Germany, especially Julius Ebbinghaus's vivid presentation of Hobbes and Carl Schmitt's judgment of Hobbes as a great systematic political thinker.
+      - id: HOBBES-PREFACE-UU-001
+        classification: unresolved_uncertainty
+        proposition: >
+          Strauss qualifies his recollection of Ebbinghaus with an explicit memory reservation, so the exact content of Ebbinghaus's 1922 position remains to be independently verified.
+
+  - unit: HOBBES-PREFACE-RU-002
+    printed_pages: 453-454
+    function: Locate the Hobbes study within biblical criticism, the theological revival, and the continuing theologico-political problem.
+    findings:
+      - id: HOBBES-PREFACE-DF-003
+        classification: documented_finding
+        proposition: >
+          Strauss states that his study of Hobbes began within an investigation of the seventeenth-century origins of biblical criticism, specifically Spinoza's Theologico-Political Treatise.
+      - id: HOBBES-PREFACE-DF-004
+        classification: documented_finding
+        proposition: >
+          Strauss says that the reawakening of theology associated for him with Karl Barth and Franz Rosenzweig made it necessary to investigate how far the critique of orthodox Jewish and Christian theology deserved its victory.
+      - id: HOBBES-PREFACE-DF-005
+        classification: documented_finding
+        proposition: >
+          Strauss explicitly states, "Since then the theological-political problem has remained the theme of my investigations."
+      - id: HOBBES-PREFACE-DF-006
+        classification: documented_finding
+        proposition: >
+          In the political dimension Strauss says that the contrast between Hobbes and Spinoza seemed more important and illuminating to him at the time than their agreement.
+      - id: HOBBES-PREFACE-DF-007
+        classification: documented_finding
+        proposition: >
+          Strauss says his first Hobbes study convinced him that prior accounts had not done justice to what is decisive in Hobbes.
+    uncertainties:
+      - The source establishes the continuity claim as Strauss's retrospective self-description; it does not by itself demonstrate that every later investigation is governed exclusively by the theologico-political problem.
+
+  - unit: HOBBES-PREFACE-RU-003
+    printed_pages: 454
+    function: Explain the double intention of the Hobbes study and connect theology, true politics, and the ancient-modern dispute.
+    findings:
+      - id: HOBBES-PREFACE-DF-008
+        classification: documented_finding
+        proposition: >
+          Access to English sources led Strauss to give the Hobbes study a double intention: analyze the mature teaching and investigate how and from what sources that teaching had formed in Hobbes's mind.
+      - id: HOBBES-PREFACE-DF-009
+        classification: documented_finding
+        proposition: >
+          Strauss says philosophic interest in theology linked him with Gerhard Kruger and that Kruger's review of his Spinoza book expressed Strauss's own intention and result more clearly than he had done.
+      - id: HOBBES-PREFACE-DF-010
+        classification: documented_finding
+        proposition: >
+          Strauss says Kruger's Kant book helped explain why he directed himself wholly to "true politics" and why he did not write about Hobbes as a Hobbesian.
+      - id: HOBBES-PREFACE-DF-011
+        classification: documented_finding
+        proposition: >
+          Strauss links himself with Jacob Klein through the conviction that the dispute between ancients and moderns must be understood more thoroughly and exactly before deciding for the modern or ultramodern.
+    uncertainties:
+      - The phrase "true politics" is cited by Strauss but its full philosophical content is not independently reconstructed in this short preface.
+
+  - unit: HOBBES-PREFACE-RU-004
+    printed_pages: 454
+    function: Record Strauss's corrections to the early Hobbes book and his claim about Hobbesian obscurity.
+    findings:
+      - id: HOBBES-PREFACE-DF-012
+        classification: documented_finding
+        proposition: >
+          Strauss states that he tacitly corrected defects of the Hobbes book, as they became known to him, in Natural Right and History and in his critique of Raymond Polin's Hobbes book.
+      - id: HOBBES-PREFACE-DF-013
+        classification: documented_finding
+        proposition: >
+          Strauss says only in the later critique did he succeed in laying bare the simple leading thought of Hobbes's teaching about man.
+      - id: HOBBES-PREFACE-DF-014
+        classification: documented_finding
+        proposition: >
+          Strauss states that Hobbes never laid bare this leading thought for "obscure reasons," that Hobbes's famous clarity is limited to conclusions while his presuppositions are shrouded in obscurity, and that this obscurity is not in every respect involuntary.
+      - id: HOBBES-PREFACE-SI-001
+        classification: supported_inference
+        proposition: >
+          Strauss's remark supplies source-local evidence that apparent clarity at the level of conclusions need not imply equal explicitness at the level of presuppositions, but it does not by itself establish a complete esoteric doctrine in Hobbes.
+    uncertainties:
+      - The specific leading thought about man is not laid out by Strauss in the reproduced preface body; the collection supplies an excerpt from the later note editorially on printed page 456.
+
+  - unit: HOBBES-PREFACE-RU-005
+    printed_pages: 454
+    function: Mark the documentary boundary created by the omitted final three paragraphs.
+    findings:
+      - id: HOBBES-PREFACE-DF-015
+        classification: documented_finding
+        proposition: >
+          Strauss says he still allows to stand what he had stated thirteen years earlier in the preface to the American edition and introduces that earlier statement with "I said then...."
+      - id: HOBBES-PREFACE-DO-001
+        classification: structural_evidence
+        proposition: >
+          The reviewed 1997 item does not reproduce the three remaining paragraphs after Strauss's introductory sentence; editorial note 8 identifies them as a German translation of the 1952 Preface to the American Edition, pages xv-xvi.
+      - id: HOBBES-PREFACE-UU-002
+        classification: unresolved_uncertainty
+        proposition: >
+          Any substantive claim depending on those omitted three paragraphs, including the predecessor's formulation concerning sovereign peace as political neutralization rather than philosophic resolution, cannot be independently retested from the reproduced 1997 body alone.
+
+  - unit: HOBBES-PREFACE-RU-006
+    printed_pages: 454-456
+    function: Separate translator/editorial notes from Strauss's reproduced preface and preserve their documentary use.
+    findings:
+      - id: HOBBES-PREFACE-DO-002
+        classification: structural_evidence
+        proposition: >
+          The collection explicitly states that the notes were not provided by Strauss, are based on notes contributed by translator Donald J. Maletz, and include bracketed additions by the present editor.
+      - id: HOBBES-PREFACE-DO-003
+        classification: structural_evidence
+        proposition: >
+          Editorial note 1 identifies the 1965 German publication, the 1936 English book, the 1979-80 first English translation of the preface, and the fact that the Maletz translation is reproduced in the 1997 collection.
+      - id: HOBBES-PREFACE-DO-004
+        classification: structural_evidence
+        proposition: >
+          Editorial note 7 reproduces what it calls likely the key section of Strauss's later What Is Political Philosophy? note on Hobbes's definition of man, but that supplied excerpt is not part of the reproduced 1965 preface body.
+      - id: HOBBES-PREFACE-UU-003
+        classification: unresolved_uncertainty
+        proposition: >
+          Translation-specific wording remains revisable until the 1965 German preface and the 1979-80 Interpretation printing are separately reviewed and aligned.
+
+permanent_findings:
+  - id: HOBBES-PREFACE-PF-001
+    classification: documented_finding
+    proposition: >
+      Strauss retrospectively locates his Hobbes study within his investigation of Spinoza and the origins of biblical criticism.
+  - id: HOBBES-PREFACE-PF-002
+    classification: documented_finding
+    proposition: >
+      The revival of theology led Strauss to reopen the question of whether the critique of orthodox Jewish and Christian theology deserved its apparent victory.
+  - id: HOBBES-PREFACE-PF-003
+    classification: documented_finding
+    proposition: >
+      Strauss explicitly states that the theologico-political problem had remained the theme of his investigations since that early inquiry.
+  - id: HOBBES-PREFACE-PF-004
+    classification: documented_finding
+    proposition: >
+      Strauss's Hobbes study combined analysis of the mature teaching with historical investigation of how and from what sources that teaching formed.
+  - id: HOBBES-PREFACE-PF-005
+    classification: documented_finding
+    proposition: >
+      Strauss connects his turn toward "true politics" with philosophic interest in theology and insists that the dispute between ancients and moderns must be understood before choosing the modern or ultramodern position.
+  - id: HOBBES-PREFACE-PF-006
+    classification: documented_finding
+    proposition: >
+      Strauss treats his early Hobbes book as corrigible and explicitly directs the reader to later works in which he tacitly corrected defects and clarified the leading thought of Hobbes's teaching about man.
+  - id: HOBBES-PREFACE-PF-007
+    classification: documented_finding
+    proposition: >
+      Strauss distinguishes Hobbes's clear conclusions from obscure presuppositions and says the obscurity is not in every respect involuntary.
+  - id: HOBBES-PREFACE-PF-008
+    classification: bounded_conclusion
+    proposition: >
+      The remark on involuntary and voluntary obscurity warrants investigation of presentation and presupposition but does not by itself warrant mechanical inversion or the assumption of a complete hidden doctrine.
+  - id: HOBBES-PREFACE-PF-009
+    classification: unresolved_uncertainty
+    proposition: >
+      The reviewed 1997 body omits the final three paragraphs of the 1965 preface, so claims that depend on those paragraphs remain untested by this witness even though editorial note 8 identifies their source.
+
+speech_and_deed_analysis:
+  explicit_speech: >
+    Strauss uses the 1965 preface to explain the intellectual origins and double intention of his Hobbes book, identify the
+    theologico-political problem as the continuing theme of his investigations, connect that inquiry to true politics and
+    the ancient-modern dispute, and direct readers to later corrections of his earlier Hobbes interpretation.
+  textual_deed: >
+    The preface is retrospective and self-corrective: Strauss names formative interlocutors, relocates Hobbes within a
+    larger inquiry beginning with Spinoza and revived theology, acknowledges defects in his earlier book, and makes the
+    reader follow later writings to recover what he regards as Hobbes's simple leading thought and the significance of
+    obscure presuppositions.
+  relation: RETROSPECTIVE_SELF_CORRECTION_AND_REORIENTATION_OF_THE_HOBBES_PROJECT
+  finding: >
+    The source shows continuity without doctrinal stasis: Strauss claims a continuing theologico-political theme while
+    simultaneously marking substantive corrections and a deepened ancient-modern inquiry.
+
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives:
+      - origins of the Hobbes study in Spinoza's Theologico-Political Treatise and biblical criticism
+      - revived theology and renewed scrutiny of the critique of orthodox Jewish and Christian theology
+      - Strauss's explicit statement that the theologico-political problem remained the theme of his investigations
+      - Hobbes-Spinoza contrast and the movement toward true politics
+    non_absorption: >
+      The source does not independently reconstruct the omitted sovereign-peace argument, Spinoza, Hobbes, Barth,
+      Rosenzweig, or orthodox theology and therefore cannot be used to certify the predecessor's entire Hobbes contribution.
+  ancients_vs_moderns:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives:
+      - the requirement to understand the dispute between ancients and moderns before choosing the modern or ultramodern
+      - Hobbes as an object through which Strauss reassesses modern political philosophy
+      - retrospective correction of the early Hobbes book through Natural Right and History and What Is Political Philosophy?
+    non_absorption: >
+      The short preface does not itself reconstruct the ancient position, the modern position, or Hobbes's complete place
+      in their dispute; those claims remain dependent on the cited works and independent source reconstruction.
+
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  predecessor_statement: >
+    Names the theologico-political problem as a continuing theme of Strauss's investigations and examines sovereign peace as political neutralization rather than philosophic resolution.
+  statement_status: PREDECESSOR_SYNTHESIS_PARAPHRASE_NOT_SOURCE_QUOTATION
+  state: PARTIALLY_RETESTED_WITH_DOCUMENTARY_LIMIT_NO_PROMOTION
+  confirmations:
+    - Strauss explicitly states that the theologico-political problem has remained the theme of his investigations since his early inquiry into Spinoza and biblical criticism.
+    - The preface connects that problem to Hobbes, revived theology, true politics, and the ancient-modern dispute.
+  not_retestable_from_reviewed_body:
+    - The sovereign-peace formulation depends on material not reproduced in the reviewed 1997 preface body; the collection ends Strauss's reproduced comments with the introduction to his earlier American preface and identifies the omitted three paragraphs only in editorial note 8.
+  qualifications:
+    - The source is more explicitly a retrospective account of intellectual development and correction than a fresh substantive exposition of Hobbes's political doctrine.
+    - Strauss's statement of continuity coexists with explicit correction of defects in his earlier Hobbes book.
+    - Hobbesian obscurity is described as partly non-involuntary, but the source does not supply a mechanical decoding rule.
+  unresolved:
+    - The 1965 German preface and the 1979-80 Maletz translation have not been separately reviewed.
+    - The omitted final three paragraphs and the 1952 American preface require a separately reviewed textual witness before the sovereign-peace claim can be retested.
+    - Hobbes, Spinoza, and the other named interlocutors remain independently incomplete unless separately registered.
+  predecessor_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+
+uncertainties:
+  - id: HOBBES-PREFACE-U-001
+    statement: The study is specific to the 1997 reproduction of the Maletz translation and remains revisable after alignment with the 1965 German preface and the 1979-80 Interpretation printing.
+  - id: HOBBES-PREFACE-U-002
+    statement: The omitted final three paragraphs block complete source-level retesting of the predecessor's sovereign-peace formulation.
+  - id: HOBBES-PREFACE-U-003
+    statement: Strauss's retrospective causal account of his intellectual development and his characterizations of named interlocutors require independent corroboration for historical claims beyond his own stated orientation.
+
+prohibitions:
+  - Do not reconstruct omitted text from the predecessor, memory, editorial summaries, or general knowledge.
+  - Do not attribute translator/editorial notes or supplied excerpts to Strauss's 1965 preface body.
+  - Do not treat Strauss's retrospective continuity claim as proof that all later work has a single doctrinal conclusion.
+  - Do not treat Hobbes's partly voluntary obscurity as a license for mechanical inversion.
+  - Do not treat the 1997 translation as independently identical to the 1965 German text or 1979-80 printing without comparison.
+  - Do not promote the sovereign-peace predecessor claim beyond PARTIALLY_RETESTED_WITH_DOCUMENTARY_LIMIT in this witness.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL_WITH_DOCUMENTARY_OMISSION_LIMIT
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_TRANSLATION
+  source_status_update_required: true
+  corpus_study_registration_required: true
+  findings_registration_required: true
+  problem_integration_required: true
+  independent_witness_expansion_required: true
+  original_1965_german_preface_comparison_required: true
+  1979_80_translation_comparison_required: true
+  omitted_1952_american_preface_text_review_required: true
+  certification: NOT_CERTIFIED
+  migration_effect: NONE
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE
+  next_units:
+    - update CORPUS-STATUS-116 to record HOBBES-PREFACE-STUDY-001
+    - register CORPUS-STUDY-015 and FINDSET-015
+    - create jurisdiction-preserving Theologico-Political and Ancients-versus-Moderns synthesis bridges
+    - validate the documentary-omission limit against any predecessor comparison
+    - proceed to CORPUS-SRC-101 after merge while preserving all edition, certification, migration, activation, and repin blockers

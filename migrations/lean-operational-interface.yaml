@@ -3,7 +3,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.11.0
+  version: 1.12.0
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
   structural_interface: IMPLEMENTED
@@ -11,11 +11,10 @@ status:
   certification: NOT_CERTIFIED
   destructive_actions_authorized: false
 revision_history:
-  predecessor_version: 1.10.0
+  predecessor_version: 1.11.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Synchronize PERSECUTION-INTRO-STUDY-001, corpus registry v1.15.0, findings v1.7.0, audit v2.9.0, process
-    v1.13.0, and schedule v1.11.0 while preserving twelve pending studies, noncorroboration, noncertification, predecessor
-    authority, and repository incompleteness.
+  reason: Synchronize HOBBES-PREFACE-STUDY-001, corpus v1.16.0, findings v1.8.0, audit v3.0.0, process v1.14.0,
+    and schedule v1.12.0 while preserving eleven pending studies and the documentary-omission limit.
 source_state:
   repository: izzy9118-blip/Strauss
   governing_commit_before_mapping: 853dd7de13d7bf4abc881fc7671a5833b822b6cb
@@ -29,7 +28,7 @@ source_state:
   - scripts/
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 2.9.0
+  version: 3.0.0
   rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be
     reported as doctrinal, migration, successor, or repository completion.
 
@@ -40,7 +39,7 @@ production_process:
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
   completed_witness_subunit: THEOLOGICO_POLITICAL_REVIEWED_WITNESSES_19_OF_19_COMPLETE
-  completed_study_subunit: SEVEN_OF_19_COMPLETE_PROVISIONAL_TWELVE_PENDING
+  completed_study_subunit: EIGHT_OF_19_COMPLETE_PROVISIONAL_ELEVEN_PENDING
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 mapping_rules:
@@ -190,7 +189,7 @@ mappings:
     - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.15.0
+      registry_version: 1.16.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
     transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COMPLETE_NINETEEN_ITEM_REVIEWED_WITNESS_COVERAGE
@@ -226,8 +225,8 @@ mappings:
       remaining_count: 0
       reviewed_witness_count: 19
       remaining_without_reviewed_witness: 0
-      independent_sequential_study_count: 7
-      remaining_without_independent_sequential_study: 12
+      independent_sequential_study_count: 8
+      remaining_without_independent_sequential_study: 11
       completed_study_ids:
       - COHEN-STUDY-001
       - JA-STUDY-001
@@ -236,6 +235,7 @@ mappings:
       - SPINOZA-TREATISE-STUDY-001
       - GENESIS-STUDY-001
       - PERSECUTION-INTRO-STUDY-001
+      - HOBBES-PREFACE-STUDY-001
       witness_only_source_ids:
       - CORPUS-SRC-101
       - CORPUS-SRC-104
@@ -245,7 +245,6 @@ mappings:
       - CORPUS-SRC-112
       - CORPUS-SRC-114
       - CORPUS-SRC-115
-      - CORPUS-SRC-116
       - CORPUS-SRC-117
       - CORPUS-SRC-118
       - CORPUS-SRC-119
@@ -266,25 +265,25 @@ mappings:
       and no successor effect
     - validate PERSECUTION-INTRO-STUDY-001 as a complete provisional reconstruction with pending 1952 comparison
       and no successor effect
-    limit: Current-state exhaustiveness, nineteen reviewed item witnesses, and seven complete provisional item studies
-      do not create a complete corpus, supply independent corroboration, certify findings, or authorize migration
-      and activation.
+    limit: Current-state exhaustiveness, nineteen reviewed item witnesses, and eight complete provisional item studies
+      do not create a complete corpus, supply independent corroboration, resolve documentary omissions, certify
+      findings, or authorize migration and activation.
   findings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.7.0
+      registry_version: 1.8.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
-    - finding_set_id: FINDSET-014
-      path: studies/theologico-political/introduction-to-persecution-and-the-art-of-writing/sequential-reconstruction.yaml
-    - finding_set_id: FINDSET-127
-      path: problems/theologico-political/synthesis/introduction-to-persecution-and-the-art-of-writing.yaml
-      derived_from: FINDSET-014
-    - finding_set_id: FINDSET-128
-      path: problems/wise-vs-vulgar/synthesis/introduction-to-persecution-and-the-art-of-writing.yaml
-      derived_from: FINDSET-014
+    - finding_set_id: FINDSET-015
+      path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-129
+      path: problems/theologico-political/synthesis/preface-to-hobbes-politische-wissenschaft.yaml
+      derived_from: FINDSET-015
+    - finding_set_id: FINDSET-130
+      path: problems/ancients-vs-moderns/synthesis/preface-to-hobbes-politische-wissenschaft.yaml
+      derived_from: FINDSET-015
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
     limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify
       doctrine or migration, displace predecessors, or activate successors.

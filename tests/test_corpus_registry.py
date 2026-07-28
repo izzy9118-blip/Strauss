@@ -9,7 +9,7 @@ class CorpusRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_repository_state(self) -> None:
         registry = corpus_registry.load_registry()
         self.assertEqual(corpus_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.15.0")
+        self.assertEqual(registry["identity"]["version"], "1.16.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE",
@@ -37,9 +37,9 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertTrue(corpus_registry.BASE_REQUIRED_STUDY_PATHS.issubset(actual))
         self.assertEqual(
             registry["coverage"]["current_studies_tree_yaml_records_accounted_for"],
-            54,
+            55,
         )
-        self.assertEqual(registry["coverage"]["study_records_registered"], 14)
+        self.assertEqual(registry["coverage"]["study_records_registered"], 15)
         self.assertEqual(registry["coverage"]["reviewed_witnesses_registered"], 22)
 
     def test_nineteen_tp_sources_preserve_predecessor_identity(self) -> None:
@@ -62,11 +62,11 @@ class CorpusRegistryTests(unittest.TestCase):
             19,
         )
 
-    def test_twelve_tp_sources_have_witnesses_but_still_require_study(self) -> None:
+    def test_eleven_tp_sources_have_witnesses_but_still_require_study(self) -> None:
         registry = corpus_registry.load_registry()
         entries = {item["source_id"]: item for item in registry["source_status_records"] if corpus_registry._tp_sequence_from_source_id(item["source_id"]) is not None}
         sources = [item for item in registry["source_entities"] if item["source_id"] in corpus_registry.WITNESS_ONLY_TP_ITEMS]
-        self.assertEqual(len(sources), 12)
+        self.assertEqual(len(sources), 11)
         self.assertEqual(set(corpus_registry.WITNESS_ONLY_TP_ITEMS), {item["source_id"] for item in sources})
         for source in sources:
             status = corpus_registry.load_yaml(corpus_registry._resolve(entries[source["source_id"]]["path"]))
@@ -139,6 +139,20 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertEqual(study_record["termination"]["reading_state"], "COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS")
         self.assertEqual(study_record["termination"]["successor_effect"], "NONE")
         self.assertEqual(witness_record["termination"]["study_state"], "INCOMPLETE")
+
+    def test_hobbes_preface_witness_and_study_preserve_omitted_text_limit(self) -> None:
+        registry = corpus_registry.load_registry()
+        source = next(item for item in registry["source_entities"] if item["source_id"] == "CORPUS-SRC-116")
+        entry = next(item for item in registry["source_status_records"] if item["source_id"] == "CORPUS-SRC-116")
+        study = next(item for item in registry["study_records"] if item["study_id"] == "CORPUS-STUDY-015")
+        status = corpus_registry.load_yaml(corpus_registry._resolve(entry["path"]))
+        record = corpus_registry.load_yaml(corpus_registry._resolve(study["path"]))
+        self.assertEqual(source["study_records"], ["CORPUS-STUDY-015"])
+        self.assertEqual(status["status"]["independent_sequential_study"], "HOBBES-PREFACE-STUDY-001")
+        self.assertEqual(status["termination"]["study_state"], "COMPLETE_PROVISIONAL")
+        self.assertEqual(status["termination"]["documentary_omission_limit"], "ACTIVE")
+        self.assertEqual(record["termination"]["source_reconstruction_state"], "COMPLETE_PROVISIONAL_WITH_DOCUMENTARY_OMISSION_LIMIT")
+        self.assertEqual(record["termination"]["successor_effect"], "NONE")
 
     def test_spinoza_preface_platform_witness_and_study_are_registered(self) -> None:
         registry = corpus_registry.load_registry()

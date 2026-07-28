@@ -5,7 +5,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 1.11.0
+  version: 1.12.0
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
   structural_validation: REQUIRED_ON_EACH_CHANGE
@@ -21,11 +21,11 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.10.0
-  predecessor_blob_sha: 17c3d070d98b8ba08a9b5fff3ab1964018c13229
-  reason: Register PERSECUTION-INTRO-STUDY-001 as the seventh complete provisional Theologico-Political item study
-    and synchronize corpus v1.15.0, findings v1.7.0, audit v2.9.0, mapping v1.11.0, process v1.13.0, and schedule
-    v1.11.0 while preserving twelve pending studies, edition-comparison limits, noncertification, predecessor authority,
+  predecessor_version: 1.11.0
+  predecessor_blob_sha: PRESERVED_BY_GIT
+  reason: Register HOBBES-PREFACE-STUDY-001 as the eighth complete provisional Theologico-Political item study and
+    synchronize corpus v1.16.0, findings v1.8.0, audit v3.0.0, mapping v1.12.0, process v1.14.0, and schedule v1.12.0
+    while preserving eleven pending studies, the documentary-omission limit, noncertification, predecessor authority,
     and the Sanctum repin block.
 purpose: 'Provide one compact, machine-readable entry point through which a runtime can load the repository''s problems,
   hermeneutics, method, speech discipline, corpus registry, and findings registry without deleting, overwriting,
@@ -34,7 +34,7 @@ purpose: 'Provide one compact, machine-readable entry point through which a runt
   '
 audit:
   path: audits/operational-completeness.yaml
-  version: 2.9.0
+  version: 3.0.0
   classification_vocabulary:
   - SUBSTANTIVELY_RECONSTRUCTED
   - PARTIALLY_RECONSTRUCTED
@@ -53,7 +53,7 @@ component_completion:
   corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   reviewed_source_witnesses: TWENTY_TWO_REVIEWED_WITNESSES_TOTAL_WITH_ALL_NINETEEN_THEOLOGICO_POLITICAL_PREDECESSOR_ITEMS_WITNESSED
-  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_19_OF_19_REVIEWED_ITEM_WITNESSES_7_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES
+  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_19_OF_19_REVIEWED_ITEM_WITNESSES_8_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
@@ -207,7 +207,7 @@ speech:
 corpus:
   index: corpus/index.yaml
   loader: corpus_registry.py
-  registry_version: 1.15.0
+  registry_version: 1.16.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   reviewed_witnesses:
@@ -419,8 +419,8 @@ corpus:
     remaining_without_item_level_status: 0
     reviewed_witness_count: 19
     remaining_without_reviewed_item_witness: 0
-    independent_sequential_study_count: 7
-    remaining_without_independent_sequential_study: 12
+    independent_sequential_study_count: 8
+    remaining_without_independent_sequential_study: 11
     completed_study_ids:
     - COHEN-STUDY-001
     - JA-STUDY-001
@@ -429,26 +429,27 @@ corpus:
     - SPINOZA-TREATISE-STUDY-001
     - GENESIS-STUDY-001
     - PERSECUTION-INTRO-STUDY-001
+    - HOBBES-PREFACE-STUDY-001
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     root: studies/theologico-political/
     priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
-    rule: All nineteen predecessor items have reviewed witnesses and seven have complete provisional source studies.
+    rule: All nineteen predecessor items have reviewed witnesses and eight have complete provisional source studies.
       Witness and study completion remain distinct from independent corroboration, doctrinal certification, migration
       completion, successor activation, or repository completion.
-  limitation: All nineteen predecessor writings have bounded identities and reviewed item witnesses. Seven have
-    complete provisional sequential studies, including CORPUS-SRC-113 from the fingerprinted 1997 collected witness;
-    twelve still lack independent studies. Original-edition comparisons, independent witnesses, and source-text
+  limitation: All nineteen predecessor writings have bounded identities and reviewed item witnesses. Eight have
+    complete provisional sequential studies; CORPUS-SRC-116 retains an explicit documentary-omission limit, and
+    eleven sources still lack independent studies. Textual-state comparisons, independent witnesses, and source-text
     access remain incomplete.
 findings:
   index: findings/index.yaml
   loader: findings_registry.py
-  registry_version: 1.7.0
+  registry_version: 1.8.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   newly_registered:
-  - FINDSET-014
-  - FINDSET-127
-  - FINDSET-128
+  - FINDSET-015
+  - FINDSET-129
+  - FINDSET-130
   limitation: 'Proposition-level normalization, source-asymmetry repair, independent witness expansion, doctrinal
     certification, migration certification, and successor activation remain incomplete.
 
