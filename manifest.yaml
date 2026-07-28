@@ -5,7 +5,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 1.18.0
+  version: 1.19.0
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
   structural_validation: REQUIRED_ON_EACH_CHANGE
@@ -20,11 +20,11 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.17.0
+  predecessor_version: 1.18.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Register WIPP-FIRST-PARAGRAPH-STUDY-001 as the fourteenth complete provisional Theologico-Political item study and
-    synchronize corpus v1.22.0, findings v1.14.0, audit v3.6.0, mapping v1.18.0, process v1.20.0, and schedule v1.18.0 while
-    preserving five pending studies and the first-paragraph boundary.
+  reason: Complete the final five Theologico-Political source studies and synchronize corpus v1.23.0, findings v1.15.0, audit
+    v3.7.0, mapping v1.19.0, process v1.21.0, and schedule v1.19.0 while preserving repository semantic incompletion and all
+    noncertification safeguards.
 purpose: 'Provide one compact, machine-readable entry point through which a runtime can load the repository''s problems, hermeneutics,
   method, speech discipline, corpus registry, and findings registry without deleting, overwriting, or silently harmonizing
   the richer records from which this interface is derived.
@@ -32,7 +32,7 @@ purpose: 'Provide one compact, machine-readable entry point through which a runt
   '
 audit:
   path: audits/operational-completeness.yaml
-  version: 3.6.0
+  version: 3.7.0
   classification_vocabulary:
   - SUBSTANTIVELY_RECONSTRUCTED
   - PARTIALLY_RECONSTRUCTED
@@ -51,7 +51,7 @@ component_completion:
   corpus_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   findings_registry_loader: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   reviewed_source_witnesses: TWENTY_TWO_REVIEWED_WITNESSES_TOTAL_WITH_ALL_NINETEEN_THEOLOGICO_POLITICAL_PREDECESSOR_ITEMS_WITNESSED
-  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_19_OF_19_REVIEWED_ITEM_WITNESSES_14_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES
+  theologico_political_item_level_source_statuses: 19_OF_19_IDENTITIES_19_OF_19_REVIEWED_ITEM_WITNESSES_19_OF_19_COMPLETE_PROVISIONAL_ITEM_STUDIES_WITHIN_REGISTERED_SCOPES
   speech_mechanism: PARTIALLY_RECONSTRUCTED
   hermeneutics: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
   method: SUBSTANTIVELY_RECONSTRUCTED_SOURCE_APPLICATION_INCOMPLETE
@@ -206,7 +206,7 @@ speech:
 corpus:
   index: corpus/index.yaml
   loader: corpus_registry.py
-  registry_version: 1.22.0
+  registry_version: 1.23.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_CORPUS
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   reviewed_witnesses:
@@ -418,8 +418,8 @@ corpus:
     remaining_without_item_level_status: 0
     reviewed_witness_count: 19
     remaining_without_reviewed_item_witness: 0
-    independent_sequential_study_count: 14
-    remaining_without_independent_sequential_study: 5
+    independent_sequential_study_count: 19
+    remaining_without_independent_sequential_study: 0
     completed_study_ids:
     - COHEN-STUDY-001
     - JA-STUDY-001
@@ -435,25 +435,46 @@ corpus:
     - WHY-REMAIN-JEWS-STUDY-001
     - STATE-ISRAEL-LETTER-STUDY-001
     - WIPP-FIRST-PARAGRAPH-STUDY-001
+    - GOOD-SOCIETY-STUDY-001
+    - UNSPOKEN-PROLOGUE-STUDY-001
+    - GIVING-ACCOUNTS-STUDY-001
+    - PHILOSOPHY-LAW-PLAN-STUDY-001
+    - HIERO-RESTATEMENT-LAST-PARAGRAPH-STUDY-001
     status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
     root: studies/theologico-political/
     priority_schedule: history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml
-    rule: All nineteen predecessor items have reviewed witnesses and fourteen have complete provisional source studies within
-      registered scopes. Witness and study completion remain distinct from independent corroboration, doctrinal certification,
-      migration completion, successor activation, or repository completion.
+    rule: All nineteen predecessor items have reviewed witnesses and complete provisional source studies within their registered
+      scopes. This sequence completion remains distinct from original-edition comparison, independent corroboration, doctrinal
+      certification, migration completion, successor activation, or repository completion.
   limitation: All nineteen predecessor writings have bounded identities and reviewed item witnesses. Thirteen have complete
     provisional sequential studies; explicit omission, transcription, editorial, textual-state, and predecessor-qualification
     limits remain active, and six sources still lack independent studies.
 findings:
   index: findings/index.yaml
   loader: findings_registry.py
-  registry_version: 1.14.0
+  registry_version: 1.15.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   newly_registered:
-  - FINDSET-021
-  - FINDSET-142
-  - FINDSET-143
+  - FINDSET-022
+  - FINDSET-023
+  - FINDSET-024
+  - FINDSET-025
+  - FINDSET-026
+  - FINDSET-144
+  - FINDSET-145
+  - FINDSET-146
+  - FINDSET-147
+  - FINDSET-148
+  - FINDSET-149
+  - FINDSET-150
+  - FINDSET-151
+  - FINDSET-152
+  - FINDSET-153
+  - FINDSET-154
+  - FINDSET-155
+  - FINDSET-156
+  - FINDSET-157
   limitation: 'Proposition-level normalization, source-asymmetry repair, independent witness expansion, doctrinal certification,
     migration certification, and successor activation remain incomplete.
 

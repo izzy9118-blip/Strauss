@@ -1,0 +1,47 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity:
+  id: FINDSET-156-SYNTHESIS
+  title: Restatement on Xenophon's Hiero — ancients-vs-moderns local synthesis
+  version: 1.0.0
+status:
+  lifecycle: PROVISIONAL_SOURCE_DERIVED_SYNTHESIS
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+  predecessor_effect: NONE
+derivation:
+  source_finding_set: FINDSET-026
+  source_id: CORPUS-SRC-119
+  study_id: HIERO-RESTATEMENT-LAST-PARAGRAPH-STUDY-001
+  witness_id: CORPUS-WIT-119
+  rule: Derived only from the completed source-specific reconstruction; repetition does not create independent corroboration.
+problem:
+  canonical_key: ancients-vs-moderns
+  role: CONTROLLED_SECONDARY_JURISDICTION
+  receives: [classical philosophy versus Kojeve, eternal order versus historicism, citizen of the whole versus citizen of
+      the earth]
+  non_absorption: The paragraph does not stand for the whole ancient-modern dispute.
+source_findings:
+- id: HIERO-LAST-PF-001
+  classification: documented_finding
+  proposition: 'The last paragraph identifies the deepest dispute with Kojeve as the legitimation of classical philosophy’s
+    presupposition of eternal unchanging order against historical self-creation of Being.'
+- id: HIERO-LAST-PF-002
+  classification: documented_finding
+  proposition: 'The classical position distinguishes political conditions of philosophy from sources of philosophic truth;
+    the historicist position threatens that distinction by making social-historical change constitutive of Being and truth.'
+- id: HIERO-LAST-PF-003
+  classification: documented_finding
+  proposition: 'The practical contrast is between attachment to human-historical concerns and philosophic detachment toward
+    the whole.'
+- id: HIERO-LAST-PF-004
+  classification: documentary_limit
+  proposition: 'The registered paragraph does not itself formulate a doctrine of a universal state or theological implications.'
+predecessor_retest:
+  state: PROVISIONAL_RETEST_STRONG_CONFIRMATION_WITH_REGISTERED_SCOPE_QUALIFICATION_NO_PROMOTION
+  predecessor_effect: NONE
+limits:
+- source-specific derivation only
+- independent corroboration remains incomplete
+- earlier textual state comparison remains pending
+- no doctrinal certification, migration certification, successor activation, or predecessor displacement

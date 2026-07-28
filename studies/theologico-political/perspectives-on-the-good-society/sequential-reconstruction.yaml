@@ -1,0 +1,144 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+identity:
+  id: GOOD-SOCIETY-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, Perspectives on the Good Society
+  version: 1.0.0
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1963_criterion_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+source:
+  source_id: CORPUS-SRC-114
+  source_status_id: CORPUS-STATUS-114
+  reviewed_witness_id: CORPUS-WIT-114
+  author: Leo Strauss
+  canonical_title: Perspectives on the Good Society
+  source_date: 1963
+  source_form: PUBLISHED_COLLOQUIUM_REPORT_AND_CRITICAL_COMMENTARY
+  reviewed_container: {title: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, place: Albany, year: 1997}
+  editorial_provenance:
+    original_appearance: 'Criterion 2, no. 3 (Summer 1963): 2-9'
+    separately_reviewed_original_1963_printing: false
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  container_page_count: 526
+  container_file_size_bytes: 39287307
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  locators: {printed_pages: {start: 431, end: 445}, pdf_pages_one_based: {start: 450, end: 464}}
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+source_limits:
+  - The reviewed witness is the 1997 SUNY collected reprint, not a separately reviewed copy of the 1963 Criterion printing.
+  - The essay is a report on a Jewish-Protestant colloquium. Claims by Scott, Schary, Petuchowski, Rylaarsdam, Arthur A. Cohen, Wild, Ricoeur, Nahum Glatzer, Winter, and Nathan Glazer remain attributed to those speakers unless Strauss explicitly adopts, criticizes, or reformulates them.
+  - Strauss repeatedly marks uncertainty with formulations such as if I understood him correctly; reported positions may not be silently converted into Strauss's own doctrine.
+  - The source does not prove the truth of Judaism, Christianity, natural law, redemption, nuclear strategy, social-scientific claims, or historical claims made by participants.
+  - The final scriptural and unwritten-Torah reflections are Strauss's interpretive conclusions in this report; they are not independent corroboration of biblical or rabbinic traditions.
+method_application:
+  governing_question: How does Strauss use a colloquium on the good society to test secularism, religious pluralism, political improvement, social action, and the limits of projects that promise a final or self-sufficient social order?
+  reconstruction_rule: Read printed pages 431-445 in order, keeping participant speech distinct from Strauss's report and criticism, and compare the full reconstruction with the active predecessor only afterward.
+speaker_and_documentary_layers:
+  strauss_report_and_commentary: AUTHORIAL_REPORTING_AND_CRITICAL_VOICE
+  colloquium_participants: REPORTED_OR_QUOTED_INTERLOCUTORS_NOT_AUTOMATICALLY_STRAUSS
+  collected_edition_note_layer: SEPARATE_FROM_ARGUMENTATIVE_BODY
+sequential_reading:
+  - unit: GOOD-SOCIETY-RU-001
+    printed_pages: 431-433
+    function: Establish the colloquium, the situational route to principles, and the critique of the sovereign self.
+    findings:
+      - {id: GOOD-SOCIETY-DF-001, classification: documented_finding, proposition: 'Strauss begins from a Jewish-Protestant effort united by concern for the good society while preserving profound disagreement about highest principles.'}
+      - {id: GOOD-SOCIETY-DF-002, classification: documented_finding, proposition: 'He orders his report from the historical-social situation toward the highest principles because the manner in which principles come to light depends decisively on the given situation.'}
+      - {id: GOOD-SOCIETY-DF-003, classification: documented_finding, proposition: 'Against the rootless sovereign self, Strauss contrasts the soul as belonging to an order not originating in itself and argues that accusation itself presupposes law, ultimately a holy law for the radical accusations under review.'}
+      - {id: GOOD-SOCIETY-DF-004, classification: bounded_conclusion, proposition: 'The secular self that refuses deference to anything higher cannot explain the standards by which it condemns society and becomes an unwilling witness to the biblical horizon it rejects.'}
+  - unit: GOOD-SOCIETY-RU-002
+    printed_pages: 433-436
+    function: Test democracy, individuality, diversity, science, conformism, respect, and toleration.
+    findings:
+      - {id: GOOD-SOCIETY-DF-005, classification: documented_finding, proposition: 'Strauss reports Schary’s defense of individual and religious diversity but shows the tension between uninhibited self-development and the legal limits required to prevent conflict.'}
+      - {id: GOOD-SOCIETY-DF-006, classification: documented_finding, proposition: 'Science can liberate from prejudice while simultaneously dissolving differences and fostering homogeneity; enlightenment therefore does not simply solve the conformism problem.'}
+      - {id: GOOD-SOCIETY-DF-007, classification: documented_finding, proposition: 'Religious diversity is treated as an especially strong obstacle to conformism because it dedicates human beings to what transcends humanity.'}
+      - {id: GOOD-SOCIETY-DF-008, classification: documented_finding, proposition: 'Strauss distinguishes respect from toleration: one may be obliged to tolerate what one cannot respect, and indiscriminate respect for every religion would require respecting abominations.'}
+  - unit: GOOD-SOCIETY-RU-003
+    printed_pages: 436-440
+    function: Reconstruct the secular state, its limits, Jewish-Christian common ground, and the subordination of mutual recognition to truth.
+    findings:
+      - {id: GOOD-SOCIETY-DF-009, classification: documented_finding, proposition: 'The secular state supplies civic equality required for friendly Jewish-Christian discussion because civil order cannot simply be based on one revelation without endangering purity of faith.'}
+      - {id: GOOD-SOCIETY-DF-010, classification: documented_finding, proposition: 'Yet a self-sufficient secular state would leave no secure place for transsecular Judaism and Christianity; both must be able to say something secularism cannot say.'}
+      - {id: GOOD-SOCIETY-DF-011, classification: documented_finding, proposition: 'The relevant common ground is not the God of the philosophers or a religion of reason but the God of Abraham, Isaac, and Jacob and commandments valid beyond circumstance.'}
+      - {id: GOOD-SOCIETY-DF-012, classification: documented_finding, proposition: 'Mutual recognition remains subordinate to recognition of truth: Jew and Christian may recognize nobility or even divine blessing in the other while continuing to regard the other as finally mistaken.'}
+      - {id: GOOD-SOCIETY-DF-013, classification: documented_finding, proposition: 'Strauss refuses to let historical Christian wrongdoing cancel the duty of Jewish nobility in responding to sincere Christian repentance and offers “eternal patience” as a possible form of fortitude against modern surrender.'}
+  - unit: GOOD-SOCIETY-RU-004
+    printed_pages: 440-442
+    function: Examine faith and action, contemplation, progress, redemption, science, and humanism.
+    findings:
+      - {id: GOOD-SOCIETY-DF-014, classification: documented_finding, proposition: 'Strauss treats the Greek opposition of contemplative and active life as a serious question rather than a settled cliché and identifies the Bible as the comprehensive effective reply to the supremacy claim of contemplation.'}
+      - {id: GOOD-SOCIETY-DF-015, classification: documented_finding, proposition: 'The report distinguishes action and historical improvement from redemption: modern Jewish opinion could identify progress with redemption and thereby forget what transcends progress and action.'}
+      - {id: GOOD-SOCIETY-DF-016, classification: documented_finding, proposition: 'The failure of secularism appears in the cleavage between science and humanism, while a redefinition of man as created in the image of God lies beyond the competence of neutral science and self-creating humanism.'}
+  - unit: GOOD-SOCIETY-RU-005
+    printed_pages: 442-443
+    function: Test religiously grounded nuclear-policy proposals against prudence and human ignorance.
+    findings:
+      - {id: GOOD-SOCIETY-DF-017, classification: documented_finding, proposition: 'Strauss reports Winter’s attempt to ground East-West dialogue and nuclear restraint in faith, then subjects it to political consequences that faith alone does not remove.'}
+      - {id: GOOD-SOCIETY-DF-018, classification: documented_finding, proposition: 'A secret decision never to retaliate would require public deterrent speech contrary to the private decision, creating a deliberate divergence between tongue and heart.'}
+      - {id: GOOD-SOCIETY-DF-019, classification: documented_finding, proposition: 'Strauss objects that choosing the future of other nations for them on theological grounds tacitly claims knowledge that God alone can possess.'}
+  - unit: GOOD-SOCIETY-RU-006
+    printed_pages: 443-445
+    function: Confront the welfare-organizational “good society” with secession, Scripture, unwritten teaching, and the limit of a final political solution.
+    findings:
+      - {id: GOOD-SOCIETY-DF-020, classification: documented_finding, proposition: 'Strauss presents the managerial-scientific big organization as a possible machine for doing good that nevertheless threatens universal philistinism and the survival of genuinely different small societies.'}
+      - {id: GOOD-SOCIETY-DF-021, classification: documented_finding, proposition: 'Faced with universal philistinism, he says Jews and Christians would have to choose anarchism or secession of a kind radically different from the self-enclosure criticized at the beginning.'}
+      - {id: GOOD-SOCIETY-DF-022, classification: documented_finding, proposition: 'The closing appeal to Exodus and oral Torah makes the political conclusion hermeneutic: literal meaning isolated from the whole can kill, and the deepest truth cannot be fully written or even said.'}
+      - {id: GOOD-SOCIETY-DF-023, classification: bounded_conclusion, proposition: 'The good society cannot be identified with a perfected secular organization, progress, or social heaven; finite political arrangements remain exposed to transpolitical standards and to the possibility of principled withdrawal.'}
+permanent_findings:
+  - {id: GOOD-SOCIETY-PF-001, classification: documented_finding, proposition: 'Strauss treats the secular state as a necessary condition of civic equality and interfaith discussion but not as a self-sufficient source of the standards by which the good society is judged.'}
+  - {id: GOOD-SOCIETY-PF-002, classification: documented_finding, proposition: 'Religious diversity can resist conformism because it directs human beings toward what transcends humanity, but tolerance does not require respect for every object of worship or practice.'}
+  - {id: GOOD-SOCIETY-PF-003, classification: documented_finding, proposition: 'Jewish-Christian common ground does not abolish disagreement; recognition of the other remains subordinate to truth.'}
+  - {id: GOOD-SOCIETY-PF-004, classification: documented_finding, proposition: 'Progress, social action, science, and organizational efficiency cannot by themselves be equated with redemption or the good society.'}
+  - {id: GOOD-SOCIETY-PF-005, classification: documented_finding, proposition: 'Political-theological prescriptions must remain subject to prudential consequences and the limit of human knowledge.'}
+  - {id: GOOD-SOCIETY-PF-006, classification: bounded_conclusion, proposition: 'The closing possibility of secession rejects the expectation that a final political organization can absorb every serious human difference without loss.'}
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY
+    receives: [secular state and transsecular claims, reason and revelation, Judaism and Christianity, holy law, redemption and progress, religious diversity and truth]
+    non_absorption: The study does not decide between Judaism and Christianity or certify revelation, redemption, or natural law.
+  theory_vs_practice:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives: [good society and social action, nuclear deterrence and retaliation, welfare organization, secession, prudential limits on theological prescriptions]
+    non_absorption: The essay does not reduce truth to policy consequences or policy to theology.
+  ancients_vs_moderns:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives: [soul versus sovereign self, Aristotle and Socrates, science and modern secularism, progress and historical redemption, mass society and managerial organization]
+    non_absorption: The essay is not a systematic ancient-modern treatise.
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  predecessor_statement: Distinguishes finite political improvement from a final society, redemption, or abolition of the permanent human problem.
+  state: PROVISIONAL_RETEST_STRONG_CONFIRMATION_WITH_QUALIFICATION_NO_PROMOTION
+  confirmations:
+    - The essay repeatedly separates social action and political improvement from redemption, criticizes the expectation that contemporary society could be heaven, and rejects identification of organizational efficiency with the good society.
+    - Its closing secession argument shows that a politically comprehensive organization may remain spiritually and humanly defective.
+  qualifications:
+    - The phrase permanent human problem is not itself formulated in the essay and may not be inserted as a source quotation.
+    - The report does not reject political improvement; it tests its limits and denies its identity with redemption or final fulfillment.
+  predecessor_effect: NONE
+uncertainties:
+  - The original Criterion printing remains unreviewed.
+  - Reported participant claims require independent reconstruction before use as those participants’ complete positions.
+prohibitions:
+  - Do not attribute quoted participant positions to Strauss without explicit adoption or criticism.
+  - Do not infer that Strauss rejects democracy, secular government, social reform, or political prudence as such.
+  - Do not treat the final secession language as a general instruction for political withdrawal under all circumstances.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1963_criterion_comparison_required: true
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+  predecessor_displacement_effect: NONE

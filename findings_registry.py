@@ -74,6 +74,20 @@ EXPECTED_SYNTHESIS_PATHS = {
     "problems/wise-vs-vulgar/synthesis/introduction-to-persecution-and-the-art-of-writing.yaml",
     "problems/wise-vs-vulgar/synthesis/plato-apology.yaml",
     "problems/wise-vs-vulgar/synthesis/studies-in-platonic-political-philosophy.yaml",
+    "problems/theologico-political/synthesis/perspectives-on-the-good-society.yaml",
+    "problems/theory-vs-practice/synthesis/perspectives-on-the-good-society.yaml",
+    "problems/ancients-vs-moderns/synthesis/perspectives-on-the-good-society.yaml",
+    "problems/theologico-political/synthesis/an-unspoken-prologue.yaml",
+    "problems/ancients-vs-moderns/synthesis/an-unspoken-prologue.yaml",
+    "problems/theologico-political/synthesis/a-giving-of-accounts.yaml",
+    "problems/wise-vs-vulgar/synthesis/a-giving-of-accounts.yaml",
+    "problems/ancients-vs-moderns/synthesis/a-giving-of-accounts.yaml",
+    "problems/theologico-political/synthesis/plan-philosophy-and-the-law-historical-essays.yaml",
+    "problems/athens-vs-jerusalem/synthesis/plan-philosophy-and-the-law-historical-essays.yaml",
+    "problems/wise-vs-vulgar/synthesis/plan-philosophy-and-the-law-historical-essays.yaml",
+    "problems/theologico-political/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml",
+    "problems/ancients-vs-moderns/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml",
+    "problems/theory-vs-practice/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml",
 }
 
 EXPECTED_TRANSACTION_PATHS = {
@@ -124,6 +138,11 @@ DIRECT_SOURCE_KEYS = [
     "CORPUS-SRC-112",
     "CORPUS-SRC-113",
     "CORPUS-SRC-116",
+    "CORPUS-SRC-114",
+    "CORPUS-SRC-115",
+    "CORPUS-SRC-117",
+    "CORPUS-SRC-118",
+    "CORPUS-SRC-119",
 ]
 
 SOURCE_STUDY_CONTRACTS = {
@@ -242,6 +261,11 @@ SOURCE_STUDY_CONTRACTS = {
         "problem_bindings": {"FINDSET-142": "theologico-political", "FINDSET-143": "athens-vs-jerusalem"},
         "required_limits": {"witness_id": "CORPUS-WIT-110", "registered_scope": "FIRST_PARAGRAPH_ONLY", "original_1959_printing_comparison": "PENDING", "predecessor_retest_state": "PARTIAL_CONFIRMATION_WITH_MATERIAL_QUALIFICATION", "independent_corroboration": "INCOMPLETE"},
     },
+    "FINDSET-022": {"source_id":"CORPUS-SRC-114","local_syntheses":["FINDSET-144","FINDSET-145","FINDSET-146"],"problem_bindings":{"FINDSET-144":"theologico-political","FINDSET-145":"theory-vs-practice","FINDSET-146":"ancients-vs-moderns"},"required_limits":{"witness_id":"CORPUS-WIT-114","original_1963_criterion_comparison":"PENDING","independent_corroboration":"INCOMPLETE"}},
+    "FINDSET-023": {"source_id":"CORPUS-SRC-115","local_syntheses":["FINDSET-147","FINDSET-148"],"problem_bindings":{"FINDSET-147":"theologico-political","FINDSET-148":"ancients-vs-moderns"},"required_limits":{"witness_id":"CORPUS-WIT-115","original_1978_interpretation_comparison":"PENDING","predecessor_retest_state":"MATERIAL_NONCONFIRMATION_AND_PROBABLE_SOURCE_MISALLOCATION","independent_corroboration":"INCOMPLETE"}},
+    "FINDSET-024": {"source_id":"CORPUS-SRC-117","local_syntheses":["FINDSET-149","FINDSET-150","FINDSET-151"],"problem_bindings":{"FINDSET-149":"theologico-political","FINDSET-150":"wise-vs-vulgar","FINDSET-151":"ancients-vs-moderns"},"required_limits":{"witness_id":"CORPUS-WIT-117","original_1970_college_comparison":"PENDING","independent_corroboration":"INCOMPLETE"}},
+    "FINDSET-025": {"source_id":"CORPUS-SRC-118","local_syntheses":["FINDSET-152","FINDSET-153","FINDSET-154"],"problem_bindings":{"FINDSET-152":"theologico-political","FINDSET-153":"athens-vs-jerusalem","FINDSET-154":"wise-vs-vulgar"},"required_limits":{"witness_id":"CORPUS-WIT-118","earlier_textual_state_comparison":"PENDING","independent_corroboration":"INCOMPLETE"}},
+    "FINDSET-026": {"source_id":"CORPUS-SRC-119","local_syntheses":["FINDSET-155","FINDSET-156","FINDSET-157"],"problem_bindings":{"FINDSET-155":"theologico-political","FINDSET-156":"ancients-vs-moderns","FINDSET-157":"theory-vs-practice"},"required_limits":{"witness_id":"CORPUS-WIT-119","registered_scope":"LAST_PARAGRAPH_ONLY","earlier_textual_state_comparison":"PENDING","independent_corroboration":"INCOMPLETE"}},
 }
 
 
@@ -379,7 +403,7 @@ def _derived_source_index(finding_sets: list[dict[str, Any]]) -> dict[str, list[
     result = {key: [] for key in DIRECT_SOURCE_KEYS}
     result["CORPUS-SRC-101-119"] = []
     predecessor_sources = {f"CORPUS-SRC-{number:03d}" for number in range(101, 120)}
-    separately_indexed = {"CORPUS-SRC-101", "CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-104", "CORPUS-SRC-105", "CORPUS-SRC-106", "CORPUS-SRC-107", "CORPUS-SRC-108", "CORPUS-SRC-110", "CORPUS-SRC-111", "CORPUS-SRC-112", "CORPUS-SRC-113", "CORPUS-SRC-116"}
+    separately_indexed = set(DIRECT_SOURCE_KEYS) & predecessor_sources
     for item in finding_sets:
         bindings = set(item.get("source_bindings", []))
         finding_id = item["finding_set_id"]
@@ -463,8 +487,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-FINDINGS-INDEX-001":
         errors.append("findings registry identity.id mismatch")
-    if identity.get("version") != "1.14.0":
-        errors.append("findings registry identity.version must be 1.14.0")
+    if identity.get("version") != "1.15.0":
+        errors.append("findings registry identity.version must be 1.15.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE":
@@ -479,8 +503,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     gap_ids = _unique_ids(registry.get("findings_gaps", []), "gap_id", "findings_gaps", errors)
     finding_sets = [item for item in finding_sets_raw if isinstance(item, dict)]
 
-    if len(finding_ids) != 69:
-        errors.append(f"expected 69 finding sets, found {len(finding_ids)}")
+    if len(finding_ids) != 88:
+        errors.append(f"expected 88 finding sets, found {len(finding_ids)}")
     if len(gap_ids) != 6:
         errors.append(f"expected 6 findings gaps, found {len(gap_ids)}")
 

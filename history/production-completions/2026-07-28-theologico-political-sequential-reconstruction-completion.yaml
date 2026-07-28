@@ -1,0 +1,45 @@
+schema_version: 1.0
+record_type: production_completion_record
+identity:
+  id: TP-SEQUENTIAL-RECONSTRUCTION-COMPLETION-2026-07-28
+  title: Theologico-Political Nineteen-Source Sequential Reconstruction Completion
+  date: 2026-07-28
+  version: 1.0.0
+status:
+  lifecycle: HISTORICAL_PRODUCTION_RECORD
+  certification: NOT_CERTIFIED
+completion:
+  source_identity_registration: COMPLETE_19_OF_19
+  reviewed_witness_registration: COMPLETE_19_OF_19
+  independent_sequential_reconstruction_within_registered_scopes: COMPLETE_19_OF_19
+  corpus_registry_version: 1.23.0
+  findings_registry_version: 1.15.0
+  final_batch_source_ids:
+    - CORPUS-SRC-114
+    - CORPUS-SRC-115
+    - CORPUS-SRC-117
+    - CORPUS-SRC-118
+    - CORPUS-SRC-119
+  final_batch_study_ids:
+    - GOOD-SOCIETY-STUDY-001
+    - UNSPOKEN-PROLOGUE-STUDY-001
+    - GIVING-ACCOUNTS-STUDY-001
+    - PHILOSOPHY-LAW-PLAN-STUDY-001
+    - HIERO-RESTATEMENT-LAST-PARAGRAPH-STUDY-001
+material_corrections_preserved:
+  - source_id: CORPUS-SRC-115
+    statement: An Unspoken Prologue does not contain the predecessor-attributed discussion of orthodoxy, unbelief, Zionism, or medieval philosophy; probable source conflation is preserved rather than silently harmonized.
+  - source_id: CORPUS-SRC-119
+    statement: The registered source identity remains LAST_PARAGRAPH_ONLY; Green's theological interpretation and predecessor universal-state wording are not imported into the bounded paragraph as explicit Strauss language.
+limits:
+  - Completion applies only to independent sequential reconstruction of the current nineteen-source predecessor sequence within registered source scopes.
+  - Original or earlier textual-state comparisons remain pending where not separately reviewed.
+  - Source-specific studies do not constitute independent corroboration of represented traditions, persons, institutions, historical claims, or doctrines.
+  - The broader Strauss corpus and proposition-level work remain open and materially incomplete.
+  - No doctrinal certification, migration certification, successor activation, predecessor displacement, Assembly authority, or completed-interface Sanctum repin is authorized.
+termination:
+  nineteen_source_sequential_reconstruction: COMPLETE_PROVISIONAL_19_OF_19
+  broader_corpus_completion: INCOMPLETE
+  independent_corroboration: INCOMPLETE
+  certification: NOT_CERTIFIED
+  successor_effect: NONE

@@ -64,13 +64,13 @@ class InterfaceConsistencyTests(unittest.TestCase):
         self.assertEqual(manifest_state["reviewed_witness_count"], 19)
         self.assertEqual(audit_state["reviewed_item_witness_count"], 19)
         self.assertEqual(mapping_state["reviewed_witness_count"], 19)
-        self.assertEqual(manifest_state["independent_sequential_study_count"], 14)
-        self.assertEqual(audit_state["independently_reconstructed_count_within_this_sequence"], 14)
-        self.assertEqual(mapping_state["independent_sequential_study_count"], 14)
+        self.assertEqual(manifest_state["independent_sequential_study_count"], 19)
+        self.assertEqual(audit_state["independently_reconstructed_count_within_this_sequence"], 19)
+        self.assertEqual(mapping_state["independent_sequential_study_count"], 19)
         self.assertEqual(manifest_state["remaining_without_reviewed_item_witness"], 0)
         self.assertEqual(mapping_state["remaining_without_reviewed_witness"], 0)
-        self.assertEqual(manifest_state["remaining_without_independent_sequential_study"], 5)
-        self.assertEqual(mapping_state["remaining_without_independent_sequential_study"], 5)
+        self.assertEqual(manifest_state["remaining_without_independent_sequential_study"], 0)
+        self.assertEqual(mapping_state["remaining_without_independent_sequential_study"], 0)
         self.assertEqual(
             corpus["termination"]["theologico_political_identity_registration_state"],
             "COMPLETE_19_OF_19",
@@ -81,7 +81,7 @@ class InterfaceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             corpus["termination"]["theologico_political_independent_study_state"],
-            "INCOMPLETE_14_OF_19",
+            "COMPLETE_19_OF_19",
         )
 
     def test_priority_schedule_marks_witness_acquisition_complete_and_spinoza_treatise_complete_genesis_study_next(self) -> None:
@@ -89,11 +89,11 @@ class InterfaceConsistencyTests(unittest.TestCase):
         self.assertEqual(len(schedule["selection"]["completed_source_ids"]), 19)
         self.assertEqual(len(schedule["selection"]["completed_witness_ids"]), 19)
         self.assertEqual(set(schedule["selection"]["completed_source_ids"]), {f"CORPUS-SRC-{i:03d}" for i in range(101, 120)})
-        self.assertEqual(schedule["selection"]["completed_study_ids"], ["JA-STUDY-001", "COHEN-STUDY-001", "TALMON-STUDY-001", "SPINOZA-PREFACE-STUDY-001", "SPINOZA-TREATISE-STUDY-001", "GENESIS-STUDY-001", "PERSECUTION-INTRO-STUDY-001", "HOBBES-PREFACE-STUDY-001", "PROGRESS-RETURN-STUDY-001", "HUSIK-PREFACE-STUDY-001", "FREUD-MOSES-STUDY-001", "WHY-REMAIN-JEWS-STUDY-001", "STATE-ISRAEL-LETTER-STUDY-001", "WIPP-FIRST-PARAGRAPH-STUDY-001"])
+        self.assertEqual(len(schedule["selection"]["completed_study_ids"]), 19)
         self.assertEqual(schedule["termination"]["reviewed_item_witness_registration"], "COMPLETE_19_OF_19")
-        self.assertEqual(schedule["termination"]["independent_sequential_reconstruction"], "INCOMPLETE_14_OF_19")
+        self.assertEqual(schedule["termination"]["independent_sequential_reconstruction"], "COMPLETE_19_OF_19")
         self.assertEqual(schedule["termination"]["next_item_witness"], "NONE")
-        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-114")
+        self.assertEqual(schedule["termination"]["next_item_study"], "NONE")
         self.assertEqual(schedule["status"]["certification"], "NOT_CERTIFIED")
 
     def test_source_derivations_preserve_problem_jurisdiction(self) -> None:

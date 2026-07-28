@@ -51,11 +51,11 @@ class WippFirstParagraphCompletionTests(unittest.TestCase):
         corpus = load_yaml("corpus/index.yaml")
         manifest = load_yaml("manifest.yaml")
         schedule = load_yaml("history/production-plans/2026-07-27-theologico-political-reviewed-witness-priority.yaml")
-        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 14)
-        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_14_OF_19")
-        self.assertEqual(manifest["corpus"]["theologico_political_item_level_statuses"]["independent_sequential_study_count"], 14)
-        self.assertEqual(schedule["termination"]["independent_sequential_reconstruction"], "INCOMPLETE_14_OF_19")
-        self.assertEqual(schedule["termination"]["next_item_study"], "CORPUS-SRC-114")
+        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 19)
+        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "COMPLETE_19_OF_19")
+        self.assertEqual(manifest["corpus"]["theologico_political_item_level_statuses"]["independent_sequential_study_count"], 19)
+        self.assertEqual(schedule["termination"]["independent_sequential_reconstruction"], "COMPLETE_19_OF_19")
+        self.assertEqual(schedule["termination"]["next_item_study"], "NONE")
 
 if __name__ == "__main__":
     unittest.main()

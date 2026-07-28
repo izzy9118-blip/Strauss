@@ -3,7 +3,7 @@ record_type: production_process_state
 identity:
   id: STRAUSS-PRODUCTION-PROCESS-001
   title: Ten-Step Strauss Operational Completion Process
-  version: 1.20.0
+  version: 1.21.0
 status:
   lifecycle: ACTIVE_PRODUCTION_SEQUENCE
   certification: NOT_CERTIFIED
@@ -14,22 +14,22 @@ status:
 
     '
 revision_history:
-  predecessor_version: 1.19.0
+  predecessor_version: 1.20.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Complete WIPP-FIRST-PARAGRAPH-STUDY-001 as the fourteenth provisional Theologico-Political study and advance to
-    CORPUS-SRC-114 while preserving first-paragraph scope and five remaining studies.
+  reason: Complete the final five Theologico-Political item studies and close the nineteen-source sequential-reconstruction
+    subunit while preserving broader corpus, corroboration, migration, certification, and repin blockers.
 steps:
 - sequence: 1
   action: Create a complete repository audit.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: audits/operational-completeness.yaml
-  current_version: 3.6.0
+  current_version: 3.7.0
   limit: The audit records incompleteness; it does not cure or certify it.
 - sequence: 2
   action: Correct the manifest completion language.
   state: IMPLEMENTED_AND_ACTIVE
   governing_record: manifest.yaml
-  current_version: 1.18.0
+  current_version: 1.19.0
   limit: The manifest remains semantically incomplete and not doctrinally certified.
 - sequence: 3
   action: Reconstruct speech/speech-mechanism.yaml as the first full mechanism.
@@ -86,6 +86,12 @@ steps:
     speaker/transcription/editorial limits
   - Letter to the Editor — The State of Israel supplies distinct provisional syntheses to Theologico-Political and Ancients-versus-Moderns
     while materially qualifying the predecessor's unexpressed theological language
+  - Perspectives on the Good Society supplies provisional jurisdiction-preserving synthesis from GOOD-SOCIETY-STUDY-001
+  - An Unspoken Prologue supplies provisional jurisdiction-preserving synthesis from UNSPOKEN-PROLOGUE-STUDY-001
+  - A Giving of Accounts supplies provisional jurisdiction-preserving synthesis from GIVING-ACCOUNTS-STUDY-001
+  - Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays supplies provisional jurisdiction-preserving
+    synthesis from PHILOSOPHY-LAW-PLAN-STUDY-001
+  - Restatement on Xenophon's Hiero supplies provisional jurisdiction-preserving synthesis from HIERO-RESTATEMENT-LAST-PARAGRAPH-STUDY-001
   remaining:
   - complete source-specific application to each problem
   - complete independent witness reconstruction
@@ -116,8 +122,9 @@ steps:
   - WHY-REMAIN-JEWS-STUDY-001 is complete provisional for CORPUS-WIT-107 with active transcription and editorial limits
   - STATE-ISRAEL-LETTER-STUDY-001 is complete provisional for CORPUS-WIT-112
   - WIPP-FIRST-PARAGRAPH-STUDY-001 is complete provisional for the registered first paragraph of CORPUS-WIT-110
+  - all 19 Theologico-Political predecessor writings now have complete provisional independent sequential reconstructions
+    within registered scopes
   remaining:
-  - conduct five independent sequential item studies, beginning with CORPUS-SRC-114
   - compare original or earlier textual states where available and material
   - materialize and fingerprint CORPUS-WIT-102 only through later forward revision if exact bytes become accessible
   - reconstruct Talmon's reviewed work independently
@@ -131,14 +138,12 @@ steps:
   - tests/
   - .github/workflows/validate-lean-interface.yml
   completed_in_current_sequence:
-  - tests cover all nineteen Theologico-Political reviewed-witness registrations and distinguish the five witness-only states
-    from the fourteen completed-study states
-  - tests preserve qualified platform-reference, fingerprint, locator, scope, edition-comparison, noncertification, and no-successor
-    safeguards
-  - tests cover the completed study integrations through CORPUS-SRC-106 while preserving findings derivation, problem jurisdiction,
-    transmission limits, and completion-language consistency
-  current_requirement: Run the complete GitHub Actions validation before merge using the ordinary read-only validation workflow;
-    no materialization or self-push step is required.
+  - tests cover all nineteen Theologico-Political reviewed witnesses and all nineteen complete provisional registered-scope
+    source studies
+  - tests preserve edition-comparison, source-scope, speaker/editorial-layer, predecessor-correction, noncorroboration, noncertification,
+    and no-successor safeguards
+  current_requirement: Run complete GitHub Actions validation before merge; passing tests validate declared contracts, not
+    philosophical truth or repository completion.
   limit: Tests validate declared contracts and fixtures, not philosophical truth or corpus completion.
 - sequence: 10
   action: Repin the completed Strauss interface in Sanctum.
@@ -152,16 +157,12 @@ steps:
 current_production_unit:
   step: 8
   completed_subunit:
-    title: What Is Political Philosophy? registered first-paragraph independent reconstruction
-    state: COMPLETE_PROVISIONAL_PENDING_BRANCH_VALIDATION_AND_MERGE
-    source_id: CORPUS-SRC-110
-    witness_id: CORPUS-WIT-110
-    study_id: WIPP-FIRST-PARAGRAPH-STUDY-001
-    study_coverage: INCOMPLETE_14_OF_19
+    title: Nineteen-source Theologico-Political independent sequential reconstruction
+    state: COMPLETE_PROVISIONAL_19_OF_19_WITHIN_REGISTERED_SCOPES
+    study_coverage: COMPLETE_19_OF_19
   next_subunit:
-    title: Perspectives on the Good Society independent sequential reconstruction
-    source_id: CORPUS-SRC-114
-    witness_id: CORPUS-WIT-114
+    title: Textual-state comparison and independent witness expansion
+    state: OPEN
 termination:
   state: CONTINUE_UNTIL_GENUINE_BLOCKER
   blocker_rule: 'A blocker must identify the exact missing source, authority, path, validation failure, or jurisdictional

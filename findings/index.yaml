@@ -3,7 +3,7 @@ record_type: typed_findings_registry
 identity:
   id: STRAUSS-FINDINGS-INDEX-001
   title: Strauss Repository Typed Findings Registry
-  version: 1.14.0
+  version: 1.15.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
@@ -11,12 +11,12 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_JURISDICTION_AND_REVISION_ONLY
 revision_history:
-  predecessor_version: 1.13.0
+  predecessor_version: 1.14.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register WIPP-FIRST-PARAGRAPH-STUDY-001 as FINDSET-021 and jurisdiction-preserving syntheses FINDSET-142 and FINDSET-143
-    while preserving first-paragraph scope, pending 1959 comparison, predecessor qualification, noncorroboration, and no-successor
-    safeguards.
+  reason: Register FINDSET-022 through FINDSET-026 and fourteen jurisdiction-preserving local syntheses for the final five
+    Theologico-Political source studies, completing 19-of-19 registered-scope studies while preserving noncorroboration and
+    noncertification.
 purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record class,
   migration state, and provenance while preserving the difference among documentary finding, supported inference, working
   hypothesis, comparative question, contradiction, dissent, and unresolved uncertainty.
@@ -455,6 +455,110 @@ finding_sets:
   predecessor_retest_state: PARTIAL_CONFIRMATION_WITH_MATERIAL_QUALIFICATION
   independent_corroboration: INCOMPLETE
   successor_effect: NONE
+- finding_set_id: FINDSET-022
+  path: studies/theologico-political/perspectives-on-the-good-society/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-114
+  problem_bindings:
+  - theologico-political
+  - theory-vs-practice
+  - ancients-vs-moderns
+  status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  derived_local_syntheses:
+  - FINDSET-144
+  - FINDSET-145
+  - FINDSET-146
+  witness_id: CORPUS-WIT-114
+  original_1963_criterion_comparison: PENDING
+  predecessor_retest_state: STRONG_CONFIRMATION_WITH_QUALIFICATION
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
+- finding_set_id: FINDSET-023
+  path: studies/theologico-political/an-unspoken-prologue/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-115
+  problem_bindings:
+  - theologico-political
+  - ancients-vs-moderns
+  status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  derived_local_syntheses:
+  - FINDSET-147
+  - FINDSET-148
+  witness_id: CORPUS-WIT-115
+  original_1978_interpretation_comparison: PENDING
+  predecessor_retest_state: MATERIAL_NONCONFIRMATION_AND_PROBABLE_SOURCE_MISALLOCATION
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
+- finding_set_id: FINDSET-024
+  path: studies/theologico-political/a-giving-of-accounts/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-117
+  problem_bindings:
+  - theologico-political
+  - wise-vs-vulgar
+  - ancients-vs-moderns
+  status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  derived_local_syntheses:
+  - FINDSET-149
+  - FINDSET-150
+  - FINDSET-151
+  witness_id: CORPUS-WIT-117
+  original_1970_college_comparison: PENDING
+  predecessor_retest_state: STRONG_CONFIRMATION_AND_SUBSTANTIVE_DEEPENING
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
+- finding_set_id: FINDSET-025
+  path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-118
+  problem_bindings:
+  - theologico-political
+  - athens-vs-jerusalem
+  - wise-vs-vulgar
+  status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  derived_local_syntheses:
+  - FINDSET-152
+  - FINDSET-153
+  - FINDSET-154
+  witness_id: CORPUS-WIT-118
+  earlier_textual_state_comparison: PENDING
+  predecessor_retest_state: STRONG_CONFIRMATION_WITH_DOCUMENTARY_LIMIT
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
+- finding_set_id: FINDSET-026
+  path: studies/theologico-political/restatement-on-xenophons-hiero/sequential-reconstruction.yaml
+  record_class: SOURCE_SPECIFIC_STUDY
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  source_bindings:
+  - CORPUS-SRC-119
+  problem_bindings:
+  - theologico-political
+  - ancients-vs-moderns
+  - theory-vs-practice
+  status: COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE
+  certification: NOT_CERTIFIED
+  derived_local_syntheses:
+  - FINDSET-155
+  - FINDSET-156
+  - FINDSET-157
+  witness_id: CORPUS-WIT-119
+  earlier_textual_state_comparison: PENDING
+  predecessor_retest_state: STRONG_CONFIRMATION_WITH_REGISTERED_SCOPE_QUALIFICATION
+  independent_corroboration: INCOMPLETE
+  successor_effect: NONE
+  registered_scope: LAST_PARAGRAPH_ONLY
 - finding_set_id: FINDSET-101
   path: problems/nomos-vs-physis/synthesis/studies-in-platonic-political-philosophy.yaml
   record_class: PROBLEM_LOCAL_SYNTHESIS
@@ -1087,6 +1191,188 @@ finding_sets:
   status: PROVISIONAL_NOT_CERTIFIED
   certification: NOT_CERTIFIED
   successor_effect: NONE
+- finding_set_id: FINDSET-144
+  path: problems/theologico-political/synthesis/perspectives-on-the-good-society.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-114
+  problem_bindings:
+  - theologico-political
+  derived_from:
+  - FINDSET-022
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-145
+  path: problems/theory-vs-practice/synthesis/perspectives-on-the-good-society.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-114
+  problem_bindings:
+  - theory-vs-practice
+  derived_from:
+  - FINDSET-022
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-146
+  path: problems/ancients-vs-moderns/synthesis/perspectives-on-the-good-society.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-114
+  problem_bindings:
+  - ancients-vs-moderns
+  derived_from:
+  - FINDSET-022
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-147
+  path: problems/theologico-political/synthesis/an-unspoken-prologue.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-115
+  problem_bindings:
+  - theologico-political
+  derived_from:
+  - FINDSET-023
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-148
+  path: problems/ancients-vs-moderns/synthesis/an-unspoken-prologue.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-115
+  problem_bindings:
+  - ancients-vs-moderns
+  derived_from:
+  - FINDSET-023
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-149
+  path: problems/theologico-political/synthesis/a-giving-of-accounts.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-117
+  problem_bindings:
+  - theologico-political
+  derived_from:
+  - FINDSET-024
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-150
+  path: problems/wise-vs-vulgar/synthesis/a-giving-of-accounts.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-117
+  problem_bindings:
+  - wise-vs-vulgar
+  derived_from:
+  - FINDSET-024
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-151
+  path: problems/ancients-vs-moderns/synthesis/a-giving-of-accounts.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-117
+  problem_bindings:
+  - ancients-vs-moderns
+  derived_from:
+  - FINDSET-024
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-152
+  path: problems/theologico-political/synthesis/plan-philosophy-and-the-law-historical-essays.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-118
+  problem_bindings:
+  - theologico-political
+  derived_from:
+  - FINDSET-025
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-153
+  path: problems/athens-vs-jerusalem/synthesis/plan-philosophy-and-the-law-historical-essays.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-118
+  problem_bindings:
+  - athens-vs-jerusalem
+  derived_from:
+  - FINDSET-025
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-154
+  path: problems/wise-vs-vulgar/synthesis/plan-philosophy-and-the-law-historical-essays.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-118
+  problem_bindings:
+  - wise-vs-vulgar
+  derived_from:
+  - FINDSET-025
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-155
+  path: problems/theologico-political/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-119
+  problem_bindings:
+  - theologico-political
+  derived_from:
+  - FINDSET-026
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-156
+  path: problems/ancients-vs-moderns/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-119
+  problem_bindings:
+  - ancients-vs-moderns
+  derived_from:
+  - FINDSET-026
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+- finding_set_id: FINDSET-157
+  path: problems/theory-vs-practice/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-119
+  problem_bindings:
+  - theory-vs-practice
+  derived_from:
+  - FINDSET-026
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
 - finding_set_id: FINDSET-201
   path: migrations/foundational-problems-v2/transactions/wise-vs-vulgar-v0.2.yaml
   record_class: MIGRATION_TRANSACTION_LEDGER
@@ -1208,7 +1494,11 @@ indexes:
     - FINDSET-003
     - FINDSET-005
     - FINDSET-006
+    - FINDSET-022
+    - FINDSET-026
     - FINDSET-104
+    - FINDSET-145
+    - FINDSET-157
     theologico-political:
     - FINDSET-001
     - FINDSET-002
@@ -1231,6 +1521,11 @@ indexes:
     - FINDSET-019
     - FINDSET-020
     - FINDSET-021
+    - FINDSET-022
+    - FINDSET-023
+    - FINDSET-024
+    - FINDSET-025
+    - FINDSET-026
     - FINDSET-105
     - FINDSET-106
     - FINDSET-111
@@ -1247,6 +1542,11 @@ indexes:
     - FINDSET-138
     - FINDSET-140
     - FINDSET-142
+    - FINDSET-144
+    - FINDSET-147
+    - FINDSET-149
+    - FINDSET-152
+    - FINDSET-155
     - FINDSET-202
     - FINDSET-203
     - FINDSET-301
@@ -1264,6 +1564,7 @@ indexes:
     - FINDSET-017
     - FINDSET-019
     - FINDSET-021
+    - FINDSET-025
     - FINDSET-107
     - FINDSET-112
     - FINDSET-114
@@ -1274,6 +1575,7 @@ indexes:
     - FINDSET-135
     - FINDSET-139
     - FINDSET-143
+    - FINDSET-153
     wise-vs-vulgar:
     - FINDSET-002
     - FINDSET-003
@@ -1282,10 +1584,14 @@ indexes:
     - FINDSET-007
     - FINDSET-012
     - FINDSET-014
+    - FINDSET-024
+    - FINDSET-025
     - FINDSET-108
     - FINDSET-109
     - FINDSET-123
     - FINDSET-128
+    - FINDSET-150
+    - FINDSET-154
     - FINDSET-201
     - FINDSET-302
     ancients-vs-moderns:
@@ -1300,6 +1606,10 @@ indexes:
     - FINDSET-016
     - FINDSET-018
     - FINDSET-020
+    - FINDSET-022
+    - FINDSET-023
+    - FINDSET-024
+    - FINDSET-026
     - FINDSET-110
     - FINDSET-115
     - FINDSET-118
@@ -1308,6 +1618,10 @@ indexes:
     - FINDSET-133
     - FINDSET-137
     - FINDSET-141
+    - FINDSET-146
+    - FINDSET-148
+    - FINDSET-151
+    - FINDSET-156
   by_source:
     CORPUS-SRC-001:
     - FINDSET-001
@@ -1418,11 +1732,50 @@ indexes:
     - FINDSET-128
     - FINDSET-203
     - FINDSET-301
+    CORPUS-SRC-114:
+    - FINDSET-022
+    - FINDSET-105
+    - FINDSET-144
+    - FINDSET-145
+    - FINDSET-146
+    - FINDSET-203
+    - FINDSET-301
+    CORPUS-SRC-115:
+    - FINDSET-023
+    - FINDSET-105
+    - FINDSET-147
+    - FINDSET-148
+    - FINDSET-203
+    - FINDSET-301
     CORPUS-SRC-116:
     - FINDSET-015
     - FINDSET-105
     - FINDSET-129
     - FINDSET-130
+    - FINDSET-203
+    - FINDSET-301
+    CORPUS-SRC-117:
+    - FINDSET-024
+    - FINDSET-105
+    - FINDSET-149
+    - FINDSET-150
+    - FINDSET-151
+    - FINDSET-203
+    - FINDSET-301
+    CORPUS-SRC-118:
+    - FINDSET-025
+    - FINDSET-105
+    - FINDSET-152
+    - FINDSET-153
+    - FINDSET-154
+    - FINDSET-203
+    - FINDSET-301
+    CORPUS-SRC-119:
+    - FINDSET-026
+    - FINDSET-105
+    - FINDSET-155
+    - FINDSET-156
+    - FINDSET-157
     - FINDSET-203
     - FINDSET-301
     CORPUS-SRC-101-119:
@@ -1453,6 +1806,11 @@ indexes:
     - FINDSET-019
     - FINDSET-020
     - FINDSET-021
+    - FINDSET-022
+    - FINDSET-023
+    - FINDSET-024
+    - FINDSET-025
+    - FINDSET-026
     INTEGRATION_GOVERNANCE_RECORD:
     - FINDSET-005
     - FINDSET-006
@@ -1500,6 +1858,20 @@ indexes:
     - FINDSET-141
     - FINDSET-142
     - FINDSET-143
+    - FINDSET-144
+    - FINDSET-145
+    - FINDSET-146
+    - FINDSET-147
+    - FINDSET-148
+    - FINDSET-149
+    - FINDSET-150
+    - FINDSET-151
+    - FINDSET-152
+    - FINDSET-153
+    - FINDSET-154
+    - FINDSET-155
+    - FINDSET-156
+    - FINDSET-157
     MIGRATION_TRANSACTION_LEDGER:
     - FINDSET-201
     - FINDSET-202
@@ -1508,14 +1880,14 @@ indexes:
     - FINDSET-301
     - FINDSET-302
 coverage:
-  finding_sets_registered: 69
-  source_specific_and_integration_records_registered: 21
-  problem_syntheses_registered: 43
+  finding_sets_registered: 88
+  source_specific_and_integration_records_registered: 26
+  problem_syntheses_registered: 57
   migration_transaction_ledgers_registered: 3
   preserved_finding_bases_registered: 2
-  current_problem_synthesis_tree_yaml_records_accounted_for: 43
+  current_problem_synthesis_tree_yaml_records_accounted_for: 57
   current_foundational_transaction_tree_yaml_records_accounted_for: 3
-  corpus_study_records_accounted_for: 21
+  corpus_study_records_accounted_for: 26
   canonical_problem_indexes_registered: 7
   exhaustive_within_declared_scope: true
 proposition_kinds:
@@ -1546,11 +1918,13 @@ findings_gaps:
   statement: The registry does not yet index every proposition as a separate normalized object.
   effect: PROPOSITION_LEVEL_QUERY_REQUIRES_LOADING_REFERENCED_RECORD
 - gap_id: FINDINGS-GAP-002
-  statement: Many registered source entities lack independent source-specific study records.
+  statement: All nineteen registered Theologico-Political predecessor sources now have complete provisional source-specific
+    studies within registered scopes; many sources elsewhere in the open Strauss corpus still lack independent source-specific
+    study records.
   effect: FINDINGS_COVERAGE_REMAINS_SOURCE_ASYMMETRICAL
 - gap_id: FINDINGS-GAP-003
-  statement: Fourteen of the nineteen Theologico-Political writings now have complete provisional item studies within registered
-    scopes; the remaining five lack individual sequential studies.
+  statement: All nineteen Theologico-Political writings now have complete provisional item studies within registered scopes;
+    textual-state comparisons, independent corroboration, proposition normalization, and certification remain incomplete.
   effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE
 - gap_id: FINDINGS-GAP-004
   statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and most Platonic
@@ -1595,6 +1969,11 @@ validation_rules:
   predecessor qualification, noncorroboration, and no-successor safeguards
 - FINDSET-021 must derive only FINDSET-142 and FINDSET-143, preserve CORPUS-WIT-110 and first-paragraph scope, pending 1959
   comparison, material predecessor qualification, noncorroboration, and no-successor safeguards
+- FINDSET-022 through FINDSET-026 preserve their registered witnesses, source-specific predecessor retests, pending textual-state
+  comparisons, incomplete independent corroboration, and no-successor safeguards
+- FINDSET-023 preserves material nonconfirmation and probable source misallocation instead of importing orthodoxy, unbelief,
+  Zionism, or medieval-philosophy claims absent from An Unspoken Prologue
+- FINDSET-026 preserves LAST_PARAGRAPH_ONLY scope and excludes Green editorial theological interpretation from Strauss evidence
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   findings_state: OPEN_MATERIALLY_INCOMPLETE_AND_NONCERTIFIED
