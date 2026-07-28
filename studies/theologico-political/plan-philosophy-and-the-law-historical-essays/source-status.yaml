@@ -1,16 +1,52 @@
 schema_version: 1.0
 document_type: source_status_record
-identity: {status_id: CORPUS-STATUS-118, corpus_source_id: CORPUS-SRC-118, canonical_title: "Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays", author: Leo Strauss, date: 1946, version: 1.1.0}
-status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-118, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
-revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, unresolved earlier textual-state comparison, predecessor authority, noncertification, and no successor effect."}
-registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 18, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-118, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
+identity: {status_id: CORPUS-STATUS-118, corpus_source_id: CORPUS-SRC-118, canonical_title: "Plan of a Book Tentatively Entitled
+    Philosophy and the Law — Historical Essays", author: Leo Strauss, date: 1946, version: 1.2.0}
+status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION, certification: NOT_CERTIFIED,
+  source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-118, independent_sequential_study: PHILOSOPHY-LAW-PLAN-STUDY-001,
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
+revision_history:
+  predecessor_version: 1.1.0
+  transformation: FORWARD_SEQUENTIAL_RECONSTRUCTION
+  reason: Complete PHILOSOPHY-LAW-PLAN-STUDY-001 from the fingerprinted 1997 collected witness while preserving witness/study
+    distinction, textual-state limits, predecessor authority, noncorroboration, noncertification, and no successor effect.
+registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 18, corpus_registry: corpus/index.yaml,
+  corpus_source_id: CORPUS-SRC-118, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
 verified_documentary_facts:
-  - The reviewed 1997 SUNY collected witness occupies printed pages 467-470 and one-based PDF pages 486-489.
-  - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
-  - The collection publishes the plan with permission of Joseph Cropsey and the Estate of Leo Strauss and supplies no earlier publication citation in its Sources section.
-predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Reveals the original architecture of the inquiry as philosophy confronted by revealed law, particularly in medieval Jewish and Islamic philosophy.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
-publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 467, end: 470}, pdf_page_range_one_based: {start: 486, end: 489}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
-reviewed_witness: {witness_id: CORPUS-WIT-118, witness_record_path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/reviewed-witness.yaml, printed_page_range: {start: 467, end: 470}, pdf_page_range_one_based: {start: 486, end: 489}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
-source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to the source, not independent corroboration."}
-next_required_actions: [conduct an independent sequential reading of printed pages 467-470, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization]
-termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
+- The reviewed 1997 SUNY collected witness occupies printed pages 467-470 and one-based PDF pages 486-489.
+- The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307
+  bytes.
+- The collection publishes the plan with permission of Joseph Cropsey and the Estate of Leo Strauss and supplies no earlier
+  publication citation in its Sources section.
+predecessor_contribution_record: {evidence_status: PROVISIONALLY_RETESTED_STRONG_CONFIRMATION_WITH_DOCUMENTARY_LIMIT, statement: "Reveals
+    the original architecture of the inquiry as philosophy confronted by revealed law, particularly in medieval Jewish and
+    Islamic philosophy.", preservation_rule: "Retest does not silently rewrite, certify, activate, or displace the active
+    predecessor.", retest_state: PROVISIONAL_RETEST_STRONG_CONFIRMATION_WITH_DOCUMENTARY_LIMIT_NO_PROMOTION, retest_result: 'The
+    plan directly organizes the project around the conflict of biblical tradition and Greek philosophy and around Maimonidean
+    prophecy, revelation, divine law, Plato, and Farabi.; It integrates exotericism, persecution, and the modern liberal transformation
+    of freedom of speech into that architecture.; “Original architecture” is supported for this 1946 plan but does not prove
+    that the architecture was final or unchanged thereafter.; The editor’s statement that the plan reflects Strauss’s mature
+    view is not Strauss’s statement.'}
+publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart
+    Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 467, end: 470}, pdf_page_range_one_based: {
+    start: 486, end: 489}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf",
+  file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE,
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
+reviewed_witness: {witness_id: CORPUS-WIT-118, witness_record_path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/reviewed-witness.yaml,
+  printed_page_range: {start: 467, end: 470}, pdf_page_range_one_based: {start: 486, end: 489}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
+source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION_FOR_REVIEWED_WITNESS,
+  independence_limit: "The completed study is source-local and is not independent corroboration of represented persons, traditions,
+    institutions, or doctrines."}
+next_required_actions:
+- compare the reviewed witness with the earlier textual state when separately available
+- expand independent primary witnesses where warranted
+- preserve source-specific findings without doctrinal promotion
+termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: COMPLETE_PROVISIONAL, original_edition_comparison: PENDING,
+  certification: NOT_CERTIFIED, successor_effect: NONE, study_id: PHILOSOPHY-LAW-PLAN-STUDY-001, independent_corroboration: INCOMPLETE,
+  earlier_textual_state_comparison: PENDING}
+study_record:
+  internal_study_id: PHILOSOPHY-LAW-PLAN-STUDY-001
+  corpus_study_id: CORPUS-STUDY-025
+  path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_corroboration: INCOMPLETE

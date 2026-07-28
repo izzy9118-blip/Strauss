@@ -1,0 +1,45 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity:
+  id: FINDSET-148-SYNTHESIS
+  title: An Unspoken Prologue — ancients-vs-moderns local synthesis
+  version: 1.0.0
+status:
+  lifecycle: PROVISIONAL_SOURCE_DERIVED_SYNTHESIS
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+  predecessor_effect: NONE
+derivation:
+  source_finding_set: FINDSET-023
+  source_id: CORPUS-SRC-115
+  study_id: UNSPOKEN-PROLOGUE-STUDY-001
+  witness_id: CORPUS-WIT-115
+  rule: Derived only from the completed source-specific reconstruction; repetition does not create independent corroboration.
+problem:
+  canonical_key: ancients-vs-moderns
+  role: CONTROLLED_SECONDARY_JURISDICTION
+  receives: [Heidegger and modern destruction of tradition, Aristotle and Plato, genuine return to classical philosophy]
+  non_absorption: The tribute does not provide a complete Strauss account of modernity or Heidegger.
+source_findings:
+- id: UNSPOKEN-PF-001
+  classification: documented_finding
+  proposition: 'The text links Klein’s intellectual character with a principled aversion to publicity and self-display.'
+- id: UNSPOKEN-PF-002
+  classification: documented_finding
+  proposition: 'Heidegger’s radical attack on the tradition is treated as unintentionally reopening access to the classical
+    roots of philosophy.'
+- id: UNSPOKEN-PF-003
+  classification: documented_finding
+  proposition: 'Klein is credited with first seeing the possibility of a genuine return to Plato and Aristotle after Heidegger.'
+- id: UNSPOKEN-PF-004
+  classification: documentary_correction
+  proposition: 'The reviewed prologue does not contain the predecessor’s claimed discussion of orthodoxy, unbelief, Zionism,
+    or rediscovery of medieval philosophy.'
+predecessor_retest:
+  state: PROVISIONAL_RETEST_MATERIAL_NONCONFIRMATION_AND_PROBABLE_SOURCE_MISALLOCATION_NO_PROMOTION
+  predecessor_effect: NONE
+limits:
+- source-specific derivation only
+- independent corroboration remains incomplete
+- 1978 Interpretation printing comparison remains pending
+- no doctrinal certification, migration certification, successor activation, or predecessor displacement

@@ -26,31 +26,20 @@ class CompleteTPWitnessCoverageTests(unittest.TestCase):
         for sid in expected:
             self.assertEqual(sources[sid]["reviewed_witnesses"], [witnesses[sid]["witness_id"]])
         self.assertEqual(corpus["coverage"]["theologico_political_reviewed_item_witnesses_registered"], 19)
-        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 14)
+        self.assertEqual(corpus["coverage"]["theologico_political_independent_item_studies_registered"], 19)
         self.assertEqual(corpus["termination"]["theologico_political_reviewed_witness_state"], "COMPLETE_19_OF_19")
-        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "INCOMPLETE_14_OF_19")
+        self.assertEqual(corpus["termination"]["theologico_political_independent_study_state"], "COMPLETE_19_OF_19")
 
-    def test_five_witness_only_items_remain_noncertified_and_unstudied(self):
+    def test_all_nineteen_items_have_completed_provisional_studies(self):
         corpus = load_yaml("corpus/index.yaml")
-        complete = {"CORPUS-SRC-102", "CORPUS-SRC-103", "CORPUS-SRC-105", "CORPUS-SRC-108", "CORPUS-SRC-109", "CORPUS-SRC-111", "CORPUS-SRC-113", "CORPUS-SRC-116", "CORPUS-SRC-101", "CORPUS-SRC-104", "CORPUS-SRC-106", "CORPUS-SRC-107", "CORPUS-SRC-112", "CORPUS-SRC-110"}
-        witness_only = [
-            x
-            for x in corpus["source_entities"]
-            if x["source_id"].startswith("CORPUS-SRC-1") and x["source_id"] not in complete
-        ]
-        self.assertEqual(len(witness_only), 5)
-        for source in witness_only:
+        tp = [x for x in corpus["source_entities"] if x["source_id"].startswith("CORPUS-SRC-1")]
+        self.assertEqual(len(tp), 19)
+        for source in tp:
             self.assertEqual(
                 source["item_level_source_status"],
-                "REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED",
+                "REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION",
             )
-            status_entry = next(
-                x for x in corpus["source_status_records"] if x["source_id"] == source["source_id"]
-            )
-            status = load_yaml(status_entry["path"])
-            self.assertEqual(status["termination"]["study_state"], "INCOMPLETE")
-            self.assertEqual(status["termination"]["certification"], "NOT_CERTIFIED")
-            self.assertEqual(status["termination"]["successor_effect"], "NONE")
+            self.assertEqual(len(source.get("study_records", [])), 1)
 
     def test_new_fingerprint_batch_uses_one_verified_container_without_collapsing_scopes(self):
         corpus = load_yaml("corpus/index.yaml")

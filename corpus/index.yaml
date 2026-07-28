@@ -3,7 +3,7 @@ record_type: typed_corpus_registry
 identity:
   id: STRAUSS-CORPUS-INDEX-001
   title: Strauss Repository Typed Corpus Registry
-  version: 1.22.0
+  version: 1.23.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
@@ -11,12 +11,12 @@ status:
   certification: NOT_CERTIFIED
   authority: DISCOVERY_PROVENANCE_AND_SOURCE_STATUS_ONLY
 revision_history:
-  predecessor_version: 1.21.0
+  predecessor_version: 1.22.0
   predecessor_blob_sha: PRESERVED_BY_GIT
   transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Register WIPP-FIRST-PARAGRAPH-STUDY-001 as the fourteenth complete provisional Theologico-Political item study and
-    CORPUS-STUDY-021 while preserving the first-paragraph scope, pending 1959 comparison, material qualification of the predecessor's
-    philosophic-best-regime wording, noncorroboration, noncertification, and no successor effect.
+  reason: Complete the final five Theologico-Political independent sequential reconstructions, reaching 19-of-19 within registered
+    scopes while preserving source corrections, textual-state limits, noncorroboration, noncertification, predecessor authority,
+    and no successor effect.
 purpose: Provide deterministic discovery, source identity, documentary status, provenance, problem binding, study binding,
   witness condition, and gap records without moving source records, distributing source texts, certifying doctrine, or treating
   a registered corpus as complete merely because every current record is indexed.
@@ -437,12 +437,15 @@ source_entities:
   - theologico-political
   - theory-vs-practice
   - ancients-vs-moderns
-  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
   reviewed_witnesses:
   - CORPUS-WIT-114
   limits:
-  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - GOOD-SOCIETY-STUDY-001 is source-local and not independent corroboration
+  - 1963 Criterion printing comparison remains PENDING
+  study_records:
+  - CORPUS-STUDY-022
 - source_id: CORPUS-SRC-115
   creator: Leo Strauss
   canonical_title: An Unspoken Prologue
@@ -452,14 +455,18 @@ source_entities:
   source_status_record: CORPUS-STATUS-115
   problem_bindings:
   - theologico-political
-  - athens-vs-jerusalem
-  - wise-vs-vulgar
-  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  - ancients-vs-moderns
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
   reviewed_witnesses:
   - CORPUS-WIT-115
   limits:
-  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - UNSPOKEN-PROLOGUE-STUDY-001 is source-local and not independent corroboration
+  - 1978 Interpretation printing comparison remains PENDING
+  - predecessor-attributed orthodoxy, unbelief, Zionism, and medieval-philosophy material is absent from this prologue; probable
+    source conflation is preserved rather than silently harmonized
+  study_records:
+  - CORPUS-STUDY-023
 - source_id: CORPUS-SRC-116
   creator: Leo Strauss
   canonical_title: Preface to Hobbes Politische Wissenschaft
@@ -495,12 +502,17 @@ source_entities:
   problem_bindings:
   - theologico-political
   - wise-vs-vulgar
-  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  - ancients-vs-moderns
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
   reviewed_witnesses:
   - CORPUS-WIT-117
   limits:
-  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - GIVING-ACCOUNTS-STUDY-001 is source-local and not independent corroboration
+  - 1970 The College printing comparison remains PENDING
+  - speaker layers, autobiography limit, and tape break remain explicit
+  study_records:
+  - CORPUS-STUDY-024
 - source_id: CORPUS-SRC-118
   creator: Leo Strauss
   canonical_title: Plan of a Book Tentatively Entitled Philosophy and the Law — Historical Essays
@@ -511,12 +523,17 @@ source_entities:
   problem_bindings:
   - theologico-political
   - athens-vs-jerusalem
-  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  - wise-vs-vulgar
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
   reviewed_witnesses:
   - CORPUS-WIT-118
   limits:
-  - reviewed witness is registered; independent sequential reconstruction remains pending
+  - PHILOSOPHY-LAW-PLAN-STUDY-001 is source-local and not independent corroboration
+  - earlier textual state comparison remains PENDING
+  - Green's mature-view judgment is editorial and projected architecture is not completed argument
+  study_records:
+  - CORPUS-STUDY-025
 - source_id: CORPUS-SRC-119
   creator: Leo Strauss
   canonical_title: Restatement on Xenophon's Hiero
@@ -526,15 +543,19 @@ source_entities:
   source_status_record: CORPUS-STATUS-119
   problem_bindings:
   - theologico-political
-  - theory-vs-practice
   - ancients-vs-moderns
-  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
-  study_status: INDEPENDENT_RECONSTRUCTION_REQUIRED
+  - theory-vs-practice
+  item_level_source_status: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
+  study_status: COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE
   reviewed_witnesses:
   - CORPUS-WIT-119
   limits:
-  - reviewed witness is registered; independent sequential reconstruction remains pending
-  - registered witness covers only the predecessor-defined last paragraph scope
+  - HIERO-RESTATEMENT-LAST-PARAGRAPH-STUDY-001 is source-local and not independent corroboration
+  - earlier textual state comparison remains PENDING
+  - LAST_PARAGRAPH_ONLY scope remains governing; Green theological interpretation and predecessor universal-state wording
+    are not imported
+  study_records:
+  - CORPUS-STUDY-026
 reviewed_witnesses:
 - witness_id: CORPUS-WIT-001
   source_id: CORPUS-SRC-002
@@ -1169,13 +1190,13 @@ source_status_records:
   source_id: CORPUS-SRC-114
   path: studies/theologico-political/perspectives-on-the-good-society/source-status.yaml
   document_type: source_status_record
-  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-115
   source_id: CORPUS-SRC-115
   path: studies/theologico-political/an-unspoken-prologue/source-status.yaml
   document_type: source_status_record
-  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-116
   source_id: CORPUS-SRC-116
@@ -1187,19 +1208,19 @@ source_status_records:
   source_id: CORPUS-SRC-117
   path: studies/theologico-political/a-giving-of-accounts/source-status.yaml
   document_type: source_status_record
-  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-118
   source_id: CORPUS-SRC-118
   path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/source-status.yaml
   document_type: source_status_record
-  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
 - status_id: CORPUS-STATUS-119
   source_id: CORPUS-SRC-119
   path: studies/theologico-political/restatement-on-xenophons-hiero/source-status.yaml
   document_type: source_status_record
-  completion: REVIEWED_ITEM_WITNESS_REGISTERED_SEQUENTIAL_RECONSTRUCTION_REQUIRED
+  completion: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION
   certification: NOT_CERTIFIED
 study_records:
 - study_id: CORPUS-STUDY-001
@@ -1328,6 +1349,36 @@ study_records:
   record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
   completion: COMPLETE_PROVISIONAL_FOR_REGISTERED_FIRST_PARAGRAPH_OF_REVIEWED_1997_COLLECTED_WITNESS
   certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-022
+  source_id: CORPUS-SRC-114
+  path: studies/theologico-political/perspectives-on-the-good-society/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-023
+  source_id: CORPUS-SRC-115
+  path: studies/theologico-political/an-unspoken-prologue/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-024
+  source_id: CORPUS-SRC-117
+  path: studies/theologico-political/a-giving-of-accounts/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-025
+  source_id: CORPUS-SRC-118
+  path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+- study_id: CORPUS-STUDY-026
+  source_id: CORPUS-SRC-119
+  path: studies/theologico-political/restatement-on-xenophons-hiero/sequential-reconstruction.yaml
+  record_role: SOURCE_SPECIFIC_SEQUENTIAL_RECONSTRUCTION
+  completion: COMPLETE_PROVISIONAL_FOR_REGISTERED_SCOPE
+  certification: NOT_CERTIFIED
 problem_witness_registries:
 - problem: nomos-vs-physis
   path: problems/nomos-vs-physis/witnesses.yaml
@@ -1379,13 +1430,13 @@ coverage:
   source_entities_registered: 22
   reviewed_witnesses_registered: 22
   source_status_records_registered: 22
-  study_records_registered: 21
+  study_records_registered: 26
   problem_witness_registries_registered: 7
   theologico_political_predecessor_sources_registered: 19
   theologico_political_item_level_statuses_registered: 19
   theologico_political_reviewed_item_witnesses_registered: 19
-  theologico_political_independent_item_studies_registered: 14
-  current_studies_tree_yaml_records_accounted_for: 61
+  theologico_political_independent_item_studies_registered: 19
+  current_studies_tree_yaml_records_accounted_for: 66
   exhaustive_within_declared_scope: true
 corpus_gaps:
 - gap_id: CORPUS-GAP-001
@@ -1399,9 +1450,10 @@ corpus_gaps:
   effect: EDITION_SPECIFIC_DIFFERENCES_NOT_YET_TESTED
 - gap_id: CORPUS-GAP-003
   category: THEOLOGICO_POLITICAL_WITNESSES_AND_STUDIES
-  statement: All nineteen predecessor writings have bounded source identities and reviewed item witnesses; fourteen have complete
-    provisional sequential studies within their registered scopes, while the remaining five lack independent item studies.
-  effect: COMPARATIVE_SYNTHESIS_REMAINS_PROVISIONAL
+  statement: All nineteen predecessor writings have bounded source identities, reviewed item witnesses, and complete provisional
+    independent sequential reconstructions within their registered scopes. Original or earlier textual-state comparisons,
+    independent corroboration, broader corpus work, and certification remain incomplete.
+  effect: SEQUENCE_RECONSTRUCTED_BUT_COMPARATIVE_SYNTHESIS_AND_CERTIFICATION_REMAIN_PROVISIONAL
 - gap_id: CORPUS-GAP-004
   category: INDEPENDENT_CLASSICAL_WITNESSES
   statement: Direct Aristophanes and Xenophon studies and most Platonic dialogue studies remain pending.
@@ -1443,8 +1495,6 @@ validation_rules:
   actually present in CORPUS-WIT-116
 - CORPUS-SRC-101 preserves reviewed-witness safeguards and complete provisional sequential reconstruction while 1979/1981
   publication comparison remains pending
-- all five witness-only Theologico-Political sources preserve registered-witness, pending-study, edition-comparison, noncertification,
-  and no-successor safeguards
 - CORPUS-SRC-104 preserves the fingerprinted reviewed witness, collective 1952 editorial-layer distinction, complete provisional
   sequential reconstruction, pending original-1952 comparison, noncorroboration, noncertification, and no-successor safeguards
 - CORPUS-SRC-106 preserves the fingerprinted reviewed transcript, unknown-transcriber and editorial-emendation limits, complete
@@ -1456,15 +1506,21 @@ validation_rules:
 - CORPUS-SRC-110 preserves first-paragraph scope, the fingerprinted reviewed witness, complete provisional registered-scope
   reconstruction, pending 1959 comparison, material predecessor qualification, noncorroboration, noncertification, and no-successor
   safeguards
+- all nineteen Theologico-Political predecessor sources preserve distinct source, witness, study, edition-comparison, noncorroboration,
+  noncertification, and no-successor states after complete provisional registered-scope reconstruction
+- CORPUS-SRC-115 preserves material nonconfirmation of predecessor-attributed orthodoxy, unbelief, Zionism, and medieval-philosophy
+  content rather than silently harmonizing source conflation
+- CORPUS-SRC-119 preserves LAST_PARAGRAPH_ONLY scope and excludes Green editorial theological interpretation from Strauss
+  evidence
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE
   theologico_political_identity_registration_state: COMPLETE_19_OF_19
   theologico_political_reviewed_witness_state: COMPLETE_19_OF_19
-  theologico_political_independent_study_state: INCOMPLETE_14_OF_19
+  theologico_political_independent_study_state: COMPLETE_19_OF_19
   corpus_state: OPEN_AND_MATERIALLY_INCOMPLETE
   certification: NOT_CERTIFIED
   next_required_units:
-  - conduct independent sequential reconstruction of CORPUS-SRC-114 from CORPUS-WIT-114
-  - compare the registered CORPUS-SRC-110 paragraph with the 1959 Free Press printing when separately available
-  - conduct independent sequential reconstruction for the remaining five writings
-  - preserve the first-paragraph boundary unless a separate scope expansion is authorized
+  - compare original or earlier textual states where available and material
+  - expand independent biblical, Greek, medieval, modern, and reviewed-work witnesses
+  - continue broader corpus and proposition-level work without treating 19-of-19 sequence reconstruction as repository completion
+  - preserve predecessor authority until separately authorized certified transition

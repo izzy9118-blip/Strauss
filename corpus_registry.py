@@ -222,48 +222,14 @@ COMPLETE_TP_ITEMS: dict[str, dict[str, Any]] = {'CORPUS-SRC-101': {'status_id': 
                     'printed_page_range': {'start': 453, 'end': 456},
                     'pdf_page_range_one_based': {'start': 472, 'end': 475},
                     'reading_state': 'COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS',
-                    'platform_reference': False}}
+                    'platform_reference': False},
+  'CORPUS-SRC-114': {'status_id': 'CORPUS-STATUS-114', 'witness_id': 'CORPUS-WIT-114', 'study_id': 'CORPUS-STUDY-022', 'internal_study_id': 'GOOD-SOCIETY-STUDY-001', 'study_path': 'studies/theologico-political/perspectives-on-the-good-society/sequential-reconstruction.yaml', 'witness_record_path': 'studies/theologico-political/perspectives-on-the-good-society/reviewed-witness.yaml', 'printed_page_range': {'start': 431, 'end': 445}, 'pdf_page_range_one_based': {'start': 450, 'end': 464}, 'reading_state': 'COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS', 'platform_reference': False},
+  'CORPUS-SRC-115': {'status_id': 'CORPUS-STATUS-115', 'witness_id': 'CORPUS-WIT-115', 'study_id': 'CORPUS-STUDY-023', 'internal_study_id': 'UNSPOKEN-PROLOGUE-STUDY-001', 'study_path': 'studies/theologico-political/an-unspoken-prologue/sequential-reconstruction.yaml', 'witness_record_path': 'studies/theologico-political/an-unspoken-prologue/reviewed-witness.yaml', 'printed_page_range': {'start': 449, 'end': 452}, 'pdf_page_range_one_based': {'start': 468, 'end': 471}, 'reading_state': 'COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS', 'platform_reference': False},
+  'CORPUS-SRC-117': {'status_id': 'CORPUS-STATUS-117', 'witness_id': 'CORPUS-WIT-117', 'study_id': 'CORPUS-STUDY-024', 'internal_study_id': 'GIVING-ACCOUNTS-STUDY-001', 'study_path': 'studies/theologico-political/a-giving-of-accounts/sequential-reconstruction.yaml', 'witness_record_path': 'studies/theologico-political/a-giving-of-accounts/reviewed-witness.yaml', 'printed_page_range': {'start': 457, 'end': 466}, 'pdf_page_range_one_based': {'start': 476, 'end': 485}, 'reading_state': 'COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS', 'platform_reference': False},
+  'CORPUS-SRC-118': {'status_id': 'CORPUS-STATUS-118', 'witness_id': 'CORPUS-WIT-118', 'study_id': 'CORPUS-STUDY-025', 'internal_study_id': 'PHILOSOPHY-LAW-PLAN-STUDY-001', 'study_path': 'studies/theologico-political/plan-philosophy-and-the-law-historical-essays/sequential-reconstruction.yaml', 'witness_record_path': 'studies/theologico-political/plan-philosophy-and-the-law-historical-essays/reviewed-witness.yaml', 'printed_page_range': {'start': 467, 'end': 470}, 'pdf_page_range_one_based': {'start': 486, 'end': 489}, 'reading_state': 'COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS', 'platform_reference': False},
+  'CORPUS-SRC-119': {'status_id': 'CORPUS-STATUS-119', 'witness_id': 'CORPUS-WIT-119', 'study_id': 'CORPUS-STUDY-026', 'internal_study_id': 'HIERO-RESTATEMENT-LAST-PARAGRAPH-STUDY-001', 'study_path': 'studies/theologico-political/restatement-on-xenophons-hiero/sequential-reconstruction.yaml', 'witness_record_path': 'studies/theologico-political/restatement-on-xenophons-hiero/reviewed-witness.yaml', 'printed_page_range': {'start': 471, 'end': 473}, 'pdf_page_range_one_based': {'start': 490, 'end': 492}, 'reading_state': 'COMPLETE_FOR_REGISTERED_LAST_PARAGRAPH_OF_REVIEWED_1997_COLLECTED_WITNESS', 'platform_reference': False}}
 
-WITNESS_ONLY_TP_ITEMS: dict[str, dict[str, Any]] = {'CORPUS-SRC-114': {'status_id': 'CORPUS-STATUS-114',
-                    'witness_id': 'CORPUS-WIT-114',
-                    'witness_record_path': 'studies/theologico-political/perspectives-on-the-good-society/reviewed-witness.yaml',
-                    'printed_page_range': {'start': 431, 'end': 445},
-                    'pdf_page_range_one_based': {'start': 450, 'end': 464},
-                    'container_sha256': '43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66',
-                    'container_file_size_bytes': 39287307,
-                    'container_page_count': 526},
- 'CORPUS-SRC-115': {'status_id': 'CORPUS-STATUS-115',
-                    'witness_id': 'CORPUS-WIT-115',
-                    'witness_record_path': 'studies/theologico-political/an-unspoken-prologue/reviewed-witness.yaml',
-                    'printed_page_range': {'start': 449, 'end': 452},
-                    'pdf_page_range_one_based': {'start': 468, 'end': 471},
-                    'container_sha256': '43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66',
-                    'container_file_size_bytes': 39287307,
-                    'container_page_count': 526},
- 'CORPUS-SRC-117': {'status_id': 'CORPUS-STATUS-117',
-                    'witness_id': 'CORPUS-WIT-117',
-                    'witness_record_path': 'studies/theologico-political/a-giving-of-accounts/reviewed-witness.yaml',
-                    'printed_page_range': {'start': 457, 'end': 466},
-                    'pdf_page_range_one_based': {'start': 476, 'end': 485},
-                    'container_sha256': '43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66',
-                    'container_file_size_bytes': 39287307,
-                    'container_page_count': 526},
- 'CORPUS-SRC-118': {'status_id': 'CORPUS-STATUS-118',
-                    'witness_id': 'CORPUS-WIT-118',
-                    'witness_record_path': 'studies/theologico-political/plan-philosophy-and-the-law-historical-essays/reviewed-witness.yaml',
-                    'printed_page_range': {'start': 467, 'end': 470},
-                    'pdf_page_range_one_based': {'start': 486, 'end': 489},
-                    'container_sha256': '43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66',
-                    'container_file_size_bytes': 39287307,
-                    'container_page_count': 526},
- 'CORPUS-SRC-119': {'status_id': 'CORPUS-STATUS-119',
-                    'witness_id': 'CORPUS-WIT-119',
-                    'witness_record_path': 'studies/theologico-political/restatement-on-xenophons-hiero/reviewed-witness.yaml',
-                    'printed_page_range': {'start': 471, 'end': 473},
-                    'pdf_page_range_one_based': {'start': 490, 'end': 492},
-                    'container_sha256': '43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66',
-                    'container_file_size_bytes': 39287307,
-                    'container_page_count': 526}}
+WITNESS_ONLY_TP_ITEMS: dict[str, dict[str, Any]] = {}
 
 
 class CorpusRegistryError(RuntimeError):
@@ -681,8 +647,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     identity = registry.get("identity", {})
     if identity.get("id") != "STRAUSS-CORPUS-INDEX-001":
         errors.append("corpus registry identity.id mismatch")
-    if identity.get("version") != "1.22.0":
-        errors.append("corpus registry identity.version must be 1.22.0")
+    if identity.get("version") != "1.23.0":
+        errors.append("corpus registry identity.version must be 1.23.0")
 
     status = registry.get("status", {})
     if status.get("registry_scope") != "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE":
@@ -709,7 +675,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "source entities": (len(source_ids), 22),
         "reviewed witnesses": (len(witness_ids), 22),
         "source-status records": (len(status_ids), 22),
-        "study records": (len(study_ids), 21),
+        "study records": (len(study_ids), 26),
         "corpus gaps": (len(gap_ids), 7),
     }
     for label, (actual, expected) in expected_counts.items():
@@ -776,7 +742,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         "theologico_political_predecessor_sources_registered": len(tp_entities),
         "theologico_political_item_level_statuses_registered": 19,
         "theologico_political_reviewed_item_witnesses_registered": 19,
-        "theologico_political_independent_item_studies_registered": 14,
+        "theologico_political_independent_item_studies_registered": 19,
         "current_studies_tree_yaml_records_accounted_for": len(actual_studies),
         "exhaustive_within_declared_scope": True,
     }
@@ -793,8 +759,8 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         errors.append("TP identity registration must remain COMPLETE_19_OF_19")
     if termination.get("theologico_political_reviewed_witness_state") != "COMPLETE_19_OF_19":
         errors.append("TP reviewed-witness state must be COMPLETE_19_OF_19")
-    if termination.get("theologico_political_independent_study_state") != "INCOMPLETE_14_OF_19":
-        errors.append("TP independent-study state must be INCOMPLETE_14_OF_19")
+    if termination.get("theologico_political_independent_study_state") != "COMPLETE_19_OF_19":
+        errors.append("TP independent-study state must be COMPLETE_19_OF_19")
     if termination.get("corpus_state") != "OPEN_AND_MATERIALLY_INCOMPLETE":
         errors.append("registry termination must preserve an open, incomplete corpus")
     if termination.get("certification") != "NOT_CERTIFIED":

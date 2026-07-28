@@ -1,16 +1,52 @@
 schema_version: 1.0
 document_type: source_status_record
-identity: {status_id: CORPUS-STATUS-115, corpus_source_id: CORPUS-SRC-115, canonical_title: "An Unspoken Prologue", author: Leo Strauss, date: 1959, version: 1.1.0}
-status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED, certification: NOT_CERTIFIED, source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-115, independent_sequential_study: NOT_YET_COMPLETED, active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
-revision_history: {predecessor_version: 1.0.0, transformation: FORWARD_WITNESS_REGISTRATION, reason: "Register the fingerprinted 1997 SUNY collected witness with exact locators while preserving incomplete independent sequential reconstruction, pending earlier-publication comparison, predecessor authority, noncertification, and no successor effect."}
-registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 15, corpus_registry: corpus/index.yaml, corpus_source_id: CORPUS-SRC-115, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
+identity: {status_id: CORPUS-STATUS-115, corpus_source_id: CORPUS-SRC-115, canonical_title: "An Unspoken Prologue", author: Leo
+    Strauss, date: 1959, version: 1.2.0}
+status: {lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED_AND_COMPLETE_PROVISIONAL_SEQUENTIAL_RECONSTRUCTION, certification: NOT_CERTIFIED,
+  source_text_admission: NOT_REQUESTED, reviewed_witness: CORPUS-WIT-115, independent_sequential_study: UNSPOKEN-PROLOGUE-STUDY-001,
+  active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS}
+revision_history:
+  predecessor_version: 1.1.0
+  transformation: FORWARD_SEQUENTIAL_RECONSTRUCTION
+  reason: Complete UNSPOKEN-PROLOGUE-STUDY-001 from the fingerprinted 1997 collected witness while preserving witness/study
+    distinction, textual-state limits, predecessor authority, noncorroboration, noncertification, and no successor effect.
+registration_basis: {active_predecessor: problems/theologico-political.yaml, active_predecessor_source_sequence: 15, corpus_registry: corpus/index.yaml,
+  corpus_source_id: CORPUS-SRC-115, governing_problem: theologico-political, preserved_predecessor: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml}
 verified_documentary_facts:
-  - The reviewed 1997 SUNY collected witness occupies printed pages 449-452 and one-based PDF pages 468-471.
-  - The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307 bytes.
-  - The collection states that the prologue first appeared in Interpretation 7, no. 3 (1978): 1-3; the active predecessor preserves the 1959 source date.
-predecessor_contribution_record: {evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION, statement: "Supplies autobiographical evidence concerning orthodoxy, unbelief, Zionism, Nietzsche, and the rediscovery of medieval philosophy without settling Strauss's final doctrinal allegiance.", preservation_rule: "Witness registration does not independently confirm, promote, revise, or certify this predecessor statement."}
-publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 449, end: 452}, pdf_page_range_one_based: {start: 468, end: 471}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf", file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE, text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
-reviewed_witness: {witness_id: CORPUS-WIT-115, witness_record_path: studies/theologico-political/an-unspoken-prologue/reviewed-witness.yaml, printed_page_range: {start: 449, end: 452}, pdf_page_range_one_based: {start: 468, end: 471}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
-source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: SOURCE_GROUNDING_AVAILABLE_SEQUENTIAL_RECONSTRUCTION_REQUIRED, independence_limit: "The witness is documentary access to autobiographical evidence and does not settle doctrinal allegiance."}
-next_required_actions: [conduct an independent sequential reading of printed pages 449-452, classify source-level findings by evidence status, compare the source-level reconstruction with the active predecessor without silent harmonization, compare the 1978 Interpretation printing when separately reviewed]
-termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: INCOMPLETE, original_edition_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
+- The reviewed 1997 SUNY collected witness occupies printed pages 449-452 and one-based PDF pages 468-471.
+- The reviewed container has SHA-256 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66 and file size 39287307
+  bytes.
+- The collection states that the prologue first appeared in Interpretation 7, no. 3 (1978): 1-3; the active predecessor preserves
+    the 1959 source date.
+predecessor_contribution_record: {evidence_status: PROVISIONALLY_RETESTED_MATERIAL_NONCONFIRMATION_AND_PROBABLE_SOURCE_MISALLOCATION,
+  statement: "Supplies autobiographical evidence concerning orthodoxy, unbelief, Zionism, Nietzsche, and the rediscovery of
+    medieval philosophy without settling Strauss's final doctrinal allegiance.", preservation_rule: "Retest does not silently
+    rewrite, certify, activate, or displace the active predecessor.", retest_state: PROVISIONAL_RETEST_MATERIAL_NONCONFIRMATION_AND_PROBABLE_SOURCE_MISALLOCATION_NO_PROMOTION,
+  retest_result: "Nietzsche is named in a youthful anecdote and the source is autobiographical in form.; The source does not
+    settle Strauss's final doctrinal allegiance.; The reviewed text contains no discussion of orthodoxy, unbelief, Zionism,
+    or medieval philosophy.; Its substantive intellectual subject is Klein’s recovery of classical philosophy through the
+    opening unintentionally created by Heidegger.; Themes absent here appear in A Giving of Accounts, so the predecessor statement
+    may reflect source conflation; that remains a provisional documentary diagnosis rather than a silent rewrite."}
+publication_and_witness_condition: {reviewed_collection: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart
+    Green, publisher: State University of New York Press, year: 1997, printed_page_range: {start: 449, end: 452}, pdf_page_range_one_based: {
+    start: 468, end: 471}, local_file: "jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf",
+  file_size_bytes: 39287307, sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66, fingerprint: AVAILABLE,
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES, locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM, original_or_earlier_printing_comparison: PENDING}
+reviewed_witness: {witness_id: CORPUS-WIT-115, witness_record_path: studies/theologico-political/an-unspoken-prologue/reviewed-witness.yaml,
+  printed_page_range: {start: 449, end: 452}, pdf_page_range_one_based: {start: 468, end: 471}, container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66}
+source_classification: {author_relation: PRIMARY_STRAUSS_WRITING, documentary_rank: REVIEWED_PRIMARY_STRAUSS_WITNESS, analytical_use: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION_FOR_REVIEWED_WITNESS,
+  independence_limit: "The completed study is source-local and is not independent corroboration of represented persons, traditions,
+    institutions, or doctrines."}
+next_required_actions:
+- compare the reviewed witness with the 1978 Interpretation printing when separately available
+- expand independent primary witnesses where warranted
+- preserve source-specific findings without doctrinal promotion
+termination: {source_identity_state: REGISTERED, reviewed_witness_state: REGISTERED, study_state: COMPLETE_PROVISIONAL, original_edition_comparison: PENDING,
+  certification: NOT_CERTIFIED, successor_effect: NONE, study_id: UNSPOKEN-PROLOGUE-STUDY-001, independent_corroboration: INCOMPLETE,
+  original_1978_interpretation_comparison: PENDING}
+study_record:
+  internal_study_id: UNSPOKEN-PROLOGUE-STUDY-001
+  corpus_study_id: CORPUS-STUDY-023
+  path: studies/theologico-political/an-unspoken-prologue/sequential-reconstruction.yaml
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_corroboration: INCOMPLETE

@@ -1,0 +1,52 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity:
+  id: FINDSET-149-SYNTHESIS
+  title: A Giving of Accounts — theologico-political local synthesis
+  version: 1.0.0
+status:
+  lifecycle: PROVISIONAL_SOURCE_DERIVED_SYNTHESIS
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
+  predecessor_effect: NONE
+derivation:
+  source_finding_set: FINDSET-024
+  source_id: CORPUS-SRC-117
+  study_id: GIVING-ACCOUNTS-STUDY-001
+  witness_id: CORPUS-WIT-117
+  rule: Derived only from the completed source-specific reconstruction; repetition does not create independent corroboration.
+problem:
+  canonical_key: theologico-political
+  role: PRIMARY
+  receives: [God and politics, orthodoxy and Enlightenment, Barth and Rosenzweig, Spinoza, prophecy and revelation, Maimonides,
+    philosophy and the moral-religious city]
+  non_absorption: Autobiographical genealogy does not settle the truth of philosophy or revelation.
+source_findings:
+- id: GIVING-PF-001
+  classification: documented_finding
+  proposition: 'Strauss presents his theologico-political inquiry as growing from the renewed postwar challenge of theology
+    to Enlightenment claims and from a fresh study of Spinoza’s Theologico-Political Treatise.'
+- id: GIVING-PF-002
+  classification: documented_finding
+  proposition: 'Maimonides became intelligible to him through prophecy, revelation, Islamic philosophy, and Platonic political
+    philosophy.'
+- id: GIVING-PF-003
+  classification: documented_finding
+  proposition: 'Strauss and Klein agreed on the rediscovery of exotericism but differed in the importance Strauss assigned
+    to the tension between philosophy and the city.'
+- id: GIVING-PF-004
+  classification: documented_finding
+  proposition: 'Strauss explicitly describes philosophy as transpolitical, transreligious, and transmoral while insisting
+    that the city ought to remain moral and religious.'
+- id: GIVING-PF-005
+  classification: documentary_limit
+  proposition: 'The autobiographical account is offered as a starting point and possible explanation of pitfalls, not as self-certifying
+    doctrinal evidence.'
+predecessor_retest:
+  state: PROVISIONAL_RETEST_STRONG_CONFIRMATION_AND_SUBSTANTIVE_DEEPENING_NO_PROMOTION
+  predecessor_effect: NONE
+limits:
+- source-specific derivation only
+- independent corroboration remains incomplete
+- 1970 The College printing comparison remains pending
+- no doctrinal certification, migration certification, successor activation, or predecessor displacement

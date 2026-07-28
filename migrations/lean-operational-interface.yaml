@@ -3,7 +3,7 @@ record_type: architecture_mapping
 identity:
   id: STRAUSS-LEAN-MAP-001
   title: Existing Strauss Repository to Lean Operational Interface
-  version: 1.18.0
+  version: 1.19.0
 status:
   lifecycle: IMPLEMENTED_ADDITIVE_MAPPING
   structural_interface: IMPLEMENTED
@@ -11,11 +11,10 @@ status:
   certification: NOT_CERTIFIED
   destructive_actions_authorized: false
 revision_history:
-  predecessor_version: 1.17.0
+  predecessor_version: 1.18.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: Synchronize STATE-ISRAEL-LETTER-STUDY-001, corpus v1.21.0, findings v1.13.0, audit v3.5.0, process v1.19.0, and
-    schedule v1.17.0 while preserving six pending studies, National Review comparison, material predecessor qualification,
-    noncorroboration, and no successor effect.
+  reason: Synchronize completion of all nineteen Theologico-Political registered-scope source studies while preserving semantic
+    incompletion, textual-state limits, noncorroboration, noncertification, predecessor authority, and blocked final repin.
 source_state:
   repository: izzy9118-blip/Strauss
   governing_commit_before_mapping: 853dd7de13d7bf4abc881fc7671a5833b822b6cb
@@ -29,7 +28,7 @@ source_state:
   - scripts/
 completion_audit:
   path: audits/operational-completeness.yaml
-  version: 3.6.0
+  version: 3.7.0
   rule: 'Structural, bundle, corpus, findings, witness, source-status, and source-study validation must never be reported
     as doctrinal, migration, successor, or repository completion.
 
@@ -40,7 +39,7 @@ production_process:
   current_step: 8
   completed_identity_subunit: THEOLOGICO_POLITICAL_19_OF_19
   completed_witness_subunit: THEOLOGICO_POLITICAL_REVIEWED_WITNESSES_19_OF_19_COMPLETE
-  completed_study_subunit: FOURTEEN_OF_19_COMPLETE_PROVISIONAL_FIVE_PENDING
+  completed_study_subunit: NINETEEN_OF_19_COMPLETE_PROVISIONAL_WITHIN_REGISTERED_SCOPES
   final_repin_step: 10
   final_repin_status: BLOCKED_UNTIL_SUBSTANTIVE_COMPLETION
 mapping_rules:
@@ -129,6 +128,48 @@ mappings:
     - path: problems/ancients-vs-moderns/synthesis/letter-to-editor-state-of-israel.yaml
       source: CORPUS-SRC-112
       derivation: FINDSET-020_TO_FINDSET-141
+    - path: problems/theologico-political/synthesis/perspectives-on-the-good-society.yaml
+      source: CORPUS-SRC-114
+      derivation: FINDSET-022_TO_FINDSET-144
+    - path: problems/theory-vs-practice/synthesis/perspectives-on-the-good-society.yaml
+      source: CORPUS-SRC-114
+      derivation: FINDSET-022_TO_FINDSET-145
+    - path: problems/ancients-vs-moderns/synthesis/perspectives-on-the-good-society.yaml
+      source: CORPUS-SRC-114
+      derivation: FINDSET-022_TO_FINDSET-146
+    - path: problems/theologico-political/synthesis/an-unspoken-prologue.yaml
+      source: CORPUS-SRC-115
+      derivation: FINDSET-023_TO_FINDSET-147
+    - path: problems/ancients-vs-moderns/synthesis/an-unspoken-prologue.yaml
+      source: CORPUS-SRC-115
+      derivation: FINDSET-023_TO_FINDSET-148
+    - path: problems/theologico-political/synthesis/a-giving-of-accounts.yaml
+      source: CORPUS-SRC-117
+      derivation: FINDSET-024_TO_FINDSET-149
+    - path: problems/wise-vs-vulgar/synthesis/a-giving-of-accounts.yaml
+      source: CORPUS-SRC-117
+      derivation: FINDSET-024_TO_FINDSET-150
+    - path: problems/ancients-vs-moderns/synthesis/a-giving-of-accounts.yaml
+      source: CORPUS-SRC-117
+      derivation: FINDSET-024_TO_FINDSET-151
+    - path: problems/theologico-political/synthesis/plan-philosophy-and-the-law-historical-essays.yaml
+      source: CORPUS-SRC-118
+      derivation: FINDSET-025_TO_FINDSET-152
+    - path: problems/athens-vs-jerusalem/synthesis/plan-philosophy-and-the-law-historical-essays.yaml
+      source: CORPUS-SRC-118
+      derivation: FINDSET-025_TO_FINDSET-153
+    - path: problems/wise-vs-vulgar/synthesis/plan-philosophy-and-the-law-historical-essays.yaml
+      source: CORPUS-SRC-118
+      derivation: FINDSET-025_TO_FINDSET-154
+    - path: problems/theologico-political/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
+      source: CORPUS-SRC-119
+      derivation: FINDSET-026_TO_FINDSET-155
+    - path: problems/ancients-vs-moderns/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
+      source: CORPUS-SRC-119
+      derivation: FINDSET-026_TO_FINDSET-156
+    - path: problems/theory-vs-practice/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
+      source: CORPUS-SRC-119
+      derivation: FINDSET-026_TO_FINDSET-157
     limit: 'Problem-local integration does not finish independent witnesses, proposition-level migration, doctrinal certification,
       predecessor transition, or successor activation.
 
@@ -234,7 +275,7 @@ mappings:
     - history/foundational-problems/wise-vs-vulgar/WVG-v0.2-reconstruction-accepted.yaml
     interface:
       registry: corpus/index.yaml
-      registry_version: 1.22.0
+      registry_version: 1.23.0
       loader: corpus_registry.py
       validation_command: python corpus_registry.py --validate
     transformation: SUBSTANTIVE_FORWARD_REVISION_WITH_COMPLETE_NINETEEN_ITEM_REVIEWED_WITNESS_COVERAGE
@@ -270,8 +311,8 @@ mappings:
       remaining_count: 0
       reviewed_witness_count: 19
       remaining_without_reviewed_witness: 0
-      independent_sequential_study_count: 14
-      remaining_without_independent_sequential_study: 5
+      independent_sequential_study_count: 19
+      remaining_without_independent_sequential_study: 0
       completed_study_ids:
       - COHEN-STUDY-001
       - JA-STUDY-001
@@ -287,12 +328,12 @@ mappings:
       - WHY-REMAIN-JEWS-STUDY-001
       - STATE-ISRAEL-LETTER-STUDY-001
       - WIPP-FIRST-PARAGRAPH-STUDY-001
-      witness_only_source_ids:
-      - CORPUS-SRC-114
-      - CORPUS-SRC-115
-      - CORPUS-SRC-117
-      - CORPUS-SRC-118
-      - CORPUS-SRC-119
+      - GOOD-SOCIETY-STUDY-001
+      - UNSPOKEN-PROLOGUE-STUDY-001
+      - GIVING-ACCOUNTS-STUDY-001
+      - PHILOSOPHY-LAW-PLAN-STUDY-001
+      - HIERO-RESTATEMENT-LAST-PARAGRAPH-STUDY-001
+      witness_only_source_ids: []
       status_range: CORPUS-STATUS-101_THROUGH_CORPUS-STATUS-119
       root: studies/theologico-political/
     present_function:
@@ -312,18 +353,62 @@ mappings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.14.0
+      registry_version: 1.15.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
-    - finding_set_id: FINDSET-021
-      path: studies/theologico-political/what-is-political-philosophy/sequential-reconstruction.yaml
-    - finding_set_id: FINDSET-142
-      path: problems/theologico-political/synthesis/what-is-political-philosophy-first-paragraph.yaml
-      derived_from: FINDSET-021
-    - finding_set_id: FINDSET-143
-      path: problems/athens-vs-jerusalem/synthesis/what-is-political-philosophy-first-paragraph.yaml
-      derived_from: FINDSET-021
+    - finding_set_id: FINDSET-022
+      path: studies/theologico-political/perspectives-on-the-good-society/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-023
+      path: studies/theologico-political/an-unspoken-prologue/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-024
+      path: studies/theologico-political/a-giving-of-accounts/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-025
+      path: studies/theologico-political/plan-philosophy-and-the-law-historical-essays/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-026
+      path: studies/theologico-political/restatement-on-xenophons-hiero/sequential-reconstruction.yaml
+    - finding_set_id: FINDSET-144
+      path: problems/theologico-political/synthesis/perspectives-on-the-good-society.yaml
+      derived_from: FINDSET-022
+    - finding_set_id: FINDSET-145
+      path: problems/theory-vs-practice/synthesis/perspectives-on-the-good-society.yaml
+      derived_from: FINDSET-022
+    - finding_set_id: FINDSET-146
+      path: problems/ancients-vs-moderns/synthesis/perspectives-on-the-good-society.yaml
+      derived_from: FINDSET-022
+    - finding_set_id: FINDSET-147
+      path: problems/theologico-political/synthesis/an-unspoken-prologue.yaml
+      derived_from: FINDSET-023
+    - finding_set_id: FINDSET-148
+      path: problems/ancients-vs-moderns/synthesis/an-unspoken-prologue.yaml
+      derived_from: FINDSET-023
+    - finding_set_id: FINDSET-149
+      path: problems/theologico-political/synthesis/a-giving-of-accounts.yaml
+      derived_from: FINDSET-024
+    - finding_set_id: FINDSET-150
+      path: problems/wise-vs-vulgar/synthesis/a-giving-of-accounts.yaml
+      derived_from: FINDSET-024
+    - finding_set_id: FINDSET-151
+      path: problems/ancients-vs-moderns/synthesis/a-giving-of-accounts.yaml
+      derived_from: FINDSET-024
+    - finding_set_id: FINDSET-152
+      path: problems/theologico-political/synthesis/plan-philosophy-and-the-law-historical-essays.yaml
+      derived_from: FINDSET-025
+    - finding_set_id: FINDSET-153
+      path: problems/athens-vs-jerusalem/synthesis/plan-philosophy-and-the-law-historical-essays.yaml
+      derived_from: FINDSET-025
+    - finding_set_id: FINDSET-154
+      path: problems/wise-vs-vulgar/synthesis/plan-philosophy-and-the-law-historical-essays.yaml
+      derived_from: FINDSET-025
+    - finding_set_id: FINDSET-155
+      path: problems/theologico-political/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
+      derived_from: FINDSET-026
+    - finding_set_id: FINDSET-156
+      path: problems/ancients-vs-moderns/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
+      derived_from: FINDSET-026
+    - finding_set_id: FINDSET-157
+      path: problems/theory-vs-practice/synthesis/restatement-on-xenophons-hiero-last-paragraph.yaml
+      derived_from: FINDSET-026
     completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
     limit: 'Findings registration does not normalize every proposition, establish independent corroboration, certify doctrine
       or migration, displace predecessors, or activate successors.
