@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - production/complete-final-five-tp-studies
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
