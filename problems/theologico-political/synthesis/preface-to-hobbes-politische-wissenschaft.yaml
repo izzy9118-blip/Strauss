@@ -1,0 +1,32 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: TP-HOBBES-PREFACE-001, version: 1.0.0, title: "Theologico-Political Synthesis — Preface to Hobbes Politische Wissenschaft"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-116
+  reviewed_witness_id: CORPUS-WIT-116
+  study_id: HOBBES-PREFACE-STUDY-001
+  study_path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-015
+  derived_finding_set_id: FINDSET-129
+problem: {canonical_key: theologico-political, role: PRIMARY_JURISDICTION, adjacent_problem_reference: ancients-vs-moderns}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Strauss states that his study of Hobbes began within an investigation of Spinoza's Theologico-Political Treatise and the origins of biblical criticism."}
+  - {classification: documented_finding, proposition: "The revival of theology led Strauss to investigate whether the critique of orthodox Jewish and Christian theology deserved its apparent victory."}
+  - {classification: documented_finding, proposition: "Strauss explicitly says that since then the theologico-political problem has remained the theme of his investigations."}
+  - {classification: documented_finding, proposition: "Strauss says that the contrast between Hobbes and Spinoza seemed more important and illuminating to him than their agreement in the political dimension."}
+  - {classification: documented_finding, proposition: "The preface links philosophic interest in theology to Strauss's turn toward true politics."}
+  - {classification: unresolved_uncertainty, proposition: "The reviewed 1997 body omits the final three paragraphs of the 1965 preface, so the predecessor's sovereign-peace formulation cannot be independently retested from this witness alone."}
+predecessor_retest:
+  active_predecessor: problems/theologico-political.yaml
+  preserved_copy: history/foundational-problems/theologico-political/STR-PROBLEM-002-v1.1-active-predecessor.yaml
+  state: PARTIALLY_RETESTED_WITH_DOCUMENTARY_LIMIT_NO_PROMOTION
+  confirms: ["the theologico-political problem is explicitly named as a continuing theme", "the source connects that continuity to Spinoza, biblical criticism, revived theology, Hobbes, and true politics"]
+  not_retestable: ["sovereign peace as political neutralization rather than philosophic resolution, because the three paragraphs identified by editorial note 8 are omitted from the reviewed body"]
+  predecessor_effect: NONE
+limits:
+  - The reviewed witness reproduces the Maletz English translation in the 1997 collection, not a separately reviewed 1965 German preface or 1979-80 Interpretation printing.
+  - The omitted final three paragraphs require a separately reviewed witness before their substantive claims can be promoted.
+  - Hobbes, Spinoza, theology, and the named intellectual interlocutors remain independently incomplete unless separately registered.
+  - No migration, successor activation, predecessor displacement, or doctrinal certification is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_WITH_DOCUMENTARY_OMISSION_LIMIT, independent_corroboration: INCOMPLETE, textual_state_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
