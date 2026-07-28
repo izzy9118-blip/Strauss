@@ -1,0 +1,153 @@
+schema_version: 1.0
+record_type: reviewed_witness_acquisition_record
+
+identity:
+  id: TP-WITNESS-ACQ-103-001
+  title: Acquisition and Registration — How to Study Spinoza's Theologico-Political Treatise
+  version: 1.0.0
+  recorded_date: 2026-07-27
+
+status:
+  lifecycle: ACQUISITION_REVIEW_COMPLETE_WITNESS_REGISTERED
+  certification: NOT_CERTIFIED
+  corpus_registration_effect: CORPUS-WIT-103
+  source_text_admission: NOT_REQUESTED
+  independent_sequential_study_effect: NONE
+  migration_effect: NONE
+  successor_activation_effect: NONE
+  predecessor_displacement_effect: NONE
+
+purpose: >
+  Preserve the lawful acquisition, byte identity, publication provenance, complete-item
+  boundaries, and exact printed and PDF locators of the reviewed witness for CORPUS-SRC-103.
+  Registration does not distribute the source text, complete the independent sequential study,
+  certify doctrine, confirm the active predecessor, execute migration, activate a successor,
+  or displace any preserved record.
+
+source_identity:
+  corpus_source_id: CORPUS-SRC-103
+  source_status_id: CORPUS-STATUS-103
+  canonical_title: How to Study Spinoza's Theologico-Political Treatise
+  author: Leo Strauss
+  date: 1948
+  active_predecessor_source_sequence: 3
+  governing_problem: theologico-political
+
+candidate_container_witness:
+  title: Jewish Philosophy and the Crisis of Modernity
+  subtitle: Essays and Lectures in Modern Jewish Thought
+  author: Leo Strauss
+  editor: Kenneth Hart Green
+  series: SUNY Series in the Jewish Writings of Leo Strauss
+  publisher: State University of New York Press
+  publication_place: Albany
+  publication_year: 1997
+  isbn:
+    cloth: 0-7914-2773-0
+    paperback: 0-7914-2774-9
+  witness_type: SEARCHABLE_PDF_WITH_PAGE_IMAGES_AND_LOCAL_BYTE_ACCESS
+  uploaded_file_reference:
+    object_id: file_00000000369481f5b39f768dc1599ff3
+    displayed_filename: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+    page_count: 526
+    file_size_bytes: 39287307
+    sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+    repository_copy_status: NOT_DISTRIBUTED_BY_THIS_RECORD
+
+item_identity_and_locators:
+  collected_title: How to Study Spinoza's Theologico-Political Treatise
+  collected_date_label: 1948
+  printed_page_range: {start: 181, end: 233}
+  pdf_page_range_one_based: {start: 200, end: 252}
+  argumentative_body_printed_range: {start: 181, end: 224}
+  notes_printed_range: {start: 224, end: 233}
+  excluded_separator:
+    printed_page: 234
+    pdf_page_one_based: 253
+    condition: BLANK_SEPARATOR_BEFORE_NEXT_ITEM
+  item_completeness: COMPLETE_COLLECTED_ITEM
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+  locator_basis:
+    - The container table of contents places the item at printed page 181.
+    - The essay title page is PDF page 200 and carries printed page 181.
+    - The final notes page is PDF page 252 and carries printed page 233.
+    - PDF page 253 is a blank separator and the next essay begins on PDF page 254 at printed page 235.
+
+publication_provenance:
+  original_publication:
+    venue: Proceedings of the American Academy for Jewish Research
+    volume: 17
+    year: 1948
+    pages: 69-131
+  collected_reprint:
+    container: Jewish Philosophy and the Crisis of Modernity
+    editor: Kenneth Hart Green
+    publisher: State University of New York Press
+    place: Albany
+    year: 1997
+    printed_pages: 181-233
+  provenance_basis: >
+    The 1997 collection's acknowledgments identify the essay as reprinted by permission
+    of the American Academy for Jewish Research from Proceedings of the American Academy
+    for Jewish Research 17 (1948): 69-131.
+  original_1948_journal_comparison: PENDING
+
+review_condition:
+  complete_text_reviewability: CONFIRMED
+  searchable_text: true
+  page_images_available: true
+  stable_printed_locators: CONFIRMED
+  stable_pdf_locators: CONFIRMED
+  byte_level_fingerprint:
+    algorithm: SHA256
+    value: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  file_size_bytes: 39287307
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+
+bounded_content_markers:
+  opening_marker: >
+    The item opens by asking about the present relevance of the question treated in
+    Spinoza's Theologico-Political Treatise and by distinguishing exact interpretation
+    from historical or psychological explanation.
+  concluding_marker: >
+    The argumentative body concludes by requiring that the practical proposal and obvious
+    reasoning of the Treatise be understood completely before its hidden teaching is brought
+    to light; the numbered note apparatus continues through printed page 233.
+  use_rule: >
+    These markers establish boundaries and reviewability only. They do not substitute for
+    the required independent sequential reconstruction.
+
+registration_decision:
+  state: REGISTER_CORPUS_WIT_103_AS_FINGERPRINTED_REVIEWED_ITEM_WITNESS
+  reason: >
+    The exact uploaded bytes are accessible for hashing, the complete item is searchable
+    and visually reviewable, publication provenance is stated in the container, and printed
+    and PDF locators have been directly verified.
+  registered_witness_record: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml
+
+required_distinctions:
+  - source identity from reviewed witness
+  - reviewed witness from independent sequential study
+  - 1997 collected reprint from separately reviewed 1948 journal printing
+  - interpretation from historical or psychological explanation
+  - explicit meaning from hidden or unconscious implication
+  - Strauss's reconstruction of Spinoza from independently established Spinozist doctrine
+  - original argumentative body from editor-supplied cross-references in the notes
+  - witness registration from predecessor confirmation, doctrine, migration, and activation
+
+prohibitions:
+  - Do not distribute the copyrighted source text through this record.
+  - Do not identify the 1997 collected reprint with a separately reviewed 1948 journal printing.
+  - Do not count byte identity as independent corroboration.
+  - Do not count witness registration as sequential reconstruction.
+  - Do not let the active predecessor or adjacent editorial material govern the future source reading.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+
+termination:
+  acquisition_state: COMPLETE
+  reviewed_witness_registration: CORPUS-WIT-103_REGISTERED
+  fingerprint_state: VERIFIED_FOR_UPLOADED_1997_CONTAINER_BYTES
+  sequential_study_state: NOT_STARTED_BY_THIS_RECORD
+  original_edition_comparison: PENDING
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
