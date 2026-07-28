@@ -9,7 +9,7 @@ class CorpusRegistryTests(unittest.TestCase):
     def test_registry_validates_for_current_repository_state(self) -> None:
         registry = corpus_registry.load_registry()
         self.assertEqual(corpus_registry.validate_registry(registry), [])
-        self.assertEqual(registry["identity"]["version"], "1.16.0")
+        self.assertEqual(registry["identity"]["version"], "1.17.0")
         self.assertEqual(
             registry["status"]["registry_scope"],
             "EXHAUSTIVE_FOR_CURRENT_COMMITTED_SOURCE_AND_STUDY_STATE",
@@ -37,9 +37,9 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertTrue(corpus_registry.BASE_REQUIRED_STUDY_PATHS.issubset(actual))
         self.assertEqual(
             registry["coverage"]["current_studies_tree_yaml_records_accounted_for"],
-            55,
+            56,
         )
-        self.assertEqual(registry["coverage"]["study_records_registered"], 15)
+        self.assertEqual(registry["coverage"]["study_records_registered"], 16)
         self.assertEqual(registry["coverage"]["reviewed_witnesses_registered"], 22)
 
     def test_nineteen_tp_sources_preserve_predecessor_identity(self) -> None:
@@ -62,11 +62,11 @@ class CorpusRegistryTests(unittest.TestCase):
             19,
         )
 
-    def test_eleven_tp_sources_have_witnesses_but_still_require_study(self) -> None:
+    def test_ten_tp_sources_have_witnesses_but_still_require_study(self) -> None:
         registry = corpus_registry.load_registry()
         entries = {item["source_id"]: item for item in registry["source_status_records"] if corpus_registry._tp_sequence_from_source_id(item["source_id"]) is not None}
         sources = [item for item in registry["source_entities"] if item["source_id"] in corpus_registry.WITNESS_ONLY_TP_ITEMS]
-        self.assertEqual(len(sources), 11)
+        self.assertEqual(len(sources), 10)
         self.assertEqual(set(corpus_registry.WITNESS_ONLY_TP_ITEMS), {item["source_id"] for item in sources})
         for source in sources:
             status = corpus_registry.load_yaml(corpus_registry._resolve(entries[source["source_id"]]["path"]))
