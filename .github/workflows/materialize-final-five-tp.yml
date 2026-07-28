@@ -34,7 +34,14 @@ jobs:
         shell: bash
         run: |
           base64 -d scripts/.final5_materializer.py.gz.b64 | gzip -d > /tmp/materialize_final_five.py
-          python /tmp/materialize_final_five.py
+          python /tmp/materialize_final_five.py > /tmp/final5-materializer.log 2>&1 || { cat /tmp/final5-materializer.log; exit 1; }
+
+      - name: Upload materializer diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: final5-materializer-diagnostics
+          path: /tmp/final5-materializer.log
 
       - name: Remove temporary materializer artifacts
         run: |
