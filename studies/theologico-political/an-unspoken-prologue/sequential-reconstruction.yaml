@@ -1,0 +1,96 @@
+schema_version: 1.0
+record_type: source_specific_sequential_reconstruction
+identity:
+  id: UNSPOKEN-PROLOGUE-STUDY-001
+  title: Sequential Reconstruction of Leo Strauss, An Unspoken Prologue
+  version: 1.0.0
+status:
+  lifecycle: COMPLETE_PROVISIONAL_SOURCE_SPECIFIC_RECONSTRUCTION
+  certification: NOT_CERTIFIED
+  source_reading: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  independent_source_reconstruction: COMPLETE_FOR_THIS_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1978_interpretation_comparison: PENDING
+  migration_effect: NONE
+  successor_activation_effect: NONE
+source:
+  source_id: CORPUS-SRC-115
+  source_status_id: CORPUS-STATUS-115
+  reviewed_witness_id: CORPUS-WIT-115
+  author: Leo Strauss
+  canonical_title: An Unspoken Prologue
+  source_date: 1959
+  source_form: UNSPOKEN_WRITTEN_PROLOGUE_TO_PUBLIC_LECTURE
+  reviewed_container: {title: Jewish Philosophy and the Crisis of Modernity, editor: Kenneth Hart Green, publisher: State University of New York Press, place: Albany, year: 1997}
+  editorial_provenance:
+    collection_statement: 'First appeared in Interpretation 7, no. 3 (1978): 1-3; source occasion dated 1959.'
+    separately_reviewed_1978_printing: false
+  locators: {printed_pages: {start: 449, end: 452}, pdf_pages_one_based: {start: 468, end: 471}}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+source_limits:
+  - The main text is an unspoken written prologue honoring Jacob Klein; the collected notes are editorial and remain separate from Strauss's text.
+  - The reviewed text does not discuss orthodoxy, unbelief, Zionism, or medieval philosophy. Those themes therefore may not be attributed to this source merely because the active predecessor does so.
+  - Nietzsche appears in a youthful anecdote about Klein's abhorrence of publicity, not as a developed account of Strauss's relation to Nietzsche.
+  - The essay concerns Heidegger, Klein, and the recovery of classical philosophy; it does not by itself settle Strauss's doctrinal allegiance.
+method_application:
+  governing_question: What does Strauss's unspoken tribute to Klein say about publicity, Heidegger, the destruction of the philosophic tradition, and the possibility of a genuine return to classical philosophy?
+  reconstruction_rule: Read the three-page prologue as a complete written tribute, separate the later editorial notes, and retest the predecessor only after the source reconstruction is complete.
+sequential_reading:
+  - unit: UNSPOKEN-RU-001
+    printed_pages: 449-450
+    findings:
+      - {id: UNSPOKEN-DF-001, classification: documented_finding, proposition: 'Strauss frames autobiographical public speech as an old-age privilege and presents the tribute as a duty complicated by Klein’s extreme abhorrence of publicity.'}
+      - {id: UNSPOKEN-DF-002, classification: documented_finding, proposition: 'The Berlin coffee-house anecdote shows Klein’s wish not to appear publicly as a cultivated intellectual; Strauss’s shouted “Nietzsche!” is playful exposure of that aversion, not a doctrinal statement about Nietzsche.'}
+  - unit: UNSPOKEN-RU-002
+    printed_pages: 450-451
+    findings:
+      - {id: UNSPOKEN-DF-003, classification: documented_finding, proposition: 'Strauss says Heidegger affected their generation profoundly, surpassed contemporaries in speculative intelligence, and questioned the premise of philosophy more radically than anyone else.'}
+      - {id: UNSPOKEN-DF-004, classification: documented_finding, proposition: 'Heidegger’s attempted uprooting of the philosophic tradition unintentionally made its roots visible, creating the possibility that Klein first understood: a genuine return to Aristotle and Plato with full awareness of the difficulties.'}
+      - {id: UNSPOKEN-DF-005, classification: documented_finding, proposition: 'Klein’s relation to Heidegger is therefore neither discipleship nor simple rejection; Heidegger becomes the occasion for recovering the classical roots he meant to uproot.'}
+  - unit: UNSPOKEN-RU-003
+    printed_pages: 451
+    findings:
+      - {id: UNSPOKEN-DF-006, classification: documented_finding, proposition: 'Strauss presents Klein’s Greek Logistics as far more than historical scholarship and as unmatched in contemporary intellectual history, while its deliberately unexpressive title embodies Klein’s aversion to self-display.'}
+      - {id: UNSPOKEN-DF-007, classification: bounded_conclusion, proposition: 'The prologue’s central intellectual movement is from Heideggerian destruction to classical recovery through Klein, not from Jewish orthodoxy through Zionism or medieval philosophy.'}
+permanent_findings:
+  - {id: UNSPOKEN-PF-001, classification: documented_finding, proposition: 'The text links Klein’s intellectual character with a principled aversion to publicity and self-display.'}
+  - {id: UNSPOKEN-PF-002, classification: documented_finding, proposition: 'Heidegger’s radical attack on the tradition is treated as unintentionally reopening access to the classical roots of philosophy.'}
+  - {id: UNSPOKEN-PF-003, classification: documented_finding, proposition: 'Klein is credited with first seeing the possibility of a genuine return to Plato and Aristotle after Heidegger.'}
+  - {id: UNSPOKEN-PF-004, classification: documentary_correction, proposition: 'The reviewed prologue does not contain the predecessor’s claimed discussion of orthodoxy, unbelief, Zionism, or rediscovery of medieval philosophy.'}
+problem_jurisdiction:
+  theologico_political:
+    role: PRIMARY_AS_REGISTERED_SEQUENCE_WITH_NEGATIVE_CORRECTIVE
+    receives: [the documentary correction that this source does not contain the predecessor-attributed orthodoxy, unbelief, Zionism, or medieval-philosophy material]
+    non_absorption: Do not manufacture a theologico-political teaching from material absent from the reviewed source.
+  ancients_vs_moderns:
+    role: CONTROLLED_SECONDARY_JURISDICTION
+    receives: [Heidegger and modern destruction of tradition, Aristotle and Plato, genuine return to classical philosophy]
+    non_absorption: The tribute does not provide a complete Strauss account of modernity or Heidegger.
+comparison_with_active_predecessor:
+  predecessor: problems/theologico-political.yaml
+  predecessor_statement: Supplies autobiographical evidence concerning orthodoxy, unbelief, Zionism, Nietzsche, and the rediscovery of medieval philosophy without settling Strauss's final doctrinal allegiance.
+  state: PROVISIONAL_RETEST_MATERIAL_NONCONFIRMATION_AND_PROBABLE_SOURCE_MISALLOCATION_NO_PROMOTION
+  confirmations:
+    - Nietzsche is named in a youthful anecdote and the source is autobiographical in form.
+    - The source does not settle Strauss's final doctrinal allegiance.
+  qualifications:
+    - The reviewed text contains no discussion of orthodoxy, unbelief, Zionism, or medieval philosophy.
+    - Its substantive intellectual subject is Klein’s recovery of classical philosophy through the opening unintentionally created by Heidegger.
+    - Themes absent here appear in A Giving of Accounts, so the predecessor statement may reflect source conflation; that remains a provisional documentary diagnosis rather than a silent rewrite.
+  predecessor_effect: NONE
+uncertainties:
+  - The 1978 Interpretation printing has not been separately compared with the 1997 collected witness.
+  - The reason the written prologue was not spoken is supplied by later editorial discussion and is not established by Strauss's body text alone.
+prohibitions:
+  - Do not use this source as evidence for Strauss's orthodoxy, unbelief, Zionism, or medieval-philosophy development.
+  - Do not convert the praise of classical return into a certified final doctrinal allegiance.
+  - Do not convert the publicity anecdote into proof of esoteric writing.
+  - Do not certify doctrine, migration, successor activation, predecessor displacement, or repository completion.
+termination:
+  reading_state: COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  source_reconstruction_state: COMPLETE_PROVISIONAL
+  witness_state: FINGERPRINTED_REVIEWED_COLLECTED_WITNESS
+  independent_corroboration: INCOMPLETE
+  original_1978_interpretation_comparison_required: true
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
