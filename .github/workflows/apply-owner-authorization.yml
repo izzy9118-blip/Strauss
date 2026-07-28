@@ -8,6 +8,11 @@ on:
     paths:
       - "scripts/apply_owner_authorization.py"
       - ".github/workflows/apply-owner-authorization.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/authorization-trigger.txt"
 
 permissions:
   contents: write
