@@ -1,0 +1,29 @@
+schema_version: 1.0
+record_type: problem_local_synthesis
+identity: {id: AVM-HOBBES-PREFACE-001, version: 1.0.0, title: "Ancients-versus-Moderns Synthesis — Preface to Hobbes Politische Wissenschaft"}
+status: {lifecycle: PROVISIONAL_SOURCE_TO_PROBLEM_SYNTHESIS, certification: NOT_CERTIFIED, migration_effect: NONE, successor_effect: NONE, predecessor_displacement_effect: NONE}
+source:
+  source_id: CORPUS-SRC-116
+  reviewed_witness_id: CORPUS-WIT-116
+  study_id: HOBBES-PREFACE-STUDY-001
+  study_path: studies/theologico-political/preface-to-hobbes-politische-wissenschaft/sequential-reconstruction.yaml
+  finding_set_id: FINDSET-015
+  derived_finding_set_id: FINDSET-130
+problem: {canonical_key: ancients-vs-moderns, role: CONTROLLED_SECONDARY_JURISDICTION, primary_problem_reference: theologico-political}
+source_local_findings:
+  - {classification: documented_finding, proposition: "Strauss links his work with Jacob Klein through the conviction that the dispute between ancients and moderns must be understood more thoroughly and exactly before deciding for the modern or ultramodern."}
+  - {classification: documented_finding, proposition: "The Hobbes project combines analysis of mature modern doctrine with investigation of how that doctrine formed from earlier sources."}
+  - {classification: documented_finding, proposition: "Strauss refuses to write about Hobbes as a Hobbesian and links this refusal to philosophic interest in theology and true politics."}
+  - {classification: documented_finding, proposition: "Strauss treats his early Hobbes interpretation as corrigible and directs readers to later works where he corrected defects and clarified Hobbes's leading thought about man."}
+  - {classification: bounded_conclusion, proposition: "The preface documents a methodological priority of understanding the ancient-modern dispute before choosing sides, but does not itself reconstruct either alternative completely."}
+non_absorption:
+  - Hobbes is not treated here as an exhaustive representative of all modern philosophy.
+  - The preface does not reconstruct the ancient position independently or certify its superiority.
+  - The secondary Ancients-versus-Moderns jurisdiction does not absorb the primary Theologico-Political continuity claim.
+  - Later corrections are evidence of revision within Strauss's inquiry, not authorization to silently rewrite the earlier study.
+limits:
+  - The 1965 German preface and 1979-80 English translation remain separately unreviewed.
+  - The final three paragraphs are omitted from the reviewed body and may not be reconstructed from outside memory.
+  - Independent Hobbes, Kant, Klein, Kruger, Schmitt, and Ebbinghaus witnesses remain required for corroboration.
+  - No doctrine, migration, successor activation, or predecessor displacement is authorized.
+termination: {synthesis_state: COMPLETE_PROVISIONAL_FOR_SOURCE_LOCAL_JURISDICTION, independent_corroboration: INCOMPLETE, textual_state_comparison: PENDING, certification: NOT_CERTIFIED, successor_effect: NONE}
