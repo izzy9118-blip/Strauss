@@ -1,0 +1,46 @@
+schema_version: 1.0
+document_type: problem_source_synthesis
+identity:
+  synthesis_id: WV-SPINOZA-TREATISE-001
+  problem: wise-vs-vulgar
+  source_study: SPINOZA-TREATISE-STUDY-001
+  title: Wise versus Vulgar — How to Study Spinoza's Theologico-Political Treatise
+  version: 1.0.0
+status:
+  lifecycle: PROVISIONAL_SYNTHESIS
+  certification: NOT_CERTIFIED
+  activation: ACTIVE_SUBORDINATE_STUDY
+  predecessor_effect: NONE
+  successor_effect: NONE
+source:
+  source_id: CORPUS-SRC-103
+  witness_id: CORPUS-WIT-103
+  corpus_study_id: CORPUS-STUDY-012
+  study_path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/sequential-reconstruction.yaml
+strict_problem_contribution:
+  governing_claim: >
+    Strauss's essay gives differentiated audience a structural role in interpretation. The vulgar, potential philosophers, actual philosophers, prudent readers, and posterity do not receive the same public presentation. Accommodation can be deliberate, contradiction and silence can become evidence, and exoteric interpretation is therefore necessary in some cases; but it is constrained by explicit authorial rules, audience, danger, literary structure, and the prior recovery of literal and explicit meaning.
+  documented_findings:
+    - the Bible and philosophic writings have differently situated audiences
+    - the Treatise addresses potential philosophers rather than the vulgar or already actual philosophers
+    - deliberate accommodation to vulgar opinion is possible
+    - a statement opposing vulgar opinion may carry greater weight when the author explicitly identifies the competing statement as accommodation
+    - contradiction alone does not settle serious meaning
+    - silence is interpretively relevant only where omission would otherwise be significant and authorial knowledge can be established
+    - public expression may adapt to political conditions without implying that philosophic thought is historically determined
+  bounded_conclusion: >
+    The source supports a disciplined wise-vulgar jurisdiction centered on differentiated communication. It does not authorize unrestricted suspicion, universal concealment, or mechanical reversal of conventional statements.
+source_and_evidence_limits:
+  - source-local reconstruction does not certify Spinoza's complete doctrine
+  - original 1948 journal comparison remains pending
+  - represented authors and traditions remain independently unreconstructed
+prohibitions:
+  - no contradiction-only esotericism
+  - no automatic inversion of exoteric statements
+  - no identification of all public speech with falsehood
+  - no certification of wisdom by audience status alone
+  - no absorption of the theologico-political problem into wise-versus-vulgar
+termination:
+  synthesis_state: COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
