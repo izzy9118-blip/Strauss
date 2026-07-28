@@ -6,12 +6,12 @@ identity:
   canonical_title: How to Study Spinoza's Theologico-Political Treatise
   author: Leo Strauss
   date: 1948
-  version: 1.0.0
+  version: 1.1.0
 status:
-  lifecycle: REGISTERED_SOURCE_IDENTITY
+  lifecycle: REVIEWED_ITEM_WITNESS_REGISTERED
   certification: NOT_CERTIFIED
   source_text_admission: NOT_REQUESTED
-  reviewed_witness: NOT_YET_REGISTERED
+  reviewed_witness: CORPUS-WIT-103
   independent_sequential_study: NOT_YET_COMPLETED
   active_predecessor_use: INCLUDED_IN_NINETEEN_SOURCE_SYNTHESIS
 registration_basis:
@@ -24,43 +24,72 @@ registration_basis:
 verified_documentary_facts:
   - The active predecessor identifies this work, date, and sequence position.
   - The current corpus registry identifies the work as CORPUS-SRC-103.
+  - The reviewed item occupies printed pages 181 through 233 of the 1997 SUNY collected witness.
+  - The reviewed item occupies one-based PDF pages 200 through 252 of the fingerprinted uploaded PDF.
+  - The collection acknowledgment identifies the original publication as Proceedings of the American Academy for Jewish Research 17 (1948), pages 69 through 131.
 predecessor_contribution_record:
-  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_AGAINST_A_REVIEWED_WITNESS
+  evidence_status: PREDECESSOR_SYNTHESIS_CLAIM_NOT_YET_RETESTED_BY_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION
   statement: >
     Establishes that interpretation must precede historical or psychological explanation
     and examines Scripture, prophecy, freedom to philosophize, sovereign authority, and
     differentiated audiences.
-  preservation_rule: This derivative statement is not independently confirmed or certified here.
+  preservation_rule: >
+    This derivative statement remains preserved but is not confirmed, revised, or certified by
+    witness registration alone. Comparison must follow independent sequential reconstruction.
 publication_and_witness_condition:
-  publication_venue: UNVERIFIED_IN_THIS_RECORD
-  edition: UNVERIFIED_IN_THIS_RECORD
-  pagination: UNVERIFIED_IN_THIS_RECORD
-  local_file: NOT_REGISTERED
-  fingerprint: NOT_AVAILABLE
-  text_condition: NOT_ASSESSED
-  locator_reproducibility: INCOMPLETE
+  publication_venue: Proceedings of the American Academy for Jewish Research 17 (1948), 69-131
+  edition: 1997 SUNY collected reprint in Jewish Philosophy and the Crisis of Modernity
+  pagination:
+    printed_page_range: {start: 181, end: 233}
+    pdf_page_range_one_based: {start: 200, end: 252}
+  local_file: jewish-philosophy-and-the-crisis-of-modernity-essays-and-lectures-in-modern-jewish-thought_compress(1).pdf
+  fingerprint:
+    algorithm: SHA256
+    value: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  file_size_bytes: 39287307
+  container_page_count: 526
+  text_condition: SEARCHABLE_TEXT_WITH_PAGE_IMAGES
+  wording_rule: PAGE_IMAGES_GOVERN_WHERE_EXTRACTED_TEXT_IS_UNCERTAIN_OR_CONFLICTS
+  locator_reproducibility: COMPLETE_FOR_REVIEWED_1997_COLLECTED_ITEM
+  original_1948_journal_copy_comparison: PENDING
+reviewed_witness:
+  witness_id: CORPUS-WIT-103
+  witness_record_path: studies/theologico-political/how-to-study-spinozas-theologico-political-treatise/reviewed-witness.yaml
+  collected_reprint_year: 1997
+  original_publication_year: 1948
+  printed_page_range: {start: 181, end: 233}
+  pdf_page_range_one_based: {start: 200, end: 252}
+  container_sha256: 43e98521c28a9ef8ede1eb7a6507d8ee78d605d0a531624d5dd20075220bda66
+  container_file_size_bytes: 39287307
+  original_edition_comparison: PENDING
 source_classification:
   author_relation: PRIMARY_STRAUSS_WRITING
-  documentary_rank: QUALIFIED_PRIMARY_SOURCE_IDENTITY_WITHOUT_REVIEWED_WITNESS
-  analytical_use: ORIENTATION_ONLY_UNTIL_WITNESS_REGISTRATION_AND_SEQUENTIAL_READING
+  documentary_rank: REVIEWED_PRIMARY_STRAUSS_ITEM_WITHIN_FINGERPRINTED_COLLECTED_WITNESS
+  analytical_use: REVIEWABLE_FOR_INDEPENDENT_SEQUENTIAL_RECONSTRUCTION_NOT_YET_RECONSTRUCTED
 required_distinctions:
   - interpretation from historical or psychological explanation
-  - Scripture from an interpreter's reconstruction
-  - prophecy from sovereign administration
-  - freedom to philosophize from proof of philosophy's truth
+  - explicit meaning from inferred hidden or unconscious implication
+  - author-supplied interpretive framework from external historical information
+  - exoteric accommodation from mechanical inversion
+  - the reviewed 1997 collected reprint from a separately reviewed 1948 journal printing
+  - witness registration from independent sequential reconstruction
   - predecessor synthesis from source-level documented finding
 prohibitions:
-  - Do not treat the predecessor contribution as a source-level quotation.
-  - Do not assign locators or infer publication facts before witness registration.
-  - Do not count this registration as independent reconstruction.
-  - Do not certify doctrine, migration, or activation.
+  - Do not treat the predecessor contribution as a source-level quotation or confirmed finding.
+  - Do not treat witness registration as independent reconstruction.
+  - Do not treat the 1997 collected reprint as a separately reviewed 1948 journal copy.
+  - Do not let editorial framing govern Strauss's argument.
+  - Do not certify doctrine, migration, successor activation, or predecessor displacement.
 next_required_actions:
-  - register a reviewed witness and publication provenance
-  - conduct an independent sequential reading
-  - classify source-level findings and compare them with the predecessor without silent harmonization
+  - conduct an independent sequential reading of printed pages 181 through 233
+  - classify source-level findings and compare them with the predecessor only after reconstruction
+  - compare the original 1948 journal printing when available
 termination:
   source_identity_state: REGISTERED
-  reviewed_witness_state: MISSING
+  reviewed_witness_state: REGISTERED
+  reviewed_witness_id: CORPUS-WIT-103
   study_state: INCOMPLETE
+  independent_corroboration: INCOMPLETE
+  original_edition_comparison: PENDING
   certification: NOT_CERTIFIED
   successor_effect: NONE
