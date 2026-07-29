@@ -18,6 +18,7 @@ checks:
   findings_registry_prerequisite:
     status: REPAIRED_FORWARD
     registry_version: 1.17.0
+    validator_version_alignment: COMPLETE_FORWARD_REVISION
     finding_set: FINDSET-158
     path: problems/ancients-vs-moderns/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
     effect: RESTORE_EXHAUSTIVE_CURRENT_TREE_ACCOUNTING_WITHOUT_CERTIFYING_THE_SYNTHESIS
