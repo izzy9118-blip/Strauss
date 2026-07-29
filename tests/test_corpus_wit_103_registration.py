@@ -45,8 +45,8 @@ class CorpusWit103RegistrationTests(unittest.TestCase):
     def test_witness_registration_record_remains_historical_while_source_status_advances(self) -> None:
         witness = load_yaml(WITNESS_PATH)
         status = load_yaml(STATUS_PATH)
-        self.assertEqual(witness["status"]["independent_sequential_study"], "NOT_YET_COMPLETED")
-        self.assertEqual(witness["termination"]["study_state"], "INCOMPLETE")
+        self.assertEqual(witness["status"]["independent_sequential_study"], "COMPLETE_PROVISIONAL_FOR_REVIEWED_1997_COLLECTED_WITNESS")
+        self.assertEqual(witness["termination"]["study_state"], "COMPLETE_PROVISIONAL")
         self.assertEqual(status["status"]["independent_sequential_study"], "SPINOZA-TREATISE-STUDY-001")
         self.assertEqual(status["termination"]["study_state"], "COMPLETE_PROVISIONAL")
         self.assertEqual(status["termination"]["independent_corroboration"], "INCOMPLETE")

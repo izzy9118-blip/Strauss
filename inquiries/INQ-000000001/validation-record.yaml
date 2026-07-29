@@ -1,0 +1,51 @@
+schema_version: 1.0
+record_type: ministerial_report_validation_record
+identity:
+  id: STRAUSS-INQ-000000001-VALIDATION-001
+  inquiry_id: INQ-000000001
+  report_id: MREP-INQ000000001-LEO-STRAUSS
+  date: 2026-07-28
+repository_state:
+  repository: izzy9118-blip/Strauss
+  validated_base_commit: 32c96337cc29413a9f97cc843eaabf56a5ed38d6
+  manifest_path: manifest.yaml
+  manifest_version: 1.20.0
+  authorization_id: STRAUSS-AUTH-001
+checks:
+  adapter_manifest_validation: PASSED
+  speech_request_validation: PASSED
+  candidate_report_generation: PASSED
+  structural_and_behavioral_tests:
+    status: PASSED
+    workflow: Validate Lean Strauss Interface
+    run_id: 30418725904
+  findings_registry_prerequisite:
+    status: REPAIRED_FORWARD
+    registry_version: 1.17.0
+    validator_version_alignment: COMPLETE_FORWARD_REVISION
+    operational_records_and_tests_synchronized: true
+    historical_witness_expectations_corrected_without_cross_record_generalization: true
+    finding_set: FINDSET-158
+    path: problems/ancients-vs-moderns/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+    effect: RESTORE_EXHAUSTIVE_CURRENT_TREE_ACCOUNTING_WITHOUT_CERTIFYING_THE_SYNTHESIS
+  evidence_identity:
+    CORPUS-WIT-103: CONFIRMED_REGISTERED
+    CORPUS-WIT-114: CONFIRMED_REGISTERED
+  proposition_classification_preserved: true
+  uncertainty_preserved: true
+  dissent_preserved: true
+  presidential_synthesis_performed: false
+result:
+  status: SOVEREIGN_MINISTERIAL_VALIDATION_PASSED
+  authoritative_scope: STRAUSS_MINISTERIAL_REPORT_ONLY
+  assembly_certification: NOT_PERFORMED
+limits:
+  - Structural and behavioral validation does not certify philosophical truth.
+  - The 1948 journal printing for CORPUS-WIT-103 remains uncompared.
+  - The original 1963 Criterion printing for CORPUS-WIT-114 remains unreviewed.
+  - The comparative inference remains a supported inference, not a documented finding.
+  - Sanctum retains responsibility for envelope, pin, provenance, and schema validation.
+termination:
+  next_action: RETURN_VALIDATED_MINISTERIAL_REPORT_TO_SANCTUM
+  owner_certification: NOT_REQUIRED_FOR_MINISTER_SIDE_STRUCTURAL_VALIDATION
+  artificial_intelligence_self_certification: PROHIBITED

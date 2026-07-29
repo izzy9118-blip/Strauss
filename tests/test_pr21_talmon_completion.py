@@ -32,7 +32,7 @@ class TalmonIntegrationCompletionTests(unittest.TestCase):
         self.assertEqual(process["identity"]["version"], "1.22.0")
         self.assertEqual(schedule["identity"]["version"], "1.19.0")
         self.assertEqual(corpus["identity"]["version"], "1.24.0")
-        self.assertEqual(findings["identity"]["version"], "1.16.0")
+        self.assertEqual(findings["identity"]["version"], "1.17.0")
 
         state = manifest["corpus"]["theologico_political_item_level_statuses"]
         self.assertEqual(state["registered_count"], 19)
