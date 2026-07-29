@@ -3,7 +3,7 @@ record_type: typed_findings_registry
 identity:
   id: STRAUSS-FINDINGS-INDEX-001
   title: Strauss Repository Typed Findings Registry
-  version: 1.16.0
+  version: 1.17.0
 status:
   lifecycle: ACTIVE_OPERATIONAL_REGISTRY
   registry_scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
@@ -11,14 +11,16 @@ status:
   certification: OWNER_CERTIFIED_FOR_OPERATIONAL_USE
   authority: DISCOVERY_PROVENANCE_JURISDICTION_AND_REVISION_ONLY
 revision_history:
-  predecessor_version: 1.15.0
-  predecessor_blob_sha: PRESERVED_BY_GIT
-  transformation: SUBSTANTIVE_FORWARD_REVISION
-  reason: Apply STRAUSS-AUTH-001 to authorize the current findings store for operational use while preserving each finding's
-    evidence class, derivation, uncertainty, and local limits.
-purpose: Provide deterministic discovery and loading of current findings-bearing records by source, problem, record class,
-  migration state, and provenance while preserving the difference among documentary finding, supported inference, working
-  hypothesis, comparative question, contradiction, dissent, and unresolved uncertainty.
+  predecessor_version: 1.16.0
+  predecessor_blob_sha: 100b0e489da3d0553418bd3eac5ecb83f769cbc3
+  transformation: ADDITIVE_FORWARD_CORRECTION
+  reason: Register the previously committed SRC-103 Ancients-vs-Moderns synthesis
+    that was harvested without a corresponding findings-index revision. Preserve its
+    provisional status, source-local derivation, uncertainty, and non-certification.
+purpose: Provide deterministic discovery and loading of current findings-bearing records
+  by source, problem, record class, migration state, and provenance while preserving
+  the difference among documentary finding, supported inference, working hypothesis,
+  comparative question, contradiction, dissent, and unresolved uncertainty.
 governing_records:
   evidence_classification: protocols/evidence-classification.yaml
   inference_discipline: protocols/inference-discipline.yaml
@@ -27,20 +29,24 @@ governing_records:
   corpus_registry: corpus/index.yaml
   problem_registry: problems/registry.yaml
   migration_plan: migrations/foundational-problems-v2/migration.yaml
-scope_rule: The registry is exhaustive for findings-bearing and findings-governing records now committed in studies, problem
-  synthesis directories, foundational migration transaction ledgers, and the two preserved predecessor sources explicitly
-  used by current migration. It is not an assertion that every sentence in the repository is a finding, that every source
-  has been studied, or that current findings are complete, correct, or certified.
-finding_unit_rule: The registry identifies authoritative finding sets by reference. Individual propositions, evidence locators,
-  qualifications, contradictions, and uncertainties remain in the referenced record and must be loaded from that record. The
-  registry may not paraphrase them into a stronger or more final claim.
+scope_rule: The registry is exhaustive for findings-bearing and findings-governing
+  records now committed in studies, problem synthesis directories, foundational migration
+  transaction ledgers, and the two preserved predecessor sources explicitly used by
+  current migration. It is not an assertion that every sentence in the repository
+  is a finding, that every source has been studied, or that current findings are complete,
+  correct, or certified.
+finding_unit_rule: The registry identifies authoritative finding sets by reference.
+  Individual propositions, evidence locators, qualifications, contradictions, and
+  uncertainties remain in the referenced record and must be loaded from that record.
+  The registry may not paraphrase them into a stronger or more final claim.
 identifier_rules:
   finding_set_prefix: FINDSET
   source_binding_authority: corpus/index.yaml
   problem_binding_authority: problems/registry.yaml
   uniqueness_rule: Every finding_set_id identifies one committed repository record.
-  nonduplication_rule: The same underlying proposition may appear in a study, local synthesis, and migration transaction only
-    through explicit derivation or reference. Repetition in the registry does not establish independent corroboration.
+  nonduplication_rule: The same underlying proposition may appear in a study, local
+    synthesis, and migration transaction only through explicit derivation or reference.
+    Repetition in the registry does not establish independent corroboration.
 finding_sets:
 - finding_set_id: FINDSET-001
   path: studies/socrates-and-aristophanes/philosophy-poetry-theologico-political-reconstruction.yaml
@@ -1469,6 +1475,21 @@ finding_sets:
   certification: NOT_CERTIFIED_BY_THIS_REGISTRY
   successor_effect: NONE
   classification_ledger: FINDSET-201
+- finding_set_id: FINDSET-158
+  path: problems/ancients-vs-moderns/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+  record_class: PROBLEM_LOCAL_SYNTHESIS
+  record_role: SOURCE_TO_PROBLEM_SYNTHESIS
+  source_bindings:
+  - CORPUS-SRC-103
+  problem_bindings:
+  - ancients-vs-moderns
+  theologico_political_reference: theologico-political
+  wise_vulgar_reference: wise-vs-vulgar
+  derived_from:
+  - FINDSET-012
+  status: PROVISIONAL_NOT_CERTIFIED
+  certification: NOT_CERTIFIED
+  successor_effect: NONE
 indexes:
   by_problem:
     nomos-vs-physis:
@@ -1621,6 +1642,7 @@ indexes:
     - FINDSET-148
     - FINDSET-151
     - FINDSET-156
+    - FINDSET-158
   by_source:
     CORPUS-SRC-001:
     - FINDSET-001
@@ -1665,6 +1687,7 @@ indexes:
     - FINDSET-123
     - FINDSET-203
     - FINDSET-301
+    - FINDSET-158
     CORPUS-SRC-104:
     - FINDSET-017
     - FINDSET-105
@@ -1871,6 +1894,7 @@ indexes:
     - FINDSET-155
     - FINDSET-156
     - FINDSET-157
+    - FINDSET-158
     MIGRATION_TRANSACTION_LEDGER:
     - FINDSET-201
     - FINDSET-202
@@ -1879,12 +1903,12 @@ indexes:
     - FINDSET-301
     - FINDSET-302
 coverage:
-  finding_sets_registered: 88
+  finding_sets_registered: 89
   source_specific_and_integration_records_registered: 26
-  problem_syntheses_registered: 57
+  problem_syntheses_registered: 58
   migration_transaction_ledgers_registered: 3
   preserved_finding_bases_registered: 2
-  current_problem_synthesis_tree_yaml_records_accounted_for: 57
+  current_problem_synthesis_tree_yaml_records_accounted_for: 58
   current_foundational_transaction_tree_yaml_records_accounted_for: 3
   corpus_study_records_accounted_for: 26
   canonical_problem_indexes_registered: 7
@@ -1902,86 +1926,113 @@ proposition_kinds:
 - affirmative_non_resolution
 preservation_rules:
 - record-local evidence classifications and confidence govern the indexed propositions
-- uncertainty, opacity, contradiction, and dissent are positive findings and may not be omitted
-- source-specific studies may supply problem syntheses only by explicit derivation or reference
+- uncertainty, opacity, contradiction, and dissent are positive findings and may not
+  be omitted
+- source-specific studies may supply problem syntheses only by explicit derivation
+  or reference
 - problem syntheses may not replace their source-specific studies
-- migration ledgers classify disposition and transformation; they do not certify doctrine or activate successors
+- migration ledgers classify disposition and transformation; they do not certify doctrine
+  or activate successors
 - active predecessors and accepted migration sources remain independently recoverable
 - no later finding silently revises an earlier record
 - supersession requires an explicit forward record and preserved predecessor identity
 - agreement across records derived from the same source is not independent corroboration
-- platform reviewability, printed locators, and object identifiers may not be transformed into byte custody or cryptographic
-  identity
+- platform reviewability, printed locators, and object identifiers may not be transformed
+  into byte custody or cryptographic identity
 findings_gaps:
 - gap_id: FINDINGS-GAP-001
-  statement: The registry does not yet index every proposition as a separate normalized object.
+  statement: The registry does not yet index every proposition as a separate normalized
+    object.
   effect: PROPOSITION_LEVEL_QUERY_REQUIRES_LOADING_REFERENCED_RECORD
 - gap_id: FINDINGS-GAP-002
-  statement: All nineteen registered Theologico-Political predecessor sources now have complete provisional source-specific
-    studies within registered scopes; many sources elsewhere in the open Strauss corpus still lack independent source-specific
+  statement: All nineteen registered Theologico-Political predecessor sources now
+    have complete provisional source-specific studies within registered scopes; many
+    sources elsewhere in the open Strauss corpus still lack independent source-specific
     study records.
   effect: FINDINGS_COVERAGE_REMAINS_SOURCE_ASYMMETRICAL
 - gap_id: FINDINGS-GAP-003
-  statement: All nineteen Theologico-Political writings have complete provisional item studies within registered scopes; textual-state
-    comparisons, independent corroboration, and proposition normalization remain open.
+  statement: All nineteen Theologico-Political writings have complete provisional
+    item studies within registered scopes; textual-state comparisons, independent
+    corroboration, and proposition normalization remain open.
   effect: PREDECESSOR_SYNTHESIS_REMAINS_REVISABLE_WITHIN_AUTHORIZED_RUNTIME
 - gap_id: FINDINGS-GAP-004
-  statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian, Kantian, Talmonian, and most Platonic
-    findings remain incomplete.
+  statement: Independent Aristophanes, Xenophon, biblical, medieval, Spinozist, Cohenian,
+    Kantian, Talmonian, and most Platonic findings remain incomplete.
   effect: COMPARATIVE_AND_DOCTRINAL_RANKING_BLOCKED
 - gap_id: FINDINGS-GAP-005
-  statement: Authorized ministerial reports remain subject to continuing behavioral validation as new inquiry shapes and evidence
-    combinations are exercised.
+  statement: Authorized ministerial reports remain subject to continuing behavioral
+    validation as new inquiry shapes and evidence combinations are exercised.
   effect: REPORT_TESTING_CONTINUES_WITHOUT_SUSPENDING_RUNTIME_AUTHORITY
 - gap_id: FINDINGS-GAP-006
-  statement: STRAUSS-AUTH-001 authorizes operational use globally; record-local finding classifications remain evidentiary
-    metadata and are not silently promoted to stronger truth claims.
+  statement: STRAUSS-AUTH-001 authorizes operational use globally; record-local finding
+    classifications remain evidentiary metadata and are not silently promoted to stronger
+    truth claims.
   effect: LOCAL_EVIDENCE_CLASSES_REMAIN_GOVERNING_WITHIN_OWNER_AUTHORIZED_RUNTIME
 validation_rules:
-- finding_set, gap, source, problem, and relation identifiers must resolve and remain unique
+- finding_set, gap, source, problem, and relation identifiers must resolve and remain
+  unique
 - every registered path must resolve within the repository
-- every YAML record in current problem synthesis directories must be registered exactly once
-- every YAML record in the foundational transaction directory must be registered exactly once
-- every analytical or integration study record in the corpus registry must be registered exactly once
+- every YAML record in current problem synthesis directories must be registered exactly
+  once
+- every YAML record in the foundational transaction directory must be registered exactly
+  once
+- every analytical or integration study record in the corpus registry must be registered
+  exactly once
 - every source binding must resolve in corpus/index.yaml
 - every problem binding must resolve in problems/registry.yaml
 - indexes must equal bindings derived from finding_sets
 - active predecessor content must equal the preserved historical copy
-- certification and activation may not be inferred from lifecycle, completion, acceptance, or classification
+- certification and activation may not be inferred from lifecycle, completion, acceptance,
+  or classification
 - current-state exhaustive indexing may not be described as complete findings or doctrine
-- FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference limitations
-- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103 and pending 1948 comparison, and retain
-  noncorroboration and no-successor safeguards
-- FINDSET-013 must derive only FINDSET-124 through FINDSET-126, preserve CORPUS-WIT-108 and pending earlier-text comparison,
-  and retain noncorroboration and no-successor safeguards
-- FINDSET-014 must derive only FINDSET-127 and FINDSET-128, preserve CORPUS-WIT-113 and pending 1952 comparison, and retain
-  noncorroboration and no-successor safeguards
-- FINDSET-015 must derive only FINDSET-129 and FINDSET-130, preserve CORPUS-WIT-116, the omitted-text limit, pending 1965/1979-80
-  comparison, noncorroboration, and no-successor safeguards
-- FINDSET-016 must derive only FINDSET-131 through FINDSET-133, preserve CORPUS-WIT-101, pending earlier-publication comparison,
+- FINDSET-011 must retain its three jurisdiction-preserving local syntheses and platform-reference
+  limitations
+- FINDSET-012 must derive only FINDSET-122 and FINDSET-123, preserve CORPUS-WIT-103
+  and pending 1948 comparison, and retain noncorroboration and no-successor safeguards
+- FINDSET-013 must derive only FINDSET-124 through FINDSET-126, preserve CORPUS-WIT-108
+  and pending earlier-text comparison, and retain noncorroboration and no-successor
+  safeguards
+- FINDSET-014 must derive only FINDSET-127 and FINDSET-128, preserve CORPUS-WIT-113
+  and pending 1952 comparison, and retain noncorroboration and no-successor safeguards
+- FINDSET-015 must derive only FINDSET-129 and FINDSET-130, preserve CORPUS-WIT-116,
+  the omitted-text limit, pending 1965/1979-80 comparison, noncorroboration, and no-successor
+  safeguards
+- FINDSET-016 must derive only FINDSET-131 through FINDSET-133, preserve CORPUS-WIT-101,
+  pending earlier-publication comparison, noncorroboration, and no-successor safeguards
+- FINDSET-017 must derive only FINDSET-134 and FINDSET-135, preserve CORPUS-WIT-104,
+  pending original-1952 comparison, the collective-editorial-layer distinction, noncorroboration,
+  and no-successor safeguards
+- FINDSET-018 must derive only FINDSET-136 and FINDSET-137, preserve CORPUS-WIT-106,
+  the posthumous unknown-transcriber and editor-emendation limits, incomplete independent
+  corroboration, and no-successor safeguards
+- FINDSET-019 must derive only FINDSET-138 and FINDSET-139, preserve CORPUS-WIT-107,
+  the transcription and editorial-layer limits, pending earlier-textual-state comparison,
   noncorroboration, and no-successor safeguards
-- FINDSET-017 must derive only FINDSET-134 and FINDSET-135, preserve CORPUS-WIT-104, pending original-1952 comparison, the
-  collective-editorial-layer distinction, noncorroboration, and no-successor safeguards
-- FINDSET-018 must derive only FINDSET-136 and FINDSET-137, preserve CORPUS-WIT-106, the posthumous unknown-transcriber and
-  editor-emendation limits, incomplete independent corroboration, and no-successor safeguards
-- FINDSET-019 must derive only FINDSET-138 and FINDSET-139, preserve CORPUS-WIT-107, the transcription and editorial-layer
-  limits, pending earlier-textual-state comparison, noncorroboration, and no-successor safeguards
-- FINDSET-020 must derive only FINDSET-140 and FINDSET-141, preserve CORPUS-WIT-112, pending National Review comparison, material
-  predecessor qualification, noncorroboration, and no-successor safeguards
-- FINDSET-021 must derive only FINDSET-142 and FINDSET-143, preserve CORPUS-WIT-110 and first-paragraph scope, pending 1959
-  comparison, material predecessor qualification, noncorroboration, and no-successor safeguards
-- FINDSET-022 through FINDSET-026 preserve their registered witnesses, source-specific predecessor retests, pending textual-state
-  comparisons, incomplete independent corroboration, and no-successor safeguards
-- FINDSET-023 preserves material nonconfirmation and probable source misallocation instead of importing orthodoxy, unbelief,
-  Zionism, or medieval-philosophy claims absent from An Unspoken Prologue
-- FINDSET-026 preserves LAST_PARAGRAPH_ONLY scope and excludes Green editorial theological interpretation from Strauss evidence
+- FINDSET-020 must derive only FINDSET-140 and FINDSET-141, preserve CORPUS-WIT-112,
+  pending National Review comparison, material predecessor qualification, noncorroboration,
+  and no-successor safeguards
+- FINDSET-021 must derive only FINDSET-142 and FINDSET-143, preserve CORPUS-WIT-110
+  and first-paragraph scope, pending 1959 comparison, material predecessor qualification,
+  noncorroboration, and no-successor safeguards
+- FINDSET-022 through FINDSET-026 preserve their registered witnesses, source-specific
+  predecessor retests, pending textual-state comparisons, incomplete independent corroboration,
+  and no-successor safeguards
+- FINDSET-023 preserves material nonconfirmation and probable source misallocation
+  instead of importing orthodoxy, unbelief, Zionism, or medieval-philosophy claims
+  absent from An Unspoken Prologue
+- FINDSET-026 preserves LAST_PARAGRAPH_ONLY scope and excludes Green editorial theological
+  interpretation from Strauss evidence
 termination:
   registry_state: COMPLETE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   findings_state: OPEN_MATERIALLY_INCOMPLETE_AND_NONCERTIFIED
   certification: NOT_CERTIFIED
   next_required_units:
-  - conduct the remaining twelve Theologico-Political independent sequential studies beginning with CORPUS-SRC-116
-  - compare the CORPUS-SRC-113 reviewed 1997 witness with the original 1952 Free Press printing when available
-  - expand independent Farabian, Maimonidean, biblical, Greek, medieval, modern, and reviewed-work witness studies
-  - preserve later corrections, dissent, and supersession through forward registry revision
+  - conduct the remaining twelve Theologico-Political independent sequential studies
+    beginning with CORPUS-SRC-116
+  - compare the CORPUS-SRC-113 reviewed 1997 witness with the original 1952 Free Press
+    printing when available
+  - expand independent Farabian, Maimonidean, biblical, Greek, medieval, modern, and
+    reviewed-work witness studies
+  - preserve later corrections, dissent, and supersession through forward registry
+    revision
 owner_authorization: governance/repository-authorization.yaml
