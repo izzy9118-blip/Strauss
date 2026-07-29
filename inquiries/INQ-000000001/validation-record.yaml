@@ -19,6 +19,7 @@ checks:
     status: REPAIRED_FORWARD
     registry_version: 1.17.0
     validator_version_alignment: COMPLETE_FORWARD_REVISION
+    operational_records_and_tests_synchronized: true
     finding_set: FINDSET-158
     path: problems/ancients-vs-moderns/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
     effect: RESTORE_EXHAUSTIVE_CURRENT_TREE_ACCOUNTING_WITHOUT_CERTIFYING_THE_SYNTHESIS
@@ -30,7 +31,7 @@ checks:
   dissent_preserved: true
   presidential_synthesis_performed: false
 result:
-  status: SOVEREIGN_VALIDATION_PENDING_CI
+  status: SOVEREIGN_VALIDATION_PENDING_FINAL_CI
   authoritative_scope: STRAUSS_MINISTERIAL_REPORT_ONLY
   assembly_certification: NOT_PERFORMED
 limits:
@@ -40,6 +41,6 @@ limits:
   - The comparative inference remains a supported inference, not a documented finding.
   - Sanctum retains responsibility for envelope, pin, provenance, and schema validation.
 termination:
-  next_action: RUN_REPOSITORY_CI_AND_CLOSE_ISSUE_48_IF_GREEN
+  next_action: CLOSE_ISSUE_48_ONLY_IF_FINAL_CI_IS_GREEN
   owner_certification: NOT_REQUIRED_FOR_MINISTER_SIDE_STRUCTURAL_VALIDATION
   artificial_intelligence_self_certification: PROHIBITED
