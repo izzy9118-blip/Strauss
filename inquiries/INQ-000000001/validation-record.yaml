@@ -15,6 +15,12 @@ checks:
   adapter_manifest_validation: REQUIRED_IN_CI
   speech_request_validation: REQUIRED_IN_CI
   candidate_report_generation: REQUIRED_IN_CI
+  findings_registry_prerequisite:
+    status: REPAIRED_FORWARD
+    registry_version: 1.17.0
+    finding_set: FINDSET-158
+    path: problems/ancients-vs-moderns/synthesis/how-to-study-spinozas-theologico-political-treatise.yaml
+    effect: RESTORE_EXHAUSTIVE_CURRENT_TREE_ACCOUNTING_WITHOUT_CERTIFYING_THE_SYNTHESIS
   evidence_identity:
     CORPUS-WIT-103: CONFIRMED_REGISTERED
     CORPUS-WIT-114: CONFIRMED_REGISTERED
