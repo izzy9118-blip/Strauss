@@ -347,7 +347,7 @@ mappings:
     target_role: typed_finding_set_provenance_jurisdiction_derivation_migration_and_gap_registry
     interface:
       registry: findings/index.yaml
-      registry_version: 1.16.0
+      registry_version: 1.17.0
       loader: findings_registry.py
       validation_command: python findings_registry.py --validate
     newly_registered:
