@@ -89,7 +89,7 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertEqual(study_record["identity"]["id"], "SPINOZA-TREATISE-STUDY-001")
         self.assertEqual(study_record["termination"]["reading_state"], "COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS")
         self.assertEqual(study_record["termination"]["successor_effect"], "NONE")
-        self.assertEqual(witness_record["termination"]["study_state"], "INCOMPLETE")
+        self.assertEqual(witness_record["termination"]["study_state"], "COMPLETE_PROVISIONAL")
 
     def test_genesis_witness_and_study_are_registered(self) -> None:
         registry = corpus_registry.load_registry()
@@ -109,7 +109,7 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertEqual(study_record["identity"]["id"], "GENESIS-STUDY-001")
         self.assertEqual(study_record["termination"]["reading_state"], "COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS")
         self.assertEqual(study_record["termination"]["successor_effect"], "NONE")
-        self.assertEqual(witness_record["termination"]["study_state"], "INCOMPLETE")
+        self.assertEqual(witness_record["termination"]["study_state"], "COMPLETE_PROVISIONAL")
 
     def test_persecution_intro_witness_and_study_are_registered(self) -> None:
         registry = corpus_registry.load_registry()
@@ -129,7 +129,7 @@ class CorpusRegistryTests(unittest.TestCase):
         self.assertEqual(study_record["identity"]["id"], "PERSECUTION-INTRO-STUDY-001")
         self.assertEqual(study_record["termination"]["reading_state"], "COMPLETE_FOR_REVIEWED_1997_COLLECTED_WITNESS")
         self.assertEqual(study_record["termination"]["successor_effect"], "NONE")
-        self.assertEqual(witness_record["termination"]["study_state"], "INCOMPLETE")
+        self.assertEqual(witness_record["termination"]["study_state"], "COMPLETE_PROVISIONAL")
 
     def test_hobbes_preface_witness_and_study_preserve_omitted_text_limit(self) -> None:
         registry = corpus_registry.load_registry()

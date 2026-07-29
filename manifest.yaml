@@ -443,7 +443,7 @@ corpus:
 findings:
   index: findings/index.yaml
   loader: findings_registry.py
-  registry_version: 1.16.0
+  registry_version: 1.17.0
   completion: SUBSTANTIVELY_RECONSTRUCTED_CURRENT_STATE_EXHAUSTIVE_OPEN_FINDINGS_STORE
   scope: EXHAUSTIVE_FOR_CURRENT_COMMITTED_FINDINGS_RECORD_STATE
   newly_registered:
