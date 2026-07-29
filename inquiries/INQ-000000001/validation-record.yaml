@@ -1,0 +1,38 @@
+schema_version: 1.0
+record_type: ministerial_report_validation_record
+identity:
+  id: STRAUSS-INQ-000000001-VALIDATION-001
+  inquiry_id: INQ-000000001
+  report_id: MREP-INQ000000001-LEO-STRAUSS
+  date: 2026-07-28
+repository_state:
+  repository: izzy9118-blip/Strauss
+  validated_base_commit: 32c96337cc29413a9f97cc843eaabf56a5ed38d6
+  manifest_path: manifest.yaml
+  manifest_version: 1.20.0
+  authorization_id: STRAUSS-AUTH-001
+checks:
+  adapter_manifest_validation: REQUIRED_IN_CI
+  speech_request_validation: REQUIRED_IN_CI
+  candidate_report_generation: REQUIRED_IN_CI
+  evidence_identity:
+    CORPUS-WIT-103: CONFIRMED_REGISTERED
+    CORPUS-WIT-114: CONFIRMED_REGISTERED
+  proposition_classification_preserved: true
+  uncertainty_preserved: true
+  dissent_preserved: true
+  presidential_synthesis_performed: false
+result:
+  status: SOVEREIGN_VALIDATION_PENDING_CI
+  authoritative_scope: STRAUSS_MINISTERIAL_REPORT_ONLY
+  assembly_certification: NOT_PERFORMED
+limits:
+  - Structural and behavioral validation does not certify philosophical truth.
+  - The 1948 journal printing for CORPUS-WIT-103 remains uncompared.
+  - The original 1963 Criterion printing for CORPUS-WIT-114 remains unreviewed.
+  - The comparative inference remains a supported inference, not a documented finding.
+  - Sanctum retains responsibility for envelope, pin, provenance, and schema validation.
+termination:
+  next_action: RUN_REPOSITORY_CI_AND_CLOSE_ISSUE_48_IF_GREEN
+  owner_certification: NOT_REQUIRED_FOR_MINISTER_SIDE_STRUCTURAL_VALIDATION
+  artificial_intelligence_self_certification: PROHIBITED
