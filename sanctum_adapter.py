@@ -149,7 +149,7 @@ def main(argv: list[str] | None = None) -> int:
     except (SanctumAdapterError, adapter.StraussAdapterError, OSError, KeyError, TypeError, ValueError) as exc:
         print(f"SANCTUM ADAPTER ERROR: {exc}", file=sys.stderr)
         return 2
-    print(json.dumps(result, ensure_ascii=False, sort_keys=True))
+    print(json.dumps(result, ensure_ascii=False, sort_keys=True, default=str))
     return 0
 
 
