@@ -26,7 +26,9 @@ class TalmonIntegrationCompletionTests(unittest.TestCase):
         corpus = load_yaml("corpus/index.yaml")
         findings = load_yaml("findings/index.yaml")
 
-        self.assertEqual(manifest["identity"]["version"], "1.20.0")
+        self.assertGreaterEqual(
+            tuple(map(int, manifest["identity"]["version"].split("."))), (1, 20, 0)
+        )
         self.assertEqual(audit["identity"]["version"], "3.8.0")
         self.assertEqual(mapping["identity"]["version"], "1.20.0")
         self.assertEqual(process["identity"]["version"], "1.22.0")

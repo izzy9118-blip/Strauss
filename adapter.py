@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Load and validate the lean Strauss operational interface.
+"""Load Strauss operational context and delegate source reading to Custos.
 
-The adapter is deliberately read-only. It resolves records declared in manifest.yaml,
-validates the speech contract and typed speech requests, and emits candidate runtime
-context or candidate ministerial-report structures. It does not interpret sources,
-certify doctrine, activate problems, rewrite records, or confer Assembly authority.
+Context and ministerial-report operations resolve and validate declared Strauss
+records without rewriting them. Every activation includes Custos's active Reader
+instructions and gates. Source and inquiry operations use Custos's existing runner
+to preserve Reader artifacts. The adapter itself does not interpret sources, certify
+doctrine, or confer Assembly authority.
 """
 
 from __future__ import annotations
@@ -15,6 +16,8 @@ from pathlib import Path
 from typing import Any, Iterable
 
 import yaml
+
+import reader_bridge
 
 
 ROOT = Path(__file__).resolve().parent
@@ -138,6 +141,10 @@ def iter_declared_paths(manifest: dict[str, Any]) -> Iterable[str]:
     yield manifest["findings"]["index"]
     yield manifest["migration"]["mapping_record"]
     yield manifest["audit"]["path"]
+    if manifest.get("reader", {}).get("binding"):
+        yield manifest["reader"]["binding"]
+    if manifest.get("reader", {}).get("bridge"):
+        yield manifest["reader"]["bridge"]
 
 
 def validate_speech_mechanism(mechanism: dict[str, Any]) -> list[str]:
@@ -235,6 +242,15 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
         errors.append("manifest identity.repository must be izzy9118-blip/Strauss")
     if identity.get("minister_id") != "leo-strauss":
         errors.append("manifest identity.minister_id must be leo-strauss")
+
+    reader = manifest.get("reader", {})
+    if reader.get("binding") != "integrations/custos-reader.yaml":
+        errors.append("manifest must bind the Custos Strauss Reader")
+    else:
+        try:
+            reader_bridge.load_binding(_resolve(reader["binding"]))
+        except reader_bridge.ReaderBridgeError as exc:
+            errors.append(str(exc))
 
     status = manifest.get("status", {})
     if status.get("semantic_completion") != "INCOMPLETE":
@@ -602,7 +618,9 @@ def build_candidate_report(request: dict[str, Any]) -> dict[str, Any]:
     return report
 
 
-def build_context(problem_keys: list[str] | None = None) -> dict[str, Any]:
+def build_context(
+    problem_keys: list[str] | None = None, *, custos_root: Path | None = None,
+) -> dict[str, Any]:
     manifest = load_manifest()
     errors = validate_manifest(manifest)
     if errors:
@@ -628,6 +646,7 @@ def build_context(problem_keys: list[str] | None = None) -> dict[str, Any]:
         "component_completion": manifest["component_completion"],
         "source_hierarchy": manifest["source_hierarchy"],
         "proposition_kinds": manifest["proposition_kinds"],
+        "reader": reader_bridge.load_reader_context(custos_root=custos_root),
         "method": [
             {"key": item["key"], "record": load_yaml(_resolve(item["path"]))}
             for item in manifest["method"]
@@ -653,18 +672,29 @@ def parse_args() -> argparse.Namespace:
         dest="problems",
         help="Canonical problem key to load; repeat for more than one.",
     )
-    parser.add_argument("--validate", action="store_true", help="Validate and exit.")
-    parser.add_argument(
+    operation = parser.add_mutually_exclusive_group()
+    operation.add_argument("--validate", action="store_true", help="Validate and exit.")
+    operation.add_argument(
         "--speech-request",
         type=Path,
         help="Validate a YAML speech request and emit a candidate report structure.",
     )
+    operation.add_argument("--source", type=Path, help="Read an explicit UTF-8 witness with the Custos Strauss Reader.")
+    operation.add_argument("--inquiry", help="Resume an inquiry path registered in Custos.")
+    parser.add_argument("--custos-root", type=Path, help="Use an explicit Custos checkout instead of fetching Custos/main.")
+    parser.add_argument("--mode", choices=["close", "sweep"], default="close")
+    parser.add_argument("--reasoner-command", help="JSON reasoner command required for Reader execution.")
+    parser.add_argument("--prepare-reader", action="store_true", help="Prepare a Reader request without claiming analysis.")
+    parser.add_argument("--output", type=Path, help="New directory in which Custos preserves the Reader run.")
     parser.add_argument("--pretty", action="store_true", help="Pretty-print JSON output.")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    if (args.prepare_reader or args.reasoner_command or args.output) and not (args.source or args.inquiry):
+        print("ERROR: Reader operations require exactly one --source or --inquiry")
+        return 1
     manifest = load_manifest()
     errors = validate_manifest(manifest)
     if errors:
@@ -679,6 +709,19 @@ def main() -> int:
         )
         return 0
 
+    if args.source or args.inquiry:
+        try:
+            result = reader_bridge.run_reader(
+                source=args.source, inquiry=args.inquiry, mode=args.mode,
+                reasoner_command=args.reasoner_command, prepare=args.prepare_reader,
+                output=args.output, custos_root=args.custos_root,
+            )
+        except reader_bridge.ReaderBridgeError as exc:
+            print(f"ERROR: {exc}")
+            return 1
+        print(json.dumps(result, indent=2 if args.pretty else None, sort_keys=args.pretty))
+        return 0
+
     if args.speech_request:
         try:
             request = load_yaml(args.speech_request.resolve())
@@ -690,8 +733,8 @@ def main() -> int:
         return 0
 
     try:
-        context = build_context(args.problems)
-    except StraussAdapterError as exc:
+        context = build_context(args.problems, custos_root=args.custos_root)
+    except (StraussAdapterError, reader_bridge.ReaderBridgeError) as exc:
         print(f"ERROR: {exc}")
         return 1
 

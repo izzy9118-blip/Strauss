@@ -40,7 +40,12 @@ class InterfaceConsistencyTests(unittest.TestCase):
         step_one = next(item for item in process["steps"] if item["sequence"] == 1)
         step_two = next(item for item in process["steps"] if item["sequence"] == 2)
         self.assertEqual(step_one["current_version"], audit["identity"]["version"])
-        self.assertEqual(step_two["current_version"], manifest["identity"]["version"])
+        # The historical completion plan records its own manifest revision.
+        # Later additive runtime changes must not rewrite that history.
+        self.assertGreaterEqual(
+            tuple(map(int, manifest["identity"]["version"].split("."))),
+            tuple(map(int, step_two["current_version"].split("."))),
+        )
 
     def test_nineteen_identity_nineteen_witness_fourteen_study_language_matches(self) -> None:
         manifest = load_yaml("manifest.yaml")

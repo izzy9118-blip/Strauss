@@ -5,7 +5,7 @@ identity:
   repository: izzy9118-blip/Strauss
   minister_id: leo-strauss
   title: Minister of Political Philosophy
-  version: 1.20.0
+  version: 1.21.0
 status:
   lifecycle: ADDITIVE_OPERATIONAL_INTERFACE
   structural_validation: REQUIRED_ON_EACH_CHANGE
@@ -17,11 +17,10 @@ status:
   governing_notice: 'The repository owner has certified and authorized the current committed state for operational use. Certification
     is administrative and does not erase source limits, uncertainties, edition gaps, or the open-ended nature of research.'
 revision_history:
-  predecessor_version: 1.19.0
+  predecessor_version: 1.20.0
   predecessor_blob_sha: PRESERVED_BY_GIT
-  reason: 'Apply the repository-owner directive of 2026-07-28: certify and authorize the current committed repository state
-    for operational use, activate the validated successor architecture, remove candidate-only and repin gates, and preserve
-    evidentiary uncertainty without treating open research gaps as authority blockers.'
+  reason: 'Connect Strauss harness activation and source reading to the active Custos Strauss Reader under the owner request
+    of 2026-10-08. Preserve ministerial jurisdiction and documentary safeguards while loading the full Reader authority.'
 purpose: 'Provide one compact, machine-readable entry point through which a runtime can load the repository''s problems, hermeneutics,
   method, speech discipline, corpus registry, and findings registry without deleting, overwriting, or silently harmonizing
   the richer records from which this interface is derived.
@@ -70,7 +69,15 @@ proposition_kinds:
 - working_hypothesis
 - comparative_question
 - unresolved_uncertainty
+reader:
+  binding: integrations/custos-reader.yaml
+  bridge: reader_bridge.py
+  provider: izzy9118-blip/custos
+  role: SOURCE_EXAMINATION_AND_CORPUS_BUILDING
+  activation: REQUIRED_WITH_OPERATIONAL_CONTEXT
+  authority_rule: Custos governs reading; Strauss retains ministerial context, reporting, and admission authority.
 load_order:
+- reader
 - method
 - hermeneutics
 - problems
@@ -478,7 +485,11 @@ runtime:
   corpus_registry_validation_command: python corpus_registry.py --validate
   findings_registry_validation_command: python findings_registry.py --validate
   test_command: python -m unittest discover -s tests -p 'test_*.py'
+  activation_command: python adapter.py
+  reader_context: reader_bridge.py
   permitted_operations:
+  - activate the Custos Strauss Reader with its full instructions and both literary and documentary gates
+  - delegate explicit source or inquiry reading to Custos close or sweep execution
   - validate declared paths and substantive contracts
   - load bounded operational context
   - load complete foundational problem bundles

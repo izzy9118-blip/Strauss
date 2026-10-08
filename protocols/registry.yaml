@@ -7,6 +7,12 @@ status:
   activation: PENDING_FOUNDATIONAL_MIGRATION
 
 revision_history:
+  reader_integration_correction:
+    date: 2026-10-08
+    reason: >
+      Synchronize the source-status registry entry with its existing active 1.1.0
+      protocol after the Custos Reader integration exposed the stale 1.0.0 entry
+      during foundational validation. No protocol wording or authority is changed.
   reason: >
     Register the controlled platform-reference witness protocol while preserving
     the distinction between textual reviewability, platform identity, byte custody,
@@ -21,7 +27,7 @@ protocols:
   - canonical_key: source-status
     title: Source Status Protocol
     path: protocols/source-status.yaml
-    protocol_version: 1.0.0
+    protocol_version: 1.1.0
     category: DOCUMENTARY
     function: >
       Classify the documentary authority, provenance, editorial condition, and
