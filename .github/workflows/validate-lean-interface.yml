@@ -7,6 +7,12 @@ on:
     paths:
       - "manifest.yaml"
       - "adapter.py"
+      - "reader_bridge.py"
+      - "integrations/**"
+      - "sanctum_adapter.py"
+      - "AGENTS.md"
+      - "README.md"
+      - "STRAUSS.md"
       - "problem_bundles.py"
       - "corpus_registry.py"
       - "findings_registry.py"
@@ -25,6 +31,12 @@ on:
     paths:
       - "manifest.yaml"
       - "adapter.py"
+      - "reader_bridge.py"
+      - "integrations/**"
+      - "sanctum_adapter.py"
+      - "AGENTS.md"
+      - "README.md"
+      - "STRAUSS.md"
       - "problem_bundles.py"
       - "corpus_registry.py"
       - "findings_registry.py"
@@ -46,6 +58,8 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      STRAUSS_CUSTOS_ROOT: ${{ github.workspace }}/.runtime/custos
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -57,6 +71,25 @@ jobs:
 
       - name: Install dependency
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
+
+      - name: Resolve tested Custos Reader revision
+        id: reader
+        run: |
+          python - <<'PY'
+          import os
+          import yaml
+          with open("integrations/custos-reader.yaml", encoding="utf-8") as source:
+              binding = yaml.safe_load(source)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"commit={binding['tested_commit']}\n")
+          PY
+
+      - name: Check out tested Custos Strauss Reader
+        uses: actions/checkout@v4
+        with:
+          repository: izzy9118-blip/custos
+          ref: ${{ steps.reader.outputs.commit }}
+          path: .runtime/custos
 
       - name: Validate manifest, audit, paths, and speech contract
         run: |

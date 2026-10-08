@@ -14,6 +14,7 @@ import sys
 from typing import Any
 
 import adapter
+import reader_bridge
 
 PROTOCOL = "sanctum.adapter.v1"
 REPOSITORY = "izzy9118-blip/Strauss"
@@ -59,7 +60,8 @@ def describe() -> dict[str, Any]:
         "manifest_path": "manifest.yaml",
         "manifest_version": str(manifest.get("version", manifest.get("identity", {}).get("version", "UNRECORDED"))),
         "commands": ["describe", "validate-interface", "prepare-request", "validate-report"],
-        "capabilities": ["reasoned", "outside_my_ground", "minister_local_context", "minister_local_report_validation"],
+        "capabilities": ["reasoned", "outside_my_ground", "minister_local_context", "minister_local_report_validation", "custos_strauss_reader"],
+        "reader_binding": manifest["reader"],
         "authority": "CANDIDATE_FORWARD_INTERFACE_NOT_OWNER_CERTIFICATION",
     }
 
@@ -146,7 +148,7 @@ def main(argv: list[str] | None = None) -> int:
             result = prepare_request(_read_stdin_object())
         else:
             result = validate_report(_read_stdin_object())
-    except (SanctumAdapterError, adapter.StraussAdapterError, OSError, KeyError, TypeError, ValueError) as exc:
+    except (SanctumAdapterError, adapter.StraussAdapterError, reader_bridge.ReaderBridgeError, OSError, KeyError, TypeError, ValueError) as exc:
         print(f"SANCTUM ADAPTER ERROR: {exc}", file=sys.stderr)
         return 2
     print(json.dumps(result, ensure_ascii=False, sort_keys=True, default=str))

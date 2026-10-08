@@ -1,0 +1,15 @@
+version: 1
+repository: izzy9118-blip/custos
+ref: main
+tested_commit: ea82ac0ce74fd2d2a2655da200e474af87716946
+context_contract: custos.reader-context.v1
+request_contract: custos.reader-request.v1
+response_contract: custos.reader-response.v1
+default_mode: close
+modes:
+  - close
+  - sweep
+authority: CUSTOS_GOVERNS_SOURCE_READING_STRAUSS_GOVERNS_MINISTERIAL_REPORTING
+activation: LOAD_FULL_CUSTOS_INSTRUCTIONS_AND_BOTH_GATES
+input_rule: EXPLICIT_SOURCE_OR_REGISTERED_CUSTOS_INQUIRY_NO_GLOBAL_DEFAULT
+completion_rule: PREPARATION_AND_CONTEXT_LOADING_ARE_NOT_ANALYSIS
